@@ -9,8 +9,6 @@ Provides button style configuration for the dialog box.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ action: VoidCallback
 Callback invoked when the button is selected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,8 +43,6 @@ Whether the button is the default focus. The value **true** means that the butto
 **Default:** false
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +64,6 @@ Whether to respond when the button is clicked. The value **true** means to respo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -86,13 +78,11 @@ style?: DialogButtonStyle
 
 Button style.Default value: **DialogButtonStyle.DEFAULT**
 
-**Type:** DialogButtonStyle
+**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **Default:** DialogButtonStyle.DEFAULT
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,13 +96,11 @@ Button style.Default value: **DialogButtonStyle.DEFAULT**
 value: string | Resource
 ```
 
-Button text.If the text is too long to display, it is truncated with an ellipsis (...).
+Button text.If the text is too number to display, it is truncated with an ellipsis (...).
 
 **Type:** string \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

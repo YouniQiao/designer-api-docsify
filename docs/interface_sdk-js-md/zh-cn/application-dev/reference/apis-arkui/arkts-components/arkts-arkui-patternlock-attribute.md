@@ -1,12 +1,10 @@
 # PatternLock属性/事件
 
-除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ activateCircleStyle(options: Optional<CircleStyleOptions>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ activateCircleStyle(options: Optional<CircleStyleOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | Optional&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | 是 |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | 是 |
 
 ## activeColor
 
@@ -48,8 +44,6 @@ activeColor(value: ResourceColor)
 设置宫格圆点在“激活”状态的填充颜色，“激活”状态为手指经过圆点但还未选中的状态。未通过该接口设置时，默认填充颜色为'#ff182431'（深灰色）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,8 +64,6 @@ autoReset(value: boolean)
 设置在完成密码输入后再次在组件区域按下时是否重置组件状态。未通过该接口设置时，默认重置组件状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -96,8 +88,6 @@ backgroundColor(value: ResourceColor)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -117,8 +107,6 @@ circleRadius(value: Length)
 设置宫格中圆点的半径。未通过该接口设置时，默认半径为6vp。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,8 +130,6 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -171,8 +157,6 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -192,8 +176,6 @@ pathColor(value: ResourceColor)
 设置连线的颜色。未通过该接口设置时，默认连线颜色为'#33182431'（深灰色，20%不透明度）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -215,8 +197,6 @@ pathStrokeWidth(value: number | string)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -236,8 +216,6 @@ regularColor(value: ResourceColor)
 设置宫格圆点在“未选中”状态的填充颜色。未通过该接口设置时，默认填充颜色为'#ff182431'（深灰色）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -259,8 +237,6 @@ selectedColor(value: ResourceColor)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -280,11 +256,9 @@ sideLength(value: Length)
 设置组件的宽度和高度（宽高相同）。当设置为0或负数时，组件不显示。未通过该接口设置时，默认宽高为288vp。
 
 > **说明：**&gt;
-> PatternLock组件设置了通用属性宽高比aspectRatio，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
+> PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -305,8 +279,6 @@ skipUnselectedPoint(skipped: boolean)
 设置未选中的宫格圆点在密码路径经过时是否跳过选中。未通过该接口设置时，未选中的宫格圆点在密码路径经过时默认自动选中。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

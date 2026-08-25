@@ -4,31 +4,13 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
+import { WithEnv, WithEnvAttribute} from 'kits/@kit.ArkUI';
 ```
-
-## applyAttributesFinish
-
-```TypeScript
-applyAttributesFinish(): void
-```
-
-通知WithEnv属性设置完成。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## customEnv
 
@@ -40,8 +22,6 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -52,7 +32,7 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | 是 |
+| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | 是 |
 | value | T | 是 |
 
 **返回值：**
@@ -71,8 +51,6 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -83,7 +61,7 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;T&gt; | 是 |
+| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | 是 |
 | value | T | 是 |
 
 **返回值：**
@@ -91,25 +69,3 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 | 类型 |
 | --- |
 | [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) |
-
-## setWithEnvOptions
-
-```TypeScript
-setWithEnvOptions(): this
-```
-
-设置WithEnv选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**返回值：**
-
-| 类型 |
-| --- |
-| this |

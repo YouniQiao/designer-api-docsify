@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总
@@ -35,9 +33,7 @@ import { inputDevice } from '@kit.InputKit';
 | [getKeyboardTypeSync(输入设备)](arkts-input-inputdevice-getkeyboardtypesync-f.md) |
 | [isFunctionKeyEnabled(输入设备)](arkts-input-inputdevice-isfunctionkeyenabled-f.md) |
 | [off(输入设备)](arkts-input-inputdevice-off-f.md#offchange) |
-| [offChange(输入设备)](arkts-input-inputdevice-offchange-f.md) |
 | [on(输入设备)](arkts-input-inputdevice-on-f.md#onchange) |
-| [onChange(输入设备)](arkts-input-inputdevice-onchange-f.md) |
 | [setFunctionKeyEnabled(输入设备)](arkts-input-inputdevice-setfunctionkeyenabled-f.md) |
 | [supportKeys(输入设备)](arkts-input-inputdevice-supportkeys-f.md) |
 | [supportKeys(输入设备)](arkts-input-inputdevice-supportkeys-f.md) |

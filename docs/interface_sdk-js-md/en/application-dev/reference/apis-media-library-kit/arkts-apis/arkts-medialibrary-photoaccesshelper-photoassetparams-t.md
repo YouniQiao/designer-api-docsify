@@ -8,8 +8,6 @@ Defines the array of record types that map file property names to their values.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Property type:** Record&lt;string, MemberType&gt;[]

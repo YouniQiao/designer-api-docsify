@@ -4,8 +4,6 @@ Defines the size type.@enum { number }
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
@@ -21,8 +19,6 @@ Auto
 Select a value based on the device type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Extra Small width type device.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
@@ -57,8 +51,6 @@ SM
 Small width type device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Medium width type device.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
@@ -93,8 +83,6 @@ LG
 Large width type device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md)
@@ -15,7 +13,7 @@ Describes the parameters of a response send by the server to a specified read or
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ Indicates the address of the client to which to send the response
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Indicates the byte offset of the start position for reading or writing operation
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [offset](arkts-connectivity-bluetoothmanager-serverresponse-i.md#offset)
@@ -69,8 +63,6 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ The Id of the write request
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [transId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#transid)
@@ -109,8 +99,6 @@ Indicates the value to be sent
 **Type:** ArrayBuffer
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

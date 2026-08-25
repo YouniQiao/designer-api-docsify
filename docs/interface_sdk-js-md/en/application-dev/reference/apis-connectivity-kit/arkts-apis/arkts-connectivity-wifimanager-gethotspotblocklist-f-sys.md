@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getHotspotBlockList
@@ -15,8 +15,6 @@ function getHotspotBlockList(): Array<StationInfo>
 Get all the stations in the block list. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -39,16 +37,3 @@ Get all the stations in the block list. If does't have the permission of ohos.pe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let data = wifiManager.getHotspotBlockList();
-  console.info("result:" + JSON.stringify(data));
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## isFontSupported
@@ -15,8 +15,6 @@ function isFontSupported(fontURL: string | Resource): boolean
 检查系统是否支持指定的字体文件。可在加载自定义字体前预先验证字体文件的可用性，避免因字体不支持导致文本渲染异常。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -33,52 +31,3 @@ function isFontSupported(fontURL: string | Resource): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct isFontSupportedTest {
-  build() {
-    Column({ space: 10 }) {
-      Button("is font supported")
-        .onClick(() => {
-          let filePath = "file:///system/fonts/NotoSansCJK-Regular.ttc"
-          let isSupported = text.isFontSupported(filePath)
-          console.info("is font supported: " + isSupported)
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import {Entry, Component, Column, Button, FlexAlign} from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct isFontSupportedTest {
-  build() {
-    Column() {
-      Button("is font supported")
-        .onClick(() => {
-          let filePath = "file:///system/fonts/NotoSansCJK-Regular.ttc"
-          let isSupported = text.isFontSupported(filePath)
-          console.info("is font supported: " + isSupported)
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAuthLockState
@@ -15,8 +15,6 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 查询指定认证类型的冻结状态，使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -45,50 +43,3 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
 | [12500008](../errorcode-useriam.md#12500008-参数校验失败) |
 | [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let queryType = userAuth.UserAuthType.PIN;
-let authLockState: userAuth.AuthLockState = {
-  isLocked: false,
-  remainingAuthAttempts: 0,
-  lockoutDuration: 0
-};
-
-userAuth.getAuthLockState(queryType)
-  .then((result: userAuth.AuthLockState) => {
-    authLockState = result;
-    console.info('get auth lock state successfully.');
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to get auth lock state. Code: ${err.code}, message: ${err.message}`);
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let queryType = userAuth.UserAuthType.PIN;
-let authLockState: userAuth.AuthLockState = {
-  isLocked: false,
-  remainingAuthAttempts: 0,
-  lockoutDuration: 0
-};
-
-userAuth.getAuthLockState(queryType)
-  .then((result: userAuth.AuthLockState) => {
-    authLockState = result;
-    console.info('get auth lock state successfully.');
-  })
-  .catch((err) => {
-    console.error(`Failed to get auth lock state. Code: ${err.code}, message: ${err.message}`);
-  });
-```

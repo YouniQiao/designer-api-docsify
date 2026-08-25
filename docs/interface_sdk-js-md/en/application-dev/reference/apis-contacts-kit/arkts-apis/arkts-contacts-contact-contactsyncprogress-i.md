@@ -4,14 +4,12 @@ Information about the contact synchronization progress.Contains the sync ID, cur
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## currentBatch
@@ -22,11 +20,9 @@ currentBatch: number
 
 Indicates the identifier of the current batch of contacts to be synchronized.The range of values is from 1 to totalBatches.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ syncId: number
 
 Indicates the sync identifier used for synchronizing all contacts.The value should start from 0.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ totalBatches: number
 
 Indicates the total number of batches of contacts to be synchronized.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

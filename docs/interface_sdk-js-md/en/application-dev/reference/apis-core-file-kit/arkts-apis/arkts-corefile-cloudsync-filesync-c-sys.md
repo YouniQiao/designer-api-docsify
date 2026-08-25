@@ -4,14 +4,12 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(bundleName: string)
 A constructor used to create a **FileSync** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -43,24 +39,6 @@ A constructor used to create a **FileSync** instance.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
-```
-
-```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
 ## getUploadList
 
 ```TypeScript
@@ -70,8 +48,6 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 Query the upload state of the cloud file list.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -112,8 +88,6 @@ Pause the upload of the cloud file.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -148,8 +122,6 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -182,8 +154,6 @@ resumeUpload(uri: string): void
 Resume the upload of the cloud file.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -218,8 +188,6 @@ unregisterUploadProgress(): void
 Unregisters from cloud file upload progress change.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 

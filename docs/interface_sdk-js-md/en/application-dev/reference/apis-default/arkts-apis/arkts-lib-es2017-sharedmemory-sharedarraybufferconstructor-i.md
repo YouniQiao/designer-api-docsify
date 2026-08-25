@@ -1,7 +1,5 @@
 # SharedArrayBufferConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (byteLength: number): SharedArrayBuffer
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -32,5 +28,3 @@ readonly prototype: SharedArrayBuffer
 ```
 
 **Type:** SharedArrayBuffer
-
-**ArkTS mode:** 

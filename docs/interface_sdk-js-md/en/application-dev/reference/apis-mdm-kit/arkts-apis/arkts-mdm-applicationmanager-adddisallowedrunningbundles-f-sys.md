@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedRunningBundles
@@ -15,8 +15,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callbac
 Adds the applications that are not allowed to run under the current user. This API uses an asynchronous callback to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -49,70 +47,6 @@ Adds the applications that are not allowed to run under the current user. This A
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed running bundles');
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed running bundles');
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding disallowed running bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## addDisallowedRunningBundles
 
@@ -123,8 +57,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 Adds the applications that are not allowed to run under a specified user (specified by **userId**). This API uses an asynchronous callback to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -158,10 +90,6 @@ Adds the applications that are not allowed to run under a specified user (specif
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 
-**Examples**
-
-See [addDisallowedRunningBundles](#adddisallowedrunningbundles)
-
 
 ## addDisallowedRunningBundles
 
@@ -172,8 +100,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?
 Adds the applications that are not allowed to run by the current or specified user. This API uses a promise to return the result. From API version 21, if the allowed application list [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md) is not empty, the prohibited application list cannot be added using this API. Otherwise, the error code 9200010 is reported.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -211,7 +137,3 @@ Adds the applications that are not allowed to run by the current or specified us
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
-
-**Examples**
-
-See [addDisallowedRunningBundles](#adddisallowedrunningbundles)

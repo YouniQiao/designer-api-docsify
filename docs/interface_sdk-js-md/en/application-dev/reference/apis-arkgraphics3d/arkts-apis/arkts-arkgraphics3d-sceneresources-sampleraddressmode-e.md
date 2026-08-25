@@ -1,10 +1,8 @@
 # SamplerAddressMode
 
-Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range.@enum { int }
+Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range.@enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ The texture repeats when the coordinates exceed the range.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## MIRRORED_REPEAT
@@ -32,8 +28,6 @@ The texture mirrors and repeats when the coordinates exceed the range.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## CLAMP_TO_EDGE
@@ -45,7 +39,5 @@ CLAMP_TO_EDGE = 2
 The edge pixels of the texture are stretched when the coordinates exceed the range.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

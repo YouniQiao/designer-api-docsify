@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## alterPin
 
 ```TypeScript
-function alterPin(slotId: int, newPin: string, oldPin: string, callback: AsyncCallback<LockStatusResponse>): void
+function alterPin(slotId: number, newPin: string, oldPin: string, callback: AsyncCallback<LockStatusResponse>): void
 ```
 
 Change Pin Password.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Change Pin Password.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | newPin | string | Yes |
 | oldPin | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes |
@@ -47,40 +45,16 @@ Change Pin Password.
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin(0, "1234", "0000", (err: BusinessError, data: sim.LockStatusResponse) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
-    console.info(`alterPin success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`alterPin failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## alterPin
 
 ```TypeScript
-function alterPin(slotId: int, newPin: string, oldPin: string): Promise<LockStatusResponse>
+function alterPin(slotId: number, newPin: string, oldPin: string): Promise<LockStatusResponse>
 ```
 
 Change Pin Password.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +66,7 @@ Change Pin Password.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | newPin | string | Yes |
 | oldPin | string | Yes |
 
@@ -115,7 +89,3 @@ Change Pin Password.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
-
-**Examples**
-
-See [alterPin](#alterpin)

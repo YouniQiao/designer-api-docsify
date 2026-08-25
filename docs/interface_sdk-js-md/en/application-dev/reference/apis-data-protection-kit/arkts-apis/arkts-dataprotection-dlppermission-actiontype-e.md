@@ -4,8 +4,6 @@ Enumerates the actions to be performed when the file's permission expiration tim
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## NOT_OPEN
@@ -18,8 +16,6 @@ Users are not allowed to open the DLP file when the file's permission expiration
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## OPEN
@@ -31,7 +27,5 @@ OPEN = 1
 Logged-in accounts can still open and edit the DLP file when the file's permission expiration time is reached.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

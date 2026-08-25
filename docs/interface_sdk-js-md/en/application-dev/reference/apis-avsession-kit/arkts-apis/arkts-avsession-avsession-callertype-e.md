@@ -4,8 +4,6 @@ Enumerates CallerType including caller source type.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## TYPE_CAST
@@ -17,8 +15,6 @@ TYPE_CAST = 'cast'
 The control command comes from cast service.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -32,8 +28,6 @@ The control command comes from bluetooth.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## TYPE_NEARLINK
@@ -45,8 +39,6 @@ TYPE_NEARLINK = 'nearlink'
 The control command comes from nearlink device.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +53,5 @@ TYPE_APP = 'app'
 The control command comes from an application.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core

@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -25,8 +23,6 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -38,7 +34,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 |
-| callback | Callback & lt;UIExtensionProxy & gt; | 否 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
 
 ## off('syncReceiverRegister')
 
@@ -50,8 +46,6 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -63,7 +57,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 |
-| callback | Callback & lt;UIExtensionProxy & gt; | 否 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
 
 ## on('asyncReceiverRegister')
 
@@ -74,8 +68,6 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 在双方建立连接成功后，订阅被拉起的Ability异步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,7 +80,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 |
-| callback | Callback & lt;UIExtensionProxy & gt; | 是 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
 
 ## on('syncReceiverRegister')
 
@@ -99,8 +91,6 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 在双方建立连接成功后，订阅被拉起的Ability同步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,7 +103,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 |
-| callback | Callback & lt;UIExtensionProxy & gt; | 是 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
 
 ## send
 
@@ -124,8 +114,6 @@ send(data: Record<string, Object>): void
 用于在双方建立连接成功后，向被拉起的Ability发送数据，提供异步发送能力。数据将被扩展Ability通过setReceiveDataCallback接收处理。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +136,6 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 用于在双方建立连接成功后，向被拉起的Ability同步发送数据，数据将被拉起的Ability通过setReceiveDataForResultCallback处理并返回结果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

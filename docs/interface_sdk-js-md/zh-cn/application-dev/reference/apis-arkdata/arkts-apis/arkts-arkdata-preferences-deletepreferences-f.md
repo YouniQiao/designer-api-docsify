@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## deletePreferences
@@ -16,8 +16,6 @@ function deletePreferences(context: Context, name: string, callback: AsyncCallba
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -37,236 +35,6 @@ function deletePreferences(context: Context, name: string, callback: AsyncCallba
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-preferences.deletePreferences(context, 'myStore', (err: BusinessError) => {
-  if (err) {
-    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in deleting preferences.");
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.deletePreferences(this.context, 'myStore', (err: BusinessError) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.deletePreferences(this.context, 'myStore', (err: BusinessError | null) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let sp = preferences.deletePreferences(context, 'myStore');
-sp.then(() => {
-  console.info("Succeeded in deleting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let sp = preferences.deletePreferences(this.context, 'myStore');
-    sp.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let sp = preferences.deletePreferences(this.context, 'myStore');
-    sp.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let options: preferences.Options = { name: 'myStore' };
-preferences.deletePreferences(context, options, (err: BusinessError) => {
-  if (err) {
-    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in deleting preferences.");
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.deletePreferences(this.context, options, (err: BusinessError) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.deletePreferences(this.context, options, (err: BusinessError | null) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let options: preferences.Options = { name: 'myStore' };
-let sp = preferences.deletePreferences(context, options);
-sp.then(() => {
-  console.info("Succeeded in deleting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    let sp = preferences.deletePreferences(this.context, options);
-    sp.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let sp = preferences.deletePreferences(this.context, options);
-    sp.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
 
 
 ## deletePreferences
@@ -279,8 +47,6 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -304,10 +70,6 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-参见 [deletePreferences](#deletepreferences)
-
 
 ## deletePreferences
 
@@ -318,8 +80,6 @@ function deletePreferences(context: Context, name: string): Promise<void>
 从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过name进行参数设置，使用Promise异步回调。调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。不支持该接口与其他preference接口并发调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -346,10 +106,6 @@ function deletePreferences(context: Context, name: string): Promise<void>
 | [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-参见 [deletePreferences](#deletepreferences)
-
 
 ## deletePreferences
 
@@ -360,8 +116,6 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过Options进行参数设置，使用Promise异步回调。调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。不支持该接口与其他preference接口并发调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -390,7 +144,3 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 | [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-参见 [deletePreferences](#deletepreferences)

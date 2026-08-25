@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getSetting
@@ -15,8 +15,6 @@ function getSetting(): InputMethodSetting
 Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -31,9 +29,3 @@ Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) i
 | Error Code ID |
 | --- |
 | [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
-
-**Examples**
-
-```TypeScript
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-```

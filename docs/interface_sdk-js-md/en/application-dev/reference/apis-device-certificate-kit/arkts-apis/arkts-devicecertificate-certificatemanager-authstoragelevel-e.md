@@ -4,8 +4,6 @@ Enumerates the credential storage levels.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## EL1
@@ -17,8 +15,6 @@ EL1 = 1
 The credential can be accessed after the device is started.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ The credential can be accessed after the device is unlocked for the first time.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## EL4
@@ -45,7 +39,5 @@ EL4 = 4
 The credential can be accessed after the device is unlocked.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

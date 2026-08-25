@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## setAlwaysOnVpnEnabled
@@ -15,8 +15,6 @@ function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<voi
 设置设备的启用/禁用always on VPN模式。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 

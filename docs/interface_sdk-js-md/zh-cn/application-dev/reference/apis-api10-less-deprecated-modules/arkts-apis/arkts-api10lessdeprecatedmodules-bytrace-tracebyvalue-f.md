@@ -18,8 +18,6 @@ function traceByValue(name: string, count: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 8
 
 **替代接口：** traceByValue
@@ -32,13 +30,3 @@ function traceByValue(name: string, count: number): void
 | --- | --- | --- |
 | name | string | 是 |
 | count | number | 是 |
-
-**示例**
-
-```TypeScript
-let traceCount = 3;
-bytrace.traceByValue("myTestCount", traceCount);
-traceCount = 4;
-bytrace.traceByValue("myTestCount", traceCount);
-// 业务流程......
-```

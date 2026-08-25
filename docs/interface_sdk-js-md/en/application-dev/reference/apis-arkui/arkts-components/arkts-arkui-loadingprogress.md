@@ -1,7 +1,7 @@
 # LoadingProgress
 
 The **LoadingProgress** component is used to create a loading progress animation.
-The loading progress animation stops when the component is invisible. The component's visibility is determined by the value of **ratios** in the onVisibleAreaChange event callback: If the value is greater than 0, the component is visible.
+The loading progress animation stops when the component is invisible. The component's visibility is determined by the value of **ratios** in the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event callback: If the value is greater than 0, the component is visible.
 > **NOTE**>> - This component supports WithTheme since API version 26.0.0.
 
 ## Child Components
@@ -17,8 +17,6 @@ LoadingProgress()
 Creates a loading progress component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,14 +4,12 @@ The url module provides APIs for parsing URL strings and constructing URL instan
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
+import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -23,9 +21,3 @@ import { url } from '@kit.ArkTS';
 | [URL](arkts-arkts-url-url-c.md) |
 | [URLParams](arkts-arkts-url-urlparams-c.md) |
 | [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) |

@@ -6,8 +6,6 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-se
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -15,22 +13,20 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-se
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## absorptionRatio
 
 ```TypeScript
-absorptionRatio: double
+absorptionRatio: number
 ```
 
 Absorption ratio, in W/kg.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

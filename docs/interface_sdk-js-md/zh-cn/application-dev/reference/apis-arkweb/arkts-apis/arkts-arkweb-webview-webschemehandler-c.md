@@ -4,14 +4,12 @@ WebSchemeHandler是用于拦截指定scheme（协议）的网络请求的拦截�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## onRequestStart
@@ -27,8 +25,6 @@ onRequestStart(
 > - 重定向后的URL无法单独拦截。如需拦截，必须同时对原始请求URL进行拦截。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,8 +54,6 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -75,7 +69,3 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-完整示例代码参考[onRequestStart](#onrequeststart)。

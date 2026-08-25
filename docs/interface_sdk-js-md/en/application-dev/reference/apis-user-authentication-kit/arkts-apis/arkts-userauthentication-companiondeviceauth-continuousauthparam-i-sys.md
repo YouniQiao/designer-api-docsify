@@ -4,8 +4,6 @@ Defines continuous authentication parameters. They are used to configure paramet
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines continuous authentication parameters. They are used to configure paramet
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## templateId
@@ -27,8 +25,6 @@ Template ID. It is used to specify the target template to be subscribed to. If t
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

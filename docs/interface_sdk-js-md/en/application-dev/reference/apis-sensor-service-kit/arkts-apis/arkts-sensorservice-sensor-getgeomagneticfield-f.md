@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticField
@@ -15,8 +15,6 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -32,38 +30,6 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 | timeMillis | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000, 
-                           (err: BusinessError, data: sensor.GeomagneticResponse) => {
-  if (err) {
-    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting sensor_getGeomagneticField_callback x: ' + data.x + ',y: ' + data.y + ',z: ' +
-  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
-  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
-});
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
-promise.then((data: sensor.GeomagneticResponse) => {
-  console.info('Succeeded in getting sensor_getGeomagneticField_promise x: ' + data.x + ',y: ' + data.y + ',z: ' +
-  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
-  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
-}).catch((reason: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
-
 
 ## getGeomagneticField
 
@@ -74,8 +40,6 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 Obtains the geomagnetic field of a geographic location. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -95,7 +59,3 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; |
-
-**Examples**
-
-See [getGeomagneticField](#getgeomagneticfield)

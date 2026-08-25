@@ -4,29 +4,25 @@ Position definition of one component on which the menu will bind and popup.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Component height, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,16 +31,14 @@ Component height, uint is vp.
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Component width, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ Component width, uint is vp.
 ## x
 
 ```TypeScript
-x: int
+x: number
 ```
 
 Coordinate x of the position of the component, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ Coordinate x of the position of the component, uint is vp.
 ## y
 
 ```TypeScript
-y: int
+y: number
 ```
 
 Coordinate y of the position of the component, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

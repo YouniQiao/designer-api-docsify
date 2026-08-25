@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## enableEthernetInterface
@@ -15,8 +15,6 @@ function enableEthernetInterface(): Promise<void>
 Enable the ethernet interface.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 

@@ -6,8 +6,6 @@ Camera node, which inherits from Node.@extends Node @interface Camera
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getProjectionMatrix
@@ -20,8 +18,6 @@ Obtains the projection matrix of the camera.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
@@ -29,31 +25,6 @@ Obtains the projection matrix of the camera.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
-
-**Examples**
-
-```TypeScript
-import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
-
-function GetProjectionMatrix(): void {
-  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
-    .then(async (result: Scene) => {
-      if (!result.root) {
-        return;
-      }
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
-      // Create a camera.
-      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
-      camera.enabled = true;
-      // Set the camera view.
-      lookAt(camera, { x: 0, y: 0, z: -3 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 1, z: 0 });
-      // Obtain the projection matrix of the camera.
-      let projectionMatrix: Mat4x4 = camera.getProjectionMatrix();
-    });
-}
-```
 
 ## getViewMatrix
 
@@ -65,8 +36,6 @@ Obtains the view matrix of the camera.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
@@ -74,31 +43,6 @@ Obtains the view matrix of the camera.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
-
-**Examples**
-
-```TypeScript
-import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
-
-function GetViewMatrix(): void {
-  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
-    .then(async (result: Scene) => {
-      if (!result.root) {
-        return;
-      }
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
-      // Create a camera.
-      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
-      camera.enabled = true;
-      // Set the camera view.
-      lookAt(camera, { x: 0, y: 0, z: -3 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 1, z: 0 });
-      // Obtain the view matrix of the camera.
-      let viewMatrix: Mat4x4 = camera.getViewMatrix();
-    });
-}
-```
 
 ## raycast
 
@@ -109,8 +53,6 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 Casts a ray from a specific position on the screen to detect and retrieve information about all hit 3D objects. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -127,114 +69,6 @@ Casts a ray from a specific position on the screen to detect and retrieve inform
 | --- |
 | Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; |
 
-**Examples**
-
-```TypeScript
-import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, Node, Vec2, Vec3, Quaternion,
-  RaycastParameters } from '@kit.ArkGraphics3D';
-
-function Raycast(): void {
-  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
-    .then(async (result: Scene) => {
-      if (!result.root) {
-        return;
-      }
-      let node: Node | null | undefined = result.root.getNodeByPath("rootNode_/Unnamed Node 1/AnimatedCube");
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
-      // Create a camera.
-      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
-      camera.enabled = true;
-      // Set the camera view.
-      lookAt(camera, { x: 0, y: 0, z: -3 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 1, z: 0 });
-
-      let viewPos: Vec2 = { x: 0.5, y: 0.5 };
-      let raycastParams: RaycastParameters = {};
-      if (node) {
-        raycastParams.rootNode = node;
-      }
-      return camera.raycast(viewPos, raycastParams);
-    });
-}
-
-function Sub(l: Vec3, r: Vec3): Vec3 {
-  return { x: l.x - r.x, y: l.y - r.y, z: l.z - r.z };
-}
-function Dot(l: Vec3, r: Vec3): number {
-  return l.x * r.x + l.y * r.y + r.z * l.z;
-}
-function Normalize(l: Vec3): Vec3 {
-  let d = Math.sqrt(Dot(l, l));
-  return { x: l.x / d, y: l.y / d, z: l.z / d };
-}
-function Cross(l: Vec3, r: Vec3): Vec3 {
-  return { x: (l.y * r.z - l.z * r.y), y: (l.z * r.x - l.x * r.z), z: (l.x * r.y - l.y * r.x) };
-}
-function Mul(l: Quaternion, d: number): Quaternion {
-  return {
-    x: l.x * d,
-    y: l.y * d,
-    z: l.z * d,
-    w: l.w * d
-  };
-}
-function lookAt(node: Node, eye: Vec3, center: Vec3, up: Vec3) {
-
-  let t: number;
-
-  let q: Quaternion = {
-    x: 0.0,
-    y: 0.0,
-    z: 0.0,
-    w: 0.0
-  };
-  let f = Normalize(Sub(center, eye));
-  let m0 = Normalize(Cross(f, up));
-  let m1 = Cross(m0, f);
-  let m2: Vec3 = { x: -f.x, y: -f.y, z: -f.z };
-  if (m2.z < 0) {
-    if (m0.x > m1.y) {
-      t = 1.0 + m0.x - m1.y - m2.z;
-      q = {
-        x: t,
-        y: m0.y + m1.x,
-        z: m2.x + m0.z,
-        w: m1.z - m2.y
-      };
-    } else {
-      t = 1.0 - m0.x + m1.y - m2.z;
-      q = {
-        x: m0.y + m1.x,
-        y: t,
-        z: m1.z + m2.y,
-        w: m2.x - m0.z
-      };
-    }
-  } else {
-    if (m0.x < -m1.y) {
-      t = 1.0 - m0.x - m1.y + m2.z;
-      q = {
-        x: m2.x + m0.z,
-        y: m1.z + m2.y,
-        z: t,
-        w: m0.y - m1.x
-      };
-    } else {
-      t = 1.0 + m0.x + m1.y + m2.z;
-      q = {
-        x: m1.z - m2.y,
-        y: m2.x - m0.z,
-        z: m0.y - m1.x,
-        w: t
-      }
-    }
-  }
-  node.position = eye;
-  node.rotation = Mul(q, 0.5 / Math.sqrt(t));
-}
-```
-
 ## clearColor
 
 ```TypeScript
@@ -246,8 +80,6 @@ Color after the render target is cleared.
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -263,8 +95,6 @@ Post-processing effects applied to the camera output.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## enabled
@@ -279,39 +109,33 @@ Whether the camera is enabled. true if enabled, false otherwise.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## farPlane
 
 ```TypeScript
-farPlane: double
+farPlane: number
 ```
 
 Far plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than that of nearPlane.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## fov
 
 ```TypeScript
-fov: double
+fov: number
 ```
 
 Field of view. The unit is radian (rad). The value ranges from 0 to π radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -329,23 +153,19 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false othe
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## nearPlane
 
 ```TypeScript
-nearPlane: double
+nearPlane: number
 ```
 
 Near plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -360,8 +180,6 @@ Post-processing settings.
 **Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -378,7 +196,5 @@ Rendering pipeline type. If this parameter is not set, the lightweight forward r
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getDefaultCellularDataSlotIdSync
 
 ```TypeScript
-function getDefaultCellularDataSlotIdSync(): int
+function getDefaultCellularDataSlotIdSync(): number
 ```
 
 Obtains the default SIM card used for mobile data synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -24,12 +22,4 @@ Obtains the default SIM card used for mobile data synchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-console.info("Result: "+ data.getDefaultCellularDataSlotIdSync())
-```
+| number |

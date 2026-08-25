@@ -4,8 +4,6 @@ Describes the accuracy of depth data.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Relative accuracy, which is the depth map calculated based on the disparity.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ DEPTH_DATA_ACCURACY_ABSOLUTE = 1
 Absolute accuracy, which is the depth map calculated from distance measurement.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

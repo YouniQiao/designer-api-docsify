@@ -10,8 +10,6 @@ Alarm rule, which is programmed to print a log when an alarm is generated.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_CAUTION_TRIGGER_CRASH
@@ -23,8 +21,6 @@ const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n
 Alarm rule, which is programmed to force the application to exit when an alarm is generated.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -38,8 +34,6 @@ Caution rule, which is programmed to detect whether ability leakage has occurred
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_CHECK_ARKUI_PERFORMANCE
@@ -52,8 +46,6 @@ Caution rule, which is programmed to detect the ArkUI performance.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_THREAD_CHECK_NETWORK_USAGE
@@ -62,11 +54,9 @@ Caution rule, which is programmed to detect the ArkUI performance.
 const RULE_THREAD_CHECK_NETWORK_USAGE = 2n
 ```
 
-The thread rule check network usage.
+Caution rule, which is programmed to detect whether the thread invokes a time-consuming network API.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -79,7 +69,5 @@ const RULE_THREAD_CHECK_SLOW_PROCESS = 1n
 Caution rule, which is programmed to detect whether any time-consuming function is invoked.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker

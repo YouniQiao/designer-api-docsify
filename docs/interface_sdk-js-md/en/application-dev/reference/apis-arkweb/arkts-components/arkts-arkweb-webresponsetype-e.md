@@ -4,8 +4,6 @@ Enumerates the response types of the menu.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## LONG_PRESS
@@ -14,11 +12,9 @@ Enumerates the response types of the menu.
 LONG_PRESS = 1
 ```
 
-The menu is displayed when the component is long-pressed.
+The menu is displayed when the component is number-pressed.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -31,7 +27,5 @@ RIGHT_CLICK = 2
 The menu is displayed when the component is right-clicked.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core

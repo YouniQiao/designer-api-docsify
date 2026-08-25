@@ -1,7 +1,5 @@
 # Date
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ toLocaleDateString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormat
 ```
 
 Converts a date to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOpti
 
 Converts a date and time to a string by using the current or specified locale.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -56,8 +50,6 @@ toLocaleTimeString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormat
 ```
 
 Converts a time to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

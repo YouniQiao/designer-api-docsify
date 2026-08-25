@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,13 +17,11 @@
 totalLength: number
 ```
 
-Grid内容总长度，单位px。
+Grid内容总长度，单位vp。
 
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,13 +35,11 @@ Grid内容总长度，单位px。
 totalOffset: number
 ```
 
-Grid内容相对显示区域的总偏移，单位px。
+Grid内容相对显示区域的总偏移，单位vp。
 
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

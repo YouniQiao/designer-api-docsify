@@ -6,38 +6,32 @@ A sphere geometry type that inherits from GeometryDefinition.@extends GeometryDe
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## radius
 
 ```TypeScript
-set radius(value: double)
+set radius(value: number)
 ```
 
 Radius of the sphere, measured in the world coordinate system's units (for example, cm, m, or km). The value must be greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## segmentCount
 
 ```TypeScript
-set segmentCount(value: int)
+set segmentCount(value: number)
 ```
 
 Number of segments divided by longitude and latitude on the sphere. The value range is a positive integer greater than or equal to 3.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

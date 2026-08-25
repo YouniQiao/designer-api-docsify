@@ -4,8 +4,6 @@ Pixel Round Direction@enum { number }
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NO_FORCE_ROUND
@@ -17,8 +15,6 @@ NO_FORCE_ROUND = 0
 No Force round the component boundary coordinates to integer pixel.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Force ceil the component boundary coordinates to integer pixel.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -57,8 +51,6 @@ FORCE_FLOOR = 2
 Force floor the component boundary coordinates to integer pixel.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

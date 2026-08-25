@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## queryAsUser
@@ -15,8 +15,6 @@ function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 Queries one or more assets in the specified user space. If user authentication is required for the access to the asset, call [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md) before this API and call [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -57,27 +55,3 @@ Queries one or more assets in the specified user space. If user authentication i
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let userId: number = 100;
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-asset.queryAsUser(userId, query).then((res: Array<asset.AssetMap>) => {
-  for (let i = 0; i < res.length; i++) {
-    // Parse the attributes.
-    let accessibility: number = res[i].get(asset.Tag.ACCESSIBILITY) as number;
-    console.info(`Succeeded in getting accessibility, which is: ${accessibility}.`);
-  }
-  console.info(`Succeeded in querying Asset from user space.`);
-});
-```

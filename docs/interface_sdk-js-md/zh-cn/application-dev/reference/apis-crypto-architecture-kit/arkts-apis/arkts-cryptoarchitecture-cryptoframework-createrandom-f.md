@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createRandom
@@ -15,8 +15,6 @@ function createRandom(): Random
 创建随机数实例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -39,17 +37,3 @@ function createRandom(): Random
 | 错误码ID |
 | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let rand = cryptoFramework.createRandom();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```

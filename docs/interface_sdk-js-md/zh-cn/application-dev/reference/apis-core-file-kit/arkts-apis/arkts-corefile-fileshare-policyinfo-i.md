@@ -4,29 +4,25 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## operationMode
 
 ```TypeScript
-operationMode: int
+operationMode: number
 ```
 
 授予或激活权限的URI访问模式，例如 { OperationMode.READ_MODE } 或 { OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -41,7 +37,5 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

@@ -6,8 +6,6 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorReservation
@@ -27,8 +25,6 @@ getColorReservation(): ColorReservationType
 Obtains the color reservation type in use.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -47,24 +43,6 @@ Obtains the color reservation type in use.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getColorReservation(session: camera.VideoSessionForSys): camera.ColorReservationType | undefined {
-  let colorReservation: camera.ColorReservationType | undefined = undefined;
-  try {
-    colorReservation = session.getColorReservation();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setColorReservation call failed. error code: ${err.code}`);
-  }
-  return colorReservation;
-}
-```
-
 ## setColorReservation
 
 ```TypeScript
@@ -74,8 +52,6 @@ setColorReservation(type: ColorReservationType): void
 Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -96,19 +72,3 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setColorReservation(session: camera.VideoSessionForSys, type: camera.ColorReservationType): void {
-  try {
-    session.setColorReservation(type);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setColorReservation call failed. error code: ${err.code}`);
-  }
-}
-```

@@ -4,8 +4,6 @@ The module provides the actions, entities, and flags used in Want objects.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [wantConstant/wantConstant](arkts-app-ability-wantconstant.md)

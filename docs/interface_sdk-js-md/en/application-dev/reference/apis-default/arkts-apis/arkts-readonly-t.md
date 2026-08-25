@@ -8,8 +8,6 @@ type Readonly<T> = {
 
 Make all properties in T readonly
 
-**ArkTS mode:** 
-
 **Property type:** {
     readonly [P in keyof T]: T[P];
 }

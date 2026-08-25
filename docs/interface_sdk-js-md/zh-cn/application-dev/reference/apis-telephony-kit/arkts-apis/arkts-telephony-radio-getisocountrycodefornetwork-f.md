@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getISOCountryCodeForNetwork
 
 ```TypeScript
-function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void
+function getISOCountryCodeForNetwork(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 获取注册网络所在国家的ISO国家码。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,7 +22,7 @@ function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
@@ -37,44 +35,16 @@ function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getISOCountryCodeForNetwork(slotId, (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getISOCountryCodeForNetwork failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getISOCountryCodeForNetwork success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
-    console.info(`getISOCountryCodeForNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getISOCountryCodeForNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getISOCountryCodeForNetwork
 
 ```TypeScript
-function getISOCountryCodeForNetwork(slotId: int): Promise<string>
+function getISOCountryCodeForNetwork(slotId: number): Promise<string>
 ```
 
 获取注册网络所在国家的ISO国家码。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -82,7 +52,7 @@ function getISOCountryCodeForNetwork(slotId: int): Promise<string>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -99,7 +69,3 @@ function getISOCountryCodeForNetwork(slotId: int): Promise<string>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getISOCountryCodeForNetwork](#getisocountrycodefornetwork)

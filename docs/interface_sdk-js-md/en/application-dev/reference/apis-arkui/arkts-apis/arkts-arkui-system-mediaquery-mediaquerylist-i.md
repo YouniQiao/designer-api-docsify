@@ -4,14 +4,12 @@ Represents media query list information.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
 ```
 
 ## addListener
@@ -24,8 +22,6 @@ Adds a listener for this **MediaQueryList** object. The listener must be added b
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,20 +32,6 @@ Adds a listener for this **MediaQueryList** object. The listener must be added b
 | --- | --- | --- |
 | callback | (event: MediaQueryEvent) = & gt; void | Yes |
 
-**Examples**
-
-```TypeScript
-import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
-let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
-
-function maxWidthMatch(e: MediaQueryEvent): void {
-  if(e.matches){
-    // do something
-  }
-}
-mMediaQueryList.addListener(maxWidthMatch);
-```
-
 ## onchange
 
 ```TypeScript
@@ -59,8 +41,6 @@ onchange?: (matches: boolean) => void
 Callback invoked when the match result changes. **matches** indicates whether the media query condition is met. The value **true** means that the query condition is met, and **false** means the opposite.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,8 +62,6 @@ Removes the listener for this **MediaQueryList** object.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -93,20 +71,6 @@ Removes the listener for this **MediaQueryList** object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | (event: MediaQueryEvent) = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
-let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
-
-function maxWidthMatch(e: MediaQueryEvent): void {
-  if(e.matches){
-    // do something
-  }
-}
-mMediaQueryList.removeListener(maxWidthMatch);
-```
 
 ## matches
 
@@ -119,8 +83,6 @@ Matching result. The value **true** means that the query condition is met, and *
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -137,8 +99,6 @@ Serialized media query condition.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

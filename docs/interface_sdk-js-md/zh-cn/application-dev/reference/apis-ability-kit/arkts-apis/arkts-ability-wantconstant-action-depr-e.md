@@ -4,8 +4,6 @@ want操作的常数。用于表示要执行的通用操作。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -19,8 +17,6 @@ ACTION_HOME = 'ohos.want.action.home'
 指示返回原点的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -36,8 +32,6 @@ ACTION_DIAL = 'ohos.want.action.dial'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -51,8 +45,6 @@ ACTION_SEARCH = 'ohos.want.action.search'
 指示启动页面搜索功能的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -68,8 +60,6 @@ ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -83,8 +73,6 @@ ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'
 指示启动管理已安装应用程序的页面功能的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -100,8 +88,6 @@ ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -115,8 +101,6 @@ ACTION_SET_ALARM = 'ohos.want.action.setAlarm'
 指示启动页面功能以设置闹钟的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -132,8 +116,6 @@ ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -147,8 +129,6 @@ ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'
 指示启动用于使闹钟睡眠的页面功能的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -164,8 +144,6 @@ ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -179,8 +157,6 @@ ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'
 指示启动页面功能以关闭计时器的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -196,8 +172,6 @@ ACTION_SEND_SMS = 'ohos.want.action.sendSms'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -211,8 +185,6 @@ ACTION_CHOOSE = 'ohos.want.action.choose'
 指示启动页面功能以打开联系人或图片的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -228,8 +200,6 @@ ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -243,8 +213,6 @@ ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'
 指示启动页面功能以拍摄视频的操作。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -260,8 +228,6 @@ ACTION_SELECT = 'ohos.want.action.select'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -275,8 +241,6 @@ ACTION_SEND_DATA = 'ohos.want.action.sendData'
 指示发送单个数据记录的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -292,8 +256,6 @@ ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -307,8 +269,6 @@ ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'
 指示请求媒体扫描仪扫描文件并将文件添加到媒体库的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -324,8 +284,6 @@ ACTION_VIEW_DATA = 'ohos.want.action.viewData'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -339,8 +297,6 @@ ACTION_EDIT_DATA = 'ohos.want.action.editData'
 指示编辑数据的操作。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -356,8 +312,6 @@ INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -371,8 +325,6 @@ INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'
 指示与行为选择器一起使用时的字符序列对话框标题。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -388,8 +340,6 @@ ACTION_FILE_SELECT = 'ohos.action.fileSelect'
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -404,8 +354,6 @@ PARAMS_STREAM = 'ability.params.stream'
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -419,8 +367,6 @@ ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'
 指示提供oauth服务的操作。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

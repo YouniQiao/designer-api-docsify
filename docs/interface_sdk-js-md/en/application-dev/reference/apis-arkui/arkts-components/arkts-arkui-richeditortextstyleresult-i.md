@@ -4,8 +4,6 @@ Provides the text span style information returned by the backend.While **fontWei
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ decoration: DecorationStyleResult
 
 Text decorative line.
 
-**Type:** DecorationStyleResult
+**Type:** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ fontColor: ResourceColor
 
 Font color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Font family.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,8 +76,6 @@ Font feature.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +95,6 @@ Font size. The default unit is fp.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -124,8 +112,6 @@ Font style.
 **Type:** FontStyle
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,8 +131,6 @@ Font weight.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -164,8 +148,6 @@ Whether half leading is enabled.Whether half leading is enabled. Half leading is
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,8 +167,6 @@ Letter spacing. The default unit is fp.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -205,8 +185,6 @@ Line height. The default unit is fp.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -221,11 +199,9 @@ strokeColor?: ResourceColor
 
 Text stroke color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,11 +217,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 Get the stroke join style of the text.
 
-**Type:** StrokeJoinStyle
+**Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -265,8 +239,6 @@ Text stroke width.The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -281,11 +253,9 @@ textBackgroundStyle?: TextBackgroundStyle
 
 Text background style.Default value:{color: Color.Transparent,radius: 0}
 
-**Type:** TextBackgroundStyle
+**Type:** [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,11 +272,9 @@ textShadow?: Array<ShadowOptions>
 Text shadow.  
 **NOTE：**Only the shadow blur radius, shadow color, and shadow offset can be queried.
 
-**Type:** Array&lt;ShadowOptions&gt;
+**Type:** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Describes the custom span. Only the base class is provided. You need to define t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Manually triggers a refresh of the **Text** component that uses this **CustomSpa
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -40,8 +36,6 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 Called to draw a custom span.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 Called to obtain the size of a custom span.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

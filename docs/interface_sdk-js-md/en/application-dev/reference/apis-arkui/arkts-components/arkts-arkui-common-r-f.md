@@ -15,8 +15,6 @@ global \$r function
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -35,37 +33,3 @@ global \$r function
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
-
-**Examples**
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

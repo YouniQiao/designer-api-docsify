@@ -1,10 +1,8 @@
 # EnvironmentBackgroundType
 
-Enumerates the environment background types, which are used to define how the background of a scene is presented. @enum { int }
+Enumerates the environment background types, which are used to define how the background of a scene is presented. @enum { number }
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ No background.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## BACKGROUND_IMAGE
@@ -31,8 +27,6 @@ BACKGROUND_IMAGE = 1
 Image background.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -46,8 +40,6 @@ Cubemap background.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## BACKGROUND_EQUIRECTANGULAR
@@ -59,7 +51,5 @@ BACKGROUND_EQUIRECTANGULAR = 3
 Equirectangular projection background.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

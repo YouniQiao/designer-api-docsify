@@ -1,12 +1,10 @@
 # ColumnSplit properties/events
 
-In addition to the universal attributes, the following attributes are supported.The universal events are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ divider(value: ColumnSplitDividerStyle | null)
 Margin of the divider.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ resizeable(value: boolean)
 Sets whether the divider can be dragged.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

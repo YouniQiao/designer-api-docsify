@@ -4,15 +4,13 @@ Defines a common callback that carries an error parameter and asynchronous retur
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -22,8 +20,6 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 ```
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

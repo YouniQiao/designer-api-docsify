@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDisallowedPermission
@@ -21,8 +21,6 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 > 3.权限禁用后，仅影响应用（系统应用和普通应用）使用对应的权限，不影响系统SA使用对应的权限。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -48,26 +46,3 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201045](../errorcode-enterpriseDeviceManager.md#9201045-指定权限不可被禁用) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let permission: string = 'ohos.permission.CAMERA';
-let disallow: boolean = true;
-let accountId: number = 100;
-try {
-  securityManager.setDisallowedPermission(wantTemp, permission, disallow, accountId);
-  console.info(`Succeeded in setting disallowed permission.`);
-} catch (err) {
-  console.error(`Failed to set disallowed permission. Code: ${err.code}, message: ${err.message}`);
-}
-```

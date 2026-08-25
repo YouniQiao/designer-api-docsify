@@ -1,10 +1,8 @@
 # StrongAuthReasonFlags (System API)
 
-Indicates the strong authentication reason flags used to request.@enum { int }
+Indicates the strong authentication reason flags used to request.@enum { number }
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -20,8 +18,6 @@ Indicates that there are no strong authentication reason flags.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ AFTER_BOOT = 0x00000001
 Indicates the strong authentication reason requested after boot.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -52,8 +46,6 @@ Indicates the strong authentication reason requested after timeout.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -68,8 +60,6 @@ Indicates the strong authentication reason requested by active request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ POLICY_RESTRICTION = 0x00000008
 Indicates the strong authentication reason requested by policy restriction.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 

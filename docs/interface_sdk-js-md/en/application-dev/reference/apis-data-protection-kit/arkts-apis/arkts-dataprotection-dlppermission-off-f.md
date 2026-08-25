@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## off('openDLPFile')
@@ -15,8 +15,6 @@ function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): voi
 Unsubscribes from the DLP file open event. This API can be called only in non-DLP sandbox applications. After the API is successfully called, the application will no longer receive notifications for the DLP file open event.This API is usually called to release resources when the page is destroyed or the subscription is no longer needed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -36,18 +34,3 @@ Unsubscribes from the DLP file open event. This API can be called only in non-DL
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.off('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
-    console.info('openDlpFile event', info.uri, info.lastOpenTime)
-  }); // Unsubscribe from the DLP file open event.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```

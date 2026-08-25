@@ -4,8 +4,6 @@ Defines parameters related to animation effects.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onFinish?: () => void
 Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the background, any finite loop animation that is still in progress will be immediately terminated, triggering the completion callback.If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is executed immediately when the animation playback is complete.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,8 +60,6 @@ Animation curve.You are advised to specify the curve using the **Curve** or **IC
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -86,8 +80,6 @@ Delay of animation playback, in ms. By default, the playback is not delayed.Defa
 **Default:** 0
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -111,8 +103,6 @@ Animation duration, in ms.Default value: **1000**Note: 1. Before API 26.0.0, the
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -131,8 +121,6 @@ Expected frame rate range of the animation.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -150,8 +138,6 @@ Type of the **onFinish** callback.Default value: **FinishCallbackType.REMOVED**
 **Type:** [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,8 +160,6 @@ Number of times that the animation is played. By default, the animation is playe
 **Default:** 1
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,8 +190,6 @@ Playback mode. By default, the animation is played from the beginning after the 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -227,8 +209,6 @@ Animation playback speed. A larger value indicates faster animation playback, an
 **Default:** 1.0
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

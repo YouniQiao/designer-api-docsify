@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## byteLength
@@ -15,8 +15,6 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 Returns the byte length of a string when encoded using `encoding`. This is not the same as [`String.prototype.length`], which does not account for the encoding that is used to convert the string into bytes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,17 +32,3 @@ Returns the byte length of a string when encoded using `encoding`. This is not t
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let str = 'hello world';
-console.info(`${str}: ${str.length} characters, ${fastbuffer.byteLength(str, 'utf-8')} bytes`);
-// Output: hello world: 11 characters, 11 bytes
-
-str = '\u00bd + \u00bc = \u00be';
-console.info(`${str}: ${str.length} characters, ${fastbuffer.byteLength(str, 'utf-8')} bytes`);
-// Output: ½ + ¼ = ¾: 9 characters, 12 bytes
-```

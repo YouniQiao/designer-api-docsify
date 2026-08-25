@@ -4,8 +4,6 @@ Defines the types of protected resources that the Web component needs to access.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MidiSysex
@@ -17,8 +15,6 @@ MidiSysex = "TYPE_MIDI_SYSEX"
 MIDI SYSEX resource.Currently, only permission events can be reported. MIDI devices are not yet supported.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Video capture resource, such as a camera.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -50,8 +44,6 @@ Audio capture resource, such as a microphone.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -65,8 +57,6 @@ SENSOR = 'TYPE_SENSOR'
 Sensor resource, such as an acceleration sensor.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

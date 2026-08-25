@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## copyFile
@@ -17,8 +17,6 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 Copies a file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -61,45 +59,6 @@ Copies a file. This API uses a promise to return the result.
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fs.copyFile(srcPath, dstPath, 0).then(() => {
-  console.info("copy file succeed");
-}).catch((err: BusinessError) => {
-  console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fs.copyFile(srcPath, dstPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("copy file succeed");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcPath = pathDir + "/srcDir/test.txt";
-let dstPath = pathDir + "/dstDir/test.txt";
-fs.copyFile(srcPath, dstPath, (err: BusinessError) => {
-  if (err) {
-    console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("copy file succeed");
-  }
-});
-```
-
 
 ## copyFile
 
@@ -110,8 +69,6 @@ declare function copyFile(src: string | number, dest: string | number, callback:
 Copies a file. This API overwrites the file with the same name in the destination directory and truncates the part that is not overwritten. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,10 +104,6 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 | 13900038 |
 | 13900042 |
 
-**Examples**
-
-See [copyFile](#copyfile)
-
 
 ## copyFile
 
@@ -166,8 +119,6 @@ declare function copyFile(
 Copies a file with the specified mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -203,7 +154,3 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 | 13900034 |
 | 13900038 |
 | 13900042 |
-
-**Examples**
-
-See [copyFile](#copyfile)

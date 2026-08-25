@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 ## 导入模块
 
 ```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
+import { fileUri } from 'kits/@kit.CoreFileKit';
 ```
 
 ## 汇总

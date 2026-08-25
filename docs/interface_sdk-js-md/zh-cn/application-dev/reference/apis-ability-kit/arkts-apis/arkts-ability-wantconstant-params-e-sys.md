@@ -4,8 +4,6 @@ want的Params操作的常量。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## DLP_PARAMS_SANDBOX
@@ -17,8 +15,6 @@ DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 指示沙盒标志的参数的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -34,8 +30,6 @@ DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 **系统接口：** 此接口为系统接口。
@@ -49,8 +43,6 @@ DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 指示DLP模块名称的参数的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -66,8 +58,6 @@ DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +71,6 @@ DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 指示DLP索引参数的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -98,8 +86,6 @@ HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 **系统接口：** 此接口为系统接口。
@@ -113,8 +99,6 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 指示AssertFault的会话ID。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,8 +115,6 @@ UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'
 指示UIExtensionAbility的原始宿主Token。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

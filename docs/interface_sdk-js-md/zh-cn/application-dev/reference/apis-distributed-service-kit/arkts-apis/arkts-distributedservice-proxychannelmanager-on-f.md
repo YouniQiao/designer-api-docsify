@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## on('receiveData')
@@ -15,8 +15,6 @@ function on(type: 'receiveData', channelId: number, callback: Callback<DataInfo>
 订阅数据接收事件，使用Callback异步回调。适用于手机侧应用需要持续接收穿戴设备侧应用上报数据的场景，例如接收穿戴设备侧应用数据等。代理模块基于openProxyChannel时配置的对端UUID接收对端数据，将接收到的穿戴设 备侧应用数据通过回调传递给订阅者。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能订阅数据接收事件。若需代理唤醒手机侧应用进程 以接收和处理对端数据，使用前请在module.json5中配置action字段"action.ohos.pull.listener"。订阅后需调用 off('receiveData') 取消订阅，避免回调持续触发。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
@@ -42,34 +40,6 @@ function on(type: 'receiveData', channelId: number, callback: Callback<DataInfo>
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) |
 
-**示例**
-
-```TypeScript
-import proxyChannelManager from '@ohos.distributedsched.proxyChannelManager';
-import { BusinessError } from '@ohos.base';
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('测试')
-        .onClick(() => {
-          const receiveDataCallback = (dataInfo: proxyChannelManager.DataInfo) => {
-          };
-          try {
-            proxyChannelManager.on('receiveData', channelId, receiveDataCallback); // channelId通过openProxyChannel接口的Promise返回值获取
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to register receiveData callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 
 ## on('channelStateChange')
 
@@ -80,8 +50,6 @@ function on(type: 'channelStateChange', channelId: number, callback: Callback<Ch
 订阅通道状态事件，使用Callback异步回调。适用于手机侧应用需要实时感知代理通道连接状态的场景，例如监测通道断开后暂停数据发送、通道恢复后自动重试业务等。代理模块实时监控蓝牙BR链路状态变化，当发生连接恢复、异常断连、配对关系 删除等事件时通过回调上报ChannelStateInfo。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能订阅通道状态事件。订 阅后需调用 off('channelStateChange') 取消订阅，避免回调持续触发。调用[closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md)关闭通道后，已注册的channelStateChange回调将自动取消 订阅。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
@@ -106,31 +74,3 @@ function on(type: 'channelStateChange', channelId: number, callback: Callback<Ch
 | [32390006](../errorcode-proxyChannelManager.md#32390006-参数错误) |
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) |
-
-**示例**
-
-```TypeScript
-import proxyChannelManager from '@ohos.distributedsched.proxyChannelManager';
-import { BusinessError } from '@ohos.base';
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('测试')
-        .onClick(() => {
-          const channelStateChangeCallback = (channelStateInfo: proxyChannelManager.ChannelStateInfo) => {
-          };
-          try {
-            proxyChannelManager.on('channelStateChange', channelId, channelStateChangeCallback); // channelId通过openProxyChannel接口的Promise返回值获取
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to register channelStateChange callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

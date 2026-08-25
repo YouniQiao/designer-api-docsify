@@ -4,14 +4,12 @@ Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, y
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## enableHapticsInSilentMode
@@ -23,8 +21,6 @@ enableHapticsInSilentMode(enable: boolean): void
 Enable haptics when the ringer mode is silent mode. This function should be called before player start or after stop, and before release.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -53,8 +49,6 @@ Check whether the device supports haptics intensity adjustment.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **System API:** This is a system API.
@@ -81,8 +75,6 @@ Check whether the device supports haptics intensity ramp effect.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **System API:** This is a system API.
@@ -101,21 +93,13 @@ Check whether the device supports haptics intensity ramp effect.
 
 ## setHapticsIntensity
 
-ArkTS-Dyn:
 ```TypeScript
 setHapticsIntensity(intensity: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setHapticsIntensity(intensity: double): Promise<void>
 ```
 
 Set haptics intensity for this player. This method uses a promise to return the result. This function should be called before player release, and can only set once for each starting process.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -125,7 +109,7 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| intensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| intensity | number | Yes |
 
 **Return value:**
 
@@ -144,21 +128,13 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 ## setHapticsRamp
 
-ArkTS-Dyn:
 ```TypeScript
 setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>
 ```
 
 Set haptics intensity ramp effect for this player. This method uses a promise to return the result. This function should be called before player start or after stop, and before release.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -168,9 +144,9 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| startIntensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| endIntensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| duration | number | Yes |
+| startIntensity | number | Yes |
+| endIntensity | number | Yes |
 
 **Return value:**
 

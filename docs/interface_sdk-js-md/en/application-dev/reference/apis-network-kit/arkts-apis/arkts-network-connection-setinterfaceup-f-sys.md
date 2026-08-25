@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setInterfaceUp
@@ -15,8 +15,6 @@ function setInterfaceUp(ifaceName: string): Promise<void>
 Set a specific interface up.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 

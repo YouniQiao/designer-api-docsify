@@ -4,8 +4,6 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -13,7 +11,7 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

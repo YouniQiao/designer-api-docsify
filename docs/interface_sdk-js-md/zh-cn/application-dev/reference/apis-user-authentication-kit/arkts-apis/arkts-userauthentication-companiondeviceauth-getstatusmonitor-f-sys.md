@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor
 
 ```TypeScript
-function getStatusMonitor(localUserId: int): StatusMonitor
+function getStatusMonitor(localUserId: number): StatusMonitor
 ```
 
 获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
@@ -30,7 +28,7 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -46,31 +44,3 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
 | [32600002](../errorcode-useriam.md#32600002-模板未找到) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-const localUserId = 100;
-try {
-  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
-  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
-    templateId: new Uint8Array([])
-  };
-  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
-    console.info('continuous auth changed');
-    console.info(`isAuthPassed: ${isAuthPassed}`);
-    if (authTrustLevel !== undefined) {
-      console.info(`authTrustLevel: ${authTrustLevel}`);
-    }
-  };
-
-  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
-  statusMonitor.offContinuousAuthChange(handler);
-} catch (error) {
-  const message = (error as BusinessError).message;
-  console.error(`error has been captured. Code: ${(error as BusinessError).code}, message: ${message}`);
-}
-```

@@ -15,8 +15,6 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md)
@@ -39,39 +37,6 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
-  }
-}
-
-appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-appManager.clearUpApplicationData(bundleName)
-  .then((data) => {
-    console.info(`ClearUpApplicationData success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`ClearUpApplicationData failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
-
 
 ## clearUpApplicationData
 
@@ -82,8 +47,6 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 通过Bundle名称清除应用数据。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -101,7 +64,3 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 | --- | --- | --- |
 | bundleName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [clearUpApplicationData](#clearupapplicationdata)

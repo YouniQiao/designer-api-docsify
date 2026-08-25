@@ -4,8 +4,6 @@ Defines the callback triggered when the rendering process exits. It is suitable 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Cause for the abnormal exit of the rendering process.
 **Type:** [RenderExitReason](arkts-arkweb-renderexitreason-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

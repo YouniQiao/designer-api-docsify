@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readText
@@ -20,8 +20,6 @@ declare function readText(
 基于文本方式读取文件（即直接读取文件的文本内容）。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -59,112 +57,6 @@ declare function readText(
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readText(filePath).then((str: string) => {
-  console.info(`Succeeded in reading text, text is: ${str}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readText(filePath).then((str: string) => {
-  console.info(`Succeeded in reading text, text is: ${str}`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-   console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-
-fileIo.readText(filePath, (err: BusinessError, str: string) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-
-fileIo.readText(filePath, (err: BusinessError<void> | null, str: string | undefined) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadTextOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stat = fileIo.statSync(filePath);
-let readTextOption: ReadTextOptions = {
-    offset: 1,
-    length: stat.size,
-    encoding: 'utf-8'
-};
-fileIo.readText(filePath, readTextOption, (err: BusinessError, str: string) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadTextOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let readTextOption: ReadTextOptions = {
-    offset: 1,
-    length: 0,
-    encoding: 'utf-8'
-};
-let stat = fileIo.statSync(filePath);
-readTextOption.length = stat.size;
-fileIo.readText(filePath, readTextOption, (err: BusinessError<void> | null, str: string | undefined) => {
-  if (err) {
-    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in reading text, text is: ${str}`);
-  }
-});
-```
-
 
 ## readText
 
@@ -175,8 +67,6 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 基于文本方式读取文件内容。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -207,10 +97,6 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [readText](#readtext)
-
 
 ## readText
 
@@ -225,8 +111,6 @@ declare function readText(
 基于文本方式读取文件内容，支持配置读取选项。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -257,7 +141,3 @@ declare function readText(
 | 13900034 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [readText](#readtext)

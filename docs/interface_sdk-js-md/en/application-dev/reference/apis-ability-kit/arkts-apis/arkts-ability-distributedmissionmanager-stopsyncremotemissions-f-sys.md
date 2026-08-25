@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## stopSyncRemoteMissions
@@ -15,8 +15,6 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCal
 Stops synchronizing the remote mission list. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -40,47 +38,6 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.stopSyncRemoteMissions(
-    {
-      deviceId: ""
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-        return;
-      }
-      console.info('stopSyncRemoteMissions finished');}
-  )
-} catch (error) {
-  console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.stopSyncRemoteMissions(
-    {
-      deviceId: ""
-    }).then(() => {
-      console.info('stopSyncRemoteMissions finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-  console.error('stopSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-}
-```
-
 
 ## stopSyncRemoteMissions
 
@@ -91,8 +48,6 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 Stops synchronizing the remote mission list. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -120,7 +75,3 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [stopSyncRemoteMissions](#stopsyncremotemissions)

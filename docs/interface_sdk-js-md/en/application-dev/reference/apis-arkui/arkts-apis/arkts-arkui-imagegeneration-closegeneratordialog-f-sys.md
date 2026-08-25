@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## closeGeneratorDialog
@@ -15,8 +15,6 @@ function closeGeneratorDialog(uiContext: UIContext): Promise<void>
 Close the AI image generation task popup.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

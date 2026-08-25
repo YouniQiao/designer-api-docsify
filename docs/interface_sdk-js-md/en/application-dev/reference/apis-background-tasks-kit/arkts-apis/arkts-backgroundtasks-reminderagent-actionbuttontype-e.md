@@ -4,8 +4,6 @@ Enumerates the button types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
@@ -22,8 +20,6 @@ Button for closing the reminder.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** ACTION_BUTTON_TYPE_CLOSE
@@ -39,8 +35,6 @@ ACTION_BUTTON_TYPE_SNOOZE = 1
 Button for snoozing the reminder.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

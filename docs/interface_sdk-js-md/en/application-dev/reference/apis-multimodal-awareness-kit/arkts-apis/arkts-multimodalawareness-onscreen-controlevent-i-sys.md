@@ -4,8 +4,6 @@ Defines a control event.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a control event.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType
@@ -28,8 +26,6 @@ Control event type.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Control event type.
 ## hookId
 
 ```TypeScript
-hookId?: long
+hookId?: number
 ```
 
 Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -55,16 +49,14 @@ Hook ID corresponding to the control event. The hook ID and the session ID can b
 ## sessionId
 
 ```TypeScript
-sessionId: long
+sessionId: number
 ```
 
 ID of the session to be operated. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -73,16 +65,14 @@ ID of the session to be operated. The hook ID and the session ID can be obtained
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 ID of the window to be operated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

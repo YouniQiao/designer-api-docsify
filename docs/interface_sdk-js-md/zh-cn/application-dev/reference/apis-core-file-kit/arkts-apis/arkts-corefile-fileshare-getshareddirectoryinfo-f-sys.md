@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSharedDirectoryInfo
@@ -15,8 +15,6 @@ function getSharedDirectoryInfo(): Promise<Array<SharedDirectoryInfo>>
 获取所有应用捐献的沙箱目录。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_SHARED_FILE
 
@@ -41,46 +39,3 @@ function getSharedDirectoryInfo(): Promise<Array<SharedDirectoryInfo>>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
 | 13900011 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function getSharedDirectoryInfo() {
-  try {
-    fileShare.getSharedDirectoryInfo().then((infos: Array<fileShare.SharedDirectoryInfo>) => {
-      infos.forEach((info: fileShare.SharedDirectoryInfo) => {
-        console.info(`bundleName=${info.bundleName} path=${info.path} mode=${info.permissionMode}`);
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`getSharedDirectoryInfo err: ${JSON.stringify(err)}`);
-    });
-  } catch (error) {
-    console.error(`getSharedDirectoryInfo error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function getSharedDirectoryInfo() {
-  try {
-    let sharedInfos = await fileShare.getSharedDirectoryInfo();
-    console.info("getSharedDirectoryInfo success.");
-    for (let info of sharedInfos) {
-      console.info("bundleName=" + info.bundleName + " path=" + info.path + " mode=" + info.permissionMode)
-    }
-  }
-  catch (error) {
-    console.error('getSharedDirectoryInfo error, Code: ' + error.code + ', message: ' + error.message);
-  }
-}
-```

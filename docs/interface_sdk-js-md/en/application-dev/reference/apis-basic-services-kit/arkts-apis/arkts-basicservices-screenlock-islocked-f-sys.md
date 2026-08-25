@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isLocked
@@ -15,8 +15,6 @@ function isLocked(): boolean
 Checks whether the screen is currently locked.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -33,9 +31,3 @@ Checks whether the screen is currently locked.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-let isLocked = screenLock.isLocked();
-```

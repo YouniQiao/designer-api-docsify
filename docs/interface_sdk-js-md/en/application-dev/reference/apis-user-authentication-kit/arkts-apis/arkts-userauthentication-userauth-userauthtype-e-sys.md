@@ -4,8 +4,6 @@ Enumerates the identity authentication types. This enum defines the authenticati
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## PRIVATE_PIN
@@ -18,47 +16,6 @@ Privacy PIN. It is a special PIN authentication type, which is generally used fo
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
-
-**Examples**
-
-Initiate privacy PIN authentication with the authentication trust level greater than or equal to ATL3.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PRIVATE_PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-  // The authentication result is returned by onResult() only after the authentication is started by start() of UserAuthInstance.
-  userAuthInstance.on('result', {
-    onResult (result) {
-      console.info(`userAuthInstance callback result = ${JSON.stringify(result)}`);
-    }
-  });
-  console.info('auth on success');
-  userAuthInstance.start();
-  console.info('auth start success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```

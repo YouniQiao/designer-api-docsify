@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getFontDescriptorsFromPath
@@ -21,8 +21,6 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -38,76 +36,3 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md)&gt;&gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontDescriptorsFromPathTest {
-  build() {
-    Column({ space: 10 }) {
-      Button("get fontDescriptors")
-        .onClick(() => {
-          let promise = text.getFontDescriptorsFromPath("file:///system/fonts/NotoSansCJK-Regular.ttc")
-          promise.then((fontFullDescriptors) => {
-            for (let index = 0; index < fontFullDescriptors.length; index++) {
-              console.info("Path:" + fontFullDescriptors[index].path +
-                          "\npostScriptName:" + fontFullDescriptors[index].postScriptName +
-                          "\nfullName:" + fontFullDescriptors[index].fullName +
-                          "\nfamilyName:" + fontFullDescriptors[index].fontFamily +
-                          "\nfontSubName:" + fontFullDescriptors[index].fontSubfamily +
-                          "\nweight:" + fontFullDescriptors[index].weight +
-                          "\nwidth:" + fontFullDescriptors[index].width +
-                          "\nitalic:" + fontFullDescriptors[index].italic +
-                          "\nmonoSpace:" + fontFullDescriptors[index].monoSpace +
-                          "\nsymbolic:" + fontFullDescriptors[index].symbolic)
-            }
-          })
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent, FlexAlign } from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontDescriptorsFromPathTest {
-  build() {
-    Column() {
-      Button("get fontDescriptors")
-        .onClick((e: ClickEvent) => {
-          let promise = text.getFontDescriptorsFromPath("file:///system/fonts/NotoSansCJK-Regular.ttc")
-          promise.then((fontFullDescriptors: Array<text.FontDescriptor>) => {
-            for (let index = 0; index < fontFullDescriptors.length; index++) {
-              console.info("Path:" + fontFullDescriptors[index].path +
-                          "\npostScriptName:" + fontFullDescriptors[index].postScriptName +
-                          "\nfullName:" + fontFullDescriptors[index].fullName +
-                          "\nfamilyName:" + fontFullDescriptors[index].fontFamily +
-                          "\nfontSubName:" + fontFullDescriptors[index].fontSubfamily +
-                          "\nweight:" + fontFullDescriptors[index].weight +
-                          "\nwidth:" + fontFullDescriptors[index].width +
-                          "\nitalic:" + fontFullDescriptors[index].italic +
-                          "\nmonoSpace:" + fontFullDescriptors[index].monoSpace +
-                          "\nsymbolic:" + fontFullDescriptors[index].symbolic)
-            }
-          })
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```

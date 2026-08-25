@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## getConnectedVpnAppInfo
@@ -15,8 +15,6 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 获取已连接的VPN应用信息。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 

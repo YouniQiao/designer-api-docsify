@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## setDarkMode
@@ -16,8 +16,6 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -40,42 +38,6 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK, (error) => {
-    if (error) {
-      console.error('Set dark-mode failed, ' + error.message);
-    } else {
-      console.info('Set dark-mode successfully.');
-    }
-  })
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Set dark-mode failed, ' + message);
-}
-```
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
-    console.info('Set dark-mode successfully.');
-  }).catch((error: Error) => {
-    console.error('Set dark-mode failed, ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Set dark-mode failed, ' + message);
-}
-```
-
 
 ## setDarkMode
 
@@ -87,8 +49,6 @@ Sets the system color mode. This API uses a promise to return the result.
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -115,7 +75,3 @@ Sets the system color mode. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) |
-
-**Examples**
-
-See [setDarkMode](#setdarkmode)

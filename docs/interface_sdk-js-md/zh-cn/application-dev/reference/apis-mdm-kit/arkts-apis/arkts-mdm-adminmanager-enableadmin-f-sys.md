@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## enableAdmin
@@ -15,8 +15,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其 [企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启并在用户切换后自启。使用callback异步回 调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -46,78 +44,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let enterpriseInfo: adminManager.EnterpriseInfo = {
-  // 需根据实际情况进行替换
-  name: 'enterprise name',
-  description: 'enterprise description'
-};
-
-adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_TYPE_SUPER, (err) => {
-  if (err) {
-    console.error(`Failed to enable admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in enabling admin');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let enterpriseInfo: adminManager.EnterpriseInfo = {
-  // 需根据实际情况进行替换
-  name: 'enterprise name',
-  description: 'enterprise description'
-};
-
-adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_TYPE_NORMAL, 100, (err) => {
-  if (err) {
-    console.error(`Failed to enable admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in enabling admin');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let enterpriseInfo: adminManager.EnterpriseInfo = {
-  // 需根据实际情况进行替换
-  name: 'enterprise name',
-  description: 'enterprise description'
-};
-
-adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_TYPE_NORMAL, 100).catch(
-  (err: BusinessError) => {
-    console.error(`Failed to enable admin. Code: ${err.code}, message: ${err.message}`);
-  });
-```
-
 
 ## enableAdmin
 
@@ -128,8 +54,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 激活指定用户（通过userId指定）下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -160,10 +84,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [enableAdmin](#enableadmin)
-
 
 ## enableAdmin
 
@@ -174,8 +94,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 激活当前/指定用户下指定的设备管理应用，其中超级管理应用仅能在首用户（u100）下被激活。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -210,7 +128,3 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [enableAdmin](#enableadmin)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedPermissions
@@ -15,8 +15,6 @@ function getDisallowedPermissions(admin: Want | null, accountId: number): Array<
 获取指定用户下禁用的权限列表。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -45,24 +43,3 @@ function getDisallowedPermissions(admin: Want | null, accountId: number): Array<
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let accountId: number = 100;
-try {
-  let result: Array<string> = securityManager.getDisallowedPermissions(wantTemp, accountId);
-  console.info(`Succeeded in getting disallowed permissions, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed permissions. Code: ${err.code}, message: ${err.message}`);
-}
-```

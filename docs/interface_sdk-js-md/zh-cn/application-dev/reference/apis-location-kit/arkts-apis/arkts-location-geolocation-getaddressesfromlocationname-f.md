@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## getAddressesFromLocationName
@@ -16,8 +16,6 @@ function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCa
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md)
@@ -30,31 +28,8 @@ function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | 是 |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let geocodeRequest:geolocation.GeoCodeRequest = {"description": "上海市浦东新区xx路xx号", "maxItems": 1};
-geolocation.getAddressesFromLocationName(geocodeRequest, (err, data) => {
-    if (err) {
-        console.info('getAddressesFromLocationName: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('getAddressesFromLocationName: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let geocodeRequest:geolocation.GeoCodeRequest = {"description": "上海市浦东新区xx路xx号", "maxItems": 1};
-geolocation.getAddressesFromLocationName(geocodeRequest).then((result) => {
-    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
-});
-```
 
 
 ## getAddressesFromLocationName
@@ -67,8 +42,6 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md)
@@ -81,14 +54,10 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | 是 |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;GeoAddress & gt; & gt; |
-
-**示例**
-
-参见 [getAddressesFromLocationName](#getaddressesfromlocationname)

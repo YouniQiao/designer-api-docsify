@@ -1,10 +1,20 @@
 # Sign
 
-Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).<br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.<br>The signing mode is determined by **createSign()**, and the key is set by **init()**.<br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**.<br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data.<br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data.<br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
+
+The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
+
+The signing mode is determined by **createSign()**, and the key is set by **init()**.
+
+If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**.
+
+If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data.
+
+When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data.
+
+If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -13,26 +23,18 @@ Signing interface, defining methods for signing data using a private key. Before
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## getSignSpec
 
-ArkTS-Dyn:
 ```TypeScript
 getSignSpec(itemType: SignSpecItem): string | number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSignSpec(itemType: SignSpecItem): string | int
 ```
 
 Obtains signing specifications. Currently, only RSA is supported.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,7 +52,7 @@ Obtains signing specifications. Currently, only RSA is supported.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: string \| number<br>ArkTS-Sta：string \ | int |
+| string \| number |
 
 **Error codes:**
 
@@ -62,30 +64,17 @@ Obtains signing specifications. Currently, only RSA is supported.
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testGetSignSpec() {
-  let signer = cryptoFramework.createSign('RSA|PSS|SHA256|MGF1_SHA256');
-  let setN = 32;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-  signer.getSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM);
-}
-```
-
 ## init
 
 ```TypeScript
 init(priKey: PriKey, callback: AsyncCallback<void>): void
 ```
 
-Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.<br>The **Sign** instance does not support repeated use of **init**.
+Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
+
+The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -117,11 +106,11 @@ init(priKey: PriKey): Promise<void>
 ```
 
 Initializes the **Sign** object using a private key. This API uses a promise to return the result.  
-**init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.<br>The **Sign** instance does not support repeated use of **init**.
+**init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
+
+The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -158,11 +147,13 @@ initSync(priKey: PriKey): void
 ```
 
 Initializes the **Sign** instance with a private key. This API returns the result synchronously.  
-**initSync**, **updateSync**, and **signSync** must be used together. **initSync** and **signSync** are mandatory, and **updateSync** is optional.<br>The **Sign** instance does not support repeated use of **initSync**.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**initSync**, **updateSync**, and **signSync** must be used together. **initSync** and **signSync** are mandatory, and **updateSync** is optional.
+
+The **Sign** instance does not support repeated use of **initSync**.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -187,14 +178,14 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 ## setSignSpec
 
 ```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int): void
+setSignSpec(itemType: SignSpecItem, itemValue: number): void
 ```
 
-Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md).<br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
+Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md).
+
+Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -219,35 +210,17 @@ Sets signing specifications. You can use this API to set signing parameters that
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign('RSA|PSS|SHA256|MGF1_SHA256');
-  let setN = 20;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
-
 ## setSignSpec
 
-ArkTS-Dyn:
 ```TypeScript
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-ArkTS-Sta:
-```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
-```
+Sets the specified parameter for the Sign instance.
 
-Sets the specified parameter for the Sign instance.<br>Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -260,7 +233,7 @@ Sets the specified parameter for the Sign instance.<br>Currently, only PSS_SALT_
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [itemType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes |
-| itemValue | ArkTS-Dyn: number \| Uint8Array<br>ArkTS-Sta：int \ | Uint8Array | Yes |
+| itemValue | number \| Uint8Array | Yes |
 
 **Error codes:**
 
@@ -274,21 +247,17 @@ Sets the specified parameter for the Sign instance.<br>Currently, only PSS_SALT_
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-See [setSignSpec](#setsignspec)
-
 ## setSignSpec
 
 ```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void
+setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-Sets the specified parameter for the Sign instance.<br>Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
+Sets the specified parameter for the Sign instance.
+
+Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,47 +283,6 @@ Sets the specified parameter for the Sign instance.<br>Currently, only PSS_SALT_
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-See [setSignSpec](#setsignspec)
-
-## setSignSpec
-
-```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: boolean): void
-```
-
-Sets the specified parameter for the Sign instance.<br>Currently, only ML_DSA_DETERMINISTIC and ML_DSA_MU in ML-DSA are supported. For ML_DSA_CONTEXT parameter, use [setSignSpec()](#setsignspec).
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**System capability:** SystemCapability.Security.CryptoFramework.Signature
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [itemType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes |
-| itemValue | boolean | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
-
-**Examples**
-
-See [setSignSpec](#setsignspec)
-
 ## sign
 
 ```TypeScript
@@ -364,8 +292,6 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 Signs the data, including data added via the update interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -377,7 +303,7 @@ Signs the data, including data added via the update interface. This API uses an 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes |
 
 **Error codes:**
@@ -399,8 +325,6 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 Signs data. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -435,8 +359,6 @@ Signs the data, including data added via the update interface. This API uses a p
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -447,7 +369,7 @@ Signs the data, including data added via the update interface. This API uses a p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 
 **Return value:**
 
@@ -474,8 +396,6 @@ sign(data: DataBlob | null): Promise<DataBlob>
 Signs data. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -511,11 +431,11 @@ Signs data. This API uses a promise to return the result.
 signSync(data: DataBlob | null): DataBlob
 ```
 
-Signs the data. This API returns the result synchronously.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [sign](#sign). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Signs the data. This API returns the result synchronously.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [sign](#sign). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -531,7 +451,7 @@ Signs the data. This API returns the result synchronously.<br><br>**NOTE：**<br
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **Error codes:**
 
@@ -549,7 +469,9 @@ Signs the data. This API returns the result synchronously.<br><br>**NOTE：**<br
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates data to be signed. This API uses an asynchronous callback to return the result.<br>This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync).
+Updates data to be signed. This API uses an asynchronous callback to return the result.
+
+This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync).
 
 > **NOTE：**&gt;
 > You can call **update** multiple times or do not use **update** (call [sign](#sign) after
@@ -566,8 +488,6 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -578,7 +498,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -597,7 +517,9 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 update(data: DataBlob): Promise<void>
 ```
 
-Updates data to be signed. This API uses a promise to return the result.<br>Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init).
+Updates data to be signed. This API uses a promise to return the result.
+
+Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init).
 
 > **NOTE：**&gt;
 > You can call **update** multiple times or do not use **update** (call
@@ -616,8 +538,6 @@ Updates data to be signed. This API uses a promise to return the result.<br>Befo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -628,7 +548,7 @@ Updates data to be signed. This API uses a promise to return the result.<br>Befo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 
 **Return value:**
 
@@ -652,7 +572,9 @@ Updates data to be signed. This API uses a promise to return the result.<br>Befo
 updateSync(data: DataBlob): void
 ```
 
-Updates data to be signed. This API returns the result synchronously.<br>This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync).
+Updates data to be signed. This API returns the result synchronously.
+
+This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync).
 
 > **NOTE：**&gt;
 > You can call **updateSync** multiple times or do not use **updateSync** (call
@@ -668,11 +590,10 @@ Updates data to be signed. This API returns the result synchronously.<br>This AP
 > data.&gt;
 > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not
 > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -682,7 +603,7 @@ Updates data to be signed. This API returns the result synchronously.<br>This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 
 **Error codes:**
 
@@ -705,8 +626,6 @@ Indicates the algorithm name of the Sign instance.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,8 +4,6 @@ Enumerates flags for using a WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
@@ -21,8 +19,6 @@ ONE_TIME_FLAG = 0
 Indicates that the WantAgent can be used only once. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -42,8 +38,6 @@ Indicates that null is returned if the WantAgent does not exist. This flag is va
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#no_build_flag)
@@ -61,8 +55,6 @@ CANCEL_PRESENT_FLAG
 Indicates that the existing WantAgent should be canceled before a new object is generated. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,8 +74,6 @@ Indicates that the system only replaces the extra data of the existing WantAgent
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#update_present_flag)
@@ -101,8 +91,6 @@ CONSTANT_FLAG
 Indicates that the created WantAgent should be immutable.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -122,8 +110,6 @@ Indicates that the current value of element can be replaced when the WantAgent i
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#replace_element)
@@ -141,8 +127,6 @@ REPLACE_ACTION
 Indicates that the current value of action can be replaced when the WantAgent is triggered.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -162,8 +146,6 @@ Indicates that the current value of uri can be replaced when the WantAgent is tr
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#replace_uri)
@@ -182,8 +164,6 @@ Indicates that the current value of entities can be replaced when the WantAgent 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#replace_entities)
@@ -201,8 +181,6 @@ REPLACE_BUNDLE
 Indicates that the current value of packageName can be replaced when the WantAgent is triggered.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

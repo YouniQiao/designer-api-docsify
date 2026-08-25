@@ -4,14 +4,12 @@ Describes the audio and video recording profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## aacProfile
@@ -26,8 +24,6 @@ AAC profile for AAC audio encoder. If not set, use AAC_LC profile as default.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -35,16 +31,24 @@ AAC profile for AAC audio encoder. If not set, use AAC_LC profile as default.
 ## audioBitrate
 
 ```TypeScript
-audioBitrate?: int
+audioBitrate?: number
 ```
 
-Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recording.<br>Supported bit rate ranges: <br>- Range [32000 - 500000] for the AAC encoding format.<br>- Range [64000] for the G.711 μ-law encoding format. <br>- Range [8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000] for the MP3 encoding format.<br>When the MP3 encoding format is used, the mapping between the sampling rate and bit rate is as follows:<br>- When the sampling rate is lower than 16 kHZ, the bit rate range is [8000 - 64000].<br>- When the sampling rate ranges from 16 kHz to 32 kHz, the bit rate range is [8000 - 160000].<br>- When the sampling rate is greater than 32 kHz, the bit rate range is [32000 - 320000].<br>- Range [4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200] for the AMR-NB encoding format.<br>- Range [6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850] for the AMR-WB encoding format.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recording.Supported bit rate ranges:   
+- Range [32000 - 500000] for the AAC encoding format.  
+- Range [64000] for the G.711 μ-law encoding format.   
+- Range [8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000] for the MP3 encoding format.  
+When the MP3 encoding format is used, the mapping between the sampling rate and bit rate is as follows:  
+- When the sampling rate is lower than 16 kHZ, the bit rate range is [8000 - 64000].  
+- When the sampling rate ranges from 16 kHz to 32 kHz, the bit rate range is [8000 - 160000].  
+- When the sampling rate is greater than 32 kHz, the bit rate range is [32000 - 320000].  
+- Range [4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200] for the AMR-NB encoding format.  
+- Range [6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850] for the AMR-WB encoding format.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +57,19 @@ Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recordi
 ## audioChannels
 
 ```TypeScript
-audioChannels?: int
+audioChannels?: number
 ```
 
-Number of audio channels. This parameter is mandatory for audio recording.<br>- Range [1 - 2] for the AAC encoding format.<br>- Range [1] for the G.711 μ-law encoding format.<br>- Range [1 - 2] for the MP3 encoding format.<br>- Range [1] for the AMR-NB and AMR-WB encoding formats.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Number of audio channels. This parameter is mandatory for audio recording.  
+- Range [1 - 2] for the AAC encoding format.  
+- Range [1] for the G.711 μ-law encoding format.  
+- Range [1 - 2] for the MP3 encoding format.  
+- Range [1] for the AMR-NB and AMR-WB encoding formats.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,13 +81,12 @@ Number of audio channels. This parameter is mandatory for audio recording.<br>- 
 audioCodec?: CodecMimeType
 ```
 
-Audio encoding format. This parameter is mandatory for audio recording. Currently, AUDIO_AAC, AUDIO_MP3, AUDIO_G711MU, AUDIO_AMR_NB, and AUDIO_AMR_WB are supported.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio encoding format. This parameter is mandatory for audio recording. Currently, AUDIO_AAC, AUDIO_MP3, AUDIO_G711MU, AUDIO_AMR_NB, and AUDIO_AMR_WB are supported.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -89,16 +95,21 @@ Audio encoding format. This parameter is mandatory for audio recording. Currentl
 ## audioSampleRate
 
 ```TypeScript
-audioSampleRate?: int
+audioSampleRate?: number
 ```
 
-Audio sampling rate, in Hz. This parameter is mandatory for audio recording.<br>Supported sampling rate ranges: <br>- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000] for the AAC encoding format.<br>- Range [8000] for the G.711 μ-law encoding format.<br>- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000] for the MP3 encoding format.<br>- Range [8000] for the AMR-NB encoding format. <br>- Range [16000] for the AMR-WB encoding format.<br>Variable bit rate. The bit rate is for reference only. <br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Audio sampling rate, in Hz. This parameter is mandatory for audio recording.Supported sampling rate ranges:   
+- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000] for the AAC encoding format.  
+- Range [8000] for the G.711 μ-law encoding format.  
+- Range [8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000] for the MP3 encoding format.  
+- Range [8000] for the AMR-NB encoding format.   
+- Range [16000] for the AMR-WB encoding format.  
+Variable bit rate. The bit rate is for reference only.   
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +127,6 @@ Indicates whether enable B Frame. Default is disabled.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## enableTemporalScale
@@ -132,8 +141,6 @@ Whether temporal layered encoding is supported. This parameter is optional for v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## fileFormat
@@ -142,13 +149,12 @@ Whether temporal layered encoding is supported. This parameter is optional for v
 fileFormat: ContainerFormatType
 ```
 
-Container format of a file. This parameter is mandatory. Currently, the MP4, M4A, MP3, WAV, AMR, and AAC container formats are supported. The AUDIO_MP3 encoding format cannot be used in the MP4 container format. <br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Container format of a file. This parameter is mandatory. Currently, the MP4, M4A, MP3, WAV, AMR, and AAC container formats are supported. The AUDIO_MP3 encoding format cannot be used in the MP4 container format.   
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -166,23 +172,19 @@ HDR encoding. This parameter is optional for video recording. The default value 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## videoBitrate
 
 ```TypeScript
-videoBitrate?: int
+videoBitrate?: number
 ```
 
 Video encoding bit rate, in bit/s. This parameter is mandatory for video recording. The value range is [10000 - 100000000], in bit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -198,54 +200,46 @@ Video encoding format. This parameter is mandatory for video recording. Currentl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## videoFrameHeight
 
 ```TypeScript
-videoFrameHeight?: int
+videoFrameHeight?: number
 ```
 
 Height of a video frame, in px. This parameter is mandatory for video recording. The value range is [144 - 4096].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## videoFrameRate
 
 ```TypeScript
-videoFrameRate?: int
+videoFrameRate?: number
 ```
 
 Video frame rate, in fps. This parameter is mandatory for video recording. The value range is [1 - 60].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## videoFrameWidth
 
 ```TypeScript
-videoFrameWidth?: int
+videoFrameWidth?: number
 ```
 
 Width of a video frame, in px. This parameter is mandatory for video recording. The value range is [176 - 4096].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

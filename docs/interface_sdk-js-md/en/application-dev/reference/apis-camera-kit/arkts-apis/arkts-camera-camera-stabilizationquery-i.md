@@ -8,14 +8,12 @@ StabilizationQuery provides APIs to check the support for video stabilization.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isVideoStabilizationModeSupported
@@ -27,8 +25,6 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 Checks whether a video stabilization mode is supported.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -51,37 +47,3 @@ Checks whether a video stabilization mode is supported.
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isVideoStabilizationModeSupported(captureSession: camera.CaptureSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = captureSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isVideoStabilizationModeSupported(videoSession: camera.VideoSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = videoSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```

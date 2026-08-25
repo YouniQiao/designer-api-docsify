@@ -4,8 +4,6 @@ The enum of major class of a bluetooth device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MajorClass](arkts-connectivity-constant-majorclass-e.md)
@@ -21,8 +19,6 @@ MAJOR_MISC = 0x0000
 Miscellaneous device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Computer.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MAJOR_COMPUTER](arkts-connectivity-constant-majorclass-e.md#major_computer)
@@ -57,8 +51,6 @@ MAJOR_PHONE = 0x0200
 Mobile phone.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -76,8 +68,6 @@ Network device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MAJOR_NETWORKING](arkts-connectivity-constant-majorclass-e.md#major_networking)
@@ -93,8 +83,6 @@ MAJOR_AUDIO_VIDEO = 0x0400
 Audio or video device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -112,8 +100,6 @@ Peripheral device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MAJOR_PERIPHERAL](arkts-connectivity-constant-majorclass-e.md#major_peripheral)
@@ -129,8 +115,6 @@ MAJOR_IMAGING = 0x0600
 Imaging device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -148,8 +132,6 @@ Wearable device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MAJOR_WEARABLE](arkts-connectivity-constant-majorclass-e.md#major_wearable)
@@ -165,8 +147,6 @@ MAJOR_TOY = 0x0800
 Toy.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -184,8 +164,6 @@ Health device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MAJOR_HEALTH](arkts-connectivity-constant-majorclass-e.md#major_health)
@@ -201,8 +179,6 @@ MAJOR_UNCATEGORIZED = 0x1F00
 Unclassified device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

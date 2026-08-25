@@ -4,8 +4,6 @@ Options for setting the render target of an audio renderer. This parameter takes
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Options for setting the render target of an audio renderer. This parameter takes
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## streamId
 
 ```TypeScript
-streamId: long
+streamId: number
 ```
 
 The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#source_type_voice_communication) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcet
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 The application UID of the target capture stream into which the render stream is injected. It is valid only when the target is non-PLAYBACK. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

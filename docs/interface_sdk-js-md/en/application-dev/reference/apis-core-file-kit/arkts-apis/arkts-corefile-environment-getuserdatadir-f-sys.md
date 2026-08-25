@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
+import { Environment } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getUserDataDir
@@ -15,8 +15,6 @@ function getUserDataDir(): Promise<string>
 Obtains the root directory of user files. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.Environment
 
@@ -36,28 +34,6 @@ Obtains the root directory of user files. This API uses a promise to return the 
 | 13900020 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir().then((path: string) => {
-  console.info("getUserDataDir successfully, Path: " + path);
-}).catch((err: BusinessError) => {
-  console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getUserDataDir((err: BusinessError, path: string) => {
-  if (err) {
-    console.error("getUserDataDir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getUserDataDir successfully, Path: " + path);
-  }
-});
-```
-
 
 ## getUserDataDir
 
@@ -68,8 +44,6 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 Obtains the root directory of user files. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.Environment
 
@@ -88,7 +62,3 @@ Obtains the root directory of user files. This API uses an asynchronous callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900020 |
 | 13900042 |
-
-**Examples**
-
-See [getUserDataDir](#getuserdatadir)

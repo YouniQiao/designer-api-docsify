@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
@@ -15,8 +15,6 @@ function disableNetwork(netId: number): boolean
 去使能网络配置。<p>去使能的网络将不再被关联。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,16 +37,3 @@ function disableNetwork(netId: number): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let netId = 0;
-    wifi.disableNetwork(netId);        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

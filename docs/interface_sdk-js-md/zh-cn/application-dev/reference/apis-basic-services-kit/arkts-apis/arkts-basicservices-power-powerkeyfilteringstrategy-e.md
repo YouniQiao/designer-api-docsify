@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## DISABLE_LONG_PRESS_FILTERING
@@ -18,8 +16,6 @@ DISABLE_LONG_PRESS_FILTERING = 0
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## LONG_PRESS_FILTERING_ONCE
@@ -31,7 +27,5 @@ LONG_PRESS_FILTERING_ONCE = 1
 表示仅过滤当前电源键长按事件，下一次不过滤。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core

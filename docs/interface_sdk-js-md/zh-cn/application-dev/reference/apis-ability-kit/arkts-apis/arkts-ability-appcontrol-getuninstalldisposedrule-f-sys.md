@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getUninstallDisposedRule
 
 ```TypeScript
-function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): UninstallDisposedRule
+function getUninstallDisposedRule(appIdentifier: string, appIndex?: number): UninstallDisposedRule
 ```
 
 获取指定应用或分身应用已设置的优先级最高的卸载处置规则。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_DISPOSED_APP_STATUS or ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -29,7 +27,7 @@ function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): Uninst
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appIdentifier | string | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **返回值：**
 
@@ -47,20 +45,3 @@ function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): Uninst
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700074](../errorcode-bundle.md#17700074-传入的appidentifier无效) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appIdentifier = "com.example.myapplication_xxxxx";
-
-try {
-  let data = appControl.getUninstallDisposedRule(appIdentifier, 1);
-  console.info('getUninstallDisposedRule successfully. Data: ' + JSON.stringify(data));
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getUninstallDisposedRule failed ' + message);
-}
-```

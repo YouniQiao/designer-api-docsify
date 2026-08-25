@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ PORTRAIT = 0
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ LANDSCAPE = 1
 横屏状态。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

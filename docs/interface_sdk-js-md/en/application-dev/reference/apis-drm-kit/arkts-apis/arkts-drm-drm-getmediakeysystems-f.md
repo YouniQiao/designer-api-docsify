@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## getMediaKeySystems
@@ -15,8 +15,6 @@ function getMediaKeySystems(): MediaKeySystemDescription[]
 Obtains the list of plugins supported by the device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,16 +32,3 @@ Obtains the list of plugins supported by the device.
 | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) |
 | [24700201](../errorcode-drm.md#24700201-service-exception) |
-
-**Examples**
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let description: drm.MediaKeySystemDescription[] = drm.getMediaKeySystems();
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getMediaKeySystems ERROR: ${error}`);  
-}
-```

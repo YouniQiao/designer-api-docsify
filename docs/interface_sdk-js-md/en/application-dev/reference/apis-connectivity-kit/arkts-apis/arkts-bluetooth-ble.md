@@ -4,8 +4,6 @@ Provides methods to operate or manage Bluetooth.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -13,7 +11,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -39,7 +37,6 @@ import { ble } from '@kit.ConnectivityKit';
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md) |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md) |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md) |
-| [startBLEScan](arkts-connectivity-ble-startblescan-f.md) |
 | [startBLEScan](arkts-connectivity-ble-startblescan-f.md) |
 | [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) |
 | [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) |

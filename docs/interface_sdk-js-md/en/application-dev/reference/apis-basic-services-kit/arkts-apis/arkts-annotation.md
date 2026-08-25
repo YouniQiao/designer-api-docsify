@@ -17,18 +17,18 @@ This module defines the annotation types of OpenHarmony ArkTS APIs, such as the 
 ## Modules to Import
 
 ```TypeScript
-import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
-import { Available } from '@kit.BasicServicesKit';
+import { Available, SuppressWarnings, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
+import { Available } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
 
-### Interfaces
+### Annotations
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [Available(Annotation)](arkts-basicservices-annotation-available-i.md) |
-| [SuppressWarnings(Annotation)](arkts-basicservices-annotation-suppresswarnings-i.md) |
+| [Available(Annotation)](arkts-basicservices-annotation-available-a.md) |
+| [SuppressWarnings(Annotation)](arkts-basicservices-annotation-suppresswarnings-a.md) |
 
 ### Enums
 

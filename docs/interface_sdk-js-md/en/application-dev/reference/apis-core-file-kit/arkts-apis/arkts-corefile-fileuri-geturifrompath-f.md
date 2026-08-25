@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
+import { fileUri } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -15,8 +15,6 @@ function getUriFromPath(path: string): string
 Get the uri from the path of file in app sandbox
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -39,10 +37,3 @@ Get the uri from the path of file in app sandbox
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test";
-let uri = fileUri.getUriFromPath(filePath);
-```

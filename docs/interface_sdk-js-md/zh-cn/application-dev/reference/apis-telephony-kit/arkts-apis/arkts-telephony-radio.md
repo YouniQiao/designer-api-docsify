@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## 汇总
@@ -82,10 +80,8 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId(网络搜索)](arkts-telephony-radio-getuniquedeviceid-f-sys.md) |
 | [getUniqueDeviceId(网络搜索)](arkts-telephony-radio-getuniquedeviceid-f-sys.md) |
 | [isManualNetworkScanning(网络搜索)](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) |
-| [off(网络搜索)](arkts-telephony-radio-off-f-sys.md#offimsregstatechange) |
-| [offImsRegStateChange(网络搜索)](arkts-telephony-radio-offimsregstatechange-f-sys.md) |
-| [on(网络搜索)](arkts-telephony-radio-on-f-sys.md#onimsregstatechange) |
-| [onImsRegStateChange(网络搜索)](arkts-telephony-radio-onimsregstatechange-f-sys.md) |
+| off(网络搜索) |
+| on(网络搜索) |
 | [sendUpdateCellLocationRequest(网络搜索)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |
 | [sendUpdateCellLocationRequest(网络搜索)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |
 | [sendUpdateCellLocationRequest(网络搜索)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |

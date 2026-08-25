@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeAllowedUsbDevices
@@ -13,11 +13,11 @@ function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>):
 ```
 
 Removes allowed USB devices.Use cases:  
-- Revoke access permissions for certain USB devices in enterprise security management scenarios. - Enable device administrators to dynamically adjust the list of allowed USB devices. - Remove USB devices from the trustlist when they are no longer needed or pose a security risk.
+- Revoke access permissions for certain USB devices in enterprise security management scenarios.  
+- Enable device administrators to dynamically adjust the list of allowed USB devices.  
+- Remove USB devices from the trustlist when they are no longer needed or pose a security risk.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -40,26 +40,3 @@ Removes allowed USB devices.Use cases:
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let usbDeviceIds: Array<usbManager.UsbDeviceId> = [{
-      vendorId: 1,
-      productId: 1
-  }];
-  usbManager.removeAllowedUsbDevices(wantTemp, usbDeviceIds);
-  console.info(`Succeeded in removing allowed USB devices.`);
-} catch (err) {
-  console.error(`Failed to remove allowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

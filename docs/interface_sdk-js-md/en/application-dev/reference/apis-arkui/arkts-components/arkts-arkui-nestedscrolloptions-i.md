@@ -4,8 +4,6 @@ Define nested scroll options@interface NestedScrollOptions
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ scrollBackward: NestedScrollMode
 
 Set NestedScrollMode when the scrollable component scrolls backward
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ scrollForward: NestedScrollMode
 
 Set NestedScrollMode when the scrollable component scrolls forward
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

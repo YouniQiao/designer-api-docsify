@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityStrategyByBundles
 
 ```TypeScript
-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>
+function setPriorityStrategyByBundles(strategies: Map<BundleOption, number>): Promise<void>
 ```
 
 批量设置应用通知优先策略。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -30,7 +28,7 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Prom
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| strategies | ArkTS-Dyn: Map & lt;BundleOption, number & gt;<br>ArkTS-Sta：Map & lt;BundleOption, long & gt; | 是 |
+| strategies | Map & lt;BundleOption, number & gt; | 是 |
 
 **返回值：**
 
@@ -48,36 +46,3 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Prom
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 1000 };
-let strategies: Map<notificationManager.BundleOption, number> = new Map([[bundleOption, notificationManager.PriorityStrategyStatus.STATUS_APPLICATION_DEFINED]]);
-notificationManager.setPriorityStrategyByBundles(strategies).then(() => {
-  hilog.info(0x0000, 'testTag', `setPriorityStrategyByBundles success`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `setPriorityStrategyByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 1000 };
-let strategies: Map<notificationManager.BundleOption, long> =
-    new Map<notificationManager.BundleOption, long>([[bundleOption, notificationManager.PriorityStrategyStatus.STATUS_APPLICATION_DEFINED]]);
-notificationManager.setPriorityStrategyByBundles(strategies).then(() => {
-    console.info(`setPriorityStrategyByBundles success`);
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setPriorityStrategyByBundles failed, code is ${error.code}, message is ${error.message}`);
-});
-```

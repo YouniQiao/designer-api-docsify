@@ -4,8 +4,6 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** BundleOption
@@ -29,8 +27,6 @@ Bundle information of the application.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
@@ -48,8 +44,6 @@ User ID. The default value is 0.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

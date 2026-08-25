@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## isEthernetEnabled
@@ -15,8 +15,6 @@ function isEthernetEnabled(): boolean
 检查全局以太网开关是否启用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 

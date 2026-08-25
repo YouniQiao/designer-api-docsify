@@ -4,8 +4,6 @@ Enumerates the layout styles of the title bar and toolbar. Note that this API is
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STANDARD
@@ -17,8 +15,6 @@ STANDARD = 0
 In this mode, the title bar or toolbar is laid out above the content area.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ In this mode, the title bar or toolbar is overlaid on top of the content area.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,11 +44,9 @@ In this mode, the title bar or toolbar is overlaid on top of the content area.
 SAFE_AREA_PADDING = 2
 ```
 
-In this mode, the title bar or toolbar is configured to respect the component-level safe area.
+In this mode, the title bar or toolbar is configured to respect the [component-level safe area](arkts-arkui-commonmethod-c.md#safeareapadding).
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

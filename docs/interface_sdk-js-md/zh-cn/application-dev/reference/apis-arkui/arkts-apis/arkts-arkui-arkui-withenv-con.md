@@ -12,7 +12,7 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 > - 此接口仅可在Stage模型下使用。&gt;
 > - 可通过[customEnv](arkts-arkui-arkui-withenv-withenvattribute-c.md#customenv)设置自定义环境变量。&gt;
-> - 支持通过[env](arkts-arkui-arkui-withenv-withenvattribute-c.md#env)设置的系统环境变量键，系统环境变量键存于WritableEnvKey。&gt;
+> - 支持通过[env](arkts-arkui-arkui-withenv-withenvattribute-c.md#env)设置的系统环境变量键，系统环境变量键存于[WritableEnvKey](../arkts-components/arkts-arkui-writableenvkey-c.md)。&gt;
 > - WithEnv嵌套时，同名环境变量按最近作用域生效。
 
 ### 子组件
@@ -20,8 +20,6 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 支持单个子组件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +36,6 @@ export declare const WithEnvInstance: WithEnvAttribute
 定义WithEnv逻辑组件实例。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

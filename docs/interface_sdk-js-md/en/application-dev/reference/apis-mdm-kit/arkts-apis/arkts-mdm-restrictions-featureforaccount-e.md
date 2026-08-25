@@ -4,8 +4,6 @@ Enumerates the features that can be disabled or enabled for a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MULTI_WINDOW
@@ -17,8 +15,6 @@ MULTI_WINDOW = 0
 System multi-window. Currently, this feature is available only on phones and tablets. Once disabled, the system multi-window feature (split-screen, one-click split-screen, Multi-Window, and floating window) cannot be used. If the feature is currently active, the current usage remains unaffected. However, it cannot be used once closed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ DISTRIBUTED_TRANSMISSION = 1
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ SUPER_HUB = 2
 SuperHub. Currently, this feature is available only on phones and tablets. Once disabled, the SuperHub feature cannot be used. If SuperHub is currently active, the current usage remains unaffected. However, it cannot be used once closed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +62,6 @@ this capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -86,8 +76,6 @@ Device printing capability. If the device printing capability is disabled for a 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -101,8 +89,6 @@ MTP_CLIENT = 5
 MTP client capability (including read and write capabilities). Currently, it is supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. After the device MTP client capability ([FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md)) is disabled, disabling the MTP client write capability for a specific user will result in a policy conflict.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,8 +108,6 @@ USB storage device write capability. Currently, it is supported only on enterpri
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -137,8 +121,6 @@ DISK_RECOVERY_KEY = 7
 [Key export](../../../security/UniversalKeystoreKit/huks-export-key-arkts.md) recovery capability. Currently, it is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,8 +136,6 @@ superuser do (execution with superuser privileges). Currently, it is supported o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -170,8 +150,6 @@ Distributed one-way data transmission between devices (only data transmission to
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -185,8 +163,6 @@ OPEN_FILE_BOOST = 10
 File open acceleration capability, providing applications with the ability to sense the file open acceleration status. By integrating the corresponding APIs, apps can detect the acceleration status of files, and further implement features such as displaying unique UI identifiers for accelerated files, thereby optimizing user experience of file opening. Currently, this feature is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

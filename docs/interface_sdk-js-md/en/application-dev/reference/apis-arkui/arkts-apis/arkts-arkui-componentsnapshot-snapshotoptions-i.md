@@ -4,14 +4,12 @@ Defines the extra options for snapshot taking.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## colorMode
@@ -25,8 +23,6 @@ Color space used for the snapshot.Default value: **{colorSpace: SRGB, isAuto: fa
 **Type:** [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Dynamic range mode used for the snapshot.Default value: **{dynamicRangeMode: STA
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -65,8 +59,6 @@ Rectangular region for the snapshot. The default region is the entire component.
 **Type:** [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +79,6 @@ Scale ratio for rendering pixel maps during a snapshot. Note that a high scale r
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -106,8 +96,6 @@ Whether to force the system to wait for all rendering commands to complete befor
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

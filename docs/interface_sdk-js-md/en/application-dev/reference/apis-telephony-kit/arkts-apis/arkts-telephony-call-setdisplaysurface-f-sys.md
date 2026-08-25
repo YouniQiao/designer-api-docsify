@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setDisplaySurface
 
 ```TypeScript
-function setDisplaySurface(callId: int, surfaceId: string): Promise<void>
+function setDisplaySurface(callId: number, surfaceId: string): Promise<void>
 ```
 
 Sets the remote display window. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Sets the remote display window. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | surfaceId | string | Yes |
 
 **Return value:**
@@ -48,15 +46,3 @@ Sets the remote display window. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setDisplaySurface(1, "surfaceId1").then(() => {
-    console.info(`setDisplaySurface success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDisplaySurface fail, promise: err->${JSON.stringify(err)}`);
-});
-```

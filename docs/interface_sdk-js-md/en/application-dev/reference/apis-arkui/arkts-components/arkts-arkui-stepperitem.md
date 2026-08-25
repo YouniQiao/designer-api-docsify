@@ -21,11 +21,9 @@ Creates a page component for the Stepper container.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** SwiperAttribute
+**Substitutes:** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

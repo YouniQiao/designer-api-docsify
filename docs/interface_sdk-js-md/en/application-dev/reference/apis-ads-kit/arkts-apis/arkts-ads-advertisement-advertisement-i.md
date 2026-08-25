@@ -4,8 +4,6 @@ This module provides the requested ad content.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 ## [key:string]
@@ -20,8 +18,6 @@ Custom parameters.<!--RP1--><!--RP1End-->
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -33,14 +29,17 @@ adType: number
 ```
 
 Ad type.  
-- 1: Splash ad. - 3: Native ad. - 7: Rewarded ad. - 8: Banner ad. - 12: Interstitial ad. - 60: Roll ad.  
+- 1: Splash ad.  
+- 3: Native ad.  
+- 7: Rewarded ad.  
+- 8: Banner ad.  
+- 12: Interstitial ad.  
+- 60: Roll ad.  
 If not filled, the default is native ad type.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,13 +52,12 @@ clicked: boolean
 ```
 
 Whether the ad is clicked.  
-- **true**: The ad is clicked. - **false**: The ad is not clicked.
+- **true**: The ad is clicked.  
+- **false**: The ad is not clicked.
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,13 +70,12 @@ rewarded: boolean
 ```
 
 Whether users get rewarded for watching or clicking the ad.  
-- **true**: Users get rewarded. - **false**: Users do not get rewarded.
+- **true**: Users get rewarded.  
+- **false**: Users do not get rewarded.
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,8 +93,6 @@ Server verification parameters.{customData: "test",userId: "12345"}
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -109,13 +104,12 @@ shown: boolean
 ```
 
 Whether the ad is shown.  
-- **true**: The ad is shown. - **false**: The ad is not shown.
+- **true**: The ad is shown.  
+- **false**: The ad is not shown.
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,8 +126,6 @@ Unique ID of the ad.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

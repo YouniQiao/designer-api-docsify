@@ -15,8 +15,6 @@ declare function fchmodSync(fd: number, mode: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -27,12 +25,3 @@ declare function fchmodSync(fd: number, mode: number): void
 | --- | --- | --- |
 | fd | number | 是 |
 | mode | number | 是 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let mode: number = 0o700;
-fileio.fchmodSync(fd, mode);
-```

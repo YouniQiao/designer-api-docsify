@@ -4,8 +4,6 @@ Enumerates the recommended actions to take after an output device changes.Common
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_CONTINUE
@@ -18,8 +16,6 @@ Suggests continuing playback. (This event serves as a playback maintenance indic
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_STOP
@@ -31,7 +27,5 @@ DEVICE_CHANGE_RECOMMEND_TO_STOP = 1
 Suggests stopping playback.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

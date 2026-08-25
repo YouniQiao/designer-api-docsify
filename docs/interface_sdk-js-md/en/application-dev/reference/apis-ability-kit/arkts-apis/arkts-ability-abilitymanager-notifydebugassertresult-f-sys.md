@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## notifyDebugAssertResult
@@ -15,8 +15,6 @@ function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise
 Notifies the application of the assertion result. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFY_DEBUG_ASSERT_RESULT
 
@@ -47,25 +45,3 @@ Notifies the application of the assertion result. This API uses a promise to ret
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager, UIExtensionAbility, wantConstant, Want, UIExtensionContentSession } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UiExtAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let sessionId: string = '';
-    if (want.parameters) {
-      sessionId = want.parameters[wantConstant.Params.ASSERT_FAULT_SESSION_ID] as string;
-    }
-    let status = abilityManager.UserStatus.ASSERT_TERMINATE;
-    abilityManager.notifyDebugAssertResult(sessionId, status).then(() => {
-      console.info('notifyDebugAssertResult success.');
-    }).catch((err: BusinessError) => {
-      console.error(`notifyDebugAssertResult failed, error: ${JSON.stringify(err)}`);
-    });
-  }
-}
-```

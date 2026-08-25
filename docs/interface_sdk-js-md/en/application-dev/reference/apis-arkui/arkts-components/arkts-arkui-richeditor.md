@@ -13,8 +13,6 @@ Called when create RichEditor.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -36,8 +34,6 @@ RichEditor(options: RichEditorStyledStringOptions)
 Called when create RichEditor.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,12 +58,6 @@ Called when create RichEditor.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [MenuCallback](arkts-arkui-menucallback-t.md) |
-| [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md) |
-| [OnHoverCallback](arkts-arkui-onhovercallback-t.md) |
-| [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) |
-| [RichEditorSpan](arkts-arkui-richeditorspan-t.md) |
-| [SubmitCallback](arkts-arkui-submitcallback-t.md) |
 
 ### Enums
 

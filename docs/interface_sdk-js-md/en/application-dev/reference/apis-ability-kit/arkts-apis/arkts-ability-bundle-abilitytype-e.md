@@ -8,8 +8,6 @@ Enumerates the ability types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
@@ -26,8 +24,6 @@ Unknown ability type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -41,8 +37,6 @@ PAGE = 1
 FA developed using the Page template to provide the capability of interacting with users.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -60,8 +54,6 @@ PA developed using the Service template to provide the capability of running tas
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#service)
@@ -77,8 +69,6 @@ DATA = 3
 PA developed using the Data template to provide unified data access for external systems.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

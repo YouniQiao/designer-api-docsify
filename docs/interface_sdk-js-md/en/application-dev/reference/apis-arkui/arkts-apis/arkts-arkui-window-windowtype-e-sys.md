@@ -4,8 +4,6 @@ Enumerates the window types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_INPUT_METHOD
@@ -17,8 +15,6 @@ TYPE_INPUT_METHOD = 2
 Input method window.Note: This API is supported since API version 9 and deprecated since API version 13. There is no alternative window type. To control the input method, call [Input method framework APIs](../../../inputmethod/inputmethod-application-guide.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 13
 
@@ -38,8 +34,6 @@ Status bar window.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -55,8 +49,6 @@ TYPE_PANEL = 4
 Notification panel.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +66,6 @@ Keyguard.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -91,8 +81,6 @@ TYPE_VOLUME_OVERLAY = 6
 Volume bar.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +98,6 @@ Navigation bar.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -127,8 +113,6 @@ TYPE_WALLPAPER = 9
 Wallpaper.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +130,6 @@ Home screen.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -163,8 +145,6 @@ TYPE_LAUNCHER_RECENT = 11
 Recent tasks screen.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,8 +162,6 @@ Dock bar on the home screen.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -199,8 +177,6 @@ TYPE_VOICE_INTERACTION = 13
 Voice assistant.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,8 +194,6 @@ Mouse.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -235,8 +209,6 @@ TYPE_FLOAT_CAMERA = 15
 Floating camera window.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,8 +226,6 @@ Screenshot window.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -271,8 +241,6 @@ TYPE_SYSTEM_TOAST = 18
 Toast displayed at the top.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,8 +258,6 @@ Divider.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -307,8 +273,6 @@ TYPE_GLOBAL_SEARCH = 20
 Window used for global search.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -326,8 +290,6 @@ Stylus window.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -343,8 +305,6 @@ TYPE_WALLET_SWIPE_CARD = 22
 Wallet swipe card window.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,8 +322,6 @@ Top-level window used for locking touch input, which intercepts screen touch and
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -379,8 +337,6 @@ TYPE_FLOAT_NAVIGATION = 24
 Floating window with a three-button navigation bar.
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -398,8 +354,6 @@ System window that allows for adjustable z-levels.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -415,8 +369,6 @@ TYPE_MUTISCREEN_COLLABORATION = 26
 Window for multi-screen collaboration.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

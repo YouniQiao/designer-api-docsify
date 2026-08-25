@@ -4,14 +4,12 @@ appManager模块提供App管理的能力，包括查询当前是否处于稳定�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -32,12 +30,8 @@ import { appManager } from '@kit.AbilityKit';
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md) |
 | [off](arkts-ability-appmanager-off-f.md#offapplicationstate) |
 | [off](arkts-ability-appmanager-off-f.md#offapplicationstate) |
-| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) |
-| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) |
 | [on](arkts-ability-appmanager-on-f.md#onapplicationstate) |
 | [on](arkts-ability-appmanager-on-f.md#onapplicationstate) |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -70,16 +64,11 @@ import { appManager } from '@kit.AbilityKit';
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) |
-| [off](arkts-ability-appmanager-off-f-sys.md#offappforegroundstate) |
-| [off](arkts-ability-appmanager-off-f-sys.md#offabilityfirstframestate) |
-| [offAbilityFirstFrameStateChange](arkts-ability-appmanager-offabilityfirstframestatechange-f-sys.md) |
-| [offAppForegroundStateChange](arkts-ability-appmanager-offappforegroundstatechange-f-sys.md) |
-| [on](arkts-ability-appmanager-on-f-sys.md#onapplicationstate) |
-| [on](arkts-ability-appmanager-on-f-sys.md#onappforegroundstate) |
-| [on](arkts-ability-appmanager-on-f-sys.md#onabilityfirstframestate) |
-| [onAbilityFirstFrameStateChange](arkts-ability-appmanager-onabilityfirstframestatechange-f-sys.md) |
-| [onAppForegroundStateChange](arkts-ability-appmanager-onappforegroundstatechange-f-sys.md) |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f-sys.md) |
+| off |
+| off |
+| on |
+| on |
+| on |
 | [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md) |
 | [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md) |
 | [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md) |

@@ -15,8 +15,6 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md)
@@ -31,32 +29,6 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | minute | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { formProvider } from '@kit.FormKit';
-// Use an existing widget ID (formId).
-let formId: string = '12400633174999288';
-formProvider.setFormNextRefreshTime(formId, 5, (error: BusinessError) => {
-  if (error.code) {
-    console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { formProvider } from '@kit.FormKit';
-// Use an existing widget ID (formId).
-let formId: string = '12400633174999288';
-formProvider.setFormNextRefreshTime(formId, 5).then(() => {
-  console.info('formProvider setFormNextRefreshTime success');
-}).catch((error: BusinessError) => {
-  console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
-});
-```
-
 
 ## setFormNextRefreshTime
 
@@ -67,8 +39,6 @@ function setFormNextRefreshTime(formId: string, minute: number): Promise<void>
 Sets the next refresh time for a widget. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -88,7 +58,3 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [setFormNextRefreshTime](#setformnextrefreshtime)

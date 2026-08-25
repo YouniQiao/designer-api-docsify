@@ -4,14 +4,12 @@ Represents a paragraph style, which controls the overall layout behavior of a pa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## align
@@ -25,8 +23,6 @@ Text alignment mode. The default value is **START**. This parameter is invalid w
 **Type:** TextAlign
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ Sets whether to enable automatic spacing during text typography. **true** indica
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -61,8 +55,6 @@ Text break strategy. The default value is **GREEDY**.
 **Type:** [BreakStrategy](arkts-arkgraphics2d-text-breakstrategy-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -85,8 +77,6 @@ are in the scope of this feature.Punctuation range at the beginning of a line. |
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -103,8 +93,6 @@ Sets whether to enable line height rollback during text layout. If the set line 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -112,16 +100,14 @@ Sets whether to enable line height rollback during text layout. If the set line 
 ## firstLineHeadIndent
 
 ```TypeScript
-firstLineHeadIndent?: double
+firstLineHeadIndent?: number
 ```
 
 First line indent of the paragraph. The indent value must be greater than or equal to 0, in physical pixels (px). The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,16 +118,14 @@ First line indent of the paragraph. The indent value must be greater than or equ
 ## headIndents
 
 ```TypeScript
-headIndents?: Array<double>
+headIndents?: Array<number>
 ```
 
 Array of head indents. Each element in the array represents the indent value of one line. When the actual number of text lines exceeds the number of elements in the indent array, the indent of the excess lines is the last value in the array. All indent values must be greater than or equal to 0, in physical pixels (px). The default value is an empty array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,8 +145,6 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -170,16 +152,14 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 ## lineSpacing
 
 ```TypeScript
-lineSpacing?: double
+lineSpacing?: number
 ```
 
 Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#paragraphstyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -188,16 +168,14 @@ Line spacing, in physical pixels (px). The default value is **0**. lineSpacing i
 ## maxLines
 
 ```TypeScript
-maxLines?: int
+maxLines?: number
 ```
 
 Maximum number of lines. The value is an integer. The default value is **1e9**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -214,8 +192,6 @@ Whether to enable orphan character optimization during text typesetting. Orphan 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,8 +211,6 @@ Whether to enable end-of-line punctuation hanging during text typesetting. The v
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -255,8 +229,6 @@ Strut style. The default value is the initial **StrutStyle** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -273,8 +245,6 @@ Alignment mode and position of the text after the tab character in a paragraph. 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -282,16 +252,14 @@ Alignment mode and position of the text after the tab character in a paragraph. 
 ## tailIndents
 
 ```TypeScript
-tailIndents?: Array<double>
+tailIndents?: Array<number>
 ```
 
 Array of tail indents. Each element in the array represents the indent value of one line. When the actual number of text lines exceeds the number of elements in the indent array, the indent of the excess lines is the last value in the array. All indent values must be greater than or equal to 0, in physical pixels (px). The default value is an empty array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -311,8 +279,6 @@ Text direction. The default value is **LTR**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -328,8 +294,6 @@ Text height modifier pattern. The default value is **ALL**.
 **Type:** [TextHeightBehavior](arkts-arkgraphics2d-text-textheightbehavior-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -347,8 +311,6 @@ Text style applied to the paragraph. The default value is the initial text style
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -364,8 +326,6 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -383,8 +343,6 @@ Text vertical alignment mode. The default value is BASELINE, which means text ba
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -400,8 +358,6 @@ Word break type. The default value is **BREAK_WORD**.
 **Type:** WordBreak
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

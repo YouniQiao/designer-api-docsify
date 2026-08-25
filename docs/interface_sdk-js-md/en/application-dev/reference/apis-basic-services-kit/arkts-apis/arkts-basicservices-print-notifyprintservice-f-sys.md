@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started')
@@ -16,8 +16,6 @@ function notifyPrintService(jobId: string, type: 'spooler_closed_for_cancelled' 
 Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -41,34 +39,6 @@ Notifies the print service of the spooler shutdown information. This API uses an
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.notifyPrintService(jobId, 'spooler_closed_for_started', (err: BusinessError) => {
-    if (err) {
-        console.error('notifyPrintService failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('notifyPrintService success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.notifyPrintService(jobId, 'spooler_closed_for_started').then(() => {
-    console.info('notifyPrintService success');
-}).catch((error: BusinessError) => {
-    console.error('notifyPrintService error : ' + JSON.stringify(error));
-})
-```
-
 
 ## notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started')
 
@@ -80,8 +50,6 @@ function notifyPrintService(jobId: string,
 Notifies the print service of the spooler shutdown information. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -109,7 +77,3 @@ Notifies the print service of the spooler shutdown information. This API uses a 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See notifyPrintService

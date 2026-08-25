@@ -46,8 +46,6 @@ Creates a **Swiper** component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -71,11 +69,6 @@ Creates a **Swiper** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) |
-| [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) |
-| [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) |
-| [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) |
-| [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) |
 
 ### Enums
 

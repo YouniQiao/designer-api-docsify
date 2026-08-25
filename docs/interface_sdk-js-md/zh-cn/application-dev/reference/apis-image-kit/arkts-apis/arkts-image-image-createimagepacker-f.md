@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createImagePacker
@@ -16,8 +16,6 @@ function createImagePacker(): ImagePacker
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
@@ -27,19 +25,3 @@ function createImagePacker(): ImagePacker
 | 类型 |
 | --- |
 | [ImagePacker](arkts-image-image-imagepacker-i.md) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-async function CreateImagePacker() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-const imagePacker: image.ImagePacker = image.createImagePacker();
-```

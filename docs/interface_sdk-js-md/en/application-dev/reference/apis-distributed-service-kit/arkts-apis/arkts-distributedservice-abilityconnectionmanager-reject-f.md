@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## reject
@@ -15,8 +15,6 @@ function reject(token: string, reason: string): void
 Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,23 +32,3 @@ Rejects a connection request in a cross-device collaboration session. After a co
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want} from '@kit.AbilityKit';
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class EntryAbility extends UIAbility {
-    onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult {
-      hilog.info(0x0000, 'testTag', '%{public}s', 'on collaborate');
-      let collabParam = wantParam["ohos.extra.param.key.supportCollaborateIndex"] as Record<string, Object>;
-      const collabToken = collabParam["ohos.dms.collabToken"] as string;
-      const reason = "test";
-      hilog.info(0x0000, 'testTag', 'reject begin');
-      abilityConnectionManager.reject(collabToken, reason);
-      return AbilityConstant.CollaborateResult.REJECT;
-    }
-}
-```

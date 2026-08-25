@@ -6,8 +6,6 @@ Custom ComponentV2
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ aboutToReuse?(): void
 aboutToReuse Method for @ComponentV2, it is executed when fetching instance of custom component from RecyclePool. It is different from the @Reusable in CustomComponent, there is no param parameter in this callback.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ This filter value is used to filter business ability info
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ This filter value is used to filter business ability info
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
 ```
 
 ## businessType
@@ -27,8 +25,6 @@ Indicates the type of business ability info
 **Type:** BusinessType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,8 +42,6 @@ Indicates the supported mime type of business ability info
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Indicates the supported uri of business ability info
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

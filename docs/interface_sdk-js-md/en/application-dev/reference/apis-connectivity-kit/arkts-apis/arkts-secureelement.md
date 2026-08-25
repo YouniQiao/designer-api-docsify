@@ -4,14 +4,12 @@ The **secureElement** module provides APIs for managing secure elements (SEs). S
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## setSeniorModeStateForApp
@@ -15,8 +15,6 @@ function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>):
 Sets the senior mode state for an app. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from '@kit.CoreFileKit';
+import { statfs } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFreeSizeSync
 
 ```TypeScript
-function getFreeSizeSync(path: string): long
+function getFreeSizeSync(path: string): number
 ```
 
 Obtains the free size of the specified file system, in bytes. This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -30,7 +28,7 @@ Obtains the free size of the specified file system, in bytes. This API returns t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -49,15 +47,3 @@ Obtains the free size of the specified file system, in bytes. This API returns t
 | 13900033 |
 | 13900038 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let path = context.filesDir;
-let number = statfs.getFreeSizeSync(path);
-console.info("getFreeSizeSync succeed, Size: " + number);
-```

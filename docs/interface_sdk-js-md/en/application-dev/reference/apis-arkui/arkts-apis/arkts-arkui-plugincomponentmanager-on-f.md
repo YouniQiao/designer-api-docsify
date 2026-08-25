@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ```
 
 ## on
@@ -16,8 +16,6 @@ Listens for events of the request type and returns the requested data, or listen
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,28 +26,3 @@ Listens for events of the request type and returns the requested data, or listen
 | --- | --- | --- |
 | eventType | string | Yes |
 | callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-function onPushListener(source:Want, template:PluginComponentTemplate, data:pluginComponentManager.KVObject, extraData:pluginComponentManager.KVObject) {
-  console.info("onPushListener template.source=" + template.source);
-  console.info("onPushListener source=" + JSON.stringify(source));
-  console.info("onPushListener template=" + JSON.stringify(template));
-  console.info("onPushListener data=" + JSON.stringify(data));
-  console.info("onPushListener extraData=" + JSON.stringify(extraData));
-}
-function onRequestListener(source:Want, name:string, data:pluginComponentManager.KVObject) {
-  console.info("onRequestListener");
-  console.info("onRequestListener source=" + JSON.stringify(source));
-  console.info("onRequestListener name=" + name);
-  console.info("onRequestListener data=" + JSON.stringify(data));
-  let RtnData:Record<string,string|pluginComponentManager.KVObject> = { 'template': "ets/pages/plugin.js", 'data': data };
-  return RtnData;
-}
-pluginComponentManager.on("push", onPushListener);
-pluginComponentManager.on("request", onRequestListener);
-```

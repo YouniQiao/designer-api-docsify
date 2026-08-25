@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isWifiActive
@@ -15,8 +15,6 @@ function isWifiActive(admin: Want, callback: AsyncCallback<boolean>): void
 查询当前设备的Wi-Fi开启状态。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -47,45 +45,6 @@ function isWifiActive(admin: Want, callback: AsyncCallback<boolean>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-wifiManager.isWifiActive(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to query whether the wifi is active or not. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying whether the wifi is active or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-wifiManager.isWifiActive(wantTemp).then((result) => {
-  console.info(`Succeeded in querying whether the wifi is active or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query whether the wifi is active or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isWifiActive
 
@@ -96,8 +55,6 @@ function isWifiActive(admin: Want): Promise<boolean>
 查询当前设备的Wi-Fi开启状态。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -132,7 +89,3 @@ function isWifiActive(admin: Want): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [isWifiActive](#iswifiactive)

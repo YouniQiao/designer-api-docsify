@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setShowName
 
 ```TypeScript
-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void
+function setShowName(slotId: number, name: string, callback: AsyncCallback<void>): void
 ```
 
 Set the SIM card display name of the specified card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the SIM card display name of the specified card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | name | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -45,42 +43,16 @@ Set the SIM card display name of the specified card slot.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let name: string = "ShowName";
-sim.setShowName(0, name, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let name: string = "ShowName";
-sim.setShowName(0, name).then(() => {
-    console.info(`setShowName success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setShowName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setShowName
 
 ```TypeScript
-function setShowName(slotId: int, name: string): Promise<void>
+function setShowName(slotId: number, name: string): Promise<void>
 ```
 
 Set the SIM card display name of the specified card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +64,7 @@ Set the SIM card display name of the specified card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | name | string | 是 |
 
 **返回值：**
@@ -113,7 +85,3 @@ Set the SIM card display name of the specified card slot.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setShowName](#setshowname)

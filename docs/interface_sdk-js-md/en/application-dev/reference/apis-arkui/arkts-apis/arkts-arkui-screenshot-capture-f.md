@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## capture
@@ -15,8 +15,6 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 Takes a screenshot of the entire screen. This API uses a promise to return the result.This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 22+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -46,25 +44,3 @@ Takes a screenshot of the entire screen. This API uses a promise to return the r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let captureOption: screenshot.CaptureOption = {
-  "displayId": 0
-};
-try {
-  let promise = screenshot.capture(captureOption);
-  promise.then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in saving screenshot. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-    pixelMap.release(); // Release the memory in time after the PixelMap is used.
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-};
-```

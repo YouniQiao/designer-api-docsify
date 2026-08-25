@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -15,8 +15,6 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 Creates a **DeviceManager** instance.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -39,25 +37,3 @@ Creates a **DeviceManager** instance.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-let dmInstance: deviceManager.DeviceManager | null = null;
-try {
-  deviceManager.createDeviceManager("ohos.samples.jshelloworld", (err: BusinessError, data: deviceManager.DeviceManager) => {
-    if (err) { 
-      console.error("createDeviceManager errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info("createDeviceManager success");
-    dmInstance = data;
-  });
-} catch(err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("createDeviceManager errCode:" + e.code + ",errMessage:" + e.message);
-}
-```

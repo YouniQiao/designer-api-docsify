@@ -4,14 +4,12 @@ Defines the task configs interface
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## priority
@@ -25,8 +23,6 @@ The priority of the task. The default value is taskpool.Priority.MEDIUM.
 **Type:** Priority
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -46,8 +42,6 @@ The timeout for the task in ms. Suggest passing in integers. If decimals are pas
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

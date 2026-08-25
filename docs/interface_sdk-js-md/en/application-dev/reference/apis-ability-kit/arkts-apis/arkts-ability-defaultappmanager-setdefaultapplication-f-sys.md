@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDefaultApplication
 
 ```TypeScript
-function setDefaultApplication(type: string, elementName: ElementName, userId: int, callback: AsyncCallback<void>) : void
+function setDefaultApplication(type: string, elementName: ElementName, userId: number, callback: AsyncCallback<void>) : void
 ```
 
 Sets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -30,7 +28,7 @@ Sets the default application for a user based on a system-defined application ty
 | --- | --- | --- |
 | type | string | Yes |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -45,140 +43,6 @@ Sets the default application for a user based on a system-defined application ty
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) |
 
-**Examples**
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-let userId = 100;
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-defaultAppManager.setDefaultApplication("image/png", {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-let userId = 100;
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication("image/png", {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-```
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication("image/png", {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-```
-
 
 ## setDefaultApplication
 
@@ -189,8 +53,6 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -217,22 +79,16 @@ Sets the default application based on a system-defined application type, a file 
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) |
 
-**Examples**
-
-See [setDefaultApplication](#setdefaultapplication)
-
 
 ## setDefaultApplication
 
 ```TypeScript
-function setDefaultApplication(type: string, elementName: ElementName, userId?: int) : Promise<void>
+function setDefaultApplication(type: string, elementName: ElementName, userId?: number) : Promise<void>
 ```
 
 Sets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -246,7 +102,7 @@ Sets the default application based on a system-defined application type, a file 
 | --- | --- | --- |
 | type | string | Yes |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 
@@ -265,7 +121,3 @@ Sets the default application based on a system-defined application type, a file 
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) |
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) |
-
-**Examples**
-
-See [setDefaultApplication](#setdefaultapplication)

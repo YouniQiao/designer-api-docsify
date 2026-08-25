@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## isFlashReminderEnabled
@@ -17,8 +17,6 @@ function isFlashReminderEnabled(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -28,27 +26,3 @@ function isFlashReminderEnabled(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    accessibility.isFlashReminderEnabled().then((data: boolean) => {
-      console.info(`success data:isFlashReminderEnabled : ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to isFlashReminderEnabled. Code:${err.code}, message:${err.message}`);
-    });
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

@@ -4,14 +4,12 @@ The WebSchemeHandlerRequest class defines a wrapper object for resource requests
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -24,8 +22,6 @@ Obtains the URL of the frame that triggers this request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -33,10 +29,6 @@ Obtains the URL of the frame that triggers this request.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getHeader
 
@@ -48,8 +40,6 @@ Obtains the information about the resource request header.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -59,10 +49,6 @@ Obtains the information about the resource request header.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;WebHeader & gt; |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getHttpBodyStream
 
@@ -74,8 +60,6 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -85,10 +69,6 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getReferrer
 
@@ -100,8 +80,6 @@ Obtains the referrer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -111,10 +89,6 @@ Obtains the referrer.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestMethod
 
@@ -126,8 +100,6 @@ Obtains the request method.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -137,10 +109,6 @@ Obtains the request method.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestResourceType
 
@@ -152,8 +120,6 @@ Obtains the resource type of this resource request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -161,10 +127,6 @@ Obtains the resource type of this resource request.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestUrl
 
@@ -176,8 +138,6 @@ Obtains the URL of the resource request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -187,10 +147,6 @@ Obtains the URL of the resource request.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## hasGesture
 
@@ -202,8 +158,6 @@ Checks whether the resource request is associated with a gesture (for example, a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -213,10 +167,6 @@ Checks whether the resource request is associated with a gesture (for example, a
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## isMainFrame
 
@@ -228,8 +178,6 @@ Checks whether the resource request is from the main frame.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -239,7 +187,3 @@ Checks whether the resource request is from the main frame.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).

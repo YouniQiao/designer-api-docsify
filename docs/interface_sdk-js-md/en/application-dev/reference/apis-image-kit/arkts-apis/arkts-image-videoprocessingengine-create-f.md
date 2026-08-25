@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## create
@@ -15,8 +15,6 @@ function create(): ImageProcessor
 Create an image processing instance.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
@@ -35,14 +33,3 @@ Create an image processing instance.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-
-**Examples**
-
-```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
-
-async function create() {
-  videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-}
-```

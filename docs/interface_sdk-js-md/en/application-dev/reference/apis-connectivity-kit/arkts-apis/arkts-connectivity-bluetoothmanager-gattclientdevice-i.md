@@ -4,8 +4,6 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md)
@@ -15,7 +13,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## close
@@ -27,8 +25,6 @@ close(): void
 Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,28 +46,6 @@ Disables a BLE peripheral device.This method unregisters the device and clears t
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let server = bluetoothManager.BLE.createGattServer();
-try {
-    server.close();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.close();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## connect
 
 ```TypeScript
@@ -81,8 +55,6 @@ connect(): void
 Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -104,48 +76,6 @@ Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subs
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
-    hfpAg.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
-    hidHostProfile.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## disconnect
 
 ```TypeScript
@@ -155,8 +85,6 @@ disconnect(): void
 Disconnects from or stops an ongoing connection to a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -178,58 +106,6 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device. On A
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
-    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.disconnect();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
-    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
-    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## getDeviceName
 
 ```TypeScript
@@ -239,8 +115,6 @@ getDeviceName(callback: AsyncCallback<string>): void
 Obtains the name of BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -268,37 +142,6 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// callback
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.connect();
-    let deviceName = gattClient.getDeviceName((err, data)=> {
-        console.info('device name err ' + JSON.stringify(err));
-        console.info('device name' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.connect();
-    let deviceName = gattClient.getDeviceName().then((data) => {
-        console.info('device name' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## getDeviceName
 
 ```TypeScript
@@ -308,8 +151,6 @@ getDeviceName(): Promise<string>
 Obtains the name of BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -337,10 +178,6 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-See [getDeviceName](#getdevicename)
-
 ## getRssiValue
 
 ```TypeScript
@@ -350,8 +187,6 @@ getRssiValue(callback: AsyncCallback<number>): void
 Get the RSSI value of this BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -378,36 +213,6 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// callback
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.connect();
-    let rssi = gattClient.getRssiValue((err: BusinessError, data: number)=> {
-        console.info('rssi err ' + JSON.stringify(err));
-        console.info('rssi value' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    let rssi = gattClient.getRssiValue().then((data: number) => {
-        console.info('rssi' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## getRssiValue
 
 ```TypeScript
@@ -417,8 +222,6 @@ getRssiValue(): Promise<number>
 Get the RSSI value of this BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -445,10 +248,6 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-See [getRssiValue](#getrssivalue)
-
 ## getServices
 
 ```TypeScript
@@ -458,8 +257,6 @@ getServices(callback: AsyncCallback<Array<GattService>>): void
 Starts discovering services. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -487,46 +284,6 @@ Starts discovering services. On API 10 and above, the permission required by thi
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Callback mode.
-function getServices(code: BusinessError, gattServices: Array<bluetoothManager.GattService>) {
-  if (code.code == 0) {
-      let services: Array<bluetoothManager.GattService> = gattServices;
-      console.info(`bluetooth code is ${code.code}`);
-      console.info(`bluetooth services size is ${services.length}`);
-
-      for (let i = 0; i < services.length; i++) {
-        console.info(`bluetooth serviceUuid is ${services[i].serviceUuid}`);
-      }
-  }
-}
-
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-    device.getServices(getServices);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// Promise
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-    device.getServices().then(result => {
-        console.info("getServices successfully:" + JSON.stringify(result));
-    });
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## getServices
 
 ```TypeScript
@@ -536,8 +293,6 @@ getServices(): Promise<Array<GattService>>
 Starts discovering services. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -565,10 +320,6 @@ Starts discovering services. On API 10 and above, the permission required by thi
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-See [getServices](#getservices)
-
 ## off('BLECharacteristicChange')
 
 ```TypeScript
@@ -578,8 +329,6 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 Unsubscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -605,18 +354,6 @@ Unsubscribe characteristic value changed event. On API 10 and above, the permiss
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLECharacteristicChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -626,8 +363,6 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 Unsubscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -653,18 +388,6 @@ Unsubscribe client connection state changed event. On API 10 and above, the perm
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLEConnectionStateChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## on('BLECharacteristicChange')
 
 ```TypeScript
@@ -674,8 +397,6 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 Subscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -701,23 +422,6 @@ Subscribe characteristic value changed event. On API 10 and above, the permissio
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-function CharacteristicChange(characteristicChangeReq: ble.BLECharacteristic) {
-    let serviceUuid: string = characteristicChangeReq.serviceUuid;
-    let characteristicUuid: string = characteristicChangeReq.characteristicUuid;
-    let value: Uint8Array = new Uint8Array(characteristicChangeReq.characteristicValue);
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLECharacteristicChange', CharacteristicChange);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -727,8 +431,6 @@ on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>)
 Subscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -754,22 +456,6 @@ Subscribe client connection state changed event. On API 10 and above, the permis
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function ConnectStateChanged(state: bluetoothManager.BLEConnectChangedState) {
-    console.info('bluetooth connect state changed');
-    let connectState: bluetoothManager.ProfileConnectionState = state.state;
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLEConnectionStateChange', ConnectStateChanged);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## readCharacteristicValue
 
 ```TypeScript
@@ -779,8 +465,6 @@ readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallba
 Reads the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -810,69 +494,6 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 | 2901000 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function readCcc(code: BusinessError, BLECharacteristic: bluetoothManager.BLECharacteristic) {
-    if (code.code != 0) {
-        return;
-    }
-    console.info(`bluetooth characteristic uuid: ${BLECharacteristic.characteristicUuid}`);
-    let value = new Uint8Array(BLECharacteristic.characteristicValue);
-    console.info(`value length: ${value.length}`);
-}
-
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic, readCcc);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## readCharacteristicValue
 
 ```TypeScript
@@ -882,8 +503,6 @@ readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacter
 Reads the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -918,10 +537,6 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 | 2901000 |
 | 2900099 |
 
-**Examples**
-
-See [readCharacteristicValue](#readcharacteristicvalue)
-
 ## readDescriptorValue
 
 ```TypeScript
@@ -931,8 +546,6 @@ readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescri
 Reads the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -962,54 +575,6 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 | 2901000 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function readDesc(code: BusinessError, BLEDescriptor: bluetoothManager.BLEDescriptor) {
-    if (code.code != 0) {
-        return;
-    }
-    console.info(`bluetooth descriptor uuid: ${BLEDescriptor.descriptorUuid}`);
-    let value = new Uint8Array(BLEDescriptor.descriptorValue);
-}
-
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor, readDesc);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## readDescriptorValue
 
 ```TypeScript
@@ -1019,8 +584,6 @@ readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
 Reads the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1055,10 +618,6 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 | 2901000 |
 | 2900099 |
 
-**Examples**
-
-See [readDescriptorValue](#readdescriptorvalue)
-
 ## setBLEMtuSize
 
 ```TypeScript
@@ -1068,8 +627,6 @@ setBLEMtuSize(mtu: number): void
 Set the mtu size of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1097,18 +654,6 @@ Set the mtu size of a BLE peripheral device. On API 10 and above, the permission
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.setBLEMtuSize(128);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## setNotifyCharacteristicChanged
 
 ```TypeScript
@@ -1118,8 +663,6 @@ setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolea
 Enables or disables notification of a characteristic when value changed. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1148,34 +691,6 @@ Enables or disables notification of a characteristic when value changed. On API 
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// Create descriptors.
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.setNotifyCharacteristicChanged(characteristic, false);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -1185,8 +700,6 @@ writeCharacteristicValue(characteristic: BLECharacteristic): void
 Writes the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1215,33 +728,6 @@ Writes the characteristic of a BLE peripheral device. On API 10 and above, the p
 | 2901001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeCharacteristicValue(characteristic);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## writeDescriptorValue
 
 ```TypeScript
@@ -1251,8 +737,6 @@ writeDescriptorValue(descriptor: BLEDescriptor): void
 Writes the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1280,24 +764,3 @@ Writes the descriptor of a BLE peripheral device. On API 10 and above, the permi
 | 2900001 |
 | 2901001 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 22;
-let descriptor: bluetoothManager.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeDescriptorValue(descriptor);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```

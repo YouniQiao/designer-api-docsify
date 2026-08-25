@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## isInSandbox
@@ -15,8 +15,6 @@ function isInSandbox(): Promise<boolean>
 Checks whether this application is running in a DLP sandbox environment. This API uses a promise to return the result.This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -34,37 +32,6 @@ Checks whether this application is running in a DLP sandbox environment. This AP
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let inSandbox = dlpPermission.isInSandbox(); // Check whether the application is running in a sandbox.
-  console.info('res', inSandbox);
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.isInSandbox((err, data) => {
-    if (err) {
-      console.error('isInSandbox error', err.code, err.message);
-    } else {
-      console.info('isInSandbox, data', JSON.stringify(data));
-    }
-  }); // Whether the application is running in a sandbox.
-} catch (err) {
-  console.error('isInSandbox error', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## isInSandbox
 
@@ -75,8 +42,6 @@ function isInSandbox(callback: AsyncCallback<boolean>): void
 Checks whether this application is running in a DLP sandbox environment. This API uses an asynchronous callback to return the result.This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -94,7 +59,3 @@ Checks whether this application is running in a DLP sandbox environment. This AP
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [isInSandbox](#isinsandbox)

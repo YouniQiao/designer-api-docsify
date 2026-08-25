@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## getImageEmbeddingModel
@@ -15,8 +15,6 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 Obtains an image embedding model.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -39,25 +37,3 @@ Obtains an image embedding model.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let imageConfig: intelligence.ModelConfig = {
-  version: intelligence.ModelVersion.BASIC_MODEL,
-  isNpuAvailable: false,
-  cachePath: "/data"
-}
-let imageEmbedding: intelligence.ImageEmbedding;
-
-intelligence.getImageEmbeddingModel(imageConfig)
-  .then((data: intelligence.ImageEmbedding) => {
-    console.info("Succeeded in getting ImageModel");
-    imageEmbedding = data;
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to get ImageModel and code is " + err.code);
-  })
-```

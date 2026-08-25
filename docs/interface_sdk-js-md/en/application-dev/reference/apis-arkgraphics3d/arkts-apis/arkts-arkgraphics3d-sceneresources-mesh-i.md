@@ -6,8 +6,6 @@ Mesh resource, which inherits from SceneResource.@extends SceneResource @interfa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## aabb
@@ -21,8 +19,6 @@ Axis aligned bounding box.
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ Material. The default value is undefined.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## subMeshes
@@ -53,7 +47,5 @@ Array of sub-meshes.
 **Type:** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

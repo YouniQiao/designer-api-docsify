@@ -7,8 +7,6 @@ Enumerates the EAP authentication methods.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_NONE
@@ -20,8 +18,6 @@ EAP_NONE = 0
 Not specified.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ Protected Extensible Authentication Protocol (PEAP). It first establishes a secu
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -52,8 +46,6 @@ EAP_TLS = 2
 Transport Layer Security (TLS). It implements mutual certificate authentication.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +61,6 @@ Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a mo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -84,8 +74,6 @@ EAP_PWD = 4
 Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,8 +89,6 @@ Subscriber Identity Module (SIM). It performs authentication using the keys and 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -116,8 +102,6 @@ EAP_AKA = 6
 Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a USIM card (applicable to 3G/4G/5G SIM cards).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,8 +117,6 @@ AKA Prime. It is an enhanced version of EAP-AKA and binds the network name durin
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -148,8 +130,6 @@ EAP_UNAUTH_TLS = 8
 Unauthenticated TLS (UNAUTH TLS). It implements one-way authentication (client authentication only) while establishing an encrypted communication channel.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

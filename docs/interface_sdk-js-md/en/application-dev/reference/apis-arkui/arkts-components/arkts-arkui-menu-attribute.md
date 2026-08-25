@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ font(value: Font)
 Sets the size of all text within the menu.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ fontColor(value: ResourceColor)
 Sets the font color of all text within the menu.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +69,6 @@ Sets the size of all text within the menu.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [font](#font)
@@ -99,8 +91,6 @@ Sets the style of the menu item divider. If this attribute is not set, the divid
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -111,7 +101,7 @@ Sets the style of the menu item divider. If this attribute is not set, the divid
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | DividerStyleOptions \| undefined | Yes |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes |
 
 ## menuItemGroupDivider
 
@@ -123,8 +113,6 @@ Sets the style of the top and bottom dividers for the menu item group. If this a
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -135,7 +123,7 @@ Sets the style of the top and bottom dividers for the menu item group. If this a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | DividerStyleOptions \| undefined | Yes |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | Yes |
 
 ## radius
 
@@ -147,8 +135,6 @@ Sets the radius of the menu border corners.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -159,7 +145,7 @@ Sets the radius of the menu border corners.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Dimension \| [BorderRadiuses](../arkts-apis/arkts-arkui-units-borderradiuses-i.md) | Yes |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes |
 
 ## subMenuExpandingMode
 
@@ -170,8 +156,6 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 Sets the submenu expanding mode of the menu.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,8 +178,6 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 Sets the submenu expand symbol of the menu.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

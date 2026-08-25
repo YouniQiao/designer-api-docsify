@@ -10,8 +10,6 @@ Application binary interface (Abi) list.Example: arm64-v8a
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## bootCount
@@ -23,8 +21,6 @@ const bootCount: number
 Number of device reboots. If the number cannot be obtained, **-1** is returned.Example: 100
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -38,8 +34,6 @@ Bootloader version, which identifies the version of the device bootloader.Exampl
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## brand
@@ -51,8 +45,6 @@ const brand: string
 Device brand.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,8 +60,6 @@ Build host.Example: default
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## buildRootHash
@@ -81,8 +71,6 @@ const buildRootHash: string
 Build root hash.Example: default
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -96,8 +84,6 @@ Build time.Example: default
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## buildType
@@ -109,8 +95,6 @@ const buildType: string
 Build type.Example: default
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -124,8 +108,6 @@ Build user.Example: default
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## buildVersion
@@ -137,8 +119,6 @@ const buildVersion: number
 Build version number. The value is the fourth digit in **osFullName**. You are advised to use **deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.Example: 1
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -152,8 +132,6 @@ Obtains the device CPU chipType by a string.Example: xxxxx
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## deviceColor
@@ -165,8 +143,6 @@ const deviceColor: string
 Device color. If the value cannot be obtained, an empty string is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +157,6 @@ const deviceType: string
 Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes).Example: <!--RP1-->wearable<!--RP1End-->
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -199,8 +173,6 @@ Serial number of the disk. This API will start a temporary process during execut
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Required permissions:** ohos.permission.ACCESS_DISK_PHY_INFO
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -215,8 +187,6 @@ Product version.Example: <!--RP8-->XXX X.X.X.X<!--RP8End-->
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## distributionOSApiName
@@ -228,8 +198,6 @@ const distributionOSApiName: string
 Distribution OS API name.<!--Del--> It is defined by the issuer.<!--DelEnd-->
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -243,8 +211,6 @@ Distribution OS API version.<!--Del--> It is defined by the issuer.<!--DelEnd-->
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## distributionOSName
@@ -256,8 +222,6 @@ const distributionOSName: string
 Distribution OS name.<!--Del--> It is defined by the issuer.<!--DelEnd-->Example: OpenHarmony
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -271,8 +235,6 @@ Distribution OS release type.<!--Del--> It is defined by the issuer.<!--DelEnd--
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## distributionOSVersion
@@ -284,8 +246,6 @@ const distributionOSVersion: string
 Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd--><!--RP11--><!--RP11End-->Example: 5.0.0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -299,8 +259,6 @@ Feature version number. The value is the third digit in **osFullName**. You are 
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## firstApiVersion
@@ -312,8 +270,6 @@ const firstApiVersion: number
 First API version.Example: 3
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -327,8 +283,6 @@ Hardware model.Example: <!--RP6-->TASA00CVN1<!--RP6End-->
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## hardwareProfile
@@ -341,8 +295,6 @@ Hardware profile.
 **NOTE：**This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead.Example: default
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -358,8 +310,6 @@ Incremental version, which is the Ohos version number generated during compilati
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## majorVersion
@@ -371,8 +321,6 @@ const majorVersion: number
 Major version number, which increments with the main version. The value is the first digit in **osFullName**. You are advised to use **deviceInfo.majorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.Example: 5
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -386,8 +334,6 @@ Device manufacturer.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## marketName
@@ -399,8 +345,6 @@ const marketName: string
 Marketing name.Example: <!--RP2-->Mate XX<!--RP2End-->
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -415,8 +359,6 @@ Open device identifier.An ODID will be regenerated in the following scenarios:Re
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## osFullName
@@ -429,8 +371,6 @@ System version. The version number is in the format of **<!--RP12-->OpenHarmony-
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -442,12 +382,14 @@ const osReleaseType: string
 ```
 
 OS release type. The options are as follows:  
-- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability and may require tolerance of instability. - **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance of instability. - **Release**: Official release open to all developers. This release promises that all APIs are stable.  
+- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability  
+and may require tolerance of instability.  
+- **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance  
+of instability.  
+- **Release**: Official release open to all developers. This release promises that all APIs are stable.  
 Example: <!--RP9-->Canary/Beta/Release<!--RP9End-->
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -461,8 +403,6 @@ Device capability level, which is evaluated based on factors such as CPU, memory
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## productModel
@@ -474,8 +414,6 @@ const productModel: string
 Product model.Example: <!--RP4-->TAS-AL00<!--RP4End-->
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -491,8 +429,6 @@ Product model alias.Example: TAS-AL00
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -507,8 +443,6 @@ Product series.Example: <!--RP3-->TAS<!--RP3End-->
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## sdkApiVersion
@@ -520,8 +454,6 @@ const sdkApiVersion: number
 SDK API version.Example: 12
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -536,8 +468,6 @@ const sdkMinorApiVersion: number
 System version. The version number is in the format of **<!--RP12-->OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. <!--RP12End-->To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.Example: If the system API version is 26.0.2, sdkMinorApiVersion is 0. If the system API version is 26.1.2, sdkMinorApiVersion is 1.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -555,8 +485,6 @@ SDK patch API version. Starting from API version 26.0.0, the system API version 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -573,8 +501,6 @@ Security patch tag.Example: <!--RP7-->2021/01/01<!--RP7End-->
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## seniorVersion
@@ -586,8 +512,6 @@ const seniorVersion: number
 Senior version number, which increments with architecture and feature updates. The value is the second digit in **osFullName**. You are advised to use **deviceInfo.seniorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.Example: 0
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -603,8 +527,6 @@ Serial number of the device. This API will start a temporary process during exec
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -618,8 +540,6 @@ const softwareModel: string
 Software model.Example: <!--RP5-->TAS-AL00<!--RP5End-->
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -635,8 +555,6 @@ UDID of the device. This API will start a temporary process during execution. Wh
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -650,7 +568,5 @@ const versionId: string
 Version ID, which is a concatenation of **deviceType**, **manufacture**, **brand**, **productSeries**, **osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**. To obtain a specific field value, you are advised to use the corresponding field directly (such as **deviceType** and **manufacture**) instead of parsing **versionId**, facilitating efficiency improvement.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Startup.SystemInfo

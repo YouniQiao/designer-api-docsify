@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## push
@@ -20,8 +20,6 @@ function push(options: RouterOptions): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions)
@@ -33,32 +31,3 @@ function push(options: RouterOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.push({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-});
-```

@@ -6,8 +6,6 @@ Defines the scroll attribute functions.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the effect used when the scroll boundary is reached.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,8 +31,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](#edgeeffect) | Yes |
-| options | [EdgeEffectOptions](../arkts-apis/arkts-arkui-common-edgeeffectoptions-i.md) | No |
+| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No |
 
 ## enableBouncesZoom
 
@@ -47,8 +43,6 @@ enableBouncesZoom(enable: boolean)
 Enable bounces zoom scale.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +66,6 @@ Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enable
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -95,8 +87,6 @@ enableScrollInteraction(value: boolean)
 Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt;false&lt;/em&gt;, scrolling by finger or mouse is not supported, but the scroll controller API is not affected. The component cannot be scrolled by dragging the mouse.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +110,6 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -143,8 +131,6 @@ initialOffset(value: OffsetOptions)
 Sets the initial scrolling offset. This attribute takes effect only during the initial layout of the component. After the initial layout, dynamically changing the value of this attribute does not have any effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +154,6 @@ Set maximum zoom scale.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -191,8 +175,6 @@ minZoomScale(scale: number)
 Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt;em&gt;minZoomScale&lt;/em&gt; to a value other than 1 automatically enables the zoom gesture.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,8 +198,6 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -228,7 +208,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | Yes |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes |
 
 ## onDidScroll
 
@@ -236,11 +216,12 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 onDidScroll(handler: ScrollOnScrollCallback)
 ```
 
-Triggered when the Scroll component scrolls.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered when the Scroll component scrolls.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called. 
+3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,8 +245,6 @@ Called when the Scroll did zoom.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -284,11 +263,12 @@ Called when the Scroll did zoom.
 onScroll(event: (xOffset: number, yOffset: number) => void)
 ```
 
-Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called. 
+3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 
@@ -310,11 +290,12 @@ Triggered to return the horizontal and vertical offsets, in vp, during scrolling
 onScrollEdge(event: OnScrollEdgeCallback)
 ```
 
-Triggered when scrolling reaches the edge. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling reaches the edge after being started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered when scrolling reaches the edge. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling reaches the edge after being started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called. 
+3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,11 +313,11 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.<p>&lt
 onScrollEnd(event: () => void)
 ```
 
-Triggered when scrolling stops.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Triggered when scrolling stops.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -356,11 +337,16 @@ Triggered when scrolling stops.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This 
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-Triggered when each frame scrolling starts. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This event is triggered when any of the following conditions is met: <br>1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). <br>2. The &lt;em&gt;Scroll&lt;/em&gt; component scrolls by inertia. <br>3. Scrolling is triggered by calling the &lt;em&gt;fling&lt;/em&gt; API. <br>This event is not triggered when any of the following conditions is met: <br>1. A scroll control API other than &lt;em&gt;fling&lt;/em&gt; is called. <br>2. The out-of-bounds bounce effect is active. <br>3. The scrollbar is dragged. </p>
+Triggered when each frame scrolling starts. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; This event is triggered when any of the following conditions is met: 
+1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). 
+2. The &lt;em&gt;Scroll&lt;/em&gt; component scrolls by inertia. 
+3. Scrolling is triggered by calling the &lt;em&gt;fling&lt;/em&gt; API. 
+This event is not triggered when any of the following conditions is met: 
+1. A scroll control API other than &lt;em&gt;fling&lt;/em&gt; is called. 
+2. The out-of-bounds bounce effect is active. 
+3. The scrollbar is dragged. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -378,11 +364,11 @@ Triggered when each frame scrolling starts. Anonymous Object Rectification.<p>&l
 onScrollStart(event: VoidCallback)
 ```
 
-Called when scrolling start. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Called when scrolling start. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -400,11 +386,11 @@ Called when scrolling start. Anonymous Object Rectification.<p>&lt;strong&gt;NOT
 onScrollStop(event: VoidCallback)
 ```
 
-Called when scrolling has stopped. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Called when scrolling has stopped. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -422,11 +408,12 @@ Called when scrolling has stopped. Anonymous Object Rectification.<p>&lt;strong&
 onWillScroll(handler: ScrollOnWillScrollCallback)
 ```
 
-Triggered before scrolling.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Triggered before scrolling.<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
+1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. 
+2. This event is triggered when the controller API is called. 
+3. This event supports the out-of-bounds bounce effect. </p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,8 +437,6 @@ Called when zooming has stated.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -473,8 +458,6 @@ onZoomStop(event: VoidCallback)
 Called when zooming has stopped.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -498,8 +481,6 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -519,8 +500,6 @@ scrollBar(barState: BarState)
 Sets the scrollbar state. If the container component cannot be scrolled, the scrollbar is not displayed. If the size of a child component of a container component is infinite, the scrollbar cannot be dragged or scrolled with the child component. Since API version 10, when the scrollable component has rounded corners, to prevent the scrollbar from being cut off by the corners, the scrollbar will automatically calculate the clearance distance from the top and bottom.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -542,8 +521,6 @@ Sets the scrollbar color.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -563,8 +540,6 @@ scrollBarColor(color: Color | number | string | Resource)
 Sets the scrollbar color.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -588,8 +563,6 @@ Sets the scrollbar width.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -609,8 +582,6 @@ scrollBarWidth(value: number | string | Resource)
 Sets the scrollbar width.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -634,8 +605,6 @@ Sets the scroll snapping mode. During the snap animation, the scroll operation s
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -657,8 +626,6 @@ zoomScale(scale: number)
 Current zoom scale. This parameter supports !! for two-way binding of variables.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

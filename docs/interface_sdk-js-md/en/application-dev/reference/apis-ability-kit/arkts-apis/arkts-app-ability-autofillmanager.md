@@ -4,8 +4,6 @@ The autoFillManager module provides APIs for saving accounts and passwords.Unlik
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -13,7 +11,7 @@ The autoFillManager module provides APIs for saving accounts and passwords.Unlik
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
+import { autoFillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -38,14 +36,10 @@ import { autoFillManager } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md) |
-| [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t.md) |
-| [AutoFillType](arkts-ability-autofillmanager-autofilltype-t.md) |
 | [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md) |
 | [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md) |
-| [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md) |
 | [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md) |
 | [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md) |
-| [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md) |
 | [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md) |
 | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) |
 | [ViewData](arkts-ability-autofillmanager-viewdata-t.md) |
@@ -59,7 +53,6 @@ import { autoFillManager } from '@kit.AbilityKit';
 | [CustomData](arkts-ability-autofillmanager-customdata-t-sys.md) |
 | [FillRequestCallback](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md) |
 | [FillResponse](arkts-ability-autofillmanager-fillresponse-t-sys.md) |
-| [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md) |
 | [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md) |
 | [SaveRequestCallback](arkts-ability-autofillmanager-saverequestcallback-t-sys.md) |
 | [UpdateRequest](arkts-ability-autofillmanager-updaterequest-t-sys.md) |

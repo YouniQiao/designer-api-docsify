@@ -4,8 +4,6 @@ Describes the profile of depth data. It inherits from [Profile](arkts-camera-cam
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the profile of depth data. It inherits from [Profile](arkts-camera-cam
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## dataAccuracy
@@ -27,8 +25,6 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 **Type:** [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md)
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -46,8 +42,6 @@ Camera output format.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Depth data resolution.
 **Type:** Size
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

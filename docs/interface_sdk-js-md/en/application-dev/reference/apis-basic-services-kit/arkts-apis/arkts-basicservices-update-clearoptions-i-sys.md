@@ -4,8 +4,6 @@ Defines the clearing options, which specify the errors to be cleared.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the clearing options, which specify the errors to be cleared.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## status
@@ -27,8 +25,6 @@ Exception status, which is used to specify the status to be cleared. This parame
 **Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

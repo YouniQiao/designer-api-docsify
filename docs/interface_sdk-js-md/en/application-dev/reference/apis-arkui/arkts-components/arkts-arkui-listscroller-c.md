@@ -3,14 +3,12 @@
 Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
 
 > **NOTE：**&gt;
-> **ListScroller** inherits from Scroller and has all methods of
-> Scroller.
+> **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of
+> [Scroller](arkts-arkui-scroller-c.md).
 
-**Inheritance/Implementation:** ListScroller extends Scroller
+**Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +23,9 @@ Implements the scroll controller of the **List** component. A **List** component
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the list items in the EXPANDED state and sets callback events.
+Collapses the list items in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state and sets callback events.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +62,6 @@ Obtains the size of a list item in a list item group and its position relative t
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,7 +79,7 @@ Obtains the size of a list item in a list item group and its position relative t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) |
+| [RectResult](arkts-arkui-rectresult-i.md) |
 
 **Error codes:**
 
@@ -103,8 +97,6 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 Obtains the index information of the child component at the specified coordinates.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,8 +133,6 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 Scrolls to the specified list item in the specified list item group.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

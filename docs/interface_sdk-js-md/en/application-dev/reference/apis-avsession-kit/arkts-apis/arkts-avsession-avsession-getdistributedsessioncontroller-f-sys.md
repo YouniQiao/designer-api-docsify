@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getDistributedSessionController
@@ -15,8 +15,6 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 Get distributed avsession controller
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -44,16 +42,3 @@ Get distributed avsession controller
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-
-avSession.getDistributedSessionController(avSession.DistributedSessionType.TYPE_SESSION_REMOTE).then((sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`getDistributedSessionController : SUCCESS : sessionControllers.length : ${sessionControllers.length}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDistributedSessionController BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```

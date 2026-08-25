@@ -4,8 +4,6 @@ JsGeolocation是Web组件在收到网页地理位置权限请求时，提供给�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -23,8 +21,6 @@ JsGeolocation的构造函数。构造函数本身不直接被应用调用，通�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 设置网页地理位置权限状态。该方法需在[onGeolocationShow事件](arkts-arkweb-web-attribute.md#ongeolocationshow)回调中调用，用于对发起地理位置权限请求的网页进行授权响应。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

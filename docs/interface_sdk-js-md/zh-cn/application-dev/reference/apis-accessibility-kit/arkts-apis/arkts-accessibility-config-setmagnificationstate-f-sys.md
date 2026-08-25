@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## setMagnificationState
@@ -15,8 +15,6 @@ function setMagnificationState(state: boolean): void
 设置放大效果的启用状态。放大效果依赖放大手势功能，仅在放大手势功能已启用的前提下，本接口的设置才会生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -38,17 +36,3 @@ function setMagnificationState(state: boolean): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [9300007](../errorcode-accessibility.md#9300007-触发放大功能失败) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  config.setMagnificationState(true);
-} catch (err) {
-  let e = err as BusinessError;
-  console.error(`Failed to set magnification. Code: ${e.code}, message: ${e.message}`);
-}
-```

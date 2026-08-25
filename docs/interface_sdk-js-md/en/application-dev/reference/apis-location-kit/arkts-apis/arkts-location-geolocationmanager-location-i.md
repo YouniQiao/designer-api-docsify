@@ -4,29 +4,25 @@ Provides information about geographic locations.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## accuracy
 
 ```TypeScript
-accuracy: double
+accuracy: number
 ```
 
 Indicates location accuracy, in meters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Indicates additional information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -53,16 +47,14 @@ Indicates additional information.
 ## additionSize
 
 ```TypeScript
-additionSize?: int
+additionSize?: number
 ```
 
 Indicates the amount of additional descriptive information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Indicates additional information map.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -89,16 +79,14 @@ Indicates additional information map.
 ## altitude
 
 ```TypeScript
-altitude: double
+altitude: number
 ```
 
 Indicates location altitude, in meters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,16 +95,14 @@ Indicates location altitude, in meters.
 ## altitudeAccuracy
 
 ```TypeScript
-altitudeAccuracy?: double
+altitudeAccuracy?: number
 ```
 
 Indicates vertical position accuracy in meters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -125,16 +111,14 @@ Indicates vertical position accuracy in meters.
 ## direction
 
 ```TypeScript
-direction: double
+direction: number
 ```
 
 Indicates direction information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,16 +127,14 @@ Indicates direction information.
 ## directionAccuracy
 
 ```TypeScript
-directionAccuracy?: double
+directionAccuracy?: number
 ```
 
 Indicates direction accuracy in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,8 +152,6 @@ Indicates whether the location is mocked.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -179,16 +159,14 @@ Indicates whether the location is mocked.
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -197,16 +175,14 @@ Indicates latitude information. A positive value indicates north latitude, and a
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 Indicates Longitude information. A positive value indicates east longitude , and a negative value indicates west longitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -224,8 +200,6 @@ Indicates the poi information.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -242,8 +216,6 @@ Indicates the source of the location.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -251,16 +223,14 @@ Indicates the source of the location.
 ## speed
 
 ```TypeScript
-speed: double
+speed: number
 ```
 
 Indicates speed, in m/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -269,16 +239,14 @@ Indicates speed, in m/s.
 ## speedAccuracy
 
 ```TypeScript
-speedAccuracy?: double
+speedAccuracy?: number
 ```
 
 Indicates speed accuracy in meter per seconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -287,16 +255,14 @@ Indicates speed accuracy in meter per seconds.
 ## timeSinceBoot
 
 ```TypeScript
-timeSinceBoot: long
+timeSinceBoot: number
 ```
 
 Indicates location timestamp since boot.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -305,16 +271,14 @@ Indicates location timestamp since boot.
 ## timeStamp
 
 ```TypeScript
-timeStamp: long
+timeStamp: number
 ```
 
 Indicates location timestamp in the UTC format.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -323,16 +287,14 @@ Indicates location timestamp in the UTC format.
 ## uncertaintyOfTimeSinceBoot
 
 ```TypeScript
-uncertaintyOfTimeSinceBoot?: long
+uncertaintyOfTimeSinceBoot?: number
 ```
 
 Time uncertainty Of timeSinceBoot in nanosecond.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

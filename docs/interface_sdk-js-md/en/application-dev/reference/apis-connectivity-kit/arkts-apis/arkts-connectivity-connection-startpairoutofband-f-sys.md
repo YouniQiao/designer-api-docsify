@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startPairOutOfBand
@@ -16,8 +16,6 @@ function startPairOutOfBand(deviceId: string, transport: BluetoothTransport, p19
 Starts pairing with the specific remote Bluetooth device using the Out Of Band mechanism. This function is asynchronous, and the pairing status is obtained by listening to the bondStateChange event. If both p192Data and p256Data are not used, the function call will fail. If both p192Data and p256Data are used simultaneously, p256Data takes effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -32,7 +30,7 @@ Starts pairing with the specific remote Bluetooth device using the Out Of Band m
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| [transport](arkts-connectivity-ble-gattsetting-i.md) | [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Yes |
+| [transport](arkts-connectivity-ble-gattsetting-i.md) | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | No |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | No |
 

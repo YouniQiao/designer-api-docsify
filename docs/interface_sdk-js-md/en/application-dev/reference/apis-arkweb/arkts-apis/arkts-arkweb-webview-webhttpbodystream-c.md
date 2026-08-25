@@ -4,14 +4,12 @@ WebHttpBodyStream is an HTTP request body data stream object used to read the re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getPosition
@@ -24,8 +22,6 @@ Reads the current read position in this **WebHttpBodyStream** instance.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -35,10 +31,6 @@ Reads the current read position in this **WebHttpBodyStream** instance.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).
 
 ## getSize
 
@@ -50,8 +42,6 @@ Obtains the size of data in this **WebHttpBodyStream** instance. This API always
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -62,10 +52,6 @@ Obtains the size of data in this **WebHttpBodyStream** instance. This API always
 | --- |
 | number |
 
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).
-
 ## initialize
 
 ```TypeScript
@@ -75,8 +61,6 @@ initialize(): Promise<void>
 Initializes this **WebHttpBodyStream** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,88 +78,6 @@ Initializes this **WebHttpBodyStream** instance.
 | --- |
 | [17100022](../errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-  htmlData: string = "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>";
-
-  build() {
-    Column() {
-      Button('postUrl')
-        .onClick(() => {
-          try {
-            let postData = buffer.from(this.htmlData);
-            this.controller.postUrl('https://www.example.com', postData.buffer);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
-              console.info("[schemeHandler] onRequestStart");
-              try {
-                let stream = request.getHttpBodyStream();
-                if (stream) {
-                  stream.initialize().then(() => {
-                    if (!stream) {
-                      return;
-                    }
-                    console.info("[schemeHandler] onRequestStart postDataStream size:" + stream.getSize());
-                    console.info("[schemeHandler] onRequestStart postDataStream position:" + stream.getPosition());
-                    console.info("[schemeHandler] onRequestStart postDataStream isChunked:" + stream.isChunked());
-                    console.info("[schemeHandler] onRequestStart postDataStream isEof:" + stream.isEof());
-                    console.info("[schemeHandler] onRequestStart postDataStream isInMemory:" + stream.isInMemory());
-                    stream.read(stream.getSize()).then((buffer) => {
-                      if (!stream) {
-                        return;
-                      }
-                      console.info("[schemeHandler] onRequestStart postDataStream readlength:" + buffer.byteLength);
-                      console.info("[schemeHandler] onRequestStart postDataStream isEof:" + stream.isEof());
-                      console.info("[schemeHandler] onRequestStart postDataStream position:" + stream.getPosition());
-                    }).catch((error: BusinessError) => {
-                      console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-                    })
-                  }).catch((error: BusinessError) => {
-                    console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-                  })
-                } else {
-                  console.info("[schemeHandler] onRequestStart has no http body stream");
-                }
-              } catch (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-
-              return false;
-            })
-
-            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
-              console.info("[schemeHandler] onRequestStop");
-            });
-
-            this.controller.setWebSchemeHandler('https', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
 ## isChunked
 
 ```TypeScript
@@ -186,8 +88,6 @@ Checks whether this **WebHttpBodyStream** instance is transmitted by chunk.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -197,10 +97,6 @@ Checks whether this **WebHttpBodyStream** instance is transmitted by chunk.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).
 
 ## isEof
 
@@ -212,8 +108,6 @@ Checks whether all data in this **WebHttpBodyStream** instance has been read.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -223,10 +117,6 @@ Checks whether all data in this **WebHttpBodyStream** instance has been read.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).
 
 ## isInMemory
 
@@ -238,8 +128,6 @@ Checks whether the uploaded data in this **WebHttpBodyStream** instance is in me
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -250,10 +138,6 @@ Checks whether the uploaded data in this **WebHttpBodyStream** instance is in me
 | --- |
 | boolean |
 
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).
-
 ## read
 
 ```TypeScript
@@ -263,8 +147,6 @@ read(size: number): Promise<ArrayBuffer>
 Reads data from this **WebHttpBodyStream** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -287,7 +169,3 @@ Reads data from this **WebHttpBodyStream** instance.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-For the complete sample code, see [initialize](#initialize).

@@ -4,14 +4,12 @@ Defines parameters of an **AppEventPackage** object. This API is used to obtain 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## appEventInfos
@@ -26,8 +24,6 @@ Event object group.
 **Type:** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,8 +42,6 @@ Event data in the event package.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -55,17 +49,15 @@ Event data in the event package.
 ## packageId
 
 ```TypeScript
-packageId: int
+packageId: number
 ```
 
 Event package ID, which is named from **0** in ascending order.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,17 +66,15 @@ Event package ID, which is named from **0** in ascending order.
 ## row
 
 ```TypeScript
-row: int
+row: number
 ```
 
 Number of events in the event package.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,17 +83,15 @@ Number of events in the event package.
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 Event size of the event package, in bytes.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

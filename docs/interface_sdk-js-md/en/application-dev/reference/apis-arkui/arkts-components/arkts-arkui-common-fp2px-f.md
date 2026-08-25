@@ -15,8 +15,6 @@ Converts a number in fp units to a number in px.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 18
 
 **Substitutes:** fp2px

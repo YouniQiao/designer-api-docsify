@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getExemptedApps
 
 ```TypeScript
-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void
+function getExemptedApps(resourceTypes: number, callback: AsyncCallback<Array<ExemptedAppInfo>>): void
 ```
 
 获取进入待机模式的应用名单，使用Callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
@@ -28,7 +26,7 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resourceTypes | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| resourceTypes | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
@@ -44,52 +42,16 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { deviceStandby } from '@kit.BackgroundTasksKit';
-
-let resourceTypes: deviceStandby.ResourceType  = deviceStandby.ResourceType.TIMER | deviceStandby.ResourceType.NETWORK;
-deviceStandby.getExemptedApps(resourceTypes, (err: BusinessError, res: Array<deviceStandby.ExemptedAppInfo>) => {
-  if (err) {
-    console.error('DEVICE_STANDBY getExemptedApps callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('DEVICE_STANDBY getExemptedApps callback success.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('DEVICE_STANDBY getExemptedApps callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { deviceStandby } from '@kit.BackgroundTasksKit';
-
-let resourceTypes: deviceStandby.ResourceType = deviceStandby.ResourceType.TIMER | deviceStandby.ResourceType.NETWORK;
-deviceStandby.getExemptedApps(resourceTypes).then( (res: Array<deviceStandby.ExemptedAppInfo>) => {
-  console.info('DEVICE_STANDBY getExemptedApps promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('DEVICE_STANDBY getExemptedApps promise result ' + JSON.stringify(res[i]));
-  }
-}).catch( (err: BusinessError) => {
-  console.error('DEVICE_STANDBY getExemptedApps promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 ## getExemptedApps
 
 ```TypeScript
-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
+function getExemptedApps(resourceTypes: number): Promise<Array<ExemptedAppInfo>>
 ```
 
 获取进入待机模式的应用名单，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
@@ -101,7 +63,7 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resourceTypes | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| resourceTypes | number | 是 |
 
 **返回值：**
 
@@ -121,7 +83,3 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc通信失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
-
-**示例**
-
-参见 [getExemptedApps](#getexemptedapps)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## setDiscoverable
@@ -15,8 +15,6 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 设置设备是否可被发现，用于投播接收端。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -36,20 +34,6 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-avSession.setDiscoverable(true, (err) => {
-  console.info('setDiscoverable successfully');
-});
-```
-
-```TypeScript
-avSession.setDiscoverable(true).then(() => {
-  console.info('setDiscoverable successfully');
-});
-```
-
 
 ## setDiscoverable
 
@@ -60,8 +44,6 @@ function setDiscoverable(enable: boolean): Promise<void>
 设置设备是否可被发现，用于投播接收端。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -85,7 +67,3 @@ function setDiscoverable(enable: boolean): Promise<void>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setDiscoverable](#setdiscoverable)

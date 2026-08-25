@@ -6,14 +6,12 @@ Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## globalConnect
@@ -27,8 +25,6 @@ static globalConnect<T extends object>(
 Stores key-value pair data on the application disk. If the given key already exists in [PersistenceV2](../../../ui/state-management/arkts-new-persistencev2.md), the corresponding value is returned. Otherwise, a default value is constructed using the default value constructor and returned. If **globalConnect** is used for an [\@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorated object, changes to the object's [\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) properties will trigger automatic refresh of the associated object, while changes to non-@Trace properties will not. If necessary, the [PersistenceV2.save](#save) API can be called to store the data manually.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,46 +44,6 @@ Stores key-value pair data on the application disk. If the given key already exi
 | --- |
 | T \| undefined |
 
-**Examples**
-
-The following is the sample code for globalConnect to persist data of the Map type:
-
-```TypeScript
-import { PersistenceV2, ConnectOptions } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Page1 {
-  // globalConnect supports the persistence of data of the Map type.
-  @Local map: Map<number, number> = PersistenceV2.globalConnect({
-    type: Map<number, number>, defaultCreator: () => new Map<number, number>()
-  })!
-  output: string[] = [];
-
-  // Start the application. When you access the application for the first time, the following information is displayed: restored Map.size=0, map.get(0)=undefined, map.get(1)=undefined, map.get(2)=undefined.
-  // Stop the application. When you access the application for the second time, the following information is displayed: restored Map.size=1, map.get(0)=0, map.get(1)=undefined, map.get(2)=undefined.
-  // Stop the application. When you access the application for the third time, the following information is displayed: restored Map.size=2, map.get(0)=0, map.get(1)=1, map.get(2)=undefined.
-  // Stop the application. When you access the application for the fourth time, the following information is displayed: restored Map.size=3, map.get(0)=0, map.get(1)=1, map.get(2)=2.
-  aboutToAppear(): void {
-    const restoredMapSize = this.map.size;
-    this.output.push(`restored Map.size=${restoredMapSize}, map.get(0)=${this.map.get(0)}, map.get(1)=${this.map.get(1)}, map.get(2)=${this.map.get(2)}`);
-    this.map.set(restoredMapSize, restoredMapSize);
-    // Manual persistence is required.
-    PersistenceV2.save('Map');
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.output.join('\n\n'))
-          .fontSize(24)
-      }
-    }
-    .width('100%')
-  }
-}
-```
-
 ## globalConnect
 
 ```TypeScript
@@ -99,8 +55,6 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,10 +74,6 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 | --- |
 | T \| undefined |
 
-**Examples**
-
-See [globalConnect](#globalconnect)
-
 ## notifyOnError
 
 ```TypeScript
@@ -133,8 +83,6 @@ static notifyOnError(callback: PersistenceErrorCallback | undefined): void
 Called when persistence fails.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,15 +96,6 @@ Called when persistence fails.
 | --- | --- | --- |
 | callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | Yes |
 
-**Examples**
-
-```TypeScript
-// Called when persistence fails.
-PersistenceV2.notifyOnError((key: string, reason: string, msg: string) => {
-  console.error(`error key: ${key}, reason: ${reason}, message: ${msg}`);
-});
-```
-
 ## save
 
 ```TypeScript
@@ -166,8 +105,6 @@ static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 Persists the specified key-value pair data once.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,21 +117,3 @@ Persists the specified key-value pair data once.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-@ObservedV2
-class SampleClass {
-  @Trace p: number = 0;
-}
-
-// Assuming there is a key named key_as2 in PersistenceV2, the following will persist the data for this key-value pair.
-PersistenceV2.save('key_as2');
-
-// Assuming there is a key named SampleClass in PersistenceV2, the following will persist the data for this key-value pair.
-PersistenceV2.save(SampleClass);
-
-// Assuming there is no key named key_as1 in PersistenceV2, this operation is meaningless.
-PersistenceV2.save('key_as1');
-```

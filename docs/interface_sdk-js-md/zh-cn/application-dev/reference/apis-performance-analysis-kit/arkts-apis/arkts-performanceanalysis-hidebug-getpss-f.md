@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getPss
@@ -14,12 +14,11 @@ function getPss() : bigint
 
 获取应用进程实际使用的物理内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Pss与SwapPss值并求和。
 
-> **注意**&gt;
-> 由于/proc/{pid}/smaps_rollup的读取耗时较长，建议不要在主线程中使用该接口，可通过@ohos.taskpool或@ohos.worker开启异步线程以避免应用出现卡顿。
+> **注意**：&gt;
+> 由于/proc/{pid}/smaps_rollup的读取耗时较长，建议不要在主线程中使用该接口，可通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)或
+> [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)开启异步线程以避免应用出现卡顿。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -28,12 +27,3 @@ function getPss() : bigint
 | 类型 |
 | --- |
 | bigint |
-
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-let pss: bigint = hidebug.getPss();
-console.info(`pss = ${pss}`);
-```

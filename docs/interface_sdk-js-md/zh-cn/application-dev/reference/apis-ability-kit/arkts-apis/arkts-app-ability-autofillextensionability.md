@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

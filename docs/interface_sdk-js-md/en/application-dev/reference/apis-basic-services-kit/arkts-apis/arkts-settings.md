@@ -5,7 +5,7 @@ This module provides settings data access abilities.@namespace settings
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -7,14 +7,12 @@ This module defines some common data types in the 2D graphics field.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

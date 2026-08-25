@@ -1,7 +1,5 @@
 # Uint32ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (): Uint32Array
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

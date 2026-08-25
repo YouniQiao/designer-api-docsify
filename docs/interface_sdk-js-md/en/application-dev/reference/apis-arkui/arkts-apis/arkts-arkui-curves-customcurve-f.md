@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## customCurve
@@ -15,8 +15,6 @@ function customCurve(interpolate: (fraction: number) => number): ICurve
 Creates a custom curve.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,14 +32,4 @@ Creates a custom curve.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-let interpolate = (fraction:number):number => {
-  return Math.sqrt(fraction)
-}
-let curve = curves.customCurve(interpolate) // Create a custom interpolation curve.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

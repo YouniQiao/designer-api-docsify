@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setUserRestrictionForAccount
@@ -15,8 +15,6 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: string, account
 Sets restrictions on specified user behaviors.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -34,7 +32,7 @@ Sets restrictions on specified user behaviors.
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | settingsItem | string | Yes |
-| accountId | int | Yes |
+| accountId | number | Yes |
 | restricted | boolean | Yes |
 
 **Error codes:**
@@ -46,28 +44,6 @@ Sets restrictions on specified user behaviors.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { restrictions } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let userId = 100;
-let settingsItem: string = "modifyWallpaper";
-try {
-  restrictions.setUserRestrictionForAccount(wantTemp, settingsItem, userId, true);
-  console.info('Succeeded in restricting from setting modifyWallpaper');
-} catch (err) {
-  console.error(`Failed to restrict from setting modifyWallpaper. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setUserRestrictionForAccount
 
@@ -78,8 +54,6 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 Restricts a specified user from modifying specified setting items.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -93,7 +67,7 @@ Restricts a specified user from modifying specified setting items.
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Yes |
-| accountId | int | Yes |
+| accountId | number | Yes |
 | restricted | boolean | Yes |
 
 **Error codes:**
@@ -105,7 +79,3 @@ Restricts a specified user from modifying specified setting items.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [setUserRestrictionForAccount](#setuserrestrictionforaccount)

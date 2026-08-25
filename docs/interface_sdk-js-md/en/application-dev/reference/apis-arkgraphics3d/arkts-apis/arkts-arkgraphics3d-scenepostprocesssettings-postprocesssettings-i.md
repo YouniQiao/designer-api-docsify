@@ -4,8 +4,6 @@ Post-processing settings, which are used to configure the image processing effec
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## bloom
@@ -19,8 +17,6 @@ Bloom settings. The default value is undefined.
 **Type:** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ Color fringing settings. The default value is undefined.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## toneMapping
@@ -53,8 +47,6 @@ Tone mapping settings. The default value is undefined.
 **Type:** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -71,7 +63,5 @@ Vignette settings. The default value is undefined.
 **Default:** undefined
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

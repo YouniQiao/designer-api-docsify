@@ -11,7 +11,7 @@ The **UiTest** module provides UI automation test capabilities, such as componen
  matching/search, key injection, coordinate clicking/sliding, and screenshot.
  - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md): represents a window object on the UI and provides APIs for obtaining window attributes,
  dragging windows, and adjusting window sizes.
- - By<sup>(deprecated)</sup>: provides UI component feature description APIs for component filtering and
+ - [By<sup>(deprecated)</sup>](arkts-test-ohosuitest-p.md#by): provides UI component feature description APIs for component filtering and
  matching. This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [On](arkts-test-uitest-on-c.md) instead.
  - [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md): represents a component on the UI and provides APIs for
@@ -32,17 +32,11 @@ The **UiTest** module provides UI automation test capabilities, such as componen
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## Summary
-
-### Namespaces
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ON](arkts-test-on-n.md) |
 
 ### Classes
 
@@ -89,3 +83,10 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 | [UiDirection](arkts-test-uitest-uidirection-e.md) |
 | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) |
 | [WindowMode](arkts-test-uitest-windowmode-e.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BY](arkts-test-ohosuitest-p.md) |
+| [ON](arkts-test-ohosuitest-p.md) |

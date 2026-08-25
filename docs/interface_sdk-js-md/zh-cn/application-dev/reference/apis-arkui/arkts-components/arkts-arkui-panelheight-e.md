@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,8 +17,6 @@ WRAP_CONTENT = 'wrapContent'
 PanelType的类型为CUSTOM时，自适应内容高度。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 12
 

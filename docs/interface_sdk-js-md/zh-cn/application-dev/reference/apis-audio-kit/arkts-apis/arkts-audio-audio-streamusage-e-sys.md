@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STREAM_USAGE_SYSTEM
@@ -17,8 +15,6 @@ STREAM_USAGE_SYSTEM = 9
 系统音(如屏幕锁定或按键音)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,8 +30,6 @@ STREAM_USAGE_DTMF = 14
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,8 +43,6 @@ STREAM_USAGE_ENFORCED_TONE = 15
 强制音(如相机快门音)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -66,8 +58,6 @@ STREAM_USAGE_ULTRASONIC = 16
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,8 +72,6 @@ STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,8 +85,6 @@ STREAM_USAGE_ANNOUNCEMENT = 22
 通知音。此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,8 +102,6 @@ STREAM_USAGE_EMERGENCY = 23
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -133,8 +117,6 @@ STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 24
 Voice assistant broadcast usage for system app.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

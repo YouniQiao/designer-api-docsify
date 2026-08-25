@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ProgressButton } from '@kit.ArkUI';
+import { ProgressButton } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

@@ -1,14 +1,12 @@
 # ValueType (System API)
 
 ```TypeScript
-type ValueType = int | long | double | string | boolean | Uint8Array | null
+type ValueType = number | number | number | string | boolean | Uint8Array | null
 ```
 
 Defines the type of value in a KV pair. The type varies with the parameter function.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

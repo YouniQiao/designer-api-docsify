@@ -4,14 +4,12 @@ Defines a data processor for reporting and managing events. You can customize pr
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## appId
@@ -27,8 +25,6 @@ Application ID. It is left empty by default. The length of the input string cann
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -36,17 +32,15 @@ Application ID. It is left empty by default. The length of the input string cann
 ## batchReport
 
 ```TypeScript
-batchReport?: int
+batchReport?: number
 ```
 
 Event reporting threshold. When the number of events reaches the threshold, an event is reported. The value must be greater than **0** and less than **1000**. If the value is not within the range, the default value **0** is used and no events are reported.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,17 +49,15 @@ Event reporting threshold. When the number of events reaches the threshold, an e
 ## configId
 
 ```TypeScript
-configId?: int
+configId?: number
 ```
 
 Configuration ID for data processor. The input value must be greater than or equal to **0**. If the input value is less than **0**, the default value 0 is used. If the input value is greater than 0, the value uniquely identifies a data processor with its name.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,8 +76,6 @@ Name of the data processor configuration, which can be loaded from the configura
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -96,14 +86,16 @@ Name of the data processor configuration, which can be loaded from the configura
 customConfigs?: Record<string, string>
 ```
 
-Custom extended parameters. If the input parameter name and value do not meet the specifications, extended parameters are not configured by default. The specifications are as follows:<br>- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. <br>- A parameter value is a string contains a maximum of 1024 characters. <br>- The number of parameters must be less than 32.  
+Custom extended parameters. If the input parameter name and value do not meet the specifications, extended parameters are not configured by default. The specifications are as follows:
+
+- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter.   
+- A parameter value is a string contains a maximum of 1024 characters.   
+- The number of parameters must be less than 32.  
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,8 +114,6 @@ Whether to enable the debug mode. The default value is **false**. The value **tr
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -140,8 +130,6 @@ Event description configuration array that can be reported by the data processor
 **Type:** [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md)[]
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,8 +148,6 @@ Name of a data processor. The value is string that contains a maximum of 256 cha
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -178,8 +164,6 @@ Whether to report an event when an application switches to the background. The d
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -198,8 +182,6 @@ Whether to report an event when the data processor starts. The default value is 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -207,17 +189,15 @@ Whether to report an event when the data processor starts. The default value is 
 ## periodReport
 
 ```TypeScript
-periodReport?: int
+periodReport?: number
 ```
 
 Interval for event reporting, in seconds. The input value must be greater than or equal to **0**. If the input value is less than **0**, the default value **0** is used and periodic reporting is not performed.  
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -236,8 +216,6 @@ Server location information. It is left empty by default. The length of the inpu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -255,8 +233,6 @@ Name array of user IDs that can be reported by the data processor. **name** corr
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -273,8 +249,6 @@ Name array of user properties that can be reported by the data processor. **name
 **Type:** string[]
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

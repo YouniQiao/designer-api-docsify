@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('wifiStateChange')
@@ -15,8 +15,6 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 订阅WLAN状态改变事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,8 +42,6 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** wifiConnectionChange
@@ -71,8 +67,6 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 订阅WLAN扫描状态改变事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -100,8 +94,6 @@ function on(type: 'wifiRssiChange', callback: Callback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** wifiRssiChange
@@ -128,8 +120,6 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** hotspotStateChange
@@ -145,22 +135,6 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 | type | 'hotspotStateChange' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-let recvHotspotStateChangeFunc = (result:number) => {
-    console.info("Receive hotspot state change event: " + result);
-}
-
-// Register event
-wifi.on("hotspotStateChange", recvHotspotStateChangeFunc);
-
-// Unregister event
-wifi.off("hotspotStateChange", recvHotspotStateChangeFunc);
-```
-
 
 ## on('p2pStateChange')
 
@@ -171,8 +145,6 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 订阅P2P状态改变事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -200,8 +172,6 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** p2pConnectionChange
@@ -227,8 +197,6 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 订阅P2P本地设备改变事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -256,8 +224,6 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** p2pPeerDeviceChange
@@ -284,8 +250,6 @@ function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** p2pPersistentGroupChange
@@ -311,8 +275,6 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 订阅P2P发现事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isRinging
@@ -15,8 +15,6 @@ function isRinging(callback: AsyncCallback<boolean>): void
 Checks whether the ringtone is playing. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,30 +40,6 @@ Checks whether the ringtone is playing. This API uses an asynchronous callback t
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isRinging fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isRinging success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging().then((data: boolean) => {
-    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isRinging
 
@@ -76,8 +50,6 @@ function isRinging(): Promise<boolean>
 Checks whether the ringtone is playing. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -100,7 +72,3 @@ Checks whether the ringtone is playing. This API uses a promise to return the re
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [isRinging](#isringing)

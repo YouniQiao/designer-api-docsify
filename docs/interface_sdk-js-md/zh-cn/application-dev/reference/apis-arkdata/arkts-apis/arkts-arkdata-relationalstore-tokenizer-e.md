@@ -4,8 +4,6 @@
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NONE_TOKENIZER
@@ -17,8 +15,6 @@ NONE_TOKENIZER = 0
 不使用分词器。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,8 +28,6 @@ ICU_TOKENIZER = 1
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## CUSTOM_TOKENIZER
@@ -46,130 +40,4 @@ CUSTOM_TOKENIZER = 2
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**示例**
-
-使用ICU_TOKENIZER分词器时，创建表的示例：
-
-```TypeScript
-import { relationalStore } from '@kit.ArkData'; // 导入模块
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-// 此处示例在Stage模式、Ability中实现，使用者也可以在其他合理场景中使用
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let store: relationalStore.RdbStore | undefined = undefined;
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "MyStore.db",
-      securityLevel: relationalStore.SecurityLevel.S3,
-      tokenizer: relationalStore.Tokenizer.ICU_TOKENIZER
-    };
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: Error) => {
-      let businessError = err as BusinessError;
-      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-    });
-
-    const SQL_CREATE_TABLE = "CREATE VIRTUAL TABLE example USING fts4(name, content, tokenize='icu zh_CN')";
-    if (store != undefined) {
-      (store as relationalStore.RdbStore).executeSql(SQL_CREATE_TABLE, (err) => {
-        if (err) {
-          console.error(`ExecuteSql failed, code is ${err.code},message is ${err.message}`);
-          return;
-        }
-        console.info('create virtual table done.');
-      });
-    }
-  }
-}
-```
-
-使用CUSTOM_TOKENIZER分词器时，创建表的示例：
-
-```TypeScript
-import { relationalStore } from '@kit.ArkData'; // 导入模块
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-// 此处示例在Stage模式、Ability中实现，使用者也可以在其他合理场景中使用
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let store: relationalStore.RdbStore | undefined = undefined;
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "MyStore.db",
-      securityLevel: relationalStore.SecurityLevel.S3,
-      tokenizer: relationalStore.Tokenizer.CUSTOM_TOKENIZER
-    };
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: Error) => {
-      let businessError = err as BusinessError;
-      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-    });
-
-    const SQL_CREATE_TABLE = "CREATE VIRTUAL TABLE example USING fts5(name, content, tokenize='customtokenizer')";
-    if (store != undefined) {
-      (store as relationalStore.RdbStore).executeSql(SQL_CREATE_TABLE, (err) => {
-        if (err) {
-          console.error(`ExecuteSql failed, code is ${err.code},message is ${err.message}`);
-          return;
-        }
-        console.info('create virtual table done.');
-      });
-    }
-  }
-}
-```
-
-使用CUSTOM_TOKENIZER分词器，并指定分词模式时，创建表的示例：
-
-```TypeScript
-import { relationalStore } from '@kit.ArkData'; // 导入模块
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('custom tokenizer example: window stage create begin.');
-    let store: relationalStore.RdbStore | undefined = undefined;
-    const storeConfig: relationalStore.StoreConfig = {
-      name: "MyStore.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-    let customType = relationalStore.Tokenizer.CUSTOM_TOKENIZER;
-    let customTypeSupported = relationalStore.isTokenizerSupported(customType);
-    if (customTypeSupported) {
-      storeConfig.tokenizer = customType;
-    } else {
-      console.info('custom tokenizer example: not support custom tokenizer.');
-      return;
-    }
-    relationalStore.getRdbStore(this.context, storeConfig).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: Error) => {
-      let businessError = err as BusinessError;
-      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-    });
-
-    const SQL_CREATE_TABLE =
-      "CREATE VIRTUAL TABLE example USING fts5(name, content, tokenize='customtokenizer cut_mode short_words')";
-    if (store != undefined) {
-      (store as relationalStore.RdbStore).executeSql(SQL_CREATE_TABLE, (err) => {
-        if (err) {
-          console.error(`custom tokenizer example: ExecuteSql failed, code is ${err.code},message is ${err.message}`);
-          return;
-        }
-        console.info('custom tokenizer example: create virtual table done.');
-      });
-    }
-  }
-}
-```

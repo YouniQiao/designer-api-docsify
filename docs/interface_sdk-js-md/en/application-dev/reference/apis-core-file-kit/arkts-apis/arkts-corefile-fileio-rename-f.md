@@ -15,8 +15,6 @@ Renames a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [rename](arkts-corefile-file-fs-rename-f.md)
@@ -36,27 +34,6 @@ Renames a file. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/new.txt';
-fileio.rename(srcFile, dstFile).then(() => {
-  console.info("rename succeed");
-}).catch((err: BusinessError) => {
-  console.error("rename failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/new.txt';
-fileio.rename(srcFile, dstFile, (err: BusinessError) => {
-});
-```
-
 
 ## rename
 
@@ -67,8 +44,6 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 Renames a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -83,7 +58,3 @@ Renames a file. This API uses an asynchronous callback to return the result.
 | oldPath | string | Yes |
 | newPath | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [rename](#rename)

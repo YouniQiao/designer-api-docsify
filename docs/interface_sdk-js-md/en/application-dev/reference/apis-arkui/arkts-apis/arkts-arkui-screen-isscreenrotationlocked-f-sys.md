@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## isScreenRotationLocked
@@ -15,8 +15,6 @@ function isScreenRotationLocked(callback: AsyncCallback<boolean>): void
 Checks whether auto rotate is locked. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,31 +32,6 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screen.isScreenRotationLocked().then((isLocked: boolean) => {
-  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get the screen rotation lock status. Code:${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screen.isScreenRotationLocked((err: BusinessError, isLocked: boolean) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to get the screen rotation lock status. Code:${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
-});
-```
-
 
 ## isScreenRotationLocked
 
@@ -69,8 +42,6 @@ function isScreenRotationLocked(): Promise<boolean>
 Checks whether auto rotate is locked. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -87,7 +58,3 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [isScreenRotationLocked](#isscreenrotationlocked)

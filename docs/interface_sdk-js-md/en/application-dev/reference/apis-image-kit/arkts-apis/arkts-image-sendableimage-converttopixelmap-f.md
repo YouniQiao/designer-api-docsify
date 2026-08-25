@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## convertToPixelMap
@@ -15,8 +15,6 @@ function convertToPixelMap(pixelmap: PixelMap): image.PixelMap
 Creates a image PixelMap from sendable image PixelMap.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -38,18 +36,3 @@ Creates a image PixelMap from sendable image PixelMap.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
-  let sendablePixelMap : sendableImage.PixelMap = sendableImage.createPixelMapSync(color, opts);
-  let pixelMap : image.PixelMap = sendableImage.convertToPixelMap(sendablePixelMap);
-  return pixelMap;
-}
-```

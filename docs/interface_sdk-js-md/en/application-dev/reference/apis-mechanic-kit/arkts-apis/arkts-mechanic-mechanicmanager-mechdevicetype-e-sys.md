@@ -1,10 +1,8 @@
 # MechDeviceType
 
-Enumerates the mechanical device types. @enum { int }
+Enumerates the mechanical device types. @enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -17,8 +15,6 @@ DESKTOP_GIMBAL_DEVICE = 1
 Desktop gimbal device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -33,8 +29,6 @@ WHEELED_BASE_DEVICE = 2
 Wheeled?mounted base device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 

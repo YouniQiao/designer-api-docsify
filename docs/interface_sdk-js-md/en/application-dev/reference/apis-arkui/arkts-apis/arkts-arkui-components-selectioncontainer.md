@@ -3,17 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
+import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
 
 ### Classes
 
@@ -26,7 +19,6 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |
 | [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) |
 | [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) |
 | [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) |
@@ -48,5 +40,5 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md) |
 | [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) |

@@ -4,14 +4,12 @@ Defines the type of the element on the right of the **ComposeListItem** componen
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
+import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from 'kits/@kit.ArkUI';
 ```
 
 ## arrow
@@ -25,8 +23,6 @@ Arrow with a size of 12 x 24 vp.If this parameter is not set or is set to **unde
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Button.If this parameter is not set or is set to **undefined**, the button is no
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -65,8 +59,6 @@ Check box with a size of 24 x 24 vp.If this parameter is not set or is set to **
 **Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +78,6 @@ First icon with a size of 24 x 24 vp.If this parameter is not set or is set to *
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -102,11 +92,9 @@ image?: ResourceStr
 
 Image with a size of 48 x 48 vp.If this parameter is not set or is set to **undefined**, the image is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +114,6 @@ Radio button with a size of 24 x 24 vp.If this parameter is not set or is set to
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -145,8 +131,6 @@ Second icon with a size of 24 x 24 vp.If this parameter is not set or is set to 
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,8 +150,6 @@ Switch.If this parameter is not set or is set to **undefined**, the switch is no
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -186,8 +168,6 @@ Symbol icon with a size of 48 x 48 vp.If this parameter is not set or is set to 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -202,32 +182,12 @@ text?: ResourceStr
 
 Text.If this parameter is not set or is set to **undefined**, the text is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## toggle
-
-```TypeScript
-public toggle?: OperateCheck
-```
-
-Sets the toggle.
-
-**Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -4,30 +4,20 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
 
 ## onMissionClosed
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionClosed(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionClosed(mission: int): void
 ```
 
 当系统关闭任务时会触发该回调函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -36,122 +26,18 @@ onMissionClosed(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 定义任务状态监听器对象
-let listener: missionManager.MissionListener = {
-  // 任务创建时的回调处理
-  onMissionCreated: (mission) => {
-    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
-  },
-  // 任务销毁时的回调处理
-  onMissionDestroyed: (mission) => {
-    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
-  },
-  // 任务缩略图更新时的回调处理
-  onMissionSnapshotChanged: (mission) => {
-    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
-  },
-  // 任务移至前台时的回调处理
-  onMissionMovedToFront: (mission) => {
-    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
-  },
-  // 任务标签更新时的回调处理
-  onMissionLabelUpdated: (mission) => {
-    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
-  },
-  // 任务图标更新时的回调处理
-  onMissionIconUpdated: (mission, icon) => {
-    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
-    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
-  },
-  // 任务关闭时的回调处理
-  onMissionClosed: (mission) => {
-    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
-  }
-};
-
-try {
-  // 注册任务状态监听器
-  let listenerId = missionManager.on('mission', listener);
-} catch (paramError) {
-  console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PixelMap } from '@ohos.arkui.component';
-
-class ListenerCustom implements missionManager.MissionListener {
-  onMissionCreated(mission: int) {
-    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
-  }
-
-  onMissionDestroyed(mission: int) {
-    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
-  }
-
-  onMissionSnapshotChanged(mission: int) {
-    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
-  }
-
-  onMissionMovedToFront(mission: int) {
-    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
-  }
-
-  onMissionLabelUpdated(mission: int) {
-    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
-  }
-
-  onMissionIconUpdated(mission: int, icon: PixelMap) {
-    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
-    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
-  }
-
-  onMissionClosed(mission: int) {
-    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
-  }
-}
-
-try {
-  let listener = new ListenerCustom();
-  let listenerId = missionManager.onMission(listener);
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
+| mission | number | 是 |
 
 ## onMissionCreated
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionCreated(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionCreated(mission: int): void
 ```
 
 当系统创建任务时会触发该回调函数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -160,30 +46,18 @@ onMissionCreated(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
+| mission | number | 是 |
 
 ## onMissionDestroyed
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionDestroyed(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionDestroyed(mission: int): void
 ```
 
 当系统销毁任务时会触发该回调函数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -192,30 +66,18 @@ onMissionDestroyed(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
+| mission | number | 是 |
 
 ## onMissionIconUpdated
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionIconUpdated(mission: number, icon: image.PixelMap): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionIconUpdated(mission: int, icon: image.PixelMap): void
 ```
 
 当系统更新任务图标时会触发该回调函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -224,31 +86,19 @@ onMissionIconUpdated(mission: int, icon: image.PixelMap): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mission | number | 是 |
 | icon | image.PixelMap | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
 
 ## onMissionLabelUpdated
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionLabelUpdated(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionLabelUpdated(mission: int): void
 ```
 
 当系统更新任务标签时会触发该回调函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -257,30 +107,18 @@ onMissionLabelUpdated(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
+| mission | number | 是 |
 
 ## onMissionMovedToFront
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionMovedToFront(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionMovedToFront(mission: int): void
 ```
 
 当系统将任务移动到前台时会触发该回调函数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -289,30 +127,18 @@ onMissionMovedToFront(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
+| mission | number | 是 |
 
 ## onMissionSnapshotChanged
 
-ArkTS-Dyn:
 ```TypeScript
 onMissionSnapshotChanged(mission: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onMissionSnapshotChanged(mission: int): void
 ```
 
 当系统更新任务缩略图时会触发该回调函数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -321,8 +147,4 @@ onMissionSnapshotChanged(mission: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-详细示例请见[onMissionClosed](#onmissionclosed)。
+| mission | number | 是 |

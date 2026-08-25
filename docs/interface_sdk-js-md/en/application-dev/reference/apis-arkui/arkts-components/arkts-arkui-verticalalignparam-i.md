@@ -4,8 +4,6 @@ Defines the vertical align rule of relative container.@interface VerticalAlignPa
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ align: VerticalAlign
 
 Sets the vertical alignment relative to the anchor component.Anonymous Object Rectification
 
-**Type:** VerticalAlign
+**Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -44,8 +40,6 @@ Specifies the anchor component Anonymous Object Rectification
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

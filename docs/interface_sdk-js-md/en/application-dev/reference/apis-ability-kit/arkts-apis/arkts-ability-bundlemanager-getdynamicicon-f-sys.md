@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDynamicIcon
@@ -15,8 +15,6 @@ function getDynamicIcon(bundleName: string): Promise<string>
 Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -45,24 +43,3 @@ Obtains the module name corresponding to the dynamic icon based on the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700306](../errorcode-bundle.md#17700306-failed-to-obtain-the-dynamic-icon) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-
-try {
-  bundleManager.getDynamicIcon(bundleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getDynamicIcon successfully %s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getDynamicIcon failed. Cause: %{public}s', message);
-}
-```

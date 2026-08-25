@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSystemDataSize
 
 ```TypeScript
-function getSystemDataSize(): Promise<long>
+function getSystemDataSize(): Promise<number>
 ```
 
 Get the system data size.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -30,7 +28,7 @@ Get the system data size.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -40,16 +38,3 @@ Get the system data size.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13600018 |
-
-**Examples**
-
-```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getSystemDataSize().then((systemDataSize: number) => {
-  console.info("getSystemDataSize successfully: " + JSON.stringify(systemDataSize));
-}).catch((err: BusinessError) => {
-  console.error(`getSystemDataSize failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

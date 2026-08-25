@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAllowedKioskApps
@@ -15,8 +15,6 @@ function setAllowedKioskApps(admin: Want, appIdentifiers: Array<string>): void
 设置允许在Kiosk模式下运行的应用。Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将设备锁定在单个应用或者一组应用运行，同时对锁屏状态、状态栏、手势操作和关键功能进行控制，防止用户在设备上启动其它应用或执行其它操作。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_KIOSK
 
@@ -38,25 +36,3 @@ function setAllowedKioskApps(admin: Want, appIdentifiers: Array<string>): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let appIdentifiers: Array<string> = ['6917****3569'];
-  applicationManager.setAllowedKioskApps(wantTemp, appIdentifiers);
-  console.info('Succeeded in setting allowed kiosk apps.');
-} catch (err) {
-  console.error(`Failed to set allowed kiosk apps. Code is ${err.code}, message is ${err.message}`);
-}
-```

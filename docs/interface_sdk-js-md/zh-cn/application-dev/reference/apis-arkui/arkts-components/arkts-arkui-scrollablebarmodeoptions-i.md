@@ -4,8 +4,6 @@ Scrollable模式下的TabBar的布局样式对象。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ margin?: Dimension
 
 Scrollable模式下的TabBar的左右边距（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ Scrollable模式下不滚动时的页签排布方式，仅水平模式下有效�
 **类型：** [LayoutStyle](arkts-arkui-layoutstyle-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

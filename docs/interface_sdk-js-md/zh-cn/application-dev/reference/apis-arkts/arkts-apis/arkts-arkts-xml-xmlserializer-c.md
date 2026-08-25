@@ -4,14 +4,12 @@ XmlSerializer接口用于生成XML文件。该接口基于预分配的ArrayBuffe
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## addEmptyElement
@@ -27,8 +25,6 @@ addEmptyElement(name: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -38,30 +34,6 @@ addEmptyElement(name: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.addEmptyElement("d");
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <d/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.addEmptyElement("d");
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <d/>
-```
 
 ## constructor
 
@@ -76,8 +48,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -88,62 +58,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 | --- | --- | --- |
 | buffer | ArrayBuffer \| DataView | 是 |
 | encoding | string | 否 |
-
-**示例**
-
-```TypeScript
-let arrayBuffer = new ArrayBuffer(2048);
-let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml = '<title>Happy</title>'
-let textEncoder = new util.TextEncoder();
-let uint8Array = textEncoder.encodeInto(strXml);
-let xmlParser = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
 
 ## endElement
 
@@ -158,40 +72,9 @@ endElement(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
-```
 
 ## setAttributes
 
@@ -207,8 +90,6 @@ setAttributes(name: string, value: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -219,34 +100,6 @@ setAttributes(name: string, value: string): void
 | --- | --- | --- |
 | name | string | 是 |
 | value | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setAttributes("importance", "high");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high"/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setAttributes("importance", "high");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high"/>
-```
 
 ## setCDATA
 
@@ -261,8 +114,6 @@ setCDATA(text: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -272,19 +123,6 @@ setCDATA(text: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setCDATA('root SYSTEM');
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <![CDATA[root SYSTEM]]>
-```
 
 ## setComment
 
@@ -296,8 +134,6 @@ setComment(text: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -307,30 +143,6 @@ setComment(text: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setComment("Hello, World!");
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!--Hello, World!-->
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setComment("Hello, World!");
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!--Hello, World!-->
-```
 
 ## setDeclaration
 
@@ -342,36 +154,9 @@ setDeclaration(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setDeclaration();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <?xml version="1.0" encoding="utf-8"?>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setDeclaration();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <?xml version="1.0" encoding="utf-8"?>
-```
 
 ## setDocType
 
@@ -383,8 +168,6 @@ setDocType(text: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -394,30 +177,6 @@ setDocType(text: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
-```
 
 ## setNamespace
 
@@ -433,8 +192,6 @@ setNamespace(prefix: string, namespace: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -445,35 +202,6 @@ setNamespace(prefix: string, namespace: string): void
 | --- | --- | --- |
 | prefix | string | 是 |
 | namespace | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.setNamespace("h", "http://www.w3.org/TR/html4/");
-thatSer.startElement("note");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.setNamespace("h", "http://www.w3.org/TR/html4/");
-serializer.startElement("note");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
-```
 
 ## setText
 
@@ -488,8 +216,6 @@ setText(text: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -499,36 +225,6 @@ setText(text: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setAttributes("importance", "high");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high">Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setAttributes("importance", "high");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note importance="high">Happy</note>
-```
 
 ## startElement
 
@@ -544,8 +240,6 @@ startElement(name: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -555,32 +249,3 @@ startElement(name: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
-```

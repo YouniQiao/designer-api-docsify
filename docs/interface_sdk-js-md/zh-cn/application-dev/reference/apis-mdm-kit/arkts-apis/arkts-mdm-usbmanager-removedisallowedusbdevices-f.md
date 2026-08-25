@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedUsbDevices
@@ -14,11 +14,11 @@ function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType
 
 移除禁止使用的USB设备类型。  
 **使用场景**：  
-- 企业安全管理场景，需要解除对某些USB设备类型的禁用 - 设备管理员需要动态调整禁止使用的USB设备类型列表 - 当某些USB设备类型不再存在安全风险时，从禁用名单中移除
+- 企业安全管理场景，需要解除对某些USB设备类型的禁用  
+- 设备管理员需要动态调整禁止使用的USB设备类型列表  
+- 当某些USB设备类型不再存在安全风险时，从禁用名单中移除
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -41,28 +41,3 @@ function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let usbDevices: Array<usbManager.UsbDeviceType> = [{
-    baseClass: 8,
-    subClass: 0,
-    protocol: 0,
-    descriptor: usbManager.Descriptor.INTERFACE
-  }];
-  usbManager.removeDisallowedUsbDevices(wantTemp, usbDevices);
-  console.info(`Succeeded in removing disallowed USB devices.`);
-} catch (err) {
-  console.error(`Failed to remove disallowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

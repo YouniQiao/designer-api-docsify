@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCallWaiting
 
 ```TypeScript
-function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void
+function setCallWaiting(slotId: number, activate: boolean, callback: AsyncCallback<void>): void
 ```
 
 Specifies whether to enable the call waiting service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Specifies whether to enable the call waiting service. This API uses an asynchron
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | activate | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,42 +42,16 @@ Specifies whether to enable the call waiting service. This API uses an asynchron
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallWaiting(0, true, (err: BusinessError) => {
-    if (err) {
-        console.error(`setCallWaiting fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setCallWaiting success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallWaiting(0, true).then(() => {
-    console.info(`setCallWaiting success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallWaiting fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setCallWaiting
 
 ```TypeScript
-function setCallWaiting(slotId: int, activate: boolean): Promise<void>
+function setCallWaiting(slotId: number, activate: boolean): Promise<void>
 ```
 
 Specifies whether to enable the call waiting service. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ Specifies whether to enable the call waiting service. This API uses a promise to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | activate | boolean | Yes |
 
 **Return value:**
@@ -111,7 +83,3 @@ Specifies whether to enable the call waiting service. This API uses a promise to
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [setCallWaiting](#setcallwaiting)

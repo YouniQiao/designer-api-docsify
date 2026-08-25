@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { NavPushPathHelper } from '@kit.ArkUI';
+import { NavPushPathHelper } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

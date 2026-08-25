@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,15 +20,13 @@
 animation?: ScrollAnimationOptions | boolean
 ```
 
-动画配置。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。 </p>布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
+动画配置。<p>&lt;strong&gt;说明&lt;/strong&gt; 目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。 </p>布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
 
 **类型：** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
 **默认值：** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ canOverScroll?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -64,13 +58,11 @@ canOverScroll?: boolean
 xOffset: number | string
 ```
 
-水平滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为x轴时生效。 </p>
+水平滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; 不支持设置百分比。 无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 该参数仅在滚动轴为x轴时生效。 </p>
 
 **类型：** number \| string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,13 +76,11 @@ xOffset: number | string
 yOffset: number | string
 ```
 
-竖直滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不支持设置百分比。 <br>无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 <br>该参数仅在滚动轴为y轴时生效。 </p>
+竖直滚动偏移量。<p>&lt;strong&gt;说明&lt;/strong&gt; 不支持设置百分比。 无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。 该参数仅在滚动轴为y轴时生效。 </p>
 
 **类型：** number \| string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

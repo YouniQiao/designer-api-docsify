@@ -4,8 +4,6 @@ Frame interpolation status of blankless loading.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FRAME_INTERPOLATION_SUCCEEDED
@@ -17,8 +15,6 @@ FRAME_INTERPOLATION_SUCCEEDED = 0
 Frame interpolation succeeded.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Frame interpolation failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ FRAME_INTERPOLATION_REMOVED = 2
 The frame interpolation is removed.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

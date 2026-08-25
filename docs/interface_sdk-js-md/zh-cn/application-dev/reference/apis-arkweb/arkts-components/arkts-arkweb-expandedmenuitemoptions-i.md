@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 20
 
 **替代接口：** [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions)
@@ -27,11 +25,9 @@ action: (selectedText: {plainText: string}) => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 20
 
-**替代接口：** EditMenuOptions
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -51,15 +47,13 @@ content: ResourceStr
 
 显示内容。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 20
 
-**替代接口：** EditMenuOptions
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -73,15 +67,13 @@ startIcon?: ResourceStr
 
 显示图标。默认值为空，不显示图标。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 20
 
-**替代接口：** EditMenuOptions
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md) |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md) |
 
 ### 类
 
@@ -25,7 +18,6 @@ import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |
 | [LazyColumnLayoutInterface](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutinterface-i.md) |
 
 ### 常量

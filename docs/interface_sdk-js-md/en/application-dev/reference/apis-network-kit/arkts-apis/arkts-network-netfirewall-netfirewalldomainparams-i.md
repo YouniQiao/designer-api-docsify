@@ -4,14 +4,12 @@ Defines domain name parameters of a firewall rule. Currently, Chinese domain nam
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## domain
@@ -26,8 +24,6 @@ If **isWildcard** is set to **false**, the complete domain name, for example, "w
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## isWildcard
@@ -41,7 +37,5 @@ Whether to contain wildcards. The value **true** means to contain wildcards; and
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

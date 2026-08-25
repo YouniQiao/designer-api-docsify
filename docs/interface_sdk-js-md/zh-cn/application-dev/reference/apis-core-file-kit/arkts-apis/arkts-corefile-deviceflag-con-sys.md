@@ -10,8 +10,6 @@ const SUPPORTS_READ = 0b1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -29,8 +27,6 @@ const SUPPORTS_WRITE = 0b10
 此设备支持写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 

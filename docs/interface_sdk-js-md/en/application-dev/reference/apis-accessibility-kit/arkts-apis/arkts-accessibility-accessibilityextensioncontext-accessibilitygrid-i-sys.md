@@ -4,8 +4,6 @@ Accessibility grid information. For details, see the property currentItem in [Ac
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -13,16 +11,14 @@ Accessibility grid information. For details, see the property currentItem in [Ac
 ## columnIndex
 
 ```TypeScript
-columnIndex: int
+columnIndex: number
 ```
 
 Grid column index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -31,16 +27,14 @@ Grid column index.
 ## rowIndex
 
 ```TypeScript
-rowIndex: int
+rowIndex: number
 ```
 
 Grid row index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

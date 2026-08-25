@@ -4,8 +4,6 @@ Sets the construction options of **UnionEffectContainer**.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,8 +26,6 @@ Degree of union deformation of the descendant component. This parameter does not
 **Default:** 0
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityFocused
@@ -19,8 +17,6 @@ accessibilityFocused: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,8 +32,6 @@ accessibilityNextFocusId?: number
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityPreviousFocusId
@@ -51,8 +45,6 @@ accessibilityPreviousFocusId?: number
 **类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,8 +60,6 @@ accessibilityScrollable?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityText
@@ -83,8 +73,6 @@ accessibilityText: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,8 +88,6 @@ bundleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## checkable
@@ -115,8 +101,6 @@ checkable: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,8 +116,6 @@ checked: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## children
@@ -147,8 +129,6 @@ children: Array<AccessibilityElement>
 **类型：** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -164,8 +144,6 @@ clickable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## componentId
@@ -179,8 +157,6 @@ componentId: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -196,8 +172,6 @@ componentType: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## contents
@@ -211,8 +185,6 @@ contents: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -228,8 +200,6 @@ currentIndex: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## customComponentType
@@ -243,8 +213,6 @@ customComponentType?: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -260,8 +228,6 @@ description: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## editable
@@ -275,8 +241,6 @@ editable: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -292,8 +256,6 @@ endIndex: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## error
@@ -308,8 +270,6 @@ error: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## extraInfo
@@ -319,13 +279,21 @@ extraInfo?: string
 ```
 
 默认值为空。扩展属性，用于定义一些特定组件的属性，包含：  
-- CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。 - Row：Grid组件中聚焦item的行信息，表示该item在第几行。 - Column：Grid组件中聚焦的item的列，表示该item在第几列。 - ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。 - SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。 - ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。 - BindSheet：表示BindSheet半模态弹窗组件的展示高度状态，其中取值0表示大高度展示态，取值1表示中高度展示态，取值2表示小高度展示态。 - hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。 - direction：表示List组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。 - expandedState：表示List组件中ListItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。 - componentTypeDescription：组件类型详细信息，对componentType的补充描述。
+- CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。  
+- Row：Grid组件中聚焦item的行信息，表示该item在第几行。  
+- Column：Grid组件中聚焦的item的列，表示该item在第几列。  
+- ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。  
+- SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。  
+- ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。  
+- BindSheet：表示BindSheet半模态弹窗组件的展示高度状态，其中取值0表示大高度展示态，取值1表示中高度展示态，取值2表示小高度展示态。  
+- hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。  
+- direction：表示List组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。  
+- expandedState：表示List组件中ListItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。  
+- componentTypeDescription：组件类型详细信息，对componentType的补充描述。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -341,8 +309,6 @@ focusable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## hintText
@@ -356,8 +322,6 @@ hintText: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -373,8 +337,6 @@ hotArea: Rect
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## inputType
@@ -388,8 +350,6 @@ inputType: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -405,8 +365,6 @@ inspectorKey: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isActive
@@ -420,8 +378,6 @@ isActive: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -437,8 +393,6 @@ isEnable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isFocused
@@ -452,8 +406,6 @@ isFocused: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -469,8 +421,6 @@ isHint: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isPassword
@@ -484,8 +434,6 @@ isPassword: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -501,8 +449,6 @@ isVisible: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## itemCount
@@ -516,8 +462,6 @@ itemCount: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -533,8 +477,6 @@ lastContent: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## layer
@@ -548,8 +490,6 @@ layer: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -565,8 +505,6 @@ longClickable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## offset
@@ -580,8 +518,6 @@ offset: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -597,8 +533,6 @@ pageId: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## parent
@@ -612,8 +546,6 @@ parent: AccessibilityElement
 **类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -629,8 +561,6 @@ pluralLineSupported: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## rect
@@ -644,8 +574,6 @@ rect: Rect
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -661,8 +589,6 @@ resourceName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## rootElement
@@ -676,8 +602,6 @@ rootElement: AccessibilityElement
 **类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -693,8 +617,6 @@ screenRect: Rect
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## scrollable
@@ -708,8 +630,6 @@ scrollable: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -725,8 +645,6 @@ selected: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## startIndex
@@ -740,8 +658,6 @@ startIndex: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -757,8 +673,6 @@ text: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textLengthLimit
@@ -772,8 +686,6 @@ textLengthLimit: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -789,8 +701,6 @@ textMoveUnit: accessibility.TextMoveUnit
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textType
@@ -804,8 +714,6 @@ textType: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -821,8 +729,6 @@ triggerAction: accessibility.Action
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## type
@@ -836,8 +742,6 @@ type: WindowType
 **类型：** [WindowType](arkts-accessibility-windowtype-t.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -853,8 +757,6 @@ valueMax: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueMin
@@ -868,8 +770,6 @@ valueMin: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -885,8 +785,6 @@ valueNow: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## windowId
@@ -900,7 +798,5 @@ windowId: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

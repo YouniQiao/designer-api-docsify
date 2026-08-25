@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getFaceId
@@ -25,8 +23,6 @@ getFaceId(): Promise<string>
 获取人像相册或合影相册的封面人脸标识。使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -47,34 +43,3 @@ getFaceId(): Promise<string>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 14000011 |
-
-**示例**
-
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { common } from '@kit.AbilityKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getFaceIdDemo');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.equalTo("user_display_level", 1);
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult =
-      await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.SMART,
-        sendablePhotoAccessHelper.AlbumSubtype.PORTRAIT,
-        fetchOptions);
-    let album = await fetchResult?.getFirstObject();
-    let faceId = await album?.getFaceId();
-    console.info(`getFaceId successfully, faceId: ${faceId}`);
-    fetchResult.close();
-  } catch (err) {
-    console.error(`getFaceId failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```

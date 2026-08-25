@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -18,8 +16,6 @@ Called when the execution is completed.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -33,8 +29,6 @@ fail?: (data: string, code: number) => void
 Called when the messages fail to be sent.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -57,8 +51,6 @@ Called when the messages are sent successfully.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -74,8 +66,6 @@ Destination ability name, which is case sensitive.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -93,8 +83,6 @@ Name of the destination bundle where the ability has been located. The name is c
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -111,8 +99,6 @@ Destination device ID.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -128,8 +114,6 @@ Messages sent to the destination device. A maximum of 1 KB of data can be transm
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 

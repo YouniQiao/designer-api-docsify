@@ -4,8 +4,6 @@
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## LOCAL
@@ -17,8 +15,6 @@ LOCAL = 1
 文件只存在于本端设备。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ CLOUD = 2
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## LOCAL_AND_CLOUD
@@ -45,7 +39,5 @@ LOCAL_AND_CLOUD = 3
 文件存在于本端设备和云端。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

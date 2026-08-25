@@ -3,11 +3,12 @@
 提供在线检查新版本、下载升级包、安装升级包、管理升级策略、获取版本信息等系统在线更新功能的工具类。使用场景：设备厂商OTA升级客户端应用、在线系统升级、自动版本检查和升级管理。  
 **收益说明**：支持用户及时获取系统更新，提升升级效率和用户体验，降低用户操作成本，支持自动版本检查、后台下载、断点续传等功能。  
 **实现机制**：  
-- 版本检查：向升级包管理服务器查询新版本信息。 - 下载管理：支持网络类型选择、暂停/恢复下载、断点续传。 - 安装机制：升级包下载完成后解压并写入系统分区，准备重启应用。 - 状态管理：维护升级任务状态，支持查询任务信息、清除异常状态、终止升级。
+- 版本检查：向升级包管理服务器查询新版本信息。  
+- 下载管理：支持网络类型选择、暂停/恢复下载、断点续传。  
+- 安装机制：升级包下载完成后解压并写入系统分区，准备重启应用。  
+- 状态管理：维护升级任务状态，支持查询任务信息、清除异常状态、终止升级。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -16,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## checkNewVersion
@@ -31,8 +32,6 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 - 本方法依赖设备厂商部署的升级包管理服务器，需确保服务器正常部署且可访问。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -54,50 +53,6 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.checkNewVersion((err: BusinessError, result: update.CheckResult) => {
-  console.info(`checkNewVersion isExistNewVersion  ${result?.isExistNewVersion}`);
-});
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.checkNewVersion().then((result: update.CheckResult) => {
-    console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
-    // 版本摘要信息
-    console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
-    }).catch((err: BusinessError)=>{
-      console.error(`checkNewVersion promise error ${JSON.stringify(err)}`);
-    });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## checkNewVersion
 
 ```TypeScript
@@ -110,8 +65,6 @@ checkNewVersion(): Promise<CheckResult>
 - 本方法依赖设备厂商部署的升级包管理服务器，需确保服务器正常部署且可访问。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -133,10 +86,6 @@ checkNewVersion(): Promise<CheckResult>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [checkNewVersion](#checknewversion)
-
 ## clearError
 
 ```TypeScript
@@ -146,13 +95,14 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 清除异常状态。版本下载或安装失败时，删除已下载的升级包文件，清除错误状态记录。调用成功后，异常状态被清除，升级任务恢复到初始状态，可以重新开始完整的升级流程，从checkNewVersion检查版本步骤开始。使用 callback异步回调。使用场景：升级失败后清除异常、重新开始升级。  
 **原理说明**：该方法执行异常状态清除流程：验证clearOptions参数（确认status为UPGRADE_FAIL）→ 删除本地存储的升级包文件（释放存储空间）→ 清除系统服务中的错误状态记录 → 重置任务状态为初始状态 → 清除错误信 息缓存。清除完成后，升级服务恢复到可用状态，可以重新调用checkNewVersion开始新的升级流程。仅支持清除UPGRADE_FAIL状态，其他状态调用会返回错误。  
 **约束条件**：  
-- 当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态。 - 未调用clearError清除异常状态时，无法重新开始升级流程。 - 清除异常后，可以从checkNewVersion重新开始升级流程。  
+- 当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态。  
+- 未调用clearError清除异常状态时，无法重新开始升级流程。  
+- 清除异常后，可以从checkNewVersion重新开始升级流程。  
 **相关方法**：  
-- upgrade()：安装升级包（失败后需调用clearError）。 - checkNewVersion()：重新检查版本（清除异常后调用）。
+- upgrade()：安装升级包（失败后需调用clearError）。  
+- checkNewVersion()：重新检查版本（清除异常后调用）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -177,68 +127,6 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 清除选项
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.clearError(versionDigestInfo, clearOptions, (err: BusinessError) => {
-    console.info(`clearError error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 清除选项
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.clearError(versionDigestInfo, clearOptions).then(() => {
-    console.info(`clearError success`);
-  }).catch((err: BusinessError) => {
-    console.error(`clearError error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## clearError
 
 ```TypeScript
@@ -248,13 +136,14 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 清除异常状态。版本下载或安装失败时，删除已下载的升级包文件，清除错误状态记录。调用成功后，异常状态被清除，升级任务恢复到初始状态，可以重新开始完整的升级流程，从checkNewVersion检查版本步骤开始。使用Promise 异步回调。使用场景：升级失败后清除异常、重新开始升级。  
 **原理说明**：该方法执行异常状态清除流程：验证clearOptions参数（确认status为UPGRADE_FAIL）→ 删除本地存储的升级包文件（释放存储空间）→ 清除系统服务中的错误状态记录 → 重置任务状态为初始状态 → 清除错误信 息缓存。清除完成后，升级服务恢复到可用状态，可以重新调用checkNewVersion开始新的升级流程。仅支持清除UPGRADE_FAIL状态，其他状态调用会返回错误。  
 **约束关系**：  
-- 当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态。 - 未调用clearError清除异常状态时，无法重新开始升级流程。 - 清除异常后，可以从checkNewVersion重新开始升级流程。  
+- 当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态。  
+- 未调用clearError清除异常状态时，无法重新开始升级流程。  
+- 清除异常后，可以从checkNewVersion重新开始升级流程。  
 **相关方法**：  
-- upgrade()：安装升级包（失败后需调用clearError）。 - checkNewVersion()：重新检查版本（清除异常后调用）。
+- upgrade()：安装升级包（失败后需调用clearError）。  
+- checkNewVersion()：重新检查版本（清除异常后调用）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -283,10 +172,6 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
-
-**示例**
-
-参见 [clearError](#clearerror)
 
 ## download
 
@@ -301,13 +186,16 @@ download(
 下载升级包到设备本地存储。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。支持进度监听与暂停/恢复控制，帮助用户高效完成升级包获取，节省带宽与时间，提升升级成功率。使用callback异步回调。使用场景：OTA客户端在线升级、后台自动下载升级包、网络中断后断点续传。  
 **原理说明**：该方法从升级包管理服务器下载升级包到设备本地存储。支持断点续传机制：记录已下载的字节位置和网络连接状态，中断后可从断点继续下载。暂停下载时保存当前进度状态（已下载大小、文件路径等），恢复下载时读取进度状态继续接收。  
 **调用顺序说明**：  
-- 必须先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。 - 必须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时可调用本方法下载升级包。 - 如果isExistNewVersion为false，表示无新版本，调用本方法会返回“已是最新版本”。  
+- 必须先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。  
+- 必须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时可调用本方法下载升级包。  
+- 如果isExistNewVersion为false，表示无新版本，调用本方法会返回“已是最新版本”。  
 **相关方法**：  
-- checkNewVersion()：检查新版本（前置方法）。 - resumeDownload()：恢复下载（暂停后调用）。 - pauseDownload()：暂停下载（下载中调用）。 - upgrade()：安装升级包（下载完成后调用）。
+- checkNewVersion()：检查新版本（前置方法）。  
+- resumeDownload()：恢复下载（暂停后调用）。  
+- pauseDownload()：暂停下载（下载中调用）。  
+- upgrade()：安装升级包（下载完成后调用）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -332,70 +220,6 @@ download(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 下载选项
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-  order: update.Order.DOWNLOAD // 下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.download(versionDigestInfo, downloadOptions, (err: BusinessError) => {
-    console.info(`download error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 下载选项
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-   order: update.Order.DOWNLOAD // 下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.download(versionDigestInfo, downloadOptions).then(() => {
-    console.info(`download start`);
-  }).catch((err: BusinessError) => {
-    console.error(`download error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## download
 
 ```TypeScript
@@ -405,13 +229,16 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 下载升级包到设备本地存储。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。支持进度监听与暂停/恢复控制，帮助用户高效完成升级包获取，节省带宽与时间，提升升级成功率。使用Promise异步回调。使用场景：OTA客户端在线升级、后台自动下载升级包、网络中断后断点续传。  
 **原理说明**：该方法从升级包管理服务器下载升级包到设备本地存储。支持断点续传机制：记录已下载的字节位置和网络连接状态，中断后可从断点继续下载。暂停下载时保存当前进度状态（已下载大小、文件路径等），恢复下载时读取进度状态继续接收。  
 **调用顺序说明**：  
-- 必须先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。 - 只有当checkNewVersion返回isExistNewVersion为true时，才能调用本方法下载升级包。 - 如果isExistNewVersion为false，表示无新版本，调用本方法会返回"已是最新版本"。  
+- 必须先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。  
+- 只有当checkNewVersion返回isExistNewVersion为true时，才能调用本方法下载升级包。  
+- 如果isExistNewVersion为false，表示无新版本，调用本方法会返回"已是最新版本"。  
 **相关方法**：  
-- checkNewVersion()：检查新版本（前置方法）。 - resumeDownload()：恢复下载（暂停后调用）。 - pauseDownload()：暂停下载（下载中调用）。 - upgrade()：安装升级包（download方法下载完成后调用）。
+- checkNewVersion()：检查新版本（前置方法）。  
+- resumeDownload()：恢复下载（暂停后调用）。  
+- pauseDownload()：暂停下载（下载中调用）。  
+- upgrade()：安装升级包（download方法下载完成后调用）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -441,10 +268,6 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-参见 [download](#download)
-
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -457,11 +280,11 @@ getCurrentVersionDescription(
 获取当前版本描述信息。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。获取成功后，返回当前版本描述信息数组，包含版本说明内容，可用于版本信息展示、版本状态确认、版本对比分析等用途。使用callback异步回调。使用场景：需要向用户展示当前版本详情、确认当前系统版本状态、对比新旧版本差异。如设备信息界面展示更新说明、版本历史记录界面显示变更内容。若需获取技术性版本信息（如版本号、设备名等），请使用 getCurrentVersionInfo方法。  
 **原理说明**：该方法从升级包管理服务器获取当前版本各组件的描述信息。描述信息包含各组件的功能说明、版本特性等内容，支持CONTENT（文本形式）和URI（链接形式）两种返回方式。  
 **相关方法**：  
-- getCurrentVersionInfo()：获取当前版本信息(版本号、设备名等)，可独立调用。 - getCurrentVersionDescription()：获取当前版本描述信息，适合向用户展示。 - 两者可配合使用：先通过getCurrentVersionInfo获取基础信息，再通过本方法获取详细描述进行展示。
+- getCurrentVersionInfo()：获取当前版本信息(版本号、设备名等)，可独立调用。  
+- getCurrentVersionDescription()：获取当前版本描述信息，适合向用户展示。  
+- 两者可配合使用：先通过getCurrentVersionInfo获取基础信息，再通过本方法获取详细描述进行展示。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -485,59 +308,6 @@ getCurrentVersionDescription(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: "zh-cn" // 中文
-};
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getCurrentVersionDescription(descriptionOptions, (err, info) => {
-    console.info(`getCurrentVersionDescription info ${JSON.stringify(info)}`);
-    console.info(`getCurrentVersionDescription err ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: "zh-cn" // 中文
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
-    console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getCurrentVersionDescription promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -547,11 +317,11 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 获取当前版本描述信息。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。获取成功后，返回当前版本描述信息数组，包含版本说明内容，可用于版本信息展示、版本状态确认、版本对比分析等用途。使用Promise异步回调。使用场景：需要向用户展示当前版本详情、确认当前系统版本状态、对比新旧版本差异。如设备信息界面展示更新说明、版本历史记录界面显示变更内容。若需获取技术性版本信息（如版本号、设备名等），请使用 getCurrentVersionInfo方法。  
 **原理说明**：该方法从升级包管理服务器获取当前版本各组件的描述信息。获取流程包括：读取当前版本标识 → 向服务器发起描述信息请求（携带descriptionOptions参数指定格式和语言）→ 服务器根据版本标识查询描述内容 → 解析描述数 据（转换为目标格式和语言）→ 返回描述信息数组。描述信息包含各组件的功能说明、版本特性等内容，支持CONTENT（文本形式）和URI（链接形式）两种返回方式。  
 **相关方法**：  
-- getCurrentVersionInfo()：获取当前版本信息(版本号、设备名等)，可独立调用。 - getCurrentVersionDescription()：获取当前版本描述信息，适合向用户展示。 - 两者可配合使用：先通过getCurrentVersionInfo获取基础信息，再通过本方法获取详细描述进行展示。
+- getCurrentVersionInfo()：获取当前版本信息(版本号、设备名等)，可独立调用。  
+- getCurrentVersionDescription()：获取当前版本描述信息，适合向用户展示。  
+- 两者可配合使用：先通过getCurrentVersionInfo获取基础信息，再通过本方法获取详细描述进行展示。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -580,10 +350,6 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getCurrentVersionDescription](#getcurrentversiondescription)
-
 ## getCurrentVersionInfo
 
 ```TypeScript
@@ -594,8 +360,6 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 **原理说明**：该方法从设备本地系统文件和配置中读取当前版本信息，包括osVersion（系统版本号，从系统版本配置文件读取）、deviceName（设备名称，从设备属性配置读取）和versionComponents（各组件版本信息数组，从系 统分区元数据读取）。信息来源于设备本地，不依赖网络连接，调用后直接返回本地缓存的版本数据。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -617,53 +381,6 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getCurrentVersionInfo((err: BusinessError, info: update.CurrentVersionInfo) => {
-    console.info(`info osVersion = ${info?.osVersion}`);
-    console.info(`info deviceName = ${info?.deviceName}`);
-    console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
-    console.info(`info osVersion = ${info.osVersion}`);
-    console.info(`info deviceName = ${info.deviceName}`);
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getCurrentVersionInfo promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getCurrentVersionInfo
 
 ```TypeScript
@@ -674,8 +391,6 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 **原理说明**：该方法从设备本地系统文件和配置中读取当前版本信息，包括osVersion（系统版本号，从系统版本配置文件读取）、deviceName（设备名称，从设备属性配置读取）和versionComponents（各组件版本信息数组，从系 统分区元数据读取）。信息来源于设备本地，不依赖网络连接，调用后直接返回本地缓存的版本数据。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -697,10 +412,6 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getCurrentVersionInfo](#getcurrentversioninfo)
-
 ## getNewVersionDescription
 
 ```TypeScript
@@ -714,11 +425,10 @@ getNewVersionDescription(
 获取新版本描述信息。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。调用成功后，返回新版本描述信息数组，包含各组件的版本说明内容。使用callback异步回调。使用场景：向用户展示版本更新内容、确认是否升级。帮助用户了解新版本的功能改进和修复内容，辅助用户做出升级决策。  
 **原理说明**：该方法基于checkNewVersion返回的版本摘要信息，向升级包管理服务器查询各组件的版本描述内容。描述信息包含各组件的功能改进说明、修复内容、版本特性等。服务器返回描述信息数组，每个元素对应一个组件的描述内容（ ComponentDescription）。根据descriptionOptions参数指定的格式（STANDARD标准格式或SIMPLIFIED简易格式）和语言（如zh-cn中文），服务器返回相应格式和语言的描述文本。描述内 容可以是文本形式（DescriptionType.CONTENT）或链接形式（DescriptionType.URI），用于向用户展示版本更新内容。  
 **调用说明**：  
-- 需先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。 - versionDigestInfo参数从checkNewVersion返回结果中获取，须先调用checkNewVersion。
+- 需先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。  
+- versionDigestInfo参数从checkNewVersion返回结果中获取，须先调用checkNewVersion。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -743,74 +453,6 @@ getNewVersionDescription(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: "zh-cn" // 中文
-};
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getNewVersionDescription(versionDigestInfo, descriptionOptions, (err, info) => {
-    console.info(`getNewVersionDescription info ${JSON.stringify(info)}`);
-    console.info(`getNewVersionDescription err ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: "zh-cn" // 中文
-};
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getNewVersionDescription(versionDigestInfo, descriptionOptions)
-    .then((info: Array<update.ComponentDescription>)=> {
-    console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getNewVersionDescription promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getNewVersionDescription
 
 ```TypeScript
@@ -823,11 +465,10 @@ getNewVersionDescription(
 获取新版本描述信息（ComponentDescription）。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。调用成功后，返回新版本描述信息数组，包含各组件的版本说明内容。使用Promise异步回调。使用场景：向用户展示版本更新内容、确认是否升级。帮助用户了解新版本的功能改进和修复内容，辅助用户做出升级决策。  
 **原理说明**：该方法基于checkNewVersion返回的版本摘要信息，向升级包管理服务器查询各组件的版本描述内容。描述信息包含各组件的功能改进说明、修复内容、版本特性等。服务器返回描述信息数组，每个元素对应一个组件的描述内容（ ComponentDescription）。根据descriptionOptions参数指定的格式（STANDARD标准格式或SIMPLIFIED简易格式）和语言（如zh-cn中文），服务器返回相应格式和语言的描述文本。描述内 容可以是文本形式（DescriptionType.CONTENT）或链接形式（DescriptionType.URI），用于向用户展示版本更新内容。  
 **调用说明**：  
-- 需先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。 - versionDigestInfo参数从checkNewVersion返回结果中获取。
+- 需先调用checkNewVersion检查是否有新版本，并获取版本摘要信息。  
+- versionDigestInfo参数从checkNewVersion返回结果中获取。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -857,10 +498,6 @@ getNewVersionDescription(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getNewVersionDescription](#getnewversiondescription)
-
 ## getNewVersionInfo
 
 ```TypeScript
@@ -870,15 +507,18 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 获取新版本信息，向升级包管理服务器查询新版本的详细信息，包括版本号、版本摘要、版本组件等。调用成功后，返回新版本信息对象，包含版本摘要和完整的版本组件列表，可用于向用户展示完整版本信息。本方法为在线升级功能，依赖设备厂商部署的 升级包管理服务器。使用callback异步回调。使用场景：需要获取新版本技术性信息（如版本号、升级包大小、组件详情）用于版本管理、诊断或技术分析。帮助开发者全面了解新版本技术细节。若需向用户展示可读的版本说明内容，建议使用getNewVersionDescription方法。  
 **原理说明**：该方法基于checkNewVersion返回的版本摘要信息，向升级包管理服务器查询新版本的完整详情。服务器返回NewVersionInfo对象，包含versionDigestInfo（版本摘要，用于后续下载和升级操作的版本标识 ）和versionComponents数组（各组件的版本号、大小、类型等详细信息）。必须在checkNewVersion返回isExistNewVersion为true后调用，否则返回空数据。  
 **调用顺序**：  
-- 必须先调用checkNewVersion检查是否有新版本。 - 仅当checkNewVersion返回isExistNewVersion为true时可调用。  
+- 必须先调用checkNewVersion检查是否有新版本。  
+- 仅当checkNewVersion返回isExistNewVersion为true时可调用。  
 **相关方法**：  
-- checkNewVersion()：检查是否有新版本（前置方法）。 - getNewVersionInfo()：获取新版本技术信息(版本号、组件详情)，适合版本管理和诊断场景。 - getNewVersionDescription()：获取新版本描述文本(版本说明内容)，适合向用户展示更新内容的场景。 - download()：下载升级包（后续方法）。  
+- checkNewVersion()：检查是否有新版本（前置方法）。  
+- getNewVersionInfo()：获取新版本技术信息(版本号、组件详情)，适合版本管理和诊断场景。  
+- getNewVersionDescription()：获取新版本描述文本(版本说明内容)，适合向用户展示更新内容的场景。  
+- download()：下载升级包（后续方法）。  
 **约束和限制**：  
-- 本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。 - 必须先调用checkNewVersion检查是否有新版本，且仅当isExistNewVersion为true时调用。
+- 本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。  
+- 必须先调用checkNewVersion检查是否有新版本，且仅当isExistNewVersion为true时调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -900,50 +540,6 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getNewVersionInfo((err: BusinessError, info: update.NewVersionInfo) => {
-    console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
-    console.info(`info innerVersion = ${info?.versionComponents[0].innerVersion}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getNewVersionInfo promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getNewVersionInfo
 
 ```TypeScript
@@ -953,15 +549,18 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 获取新版本信息，向升级包管理服务器查询新版本的详细信息，包括版本号、版本摘要、版本组件等。调用成功后，返回新版本信息对象，包含版本摘要和完整的版本组件列表，可用于向用户展示完整版本信息。本方法为在线升级功能，依赖设备厂商部署的 升级包管理服务器。使用Promise异步回调。使用场景：需要获取新版本技术性信息（如版本号、升级包大小、组件详情）用于版本管理、诊断或技术分析。帮助开发者全面了解新版本技术细节。若需向用户展示可读的版本说明内容，建议使用getNewVersionDescription方法。  
 **原理说明**：该方法基于checkNewVersion返回的版本摘要信息，向升级包管理服务器查询新版本的完整详情。服务器返回NewVersionInfo对象，包含versionDigestInfo（版本摘要，用于后续下载和升级操作的版本标识 ）和versionComponents数组（各组件的版本号、大小、类型等详细信息）。必须在checkNewVersion返回isExistNewVersion为true后调用，否则返回空数据。  
 **调用顺序**：  
-- 必须先调用checkNewVersion检查是否有新版本。 - 只有当checkNewVersion返回isExistNewVersion为true时，才能调用此方法获取新版本详细信息。  
+- 必须先调用checkNewVersion检查是否有新版本。  
+- 只有当checkNewVersion返回isExistNewVersion为true时，才能调用此方法获取新版本详细信息。  
 **相关方法**：  
-- checkNewVersion()：检查是否有新版本（前置方法）。 - getNewVersionInfo()：获取新版本技术信息(版本号、组件详情)，适合版本管理和诊断场景。 - getNewVersionDescription()：获取新版本描述文本(版本说明内容)，适合向用户展示更新内容的场景。 - download()：下载升级包（后续方法）。  
+- checkNewVersion()：检查是否有新版本（前置方法）。  
+- getNewVersionInfo()：获取新版本技术信息(版本号、组件详情)，适合版本管理和诊断场景。  
+- getNewVersionDescription()：获取新版本描述文本(版本说明内容)，适合向用户展示更新内容的场景。  
+- download()：下载升级包（后续方法）。  
 **约束和限制**：  
-- 本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。 - 必须先调用checkNewVersion检查是否有新版本，且仅当isExistNewVersion为true时调用。
+- 本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。  
+- 必须先调用checkNewVersion检查是否有新版本，且仅当isExistNewVersion为true时调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -983,10 +582,6 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getNewVersionInfo](#getnewversioninfo)
-
 ## getTaskInfo
 
 ```TypeScript
@@ -996,13 +591,16 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 获取升级任务信息。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。获取成功后，返回升级任务信息对象，包含任务是否存在、任务状态、进度等信息。帮助开发者实时掌握升级进度、及时发现异常状态、优化升级策略，提升升级流程的可 控性和成功率。使用callback异步回调。使用场景：实时掌握升级进度、监控任务状态、及时发现异常。  
 **原理说明**：该方法从系统升级服务查询当前升级任务的状态信息。系统维护一个升级任务状态记录，包含existTask（是否存在任务）、taskBody（任务详情，包括版本摘要、当前状态、进度百分比、安装模式等）。任务状态在下载、安装过程中实时 更新，通过该方法可查询最新状态。状态信息存储在系统服务进程的内存中，每次调用从服务进程实时查询返回。  
 **相关方法**：  
-- download()：下载升级包(可在下载过程中调用getTaskInfo查询下载进度和状态)。 - upgrade()：安装升级包(可在安装过程中调用getTaskInfo查询安装进度和状态)。 - pauseDownload()：暂停下载(暂停后可调用getTaskInfo查询暂停状态)。 - terminateUpgrade()：终止升级(终止后可调用getTaskInfo查询任务取消状态)。  
+- download()：下载升级包(可在下载过程中调用getTaskInfo查询下载进度和状态)。  
+- upgrade()：安装升级包(可在安装过程中调用getTaskInfo查询安装进度和状态)。  
+- pauseDownload()：暂停下载(暂停后可调用getTaskInfo查询暂停状态)。  
+- terminateUpgrade()：终止升级(终止后可调用getTaskInfo查询任务取消状态)。  
 **调用时机**：  
-- 推荐在调用download或upgrade开始升级任务后，按需调用getTaskInfo查询任务进度。 - 在升级流程中可通过事件监听(on方法)实时获取进度，或通过getTaskInfo主动查询当前状态。 - 在异常或中断场景下可调用getTaskInfo确认任务状态后决定后续操作。
+- 推荐在调用download或upgrade开始升级任务后，按需调用getTaskInfo查询任务进度。  
+- 在升级流程中可通过事件监听(on方法)实时获取进度，或通过getTaskInfo主动查询当前状态。  
+- 在异常或中断场景下可调用getTaskInfo确认任务状态后决定后续操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1024,50 +622,6 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getTaskInfo((err: BusinessError, info: update.TaskInfo) => {
-    console.info(`getTaskInfo isexistTask= ${info?.existTask}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getTaskInfo().then((info: update.TaskInfo) => {
-    console.info(`getTaskInfo isexistTask= ${info.existTask}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getTaskInfo promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getTaskInfo
 
 ```TypeScript
@@ -1077,13 +631,16 @@ getTaskInfo(): Promise<TaskInfo>
 获取升级任务信息。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。获取成功后，返回升级任务信息对象，包含任务是否存在、任务状态、进度等信息。帮助开发者实时掌握升级进度、及时发现异常状态、优化升级策略，提升升级流程的可 控性和成功率。使用Promise异步回调。使用场景：实时掌握升级进度、监控任务状态、及时发现异常。  
 **原理说明**：该方法从系统升级服务查询当前升级任务的状态信息。系统维护一个升级任务状态记录，包含existTask（是否存在任务）、taskBody（任务详情，包括版本摘要、当前状态、进度百分比、安装模式等）。任务状态在下载、安装过程中实时 更新，通过该方法可查询最新状态。状态信息存储在系统服务进程的内存中，每次调用从服务进程实时查询返回。  
 **相关方法**：  
-- download()：下载升级包(可在下载过程中调用getTaskInfo查询下载进度和状态)。 - upgrade()：安装升级包(可在安装过程中调用getTaskInfo查询安装进度和状态)。 - pauseDownload()：暂停下载(暂停后可调用getTaskInfo查询暂停状态)。 - terminateUpgrade()：终止升级(终止后可调用getTaskInfo查询任务取消状态)。  
+- download()：下载升级包(可在下载过程中调用getTaskInfo查询下载进度和状态)。  
+- upgrade()：安装升级包(可在安装过程中调用getTaskInfo查询安装进度和状态)。  
+- pauseDownload()：暂停下载(暂停后可调用getTaskInfo查询暂停状态)。  
+- terminateUpgrade()：终止升级(终止后可调用getTaskInfo查询任务取消状态)。  
 **调用时机**：  
-- 推荐在调用download或upgrade开始升级任务后，定期调用getTaskInfo查询任务进度。 - 在升级流程中可通过事件监听(on方法)实时获取进度，或通过getTaskInfo主动查询当前状态。 - 在异常或中断场景下可调用getTaskInfo确认任务状态后决定后续操作。
+- 推荐在调用download或upgrade开始升级任务后，定期调用getTaskInfo查询任务进度。  
+- 在升级流程中可通过事件监听(on方法)实时获取进度，或通过getTaskInfo主动查询当前状态。  
+- 在异常或中断场景下可调用getTaskInfo确认任务状态后决定后续操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1105,10 +662,6 @@ getTaskInfo(): Promise<TaskInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getTaskInfo](#gettaskinfo)
-
 ## getUpgradePolicy
 
 ```TypeScript
@@ -1119,8 +672,6 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 **原理说明**：该方法从系统升级服务查询升级策略配置信息。策略配置存储在系统配置文件中，包括downloadStrategy（自动下载开关）、autoUpgradeStrategy（自动升级开关）和autoUpgradePeriods（升级时 间段列表）。调用该方法时，系统服务读取配置文件，解析策略参数并封装成UpgradePolicy对象返回。策略配置由setUpgradePolicy方法设置，系统维护策略的持久化存储，重启后策略仍然有效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1142,50 +693,6 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getUpgradePolicy((err: BusinessError, policy: update.UpgradePolicy) => {
-    console.info(`policy downloadStrategy = ${policy?.downloadStrategy}`);
-    console.info(`policy autoUpgradeStrategy = ${policy?.autoUpgradeStrategy}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
-    console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
-    console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
-  }).catch((err: BusinessError)  => {
-    console.error(`getUpgradePolicy promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## getUpgradePolicy
 
 ```TypeScript
@@ -1196,8 +703,6 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 **原理说明**：该方法从系统升级服务查询升级策略配置信息。策略配置存储在系统配置文件中，包括downloadStrategy（自动下载开关）、autoUpgradeStrategy（自动升级开关）和autoUpgradePeriods（升级时 间段列表）。调用该方法时，系统服务读取配置文件，解析策略参数并封装成UpgradePolicy对象返回。策略配置由setUpgradePolicy方法设置，系统维护策略的持久化存储，重启后策略仍然有效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1219,10 +724,6 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [getUpgradePolicy](#getupgradepolicy)
-
 ## off
 
 ```TypeScript
@@ -1232,11 +733,11 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 取消注册事件监听。调用成功后，对应类型的升级事件监听被取消，不再接收该类型的事件通知，避免内存泄漏。使用场景：升级流程结束、不再需要监听升级事件。必须先通过on()注册监听后才能使用此参数取消监听。  
 **原理说明**：该方法执行事件监听取消流程：验证eventClassifyInfo参数（确认事件类型）→ 从升级服务的事件监听列表中移除对应的回调函数（若传入taskCallback则移除特定回调，否则移除该事件类型的所有监听）→ 释放监听占 用的系统资源 → 断开事件传递通道。取消监听后，升级服务不再向该应用发送该类型的事件通知，应用进程不再接收相关事件回调，释放监听占用的内存和IPC通道资源。  
 **配对调用说明**：  
-- 与on()配对使用，用于取消已注册的事件监听。 - 必须在已通过on()注册监听后，才能调用本方法取消监听。 - 建议在升级流程结束后或页面销毁时调用，及时释放资源。
+- 与on()配对使用，用于取消已注册的事件监听。  
+- 必须在已通过on()注册监听后，才能调用本方法取消监听。  
+- 建议在升级流程结束后或页面销毁时调用，及时释放资源。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1255,48 +756,6 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
-  extraInfo: ""
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`updater off ${JSON.stringify(eventInfo)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
-  extraInfo: ""
-};
-
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  let localUpdater = update.getLocalUpdater();
-  localUpdater.off(eventClassifyInfo, onTaskUpdate);
-} catch(error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -1306,15 +765,16 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 注册事件监听，用于实时监控升级状态。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。注册成功后监听对应类型的升级事件，事件发生时通过回调函数传递事件信息，包括事件ID、任务状态、进度等。使用场景：OTA升级客户端显示升级进度条和百分比、设备管理系统批量设备升级状态监控、后台自动升级任务进度跟踪。  
 **原理说明**：该方法通过系统事件机制注册升级事件监听：构造eventClassifyInfo指定事件类型（如TASK）→ 将回调函数注册到升级服务的事件监听列表 → 升级服务在状态变化时触发事件（如下载开始、下载进度更新、升级成功等）→ 事 件通过IPC通道传递到应用进程 → 调用注册的回调函数传递EventInfo对象。事件监听采用异步回调机制，不影响升级流程执行，建议在升级流程结束后调用off取消监听避免内存泄漏。  
 **配对调用**：  
-- 调用on()注册监听后，必须在不再需要监听时调用off()取消监听。 - 未调用off()取消监听会导致内存泄漏，影响系统性能。 - 建议在升级流程结束后或页面销毁时调用off()。  
+- 调用on()注册监听后，必须在不再需要监听时调用off()取消监听。  
+- 未调用off()取消监听会导致内存泄漏，影响系统性能。  
+- 建议在升级流程结束后或页面销毁时调用off()。  
 **使用建议**：  
-- 在调用download、upgrade等长时间操作前注册监听。 - 在操作完成或收到最终事件（如EVENT_DOWNLOAD_SUCCESS、EVENT_UPGRADE_SUCCESS）后取消监听。  
+- 在调用download、upgrade等长时间操作前注册监听。  
+- 在操作完成或收到最终事件（如EVENT_DOWNLOAD_SUCCESS、EVENT_UPGRADE_SUCCESS）后取消监听。  
 **相关方法**：  
 - off()：取消事件监听（配对方法）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1333,48 +793,6 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
-  extraInfo: ""
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-    console.info(`updater on ${JSON.stringify(eventInfo)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
-  extraInfo: ""
-};
-
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-try {
-  let localUpdater = update.getLocalUpdater();
-  localUpdater.on(eventClassifyInfo, onTaskUpdate);
-} catch(error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
-
 ## pauseDownload
 
 ```TypeScript
@@ -1390,11 +808,11 @@ pauseDownload(
 **配对调用说明**：  
 - 与resumeDownload()成对使用，用于控制下载流程的暂停和恢复。暂停下载后可调用resumeDownload()恢复下载，完成暂停和恢复的流程控制。  
 **状态转换说明**：  
-- 暂停后可调用resumeDownload()恢复下载。 - 暂停后可通过getTaskInfo()查询当前任务状态。 - 暂停后不能直接调用upgrade()安装，必须先恢复下载并完成后再安装。
+- 暂停后可调用resumeDownload()恢复下载。  
+- 暂停后可通过getTaskInfo()查询当前任务状态。  
+- 暂停后不能直接调用upgrade()安装，必须先恢复下载并完成后再安装。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1419,68 +837,6 @@ pauseDownload(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 暂停下载选项
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // 允许自动恢复下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.pauseDownload(versionDigestInfo, pauseDownloadOptions, (err: BusinessError) => {
-    console.info(`pauseDownload error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 暂停下载选项
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // 允许自动恢复下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
-    console.info(`pauseDownload`);
-  }).catch((err: BusinessError)  => {
-    console.error(`pauseDownload error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## pauseDownload
 
 ```TypeScript
@@ -1492,11 +848,11 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 **配对调用说明**：  
 - 与resumeDownload()成对使用，用于控制下载流程的暂停和恢复。暂停下载后可调用resumeDownload()恢复下载，完成暂停和恢复的流程控制。  
 **状态转换说明**：  
-- 暂停后可调用resumeDownload()恢复下载。 - 暂停后可通过getTaskInfo()查询当前任务状态。 - 暂停后不能直接调用upgrade()安装，必须先恢复下载完成后再安装。
+- 暂停后可调用resumeDownload()恢复下载。  
+- 暂停后可通过getTaskInfo()查询当前任务状态。  
+- 暂停后不能直接调用upgrade()安装，必须先恢复下载完成后再安装。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1525,10 +881,6 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
-
-**示例**
-
-参见 [pauseDownload](#pausedownload)
 
 ## resumeDownload
 
@@ -1543,11 +895,10 @@ resumeDownload(
 恢复已暂停的升级包下载任务，避免重复下载已完成的进度部分。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。使用callback异步回调。使用场景：网络中断后断点续传、用户暂停后主动恢复、后台下载任务恢复。  
 **原理说明**：该方法从暂停点恢复下载流程：读取暂停时保存的进度状态（已下载字节位置、文件路径、网络连接信息）→ 根据resumeDownloadOptions选择网络类型 → 向服务器发起断点续传请求（携带已下载位置信息）→ 服务器返回剩余 数据 → 从断点位置继续写入本地文件 → 实时更新进度。恢复下载时系统会验证已下载部分的完整性，确保数据一致性后再继续接收新数据。  
 **配对调用说明**：  
-- 与pauseDownload()成对使用，用于控制下载流程的暂停和恢复。 - 必须在调用pauseDownload()暂停下载后才能调用此方法恢复下载。
+- 与pauseDownload()成对使用，用于控制下载流程的暂停和恢复。  
+- 必须在调用pauseDownload()暂停下载后才能调用此方法恢复下载。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1572,68 +923,6 @@ resumeDownload(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo : update.VersionDigestInfo= {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 恢复下载选项
-const resumeDownloadOptions : update.ResumeDownloadOptions= {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.resumeDownload(versionDigestInfo, resumeDownloadOptions, (err: BusinessError) => {
-    console.info(`resumeDownload error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 恢复下载选项
-const resumeDownloadOptions: update.ResumeDownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
-    console.info(`resumeDownload start`);
-  }).catch((err: BusinessError) => {
-    console.error(`resumeDownload error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## resumeDownload
 
 ```TypeScript
@@ -1643,11 +932,10 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 恢复已暂停的升级包下载任务，避免重复下载已完成的进度部分。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。使用Promise异步回调。使用场景：网络中断后断点续传、用户暂停后主动恢复、后台下载任务恢复。  
 **原理说明**：该方法从暂停点恢复下载流程：读取暂停时保存的进度状态（已下载字节位置、文件路径、网络连接信息）→ 根据resumeDownloadOptions选择网络类型 → 向服务器发起断点续传请求（携带已下载位置信息）→ 服务器返回剩余 数据 → 从断点位置继续写入本地文件 → 实时更新进度。恢复下载时系统会验证已下载部分的完整性，确保数据一致性后再继续接收新数据。  
 **配对调用说明**：  
-- 与pauseDownload()成对使用，用于控制下载流程的暂停和恢复。 - 必须在调用pauseDownload()暂停下载后才能调用此方法恢复下载。
+- 与pauseDownload()成对使用，用于控制下载流程的暂停和恢复。  
+- 必须在调用pauseDownload()暂停下载后才能调用此方法恢复下载。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1676,10 +964,6 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
-
-**示例**
-
-参见 [resumeDownload](#resumedownload)
 
 ## setUpgradePolicy
 
@@ -1692,8 +976,6 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -1714,60 +996,6 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const policy: update.UpgradePolicy = {
-  downloadStrategy: false,
-  autoUpgradeStrategy: false,
-  autoUpgradePeriods: [{ start: 120, end: 240 }] // 自动升级时间段，用分钟表示
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.setUpgradePolicy(policy, (err: BusinessError) => {
-    console.info(`setUpgradePolicy result: ${err}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const policy: update.UpgradePolicy = {
-  downloadStrategy: false,
-  autoUpgradeStrategy: false,
-  autoUpgradePeriods: [ { start: 120, end: 240 } ] // 自动升级时间段，用分钟表示
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.setUpgradePolicy(policy).then(() => {
-    console.info(`setUpgradePolicy success`);
-  }).catch((err: BusinessError) => {
-    console.error(`setUpgradePolicy promise error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
 
 ## setUpgradePolicy
 
@@ -1780,8 +1008,6 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -1808,10 +1034,6 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-参见 [setUpgradePolicy](#setupgradepolicy)
-
 ## terminateUpgrade
 
 ```TypeScript
@@ -1821,13 +1043,16 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 终止当前升级任务，取消正在进行的安装操作。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。调用成功后，任务状态变更为已取消。使用callback异步回调。使用场景：用户主动取消升级或紧急停止升级。帮助用户灵活控制升级流程，避免用户不需要的升级或在紧急情况下停止升级。  
 **原理说明**：该方法执行升级终止流程：检测当前任务状态（仅下载或安装中可终止）→ 向升级服务发送终止指令 → 中断当前操作（停止下载或停止安装写入）→ 变更任务状态为已取消 → 清理临时资源（释放网络连接、清理临时文件）→ 通知升级服务更新 状态。终止后系统保留已下载的部分数据，建议调用clearError清除异常状态后再重新开始升级流程。  
 **状态转换说明**：  
-- 仅在下载或安装过程中可以调用此方法终止升级。 - 终止后任务状态变更为已取消。 - 终止后可通过getTaskInfo查询当前任务状态。 - 终止后如需重新升级，建议调用clearError清除异常状态后重新开始。  
+- 仅在下载或安装过程中可以调用此方法终止升级。  
+- 终止后任务状态变更为已取消。  
+- 终止后可通过getTaskInfo查询当前任务状态。  
+- 终止后如需重新升级，建议调用clearError清除异常状态后重新开始。  
 **相关方法**：  
-- download()/upgrade()：可被终止的方法。 - getTaskInfo()：查询任务状态。 - clearError()：清除异常状态（终止后如需重新升级）。
+- download()/upgrade()：可被终止的方法。  
+- getTaskInfo()：查询任务状态。  
+- clearError()：清除异常状态（终止后如需重新升级）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1849,48 +1074,6 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.terminateUpgrade((err: BusinessError) => {
-    console.info(`terminateUpgrade error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.terminateUpgrade().then(() => {
-    console.info(`terminateUpgrade success`);
-  }).catch((err: BusinessError) => {
-    console.error(`terminateUpgrade error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## terminateUpgrade
 
 ```TypeScript
@@ -1900,13 +1083,16 @@ terminateUpgrade(): Promise<void>
 终止当前升级任务，取消正在进行的安装操作。本方法为在线升级功能，依赖设备厂商部署的升级包管理服务器。调用成功后，任务状态变更为已取消。使用Promise异步回调。使用场景：用户主动取消升级或紧急停止升级。帮助用户灵活控制升级流程，避免用户不需要的升级或在紧急情况下停止升级。  
 **原理说明**：该方法执行升级终止流程：检测当前任务状态（仅下载或安装中可终止）→ 向升级服务发送终止指令 → 中断当前操作（停止下载或停止安装写入）→ 变更任务状态为已取消 → 清理临时资源（释放网络连接、清理临时文件）→ 通知升级服务更新 状态。终止后系统保留已下载的部分数据，建议调用clearError清除异常状态后再重新开始升级流程。  
 **状态转换说明**：  
-- 仅在下载或安装过程中可以调用此方法终止升级。 - 终止后任务状态变更为已取消。 - 终止后可通过getTaskInfo查询当前任务状态。 - 终止后如需重新升级，建议调用clearError清除异常状态后重新开始。  
+- 仅在下载或安装过程中可以调用此方法终止升级。  
+- 终止后任务状态变更为已取消。  
+- 终止后可通过getTaskInfo查询当前任务状态。  
+- 终止后如需重新升级，建议调用clearError清除异常状态后重新开始。  
 **相关方法**：  
-- download()/upgrade()：可被终止的方法。 - getTaskInfo()：查询任务状态。 - clearError()：清除异常状态（终止后如需重新升级）。
+- download()/upgrade()：可被终止的方法。  
+- getTaskInfo()：查询任务状态。  
+- clearError()：清除异常状态（终止后如需重新升级）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1927,10 +1113,6 @@ terminateUpgrade(): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 11500104 |
-
-**示例**
-
-参见 [terminateUpgrade](#terminateupgrade)
 
 ## upgrade
 
@@ -1944,12 +1126,12 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 **调用顺序**：  
 - 必须先调用checkNewVersion检查是否有新版本，调用download下载升级包并完成下载后，才能调用本方法执行升级安装操作。  
 **状态转换说明**：  
-- 应在下载完成后调用此方法安装升级包。 - 安装过程中可通过terminateUpgrade()终止升级。 - 安装完成后设备将重启以应用新版本。  
+- 应在下载完成后调用此方法安装升级包。  
+- 安装过程中可通过terminateUpgrade()终止升级。  
+- 安装完成后设备将重启以应用新版本。  
 **失败处理**：当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态后才能重新开始升级流程。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -1974,68 +1156,6 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 安装选项
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // 安装指令
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.upgrade(versionDigestInfo, upgradeOptions, (err: BusinessError) => {
-    console.info(`upgrade error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // 检测结果中的版本摘要信息
-};
-
-// 安装选项
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // 安装指令
-};
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-  updater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
-    console.info(`upgrade start`);
-  }).catch((err: BusinessError) => {
-    console.error(`upgrade error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 ## upgrade
 
 ```TypeScript
@@ -2047,12 +1167,12 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 **依赖说明**：本方法为在线升级流程的安装阶段，实际安装操作为本地操作（安装已下载的升级包），不需要网络连接。但该方法通常在download方法下载完成后调用，整个在线升级流程依赖设备厂商部署的升级包管理服务器。  
 **调用顺序**：必须先调用checkNewVersion检查是否有新版本，调用download下载升级包并完成下载后，才能调用本方法执行升级安装操作。  
 **状态转换说明**：  
-- 应在下载完成后调用此方法安装升级包。 - 安装过程中可通过terminateUpgrade()终止升级。 - 安装完成后设备将重启以应用新版本。  
+- 应在下载完成后调用此方法安装升级包。  
+- 安装过程中可通过terminateUpgrade()终止升级。  
+- 安装完成后设备将重启以应用新版本。  
 **失败处理**：当upgrade方法执行失败（状态为UPGRADE_FAIL）时，必须调用clearError清除异常状态后才能重新开始升级流程。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -2081,7 +1201,3 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 11500104 |
-
-**示例**
-
-参见 [upgrade](#upgrade)

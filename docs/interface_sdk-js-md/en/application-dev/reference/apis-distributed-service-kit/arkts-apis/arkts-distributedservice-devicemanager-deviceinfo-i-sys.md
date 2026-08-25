@@ -4,8 +4,6 @@ Defines device information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -17,7 +15,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## authForm
@@ -31,8 +29,6 @@ Authentication type of the device.
 **Type:** [AuthForm](arkts-distributedservice-devicemanager-authform-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -51,8 +47,6 @@ Unique identifier of the device.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -74,8 +68,6 @@ Device name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicename)
@@ -95,8 +87,6 @@ Device type.
 **Type:** DeviceType
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -118,8 +108,6 @@ Network ID of the device.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkid)
@@ -139,8 +127,6 @@ Distance between the discovered device and the device that initiates device disc
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 

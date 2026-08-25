@@ -4,45 +4,39 @@ Defines OAuth authenticator information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## iconId
 
 ```TypeScript
-iconId: long
+iconId: number
 ```
 
 ID of the authenticator icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 ## labelId
 
 ```TypeScript
-labelId: long
+labelId: number
 ```
 
 ID of the authenticator label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -52,12 +46,10 @@ ID of the authenticator label.
 owner: string
 ```
 
-Owner of the authenticator. The value is the Bundle name of the application.
+Owner of the authenticator. The value is the bundle name of the application.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## decodeImage
@@ -15,8 +15,6 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 解析图片中携带的信息。通过对应的解码算法从图片中提取嵌入的metadata信息。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 

@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ checked(value: boolean)
 设置单选框的选中状态。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ checked(isChecked: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -63,7 +57,7 @@ checked(isChecked: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isChecked | Optional & lt;boolean & gt; | 是 |
+| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## contentModifier
 
@@ -75,8 +69,6 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -87,7 +79,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 |
 
 ## contentModifier
 
@@ -99,8 +91,6 @@ contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -111,7 +101,7 @@ contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 |
 
 ## onChange
 
@@ -122,8 +112,6 @@ onChange(callback: (isChecked: boolean) => void)
 单选框选中状态改变时触发的回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -147,8 +135,6 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -161,7 +147,7 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 |
 
 ## radioStyle
 
@@ -172,8 +158,6 @@ radioStyle(value?: RadioStyle)
 设置单选框选中状态和非选中状态的样式。从API version 10开始，该接口支持在ArkTS组件中使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Wi-Fi connection information.@interface WifiLinkedInfo
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
@@ -15,7 +13,7 @@ Wi-Fi connection information.@interface WifiLinkedInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -29,8 +27,6 @@ The frequency band of a Wi-Fi access point.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ The BSSID of the Wi-Fi hotspot
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bssid](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#bssid)
@@ -69,8 +63,6 @@ The state of this Wi-Fi connection.
 **Type:** ConnState
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ The frequency of a Wi-Fi access point.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [frequency](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#frequency)
@@ -109,8 +99,6 @@ The IP address of this Wi-Fi connection.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Whether the SSID of the access point (AP) of this Wi-Fi connection is hidden.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isHidden](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#ishidden)
@@ -149,8 +135,6 @@ Whether this Wi-Fi connection restricts the data volume.
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -170,8 +154,6 @@ The speed of a Wi-Fi access point.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [linkSpeed](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#linkspeed)
@@ -189,8 +171,6 @@ The Wi-Fi MAC address of a device.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -210,8 +190,6 @@ The RSSI(dBm) of a Wi-Fi access point.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [rssi](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#rssi)
@@ -229,8 +207,6 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

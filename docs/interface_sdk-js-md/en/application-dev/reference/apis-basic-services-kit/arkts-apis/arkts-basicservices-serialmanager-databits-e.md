@@ -4,8 +4,6 @@ Enumerates the number of data bits.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_8
@@ -17,8 +15,6 @@ DATABIT_8 = 8
 The number of data bits is 8.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ The number of data bits is 7.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_6
@@ -46,8 +40,6 @@ The number of data bits is 6.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_5
@@ -59,7 +51,5 @@ DATABIT_5 = 5
 The number of data bits is 5.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial

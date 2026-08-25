@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## customCurve
@@ -15,8 +15,6 @@ function customCurve(interpolate: (fraction: number) => number): ICurve
 构造自定义曲线对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,14 +32,4 @@ function customCurve(interpolate: (fraction: number) => number): ICurve
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-let interpolate = (fraction:number):number => {
-  return Math.sqrt(fraction)
-}
-let curve = curves.customCurve(interpolate) // 创建一个用户自定义插值曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

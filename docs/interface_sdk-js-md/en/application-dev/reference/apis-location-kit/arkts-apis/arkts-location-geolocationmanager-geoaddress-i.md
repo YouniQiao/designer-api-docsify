@@ -4,14 +4,12 @@ Data struct describes geographic locations.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## addressUrl
@@ -25,8 +23,6 @@ Indicates website URL.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -42,8 +38,6 @@ Indicates administrative region name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## countryCode
@@ -57,8 +51,6 @@ Indicates country code.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -74,8 +66,6 @@ Indicates country name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## descriptions
@@ -90,39 +80,33 @@ Indicates additional information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## descriptionsSize
 
 ```TypeScript
-descriptionsSize?: int
+descriptionsSize?: number
 ```
 
 Indicates the amount of additional descriptive information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## latitude
 
 ```TypeScript
-latitude?: double
+latitude?: number
 ```
 
 Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -138,8 +122,6 @@ Indicates language used for the location description. zh indicates Chinese, and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## locality
@@ -154,23 +136,19 @@ Indicates locality information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## longitude
 
 ```TypeScript
-longitude?: double
+longitude?: number
 ```
 
 Indicates longitude information. A positive value indicates east longitude , and a negative value indicates west longitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -186,8 +164,6 @@ Indicates phone number.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## placeName
@@ -201,8 +177,6 @@ Indicates detailed address information.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -218,8 +192,6 @@ Indicates postal code.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## premises
@@ -233,8 +205,6 @@ Indicates house information.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -250,8 +220,6 @@ Indicates road name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## subAdministrativeArea
@@ -265,8 +233,6 @@ Indicates sub-administrative region name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -282,8 +248,6 @@ Indicates sub-locality information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## subRoadName
@@ -297,7 +261,5 @@ Indicates auxiliary road information.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder

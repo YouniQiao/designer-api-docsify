@@ -4,14 +4,12 @@ Defines the options for creating an application account.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## customData
@@ -20,12 +18,10 @@ import { appAccount } from '@kit.BasicServicesKit';
 customData?: Record<string, string>
 ```
 
-Custom data. By default, no value is passed in.
+Custom data. By default, no value is passed in. Do not include sensitive data.
 
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

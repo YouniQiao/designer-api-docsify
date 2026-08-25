@@ -4,8 +4,6 @@ Implements audio effect management.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Implements audio effect management.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getAudioEffectProperty
@@ -26,8 +24,6 @@ Gets current audio effect properties.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -47,20 +43,6 @@ Gets current audio effect properties.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioStreamManager.getAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getAudioEffectProperty ERROR: ${error}`);
-}
-```
 
 ## getSupportedAudioEffectProperty
 
@@ -72,8 +54,6 @@ Gets supported audio effect properties based on current devices.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -94,20 +74,6 @@ Gets supported audio effect properties based on current devices.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioStreamManager.getSupportedAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getSupportedAudioEffectProperty ERROR: ${error}`);
-}
-```
-
 ## isAudioSeparationEffectSupported
 
 ```TypeScript
@@ -117,8 +83,6 @@ isAudioSeparationEffectSupported(): boolean
 Checks whether the current device supports audio separation effect in system.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,8 +111,6 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 Unsubscribes from the system audio separation effect enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,8 +141,6 @@ Subscribes to system audio separation effect enabled state change event. The aud
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -209,8 +169,6 @@ Sets current audio effect properties.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -232,38 +190,15 @@ Sets current audio effect properties.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioEffectManager.getAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-  audioEffectManager.setAudioEffectProperty(propertyArray);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setAudioEffectProperty ERROR: ${error}`);
-}
-```
-
 ## setAudioSeparationEffectEnabled
 
-ArkTS-Dyn:
 ```TypeScript
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>
 ```
 
 Sets audio separation effect enable or disable for specific application process, or for specific audio playback stream. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -278,8 +213,8 @@ Sets audio separation effect enable or disable for specific application process,
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：long | No |
+| uid | number | Yes |
+| streamId | number | No |
 
 **Return value:**
 
@@ -299,21 +234,13 @@ Sets audio separation effect enable or disable for specific application process,
 
 ## setAudioSeparationEffectVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>
 ```
 
 Sets audio separation effect volume for specific volume type. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -328,7 +255,7 @@ Sets audio separation effect volume for specific volume type. This API uses a pr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Yes |
-| volume | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| volume | number | Yes |
 
 **Return value:**
 

@@ -6,8 +6,6 @@ Describes the color sensor data. It extends from [Response](arkts-sensorservice-
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -15,22 +13,20 @@ Describes the color sensor data. It extends from [Response](arkts-sensorservice-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## colorTemperature
 
 ```TypeScript
-colorTemperature: double
+colorTemperature: number
 ```
 
 Color temperature, in Kelvin.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -39,16 +35,14 @@ Color temperature, in Kelvin.
 ## lightIntensity
 
 ```TypeScript
-lightIntensity: double
+lightIntensity: number
 ```
 
 Intensity of light, in lux.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

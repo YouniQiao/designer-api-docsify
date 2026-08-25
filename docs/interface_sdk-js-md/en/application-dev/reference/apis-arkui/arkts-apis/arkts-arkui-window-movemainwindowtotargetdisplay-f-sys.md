@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## moveMainWindowToTargetDisplay
 
 ```TypeScript
-function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: int): Promise<void>
+function moveMainWindowToTargetDisplay(displayId: number, windowId: number, userId?: number): Promise<void>
 ```
 
 Move a window to the target display. The window must be a main window.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,9 +26,9 @@ Move a window to the target display. The window must be a main window.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| displayId | number | Yes |
+| windowId | number | Yes |
+| userId | number | No |
 
 **Return value:**
 

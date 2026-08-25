@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## showToast
@@ -20,8 +20,6 @@ Creates and displays a toast.
 > - The toast has a fixed style and does not support content customization. For specific supported capabilities, see ShowToastOptions.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -43,59 +41,3 @@ Creates and displays a toast.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct toastExample {
-  build() {
-    Column() {
-      Button('Show toast').fontSize(20)
-        .onClick(() => {
-          try {
-            promptAction.showToast({
-              message: 'Hello World',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct toastExample {
-  build() {
-    Column() {
-      Button('Show toast').fontSize(20)
-        .onClick(() => {
-          try {
-            promptAction.showToast({
-              message: 'Hello World',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```

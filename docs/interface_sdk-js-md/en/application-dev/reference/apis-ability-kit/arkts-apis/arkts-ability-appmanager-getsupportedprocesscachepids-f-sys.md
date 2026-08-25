@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSupportedProcessCachePids
 
 ```TypeScript
-function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
+function getSupportedProcessCachePids(bundleName : string): Promise<Array<number>>
 ```
 
 Obtains the PIDs of processes that support quick startup after caching in a specified application. This API uses a promise to return the result.
@@ -18,8 +18,6 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 > This API can only be used to obtain the PIDs of the system account to which the caller belongs.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -39,7 +37,7 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
@@ -50,22 +48,3 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.processcache";
-  appManager.getSupportedProcessCachePids(bundleName).then((pids: Array<number>) => {
-      hilog.info(0x0000, 'testTag', `pids: ${JSON.stringify(pids)}`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
-    })
-} catch (err) {
-  hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
-}
-```

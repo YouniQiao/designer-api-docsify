@@ -4,8 +4,6 @@ The module provides the kiosk status information, including whether the system i
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## isKioskMode
@@ -19,8 +17,6 @@ Whether the system is in kiosk mode. **true** if in kiosk mode, **false** otherw
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Bundle name of the application in kiosk mode.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -47,16 +41,14 @@ Bundle name of the application in kiosk mode.
 ## kioskBundleUid
 
 ```TypeScript
-kioskBundleUid: int
+kioskBundleUid: number
 ```
 
 UID of the application in kiosk mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

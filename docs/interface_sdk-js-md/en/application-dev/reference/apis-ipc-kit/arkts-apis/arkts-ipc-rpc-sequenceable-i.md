@@ -4,8 +4,6 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md)
@@ -15,7 +13,7 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## marshalling
@@ -27,8 +25,6 @@ marshalling(dataOut: MessageParcel): boolean
 Marshals the sequenceable object into a **MessageParcel** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,79 +44,6 @@ Marshals the sequenceable object into a **MessageParcel** object.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyParcelable implements rpc.Parcelable {
-  num: number = 0;
-  str: string = '';
-  constructor(num: number, str: string) {
-    this.num = num;
-    this.str = str;
-  }
-  marshalling(messageSequence: rpc.MessageSequence): boolean {
-    messageSequence.writeInt(this.num);
-    messageSequence.writeString(this.str);
-    return true;
-  }
-  unmarshalling(messageSequence: rpc.MessageSequence): boolean {
-    this.num = messageSequence.readInt();
-    this.str = messageSequence.readString();
-    hilog.info(0x0000, 'testTag', 'readInt is ' + this.num + ' readString is ' + this.str);
-    return true;
-  }
-}
-
-try {
-  let parcelable = new MyParcelable(1, "aaa");
-  let data = rpc.MessageSequence.create();
-  data.writeParcelable(parcelable);
-  let ret = new MyParcelable(0, "");
-  data.readParcelable(ret);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MySequenceable implements rpc.Sequenceable {
-  num: number = 0;
-  str: string = '';
-  constructor(num: number, str: string) {
-    this.num = num;
-    this.str = str;
-  }
-  marshalling(messageParcel: rpc.MessageParcel): boolean {
-    messageParcel.writeInt(this.num);
-    messageParcel.writeString(this.str);
-    return true;
-  }
-  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
-    this.num = messageParcel.readInt();
-    this.str = messageParcel.readString();
-    return true;
-  }
-}
-
-try {
-  let sequenceable = new MySequenceable(1, "aaa");
-  let data = rpc.MessageParcel.create();
-  let result = data.writeSequenceable(sequenceable);
-  hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
-  let ret = new MySequenceable(0, "");
-  let result2 = data.readSequenceable(ret);
-  hilog.info(0x0000, 'testTag', 'readSequenceable is ' + result2);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
 ## unmarshalling
 
 ```TypeScript
@@ -130,8 +53,6 @@ unmarshalling(dataIn: MessageParcel): boolean
 Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -150,76 +71,3 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyParcelable implements rpc.Parcelable {
-  num: number = 0;
-  str: string = '';
-  constructor(num: number, str: string) {
-    this.num = num;
-    this.str = str;
-  }
-  marshalling(messageSequence: rpc.MessageSequence): boolean {
-    messageSequence.writeInt(this.num);
-    messageSequence.writeString(this.str);
-    return true;
-  }
-  unmarshalling(messageSequence: rpc.MessageSequence): boolean {
-    this.num = messageSequence.readInt();
-    this.str = messageSequence.readString();
-    hilog.info(0x0000, 'testTag', 'readInt is ' + this.num + ' readString is ' + this.str);
-    return true;
-  }
-}
-
-try {
-  let parcelable = new MyParcelable(1, "aaa");
-  let data = rpc.MessageSequence.create();
-  data.writeParcelable(parcelable);
-  let ret = new MyParcelable(0, "");
-  data.readParcelable(ret);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MySequenceable implements rpc.Sequenceable {
-  num: number = 0;
-  str: string = '';
-  constructor(num: number, str: string) {
-    this.num = num;
-    this.str = str;
-  }
-  marshalling(messageParcel: rpc.MessageParcel): boolean {
-    messageParcel.writeInt(this.num);
-    messageParcel.writeString(this.str);
-    return true;
-  }
-  unmarshalling(messageParcel: rpc.MessageParcel): boolean {
-    this.num = messageParcel.readInt();
-    this.str = messageParcel.readString();
-    return true;
-  }
-}
-
-try {
-  let sequenceable = new MySequenceable(1, "aaa");
-  let data = rpc.MessageParcel.create();
-  let result = data.writeSequenceable(sequenceable);
-  hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
-  let ret = new MySequenceable(0, "");
-  let result2 = data.readSequenceable(ret);
-  hilog.info(0x0000, 'testTag', 'readSequenceable is ' + result2);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```

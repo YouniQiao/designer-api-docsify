@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getEnterpriseInfo
@@ -15,8 +15,6 @@ function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>)
 Obtains the enterprise information of the device administrator application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,45 +37,6 @@ Obtains the enterprise information of the device administrator application. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.getEnterpriseInfo(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.getEnterpriseInfo(wantTemp).then((result) => {
-  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getEnterpriseInfo
 
@@ -88,8 +47,6 @@ function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 Obtains the enterprise information of the device administrator application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,7 +73,3 @@ Obtains the enterprise information of the device administrator application. This
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getEnterpriseInfo](#getenterpriseinfo)

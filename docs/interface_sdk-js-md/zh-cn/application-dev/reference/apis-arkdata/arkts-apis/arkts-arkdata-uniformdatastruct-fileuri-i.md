@@ -4,29 +4,25 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ fileType: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -61,8 +55,6 @@ oriUri: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ readonly uniformDataType: 'general.file-uri'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -89,71 +79,15 @@ readonly uniformDataType: 'general.file-uri'
 ## uriAuthorizationPolicies
 
 ```TypeScript
-uriAuthorizationPolicies?: Array<int>
+uriAuthorizationPolicies?: Array<number>
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let fileUriDetails: Record<string, number | string | Uint8Array> = {
-  'fileUriKey1': 123,
-  'fileUriKey2': 'fileUriValue',
-  'fileUriKey3': u8Array
-};
-let fileUri: uniformDataStruct.FileUri = {
-  uniformDataType: 'general.file-uri',
-  oriUri: 'www.xx.com',
-  fileType: 'general.image',
-  details: fileUriDetails,
-  // 从API 26.0.0版本开始，支持uri授权策略
-  uriAuthorizationPolicies: [
-    unifiedDataChannel.UriPermission.WRITE
-  ]
-};
-console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
-// 当使用FileUri类型的标准化数据结构构造record时，推荐入参中的type值设为uniformTypeDescriptor.UniformDataType.FILE_URI
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let fileUriDetails: Record<string, int | long | double | string | Uint8Array> = {
-  'fileUriKey1': 123,
-  'fileUriKey2': 'fileUriValue',
-  'fileUriKey3': u8Array
-};
-let fileUri: uniformDataStruct.FileUri = {
-  uniformDataType: 'general.file-uri',
-  oriUri: 'www.xx.com',
-  fileType: 'general.image',
-  details: fileUriDetails,
-  // 从API 26.0.0版本开始，支持uri授权策略
-  uriAuthorizationPolicies: [
-    unifiedDataChannel.UriPermission.WRITE
-  ]
-};
-console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
-// 当使用FileUri类型的标准化数据结构构造record时，推荐入参中的type值设为uniformTypeDescriptor.UniformDataType.FILE_URI
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
-```

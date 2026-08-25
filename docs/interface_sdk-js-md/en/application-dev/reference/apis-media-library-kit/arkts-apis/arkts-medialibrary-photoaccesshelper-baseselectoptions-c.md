@@ -4,14 +4,12 @@ Defines the basic options for selecting media files from Gallery.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## assetCompatibleCapability
@@ -25,8 +23,6 @@ Configuration for asset compatibility capabilities.
 **Type:** [AssetCompatibleCapability](arkts-medialibrary-photoaccesshelper-assetcompatiblecapability-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ internal filter items.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -70,8 +64,6 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -85,14 +77,15 @@ combinedMediaTypeFilter?: Array<string>
 ```
 
 A string array of filter criteria, supporting combinations of various types.The string format is as follows: **photoType | photoSubType1,photoSubType2, ... | mimeType1,mimeType2, ...**  
-- The first part specifies a single **photoType**, which is fixed at **image** or **video**. - The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore). - The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).  
-Filters are combined using intersection logic.The NOT logic is supported. To exclude types, use parentheses. Each string can have only one set.If the filter string does not match the specifications, the result is empty.Only the first three array elements are used; **MIMETypes** and **mimeTypeFilter** are ignored.
+- The first part specifies a single **photoType**, which is fixed at **image** or **video**.  
+- The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the  
+maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore).  
+- The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum  
+value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).Filters are combined using intersection logic.The NOT logic is supported. To exclude types, use parentheses. Each string can have only one set.If the filter string does not match the specifications, the result is empty.Only the first three array elements are used; **MIMETypes** and **mimeTypeFilter** are ignored.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -110,8 +103,6 @@ Configuration for file size filtering.When this parameter is set, only media fil
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -127,8 +118,6 @@ Global effect of the moving photo. Currently, only **MOVING_PHOTO_ENABLED** and 
 **Type:** [MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +137,6 @@ Pinch mode of the grid in the picker.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -168,8 +155,6 @@ Whether the moving photo badge is displayed in the photo browser page. **true** 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -185,8 +170,6 @@ Whether photo taking is supported. **true** if supported, **false** otherwise.
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,8 +187,6 @@ Whether to enable full image preview if a single image is selected. **true** to 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -222,8 +203,6 @@ Whether the image is searchable. **true** if searchable, **false** otherwise.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -231,16 +210,14 @@ Whether the image is searchable. **true** if searchable, **false** otherwise.
 ## maxSelectNumber
 
 ```TypeScript
-maxSelectNumber?: int
+maxSelectNumber?: number
 ```
 
 Maximum number of media files that can be selected. The maximum value is **500**, and the default value is **50**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,8 +235,6 @@ Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -275,8 +250,6 @@ Configuration for file type filtering. Multiple types can be specified.When this
 **Type:** [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -294,8 +267,6 @@ An array used to filter media files by type and size.Only the first three array 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -311,8 +282,6 @@ Preferred compatibility mode.
 **Type:** [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +301,6 @@ URI of the preselected image.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -350,8 +317,6 @@ Image recommendation parameters.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -367,8 +332,6 @@ Whether to display the date group information when the scroll bar is dragged. **
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -388,8 +351,6 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -405,8 +366,6 @@ Configuration for video duration filtering.When this parameter is set, only medi
 **Type:** [VideoDurationFilter](arkts-medialibrary-photoaccesshelper-videodurationfilter-c.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

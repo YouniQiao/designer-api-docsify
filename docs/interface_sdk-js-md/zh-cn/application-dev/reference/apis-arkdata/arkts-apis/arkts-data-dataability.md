@@ -4,14 +4,12 @@ DataAbility谓词用于构造关系型数据库的谓词，提供用于实现不
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

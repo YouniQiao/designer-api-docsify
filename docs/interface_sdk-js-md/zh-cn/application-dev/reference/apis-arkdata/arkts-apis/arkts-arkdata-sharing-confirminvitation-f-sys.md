@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## confirmInvitation
@@ -15,8 +15,6 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -38,34 +36,6 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string | undefined;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}).catch((err) => {
-  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, ((err: BusinessError|null, result) => {
-  if (err) {
-    console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}))
-```
-
 
 ## confirmInvitation
 
@@ -76,8 +46,6 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -103,7 +71,3 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [confirmInvitation](#confirminvitation)

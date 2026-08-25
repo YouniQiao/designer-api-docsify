@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createAVDownloaderManager
@@ -15,8 +15,6 @@ function createAVDownloaderManager(): Promise<AVDownloaderManager>
 Creating a Streaming Resource Download Task Manager
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

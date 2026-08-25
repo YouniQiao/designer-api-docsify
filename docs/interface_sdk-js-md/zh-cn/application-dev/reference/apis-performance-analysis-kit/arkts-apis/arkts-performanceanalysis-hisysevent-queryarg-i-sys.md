@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## beginTime
 
 ```TypeScript
-beginTime: long
+beginTime: number
 ```
 
 查询的系统事件起始时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -37,16 +33,14 @@ beginTime: long
 ## endTime
 
 ```TypeScript
-endTime: long
+endTime: number
 ```
 
 查询的系统事件结束时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -55,7 +49,7 @@ endTime: long
 ## fromSeq
 
 ```TypeScript
-fromSeq?: long
+fromSeq?: number
 ```
 
 查询的系统事件起始序列号，默认值为-1。
@@ -64,8 +58,6 @@ fromSeq?: long
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ fromSeq?: long
 ## maxEvents
 
 ```TypeScript
-maxEvents: long
+maxEvents: number
 ```
 
 查询的系统事件最多条数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -91,7 +81,7 @@ maxEvents: long
 ## toSeq
 
 ```TypeScript
-toSeq?: long
+toSeq?: number
 ```
 
 查询的系统事件结束序列号，默认值为-1。
@@ -99,8 +89,6 @@ toSeq?: long
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

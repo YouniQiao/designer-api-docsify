@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## NOT_SUPPORTED
@@ -17,8 +15,6 @@ NOT_SUPPORTED = 0
 不支持。例如：申请的长时任务主类型非MODE_SPECIAL_SCENARIO_PROCESSING时，不支持申请用户授权是否能在后台长时间运行。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -32,8 +28,6 @@ NOT_DETERMINED = 1
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## DENIED
@@ -45,8 +39,6 @@ DENIED = 2
 拒绝。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -61,8 +53,6 @@ GRANTED_ONCE = 3
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## GRANTED_ALWAYS
@@ -76,7 +66,5 @@ GRANTED_ALWAYS = 4
 [COMMON_EVENT_PACKAGE_ADDED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_added) 、 [COMMON_EVENT_PACKAGE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_removed) 、 [COMMON_EVENT_BUNDLE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_bundle_removed) 、 [COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_fully_removed) 、 [COMMON_EVENT_PACKAGE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_changed) 。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

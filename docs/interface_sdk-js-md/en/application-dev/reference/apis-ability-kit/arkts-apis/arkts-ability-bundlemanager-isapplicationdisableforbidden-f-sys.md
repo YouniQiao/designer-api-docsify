@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isApplicationDisableForbidden
 
 ```TypeScript
-function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex: int): boolean
+function isApplicationDisableForbidden(bundleName: string, userId: number, appIndex: number): boolean
 ```
 
 Synchronously queries whether a specified application or application clone of a specified user is set to forbid being disabled. If you need to check whether an application is forbidden to be disabled under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for. If you need to check whether an application is forbidden to be disabled under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -31,8 +29,8 @@ Synchronously queries whether a specified application or application clone of a 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
+| appIndex | number | Yes |
 
 **Return value:**
 

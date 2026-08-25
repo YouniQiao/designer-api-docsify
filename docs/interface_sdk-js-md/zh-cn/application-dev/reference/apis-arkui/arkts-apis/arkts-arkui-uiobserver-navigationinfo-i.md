@@ -4,14 +4,12 @@ Navigation组件信息。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## navigationId
@@ -25,8 +23,6 @@ Navigation组件的id。
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ pathStack: NavPathStack
 
 Navigation组件的导航控制器。
 
-**类型：** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**类型：** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,13 +54,11 @@ Navigation组件的导航控制器。
 uniqueId?: number
 ```
 
-Navigation组件的uniqueId，可以通过queryNavigationInfo获取。
+Navigation组件的uniqueId，可以通过[queryNavigationInfo](../arkts-components/arkts-arkui-basecustomcomponent-c.md#querynavigationinfo)获取。
 
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

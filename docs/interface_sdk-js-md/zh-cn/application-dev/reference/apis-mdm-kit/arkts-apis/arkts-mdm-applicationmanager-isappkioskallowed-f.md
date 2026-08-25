@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isAppKioskAllowed
@@ -15,8 +15,6 @@ function isAppKioskAllowed(appIdentifier: string): boolean
 查询某应用是否允许在Kiosk模式下运行。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,17 +31,3 @@ function isAppKioskAllowed(appIdentifier: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 需根据实际情况进行替换
-  let isAllowed: boolean = applicationManager.isAppKioskAllowed('6917****3569');
-  console.info(`Succeeded in querying if the app is allowed kiosk, isAllowed: ${isAllowed}`);
-} catch (err) {
-  console.error(`Failed to query if the app is allowed kiosk. Code is ${err.code}, message is ${err.message}`);
-}
-```

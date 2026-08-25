@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficPlanInfo
@@ -15,8 +15,6 @@ function getTrafficPlanInfo(simId: number, planParam: TrafficPlanParam): Promise
 Get traffic plan info.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 

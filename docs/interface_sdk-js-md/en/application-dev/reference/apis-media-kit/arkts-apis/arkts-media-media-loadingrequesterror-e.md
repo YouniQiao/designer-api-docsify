@@ -4,8 +4,6 @@ Enumerates the reasons for data loading status changes.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_SUCCESS
@@ -17,8 +15,6 @@ LOADING_ERROR_SUCCESS = 0
 Returned by the client to indicate that the end of the resource.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ Returned by the client to indicate that the resource is not ready for access.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -49,8 +43,6 @@ LOADING_ERROR_NO_RESOURCE = 2
 Returned by the client to indicate that the requested resource URL does not exist.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,8 +58,6 @@ Returned by the client to indicate that the ID of the requested resource handle 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -81,8 +71,6 @@ LOADING_ERROR_ACCESS_DENIED = 4
 Returned by the client to indicate that the client does not have permission to request the resource.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -98,8 +86,6 @@ Returned by the client to indicate that the access to the resource times out.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -113,8 +99,6 @@ LOADING_ERROR_AUTHORIZE_FAILED = 6
 Returned by the client to indicate that authorization fails.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

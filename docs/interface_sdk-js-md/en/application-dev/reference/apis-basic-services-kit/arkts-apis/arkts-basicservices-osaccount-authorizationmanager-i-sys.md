@@ -4,8 +4,6 @@ Defines the OS account authorization manager class.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the OS account authorization manager class.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## acquireAuthorization
@@ -22,11 +20,9 @@ import { osAccount } from '@kit.BasicServicesKit';
 acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>
 ```
 
-Acquires an authorization for a process.
+Acquires an authorization for the current process.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.ACQUIRE_LOCAL_ACCOUNT_AUTHORIZATION
 
@@ -58,30 +54,6 @@ Acquires an authorization for a process.
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-let options: osAccount.AcquireAuthorizationOptions = {
-  challenge: new Uint8Array([1, 2, 3]),
-  isReuseNeeded: true,
-  isInteractionAllowed: true,
-};
-try {
-  authorizationManager.acquireAuthorization(privilege, options).then((result: osAccount.AcquireAuthorizationResult) => {
-    console.info(`acquireAuthorization successfully, resultCode: ${result.resultCode}`);
-  }).catch((err: BusinessError) => {
-    console.error(`acquireAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`acquireAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## hasAuthorization
 
 ```TypeScript
@@ -91,8 +63,6 @@ hasAuthorization(privilege: string): Promise<boolean>
 Checks whether the current process has specified authorization.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,27 +90,6 @@ Checks whether the current process has specified authorization.
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-
-try {
-  authorizationManager.hasAuthorization(privilege).then((isAuthorized: boolean) => {
-    console.info(`Privilege: ${privilege} has been authorized: ${isAuthorized}`);
-  }).catch((e:Error) => {
-    const err = e as BusinessError;
-    console.error(`hasAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`hasAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## releaseAuthorization
 
 ```TypeScript
@@ -150,8 +99,6 @@ releaseAuthorization(privilege: string): Promise<void>
 Releases the specified authorization for the current process.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,24 +125,3 @@ Releases the specified authorization for the current process.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-
-try {
-  authorizationManager.releaseAuthorization(privilege).then(() => {
-    console.info('releaseAuthorization success');
-  }).catch((e:Error) => {
-    const err = e as BusinessError;
-    console.error(`releaseAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`releaseAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```

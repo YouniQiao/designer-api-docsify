@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## queryApn
@@ -15,8 +15,6 @@ function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 Queries the APN ID. This API is suitable for enterprise mobile network configuration audit scenarios, such as finding APNs with specific configurations, verifying whether an APN configuration exists, and providing APN ID parameters for APN management operations. It helps enterprises locate and manage APN configurations, and supplies the necessary parameter information for updating and deleting APNs.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
@@ -45,50 +43,6 @@ Queries the APN ID. This API is suitable for enterprise mobile network configura
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-let apnInfo: Record<string, string> = {
-  // Replace with actual values.
-  "apnName": "CTNET",
-  "apn": "CTNET",
-  "mnc": "11",
-  "mcc": "460",
-};
-try {
-  let queryResult: Array<string> = networkManager.queryApn(wantTemp, apnInfo);
-  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
-} catch (err) {
-  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-let apnId: string = "1"; // Replace it as required.
-try {
-  let queryResult: Record<string, string> = networkManager.queryApn(wantTemp, apnId);
-  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
-} catch (err) {
-  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## queryApn
 
@@ -99,8 +53,6 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 Queries the APN parameter information. This API is suitable for enterprise mobile network configuration audit scenarios, such as checking the configuration parameters of a specific APN, verifying whether the APN configuration is correct, and auditing mobile network access point settings. It helps enterprises review and validate APN configurations to ensure that mobile network settings meet requirements.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
@@ -128,7 +80,3 @@ Queries the APN parameter information. This API is suitable for enterprise mobil
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [queryApn](#queryapn)

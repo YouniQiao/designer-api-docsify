@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDisposedStatus
@@ -15,8 +15,6 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -42,53 +40,6 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want)
-    .then(() => {
-      console.info('setDisposedStatus success');
-    }).catch((error: BusinessError) => {
-    let message = (error as BusinessError).message;
-    console.error('setDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want, (error: BusinessError, data) => {
-    if (error) {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-      return;
-    }
-    console.info('setDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
 
 ## setDisposedStatus
 
@@ -99,8 +50,6 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -130,7 +79,3 @@ Sets the disposed status for an application. This API uses a promise to return t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
-
-**Examples**
-
-See [setDisposedStatus](#setdisposedstatus)

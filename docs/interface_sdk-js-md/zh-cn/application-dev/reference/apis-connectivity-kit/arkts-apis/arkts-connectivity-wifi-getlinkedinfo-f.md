@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -15,8 +15,6 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 获取WLAN连接信息。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -32,26 +30,6 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 | --- |
 | Promise & lt;WifiLinkedInfo & gt; |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
-    if (err) {
-        console.error("get linked info error");
-        return;
-    }
-    console.info("get wifi linked info: " + JSON.stringify(data));
-});
-
-wifi.getLinkedInfo().then(data => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error:number) => {
-    console.info("get linked info error");
-});
-```
-
 
 ## getLinkedInfo
 
@@ -62,8 +40,6 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 获取WLAN连接信息。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -78,7 +54,3 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |
-
-**示例**
-
-参见 [getLinkedInfo](#getlinkedinfo)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -15,8 +15,6 @@ function createPixelMap(colors: ArrayBuffer, options: image.InitializationOption
 Create PixelMap by data buffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,36 +30,3 @@ Create PixelMap by data buffer.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;PixelMap & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo() {
-    const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-    let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
-    sendableImage.createPixelMap(color, opts).then((pixelMap: sendableImage.PixelMap) => {
-        console.info('Succeeded in creating pixelmap.');
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
-    })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.createPixelMap().then((pixelMap: sendableImage.PixelMap) => {
-    console.info('Succeeded in creating pixelMap object through image decoding parameters.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create pixelMap object through image decoding parameters. code ${error.code}, message is ${error.message}`);
-  })
-}
-```

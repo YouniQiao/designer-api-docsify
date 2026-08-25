@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setScreenLockDisabledForAccount
@@ -21,8 +21,6 @@ function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 > 4.下发禁用滑动解锁的策略后，用户输入了设备密码，此时密码会生效，设备需要验证密码后才能进入桌面，之前下发的策略失效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -46,22 +44,3 @@ function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 | [9201021](../errorcode-enterpriseDeviceManager.md#9201021-设备存在锁屏密码) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  securityManager.setScreenLockDisabledForAccount(wantTemp, true);
-  console.info(`Succeeded in setting screen lock disabled for account.`);
-} catch (err) {
-  console.error(`Failed to set screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
-}
-```

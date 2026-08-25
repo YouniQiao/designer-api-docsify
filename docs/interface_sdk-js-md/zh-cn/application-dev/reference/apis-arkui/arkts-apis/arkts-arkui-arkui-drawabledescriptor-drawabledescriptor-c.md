@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -23,8 +21,6 @@ getPixelMap(): image.PixelMap
 获取PixelMap实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,10 +40,6 @@ getPixelMap(): image.PixelMap
 | --- |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
-**示例**
-
-示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)中的示例代码。
-
 ## invalidate
 
 ```TypeScript
@@ -57,8 +49,6 @@ invalidate(): void
 重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,8 +65,6 @@ isReleased(): boolean
 查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用 [getPixelMap](#getpixelmap)、 [getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、 [getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、 [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、 [loadSync](#loadsync)、 [load](#load)等接口会抛出111002错误；返回false表示未释放，对象可正 常使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,8 +88,6 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -119,10 +105,6 @@ load(): Promise<DrawableDescriptorLoadedResult>
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
-**示例**
-
-示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
-
 ## loadSync
 
 ```TypeScript
@@ -132,8 +114,6 @@ loadSync(): DrawableDescriptorLoadedResult
 发起图片资源的同步加载，并返回加载结果。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
@@ -152,10 +132,6 @@ loadSync(): DrawableDescriptorLoadedResult
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
 
-**示例**
-
-示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
-
 ## release
 
 ```TypeScript
@@ -166,39 +142,8 @@ release(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { DrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private resManager = this.getUIContext().getHostContext()?.resourceManager;
-  // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
-  private drawable: DrawableDescriptor | undefined =
-    this.resManager?.getDrawableDescriptor($r('app.media.startIcon').id);
-
-  build() {
-    Column() {
-      Button('release')
-        .onClick(() => {
-          this.drawable?.release()
-        })
-      Button('isReleased')
-        .onClick(() => {
-          let released = this.drawable?.isReleased()
-          console.info(`isReleased = ${released}`)
-        })
-    }
-  }
-}
-```

@@ -6,8 +6,6 @@ Declare navigator properties.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** Navigation
@@ -28,8 +26,6 @@ active(value: boolean)
 Sets whether the **Navigator** component is activated. If the component is activated, the corresponding navigation takes effect.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 13
 
@@ -55,8 +51,6 @@ Sets the data that needs to be passed to the target page during redirection.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** param
@@ -81,8 +75,6 @@ Sets the path of the target page to be redirected to. The target page must be ad
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** Navigation
@@ -106,8 +98,6 @@ type(value: NavigationType)
 Sets the navigation type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 13
 

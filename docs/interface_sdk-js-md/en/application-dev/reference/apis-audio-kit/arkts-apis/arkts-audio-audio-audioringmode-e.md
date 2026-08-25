@@ -4,8 +4,6 @@ Enumerates the audio ring modes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## RINGER_MODE_SILENT
@@ -17,8 +15,6 @@ RINGER_MODE_SILENT = 0
 Silent mode.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -32,8 +28,6 @@ Vibration mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## RINGER_MODE_NORMAL
@@ -45,7 +39,5 @@ RINGER_MODE_NORMAL = 2
 Normal mode.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication

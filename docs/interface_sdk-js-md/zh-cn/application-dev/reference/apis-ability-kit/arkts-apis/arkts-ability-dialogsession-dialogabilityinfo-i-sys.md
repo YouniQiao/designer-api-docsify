@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityIconId
 
 ```TypeScript
-abilityIconId: int
+abilityIconId: number
 ```
 
 表示Ability图标ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,16 +35,14 @@ abilityIconId: int
 ## abilityLabelId
 
 ```TypeScript
-abilityLabelId: int
+abilityLabelId: number
 ```
 
 表示Ability标签ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +62,6 @@ abilityName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -79,16 +71,14 @@ abilityName: string
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 表示应用的分身索引。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,16 +89,14 @@ appIndex: int
 ## bundleIconId
 
 ```TypeScript
-bundleIconId: int
+bundleIconId: number
 ```
 
 表示Bundle图标ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,16 +107,14 @@ bundleIconId: int
 ## bundleLabelId
 
 ```TypeScript
-bundleLabelId: int
+bundleLabelId: number
 ```
 
 表示Bundle标签ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +134,6 @@ bundleName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -168,8 +152,6 @@ codePath?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -183,13 +165,15 @@ installSource?: string
 ```
 
 表示应用程序的安装来源，支持的取值如下：  
-- pre-installed：表示首次开机时安装的预置应用。 - ota：表示系统升级时新增的预置应用。 - recovery：表示用户卸载后又手动恢复的预置应用。 - bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。 - unknown：表示应用安装来源未知。
+- pre-installed：表示首次开机时安装的预置应用。  
+- ota：表示系统升级时新增的预置应用。  
+- recovery：表示用户卸载后又手动恢复的预置应用。  
+- bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。  
+- unknown：表示应用安装来源未知。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -209,8 +193,6 @@ moduleName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -229,8 +211,6 @@ multiAppMode: MultiAppMode
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -248,8 +228,6 @@ visible: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppGroupSync
 
 ```TypeScript
-function queryAppGroupSync(): int
+function queryAppGroupSync(): number
 ```
 
 Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,7 +26,7 @@ Queries the app group of the calling application.The priority defined in a prior
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -45,28 +43,16 @@ Queries the app group of the calling application.The priority defined in a prior
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
 
-**Examples**
-
-```TypeScript
-let priorityGroup: number = usageStatistics.queryAppGroupSync();
-```
-
-```TypeScript
-let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera");
-```
-
 
 ## queryAppGroupSync
 
 ```TypeScript
-function queryAppGroupSync(bundleName: string): int
+function queryAppGroupSync(bundleName: string): number
 ```
 
 Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -84,7 +70,7 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -101,7 +87,3 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 | [10000005](../errorcode-DeviceUsageStatistics.md#10000005-application-not-installed) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
-
-**Examples**
-
-See [queryAppGroupSync](#queryappgroupsync)

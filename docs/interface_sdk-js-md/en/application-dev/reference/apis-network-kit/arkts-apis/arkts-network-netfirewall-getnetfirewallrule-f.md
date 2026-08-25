@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetFirewallRule
@@ -16,8 +16,6 @@ Obtains a firewall rule based on the specified user ID and rule ID. This API use
 **Required permission**: ohos.permission.GET_NET_FIREWALL
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
@@ -47,16 +45,3 @@ Obtains a firewall rule based on the specified user ID and rule ID. This API use
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
 | [29400006](../errorcode-net-netfirewall.md#29400006-specified-rule-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-netFirewall.getNetFirewallRule(100, 1).then((rule: netFirewall.NetFirewallRule) => {
-  console.info("result:", JSON.stringify(rule));
-}).catch((error : BusinessError) => {
-  console.error(" get firewall rules failed: " + JSON.stringify(error));
-});
-```

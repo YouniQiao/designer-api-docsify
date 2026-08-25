@@ -4,14 +4,12 @@ Defines HTTP request context data. The object instance is passed as a parameter 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## body
@@ -25,8 +23,6 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 **Type:** Object
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -61,8 +55,6 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getFoldStatus
@@ -16,8 +16,6 @@ function getFoldStatus(): FoldStatus
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -26,17 +24,10 @@ function getFoldStatus(): FoldStatus
 
 | 类型 |
 | --- |
-| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) |
+| [FoldStatus](arkts-arkui-foldstatus-e.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-let data: display.FoldStatus = display.getFoldStatus();
-console.info(`Succeeded in obtaining fold status. Data: ${data}`);
-```

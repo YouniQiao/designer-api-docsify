@@ -4,14 +4,12 @@ HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](ar
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## body
@@ -25,8 +23,6 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 **类型：** Object
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -61,8 +55,6 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 **类型：** string
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

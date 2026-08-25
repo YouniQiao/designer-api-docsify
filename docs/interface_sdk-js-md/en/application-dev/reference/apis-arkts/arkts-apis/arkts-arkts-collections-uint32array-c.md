@@ -1,6 +1,6 @@
 # Uint32Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md).
 
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
@@ -8,14 +8,12 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -28,8 +26,6 @@ Returns an iterator that iterates over numbers.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -38,7 +34,7 @@ Returns an iterator that iterates over numbers.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -55,8 +51,6 @@ at(index: number): number | undefined
 Returns the element at the given index. If no element is found, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -91,8 +85,6 @@ A constructor used to create an empty ArkTS Uint32Array.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -112,8 +104,6 @@ constructor(length: number)
 A constructor used to create an ArkTS Uint32Array of a given length.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -141,8 +131,6 @@ A constructor that creates an ArkTS Uint32Array from an iterable object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -169,8 +157,6 @@ A constructor that creates an ArkTS Uint32Array from an array-like object or Ark
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -196,8 +182,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 A constructor that creates an ArkTS Uint32Array from an ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,8 +210,6 @@ copyWithin(target: number, start: number, end?: number): Uint32Array
 Copies elements within a given range from this ArkTS Uint32Array to another position in sequence.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -264,8 +246,6 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -274,7 +254,7 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[number, number] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 **Error codes:**
 
@@ -292,8 +272,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint32Array>): boolean
 Checks whether all elements in this ArkTS Uint32Array meet a given condition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -327,8 +305,6 @@ fill(value: number, start?: number, end?: number): Uint32Array
 Fills all elements in a given range in this ArkTS Uint32Array with a value.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -365,8 +341,6 @@ Returns a new ArkTS Uint32Array that contains all elements that meet the given c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -399,8 +373,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint32Array>): number | undefined
 Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -435,8 +407,6 @@ Returns the index of the first element that passes a test provided by a callback
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -470,8 +440,6 @@ Calls a callback function for each element in this ArkTS Uint32Array.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -499,8 +467,6 @@ Creates an ArkTS Uint32Array from an array-like or iterator object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -526,8 +492,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 Creates an ArkTS Uint32Array from an array-like object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -556,8 +520,6 @@ Creates an ArkTS Uint32Array from an iterator object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -584,8 +546,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 Checks whether elements are contained in this ArkTS Uint32Array.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -621,8 +581,6 @@ Returns the index of the first occurrence of a value in this ArkTS Uint32Array. 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -657,8 +615,6 @@ Concatenates all elements in this ArkTS Uint32Array into a string, with a given 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -692,8 +648,6 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -702,7 +656,7 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -720,8 +674,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Obtains the index of the last occurrence of the specified value in this ArkTS Uint32Array.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -757,8 +709,6 @@ Applies a callback function to each element in this ArkTS Uint32Array and uses t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -792,8 +742,6 @@ Creates an ArkTS Uint32Array with a variable number of parameters.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -819,8 +767,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): numbe
 Applies a reduce function on each element in this ArkTS Uint32Array and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -854,8 +800,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>, initia
 Applies a reduce function for each element in this ArkTS Uint32Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -891,8 +835,6 @@ Applies a reduce function for each element in this ArkTS Uint32Array, receives a
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -926,8 +868,6 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Ar
 Reversely traverses this ArkTS Uint32Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -963,8 +903,6 @@ Reversely traverses this ArkTS Uint32Array, applies a reduce function on each el
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -998,8 +936,6 @@ Reverses this ArkTS Uint32Array.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1026,8 +962,6 @@ set(array: ArrayLike<number>, offset?: number): void
 Writes the elements in an array-like object to the given start position in sequence.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1056,8 +990,6 @@ slice(start?: number, end?: number): Uint32Array
 Selects a range of elements in this ArkTS Uint32Array to create an ArkTS Uint32Array.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1093,8 +1025,6 @@ Checks whether any element in this ArkTS Uint32Array meets a given condition.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1128,8 +1058,6 @@ Sorts elements in this ArkTS Uint32Array and returns the sorted ArkTS Uint32Arra
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1162,8 +1090,6 @@ subarray(begin?: number, end?: number): Uint32Array
 Truncates an array from a specified position and returns a new ArkTS Uint32Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1199,8 +1125,6 @@ Generates a string of digits that matches the cultural conventions of the curren
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1227,8 +1151,6 @@ toString(): string
 Converts an ArkTS Uint32Array into a string.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1257,8 +1179,6 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1267,7 +1187,7 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -1288,8 +1208,6 @@ Returns the item at that index.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1305,8 +1223,6 @@ Bottom-layer buffer used by an ArkTS Uint32Array.
 **Type:** ArrayBuffer
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1324,8 +1240,6 @@ Number of bytes occupied by an ArkTS Uint32Array.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1341,8 +1255,6 @@ Offset between the ArkTS Uint32Array and the start position of the ArrayBuffer.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1360,8 +1272,6 @@ Number of bytes occupied by each element in the ArkTS Uint32Array.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1377,8 +1287,6 @@ Number of elements in an ArkTS Uint32Array.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

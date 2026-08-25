@@ -4,8 +4,6 @@ Describes the notification statistics of a specified application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the notification statistics of a specified application.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## bundle
@@ -28,8 +26,6 @@ Bundle information of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -40,13 +36,11 @@ Bundle information of the application.
 lastTime: number
 ```
 
-Time when the app last published a notification.<br>Data format: timestamp.<br>Unit: millisecond.
+Time when the app last published a notification.Data format: timestamp.Unit: millisecond.
 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -63,8 +57,6 @@ Total number of notifications published by the application in the last seven day
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 

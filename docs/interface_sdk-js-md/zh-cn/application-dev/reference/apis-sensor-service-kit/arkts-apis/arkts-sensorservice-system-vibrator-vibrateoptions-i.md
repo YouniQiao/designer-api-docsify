@@ -7,8 +7,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)
@@ -20,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
+import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## complete
@@ -32,8 +30,6 @@ complete?: () => void
 振动接口调用结束时的回调函数。使用场景：开发者需要在振动接口调用完成后（无论成功或失败）执行清理或状态更新操作时，使用此回调。不填写此参数时，接口调用结束将不会有回调通知。使用后效果：无论振动触发成功或失败，系统都会调用此回调函数 ，无返回参数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -54,8 +50,6 @@ fail?: (data: string, code: number) => void
 振动触发失败时的回调函数。使用场景：开发者需要处理振动触发失败的情况（如权限未授予、设备不支持振动等）时，通过此回调获取错误信息。不填写此参数时，振动触发失败将不会有回调通知。使用后效果：振动触发失败时，系统将调用此回调函数，传入 错误信息data和错误码code。回调函数签名：(data: string, code: number) =&gt; void，其中data为错误信息字符串描述，code为错误码数字，标识具体的错误类型。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -84,8 +78,6 @@ success: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
@@ -102,13 +94,11 @@ success: () => void
 mode?: 'number' | 'short'
 ```
 
-振动模式，指定设备振动的持续时间类型。取值范围：'long'（长振动）或'short'（短振动）。默认值：'long'。使用场景：开发者可根据实际需求选择振动模式，例如来电提醒使用'long'以持续提醒用户，按键触觉反馈使用'short'以提供即时反馈。不填写此参数时，默认执行长振动。规格限制：仅适用于Lite Wearable设备。
+振动模式，指定设备振动的持续时间类型。取值范围：'number'（长振动）或'short'（短振动）。默认值：'number'。使用场景：开发者可根据实际需求选择振动模式，例如来电提醒使用'number'以持续提醒用户，按键触觉反馈使用'short'以提供即时反馈。不填写此参数时，默认执行长振动。规格限制：仅适用于Lite Wearable设备。
 
 **类型：** 'number' \| 'short'
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 

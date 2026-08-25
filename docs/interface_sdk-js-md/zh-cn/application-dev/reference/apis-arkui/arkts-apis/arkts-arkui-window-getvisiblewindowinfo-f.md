@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## getVisibleWindowInfo
@@ -15,8 +15,6 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本18+：ohos.permission.VISIBLE_WINDOW_INFO
@@ -37,65 +35,3 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.getVisibleWindowInfo();
-  promise.then((data) => {
-    data.forEach((windowInfo) => {
-      console.info(`left:${windowInfo.rect.left}`);
-      console.info(`top:${windowInfo.rect.top}`);
-      console.info(`width:${windowInfo.rect.width}`);
-      console.info(`height:${windowInfo.rect.height}`);
-      console.info(`windowId:${windowInfo.windowId}`);
-      console.info(`windowStatusType:${windowInfo.windowStatusType}`);
-      console.info(`abilityName:${windowInfo.abilityName}`);
-      console.info(`bundleName:${windowInfo.bundleName}`);
-      console.info(`isFocused:${windowInfo.isFocused}`);
-      console.info(`displayId:${windowInfo.displayId}`);
-      console.info(`globalDisplayRect:${JSON.stringify(windowInfo.globalDisplayRect)}`);
-      console.info(`globalRect:${JSON.stringify(windowInfo.globalRect)}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to getWindowInfo. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to get visible window info. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.getVisibleWindowInfo();
-  promise.then((data) => {
-    data.forEach(windowInfo=>{
-      console.info(`left:${windowInfo.rect.left}`);
-      console.info(`top:${windowInfo.rect.top}`);
-      console.info(`width:${windowInfo.rect.width}`);
-      console.info(`height:${windowInfo.rect.height}`);
-      console.info(`windowId:${windowInfo.windowId}`);
-      console.info(`windowStatusType:${windowInfo.windowStatusType}`);
-      console.info(`abilityName:${windowInfo.abilityName}`);
-      console.info(`bundleName:${windowInfo.bundleName}`);
-      console.info(`isFocused:${windowInfo.isFocused}`);
-    })
-  }).catch((err: Error) => {
-    console.error(`Failed to getWindowInfo. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get visible window info. Cause code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setVoNRState
 
 ```TypeScript
-function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<void>): void
+function setVoNRState(slotId: number, state: VoNRState, callback: AsyncCallback<void>): void
 ```
 
 设置NR语音的开关状态。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | state | [VoNRState](arkts-telephony-call-vonrstate-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,46 +42,16 @@ function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<voi
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
-call.setVoNRState(slotId, state, (err: BusinessError) => {
-    if (err) {
-        console.error(`setVoNRState fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setVoNRState success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
-call.setVoNRState(slotId, state).then(() => {
-    console.info(`setVoNRState success`);
-}).catch((err: BusinessError) => {
-    console.error(`setVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setVoNRState
 
 ```TypeScript
-function setVoNRState(slotId: int, state: VoNRState): Promise<void>
+function setVoNRState(slotId: number, state: VoNRState): Promise<void>
 ```
 
 设置NR语音的开关状态。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -95,7 +63,7 @@ function setVoNRState(slotId: int, state: VoNRState): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | state | [VoNRState](arkts-telephony-call-vonrstate-e-sys.md) | 是 |
 
 **返回值：**
@@ -115,7 +83,3 @@ function setVoNRState(slotId: int, state: VoNRState): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setVoNRState](#setvonrstate)

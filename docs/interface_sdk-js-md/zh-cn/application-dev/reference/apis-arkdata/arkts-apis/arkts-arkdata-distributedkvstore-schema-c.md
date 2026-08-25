@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## constructor
@@ -24,53 +22,9 @@ constructor()
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.LONG;
-child1.nullable = false;
-child1.defaultValue = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.defaultValue = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
 
 ## indexes
 
@@ -84,8 +38,6 @@ set indexes(indexes: Array<string>)
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -93,16 +45,14 @@ set indexes(indexes: Array<string>)
 ## mode
 
 ```TypeScript
-set mode(mode: int)
+set mode(mode: number)
 ```
 
 设置Schema的模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,8 +70,6 @@ set root(root: FieldNode)
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -129,16 +77,14 @@ set root(root: FieldNode)
 ## skip
 
 ```TypeScript
-set skip(skip: int)
+set skip(skip: number)
 ```
 
 设置跳过的字节数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

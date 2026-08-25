@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from '@kit.AbilityKit';
+import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -13,9 +13,3 @@ import { EnvironmentCallback } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) |
-
-### Interfaces
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-i.md) |

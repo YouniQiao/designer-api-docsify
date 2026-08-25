@@ -15,8 +15,6 @@ declare function accessSync(path: string, mode?: number): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [accessSync](arkts-corefile-file-fs-accesssync-f.md)
@@ -29,16 +27,3 @@ declare function accessSync(path: string, mode?: number): void
 | --- | --- | --- |
 | path | string | 是 |
 | mode | number | 否 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-try {
-  fileio.accessSync(filePath);
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error("accessSync failed with error:" + err);
-}
-```

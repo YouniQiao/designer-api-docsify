@@ -4,14 +4,12 @@ SIM卡类型和状态。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## reason
@@ -25,8 +23,6 @@ SIM卡锁类型。
 **类型：** [LockReason](arkts-telephony-observer-lockreason-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -42,8 +38,6 @@ SIM卡状态。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## type
@@ -57,7 +51,5 @@ SIM卡类型。
 **类型：** CardType
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

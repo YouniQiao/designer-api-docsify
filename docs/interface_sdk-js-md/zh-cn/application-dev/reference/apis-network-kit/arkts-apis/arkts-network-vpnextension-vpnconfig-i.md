@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## addresses
@@ -25,8 +23,6 @@ VPN虚拟网卡的IP地址。API version 23之前，最多支持64个IP地址；
 **类型：** Array&lt;LinkAddress&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -43,8 +39,6 @@ blockedApplications?: Array<string>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## dnsAddresses
@@ -58,8 +52,6 @@ DNS服务器地址信息。当配置DNS服务器地址后，VPN启动状态下�
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -75,8 +67,6 @@ isBlocking?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## isInternal
@@ -90,8 +80,6 @@ isInternal?: boolean
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -108,8 +96,6 @@ isIPv4Accepted?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## isIPv6Accepted
@@ -125,8 +111,6 @@ isIPv6Accepted?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## mtu
@@ -140,8 +124,6 @@ mtu?: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -157,8 +139,6 @@ VPN虚拟网卡的路由信息（API version 23前最多可配置1024条路由�
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## searchDomains
@@ -172,8 +152,6 @@ DNS的搜索域列表。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -190,8 +168,6 @@ trustedApplications?: Array<string>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## vpnId
@@ -206,51 +182,4 @@ VPN唯一标识。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
-
-**示例**
-
-```TypeScript
-import { vpnExtension} from '@kit.NetworkKit';
-
-let vpnConfig: vpnExtension.VpnConfig = {
-  addresses: [],
-  vpnId: '123',
-  routes: [{
-    // 网卡名称配置为空时，系统默认将路由配置到VPN虚拟网卡。
-    // 如填写非虚拟网卡实际名称，可能导致路由配置异常。
-    interface: "vpn-tun",
-    destination: {
-      address: {
-        address:'',
-        family:1,
-        port:8080
-      },
-      prefixLength:1
-    },
-    gateway: {
-      // 网关地址配置为空时，系统默认将VPN虚拟网卡地址作为网关地址。
-      // 如需使用非VPN虚拟网卡地址，请确保地址可达，否则可能导致路由配置失败。
-      address:'',
-      family:1,
-      port:8080
-    },
-    hasGateway: true,
-    isDefaultRoute: true,
-  }],
-  mtu: 1400,
-  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
-  trustedApplications: [],
-  blockedApplications: [],
-}
-let context: vpnExtension.VpnExtensionContext;
-
-function vpnCreate(){
-  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-  vpnConnection.create(vpnConfig).then((data) => {
-    console.info("VPN create " + JSON.stringify(data));
-  })
-}
-```

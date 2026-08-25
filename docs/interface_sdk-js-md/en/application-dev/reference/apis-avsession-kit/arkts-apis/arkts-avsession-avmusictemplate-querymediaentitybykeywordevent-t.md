@@ -2,14 +2,12 @@
 
 ```TypeScript
 type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
-    pageIndex: int) => Promise<PageMediaEntity>
+    pageIndex: number) => Promise<PageMediaEntity>
 ```
 
 The query media entity by keyword event.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,7 +19,7 @@ The query media entity by keyword event.
 | --- | --- | --- |
 | keyword | string | Yes |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 
 **Return value:**
 

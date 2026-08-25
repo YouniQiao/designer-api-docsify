@@ -4,33 +4,23 @@
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## createCameraInputWithTokenId
 
-ArkTS-Dyn:
 ```TypeScript
 createCameraInputWithTokenId(camera: CameraDevice, tokenId: number): CameraInput
-```
-
-ArkTS-Sta:
-```TypeScript
-createCameraInputWithTokenId(camera: CameraDevice, tokenId: int): CameraInput
 ```
 
 Creates a CameraInput instance by camera and calling token.Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -45,7 +35,7 @@ Creates a CameraInput instance by camera and calling token.Before using this int
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
-| tokenId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| tokenId | number | Yes |
 
 **Return value:**
 
@@ -71,8 +61,6 @@ createControlCenterSession(): ControlCenterSession
 Create a ControlCenterSession instance.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
@@ -103,8 +91,6 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -128,25 +114,6 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createDepthDataOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager): camera.DepthDataOutput | undefined {
-  let profile: camera.DepthProfile = cameraOutputCapability.depthProfiles[0];
-  let depthDataOutput: camera.DepthDataOutput | undefined = undefined;
-  try {
-    depthDataOutput = cameraManager.createDepthDataOutput(profile);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The createDepthDataOutput call failed. error code: ${err.code}`);
-  }
-  return depthDataOutput;
-}
-```
-
 ## isCameraMuteSupported
 
 ```TypeScript
@@ -156,8 +123,6 @@ isCameraMuteSupported(): boolean
 Checks whether the camera device can be muted.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -175,15 +140,6 @@ Checks whether the camera device can be muted.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function isCameraMuteSupported(cameraManager: camera.CameraManager): boolean {
-  let isMuteSupported: boolean = cameraManager.isCameraMuteSupported();
-  return isMuteSupported;
-}
-```
-
 ## isControlCenterActive
 
 ```TypeScript
@@ -193,8 +149,6 @@ isControlCenterActive(): boolean
 Check if the control center active.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -222,8 +176,6 @@ Checks whether a camera device supports prelaunch.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -247,24 +199,6 @@ Checks whether a camera device supports prelaunch.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-function isPreLaunchSupported(context: common.BaseContext): boolean {
-  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
-  let cameras: Array<camera.CameraDevice> = cameraManager.getSupportedCameras();
-  let isSupported: boolean = false;
-  if (cameras && cameras.length >= 1) {
-    isSupported = cameraManager.isPrelaunchSupported(cameras[0]);
-    console.info(`PreLaunch supported states: ${isSupported}`);
-    return isSupported;
-  }
-  return isSupported;
-}
-```
-
 ## muteCamera
 
 ```TypeScript
@@ -274,8 +208,6 @@ muteCamera(mute: boolean): void
 Mutes or unmutes the camera device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 
@@ -291,15 +223,6 @@ Mutes or unmutes the camera device.
 | --- | --- | --- |
 | mute | boolean | Yes |
 
-**Examples**
-
-```TypeScript
-function muteCamera(cameraManager: camera.CameraManager): void {
-  let mute: boolean = true;
-  cameraManager.muteCamera(mute);
-}
-```
-
 ## muteCameraPersistent
 
 ```TypeScript
@@ -309,8 +232,6 @@ muteCameraPersistent(mute: boolean, type: PolicyType): void
 Mutes the camera device permanently.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
@@ -323,7 +244,7 @@ Mutes the camera device permanently.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mute | boolean | Yes |
-| type | [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md) | Yes |
+| type | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | Yes |
 
 **Error codes:**
 
@@ -332,15 +253,6 @@ Mutes the camera device permanently.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-function muteCameraPersistent(cameraManager: camera.CameraManager): void {
-  let mute: boolean = true;
-  cameraManager.muteCameraPersistent(mute, camera.PolicyType.PRIVACY);
-}
-```
 
 ## off('cameraMute')
 
@@ -351,8 +263,6 @@ off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
 Unsubscribes from camera mute status events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -371,20 +281,6 @@ Unsubscribes from camera mute status events.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, curMuted: boolean): void {
-  let isMuted: boolean = curMuted;
-}
-
-function unregisterCameraMute(cameraManager: camera.CameraManager): void {
-  cameraManager.off('cameraMute', callback);
-}
-```
-
 ## off('controlCenterStatusChange')
 
 ```TypeScript
@@ -394,8 +290,6 @@ off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
 Unsubscribes control center status change event callback.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -414,17 +308,17 @@ Unsubscribes control center status change event callback.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## offCameraMute
+## offCameraSharedStatus
 
 ```TypeScript
-offCameraMute(callback?: AsyncCallback<boolean>): void
+offCameraSharedStatus(callback?: Callback<CameraSharedStatusInfo>): void
 ```
 
-Unsubscribes from camera mute change event callback.
+Unsubscribes from camera shared status change event callback.
 
-**Since:** 23
+**Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -434,35 +328,7 @@ Unsubscribes from camera mute change event callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offControlCenterStatusChange
-
-```TypeScript
-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes control center status change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)&gt; | No |
 
 **Error codes:**
 
@@ -480,8 +346,6 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -499,25 +363,6 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, curMuted: boolean): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  let isMuted: boolean = curMuted;
-  console.info(`cameraMute status: ${isMuted}`);
-}
-
-function registerCameraMute(cameraManager: camera.CameraManager): void {
-  cameraManager.on('cameraMute', callback);
-}
-```
-
 ## on('controlCenterStatusChange')
 
 ```TypeScript
@@ -527,8 +372,6 @@ on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
 Subscribes control center status change event callback.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -547,17 +390,17 @@ Subscribes control center status change event callback.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## onCameraMute
+## onCameraSharedStatus
 
 ```TypeScript
-onCameraMute(callback: AsyncCallback<boolean>): void
+onCameraSharedStatus(callback: Callback<CameraSharedStatusInfo>): void
 ```
 
-Subscribes camera mute change event callback.
+Subscribes camera shared status change event callback.
 
-**Since:** 23
+**Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -567,35 +410,7 @@ Subscribes camera mute change event callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onControlCenterStatusChange
-
-```TypeScript
-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void
-```
-
-Subscribes control center status change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
@@ -613,8 +428,6 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -625,24 +438,6 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function preLaunch(context: common.BaseContext): void {
-  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
-  try {
-    cameraManager.prelaunch();
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`prelaunch error. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
 ## preSwitchCamera
 
 ```TypeScript
@@ -652,8 +447,6 @@ preSwitchCamera(cameraId: string): void
 Pre-switches a camera device to speed up its startup.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -673,23 +466,6 @@ Pre-switches a camera device to speed up its startup.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function preSwitch(cameraDevice: camera.CameraDevice, context: common.BaseContext): void {
-  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
-  try {
-    cameraManager.preSwitchCamera(cameraDevice.cameraId);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`prelaunch error. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
 ## setPrelaunchConfig
 
 ```TypeScript
@@ -699,8 +475,6 @@ setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void
 Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](#isprelaunchsupported) to check whether the camera device supports prelaunch.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -722,26 +496,3 @@ Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](#i
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setPrelaunchConfig(context: common.BaseContext): void {
-  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
-  let cameras: Array<camera.CameraDevice> = cameraManager.getSupportedCameras();
-  if (cameras && cameras.length >= 1) {
-    let cameraDevice: camera.CameraDevice = cameras[0];
-    if(cameraManager.isPrelaunchSupported(cameraDevice)) {
-      try {
-        cameraManager.setPrelaunchConfig({cameraDevice: cameraDevice});
-      } catch (error) {
-        let err = error as BusinessError;
-        console.error(`setPrelaunchConfig error. Code: ${err.code}, message: ${err.message}`);
-      }
-    }
-  }
-}
-```

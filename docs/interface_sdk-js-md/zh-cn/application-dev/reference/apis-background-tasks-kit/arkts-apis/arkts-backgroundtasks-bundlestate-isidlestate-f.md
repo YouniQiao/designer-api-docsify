@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -16,8 +16,6 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -29,32 +27,6 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 | bundleName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-// 三方应用使用示例代码时，注意将bundleName更换为自己应用的bundleName
-bundleState.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE isIdleState callback failed, because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-// 三方应用使用示例代码时，注意将bundleName更换为自己应用的bundleName
-bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
-});
-```
-
 
 ## isIdleState
 
@@ -65,8 +37,6 @@ function isIdleState(bundleName: string): Promise<boolean>
 判断指定bundleName的应用当前是否是空闲状态，三方应用只能查询自身的空闲状态。系统应用支持查询其他应用的空闲状态，查询前需要申请权限ohos.permission.BUNDLE_ACTIVE_INFO，使用Promise异 步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -83,7 +53,3 @@ function isIdleState(bundleName: string): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isIdleState](#isidlestate)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getUkeyPinAuthState
@@ -15,8 +15,6 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 获取PIN码认证状态。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -46,16 +44,3 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = "{\"providerName\":\"testProviderName\", \"bundleName\":\"com.example.cryptoapplication\", \"abilityName\":\"CryptoExtension\",\"index\":{\"key\":\"testKey\"}}";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-huksExternalCrypto.getUkeyPinAuthState(testResourceId, extProperties)
-    .then((data) => {
-      console.info(`promise: getUkeyPinAuthState success, data: ${data}`);
-    });
-```

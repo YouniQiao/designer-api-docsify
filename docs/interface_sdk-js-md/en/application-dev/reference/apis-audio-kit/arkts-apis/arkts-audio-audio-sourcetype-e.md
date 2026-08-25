@@ -4,8 +4,6 @@ Enumerates the types of audio streams captured.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_INVALID
@@ -17,8 +15,6 @@ SOURCE_TYPE_INVALID = -1
 Invalid audio source.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Mic source.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_VOICE_RECOGNITION
@@ -46,8 +40,6 @@ Voice recognition source.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_PLAYBACK_CAPTURE
@@ -59,8 +51,6 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 Playback capture source type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 
@@ -78,8 +68,6 @@ Voice communication source. (The 3A algorithm is not enabled if recording is sta
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_VOICE_MESSAGE
@@ -91,8 +79,6 @@ SOURCE_TYPE_VOICE_MESSAGE = 10
 Voice message source.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -106,8 +92,6 @@ Camcorder source type.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_UNPROCESSED
@@ -120,8 +104,6 @@ Unprocessed source type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_LIVE
@@ -133,7 +115,5 @@ SOURCE_TYPE_LIVE = 17
 Live broadcast source type.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

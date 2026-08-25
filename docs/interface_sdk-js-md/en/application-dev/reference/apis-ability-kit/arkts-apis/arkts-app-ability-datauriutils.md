@@ -4,14 +4,12 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from '@kit.AbilityKit';
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

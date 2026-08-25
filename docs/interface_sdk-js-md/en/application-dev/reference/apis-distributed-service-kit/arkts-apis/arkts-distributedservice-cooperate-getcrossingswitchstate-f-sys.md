@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## getCrossingSwitchState
@@ -15,8 +15,6 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -40,40 +38,6 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCrossingSwitchState(deviceDescriptor, (error: BusinessError, data: boolean) => {
-    if (error) {
-      console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCrossingSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## getCrossingSwitchState
 
@@ -84,8 +48,6 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 Obtains the screen hopping status of the target device. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -113,7 +75,3 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getCrossingSwitchState](#getcrossingswitchstate)

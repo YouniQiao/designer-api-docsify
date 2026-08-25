@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyNormalAttribute
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: T): void
 定义正常态更新属性函数，在AttributeUpdater后续更新属性时触发。不建议在同一组件上同时用属性直通更新和属性方法设置相同属性，否则易出现混淆。当与属性方法同时设置时，属性生效的原则为后设置的生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ AttributeUpdater首次设置给组件时提供的样式。不建议在同一组�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -58,59 +52,6 @@ AttributeUpdater首次设置给组件时提供的样式。不建议在同一组�
 | --- | --- | --- |
 | instance | T | 是 |
 
-**示例**
-
-通过initializeModifier方法初始化设置属性值。
-
-```TypeScript
-// xxx.ets
-import { AttributeUpdater } from '@kit.ArkUI';
-
-class MyButtonModifier extends AttributeUpdater<ButtonAttribute> {
-  // 该AttributeUpdater对象第一次使用的时候触发的回调
-  initializeModifier(instance: ButtonAttribute): void {
-    instance.backgroundColor('#ffd5d5d5')
-      .labelStyle({ maxLines: 3 })
-      .width('80%');
-  }
-
-  // 该AttributeUpdater对象后续使用或者更新的时候触发的回调
-  applyNormalAttribute(instance: ButtonAttribute): void {
-    instance.borderWidth(1);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  modifier: MyButtonModifier = new MyButtonModifier();
-  @State flushTheButton: string = 'Button';
-
-  build() {
-    Row() {
-      Column() {
-        Button(this.flushTheButton)
-          .attributeModifier(this.modifier)
-          .onClick(() => {
-            // 通过AttributeUpdater的attribute对属性进行修改
-            // 需要注意先通过组件的attributeModifier属性方法建立组件与AttributeUpdater绑定关系
-            this.modifier.attribute?.backgroundColor('#ff2787d9').labelStyle({ maxLines: 5 });
-          })
-          .margin('10%')
-        Button('Trigger Button Update')
-          .width('80%')
-          .labelStyle({ maxLines: 2 })
-          .onClick(() => {
-            this.flushTheButton = this.flushTheButton + ' Updated';
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## onComponentChanged
 
 ```TypeScript
@@ -120,8 +61,6 @@ onComponentChanged(component: T): void
 当多个组件绑定同一个自定义AttributeUpdater对象，且绑定的组件发生切换时，通过该接口通知应用。需注意一个AttributeUpdater对象只能同时关联一个组件，否则将出现设置的属性只在一个组件上生效的现象。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -133,56 +72,7 @@ onComponentChanged(component: T): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [component](arkts-arkui-interop-compatiblecomponentinfo-i.md) | T | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { AttributeUpdater } from '@kit.ArkUI';
-
-class MyButtonModifier extends AttributeUpdater<ButtonAttribute> {
-  initializeModifier(instance: ButtonAttribute): void {
-    instance.backgroundColor('#ff2787d9')
-      .width('50%')
-      .height(30);
-  }
-
-  onComponentChanged(component: ButtonAttribute): void {
-    component.backgroundColor('#ff519db4')
-      .width('50%')
-      .height(30);
-  }
-}
-
-@Entry
-@Component
-struct UpdaterDemo4 {
-  @State btnState: boolean = false;
-  modifier: MyButtonModifier = new MyButtonModifier();
-
-  build() {
-    Row() {
-      Column() {
-        Button('Test')
-          .onClick(() => {
-            this.btnState = !this.btnState;
-          }).margin({ bottom: 20 })
-
-        if (this.btnState) {
-          Button('Button')
-            .attributeModifier(this.modifier)
-        } else {
-          Button('Button')
-            .attributeModifier(this.modifier)
-        }
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| component | T | 是 |
 
 ## attribute
 
@@ -195,8 +85,6 @@ get attribute(): T | undefined
 **类型：** T
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -215,8 +103,6 @@ C代表组件的构造函数类型，比如Text组件的TextInterface，Image组
 **类型：** C
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

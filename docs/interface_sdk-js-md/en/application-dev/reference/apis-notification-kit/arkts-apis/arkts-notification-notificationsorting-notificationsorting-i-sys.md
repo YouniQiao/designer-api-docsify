@@ -4,8 +4,6 @@ The **NotificationSorting** module provides APIs for defining the sorting inform
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Unique ID of the notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,16 +27,14 @@ Unique ID of the notification.
 ## ranking
 
 ```TypeScript
-readonly ranking: long
+readonly ranking: number
 ```
 
 Notification level. If this parameter is not set, the default value is used based on the notification slot type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -57,8 +51,6 @@ Notification slot type.
 **Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

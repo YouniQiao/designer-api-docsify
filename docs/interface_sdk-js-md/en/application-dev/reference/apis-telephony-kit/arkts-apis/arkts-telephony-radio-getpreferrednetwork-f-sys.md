@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getPreferredNetwork
 
 ```TypeScript
-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void
+function getPreferredNetwork(slotId: number, callback: AsyncCallback<PreferredNetworkMode>): void
 ```
 
 Get the preferred network for the specified SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Get the preferred network for the specified SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md)&gt; | Yes |
 
 **Error codes:**
@@ -43,44 +41,16 @@ Get the preferred network for the specified SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getPreferredNetwork(slotId, (err: BusinessError, data: radio.PreferredNetworkMode) => {
-    if (err) {
-        console.error(`getPreferredNetwork failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getPreferredNetwork success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getPreferredNetwork(slotId).then((data: radio.PreferredNetworkMode) => {
-    console.info(`getPreferredNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getPreferredNetwork
 
 ```TypeScript
-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>
+function getPreferredNetwork(slotId: number): Promise<PreferredNetworkMode>
 ```
 
 Get the preferred network for the specified SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ Get the preferred network for the specified SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -111,7 +81,3 @@ Get the preferred network for the specified SIM card slot.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getPreferredNetwork](#getpreferrednetwork)

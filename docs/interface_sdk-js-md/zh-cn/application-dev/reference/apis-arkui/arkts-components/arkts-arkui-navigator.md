@@ -17,11 +17,9 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 13
 
-**替代接口：** NavPathInfo
+**替代接口：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,11 +41,9 @@ Navigator()
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 13
 
-**替代接口：** NavigationAttribute
+**替代接口：** [NavigationAttribute](arkts-arkui-navigation-attribute.md#navigationattribute)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

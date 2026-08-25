@@ -4,8 +4,6 @@ AI Image Model Abstract Interface.@interface ImageGenerationModel
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,20 +11,18 @@ AI Image Model Abstract Interface.@interface ImageGenerationModel
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## cancelImageGeneration
 
 ```TypeScript
-cancelImageGeneration(sessionId: int): void
+cancelImageGeneration(sessionId: number): void
 ```
 
 Cancel AI image generation task.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Get the types of image styles supported by the AI model.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -67,14 +61,12 @@ Get the types of image styles supported by the AI model.
 ## onComplain
 
 ```TypeScript
-onComplain(sessionId: int, request: GenerateImageTaskParams, result: GenerateImageTaskResult): void
+onComplain(sessionId: number, request: GenerateImageTaskParams, result: GenerateImageTaskResult): void
 ```
 
 User use complaint menu to complain the result of an AI-generated image task.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,15 +85,13 @@ User use complaint menu to complain the result of an AI-generated image task.
 ## requestImageGeneration
 
 ```TypeScript
-requestImageGeneration(sessionId: int, params: GenerateImageTaskParams,
+requestImageGeneration(sessionId: number, params: GenerateImageTaskParams,
       callback: Callback<GenerateImageTaskPartialResult>): void
 ```
 
 Request AI image generation task to get the generated image.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,8 +15,6 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
@@ -30,34 +28,6 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 | templateName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let templateName: string = 'process';
-function isSupportTemplateCallback(err: Base.BusinessError, data: boolean) {
-  if (err) {
-    console.error("isSupportTemplate failed " + JSON.stringify(err));
-  } else {
-    console.info("isSupportTemplate success");
-  }
-}
-
-Notification.isSupportTemplate(templateName, isSupportTemplateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let templateName: string = 'process';
-Notification.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info("isSupportTemplate success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err}`);
-});
-```
-
 
 ## isSupportTemplate
 
@@ -68,8 +38,6 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -88,7 +56,3 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isSupportTemplate](#issupporttemplate)

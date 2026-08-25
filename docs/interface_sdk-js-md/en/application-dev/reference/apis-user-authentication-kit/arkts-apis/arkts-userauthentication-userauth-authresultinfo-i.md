@@ -4,8 +4,6 @@ Represents the authentication result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
@@ -15,7 +13,7 @@ Represents the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## lockoutDuration
@@ -29,8 +27,6 @@ Lock duration of the authentication operation, in ms.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -50,8 +46,6 @@ Number of remaining authentication attempts.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingauthattempts)
@@ -70,8 +64,6 @@ Authentication result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [result](arkts-userauthentication-userauth-userauthresult-i.md#result)
@@ -89,8 +81,6 @@ Token that has passed the user identity authentication.
 **Type:** Uint8Array
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 

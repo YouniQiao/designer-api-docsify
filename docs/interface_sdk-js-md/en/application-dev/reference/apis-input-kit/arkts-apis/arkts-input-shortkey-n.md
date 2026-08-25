@@ -4,8 +4,6 @@ The shortKey module provides APIs to set the delay for starting an ability using
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.ShortKey
 
 **System API:** This is a system API.
@@ -13,8 +11,8 @@ The shortKey module provides APIs to set the delay for starting an ability using
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { FingerprintEvent } from '@kit.InputKit';
+import { shortKey } from 'kits/@kit.InputKit';
+import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

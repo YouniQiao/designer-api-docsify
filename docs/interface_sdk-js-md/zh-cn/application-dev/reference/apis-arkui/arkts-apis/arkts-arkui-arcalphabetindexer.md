@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexer-f.md) |
-| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexer-f.md) |
 
 ### 类
 
@@ -25,7 +18,6 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |
 | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) |
 | [ArcAlphabetIndexerInterface](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinterface-i.md) |
 
@@ -39,5 +31,5 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-con.md#arcalphabetindexer) |
+| [ArcAlphabetIndexer](arkts-arkui-arkui-arcalphabetindexer-con.md) |
 | [ArcAlphabetIndexerInstance](arkts-arkui-arkui-arcalphabetindexer-con.md#arcalphabetindexerinstance) |

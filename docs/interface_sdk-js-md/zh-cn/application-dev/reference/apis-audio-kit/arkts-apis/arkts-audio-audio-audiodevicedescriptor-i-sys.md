@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -26,8 +24,6 @@ readonly dmDeviceInfo?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -37,16 +33,14 @@ readonly dmDeviceInfo?: string
 ## dmDeviceType
 
 ```TypeScript
-readonly dmDeviceType?: int
+readonly dmDeviceType?: number
 ```
 
 设备的子类型ID。SystemCapability.Multimedia.Audio.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -64,8 +58,6 @@ readonly highQualityRecordingSupported?: boolean
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ readonly highQualityRecordingSupported?: boolean
 ## interruptGroupId
 
 ```TypeScript
-readonly interruptGroupId: int
+readonly interruptGroupId: number
 ```
 
 设备所处的焦点组ID。SystemCapability.Multimedia.Audio.Device
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -100,8 +90,6 @@ readonly networkId: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -109,16 +97,14 @@ readonly networkId: string
 ## volumeGroupId
 
 ```TypeScript
-readonly volumeGroupId: int
+readonly volumeGroupId: number
 ```
 
 设备所处的音量组ID。SystemCapability.Multimedia.Audio.Device
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

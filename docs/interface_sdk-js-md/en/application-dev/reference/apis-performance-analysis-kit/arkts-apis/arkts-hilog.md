@@ -4,14 +4,12 @@ The HiLog subsystem allows your applications or services to output logs based on
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary
@@ -22,23 +20,18 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | --- |
 | [clean](arkts-performanceanalysis-hilog-clean-f.md) |
 | [debug](arkts-performanceanalysis-hilog-debug-f.md) |
-| [debug](arkts-performanceanalysis-hilog-debug-f.md) |
 | [error](arkts-performanceanalysis-hilog-error-f.md) |
-| [error](arkts-performanceanalysis-hilog-error-f.md) |
-| [fatal](arkts-performanceanalysis-hilog-fatal-f.md) |
 | [fatal](arkts-performanceanalysis-hilog-fatal-f.md) |
 | [flush](arkts-performanceanalysis-hilog-flush-f.md) |
 | [getLogFile](arkts-performanceanalysis-hilog-getlogfile-f.md) |
 | [getOutputDir](arkts-performanceanalysis-hilog-getoutputdir-f.md) |
 | [getOutputType](arkts-performanceanalysis-hilog-getoutputtype-f.md) |
 | [info](arkts-performanceanalysis-hilog-info-f.md) |
-| [info](arkts-performanceanalysis-hilog-info-f.md) |
 | [isLoggable](arkts-performanceanalysis-hilog-isloggable-f.md) |
 | [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) |
 | [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md) |
 | [setOutputType](arkts-performanceanalysis-hilog-setoutputtype-f.md) |
 | [setOutputTypeByDomainID](arkts-performanceanalysis-hilog-setoutputtypebydomainid-f.md) |
-| [warn](arkts-performanceanalysis-hilog-warn-f.md) |
 | [warn](arkts-performanceanalysis-hilog-warn-f.md) |
 
 ### Enums

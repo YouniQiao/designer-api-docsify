@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getSystemConfig
@@ -15,8 +15,6 @@ function getSystemConfig(name: number): number
 Obtains the system configuration.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,16 +33,3 @@ Obtains the system configuration.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let _SC_ARG_MAX = 0;
-let pres = process.getSystemConfig(_SC_ARG_MAX);
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let _SC_ARG_MAX = 0;
-let pres = pro.getSystemConfig(_SC_ARG_MAX);
-```

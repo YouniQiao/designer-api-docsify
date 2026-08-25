@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -16,8 +16,6 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -26,7 +24,7 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | 是 |
+| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 是 |
 
 **返回值：**
 
@@ -39,30 +37,3 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let resource: sendableResourceManager.Resource = sendableResourceManager.sendableResourceToResource(sendableResourceManager.resourceToSendableResource($r('app.string.test')));
-} catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error(`sendableResourceToResource failed, error code: ${code}, message: ${message}.`);
-}
-```

@@ -10,8 +10,6 @@ Preferences的存储模式枚举。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## XML
@@ -24,8 +22,6 @@ XML = 0
 **特点：** 数据以XML格式进行存储。对数据的操作发生在内存中，需要调用[flush](arkts-arkdata-preferences-preferences-i.md#flush) 接口进行落盘。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -41,8 +37,6 @@ GSKV
 **特点：** 数据以GSKV数据库模式进行存储。对数据的操作实时落盘，无需调用 [flush](arkts-arkdata-preferences-preferences-i.md#flush)接口对数据进行落盘。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

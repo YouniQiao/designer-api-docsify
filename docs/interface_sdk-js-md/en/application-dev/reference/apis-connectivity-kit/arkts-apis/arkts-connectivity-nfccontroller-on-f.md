@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on("nfcStateChange")
@@ -15,8 +15,6 @@ function on(type: "nfcStateChange", callback: Callback<NfcState>): void
 Enables listening for NFC state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

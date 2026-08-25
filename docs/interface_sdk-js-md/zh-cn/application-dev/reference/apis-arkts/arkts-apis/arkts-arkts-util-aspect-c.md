@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## addAfter
@@ -23,8 +21,6 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 在类对象的方法后插入一个函数。最终的返回值为被插入函数的返回值。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -39,62 +35,6 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 | [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
 | [after](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Function | 是 |
 
-**示例**
-
-```TypeScript
-class MyClass {
-  msg: string = 'msg000';
-  foo(arg: string): string {
-    console.info('foo arg is ' + arg);
-    return this.msg;
-  }
-}
-
-let asp = new MyClass();
-let result = asp.foo('123');
-// 输出结果：foo arg is 123
-console.info('result is ' + result);
-// 输出结果：result is msg000
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg000
-
-util.Aspect.addAfter(MyClass, 'foo', false, (instance: MyClass, ret: string, arg: string): string => {
-  console.info('arg is ' + arg);
-  console.info('ret is ' + ret);
-  instance.msg = 'msg111';
-  console.info('msg is changed to ' + instance.msg);
-  return 'msg222';
-});
-
-result = asp.foo('123');
-// 输出结果：foo arg is 123
-// 输出结果：arg is 123
-// 输出结果：ret is msg000
-// 输出结果：msg is changed to msg111
-console.info('result is ' + result);
-// 输出结果：result is msg222
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg111
-
-// 分别添加前置和后置插桩的例子
-class AroundTest {
-  foo(arg: string) {
-    console.info('execute foo with arg ' + arg);
-  }
-}
-util.Aspect.addBefore(AroundTest, 'foo', false, () => {
-  console.info('execute before');
-});
-util.Aspect.addAfter(AroundTest, 'foo', false, () => {
-  console.info('execute after');
-});
-
-(new AroundTest()).foo('hello');
-// 输出结果：execute before
-// 输出结果：execute foo with arg hello
-// 输出结果：execute after
-```
-
 ## addBefore
 
 ```TypeScript
@@ -104,8 +44,6 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 在类对象的方法前插入一个函数。被插入的函数会先于类对象的原方法执行。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,71 +58,6 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 | [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
 | before | Function | 是 |
 
-**示例**
-
-```TypeScript
-class MyClass {
-  msg: string = 'msg000';
-  foo(arg: string): string {
-    console.info('foo arg is ' + arg);
-    return this.msg;
-  }
-
-  static data: string = 'data000';
-  static bar(arg: string): string {
-    console.info('bar arg is ' + arg);
-    return MyClass.data;
-  }
-}
-
-let asp = new MyClass();
-let result = asp.foo('123');
-// 输出结果：foo arg is 123
-console.info('result is ' + result);
-// 输出结果：result is msg000
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg000
-
-util.Aspect.addBefore(MyClass, 'foo', false, (instance: MyClass, arg: string) => {
-  console.info('arg is ' + arg);
-  instance.msg = 'msg111';
-  console.info('msg is changed to ' + instance.msg);
-});
-
-result = asp.foo('123');
-// 输出结果：arg is 123
-// 输出结果：msg is changed to msg111
-// 输出结果：foo arg is 123
-console.info('result is ' + result);
-// 输出结果：result is msg111
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg111
-
-
-let res = MyClass.bar('456');
-// 输出结果：bar arg is 456
-console.info('res is ' + res);
-// 输出结果：res is data000
-console.info('MyClass.data is ' + MyClass.data);
-// 输出结果：MyClass.data is data000
-
-util.Aspect.addBefore(MyClass, 'bar', true, (target: Object, arg: string) => {
-  console.info('arg is ' + arg);
-  let newVal = 'data111';
-  Reflect.set(target, 'data', newVal);
-  console.info('data is changed to ' + newVal);
-});
-
-res = MyClass.bar('456');
-// 输出结果：arg is 456
-// 输出结果：data is changed to data111
-// 输出结果：bar arg is 456
-console.info('res is ' + res);
-// 输出结果：res is data111
-console.info('MyClass.data is ' + MyClass.data);
-// 输出结果：MyClass.data is data111
-```
-
 ## replace
 
 ```TypeScript
@@ -194,8 +67,6 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 使用另一个函数替换类对象的方法。替换后，仅执行新函数的逻辑。最终的返回值为新函数的返回值。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -209,40 +80,3 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 | methodName | string | 是 |
 | [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
 | instead | Function | 是 |
-
-**示例**
-
-```TypeScript
-class MyClass {
-  msg: string = 'msg000';
-  foo(arg: string): string {
-    console.info('foo arg is ' + arg);
-    return this.msg;
-  }
-}
-
-let asp = new MyClass();
-let result = asp.foo('123');
-// 输出结果：foo arg is 123
-console.info('result is ' + result);
-// 输出结果：result is msg000
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg000
-
-util.Aspect.replace(MyClass, 'foo', false, (instance: MyClass, arg: string): string => {
-  console.info('execute instead');
-  console.info('arg is ' + arg);
-  instance.msg = 'msg111';
-  console.info('msg is changed to ' + instance.msg);
-  return 'msg222';
-});
-
-result = asp.foo('123');
-// 输出结果：execute instead
-// 输出结果：arg is 123
-// 输出结果：msg is changed to msg111
-console.info('result is ' + result);
-// 输出结果：result is msg222
-console.info('asp.msg is ' + asp.msg);
-// 输出结果：asp.msg is msg111
-```

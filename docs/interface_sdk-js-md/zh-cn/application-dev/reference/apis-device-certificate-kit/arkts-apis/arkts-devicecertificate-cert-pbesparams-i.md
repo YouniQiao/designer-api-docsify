@@ -4,14 +4,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## encryptionAlgorithm
@@ -28,8 +26,6 @@ encryptionAlgorithm?: PbesEncryptionAlgorithm
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
@@ -37,18 +33,16 @@ encryptionAlgorithm?: PbesEncryptionAlgorithm
 ## iterations
 
 ```TypeScript
-iterations?: int
+iterations?: number
 ```
 
 表示迭代次数。默认为2048。 取值应为正整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** 2048
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
@@ -57,18 +51,16 @@ iterations?: int
 ## saltLen
 
 ```TypeScript
-saltLen?: int
+saltLen?: number
 ```
 
 表示盐值长度。默认为16，最小值为8。 取值应为≥8的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** 16
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 

@@ -1,7 +1,5 @@
 # NumberFormatOptions
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@ currency?: string | undefined
 
 **Type:** string \| undefined
 
-**ArkTS mode:** 
-
 ## currencySign
 
 ```TypeScript
@@ -24,8 +20,6 @@ currencySign?: string | undefined
 ```
 
 **Type:** string \| undefined
-
-**ArkTS mode:** 
 
 ## localeMatcher
 
@@ -35,8 +29,6 @@ localeMatcher?: string | undefined
 
 **Type:** string \| undefined
 
-**ArkTS mode:** 
-
 ## maximumFractionDigits
 
 ```TypeScript
@@ -44,8 +36,6 @@ maximumFractionDigits?: number | undefined
 ```
 
 **Type:** number \| undefined
-
-**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -55,8 +45,6 @@ maximumSignificantDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**ArkTS mode:** 
-
 ## minimumFractionDigits
 
 ```TypeScript
@@ -64,8 +52,6 @@ minimumFractionDigits?: number | undefined
 ```
 
 **Type:** number \| undefined
-
-**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -75,8 +61,6 @@ minimumIntegerDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**ArkTS mode:** 
-
 ## minimumSignificantDigits
 
 ```TypeScript
@@ -84,8 +68,6 @@ minimumSignificantDigits?: number | undefined
 ```
 
 **Type:** number \| undefined
-
-**ArkTS mode:** 
 
 ## numberingSystem
 
@@ -95,8 +77,6 @@ numberingSystem?: string | undefined
 
 **Type:** string \| undefined
 
-**ArkTS mode:** 
-
 ## roundingIncrement
 
 ```TypeScript
@@ -104,8 +84,6 @@ roundingIncrement?: number | undefined
 ```
 
 **Type:** number \| undefined
-
-**ArkTS mode:** 
 
 ## roundingMode
 
@@ -115,8 +93,6 @@ roundingMode?: string | undefined
 
 **Type:** string \| undefined
 
-**ArkTS mode:** 
-
 ## roundingPriority
 
 ```TypeScript
@@ -124,8 +100,6 @@ roundingPriority?: string | undefined
 ```
 
 **Type:** string \| undefined
-
-**ArkTS mode:** 
 
 ## style
 
@@ -135,8 +109,6 @@ style?: string | undefined
 
 **Type:** string \| undefined
 
-**ArkTS mode:** 
-
 ## useGrouping
 
 ```TypeScript
@@ -144,5 +116,3 @@ useGrouping?: boolean | undefined
 ```
 
 **Type:** boolean \| undefined
-
-**ArkTS mode:** 

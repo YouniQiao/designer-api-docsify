@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
 
 ```TypeScript
-import { formBindingData } from '@kit.FormKit';
+import { formBindingData } from 'kits/@kit.FormKit';
 ```
 
 ## 汇总
@@ -20,7 +18,6 @@ import { formBindingData } from '@kit.FormKit';
 
 | 名称 |
 | --- |
-| [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-f.md) |
 | [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-f.md) |
 
 ### 接口

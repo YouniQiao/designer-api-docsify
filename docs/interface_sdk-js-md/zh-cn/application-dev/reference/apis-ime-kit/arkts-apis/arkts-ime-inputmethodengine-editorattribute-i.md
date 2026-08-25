@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ readonly abilityName?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,8 +38,6 @@ readonly bundleName?: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## capitalizeMode
@@ -58,8 +52,6 @@ readonly capitalizeMode?: CapitalizeMode
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## consumeKeyEvents
@@ -68,13 +60,13 @@ readonly capitalizeMode?: CapitalizeMode
 readonly consumeKeyEvents?: boolean
 ```
 
-编辑框是否具有完整处理字母、字符、功能等按键的能力。 <br> <br>- 值为true，表示具备此能力。 <br>- 值为false，表示不具备此能力。
+编辑框是否具有完整处理字母、字符、功能等按键的能力。   
+- 值为true，表示具备此能力。   
+- 值为false，表示不具备此能力。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,32 +75,28 @@ readonly consumeKeyEvents?: boolean
 ## displayId
 
 ```TypeScript
-readonly displayId?: long
+readonly displayId?: number
 ```
 
 编辑框设置窗口对应的屏幕ID。如果没有设置windowId，取当前焦点窗口屏幕ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## enterKeyType
 
 ```TypeScript
-readonly enterKeyType: int
+readonly enterKeyType: number
 ```
 
 编辑框的功能属性。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -124,8 +112,6 @@ readonly extraConfig?: InputMethodExtraConfig
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## gradientMode
@@ -139,8 +125,6 @@ readonly gradientMode?: GradientMode
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -156,23 +140,19 @@ readonly immersiveMode?: ImmersiveMode
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## inputPattern
 
 ```TypeScript
-readonly inputPattern: int
+readonly inputPattern: number
 ```
 
 编辑框的文本属性。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -182,13 +162,13 @@ readonly inputPattern: int
 isTextPreviewSupported: boolean
 ```
 
-编辑框是否支持预上屏。 <br> <br>- 值为true，表示支持。 <br>- 值为false，表示不支持。
+编辑框是否支持预上屏。   
+- 值为true，表示支持。   
+- 值为false，表示不支持。
 
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -204,22 +184,18 @@ readonly placeholder?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## windowId
 
 ```TypeScript
-readonly windowId?: int
+readonly windowId?: number
 ```
 
 编辑框设置所属窗口ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

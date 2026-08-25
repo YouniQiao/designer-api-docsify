@@ -15,8 +15,6 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)
@@ -31,47 +29,9 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enableDistributedByBundleCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("enableDistributedByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("enableDistributedByBundle success");
-  }
-};
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-let enable: boolean = true;
-
-Notification.enableDistributedByBundle(bundle, enable, enableDistributedByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enable: boolean = true;
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-Notification.enableDistributedByBundle(bundle, enable).then(() => {
-  console.info("enableDistributedByBundle success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`enableDistributedByBundle failed, code is ${err}`);
-});
-```
 
 
 ## enableDistributedByBundle
@@ -84,8 +44,6 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)
@@ -100,7 +58,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -108,7 +66,3 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [enableDistributedByBundle](#enabledistributedbybundle)

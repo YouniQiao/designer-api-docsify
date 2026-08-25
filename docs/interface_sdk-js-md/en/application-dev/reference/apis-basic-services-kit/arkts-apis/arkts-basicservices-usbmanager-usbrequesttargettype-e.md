@@ -4,8 +4,6 @@ Enumerates request target types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_DEVICE
@@ -17,8 +15,6 @@ USB_REQUEST_TARGET_DEVICE = 0
 Device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,8 +28,6 @@ Interface.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_ENDPOINT
@@ -46,8 +40,6 @@ Endpoint.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_OTHER
@@ -59,7 +51,5 @@ USB_REQUEST_TARGET_OTHER = 3
 Other.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

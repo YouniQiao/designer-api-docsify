@@ -4,14 +4,12 @@ The wantConstant module provides the actions, entities, and flags used in Want o
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## Modules to Import
 
 ```TypeScript
-import { wantConstant } from '@kit.AbilityKit';
+import { wantConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -11,14 +11,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { ApplicationStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onApplicationBackground
@@ -31,108 +29,11 @@ onApplicationBackground(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let applicationStateChangeCallback: ApplicationStateChangeCallback = {
-  onApplicationForeground() {
-    console.info('applicationStateChangeCallback onApplicationForeground');
-  },
-  onApplicationBackground() {
-    console.info('applicationStateChangeCallback onApplicationBackground');
-  }
-};
-
-export default class MyAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    // 1.获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 2.通过applicationContext注册当前进程状态监听
-      if (applicationContext != undefined) {
-        applicationContext.on('applicationStateChange', applicationStateChangeCallback);
-      }
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info('Register applicationStateChangeCallback');
-  }
-  onDestroy() {
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 1.通过applicationContext解除注册当前进程状态监听
-      if (applicationContext != undefined) {
-        applicationContext.off('applicationStateChange', applicationStateChangeCallback);
-      } 
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ApplicationStateChangeCallbackCustom implements ApplicationStateChangeCallback {
-  onApplicationForeground() {
-    console.info('applicationStateChangeCallback onApplicationForeground');
-  }
-
-  onApplicationBackground() {
-    console.info('applicationStateChangeCallback onApplicationBackground');
-  }
-}
-
-export default class MyAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    // 1.获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    let applicationStateChangeCallback = new ApplicationStateChangeCallbackCustom();
-    try {
-      // 2.通过applicationContext注册应用前后台状态监听
-      if (applicationContext != undefined) {
-        applicationContext.onApplicationStateChange(applicationStateChangeCallback);
-      }
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info('Register applicationStateChangeCallback');
-  }
-
-  onDestroy(): Promise<void> {
-    let applicationContext = this.context.getApplicationContext();
-    let applicationStateChangeCallback = new ApplicationStateChangeCallbackCustom();
-    try {
-      // 1.通过applicationContext解除注册应用前后台状态监听
-      if (applicationContext != undefined) {
-        applicationContext.offApplicationStateChange(applicationStateChangeCallback);
-      }
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
 
 ## onApplicationForeground
 
@@ -143,8 +44,6 @@ onApplicationForeground(): void
 当前进程从后台切换到前台时触发回调。当该回调触发时，并不表示进程已完全处于前台状态，而是即将进入前台状态，此时无法执行需要依赖前台状态的操作（例如启动其他UIAbility）。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

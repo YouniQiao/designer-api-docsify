@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cancelPairedDevice
@@ -15,8 +15,6 @@ function cancelPairedDevice(deviceId: string, callback: AsyncCallback<void>): vo
 Remove a paired remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -45,35 +43,6 @@ Remove a paired remote device.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// callback
-try {
-    connection.cancelPairedDevice('11:22:33:44:55:66', (err: BusinessError) => {
-        console.info('cancelPairedDevice, device name err:' + JSON.stringify(err));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.cancelPairedDevice('11:22:33:44:55:66').then(() => {
-        console.info('cancelPairedDevice');
-    }, (error: BusinessError) => {
-        console.error('cancelPairedDevice: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## cancelPairedDevice
 
@@ -84,8 +53,6 @@ function cancelPairedDevice(deviceId: string): Promise<void>
 Remove a paired remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -118,7 +85,3 @@ Remove a paired remote device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [cancelPairedDevice](#cancelpaireddevice)

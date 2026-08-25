@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## logOffEthEap
@@ -15,8 +15,6 @@ function logOffEthEap(netId: number): void
 该接口用于指定一个以太网卡从EAP已认证状态退出。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -38,16 +36,3 @@ function logOffEthEap(netId: number): void
 | [33200009](../errorcode-net-eap.md#33200009-netmanager进程不存在) |
 | [33200010](../errorcode-net-eap.md#33200010-无效的eth状态) |
 | [33200099](../errorcode-net-eap.md#33200099-程序内部错误) |
-
-**示例**
-
-```TypeScript
-import {eap} from '@kit.NetworkKit';
-let netId = 100;    
-try{
-  eap.logOffEthEap(netId);
-  console.info("logOffEthEap success");
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

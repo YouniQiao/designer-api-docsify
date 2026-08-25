@@ -6,8 +6,6 @@ Control center session object.@extends Beauty, Aperture [since 20 - 24] @extends
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@ Control center session object.@extends Beauty, Aperture [since 20 - 24] @extends
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoFraming
@@ -27,8 +25,6 @@ enableAutoFraming(enabled: boolean): void
 Enable auto-framing effect.
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -58,8 +54,6 @@ Gets the status of auto-framing effect.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,21 +72,13 @@ Gets the status of auto-framing effect.
 
 ## getControlCenterHeight
 
-ArkTS-Dyn:
 ```TypeScript
 getControlCenterHeight(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getControlCenterHeight(): double
 ```
 
 Gets the control center height.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,7 +90,7 @@ Gets the control center height.
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -121,8 +107,6 @@ getCurrentDevice(): CameraDevice
 Gets the current camera device.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,8 +137,6 @@ Checks whether auto-framing is supported.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -181,8 +163,6 @@ Release control center session object.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -199,184 +179,6 @@ Release control center session object.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-async function releaseDepthData(depthData: camera.DepthData): Promise<void> {
-  await depthData.release();
-}
-```
-
-```TypeScript
-async function releaseDeferredPhotoProxy(proxyObj: camera.DeferredPhotoProxy): Promise<void> {
-  await proxyObj.release();
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the Preview output instance ${err.code}`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the preview output instance is released successfully.');
-  });
-}
-
-function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the video output instance ${err.code}`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the video output instance is released successfully.');
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.release((err: BusinessError | null) => {
-    if (err && err!.code !== 0) {
-      console.error(`Failed to release the Preview output instance ${err.code}`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the preview output instance is released successfully.');
-  });
-}
-
-function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.release((err: BusinessError | null) => {
-    if (err && err!.code !== 0) {
-      console.error(`Failed to release the video output instance ${err.code}`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the video output instance is released successfully.');
-  });
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.release().then(() => {
-    console.info('Promise returned to indicate that the preview output instance is released successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to preview output release, error code: ${error.code}`);
-  });
-}
-
-function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.release().then(() => {
-    console.info('Promise returned to indicate that the video output instance is released successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to video output release, error code: ${error.code}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
-  previewOutput.release().then(() => {
-    console.info('Promise returned to indicate that the preview output instance is released successfully.');
-  }).catch((error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to preview output release, error code: ${err.code}`);
-  });
-}
-
-function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
-  videoOutput.release().then(() => {
-    console.info('Promise returned to indicate that the video output instance is released successfully.');
-  }).catch((error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to video output release, error code: ${err.code}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releaseCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the CaptureSession instance is released successfully.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releaseCaptureSession(captureSession: camera.CaptureSession): void {
-  captureSession.release().then(() => {
-    console.info('Promise returned to indicate that the CaptureSession instance is released successfully.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
-  });
-}
-```
-
-```TypeScript
-async function releasePhoto(photo: camera.Photo): Promise<void> {
-  await photo.release();
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releaseCaptureSession(session: camera.Session): void {
-  session.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the session instance, error code: ${err.code}.`);
-      return;
-    }
-    console.info('Callback invoked to indicate that the session instance is released successfully.');
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function releaseCaptureSession(session: camera.Session): void {
-  session.release().then(() => {
-    console.info('Promise returned to indicate that the session instance is released successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the session instance, error code: ${error.code}.`);
-  });
-}
-```
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-
-async function releaseCapturePhoto(capturePhoto: camera.CapturePhoto): Promise<void> {
-  await capturePhoto.release();
-}
-```
-
 ## usedAsPosition
 
 ```TypeScript
@@ -386,8 +188,6 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

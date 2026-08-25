@@ -10,8 +10,6 @@ ISO-DEP (ISO 14443-4)技术。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -25,8 +23,6 @@ const MIFARE_CLASSIC = 8
 MIFARE Classic技术。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ MIFARE Ultralight技术。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -57,8 +51,6 @@ const NDEF = 6
 NDEF技术。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,8 +66,6 @@ const NDEF_FORMATABLE = 7
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -89,8 +79,6 @@ const NFC_A = 1
 NFC-A (ISO 14443-3A)技术。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -106,8 +94,6 @@ NFC-B (ISO 14443-3B)技术。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -121,8 +107,6 @@ const NFC_BARCODE = 10
 BARCODE技术。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -138,8 +122,6 @@ NFC-F (JIS 6319-4)技术。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -154,8 +136,6 @@ NFC-V (ISO 15693)技术。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -163,14 +143,12 @@ NFC-V (ISO 15693)技术。
 ## RTD_TEXT
 
 ```TypeScript
-const RTD_TEXT: int[]
+const RTD_TEXT: number[]
 ```
 
 文本类型的NDEF Record，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -179,14 +157,12 @@ const RTD_TEXT: int[]
 ## RTD_URI
 
 ```TypeScript
-const RTD_URI: int[]
+const RTD_URI: number[]
 ```
 
 URI类型的NDEF Record，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -201,8 +177,6 @@ const SKIP_NDEF = 11
 跳过NDEF检查的技术。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

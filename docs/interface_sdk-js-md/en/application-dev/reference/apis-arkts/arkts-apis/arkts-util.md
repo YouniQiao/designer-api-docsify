@@ -1,17 +1,15 @@
 # @ohos.util
 
-The util module provides common utility functions, such as [TextEncoder](arkts-arkts-util-textencoder-c.md) and [TextDecoder](arkts-arkts-util-textdecoderoptions-i.md) for string encoding and decoding, [RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md) for rational number operations, [LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md) for cache management, [ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md) for range determination, [Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md) for Base64 encoding and decoding, [types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md) for built-in object type check, and [Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md) for instrumentation and replacement on methods.
+The util module provides common utility functions, such as [TextEncoder](arkts-arkts-util-textencoder-c.md) and [TextDecoder](arkts-arkts-util-textdecoder-c.md) for string encoding and decoding, [RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md) for rational number operations, [LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md) for cache management, [ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md) for range determination, [Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md) for Base64 encoding and decoding, [types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md) for built-in object type check, and [Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md) for instrumentation and replacement on methods.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -76,5 +74,4 @@ import { util } from '@kit.ArkTS';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [PromisifiedFunc](arkts-arkts-util-promisifiedfunc-t.md) |
 | [ScopeType](arkts-arkts-util-scopetype-t.md) |

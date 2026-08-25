@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@kit.ConnectivityKit';
+import { map } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createMapMseProfile
@@ -15,8 +15,6 @@ function createMapMseProfile(): MapMseProfile
 create the instance of MAP MSE profile.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,16 +30,3 @@ create the instance of MAP MSE profile.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    console.info('MapMse success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

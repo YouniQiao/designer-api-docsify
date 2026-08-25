@@ -1,11 +1,12 @@
 # @ohos.multimedia.audio
 
 The module provides basic audio control capabilities, including volume adjustment, device management, data capture, and rendering.This module provides the following common audio-related functions:  
-- [AudioManager](#ohosmultimediaaudio): audio manager. - [AudioRenderer](#ohosmultimediaaudio): audio renderer, used to play Pulse Code Modulation (PCM) audio data. - [AudioCapturer](#ohosmultimediaaudio): audio capturer, used to record PCM audio data.
+- [AudioManager](#ohosmultimediaaudio): audio manager.  
+- [AudioRenderer](#ohosmultimediaaudio): audio renderer, used to play Pulse Code Modulation (PCM) audio  
+data.  
+- [AudioCapturer](#ohosmultimediaaudio): audio capturer, used to record PCM audio data.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Multimedia.Audio.Core
@@ -13,7 +14,7 @@ The module provides basic audio control capabilities, including volume adjustmen
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## Summary
@@ -24,12 +25,7 @@ import { audio } from '@kit.AudioKit';
 | --- |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
 | [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) |
@@ -40,11 +36,8 @@ import { audio } from '@kit.AudioKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md) |
-| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md) |
 | [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md) |
 | [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 <!--DelEnd-->

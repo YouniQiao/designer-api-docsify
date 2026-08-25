@@ -4,14 +4,12 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## addDependency
@@ -23,8 +21,6 @@ addDependency(...tasks: Task[]): void
 Adds dependent tasks for this task. Before using this API, you must create a **Task** instance. The task and its dependent tasks cannot be a task in a task group, serial queue, or asynchronous queue, a task that has been executed, or a periodic task. A task with a dependency relationship (a task that depends on another task or a task that is depended on) cannot be executed multiple times.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,39 +40,6 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
 | [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task1:taskpool.Task = new taskpool.Task(delay, 100);
-let task2:taskpool.Task = new taskpool.Task(delay, 200);
-let task3:taskpool.Task = new taskpool.Task(delay, 200);
-
-console.info("dependency: add dependency start");
-task1.addDependency(task2);
-task2.addDependency(task3);
-console.info("dependency: add dependency end");
-
-console.info("dependency: start execute second");
-taskpool.execute(task1).then(() => {
-  console.info("dependency: second task1 success");
-})
-taskpool.execute(task2).then(() => {
-  console.info("dependency: second task2 success");
-})
-taskpool.execute(task3).then(() => {
-  console.info("dependency: second task3 success");
-})
-```
-
 ## constructor
 
 ```TypeScript
@@ -86,8 +49,6 @@ constructor(func: Function, ...args: Object[])
 A constructor used to create a **Task** instance.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,92 +67,6 @@ A constructor used to create a **Task** instance.
 | --- |
 | [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs, "this is my first LongTask");
-
-let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
-
-let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-let taskGroup = new taskpool.TaskGroup();
-```
-
-```TypeScript
-let taskGroupName: string = "groupName";
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
-let name: string = taskGroup.name;
-```
-
-```TypeScript
-let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
-```
-
-```TypeScript
-let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
-```
-
-```TypeScript
-let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
-```
-
-```TypeScript
-let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
-```
-
 ## constructor
 
 ```TypeScript
@@ -201,8 +76,6 @@ constructor(name: string, func: Function, ...args: Object[])
 A constructor used to create a **Task** instance, with the task name specified.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -222,10 +95,6 @@ A constructor used to create a **Task** instance, with the task name specified.
 | --- |
 | [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
-**Examples**
-
-See [constructor](#constructor)
-
 ## isCanceled
 
 ```TypeScript
@@ -235,8 +104,6 @@ static isCanceled(): boolean
 Checks whether the running task is canceled. Before using this method, you need to create a **Task** object.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -248,52 +115,6 @@ Checks whether the running task is canceled. Before using this method, you need 
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function inspectStatus(arg: number): number {
-    // do something
-    if (taskpool.Task.isCanceled()) {
-      console.info("task has been canceled.");
-      // do something
-      return arg + 1;
-    }
-    // do something
-    return arg;
-}
-```
-
-```TypeScript
-@Concurrent
-function inspectStatus(arg: number): number {
-  // Check whether the task has been canceled and respond accordingly.
-  if (taskpool.Task.isCanceled()) {
-    console.info("task has been canceled before 2s sleep.");
-    return arg + 2;
-  }
-  // Wait for 2s.
-  let t: number = Date.now();
-  while (Date.now() - t < 2000) {
-    continue;
-  }
-  // Check again whether the task has been canceled and respond accordingly.
-  if (taskpool.Task.isCanceled()) {
-    console.info("task has been canceled after 2s sleep.");
-    return arg + 3;
-  }
-  return arg + 1;
-}
-
-let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
-taskpool.execute(task).then((res: Object) => {
-  console.info("taskpool test result: " + res);
-}).catch((err: string) => {
-  console.error("taskpool test occur error: " + err);
-});
-// If cancel is not called, isCanceled() returns false by default, and the task execution result is 101.
-```
-
 ## isDone
 
 ```TypeScript
@@ -303,8 +124,6 @@ isDone(): boolean
 Checks whether the task is complete.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -316,37 +135,6 @@ Checks whether the task is complete.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function inspectStatus(arg: number): number {
-  // 1s sleep
-  let t: number = Date.now();
-  while (Date.now() - t < 1000) {
-    continue;
-  }
-  return arg + 1;
-}
-
-async function taskpoolCancel(): Promise<void> {
-  let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
-  taskpool.execute(task).then((res: Object) => {
-    console.info("taskpool test result: " + res);
-  }).catch((err: string) => {
-    console.error("taskpool test occur error: " + err);
-  });
-
-  setTimeout(() => {
-    if (!task.isDone()) {
-      taskpool.cancel(task);
-    }
-  }, 3000); // Wait for 3s to ensure that the task has been executed.
-}
-
-taskpoolCancel();
-```
-
 ## onEnqueued
 
 ```TypeScript
@@ -356,8 +144,6 @@ onEnqueued(callback: CallbackFunction): void
 Register a callback function and call it when a task is enqueued. The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -375,29 +161,6 @@ Register a callback function and call it when a task is enqueued. The registrati
 | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
-**Examples**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onEnqueued(() => {
-  console.info("taskpool: onEnqueued");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
-
 ## onExecutionFailed
 
 ```TypeScript
@@ -407,8 +170,6 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 Register a callback function and call it when a task fails to be executed(Periodic tasks are not supported). The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -426,35 +187,6 @@ Register a callback function and call it when a task fails to be executed(Period
 | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
-**Examples**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { HashMap } from '@kit.ArkTS';
-
-@Concurrent
-function test(args: number) {
-  let t = Date.now();
-  while ((Date.now() - t) < 100) {
-    continue;
-  }
-  let hashMap1: HashMap<string, number> = new HashMap();
-  hashMap1.set('a', args);
-  return hashMap1;
-}
-
-let task2 = new taskpool.Task(test, 1);
-task2.onExecutionFailed((e: Error) => {
-  console.info("taskpool: onExecutionFailed error is " + e);
-})
-taskpool.execute(task2).then(() => {
-  console.info("taskpool: execute task success");
-}).catch((e:BusinessError) => {
-  console.error(`taskpool: error code: ${e.code}, error info: ${e.message}`);
-})
-```
-
 ## onExecutionSucceeded
 
 ```TypeScript
@@ -464,8 +196,6 @@ onExecutionSucceeded(callback: CallbackFunction): void
 Register a callback function and call it when a task is executed successfully. The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -482,29 +212,6 @@ Register a callback function and call it when a task is executed successfully. T
 | Error Code ID |
 | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
-
-**Examples**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onExecutionSucceeded(() => {
-  console.info("taskpool: onExecutionSucceeded");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
 
 ## onReceiveData
 
@@ -516,8 +223,6 @@ Registers a callback for a task to receive and process data from the worker thre
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -528,33 +233,6 @@ Registers a callback for a task to receive and process data from the worker thre
 | --- | --- | --- |
 | callback | Function | No |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function ConcurrentFunc(num: number): number {
-  let res: number = num * 10;
-  taskpool.Task.sendData(res);
-  return num;
-}
-
-function printLog(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-async function testFunc(): Promise<void> {
-  try {
-    let task: taskpool.Task = new taskpool.Task(ConcurrentFunc, 1);
-    task.onReceiveData(printLog);
-    await taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, info: ${e.message}`);
-  }
-}
-
-testFunc();
-```
-
 ## onStartExecution
 
 ```TypeScript
@@ -564,8 +242,6 @@ onStartExecution(callback: CallbackFunction): void
 Register a callback function and call it when the execution of a task starts. The registration must be carried out before the task is executed. Otherwise, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -583,29 +259,6 @@ Register a callback function and call it when the execution of a task starts. Th
 | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
-**Examples**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onStartExecution(() => {
-  console.info("taskpool: onStartExecution");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
-
 ## removeDependency
 
 ```TypeScript
@@ -615,8 +268,6 @@ removeDependency(...tasks: Task[]): void
 Removes dependent tasks for this task. Before using this method, you need to construct a **Task** object.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -635,43 +286,6 @@ Removes dependent tasks for this task. Before using this method, you need to con
 | [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) |
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
 | [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
-
-**Examples**
-
-```TypeScript
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task1:taskpool.Task = new taskpool.Task(delay, 100);
-let task2:taskpool.Task = new taskpool.Task(delay, 200);
-let task3:taskpool.Task = new taskpool.Task(delay, 200);
-
-console.info("dependency: add dependency start");
-task1.addDependency(task2);
-task2.addDependency(task3);
-console.info("dependency: add dependency end");
-console.info("dependency: remove dependency start");
-task1.removeDependency(task2);
-task2.removeDependency(task3);
-console.info("dependency: remove dependency end");
-
-console.info("dependency: start execute");
-taskpool.execute(task1).then(() => {
-  console.info("dependency: task1 success");
-})
-taskpool.execute(task2).then(() => {
-  console.info("dependency: task2 success");
-})
-taskpool.execute(task3).then(() => {
-  console.info("dependency: task3 success");
-})
-```
 
 ## sendData
 
@@ -692,8 +306,6 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -713,63 +325,6 @@ Sends data to the host thread and triggers the registered callback. Before calli
 | [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) |
 | [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function sendDataTest(num: number): number {
-  let res: number = num * 10;
-  taskpool.Task.sendData(res);
-  return num;
-}
-
-function printLog(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-async function taskpoolTest(): Promise<void> {
-  try {
-    let task: taskpool.Task = new taskpool.Task(sendDataTest, 1);
-    task.onReceiveData(printLog);
-    await taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, info: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
-```TypeScript
-// Call this method in an asynchronous function.
-@Concurrent
-async function sendDataTest(num: number) {
-  let func = async () => {
-    let asyncSleep = async (time: number): Promise<Object> => {
-      return new Promise(resolve => setTimeout(resolve, time));
-    }
-    await asyncSleep(10000);
-    let res: number = num * 10;
-    taskpool.Task.sendData(res);
-  }
-  await func(); // Use await to ensure that the asynchronous function is executed synchronously in the task.
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.Task(sendDataTest, 10);
-    task.onReceiveData((data: string) => {
-      console.info("taskpool: data is: " + data);
-    });
-    taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, info: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
 ## setCloneList
 
 ```TypeScript
@@ -784,8 +339,6 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 > thrown. You are advised to use this decorator to avoid exceptions.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -803,135 +356,6 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 | --- |
 | [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
 
-**Examples**
-
-```TypeScript
-// sendable.ets
-// Define two Sendable classes: BaseClass and its child class DeriveClass.
-@Sendable
-export class BaseClass {
-  private str: string = "sendable: BaseClass";
-  static num :number = 10;
-  str1: string = "sendable: this is BaseClass's string";
-  num1: number = 5;
-  isDone1: boolean = false;
-
-  private fibonacciRecursive(n: number): number {
-    if (n <= 1) {
-      return n;
-    } else {
-      return this.fibonacciRecursive(n - 1) + this.fibonacciRecursive(n - 2);
-    }
-  }
-
-  private privateFunc(num: number): number{
-    let res: number = this.fibonacciRecursive(num);
-    console.info("sendable: BaseClass privateFunc res is: " + res);
-    return res;
-  }
-
-  publicFunc(num: number): number {
-    return this.privateFunc(num);
-  }
-
-  get GetNum(): number {
-    return this.num1;
-  }
-  set SetNum(num: number) {
-    this.num1 = num;
-  }
-
-  constructor() {
-    console.info(this.str);
-    this.isDone1 = true;
-  }
-}
-
-@Sendable
-export class DeriveClass extends BaseClass {
-  name: string = "sendable: this is DeriveClass";
-  printName() {
-    console.info(this.name);
-  }
-  constructor() {
-    super();
-  }
-}
-```
-
-```TypeScript
-// index.ets
-// The host thread (UI main thread) calls the methods of BaseClass and DeriveClass in the task pool thread and accesses their properties.
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { BaseClass, DeriveClass } from './sendable';
-
-@Concurrent
-function testFunc(arr: Array<BaseClass>, num: number): number {
-  let baseInstance1 = arr[0];
-  console.info("sendable: str1 is: " + baseInstance1.str1);
-  baseInstance1.SetNum = 100;
-  console.info("sendable: num1 is: " + baseInstance1.GetNum);
-  console.info("sendable: isDone1 is: " + baseInstance1.isDone1);
-  // Obtain the result of the item specified by num from Fibonacci sequence.
-  let res: number = baseInstance1.publicFunc(num);
-  return res;
-}
-
-@Concurrent
-function printLog(arr: Array<DeriveClass>): void {
-  let deriveInstance = arr[0];
-  deriveInstance.printName();
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-        Button() {
-          Text("TaskPool Test");
-        }.onClick(() => {
-          // task1 calls BaseClass.str1/BaseClass.SetNum/BaseClass.GetNum/BaseClass.isDone1/BaseClass.publicFunc.
-          let baseInstance1: BaseClass = new BaseClass();
-          let array1 = new Array<BaseClass>();
-          array1.push(baseInstance1);
-          let task1 = new taskpool.Task(testFunc, array1, 10);
-          task1.setCloneList(array1);
-          taskpool.execute(task1).then((res: Object) => {
-            console.info("sendable: task1 res is: " + res);
-          }).catch((e:BusinessError) => {
-            console.error(`sendable: task1 execute Code is ${e.code}, message is ${e.message}`);
-          })
-
-          // task2 calls DeriveClass.printName.
-          let deriveInstance: DeriveClass = new DeriveClass();
-          let array2 = new Array<DeriveClass>();
-          array2.push(deriveInstance);
-          let task2 = new taskpool.Task(printLog, array2);
-          task2.setCloneList(array2);
-          taskpool.execute(task2).then(() => {
-            console.info("sendable: task2 execute success");
-          }).catch((e:BusinessError) => {
-            console.error(`sendable: task2 execute Code is ${e.code}, message is ${e.message}`);
-          })
-        })
-        .height('15%')
-        .width('30%')
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## setTransferList
 
 ```TypeScript
@@ -948,8 +372,6 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -958,7 +380,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| transfer | ArrayBuffer[] | No |
+| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | No |
 
 **Error codes:**
 
@@ -966,54 +388,17 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 | --- |
 | [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function testTransfer(arg1: ArrayBuffer, arg2: ArrayBuffer): number {
-  console.info("testTransfer arg1 byteLength: " + arg1.byteLength);
-  console.info("testTransfer arg2 byteLength: " + arg2.byteLength);
-  return 100;
-}
-
-let buffer: ArrayBuffer = new ArrayBuffer(8);
-let view: Uint8Array = new Uint8Array(buffer);
-let buffer1: ArrayBuffer = new ArrayBuffer(16);
-let view1: Uint8Array = new Uint8Array(buffer1);
-
-console.info("testTransfer view byteLength: " + view.byteLength);
-console.info("testTransfer view1 byteLength: " + view1.byteLength);
-// The execution result is as follows:
-// testTransfer view byteLength: 8
-// testTransfer view1 byteLength: 16
-
-let task: taskpool.Task = new taskpool.Task(testTransfer, view, view1);
-task.setTransferList([view.buffer, view1.buffer]);
-taskpool.execute(task).then((res: Object) => {
-  console.info("test result: " + res);
-}).catch((e: string) => {
-  console.error("test catch: " + e);
-})
-console.info("testTransfer view2 byteLength: " + view.byteLength);
-console.info("testTransfer view3 byteLength: " + view1.byteLength);
-// The value is 0 after transfer. The execution result is as follows:
-// testTransfer view2 byteLength: 0
-// testTransfer view3 byteLength: 0
-```
-
 ## arguments
 
 ```TypeScript
 arguments?: Object[]
 ```
 
-Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).<br> This API can be used in atomic services since API version 11.
+Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).This API can be used in atomic services since API version 11.
 
 **Type:** Object[]
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1025,15 +410,13 @@ Arguments of the function. For details about the supported parameter types, see 
 cpuDuration: number
 ```
 
-CPU time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
+CPU time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1045,13 +428,11 @@ CPU time of the task. in ms. You are advised not to change the value.<br> This A
 function: Function
 ```
 
-Function to be passed in during task creation. For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).<br> This API can be used in atomic services since API version 11.
+Function to be passed in during task creation. For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).This API can be used in atomic services since API version 11.
 
 **Type:** Function
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1063,15 +444,13 @@ Function to be passed in during task creation. For details about the supported r
 ioDuration: number
 ```
 
-Asynchronous I/O time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
+Asynchronous I/O time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1083,13 +462,11 @@ Asynchronous I/O time of the task. in ms. You are advised not to change the valu
 name: string
 ```
 
-Name of the task specified when the task is created. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
+Name of the task specified when the task is created. You are advised not to change the value.This API can be used in atomic services since API version 11.
 
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1101,15 +478,13 @@ Name of the task specified when the task is created. You are advised not to chan
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.<br> This API can be used in atomic services since API version 18.
+Task ID, which is globally unique by default. You are advised not to change the value.This API can be used in atomic services since API version 18.
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1121,15 +496,13 @@ Task ID, which is globally unique by default. You are advised not to change the 
 totalDuration: number
 ```
 
-Total execution time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
+Total execution time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

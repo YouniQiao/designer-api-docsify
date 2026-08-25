@@ -4,8 +4,6 @@ Defines the parameter type of the [@InsightIntentFunctionMethod](../../../refere
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,5 +13,5 @@ Defines the parameter type of the [@InsightIntentFunctionMethod](../../../refere
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```

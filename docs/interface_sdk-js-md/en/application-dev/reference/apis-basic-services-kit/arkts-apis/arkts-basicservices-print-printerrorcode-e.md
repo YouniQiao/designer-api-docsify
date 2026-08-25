@@ -4,8 +4,6 @@ Enumerates the print error codes.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_NONE
@@ -17,8 +15,6 @@ E_PRINT_NONE = 0
 No error.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ No permission.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_INVALID_PARAMETER
@@ -45,8 +39,6 @@ E_PRINT_INVALID_PARAMETER = 401
 Invalid parameters.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ Printing failure.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_RPC_FAILURE
@@ -73,8 +63,6 @@ E_PRINT_RPC_FAILURE = 13100002
 RPC failure.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,8 +76,6 @@ Print service failure.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_INVALID_EXTENSION
@@ -101,8 +87,6 @@ E_PRINT_INVALID_EXTENSION = 13100004
 Invalid printer extension.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -116,8 +100,6 @@ Invalid printer.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_INVALID_PRINT_JOB
@@ -129,8 +111,6 @@ E_PRINT_INVALID_PRINT_JOB = 13100006
 Invalid print job.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -144,8 +124,6 @@ Incorrect file input/output.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_TOO_MANY_FILES
@@ -158,8 +136,6 @@ Excessive files. Maximum number: 99.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## E_PRINT_SMB_LOGIN_LOCKOUT
@@ -171,8 +147,6 @@ E_PRINT_SMB_LOGIN_LOCKOUT = 13100012
 The SMB account is locked due to multiple failed login attempts.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +162,6 @@ SMB Connection Failure (A network error occurs, the host is unreachable, or the 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -203,8 +175,6 @@ E_PRINT_SMB_INVALID_CREDENTIALS = 13100014
 The login account or password is invalid.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,7 +1,5 @@
 # URIErrorConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (message?: string): URIError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(message?: string): URIError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: URIError
 ```
 
 **Type:** [URIError](arkts-lib-es5-urierror-i.md)
-
-**ArkTS mode:** 

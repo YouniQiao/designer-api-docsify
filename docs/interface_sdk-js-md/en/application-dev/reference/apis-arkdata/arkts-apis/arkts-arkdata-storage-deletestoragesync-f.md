@@ -15,8 +15,6 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** deletePreferences
@@ -26,18 +24,3 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-    path = filePath;
-    console.info("======================>getFilesDirPromise====================>");
-
-    data_storage.deleteStorageSync(path + '/mystore');
-});
-```

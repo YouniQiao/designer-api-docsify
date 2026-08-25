@@ -2,8 +2,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -11,22 +9,20 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## app
 
 ```TypeScript
-app: long
+app: number
 ```
 
 应用数据大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -35,16 +31,14 @@ app: long
 ## audio
 
 ```TypeScript
-audio: long
+audio: number
 ```
 
 音频数据大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -53,16 +47,14 @@ audio: long
 ## file
 
 ```TypeScript
-file: long
+file: number
 ```
 
 文件数据大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -71,16 +63,14 @@ file: long
 ## image
 
 ```TypeScript
-image: long
+image: number
 ```
 
 图像数据大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -89,16 +79,14 @@ image: long
 ## total
 
 ```TypeScript
-total: long
+total: number
 ```
 
 内置存储总空间大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -107,16 +95,14 @@ total: long
 ## video
 
 ```TypeScript
-video: long
+video: number
 ```
 
 视频数据大小，单位为Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

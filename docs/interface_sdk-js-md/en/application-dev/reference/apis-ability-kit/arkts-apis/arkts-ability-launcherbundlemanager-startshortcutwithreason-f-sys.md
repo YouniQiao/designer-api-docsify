@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startShortcutWithReason
@@ -15,8 +15,6 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) and handle service logic accordingly.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
 
@@ -46,36 +44,3 @@ Starts an ability based on the specified shortcut information, and carries the r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) |
-
-**Examples**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant } from '@kit.AbilityKit';
-
-try {
-  let data: Array<launcherBundleManager.ShortcutInfo> =
-    launcherBundleManager.getShortcutInfoSync("com.example.myapplication");
-  console.info('startShortcutWithReason data is ' + JSON.stringify(data));
-  let startReason = AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT;
-  if (data) {
-    try {
-      launcherBundleManager.startShortcutWithReason(data[0], startReason)
-        .then(() => {
-          console.info('startShortcutWithReason success');
-        }).catch((err: BusinessError) => {
-        console.error(`startShortcutWithReason errData is errCode:${err.code}  message:${err.message}`);
-      });
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`startShortcutWithReason error is errCode:${code}  message:${message}`);
-    }
-  }
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`startShortcutWithReason errData is errCode:${code}  message:${message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapSync
@@ -15,8 +15,6 @@ function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOp
 Create PixelMap by data buffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -38,18 +36,3 @@ Create PixelMap by data buffer.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo() {
-    const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-    let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
-    let pixelMap : sendableImage.PixelMap = sendableImage.createPixelMapSync(color, opts);
-    return pixelMap;
-}
-```

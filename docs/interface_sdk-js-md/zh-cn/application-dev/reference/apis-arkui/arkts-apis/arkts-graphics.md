@@ -44,7 +44,6 @@
 | [Edges](arkts-arkui-graphics-edges-i.md) |
 | [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) |
 | [Frame](arkts-arkui-graphics-frame-i.md) |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md) |
 | [RoundRect](arkts-arkui-graphics-roundrect-i.md) |
 | [Size](arkts-arkui-graphics-size-i.md) |
 | [SizeT](arkts-arkui-graphics-sizet-i.md) |
@@ -67,9 +66,6 @@
 | [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
 | [CornerRadius](arkts-arkui-cornerradius-t.md) |
 | [Matrix4](arkts-arkui-matrix4-t.md) |
-| [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md) |
-| [NodeOffset](arkts-arkui-nodeoffset-t.md) |
-| [NodePosition](arkts-arkui-nodeposition-t.md) |
 | [Offset](arkts-arkui-offset-t.md) |
 | [Pivot](arkts-arkui-pivot-t.md) |
 | [Position](arkts-arkui-position-t.md) |

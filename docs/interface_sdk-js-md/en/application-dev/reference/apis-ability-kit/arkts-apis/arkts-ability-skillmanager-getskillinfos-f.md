@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@kit.AbilityKit';
+import { skillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSkillInfos
@@ -15,8 +15,6 @@ function getSkillInfos(bundleName: string, flags: number, userId?: number): Prom
 Obtains all SkillInfo of a specified application based on bundleName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 

@@ -4,8 +4,6 @@ Enumerates the auxiliary pictures types.Auxiliary pictures do not directly parti
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GAINMAP
@@ -17,8 +15,6 @@ GAINMAP = 1
 Gain map.It is used to generate HDR images more accurately.HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getmetadata) to calculate the luminance mapping.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,8 +28,6 @@ Depth map.It is used to store the distance between each pixel and the camera, an
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## UNREFOCUS_MAP
@@ -45,8 +39,6 @@ UNREFOCUS_MAP = 3
 Unrefocus map.It is used to store the pixel content that is not refocused during capture.It is useful for post-processing effects such as portrait blurring, allowing users to select focus areas freely.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -60,8 +52,6 @@ Linear map.It records lighting, color, or other visual elements linearly, provid
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FRAGMENT_MAP
@@ -74,8 +64,6 @@ Fragment map.It records areas of the original image obscured by watermarks. Thes
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LHDR_GAINMAP
@@ -87,8 +75,6 @@ LHDR_GAINMAP = 10
 LHDR gain map.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

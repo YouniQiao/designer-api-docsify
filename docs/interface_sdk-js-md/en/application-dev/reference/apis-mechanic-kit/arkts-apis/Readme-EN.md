@@ -30,17 +30,9 @@
   - [off](arkts-mechanic-mechanicmanager-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-mechanic-mechanicmanager-off-f-sys.md)<!--DelEnd-->
-  - [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md)
-  <!--Del-->
-  - [offRotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md)<!--DelEnd-->
-  - [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md)
   - [on](arkts-mechanic-mechanicmanager-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-mechanic-mechanicmanager-on-f-sys.md)<!--DelEnd-->
-  - [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md)
-  <!--Del-->
-  - [onRotationAxesStatusChange(system api)](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md)<!--DelEnd-->
-  - [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md)
   <!--Del-->
   - [rotate(system api)](arkts-mechanic-mechanicmanager-rotate-f-sys.md)<!--DelEnd-->
   <!--Del-->

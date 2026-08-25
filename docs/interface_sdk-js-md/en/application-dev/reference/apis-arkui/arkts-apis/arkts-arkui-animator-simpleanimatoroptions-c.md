@@ -4,14 +4,12 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(begin: number, end: number)
 A constructor used to create a **SimpleAnimatorOptions** instance.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,29 +35,6 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 | begin | number | Yes |
 | end | number | Yes |
 
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200); // Animation interpolation from 100 to 200, with other animation parameters set to default values.
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## delay
 
 ```TypeScript
@@ -71,8 +44,6 @@ delay(delay: number): SimpleAnimatorOptions
 Sets the playback delay for this animation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,29 +63,6 @@ Sets the playback delay for this animation.
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
 
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).delay(500);
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## direction
 
 ```TypeScript
@@ -124,8 +72,6 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 Sets the playback direction for this animator animation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,36 +83,13 @@ Sets the playback direction for this animator animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [direction](#direction) | [PlayMode](arkts-arkui-enums-playmode-e.md) | Yes |
+| [direction](#direction) | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).direction(PlayMode.Alternate);
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
 
 ## duration
 
@@ -177,8 +100,6 @@ duration(duration: number): SimpleAnimatorOptions
 Sets the animation duration.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,29 +119,6 @@ Sets the animation duration.
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
 
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(500);
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## easing
 
 ```TypeScript
@@ -230,8 +128,6 @@ easing(curve: string): SimpleAnimatorOptions
 Sets the interpolation curve for this animation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,29 +147,6 @@ Sets the interpolation curve for this animation.
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
 
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).easing("ease-in");
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## fill
 
 ```TypeScript
@@ -283,8 +156,6 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 Sets the fill mode for this animation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,29 +175,6 @@ Sets the fill mode for this animation.
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
 
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).fill(FillMode.Forwards);
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## iterations
 
 ```TypeScript
@@ -336,8 +184,6 @@ iterations(iterations: number): SimpleAnimatorOptions
 Sets the number of times that this animation is played.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,26 +202,3 @@ Sets the number of times that this animation is played.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).iterations(3);
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator(this.options);
-  }
-
-  build() {
-    // ......
-  }
-}
-```

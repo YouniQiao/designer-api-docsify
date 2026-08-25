@@ -1,7 +1,5 @@
 # ObjectConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ assign<T extends {}, U>(target: T, source: U): T & U
 ```
 
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ assign<T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V
 
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -57,8 +51,6 @@ assign<T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T 
 ```
 
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -81,8 +73,6 @@ assign(target: object, ...sources: any[]): any
 
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -102,8 +92,6 @@ getOwnPropertySymbols(o: any): symbol[]
 
 Returns an array of all symbol properties found directly on object o.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -121,8 +109,6 @@ is(value1: any, value2: any): boolean
 ```
 
 Returns true if the values are the same value, false otherwise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -143,8 +129,6 @@ keys(o: {}): string[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -162,8 +146,6 @@ setPrototypeOf(o: any, proto: object | null): any
 ```
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

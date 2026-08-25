@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## updateTimer
 
 ```TypeScript
-function updateTimer(bundleName: string, timeout: int): boolean
+function updateTimer(bundleName: string, timeout: number): boolean
 ```
 
 Update backup or restore timeout.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -29,7 +27,7 @@ Update backup or restore timeout.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| timeout | number | Yes |
 
 **Return value:**
 
@@ -44,26 +42,3 @@ Update backup or restore timeout.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backup } from '@kit.CoreFileKit';
-
-function updateTimer() {
-  try {
-    let timeout = 30000;
-    let bundleName = "com.example.hiworld";
-    let result = backup.updateTimer(bundleName, timeout);
-    if (result) {
-      console.info('updateTimer success');
-    } else {
-      console.info('updateTimer fail');
-    }
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`updateTimer failed. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## LONG_PRESS
@@ -18,8 +16,6 @@ LONG_PRESS = 1
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## RIGHT_CLICK
@@ -31,7 +27,5 @@ RIGHT_CLICK = 2
 通过鼠标右键触发菜单弹出。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Web.Webview.Core

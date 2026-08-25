@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCALE
@@ -17,8 +15,6 @@ COUNTRY_CODE_FROM_LOCALE = 1
 从全球化模块的语言配置信息中获取到的国家码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -32,8 +28,6 @@ COUNTRY_CODE_FROM_SIM = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCATION
@@ -46,8 +40,6 @@ COUNTRY_CODE_FROM_LOCATION = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_NETWORK
@@ -59,7 +51,5 @@ COUNTRY_CODE_FROM_NETWORK = 4
 从蜂窝网络注册信息中获取到的国家码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core

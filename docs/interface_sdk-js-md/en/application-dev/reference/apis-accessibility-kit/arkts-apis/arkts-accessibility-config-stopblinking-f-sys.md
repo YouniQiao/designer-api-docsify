@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## stopBlinking
@@ -15,8 +15,6 @@ function stopBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResu
 Stops flash blinking or screen blinking.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 

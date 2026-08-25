@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyItemProperties
@@ -23,8 +23,6 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,41 +57,6 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
 
-**Examples**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: getKeyItemProperties failed`);
-  } else {
-    console.info(`callback: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.getKeyItemProperties(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
-  });
-```
-
 
 ## getKeyItemProperties
 
@@ -108,8 +71,6 @@ Obtains key properties. This API uses a promise to return the result.
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,7 +107,3 @@ Obtains key properties. This API uses a promise to return the result.
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
-
-**Examples**
-
-See [getKeyItemProperties](#getkeyitemproperties)

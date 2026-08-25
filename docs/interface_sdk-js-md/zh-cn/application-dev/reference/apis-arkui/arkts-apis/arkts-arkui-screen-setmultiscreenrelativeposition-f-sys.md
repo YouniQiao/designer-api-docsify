@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setMultiScreenRelativePosition
@@ -16,8 +16,6 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
 仅在扩展模式下，设置主屏和扩展屏幕的位置信息，使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -44,53 +42,3 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取
-let mainScreenOptions: screen.MultiScreenPositionOptions = {
-  id: 0,  // 主屏ID
-  startX: 0,
-  startY: 0
-}; // 主屏的位置信息
-
-let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
-  id: 12,  // 扩展屏ID
-  startX: 1000,
-  startY: 1000
-}; // 扩展屏幕的位置信息
-
-// 设置主屏和扩展屏幕的位置信息
-screen.setMultiScreenRelativePosition(mainScreenOptions, secondaryScreenOptions).then(() => {
-  console.info('Succeeded in setting multi screen relative position.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set multi screen relative position. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let mainScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 0,
-  startX : 0,
-  startY : 0
-};
-
-let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 12,
-  startX : 1000,
-  startY : 1000
-};
-
-screen.setMultiScreenRelativePosition(mainScreenOptions, secondaryScreenOptions).then(() => {
-  console.info('Succeeded in setting multi screen relative position.');
-}).catch((err: Error) => {
-  console.error(`Failed to set multi screen relative position. Code: ${err?.code}, message: ${err?.message}`);
-});
-```

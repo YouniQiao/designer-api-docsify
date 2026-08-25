@@ -3,19 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
 
 ### 类
 
@@ -28,9 +19,7 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | 名称 |
 | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |
 | [ArcListInterface](arkts-arkui-arkui-arclist-arclistinterface-i.md) |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |
 | [ArcListItemInterface](arkts-arkui-arkui-arclist-arclistiteminterface-i.md) |
 | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) |
 
@@ -44,7 +33,7 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | 名称 |
 | --- |
-| [ArcList](arkts-arkui-arkui-arclist-con.md#arclist) |
+| [ArcList](arkts-arkui-arkui-arclist-con.md) |
 | [ArcListInstance](arkts-arkui-arkui-arclist-con.md#arclistinstance) |
 | [ArcListItem](arkts-arkui-arkui-arclist-con.md#arclistitem) |
 | [ArcListItemInstance](arkts-arkui-arkui-arclist-con.md#arclistiteminstance) |

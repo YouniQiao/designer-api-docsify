@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## isDLPFeatureProvided
@@ -20,8 +20,6 @@ Checks whether the current system provides the encryption protection feature. Th
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Return value:**
@@ -36,16 +34,3 @@ Checks whether the current system provides the encryption protection feature. Th
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-dlpPermission.isDLPFeatureProvided().then((res) => {
-  console.info('res', JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-});
-```

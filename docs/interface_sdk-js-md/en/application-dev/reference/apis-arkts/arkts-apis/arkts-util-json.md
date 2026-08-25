@@ -4,14 +4,12 @@ The JSON module provides a series of APIs for converting JSON text into JSON obj
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
+import { JSON } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

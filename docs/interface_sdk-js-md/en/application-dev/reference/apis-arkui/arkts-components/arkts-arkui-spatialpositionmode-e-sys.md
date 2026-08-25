@@ -4,8 +4,6 @@ Spatial position mode. Indicates the coordinate system used by the corner positi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ WORLD_XYZ = 0
 World XYZ coordinate mode. The X, Y, and Z components are all in world coordinates.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +35,6 @@ NDC_XY_WORLD_Z = 1
 NDC XY and world Z coordinate mode. The X and Y components use NDC (Normalized Device Coordinates), and the Z component is in world coordinates.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

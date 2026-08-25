@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsRawHeapData
@@ -12,15 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
-为当前线程转储虚拟机的原始堆快照，并生成的rawheap格式文件，使用Promise异步回调完成。该文件可通过rawheap-translator工具转化为heapsnapshot格式文件进行解析。
+为当前线程转储虚拟机的原始堆快照，并生成的rawheap格式文件，使用Promise异步回调完成。该文件可通过 rawheap-translator工具转化为heapsnapshot格式文件进行解析。
 
-> **注意**&gt;
-> 系统通过该接口转存快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。&gt;
+> **注意**：&gt;
+> 系统通过该接口转储快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。&gt;
 > 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.1.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -51,40 +49,6 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
 
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-hidebug.dumpJsRawHeapData().then((filePath: string) => {
-  console.info(`dumpJsRawHeapData success and generated file path is ${filePath}`)
-}).catch((error: BusinessError) => {
-  console.error(`error code: ${error.code}, error msg: ${error.message}`);
-})
-```
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-hidebug.dumpJsRawHeapData(true, true).then((filePath: string) => {
-  console.info(`dumpJsRawHeapData success and generated file path is ${filePath}`);
-}).catch((error: BusinessError) => {
-  console.error(`error code: ${error.code}, error msg: ${error.message}`);
-})
-```
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-hidebug.dumpJsRawHeapData(true, true, true).then((filePathArray: Array<string>) => {
-  console.info(`dumpJsRawHeapData success and generated file path is ${JSON.stringify(filePathArray)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error code: ${error.code}, error msg: ${error.message}`);
-})
-```
-
 
 ## dumpJsRawHeapData
 
@@ -92,15 +56,13 @@ hidebug.dumpJsRawHeapData(true, true, true).then((filePathArray: Array<string>) 
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 ```
 
-为当前线程转储虚拟机的原始堆快照，并支持清除nodeId缓存。生成的文件为rawheap格式，使用Promise异步回调完成。该文件可通过rawheap-translator工具转化为heapsnapshot格式文件进行解析。
+为当前线程转储虚拟机的原始堆快照，并支持清除nodeId缓存。生成的文件为rawheap格式，使用Promise异步回调完成。该文件可通过 rawheap-translator工具转化为heapsnapshot格式文件进行解析。
 
-> **注意**&gt;
-> 系统通过该接口转存快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。&gt;
+> **注意**：&gt;
+> 系统通过该接口转储快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。&gt;
 > 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,10 +96,6 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
 
-**示例**
-
-参见 [dumpJsRawHeapData](#dumpjsrawheapdata)
-
 
 ## dumpJsRawHeapData
 
@@ -145,15 +103,13 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boolean): Promise<Array<string>>
 ```
 
-为当前线程或其所属进程生成虚拟机的原始堆快照，并支持清除nodeId缓存，生成的文件为rawheap格式。使用Promise异步回调。文件可通过rawheap-translator工具转换为heapsnapshot格式文件进行解析。
+为当前线程或其所属进程生成虚拟机的原始堆快照，并支持清除nodeId缓存，生成的文件为rawheap格式。使用Promise异步回调。文件可通过 rawheap-translator工具转换为heapsnapshot格式文件进行解析。
 
-> **注意**&gt;
+> **注意**：&gt;
 > 系统通过该接口转储快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。&gt;
 > 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -187,7 +143,3 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boo
 | [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
-
-**示例**
-
-参见 [dumpJsRawHeapData](#dumpjsrawheapdata)

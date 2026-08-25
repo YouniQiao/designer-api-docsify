@@ -4,8 +4,6 @@ Provides utilities for ECC key parameter generation and point conversion based o
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@ Provides utilities for ECC key parameter generation and point conversion based o
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## convertPoint
@@ -33,8 +31,6 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -50,7 +46,7 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
 
 **Error codes:**
 
@@ -59,20 +55,6 @@ Converts the specified point data into a **Point** object based on the curve nam
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-// Randomly generated uncompressed point data.
-let pkData =
-  new Uint8Array([4, 143, 39, 57, 249, 145, 50, 63, 222, 35, 70, 178, 121, 202, 154, 21, 146, 129, 75, 76, 63, 8, 195,
-    157, 111, 40, 217, 215, 148, 120, 224, 205, 82, 83, 92, 185, 21, 211, 184, 5, 19, 114, 33, 86, 85, 228, 123, 242,
-    206, 200, 98, 178, 184, 130, 35, 232, 45, 5, 202, 189, 11, 46, 163, 156, 152]);
-let returnPoint = cryptoFramework.ECCKeyUtil.convertPoint('NID_brainpoolP256r1', pkData);
-console.info('returnPoint: ' + returnPoint.x.toString(16));
-```
 
 ## genECCCommonParamsSpec
 
@@ -83,8 +65,6 @@ static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see ECC and SM2.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,20 +92,6 @@ Generates common parameters for an asymmetric key pair based on the specified na
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let ECCCommonParamsSpec = cryptoFramework.ECCKeyUtil.genECCCommonParamsSpec('NID_brainpoolP160r1');
-    console.info('genECCCommonParamsSpec result: success.');
-} catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`genECCCommonParamsSpec failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
-
 ## getEncodedPoint
 
 ```TypeScript
@@ -136,8 +102,6 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -147,7 +111,7 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | curveName | string | Yes |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
 | format | string | Yes |
 
 **Return value:**
@@ -163,25 +127,3 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function doTest() {
-  let generator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = await generator.generateKeyPair();
-  let eccPkX = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_X_BN);
-  let eccPkY = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_Y_BN);
-  console.info('ECC_PK_X_BN 16: ' + eccPkX.toString(16));
-  console.info('ECC_PK_Y_BN 16: ' + eccPkY.toString(16));
-  // Place eccPkX.toString(16) in x and eccPkY.toString(16) in y.
-  let returnPoint: cryptoFramework.Point = {
-    x: BigInt('0x' + eccPkX.toString(16)),
-    y: BigInt('0x' + eccPkY.toString(16))
-  };
-  let returnData = cryptoFramework.ECCKeyUtil.getEncodedPoint('NID_brainpoolP256r1', returnPoint, 'UNCOMPRESSED');
-  console.info('returnData: ' + returnData);
-}
-```

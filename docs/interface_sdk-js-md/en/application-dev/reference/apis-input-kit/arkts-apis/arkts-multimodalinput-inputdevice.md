@@ -4,14 +4,12 @@ The inputDevice module implements input device management functions such as list
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
@@ -35,9 +33,7 @@ import { inputDevice } from '@kit.InputKit';
 | [getKeyboardTypeSync(Input Device)](arkts-input-inputdevice-getkeyboardtypesync-f.md) |
 | [isFunctionKeyEnabled(Input Device)](arkts-input-inputdevice-isfunctionkeyenabled-f.md) |
 | [off(Input Device)](arkts-input-inputdevice-off-f.md#offchange) |
-| [offChange(Input Device)](arkts-input-inputdevice-offchange-f.md) |
 | [on(Input Device)](arkts-input-inputdevice-on-f.md#onchange) |
-| [onChange(Input Device)](arkts-input-inputdevice-onchange-f.md) |
 | [setFunctionKeyEnabled(Input Device)](arkts-input-inputdevice-setfunctionkeyenabled-f.md) |
 | [supportKeys(Input Device)](arkts-input-inputdevice-supportkeys-f.md) |
 | [supportKeys(Input Device)](arkts-input-inputdevice-supportkeys-f.md) |

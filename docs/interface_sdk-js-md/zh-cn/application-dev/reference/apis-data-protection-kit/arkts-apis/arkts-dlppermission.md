@@ -10,14 +10,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## 汇总
@@ -72,8 +70,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [getDLPGatheringPolicy(数据防泄漏)](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md) |
 | [installDLPSandbox(数据防泄漏)](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) |
 | [installDLPSandbox(数据防泄漏)](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) |
-| [off(数据防泄漏)](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox) |
-| [on(数据防泄漏)](arkts-dataprotection-dlppermission-on-f-sys.md#onuninstalldlpsandbox) |
+| [off(数据防泄漏)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |
+| [on(数据防泄漏)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |
 | [openDLPFile(数据防泄漏)](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) |
 | [openDLPFile(数据防泄漏)](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) |
 | [uninstallDLPSandbox(数据防泄漏)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |

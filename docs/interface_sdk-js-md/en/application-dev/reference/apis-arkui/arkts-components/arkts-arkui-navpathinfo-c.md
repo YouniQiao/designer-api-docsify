@@ -4,8 +4,6 @@ Provides the navigation page information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Creates a **NavPathInfo** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -37,8 +33,8 @@ Creates a **NavPathInfo** object.
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 | [param](#param) | unknown | Yes |
-| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No |
-| [isEntry](#isentry) | boolean | No |
+| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No |
+| [isEntry](arkts-arkui-navpathinfo-c.md) | boolean | No |
 
 ## isEntry
 
@@ -55,8 +51,6 @@ Whether the navigation destination page is the entry page.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +72,6 @@ Name of the navigation destination page. The name matches the name in the follow
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -97,8 +89,6 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 **Type:** string
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,8 +108,6 @@ Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](ark
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -137,8 +125,6 @@ Detailed parameters for the custom **NavDestination** page. The **unknown** type
 **Type:** unknown
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

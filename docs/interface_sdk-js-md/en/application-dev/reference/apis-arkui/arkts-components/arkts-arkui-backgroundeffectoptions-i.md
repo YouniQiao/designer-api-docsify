@@ -4,8 +4,6 @@ Defines the options of BackgroundEffect
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Adaptive color mode used for the background blur effect. Default value: **DEFAUL
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -49,8 +45,6 @@ Grayscale blur.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -63,15 +57,13 @@ Grayscale blur.
 brightness?: number
 ```
 
-Brightness. <br>Value range: [0, +∞). <br>Default value: **1** Recommended value range: [0, 2].
+Brightness. Value range: [0, +∞). Default value: **1** Recommended value range: [0, 2].
 
 **Type:** number
 
 **Default:** 1
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,13 +79,11 @@ color?: ResourceColor
 
 Color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,13 +99,11 @@ inactiveColor?: ResourceColor
 
 Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +125,6 @@ Blur activation policy.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -156,8 +142,6 @@ Blur radius. Value range: [0, +∞). Default value: **0**.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,8 +162,6 @@ Saturation. Value range: [0, +∞). Recommended value range: [0, 50].
 **Default:** 1
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

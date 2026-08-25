@@ -4,8 +4,6 @@ Represents a touch gesture recognizer.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Sends a touch cancellation event to this touch gesture recognizer.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -41,8 +37,6 @@ Obtains the information about the component corresponding to this touch gesture 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -58,14 +52,12 @@ Obtains the information about the component corresponding to this touch gesture 
 ## isHostBelongsTo
 
 ```TypeScript
-isHostBelongsTo(uniqueId: int): boolean
+isHostBelongsTo(uniqueId: number): boolean
 ```
 
 Returns whether the node bound to the current touch gesture recognizer is a descendant of the specified component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

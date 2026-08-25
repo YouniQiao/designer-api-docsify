@@ -4,14 +4,12 @@ Describes audio renderer configurations.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## privacyType
@@ -25,8 +23,6 @@ Whether the audio stream can be recorded by other applications. The default valu
 **Type:** [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -42,8 +38,6 @@ Describes audio renderer information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamInfo
@@ -57,7 +51,5 @@ Describes audio stream information.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer

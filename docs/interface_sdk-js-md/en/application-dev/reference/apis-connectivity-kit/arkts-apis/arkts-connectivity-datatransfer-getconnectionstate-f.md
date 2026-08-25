@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getConnectionState
@@ -15,8 +15,6 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 Obtains the port channel connection state with a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -34,7 +32,7 @@ Obtains the port channel connection state with a remote device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
 
 **Error codes:**
 

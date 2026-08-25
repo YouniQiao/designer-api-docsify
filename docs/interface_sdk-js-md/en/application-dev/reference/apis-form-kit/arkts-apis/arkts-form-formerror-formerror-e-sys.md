@@ -1,10 +1,8 @@
 # FormError
 
-Error of form.@enum { int }
+Error of form.@enum { number }
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -17,8 +15,6 @@ ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 Distributed scheduling failed
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

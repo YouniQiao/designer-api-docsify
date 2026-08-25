@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## importUkeyCertificate
@@ -15,8 +15,6 @@ function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyI
 Import the certificate to the USB Key.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 

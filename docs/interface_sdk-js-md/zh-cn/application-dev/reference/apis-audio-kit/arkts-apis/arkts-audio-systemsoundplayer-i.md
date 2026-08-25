@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 ## load
@@ -18,8 +16,6 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -43,18 +39,6 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.load(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in loading the system sound.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to load the system sound. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## play
 
@@ -66,8 +50,6 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -92,18 +74,6 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.play(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in playing the system sound.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to play the system sound. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## release
 
 ```TypeScript
@@ -113,8 +83,6 @@ release(): Promise<void>
 释放系统音效播放器。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -132,18 +100,6 @@ release(): Promise<void>
 | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.release().then(() => {
-  console.info('Succeeded in releasing the system sound player.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to release the system sound player. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## unload
 
 ```TypeScript
@@ -153,8 +109,6 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 卸载之前已加载的系统音效。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,15 +132,3 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.unload(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in unloading the system sound.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unload the system sound. Code: ${err.code}, message: ${err.message}`);
-});
-```

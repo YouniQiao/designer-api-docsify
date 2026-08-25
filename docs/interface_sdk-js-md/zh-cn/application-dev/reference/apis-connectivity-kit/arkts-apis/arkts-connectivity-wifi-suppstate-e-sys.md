@@ -4,8 +4,6 @@ supplicant状态枚举。@enum { number } SuppState
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md)
@@ -23,8 +21,6 @@ DISCONNECTED
 supplicant未与AP关联或已与AP断开连接。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ INTERFACE_DISABLED
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interface_disabled)
@@ -63,8 +57,6 @@ INACTIVE
 supplicant已禁用。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -84,8 +76,6 @@ supplicant正在扫描WLAN连接。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [SCANNING](arkts-connectivity-wifimanager-suppstate-e-sys.md#scanning)
@@ -103,8 +93,6 @@ AUTHENTICATING
 supplicant正在与指定AP进行认证。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -124,8 +112,6 @@ supplicant正在与指定AP关联。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [ASSOCIATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#associating)
@@ -143,8 +129,6 @@ ASSOCIATED
 supplicant已与指定AP关联。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -164,8 +148,6 @@ FOUR_WAY_HANDSHAKE
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#four_way_handshake)
@@ -183,8 +165,6 @@ GROUP_HANDSHAKE
 群组握手正在进行中。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -204,8 +184,6 @@ COMPLETED
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [COMPLETED](arkts-connectivity-wifimanager-suppstate-e-sys.md#completed)
@@ -224,8 +202,6 @@ UNINITIALIZED
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [UNINITIALIZED](arkts-connectivity-wifimanager-suppstate-e-sys.md#uninitialized)
@@ -243,8 +219,6 @@ INVALID
 supplicant处于未知或无效状态。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

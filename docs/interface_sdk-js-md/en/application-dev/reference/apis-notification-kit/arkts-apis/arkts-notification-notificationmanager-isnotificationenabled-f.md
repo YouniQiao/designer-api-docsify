@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -15,8 +15,6 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
@@ -42,93 +40,6 @@ Queries the notification authorization status of the current application. This A
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-  }
-}
-
-notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isNotificationEnabled().then((data: boolean) => {
-  console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-
-notificationManager.isNotificationEnabled(bundle, isNotificationEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.isNotificationEnabled(userId, isNotificationEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## isNotificationEnabled
 
@@ -139,8 +50,6 @@ function isNotificationEnabled(): Promise<boolean>
 Queries the notification authorization status of the current application. This API uses a promise to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
@@ -164,7 +73,3 @@ Queries the notification authorization status of the current application. This A
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [isNotificationEnabled](#isnotificationenabled)

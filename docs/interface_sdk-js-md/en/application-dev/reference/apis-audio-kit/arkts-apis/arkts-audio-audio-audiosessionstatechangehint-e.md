@@ -4,8 +4,6 @@ Enumerates the hints for audio session state changes.The hint is obtained when a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_RESUME
@@ -17,8 +15,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0
 A hint is displayed, indicating that the audio session is resuming. The application can proactively trigger operations such as rendering.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ A hint is displayed, indicating that the audio session is paused and the audio f
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_STOP
@@ -45,8 +39,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2
 A hint is displayed, indicating that the audio session is stopped and the audio focus is lost permanently.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ A hint is displayed, indicating that the audio session is stopped by the system 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_DUCK
@@ -73,8 +63,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 A hint is displayed, indicating that audio ducking starts and the audio is played at a lower volume.If [enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers) is enabled, you can choose to mute the audio.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -88,8 +76,6 @@ A hint is displayed, indicating that audio ducking ends and the audio is played 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION
@@ -101,8 +87,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6
 Suggests to mute the playback because there is another application begin to play nonmixable audio, application can decide whether to mute. If interrupt strategy is duck, [AUDIO_SESSION_STATE_CHANGE_HINT_DUCK](#audio_session_state_change_hint_duck) will replace mute suggestion event, but application can still decide to mute when receive hint duck.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,8 +102,6 @@ Suggest to unmute the playback because another application's nonmixable audio en
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -134,8 +116,6 @@ The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -149,8 +129,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-audio-audio-audiosessionbehaviorflags-e.md#mute_when_interrupted) has been set by the interface [setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior) and [setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene) has been called, and the audio session has been activated. When the hint is received, the audio stream is unmuted.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

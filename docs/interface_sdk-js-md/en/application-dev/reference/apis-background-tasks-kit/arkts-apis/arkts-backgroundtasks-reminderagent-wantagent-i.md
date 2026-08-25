@@ -4,8 +4,6 @@ Sets the package and ability that are redirected to when the reminder notificati
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
@@ -15,7 +13,7 @@ Sets the package and ability that are redirected to when the reminder notificati
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -29,8 +27,6 @@ Name of the ability that is redirected to when the reminder notification is clic
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Name of the HAP that is redirected to when the reminder notification is clicked.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

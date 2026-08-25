@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
+import { thermal } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## subscribeThermalLevel
@@ -16,8 +16,6 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md)
@@ -29,11 +27,3 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-thermal.subscribeThermalLevel((err: Error, level: thermal.ThermalLevel) => {
-    console.info('thermal level is: ' + level);
-});
-```

@@ -4,14 +4,12 @@ Defines a VPN observer object. It is used to listen for VPN-related events. Befo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult
@@ -28,8 +26,6 @@ Unregisters a listener for the user authorization result.
 > parameter.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ Registers a listener for the user authorization result. The authorization result
 > If this API is called multiple times, only the last callback takes effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

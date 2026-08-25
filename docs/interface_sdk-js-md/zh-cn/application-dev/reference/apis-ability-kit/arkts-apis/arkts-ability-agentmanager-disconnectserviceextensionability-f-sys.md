@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>
+function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: number): Promise<void>
 ```
 
 断开AgentExtensionAbility与ServiceExtensionAbility的连接。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -29,7 +27,7 @@ function disconnectServiceExtensionAbility(context: AgentExtensionContext, conne
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | 是 |
-| connectId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| connectId | number | 是 |
 
 **返回值：**
 

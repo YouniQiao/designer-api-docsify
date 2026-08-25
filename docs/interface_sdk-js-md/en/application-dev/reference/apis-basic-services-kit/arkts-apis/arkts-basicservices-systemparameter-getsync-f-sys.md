@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from '@kit.BasicServicesKit';
+import { systemParameter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getSync
@@ -15,8 +15,6 @@ function getSync(key: string, def?: string): string
 Obtains a value of the specified key.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -38,14 +36,3 @@ Obtains a value of the specified key.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-try {
-    let info: string = systemparameter.getSync("const.ohos.apiversion");
-    console.info(JSON.stringify(info));
-} catch(e) {
-    console.error("getSync unexpected error: " + e);
-}
-```

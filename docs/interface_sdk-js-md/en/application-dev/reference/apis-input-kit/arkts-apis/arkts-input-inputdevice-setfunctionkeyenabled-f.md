@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## setFunctionKeyEnabled
@@ -15,8 +15,6 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
@@ -43,31 +41,3 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) |
 | [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-non-input-application) |
-
-**Examples**
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputDevice.setFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK, true).then(() => {
-              console.info(`Set capslock state success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set capslock state failed, error=${JSON.stringify(error)}`);
-            });
-          } catch (error) {
-            console.error(`Set capslock enable error`);
-          }
-        })
-    }
-  }
-}
-```

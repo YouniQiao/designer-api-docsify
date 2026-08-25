@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## getCarAwareness
@@ -15,8 +15,6 @@ function getCarAwareness(capability: Capability, options?: CarAwarenessOptions):
 /** Disables vehicle awareness and subscribes to vehicle awareness results.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

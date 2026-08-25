@@ -4,8 +4,6 @@ Want is a carrier for information transfer between objects (application componen
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Want/Want](arkts-ability-app-ability-want-want-c.md)
@@ -29,8 +27,6 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
@@ -48,8 +44,6 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -69,8 +63,6 @@ Bundle name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
@@ -88,8 +80,6 @@ ID of the device running the ability. If this field is unspecified, the local de
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -109,8 +99,6 @@ Additional category information (such as browser and video player) of the abilit
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [entities](arkts-ability-app-ability-want-want-c.md#entities)
@@ -129,8 +117,6 @@ How the Want object will be handled. By default, numbers are passed in. For deta
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [flags](arkts-ability-app-ability-want-want-c.md#flags)
@@ -147,13 +133,14 @@ Want parameters in the form of custom key-value (KV) pairs. By default, the foll
 **ohos.aafwk.param.callerPid**: PID of the caller.  
 **ohos.aafwk.param.callerToken**: token of the caller.  
 **ohos.aafwk.param.callerUid**: UID in bundleInfo, that is, the application UID in the bundle information.  
-- **component.startup.newRules**: whether to enable the new control rule. - **moduleName**: module name of the caller. No matter what this field is set to, the correct module name will be sent to the peer. - **ohos.dlp.params.sandbox**: available only for DLP files.
+- **component.startup.newRules**: whether to enable the new control rule.  
+- **moduleName**: module name of the caller. No matter what this field is set to, the correct module name will be  
+sent to the peer.  
+- **ohos.dlp.params.sandbox**: available only for DLP files.
 
 **Type:** { [key: string]: any }
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -173,8 +160,6 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-ability-app-ability-want-want-c.md#type)
@@ -193,149 +178,8 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 **System capability:** SystemCapability.Ability.AbilityBase
-
-**Examples**
-
-Basic usage (called in a UIAbility object, where context in the example is the context object of the UIAbility).
-
-```TypeScript
-import Want from '@ohos.application.Want';
-import { BusinessError } from '@ohos.base';
-import UIAbility from '@ohos.app.ability.UIAbility';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-
-let want: Want = {
-'deviceId': '', // An empty deviceId indicates the local device.
-'bundleName': 'com.example.myapplication',
-'abilityName': 'EntryAbility',
-};
-class MyAbility extends UIAbility{
-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
-    this.context.startAbility(want, (error: BusinessError) => {
-    // Start an ability explicitly. The bundleName, abilityName, and moduleName parameters work together to uniquely identify an ability.
-    console.error(`error.code = ${error.code}`);
-    });
-}
-}
-```
-
-String
-
-```TypeScript
-import Want from '@ohos.application.Want';
-
-let want: Want = {
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EntryAbility',
-    parameters: {
-        keyForString: 'str',
-    },
-};
-```
-
-Number
-
-```TypeScript
-import Want from '@ohos.application.Want';
-
-let want: Want = {
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EntryAbility',
-    parameters: {
-        keyForInt: 100,
-        keyForDouble: 99.99,
-    },
-};
-```
-
-Boolean
-
-```TypeScript
-import Want from '@ohos.application.Want';
-
-let want: Want = {
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EntryAbility',
-    parameters: {
-        keyForBool: true,
-    },
-};
-```
-
-Object
-
-```TypeScript
-import Want from '@ohos.application.Want';
-
-let want: Want = {
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EntryAbility',
-    parameters: {
-        keyForObject: {
-            keyForObjectString: 'str',
-            keyForObjectInt: -200,
-            keyForObjectDouble: 35.5,
-            keyForObjectBool: false,
-        },
-    },
-};
-```
-
-Array
-
-```TypeScript
-import Want from '@ohos.application.Want';
-
-let want: Want = {
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EntryAbility',
-    parameters: {
-        keyForArrayString: ['str1', 'str2', 'str3'],
-        keyForArrayInt: [100, 200, 300, 400],
-        keyForArrayDouble: [0.1, 0.2],
-        keyForArrayObject: [{obj1: 'aaa'}, {obj2: 100}],
-    },
-};
-```
-
-File descriptor (FD)
-
-```TypeScript
-import fs from '@ohos.file.fs';
-import Want from '@ohos.application.Want';
-import { BusinessError } from '@ohos.base';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import UIAbility from '@ohos.app.ability.UIAbility';
-
-
-let fd: number = 0;
-try {
-fd = fs.openSync('/data/storage/el2/base/haps/pic.png').fd;
-} catch(e) {
-console.error(`openSync fail: ${JSON.stringify(e)}`);
-}
-let want: Want = {
-deviceId: '', // An empty deviceId indicates the local device.
-bundleName: 'com.example.myapplication',
-abilityName: 'EntryAbility',
-parameters: {
-    'keyFd':{'type':'FD', 'value':fd}
-}
-};
-
-class MyAbility extends UIAbility{
-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
-    this.context.startAbility(want, (error: BusinessError) => {
-    // Start an ability explicitly. The bundleName, abilityName, and moduleName parameters work together to uniquely identify an ability.
-    console.error(`error.code = ${error.code}`);
-    });
-}
-}
-```

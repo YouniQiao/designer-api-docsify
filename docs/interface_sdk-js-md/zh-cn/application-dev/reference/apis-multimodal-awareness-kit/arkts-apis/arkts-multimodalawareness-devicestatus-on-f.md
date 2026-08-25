@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## on('steadyStandingDetect')
@@ -15,8 +15,6 @@ function on(type: 'steadyStandingDetect', callback: Callback<SteadyStandingStatu
 订阅设备静止姿态感知（支架态）事件。建议在不需要时调用off()取消订阅，释放资源。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -34,15 +32,3 @@ function on(type: 'steadyStandingDetect', callback: Callback<SteadyStandingStatu
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [32500001](../errorcode-deviceStatus.md#32500001-服务异常) |
 | [32500002](../errorcode-deviceStatus.md#32500002-订阅失败) |
-
-**示例**
-
-```TypeScript
-try {
-   deviceStatus.on('steadyStandingDetect', (data:deviceStatus.SteadyStandingStatus) => {
-      console.info(`succeeded to get status, now status = ${JSON.stringify(data)}`);
-   });
-} catch (err) {
-   console.error(`on failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## factoryReset
@@ -15,8 +15,6 @@ function factoryReset(callback: AsyncCallback<void>): void
 Restoring bluetooth settings.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -41,32 +39,6 @@ Restoring bluetooth settings.
 | 2900001 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    access.factoryReset((err: BusinessError) => {
-        if (err) {
-            console.error("factoryReset error");
-        }
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    access.factoryReset().then(() => {
-        console.info("factoryReset");
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## factoryReset
 
@@ -77,8 +49,6 @@ function factoryReset(): Promise<void>
 Restoring bluetooth settings.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -101,7 +71,3 @@ Restoring bluetooth settings.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
-
-**Examples**
-
-See [factoryReset](#factoryreset)

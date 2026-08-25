@@ -4,8 +4,6 @@ Defines the SIM card authentication response.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the SIM card authentication response.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## response
@@ -28,8 +26,6 @@ Indicates the response of authentication.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Indicates the response of authentication.
 ## simStatusWord1
 
 ```TypeScript
-simStatusWord1: int
+simStatusWord1: number
 ```
 
 Status word 1 of the SIM card, which is returned by the SIM card after command execution.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -55,16 +49,14 @@ Status word 1 of the SIM card, which is returned by the SIM card after command e
 ## simStatusWord2
 
 ```TypeScript
-simStatusWord2: int
+simStatusWord2: number
 ```
 
 Status word 2 of the SIM card, which is returned by the SIM card after command execution.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

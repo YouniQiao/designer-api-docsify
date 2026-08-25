@@ -6,20 +6,12 @@ UIExtensionContext provides the context environment for [UIExtensionAbility](ark
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
 Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. ServiceExtensionAbility is a special type of [ExtensionAbility](../../../application-models/extensionability-overview.md) provided by the system. It is designed to offer background services for specific scenarios and is not customizable by developers. It can be connected to by other components and handles requests in the background based on the caller information.
@@ -29,8 +21,6 @@ Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables commun
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +37,7 @@ Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables commun
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -82,8 +72,6 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,21 +109,13 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void
 ```
 
 Disconnects from a ServiceExtensionAbility. Once the connection is terminated, set the remote object, which is returned when the connection is established, to null. This API uses an asynchronous callback to return the result. ServiceExtensionAbility is a special type of [ExtensionAbility](../../../application-models/extensionability-overview.md) provided by the system. It is designed to offer background services for specific scenarios and is not customizable by developers. It can be connected to by other components and handles requests in the background based on the caller information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,7 +125,7 @@ Disconnects from a ServiceExtensionAbility. Once the connection is terminated, s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| connection | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connection | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -158,21 +138,13 @@ Disconnects from a ServiceExtensionAbility. Once the connection is terminated, s
 
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
 ```
 
 Disconnects from a ServiceExtensionAbility. Once the connection is terminated, set the remote object, which is returned when the connection is established, to null. This API uses a promise to return the result. ServiceExtensionAbility is a special type of [ExtensionAbility](../../../application-models/extensionability-overview.md) provided by the system. It is designed to offer background services for specific scenarios and is not customizable by developers. It can be connected to by other components and handles requests in the background based on the caller information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,7 +154,7 @@ Disconnects from a ServiceExtensionAbility. Once the connection is terminated, s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| connection | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connection | number | Yes |
 
 **Return value:**
 
@@ -207,8 +179,6 @@ disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>
 Disconnects from a UIServiceExtensionAbility. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,15 +211,18 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 ```
 
 Opens an atomic service in an independent window and returns the result. This API uses a promise to return the result. The following situations may be possible for a started atomic service:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the atomic service. The result is returned to the caller. - If an exception occurs, for example, the atomic service is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an atomic service and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the atomic service, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the atomic service. The result is returned to the caller.  
+- If an exception occurs, for example, the atomic service is killed, an error message, in which **resultCode** is  
+**-1**, is returned to the caller.  
+- If different applications call this API to start an atomic service and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the atomic service, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -289,15 +262,16 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 ```
 
 Starts a UIAbility by using App Linking or Deep Linking. This API uses a promise to return the result. A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:  
-- The **actions** field must contain **ohos.want.action.viewData**. - The **entities** field must contain **entity.system.browsable**. - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**. If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](#startabilityforresult). If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
+- The **actions** field must contain **ohos.want.action.viewData**.  
+- The **entities** field must contain **entity.system.browsable**.  
+- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
+If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](#startabilityforresult). If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,8 +324,6 @@ Called when the window content associated with the UIExtensionAbility finishes d
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -389,8 +361,6 @@ Sets the dark/light color mode for this UIExtensionAbility. Before calling this 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -420,8 +390,6 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -482,8 +450,6 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -541,8 +507,6 @@ Starts a UIAbility. This API uses a promise to return the result.
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,15 +566,18 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. The following situations may be possible for a started UIAbility:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller. - If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**, is returned to the initiator UIAbility. - If different applications call this API to start a UIAbility that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**  
+, is returned to the initiator UIAbility.  
+- If different applications call this API to start a UIAbility that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -664,15 +631,18 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 ```
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. The following situations may be possible for a started UIAbility:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller. - If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**, is returned to the initiator UIAbility. - If different applications call this API to start a UIAbility that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**  
+, is returned to the initiator UIAbility.  
+- If different applications call this API to start a UIAbility that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -725,15 +695,18 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 ```
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. The following situations may be possible for a started UIAbility:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller. - If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**, is returned to the initiator UIAbility. - If different applications call this API to start a UIAbility that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility. The result is returned to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an error message, in which **resultCode** is **-1**  
+, is returned to the initiator UIAbility.  
+- If different applications call this API to start a UIAbility that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -800,8 +773,6 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -847,8 +818,6 @@ Destroys this UIExtensionAbility and closes the corresponding window. This API u
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -875,8 +844,6 @@ Destroys this UIExtensionAbility and closes the corresponding window. This API u
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -896,8 +863,6 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 Destroys this UIExtensionAbility, closes the corresponding window, and returns the result to the caller of the UIExtensionAbility (usually a system service). This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -925,8 +890,6 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 Destroys this UIExtensionAbility, closes the corresponding window, and returns the result to the caller of the UIExtensionAbility (usually a system service). This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

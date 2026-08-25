@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPowerMode
@@ -16,8 +16,6 @@ function getPowerMode(): DevicePowerMode
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
@@ -25,10 +23,3 @@ function getPowerMode(): DevicePowerMode
 | 类型 |
 | --- |
 | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) |
-
-**示例**
-
-```TypeScript
-let mode = power.getPowerMode();
-console.info('power mode: ' + mode);
-```

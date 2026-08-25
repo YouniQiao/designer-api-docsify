@@ -4,14 +4,12 @@ The **runningLock** module provides APIs for creating, querying, holding, and re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -4,29 +4,25 @@ Represents the font variable axis information.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## defaultValue
 
 ```TypeScript
-defaultValue: double
+defaultValue: number
 ```
 
 Default value of the font variable axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -35,16 +31,14 @@ Default value of the font variable axis.
 ## flags
 
 ```TypeScript
-flags: int
+flags: number
 ```
 
 Flag of the font variable axis, which is used to indicate whether a variable axis should be hidden from users. The value can be **0** or **1**. The value **0** indicates that the axis is visible to users, and the value **1** indicates that the axis should be hidden.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -62,8 +56,6 @@ Keyword identifier of the font variable axis.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -80,8 +72,6 @@ Localized name of the font variable axis, which can be empty.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -89,16 +79,14 @@ Localized name of the font variable axis, which can be empty.
 ## maxValue
 
 ```TypeScript
-maxValue: double
+maxValue: number
 ```
 
 Maximum value of the font variable axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -107,16 +95,14 @@ Maximum value of the font variable axis.
 ## minValue
 
 ```TypeScript
-minValue: double
+minValue: number
 ```
 
 Minimum value of the font variable axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -133,8 +119,6 @@ English name of the font variable axis.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppAccept
@@ -15,8 +15,6 @@ function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void
 Waits for a remote device to connect.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -37,26 +35,3 @@ Waits for a remote device to connect.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let clientNumber = -1;
-let serverNumber = 1;
-let acceptClientSocket = (code: BusinessError, number: number) => {
-  if (code) {
-    console.error('sppListen error, code is ' + code);
-    return;
-  } else {
-    clientNumber = number; // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
-    console.info('sppListen success, clientNumber = ' + clientNumber);
-  }
-}
-try {
-    socket.sppAccept(serverNumber, acceptClientSocket); // serverNumber is the server number returned by the sppListen callback.
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

@@ -8,8 +8,6 @@ Enumerates the NFC card emulation types.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -25,8 +23,6 @@ HCE = 0
 HCE.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -46,8 +42,6 @@ Subscriber identity module (SIM) card emulation.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -65,8 +59,6 @@ ESE = 2
 Embedded Secure Element (eSE) emulation.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

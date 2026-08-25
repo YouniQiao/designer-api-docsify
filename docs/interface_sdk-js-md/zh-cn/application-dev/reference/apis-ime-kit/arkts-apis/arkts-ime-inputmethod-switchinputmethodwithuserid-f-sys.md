@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## switchInputMethodWithUserId
 
 ```TypeScript
-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>
+function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: number): Promise<void>
 ```
 
 切换输入法，使用promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
@@ -32,7 +30,7 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 | --- | --- | --- |
 | bundleName | string | 是 |
 | subtypeId | string | 否 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -51,29 +49,3 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 | [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.switchInputMethodWithUserId('com.example.keyboard', 'subtype_001', 100).then(() => {
-  console.info('Succeeded in switching input method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchInputMethodWithUserId, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.switchInputMethodWithUserId('com.example.keyboard', 'subtype_001', 100).then(() => {
-  console.info('Succeeded in switching input method.');
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to switchInputMethodWithUserId, code: ${err.code}, message: ${err.message}`);
-});
-```

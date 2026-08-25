@@ -12,8 +12,6 @@ The WindowExtensionContext module provides the context environment for the Windo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -29,8 +27,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 21
 
@@ -55,84 +51,6 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, StartOptions } from '@kit.AbilityKit';
-
-class WindowExtAbility extends WindowExtensionAbility {
-  
-  onConnect() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'MainAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 102
-    };
-
-    try {
-      this.context.startAbility(want, options, (error: BusinessError) => {
-        let message = (error as BusinessError).message;
-        let errCode = (error as BusinessError).code;
-        if (errCode) {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let message = (paramError as BusinessError).message;
-      let errCode = (paramError as BusinessError).code;
-      console.error(`error.code: ${errCode}, error.message: ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, StartOptions } from '@kit.AbilityKit';
-
-class WindowExtAbility extends WindowExtensionAbility {
-
-  onConnect() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MainAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 102,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          let message = (error as BusinessError).message;
-          let errCode = (error as BusinessError).code;
-          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let message = (paramError as BusinessError).message;
-      let errCode = (paramError as BusinessError).code;
-      console.error(`error.code: ${errCode}, error.message: ${message}`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -142,8 +60,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 Starts an ability. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 21
 
@@ -172,7 +88,3 @@ Starts an ability. This API uses a promise to return the result.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [startAbility](#startability)

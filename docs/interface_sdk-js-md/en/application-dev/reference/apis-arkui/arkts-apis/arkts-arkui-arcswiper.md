@@ -3,17 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcSwiper](arkts-arkui-arkui-arcswiper-arcswiper-f.md) |
-| [ArcSwiper](arkts-arkui-arkui-arcswiper-arcswiper-f.md) |
 
 ### Classes
 
@@ -27,9 +20,6 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md) |
-| [ArcSwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) |
-| [ArcSwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-arcswipercontenttransitionproxy-i.md) |
 | [ArcSwiperInterface](arkts-arkui-arkui-arcswiper-arcswiperinterface-i.md) |
 | [SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md) |
 | [SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md) |
@@ -49,3 +39,10 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) |
 | [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) |
 | [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSwiper](arkts-arkui-ohosarkuiarcswiper-p.md) |
+| [ArcSwiperInstance](arkts-arkui-ohosarkuiarcswiper-p.md) |

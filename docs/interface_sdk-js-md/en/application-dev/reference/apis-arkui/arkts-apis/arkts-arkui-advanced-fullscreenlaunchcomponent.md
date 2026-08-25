@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from '@kit.ArkUI';
+import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -21,9 +21,3 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ContentBuilder(Defines the fullScreen launch component)](arkts-arkui-contentbuilder-t.md) |

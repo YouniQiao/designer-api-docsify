@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createRemoteDevice
@@ -15,8 +15,6 @@ function createRemoteDevice(address: string): RemoteDevice
 Creates a **RemoteDevice** instance.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

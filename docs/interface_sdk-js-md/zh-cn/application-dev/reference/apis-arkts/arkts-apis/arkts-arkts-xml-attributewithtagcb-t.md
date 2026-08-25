@@ -8,8 +8,6 @@ ParseOptions中attributeWithTagCallbackFunction的回调方法，三个字符串
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -27,31 +25,3 @@ ParseOptions中attributeWithTagCallbackFunction的回调方法，三个字符串
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let xmlStr = 
-    '<?xml version="1.0" encoding="utf-8"?>' +
-    '<column name="Giana"><value integer="1"/></column>' +
-    '<column name="category"><value Boolean="true"/></column>' +
-    '<column name="day"><orange Boolean="3"/></column>';
-let textEncoder = new util.TextEncoder();
-let arrBuffer = textEncoder.encodeInto(xmlStr);
-let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
-
-let attrWithTag = (tagName: string, key: string, value: string): boolean => {
-    if (tagName == "orange") {
-        console.info('key: ',key,' value: ',value); // key:  Boolean  value:  3
-        arktest.assertEQ(value, '3');
-    }
-    return true;
-}
-
-let options: xml.ParseOptions = {
-    supportDoctype: true,
-    ignoreNameSpace: true,
-    attributeWithTagCallbackFunction:attrWithTag
-};
-that.parseXml(options);
-```

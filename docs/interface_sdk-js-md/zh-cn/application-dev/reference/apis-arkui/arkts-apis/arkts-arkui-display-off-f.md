@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## off('add' | 'remove' | 'change')
@@ -15,8 +15,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 关闭显示设备变化的监听。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,21 +33,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.off('remove');
-
-let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`);
-};
-// 关闭传入的callback监听
-display.off('remove', callback);
-```
-
 
 ## off('add' | 'remove' | 'change')
 
@@ -60,8 +43,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 关闭显示设备变化的监听。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,10 +61,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 off
-
 
 ## off('add' | 'remove' | 'change')
 
@@ -94,8 +71,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 关闭显示设备变化的监听。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -113,10 +88,6 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 off
 
 
 ## off('foldStatusChange')
@@ -128,8 +99,6 @@ function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 关闭折叠设备折叠状态变化的监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -149,21 +118,6 @@ function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.off('foldStatusChange');
-
-let callback: Callback<display.FoldStatus> = (data: display.FoldStatus) => {
-  console.info(`unregistering FoldStatus changes callback. Data: ${data}`);
-};
-// 关闭传入的callback监听
-display.off('foldStatusChange', callback);
-```
-
 
 ## off('foldAngleChange')
 
@@ -174,8 +128,6 @@ function off(type: 'foldAngleChange', callback?: Callback<Array<number>>): void
 关闭折叠设备折叠角度变化的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -195,21 +147,6 @@ function off(type: 'foldAngleChange', callback?: Callback<Array<number>>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.off('foldAngleChange');
-
-let callback: Callback<Array<number>> = (angles: Array<number>) => {
-  console.info(`Listening fold angles length: ${angles.length}`);
-};
-// 关闭传入的callback监听
-display.off('foldAngleChange', callback);
-```
-
 
 ## off('captureStatusChange')
 
@@ -220,8 +157,6 @@ function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 关闭设备的屏幕显示信息是否被获取的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -241,21 +176,6 @@ function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.off('captureStatusChange');
-
-let callback: Callback<boolean> = (captureStatus: boolean) => {
-  console.info(`Listening capture status: ${captureStatus}`);
-};
-// 关闭传入的callback监听
-display.off('captureStatusChange', callback);
-```
-
 
 ## off('foldDisplayModeChange')
 
@@ -266,8 +186,6 @@ function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>
 关闭折叠设备屏幕显示模式变化的监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -287,21 +205,6 @@ function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-// 如果通过on注册多个callback，同时关闭所有callback监听
-display.off('foldDisplayModeChange');
-
-let callback: Callback<display.FoldDisplayMode> = (data: display.FoldDisplayMode) => {
-  console.info(`unregistering FoldDisplayMode changes callback. Data: ${data}`);
-};
-// 关闭传入的callback监听
-display.off('foldDisplayModeChange', callback);
-```
-
 
 ## off('brightnessInfoChange')
 
@@ -312,8 +215,6 @@ function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<number,
 关闭所有屏幕亮度信息状态变化的监听。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -333,16 +234,3 @@ function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<number,
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 | [1400004](../errorcode-display.md#1400004-参数异常) |
-
-**示例**
-
-```TypeScript
-let callback: display.BrightnessCallback<number, display.BrightnessInfo> = (id: number, data: display.BrightnessInfo) => {
-  console.info(`Listening enabled ${id}. Data: ${JSON.stringify(data)}`);
-};
-try {
-  display.off('brightnessInfoChange', callback);
-} catch (error) {
-  console.error(`Failed to unregister brightnessInfoChange listener. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleInstallerSync
@@ -15,8 +15,6 @@ function getBundleInstallerSync(): BundleInstaller
 Obtains a BundleInstaller object. This API is a synchronous API.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -33,18 +31,3 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstallerSync();
-    console.info('getBundleInstallerSync successfully.');
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstallerSync failed. Cause: ' + message);
-}
-```

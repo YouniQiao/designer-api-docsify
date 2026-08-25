@@ -6,8 +6,6 @@ The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## startServiceExtensionAbility
@@ -19,8 +17,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 Starts a **ServiceExtensionAbility**. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,35 +55,6 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-      // Start the corresponding service.
-      this.context.startServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in starting ServiceExtensionAbility.');
-      }).catch ((err: BusinessError) => {
-        console.error('failed to start ServiceExtensionAbility.');
-      });
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-  }
-}
-```
-
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -97,8 +64,6 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 Stops a **ServiceExtensionAbility**. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,32 +98,3 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-      // Stop the corresponding service.
-      this.context.stopServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in stopping ServiceExtensionAbility.');
-      }).catch ((err: BusinessError) => {
-        console.error('failed to stop ServiceExtensionAbility.');
-      });
-  }
-}
-```

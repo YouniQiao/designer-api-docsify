@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## updateAsUser
@@ -15,8 +15,6 @@ function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: Asset
 在指定用户空间中更新符合条件的一条关键资产。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -57,24 +55,3 @@ function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: Asset
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let userId: number = 100;
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-let attrsToUpdate: asset.AssetMap = new Map();
-attrsToUpdate.set(asset.Tag.SECRET, stringToArray('demo_pwd_new'));
-asset.updateAsUser(userId, query, attrsToUpdate).then(() => {
-  console.info(`Succeeded in updating Asset in user space.`);
-});
-```

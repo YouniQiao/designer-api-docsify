@@ -4,8 +4,6 @@ Defines the key event to inject.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the key event to inject.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## isIntercepted
@@ -27,8 +25,6 @@ Whether the key event can be intercepted.The value **true** indicates that the k
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -46,8 +42,6 @@ Whether the key is pressed.The value **true** indicates that the key is pressed,
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Whether the key is pressed.The value **true** indicates that the key is pressed,
 ## keyCode
 
 ```TypeScript
-keyCode: int
+keyCode: number
 ```
 
 Key code. Currently, only the **KEYCODE_BACK** key is supported.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -73,16 +65,14 @@ Key code. Currently, only the **KEYCODE_BACK** key is supported.
 ## keyDownDuration
 
 ```TypeScript
-keyDownDuration: int
+keyDownDuration: number
 ```
 
 Duration of key press, in microseconds (μs).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 

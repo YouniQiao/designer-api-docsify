@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCellularDataRoamingEnabledSync
 
 ```TypeScript
-function isCellularDataRoamingEnabledSync(slotId: int): boolean
+function isCellularDataRoamingEnabledSync(slotId: number): boolean
 ```
 
 检查蜂窝数据业务是否启用漫游，调用此API返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -26,7 +24,7 @@ function isCellularDataRoamingEnabledSync(slotId: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -44,16 +42,3 @@ function isCellularDataRoamingEnabledSync(slotId: int): boolean
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-try {
-    let isEnabled: boolean = data.isCellularDataRoamingEnabledSync(0);
-    console.info(`isCellularDataRoamingEnabledSync success : ${isEnabled}`);
-} catch (err) {
-    console.error(`isCellularDataRoamingEnabledSync fail. code: ${err.code}, message: ${err.message}`);  
-}
-```

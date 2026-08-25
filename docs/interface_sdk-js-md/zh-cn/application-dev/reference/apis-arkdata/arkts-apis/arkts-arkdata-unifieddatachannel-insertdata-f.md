@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## insertData
@@ -16,8 +16,6 @@ function insertData(options: Options, data: UnifiedData, callback: AsyncCallback
 **实现机制：** 系统接收UnifiedData对象后，验证数据完整性并序列化存储。根据intention值路由到对应存储空间，生成唯一标识符key。数据在公共数据通路中由系统管理有效期，默认策略为应用退出后自动清理。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,128 +37,6 @@ function insertData(options: Options, data: UnifiedData, callback: AsyncCallback
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  abstract: 'This is abstract'
-};
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-};
-try {
-  unifiedDataChannel.insertData(options, unifiedData, (err, key) => {
-    if (err === undefined) {
-      console.info(`Succeeded in inserting data. key = ${key}`);
-    } else {
-      console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
-    }
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  textAbstract: 'This is a text abstract'
-}
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-}
-try {
-  unifiedDataChannel.insertData(options, unifiedData, (err, key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  abstract: 'This is abstract'
-};
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-};
-try {
-  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-};
-let plainTextDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2',
-}
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is plainText textContent example',
-  textAbstract: 'This is a text abstract',
-  details: plainTextDetails,
-}
-
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-try {
-  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  }).catch((err: Error) => {
-    const error = err as BusinessError;
-    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
-  });
-} catch (err) {
-  const error = err as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
-  console.error(' error: ' + JSON.stringify(error));
-}
-```
-
 
 ## insertData
 
@@ -171,8 +47,6 @@ function insertData(options: Options, data: UnifiedData): Promise<string>
 将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,7 +72,3 @@ function insertData(options: Options, data: UnifiedData): Promise<string>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [insertData](#insertdata)

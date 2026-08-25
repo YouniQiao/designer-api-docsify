@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSystemNetPortStates
@@ -20,8 +20,6 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 >   UDP端口字段：本地地址、本地端口、进程PID 、进程UID
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.GET_IP_MAC_INFO
 
@@ -42,30 +40,3 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getSystemNetPortStates().then((data: connection.NetPortStatesInfo) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  if (data.tcpPortStatesInfo?.length) {
-    data.tcpPortStatesInfo?.forEach(item => {
-      console.info(`Succeeded to get Tcp data: ${JSON.stringify(item)}`);
-    })
-  } else {
-    console.info("TcpPortStatesInfo is undefined ");
-  }
-  if (data.udpPortStatesInfo?.length) {
-    data.udpPortStatesInfo?.forEach(item => {
-      console.info(`Succeeded to get Udp data: ${JSON.stringify(item)}`);
-    })
-  } else {
-    console.info("UdpPortStatesInfo is undefined ");
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Error fetching getSystemNetPortStates. Code:${error.code}, message:${error.message}`);
-});
-```

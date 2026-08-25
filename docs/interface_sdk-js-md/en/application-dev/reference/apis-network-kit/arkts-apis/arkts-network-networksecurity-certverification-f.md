@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## certVerification
 
 ```TypeScript
-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>
+export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<number>
 ```
 
 Verifies the certificate passed by the application using the preset CA certificate and the CA certificate installed by the user in the certificate management. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -31,7 +29,7 @@ Verifies the certificate passed by the application using the preset CA certifica
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -55,29 +53,3 @@ Verifies the certificate passed by the application using the preset CA certifica
 | [2305027](../errorcode-net-networkSecurity.md#2305027-untrusted-certificate) |
 | [2305018](../errorcode-net-networkSecurity.md#2305018-self-signed-certificate) |
 | [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) |
-
-**Examples**
-
-```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
-
-// Define certificate blobs
-const cert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-const caCert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (CA certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-// Perform asynchronous certificate verification
-networkSecurity.certVerification(cert, caCert)
-  .then((result) => {
-    console.info('Certificate verification result:', result);
-  })
-  .catch((error: BusinessError) => {
-    console.error('Certificate verification failed:', error);
-  });
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getInstalledBundleStorageStats
@@ -21,8 +21,6 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 > 4.该接口支持跨用户查询，比如可以在100用户下，查询101用户下的某些应用的存储占用信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
@@ -52,37 +50,3 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleNames: Array<string> = ['com.example.app1', 'com.example.app2'];
-let accountId: number = 100;
-bundleManager.getInstalledBundleStorageStats(wantTemp, bundleNames, accountId).then((result) => {
-  console.info('Succeeded in getting installed bundle storage stats.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle storage stats. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "appSize": 38185408,
-    "dataSize": 1216566
-  },
-  // ...
-];
-```

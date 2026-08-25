@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setBadgeDisplayStatusByBundles
@@ -15,8 +15,6 @@ function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Pr
 批量设置指定应用是否显示角标。使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,39 +44,3 @@ function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Pr
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badges = new Map<notificationManager.BundleOption, boolean>();
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-badges.set(bundle, true);
-
-notificationManager.setBadgeDisplayStatusByBundles(badges).then(() => {
-    console.info('SetBadgeDisplayStatusByBundles success.');
-}).catch((err: BusinessError) => {
-    console.error(`SetBadgeDisplayStatusByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let badges = new Map<notificationManager.BundleOption, boolean>();
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-badges.set(bundle, true);
-
-try{
-    notificationManager.setBadgeDisplayStatusByBundles(badges);
-} catch (err) {
-    console.info(`setBadgeDisplayStatusByBundles failed, code is ${err.code}, message is ${err.message}`);
-};
-```

@@ -4,21 +4,17 @@ Enumerates the constants.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## ACTION_ADD_ACCOUNT_IMPLICITLY
 
 ```TypeScript
-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
+ACTION_ADD_ACCOUNT_IMPLICITLY = "addAccountImplicitly"
 ```
 
-Operation of adding an account implicitly.Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
+Action for adding an account implicitly.Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -29,14 +25,12 @@ Operation of adding an account implicitly.Note: This API is supported since API 
 ## ACTION_AUTHENTICATE
 
 ```TypeScript
-ACTION_AUTHENTICATE = 'authenticate'
+ACTION_AUTHENTICATE = "authenticate"
 ```
 
 Authentication operation.Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,11 +44,9 @@ Authentication operation.Note: This API is supported since API version 8 and dep
 ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 ```
 
-Operation of creating an account implicitly.
+Action for creating an account implicitly.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -68,8 +60,6 @@ Authentication operation.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## ACTION_VERIFY_CREDENTIAL
@@ -78,11 +68,9 @@ Authentication operation.
 ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 ```
 
-Operation of verifying credentials.
+Action for verifying credentials.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -92,11 +80,9 @@ Operation of verifying credentials.
 ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 ```
 
-Operation of setting authenticator properties.
+Action for setting authenticator properties.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -110,8 +96,6 @@ Name of the application account.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_OWNER
@@ -123,8 +107,6 @@ KEY_OWNER = "owner"
 Bundle name of the application account owner.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -138,8 +120,6 @@ Token.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_ACTION
@@ -151,8 +131,6 @@ KEY_ACTION = "action"
 Operation.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -166,8 +144,6 @@ Authentication type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_SESSION_ID
@@ -179,8 +155,6 @@ KEY_SESSION_ID = "sessionId"
 Session ID.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -194,8 +168,6 @@ PID of the caller.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_CALLER_UID
@@ -207,8 +179,6 @@ KEY_CALLER_UID = "callerUid"
 UID of the caller.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -222,8 +192,6 @@ Bundle name of the caller.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_REQUIRED_LABELS
@@ -236,8 +204,6 @@ Required labels.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## KEY_BOOLEAN_RESULT
@@ -249,7 +215,5 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 Return value of the Boolean type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

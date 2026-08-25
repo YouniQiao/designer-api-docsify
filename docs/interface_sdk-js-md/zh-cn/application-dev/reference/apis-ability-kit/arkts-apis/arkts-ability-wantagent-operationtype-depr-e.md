@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [OperationType](arkts-ability-wantagent-operationtype-e.md)
@@ -21,8 +19,6 @@ UNKNOWN_TYPE = 0
 不识别的类型。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -42,8 +38,6 @@ START_ABILITY
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [START_ABILITY](arkts-ability-wantagent-operationtype-e.md#start_ability)
@@ -61,8 +55,6 @@ START_ABILITIES
 开启多个有页面的Ability。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -82,8 +74,6 @@ START_SERVICE
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [START_SERVICE](arkts-ability-wantagent-operationtype-e.md#start_service)
@@ -101,8 +91,6 @@ SEND_COMMON_EVENT
 发送一个公共事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

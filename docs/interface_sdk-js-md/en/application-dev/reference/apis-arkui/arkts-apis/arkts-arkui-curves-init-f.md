@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## init
@@ -15,8 +15,6 @@ function init(curve?: Curve): string
 Implements initialization for the interpolation curve, which is used to create an interpolation curve based on the input parameter.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

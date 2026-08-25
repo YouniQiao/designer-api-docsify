@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
@@ -23,8 +21,6 @@ MSG_COOPERATE_INFO_START = 200
 键鼠穿越消息，表示键鼠穿越开始。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -44,8 +40,6 @@ MSG_COOPERATE_INFO_SUCCESS = 201
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_ACTIVATE_SUCCESS](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
@@ -63,8 +57,6 @@ MSG_COOPERATE_INFO_FAIL = 202
 键鼠穿越消息，表示键鼠穿越失败。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -84,8 +76,6 @@ MSG_COOPERATE_STATE_ON = 500
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_PREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_prepare)
@@ -103,8 +93,6 @@ MSG_COOPERATE_STATE_OFF = 501
 键鼠穿越状态，表示键鼠穿越状态关闭。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 

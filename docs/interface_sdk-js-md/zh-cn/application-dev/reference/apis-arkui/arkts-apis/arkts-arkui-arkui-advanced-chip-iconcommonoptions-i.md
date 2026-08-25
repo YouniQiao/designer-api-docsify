@@ -7,14 +7,12 @@ IconCommonOptions定义图标的共通属性。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## activatedFillColor
@@ -25,11 +23,9 @@ activatedFillColor?: ResourceColor
 
 Chip激活时的图标填充颜色。仅在图片格式为SVG时生效。默认值：\$r('sys.color.chip_active_icon_color')值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,11 +41,9 @@ fillColor?: ResourceColor
 
 图标填充颜色。仅在图片格式为SVG时生效。默认值：\$r('sys.color.chip_usually_icon_color')值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,14 +58,14 @@ size?: SizeOptions
 ```
 
 图标大小，不支持百分比，异常值按默认值处理。默认值：  
-- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')} - 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}  
-单位：vp值为undefined时，按默认值处理。
+- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
+sys.float.chip_small_icon_size')}  
+- 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('  
+sys.float.chip_normal_icon_size')}单位：vp值为undefined时，按默认值处理。
 
-**类型：** SizeOptions
+**类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,11 +81,9 @@ src: ResourceStr
 
 图标图片或图片地址引用。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

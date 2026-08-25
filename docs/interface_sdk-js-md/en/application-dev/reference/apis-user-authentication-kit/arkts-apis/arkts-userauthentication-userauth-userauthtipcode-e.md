@@ -4,8 +4,6 @@ Enumerates the intermediate states of identity authentication. This enum is used
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## COMPARE_FAILURE
@@ -17,8 +15,6 @@ COMPARE_FAILURE = 1
 The authentication fails. This state occurs because the user's biometric features do not match the registered credential. It is triggered each time the authentication fails. Your application can prompt the user to try again based on this state.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,8 +30,6 @@ The authentication has timed out. This state usually occurs because the user has
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -49,8 +43,6 @@ TEMPORARILY_LOCKED = 3
 The authentication is temporarily locked. When this state occurs, users can attempt to perform authentication only after the lockout duration expires. The temporary lockout status is usually triggered by multiple consecutive authentication failures.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -66,8 +58,6 @@ The authentication is permanently locked. When this state occurs, automatic unlo
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -81,8 +71,6 @@ WIDGET_LOADED = 5
 The identity authentication page is loaded. This state indicates that the authentication widget is successfully loaded and displayed, and the user can start authentication interaction. The application can perform UI-related initialization operations after this state is triggered.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -98,8 +86,6 @@ The current identity authentication page is switched to another authentication p
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -113,8 +99,6 @@ COMPARE_FAILURE_WITH_FROZEN = 7
 The authentication fails and authentication freezing is triggered. This state indicates that the number of authentication failures reaches the threshold and the authenticator is locked. This state contains both authentication failure and freezing information. Your application can prompt the user with the corresponding unlock method based on the lockout type (temporary or permanent).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

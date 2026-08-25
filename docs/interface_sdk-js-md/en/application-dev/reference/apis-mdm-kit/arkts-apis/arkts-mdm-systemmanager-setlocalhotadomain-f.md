@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setLocalHotaDomain
@@ -15,8 +15,6 @@ function setLocalHotaDomain(admin: Want, domain: string): void
 Set the local HOTA domain of the device.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 

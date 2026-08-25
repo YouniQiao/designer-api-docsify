@@ -6,8 +6,6 @@ Defines a pan gesture handler object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(options?: PanGestureHandlerOptions)
 Constructor used to create a pan gesture handler instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,8 +73,6 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -108,8 +100,6 @@ onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 Sets the callback for pan gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,8 +129,6 @@ Sets the callback for successful pan gesture recognition.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -168,8 +156,6 @@ onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 Sets the callback for pan gesture movement updates. The callback is triggered when the pan gesture moves.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

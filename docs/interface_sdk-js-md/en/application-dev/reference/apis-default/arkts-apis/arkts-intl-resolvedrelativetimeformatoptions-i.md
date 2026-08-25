@@ -3,8 +3,6 @@
 An object with properties reflecting the locale and formatting options computed during initialization of the `Intl.RelativeTimeFormat` object  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#Description).
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,9 +14,7 @@ An object with properties reflecting the locale and formatting options computed 
 locale: UnicodeBCP47LocaleIdentifier
 ```
 
-**Type:** UnicodeBCP47LocaleIdentifier
-
-**ArkTS mode:** 
+**Type:** [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md)
 
 ## numberingSystem
 
@@ -28,17 +24,13 @@ numberingSystem: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## numeric
 
 ```TypeScript
 numeric: RelativeTimeFormatNumeric
 ```
 
-**Type:** RelativeTimeFormatNumeric
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
 
 ## style
 
@@ -46,6 +38,4 @@ numeric: RelativeTimeFormatNumeric
 style: RelativeTimeFormatStyle
 ```
 
-**Type:** RelativeTimeFormatStyle
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)

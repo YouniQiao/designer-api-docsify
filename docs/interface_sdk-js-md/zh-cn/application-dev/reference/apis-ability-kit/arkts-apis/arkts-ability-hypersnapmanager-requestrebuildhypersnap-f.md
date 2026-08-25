@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hyperSnapManager } from '@kit.AbilityKit';
+import { hyperSnapManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## requestRebuildHyperSnap
@@ -15,8 +15,6 @@ function requestRebuildHyperSnap(): void
 请求重新初始化应用快启。此方法会销毁当前进程已经初始化的快启数据，系统将在合适的时机重新进行快启初始化。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

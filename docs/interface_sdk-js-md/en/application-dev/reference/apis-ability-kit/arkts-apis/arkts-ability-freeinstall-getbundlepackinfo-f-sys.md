@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundlePackInfo
@@ -16,8 +16,6 @@ function getBundlePackInfo(bundleName: string,
 Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,43 +41,6 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag, (err, data) => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed:' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## getBundlePackInfo
 
@@ -90,8 +51,6 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -121,7 +80,3 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [getBundlePackInfo](#getbundlepackinfo)

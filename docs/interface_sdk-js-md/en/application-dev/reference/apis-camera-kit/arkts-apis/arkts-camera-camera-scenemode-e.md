@@ -4,8 +4,6 @@ Enumerates the camera scene modes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## NORMAL_PHOTO
@@ -17,8 +15,6 @@ NORMAL_PHOTO = 1
 Normal photo mode. For details, see [PhotoSession](arkts-camera-camera-photosession-i.md).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ Normal record mode. For details, see [VideoSession](arkts-camera-camera-videoses
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ SECURE_PHOTO = 12
 Secure mode. For details, see [SecureSession](arkts-camera-camera-securesession-i.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

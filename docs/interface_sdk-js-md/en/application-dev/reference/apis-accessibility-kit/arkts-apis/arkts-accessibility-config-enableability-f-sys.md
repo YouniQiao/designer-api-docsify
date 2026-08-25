@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## enableAbility
@@ -15,8 +15,6 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md). This API uses a promise to return the result.Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -47,38 +45,6 @@ Enables an accessibility extension. This API must be used together with [config.
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) |
 
-**Examples**
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability).then(() => {
-  console.info(`Succeeded  in enable ability, name is ${name}, capability is ${capability}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError) => {
-  if (err) {
-    console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
-});
-```
-
 
 ## enableAbility
 
@@ -93,8 +59,6 @@ function enableAbility(
 Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md). This API uses an asynchronous callback to return the result.Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -119,7 +83,3 @@ Enables an accessibility extension. This API must be used together with [config.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) |
-
-**Examples**
-
-See [enableAbility](#enableability)

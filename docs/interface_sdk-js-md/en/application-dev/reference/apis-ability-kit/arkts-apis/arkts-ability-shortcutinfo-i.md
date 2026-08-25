@@ -4,23 +4,19 @@ Describes the configuration information for a shortcut.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 Index of the application clone to which the shortcut belongs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,8 +32,6 @@ Bundle name of the application to which the shortcut belongs.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## hostAbility
@@ -51,8 +45,6 @@ Name of the ability that hosts the shortcut.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -68,23 +60,19 @@ Icon of the shortcut. The value is the index of a resource file.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## iconId
 
 ```TypeScript
-iconId?: long
+iconId?: number
 ```
 
 Resource ID of the shortcut icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -100,8 +88,6 @@ ID of the shortcut.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## label
@@ -116,23 +102,19 @@ Label of the shortcut. The value can be descriptive text or a resource index.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## labelId
 
 ```TypeScript
-labelId?: long
+labelId?: number
 ```
 
 Resource ID of the shortcut label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -148,23 +130,19 @@ Module name of the shortcut.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## sourceType
 
 ```TypeScript
-sourceType: int
+sourceType: number
 ```
 
 Source type of the shortcut. The value **0** means a custom shortcut, **1** means a static shortcut, and **2** means a dynamic shortcut. Dynamic shortcuts are supported since API version 23.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -180,8 +158,6 @@ Whether the shortcut is visible. **true** if visible, **false** otherwise. The d
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## wants
@@ -195,7 +171,5 @@ A collection of target Wants information defined within the shortcut.
 **Type:** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

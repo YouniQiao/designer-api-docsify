@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createFileAccessHelper
@@ -15,8 +15,6 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 Creates a **Helper** object to bind with all file management services in the system. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -75,57 +73,6 @@ Creates a **Helper** object to bind with all file management services in the sys
 | 14300003 |
 | 14300004 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { common } from '@kit.AbilityKit';
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
-function createFileAccessHelper01(context: common.UIAbilityContext) {
-  let fileAccessHelper: fileAccess.FileAccessHelper;
-  // Obtain wantInfos by using getFileAccessAbilityInfo().
-  let wantInfos: Array<Want> = [
-    {
-      bundleName: "com.ohos.UserFile.ExternalFileManager",
-      abilityName: "FileExtensionAbility",
-    },
-  ]
-  try {
-    // context is passed by EntryAbility.
-    fileAccessHelper = fileAccess.createFileAccessHelper(context, wantInfos);
-    if (!fileAccessHelper) {
-      console.error("createFileAccessHelper interface returns an undefined object");
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
-function createFileAccessHelper02(context: common.UIAbilityContext) {
-  let fileAccessHelperAllServer: fileAccess.FileAccessHelper;
-  // Create a Helper object to interact with all file management services configured with fileAccess in the system.
-  try {
-    // context is passed by EntryAbility.
-    fileAccessHelperAllServer = fileAccess.createFileAccessHelper(context);
-    if (!fileAccessHelperAllServer) {
-      console.error("createFileAccessHelper interface returns an undefined object");
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
 
 ## createFileAccessHelper
 
@@ -136,8 +83,6 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The **Helper** object provides file access and management capabilities.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -196,7 +141,3 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 | 14300002 |
 | 14300003 |
 | 14300004 |
-
-**Examples**
-
-See [createFileAccessHelper](#createfileaccesshelper)

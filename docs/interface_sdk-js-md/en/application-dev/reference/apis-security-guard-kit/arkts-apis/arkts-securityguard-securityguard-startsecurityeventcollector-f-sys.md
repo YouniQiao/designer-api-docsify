@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## startSecurityEventCollector
@@ -15,8 +15,6 @@ function startSecurityEventCollector(rule: CollectorRule): void
 start the collector to collect data
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 

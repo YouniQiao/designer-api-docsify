@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getPasswordPolicy
@@ -15,8 +15,6 @@ function getPasswordPolicy(): PasswordPolicy
 获取设备锁屏口令策略。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,46 +33,3 @@ function getPasswordPolicy(): PasswordPolicy
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(wantTemp);
-  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(null);
-  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-try {
-  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy();
-  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

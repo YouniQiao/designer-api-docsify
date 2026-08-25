@@ -26,8 +26,6 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -45,8 +43,6 @@ Constructs a canvas object, which supports configuration of parameters for the *
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -59,47 +55,6 @@ Constructs a canvas object, which supports configuration of parameters for the *
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
 
-**Examples**
-
-The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextPX.fillRect(10,10,100,100)
-          this.contextPX.clearRect(10,10,50,50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10,10,100,100)
-          this.contextVP.clearRect(10,10,50,50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -109,8 +64,6 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 Creates a **CanvasRenderingContext2D** object, allowing for initial configuration of rendering parameters and unit mode.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,11 +78,7 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
-
-**Examples**
-
-See [constructor](#constructor)
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
 
 ## getContext2DFromDrawingContext
 
@@ -147,8 +96,6 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 > an error code is returned.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,34 +122,6 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 | --- |
 | [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct CanvasExample {
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas({ unit: LengthMetricsUnit.DEFAULT })
-        .onReady((drawingContext?: DrawingRenderingContext) => {
-          if (!drawingContext) {
-            return
-          }
-          let context2D: CanvasRenderingContext2D =
-            CanvasRenderingContext2D.getContext2DFromDrawingContext(drawingContext, { antialias: true })
-          context2D.fillStyle = 'rgb(39,135,217)'
-          context2D.fillRect(10, 30, 100, 100)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## off('onAttach')
 
 ```TypeScript
@@ -212,8 +131,6 @@ off(type: 'onAttach', callback?: Callback<void>): void
 Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,8 +161,6 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -275,23 +190,26 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 > **NOTE：**&gt;
 > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component
-> at a time.<br>
+> at a time.
+
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
 > [canvas](#canvas)
-> object is accessible.<br>
+> object is accessible.
+
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
 > [onReady](arkts-arkui-canvas-attribute.md#onready)
-> event before performing any drawing.<br>
-> The **onAttach** callback is triggered when:<br>
+> event before performing any drawing.
+
+> The **onAttach** callback is triggered when:
+
 > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D**
-> object.<br>
+> object.
+
 > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,16 +240,17 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 > **NOTE：**&gt;
 > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component,
-> the **onDetach** callback is triggered. In this case, cease any drawing operations.<br>
-> The **onDetach** callback is triggered when:<br>
+> the **onDetach** callback is triggered. In this case, cease any drawing operations.
+
+> The **onDetach** callback is triggered when:
+
 > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D**
-> object.<br>
+> object.
+
 > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component,
 > causing the existing binding to be released.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,7 +277,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
+Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
 
 > **NOTE：**&gt;
 > The image analysis type cannot be dynamically modified.
@@ -368,8 +287,6 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 > error code is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -381,7 +298,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes |
 
 **Return value:**
 
@@ -412,78 +329,11 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct ImageAnalyzerExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  private config: ImageAnalyzerConfig = {
-    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT]
-  }
-  // Replace 'common/images/example.png' with the image resource file you use.
-  private img = new ImageBitmap('common/images/example.png')
-  private aiController: ImageAnalyzerController = new ImageAnalyzerController()
-  private options: ImageAIOptions = {
-    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT],
-    aiController: this.aiController
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button('start')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.context.startImageAnalyzer(this.config)
-            .then(() => {
-              console.info("analysis complete")
-            })
-            .catch((error: BusinessError) => {
-              console.info("error code: " + error.code)
-            })
-        })
-      Button('stop')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.context.stopImageAnalyzer()
-        })
-      Button('getTypes')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.aiController.getImageAnalyzerSupportTypes()
-        })
-      Canvas(this.context, this.options)
-        .width(200)
-        .height(200)
-        .enableAnalyzer(true)
-        .onReady(() => {
-          this.context.drawImage(this.img, 0, 0, 200, 200)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## toDataURL
 
@@ -494,8 +344,6 @@ toDataURL(type?: string, quality?: any): string
 Creates a data URL that contains a representation of an image. This API involves time-consuming memory copy. Therefore, avoid frequent calls to it.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -516,65 +364,6 @@ Creates a data URL that contains a representation of an image. This API involves
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  @State toDataURL: string = ""
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() =>{
-          this.context.fillStyle = "#00ff00"
-          this.context.fillRect(0,0,100,100)
-          this.toDataURL = this.context.toDataURL("image/png", 0.92)
-        })
-      Text(this.toDataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToDataURL {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
-  @State dataURL: string = "";
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(0,0,100,100)
-          this.dataURL = offContext.toDataURL()
-        })
-      Text(this.dataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
 ## canvas
 
 ```TypeScript
@@ -586,8 +375,6 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 **Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -607,8 +394,6 @@ Component height.Default unit: vp
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -626,8 +411,6 @@ Component width.Default unit: vp
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

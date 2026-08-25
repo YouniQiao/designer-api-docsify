@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## off('formAdd')
@@ -15,8 +15,6 @@ function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callba
 取消订阅卡片新增事件。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -49,8 +47,6 @@ function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Cal
 取消订阅卡片删除事件。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -88,8 +84,6 @@ function off(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -126,8 +120,6 @@ function off(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -159,8 +151,6 @@ function off(type: 'router', hostBundleName?: string, observerCallback?: Callbac
 取消订阅卡片router事件。使用callback异步回调，返回触发router事件的卡片信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -194,8 +184,6 @@ function off(type: 'message', hostBundleName?: string, observerCallback?: Callba
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -227,8 +215,6 @@ function off(type: 'call', hostBundleName?: string, observerCallback?: Callback<
 取消订阅卡片call事件。使用callback异步回调，返回触发call事件的卡片信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 

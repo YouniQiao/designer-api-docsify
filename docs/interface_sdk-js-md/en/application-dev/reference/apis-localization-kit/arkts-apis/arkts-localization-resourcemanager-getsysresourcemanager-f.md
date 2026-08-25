@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSysResourceManager
@@ -15,8 +15,6 @@ export function getSysResourceManager(): ResourceManager
 Obtains a system resource management object for accessing preset system resources.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -33,24 +31,3 @@ Obtains a system resource management object for accessing preset system resource
 | Error Code ID |
 | --- |
 | [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
-
-**Examples**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let systemResourceManager = resourceManager.getSysResourceManager();
-  // Replace 'sys.string.ohos_lab_vibrate' with the actual resource.
-  systemResourceManager.getStringValue($r('sys.string.ohos_lab_vibrate').id).then((value: string) => {
-    let str = value;
-  }).catch((error: BusinessError) => {
-    console.error(`systemResourceManager getStringValue promise error: ${error}`);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getSysResourceManager failed, error code: ${code}, message: ${message}.`);
-}
-```

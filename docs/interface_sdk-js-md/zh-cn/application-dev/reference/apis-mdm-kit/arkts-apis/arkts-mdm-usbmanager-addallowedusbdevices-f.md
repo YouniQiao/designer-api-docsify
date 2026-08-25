@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedUsbDevices
@@ -14,7 +14,9 @@ function addAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): vo
 
 添加USB设备可用名单。  
 **使用场景**：  
-- 企业安全管理场景，需要限制只有特定的USB设备可以接入设备 - 设备管理员需要精确控制哪些USB设备能够被识别和使用 - 配合[removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md)接口实现USB设备的动态管理  
+- 企业安全管理场景，需要限制只有特定的USB设备可以接入设备  
+- 设备管理员需要精确控制哪些USB设备能够被识别和使用  
+- 配合[removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md)接口实现USB设备的动态管理  
 以下情况下，调用本接口会报策略冲突：
 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备USB或者USB转串口能力。
 2. 已经通过[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md)接口设置了USB存储设备访问策略为禁用。
@@ -22,8 +24,6 @@ function addAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): vo
 4. 已经通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口添加了禁止使用的USB设备类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -48,26 +48,3 @@ function addAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): vo
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let usbDeviceIds: Array<usbManager.UsbDeviceId> = [{
-    vendorId: 1,
-    productId: 1
-  }];
-  usbManager.addAllowedUsbDevices(wantTemp, usbDeviceIds);
-  console.info(`Succeeded in adding allowed USB devices.`);
-} catch (err) {
-  console.error(`Failed to add allowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

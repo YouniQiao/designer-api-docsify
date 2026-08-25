@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总
@@ -23,12 +21,8 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 | [getRecentOperatingHandStatus(动作感知能力)](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) |
 | [off(动作感知能力)](arkts-multimodalawareness-motion-off-f.md#offoperatinghandchanged) |
 | [off(动作感知能力)](arkts-multimodalawareness-motion-off-f.md#offholdinghandchanged) |
-| [offHoldingHandChanged(动作感知能力)](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) |
-| [offOperatingHandChanged(动作感知能力)](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) |
 | [on(动作感知能力)](arkts-multimodalawareness-motion-on-f.md#onoperatinghandchanged) |
 | [on(动作感知能力)](arkts-multimodalawareness-motion-on-f.md#onholdinghandchanged) |
-| [onHoldingHandChanged(动作感知能力)](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) |
-| [onOperatingHandChanged(动作感知能力)](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）

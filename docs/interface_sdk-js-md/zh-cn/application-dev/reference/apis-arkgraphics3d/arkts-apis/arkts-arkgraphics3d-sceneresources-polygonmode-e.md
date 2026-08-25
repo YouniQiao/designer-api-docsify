@@ -1,10 +1,8 @@
 # PolygonMode
 
-控制多边形绘制模式的枚举。@enum { int }
+控制多边形绘制模式的枚举。@enum { number }
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ FILL = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## LINE
@@ -32,8 +28,6 @@ LINE = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## POINT
@@ -45,7 +39,5 @@ POINT = 2
 仅绘制多边形顶点。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

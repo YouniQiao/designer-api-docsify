@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getShowName
 
 ```TypeScript
-function getShowName(slotId: int, callback: AsyncCallback<string>): void
+function getShowName(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 Gets the name of the SIM card in the specified slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Gets the name of the SIM card in the specified slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
@@ -44,40 +42,16 @@ Gets the name of the SIM card in the specified slot.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getShowName(0, (err: BusinessError, data: string) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getShowName(0).then((data: string) => {
-    console.info(`getShowName success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getShowName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getShowName
 
 ```TypeScript
-function getShowName(slotId: int): Promise<string>
+function getShowName(slotId: number): Promise<string>
 ```
 
 Gets the name of the SIM card in the specified slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -89,7 +63,7 @@ Gets the name of the SIM card in the specified slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -109,7 +83,3 @@ Gets the name of the SIM card in the specified slot.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getShowName](#getshowname)

@@ -8,8 +8,6 @@ Defines an observer for obtaining the data change of a distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**

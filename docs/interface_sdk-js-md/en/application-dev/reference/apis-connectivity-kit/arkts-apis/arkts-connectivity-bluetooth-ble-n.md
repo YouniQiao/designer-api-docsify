@@ -4,8 +4,6 @@ Provides methods to operate or manage Bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BLE](arkts-connectivity-bluetoothmanager-ble-n.md)
@@ -15,7 +13,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

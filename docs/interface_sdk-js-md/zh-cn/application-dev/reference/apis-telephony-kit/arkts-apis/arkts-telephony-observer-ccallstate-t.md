@@ -8,8 +8,6 @@ type CCallState = call.CCallState
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **属性类型：** call.CCallState

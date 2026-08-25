@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAuthInstance
@@ -19,8 +19,6 @@ Obtains an **AuthInstance** instance for user authentication.
 > **AuthInstance**.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,20 +48,3 @@ Obtains an **AuthInstance** instance for user authentication.
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
 | [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  console.info('let auth instance success');
-} catch (error) {
-  console.error(`get auth instance success failed, error = ${error}`);
-}
-```

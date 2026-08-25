@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## onAttachmentDidFail
@@ -16,8 +16,6 @@ Subscribes to attachment failure events. This API uses an asynchronous callback 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -25,18 +23,3 @@ Subscribes to attachment failure events. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let attachmentDidFailCallback: Callback<inputMethod.AttachFailureReason> = 
-  (reason: inputMethod.AttachFailureReason): void => {
-    console.info(`Attachment failed with reason: ${reason}.`);
-  if (reason === inputMethod.AttachFailureReason.CALLER_NOT_FOCUSED) {
-    console.info(`Failure reason is CALLER_NOT_FOCUSED.`);
-  }
-  };
-inputMethod.onAttachmentDidFail(attachmentDidFailCallback);
-```

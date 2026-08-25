@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -15,8 +15,6 @@ function getState(): NearlinkState
 Queries the NearLink status.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

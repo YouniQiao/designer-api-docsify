@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setUninstallDisposedRule
 
 ```TypeScript
-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void
+function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: number): void
 ```
 
 设置指定应用或分身应用的卸载处置规则。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -30,7 +28,7 @@ function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposed
 | --- | --- | --- |
 | appIdentifier | string | 是 |
 | rule | [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **错误码：**
 
@@ -43,30 +41,3 @@ function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposed
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700074](../errorcode-bundle.md#17700074-传入的appidentifier无效) |
 | [17700075](../errorcode-bundle.md#17700075-want指定的bundlename与调用方不符) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appIdentifier = "com.example.myapplication_xxxxx";
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  abilityName: "EntryAbility"
-};
-let rule: appControl.UninstallDisposedRule = {
-  want: want,
-  uninstallComponentType: appControl.UninstallComponentType.EXTENSION,
-  priority: 100
-};
-
-try {
-  appControl.setUninstallDisposedRule(appIdentifier, rule, 1);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setUninstallDisposedRule failed ' + message);
-}
-```

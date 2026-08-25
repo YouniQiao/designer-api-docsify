@@ -20,8 +20,8 @@ HashMap is implemented using an array, linked lists, and red-black trees as its 
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
+import { HashMap } from 'kits/@kit.ArkTS';
+import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -31,9 +31,3 @@ import { HashMapCbFn } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md) |

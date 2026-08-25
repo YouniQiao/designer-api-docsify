@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## uptime
@@ -16,8 +16,6 @@ function uptime(): number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -27,9 +25,3 @@ function uptime(): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let time = process.uptime();
-```

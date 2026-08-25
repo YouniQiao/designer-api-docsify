@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setNetworkInterfaceDisabled
@@ -15,8 +15,6 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 禁止设备使用指定网络。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -49,47 +47,6 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true, (err) => {
-  if (err) {
-    console.error(`Failed to set network interface disabled. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in setting network interface disabled`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true).then(() => {
-  console.info(`Succeeded in setting network interface disabled`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set network interface disabled. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setNetworkInterfaceDisabled
 
@@ -100,8 +57,6 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 禁止设备使用指定网络。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -138,7 +93,3 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setNetworkInterfaceDisabled](#setnetworkinterfacedisabled)

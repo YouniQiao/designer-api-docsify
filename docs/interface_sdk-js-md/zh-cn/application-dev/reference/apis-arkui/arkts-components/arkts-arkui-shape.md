@@ -9,7 +9,7 @@ Shape组件的两种使用方式：
 
 ## 子组件
 
-包含Rect、Path、Circle、Ellipse、Polyline、 [Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、Column、Row和Shape子组件。
+包含Rect、Path、Circle、[Ellipse](../arkts-apis/arkts-arkui-canvaspath-c.md#ellipse)、Polyline、 [Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、[Column](arkts-arkui-astcresource-i-sys.md#column)、Row和Shape子组件。
 
 ## Shape
 
@@ -20,8 +20,6 @@ Shape(value?: PixelMap)
 Use the new function to create Shape.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +41,6 @@ Shape(value: PixelMap)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -64,8 +60,6 @@ Shape()
 Called when a component is drawn.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

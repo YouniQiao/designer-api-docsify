@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## installDLPSandbox
@@ -15,8 +15,6 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 Installs a DLP sandbox application for an application. The DLP sandbox creates an independent running environment for protected DLP files, which is isolated from the original application process. This ensures that data is securely transferred within the authorized scope. The sandbox application inherits the functions of the original application but can access only authorized DLP files. This API uses a promise to return the result.After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) to uninstall the sandbox after using it.Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -50,43 +48,6 @@ Installs a DLP sandbox application for an application. The DLP sandbox creates a
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  try {
-    let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-    let res: dlpPermission.DLPSandboxInfo =
-      await dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-        uri); // Install a DLP sandbox application.
-    console.info('res', JSON.stringify(res));
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-try {
-  dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
-    if (err !== undefined) {
-      console.error('installDLPSandbox error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Install a DLP sandbox application.
-} catch (err) {
-  console.error('installDLPSandbox error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## installDLPSandbox
 
@@ -97,8 +58,6 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 Installs a DLP sandbox application for an application. This API uses an asynchronous callback to return the result. After the API is called, the system creates a DLP sandbox for the application and returns the sandbox information.After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) to uninstall the sandbox after using it.Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -126,7 +85,3 @@ Installs a DLP sandbox application for an application. This API uses an asynchro
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [installDLPSandbox](#installdlpsandbox)

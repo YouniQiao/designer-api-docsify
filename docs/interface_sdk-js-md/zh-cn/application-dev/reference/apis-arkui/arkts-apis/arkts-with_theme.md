@@ -30,5 +30,5 @@
 
 | 名称 |
 | --- |
-| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withtheme) |
+| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md) |
 | [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) |

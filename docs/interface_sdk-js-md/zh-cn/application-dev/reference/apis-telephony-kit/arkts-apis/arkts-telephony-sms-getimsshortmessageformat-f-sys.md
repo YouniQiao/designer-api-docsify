@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getImsShortMessageFormat
@@ -15,8 +15,6 @@ function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 获取IMS上支持的SMS格式。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -39,28 +37,6 @@ function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat().then((data: string) => {
-    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getImsShortMessageFormat
 
@@ -71,8 +47,6 @@ function getImsShortMessageFormat(): Promise<string>
 获取IMS上支持的SMS格式。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -92,7 +66,3 @@ function getImsShortMessageFormat(): Promise<string>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getImsShortMessageFormat](#getimsshortmessageformat)

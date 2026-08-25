@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedRule
 
 ```TypeScript
-function getDisposedRule(appId: string, appIndex?: int): DisposedRule
+function getDisposedRule(appId: string, appIndex?: number): DisposedRule
 ```
 
 Obtains the disposed rule of an application or an application clone.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -29,7 +27,7 @@ Obtains the disposed rule of an application or an application clone.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appIndex | number | No |
 
 **Return value:**
 
@@ -47,20 +45,3 @@ Obtains the disposed rule of an application or an application clone.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  let data = appControl.getDisposedRule(appId, 1);
-  console.info('getDisposedRule successfully. Data: ' + JSON.stringify(data));
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedRule failed ' + message);
-}
-```

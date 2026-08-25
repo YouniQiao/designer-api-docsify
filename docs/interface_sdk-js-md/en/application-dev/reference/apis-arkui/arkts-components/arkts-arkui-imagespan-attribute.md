@@ -1,12 +1,10 @@
 # ImageSpan properties/events
 
-The attributes inherit from BaseSpan. Among the universal attributes, size, background, and border are supported.Among all the universal events, only the click event is supported. The following events are also supported.@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
+The attributes inherit from [BaseSpan](arkts-arkui-basespan-c.md). Among the universal attributes, size, background, and border are supported.Among all the universal events, only the click event is supported. The following events are also supported.@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ alt(value: PixelMap)
 Sets the placeholder image displayed during image loading.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Sets the color filter for the image.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -61,7 +55,7 @@ Sets the color filter for the image.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filter | ColorFilter \| [DrawingColorFilter](../arkts-apis/arkts-arkui-drawingcolorfilter-t.md) | Yes |
+| filter | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes |
 
 ## objectFit
 
@@ -72,8 +66,6 @@ objectFit(value: ImageFit)
 Sets the image scale type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +89,6 @@ Triggered when the image is successfully loaded or decoded. The size of the load
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -121,8 +111,6 @@ Triggered when an error occurs during image loading.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -133,7 +121,7 @@ Triggered when an error occurs during image loading.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [ImageErrorCallback](../arkts-apis/arkts-arkui-imageerrorcallback-t.md) | Yes |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes |
 
 ## supportSvg2
 
@@ -145,8 +133,6 @@ Sets whether to enable [enhanced SVG tag parsing](../../../reference/apis-arkui/
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -157,7 +143,7 @@ Sets whether to enable [enhanced SVG tag parsing](../../../reference/apis-arkui/
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## verticalAlign
 
@@ -169,8 +155,6 @@ Sets the alignment mode of the image relative to the line height.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -181,4 +165,4 @@ Sets the alignment mode of the image relative to the line height.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md) | Yes |
+| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | Yes |

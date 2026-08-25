@@ -4,14 +4,12 @@ The class of insight intent entry executor.@class InsightIntentEntryExecutor&lt;
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
 ```
 
 ## onExecute
@@ -23,8 +21,6 @@ onExecute(): Promise<insightIntent.IntentResult<T>>
 Called when insight intent execute.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,67 +34,6 @@ Called when insight intent execute.
 | --- |
 | Promise & lt;insightIntent.IntentResult & lt;T & gt; & gt; |
 
-**Examples**
-
-```TypeScript
-import { insightIntent, InsightIntentEntry, InsightIntentEntryExecutor } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const LOG_TAG: string = 'testTag-EntryIntent';
-
-// Use the @InsightIntentEntry decorator to define an intent.
-@InsightIntentEntry({
-  intentName: 'PlayMusic',
-  domain: 'MusicDomain',
-  intentVersion: '1.0.1',
-  displayName: 'Play Music',
-  displayDescription: 'Intent to play music',
-  icon: $r('app.media.app_icon'), // $r indicates a local icon, which must be defined in the resource catalog.
-  llmDescription: 'Supports passing song names to play music',
-  keywords: ['music playback', 'play music', 'PlayMusic'],
-  abilityName: 'EntryAbility',
-  executeMode: [insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND],
-  parameters: {
-    'schema': 'http://json-schema.org/draft-07/schema#',
-    'type': 'object',
-    'title': 'Song Schema',
-    'description': 'A schema for describing songs and their artists',
-    'properties': {
-      'songName': {
-        'type': 'string',
-        'description': 'The name of the song',
-        'minLength': 1
-      }
-    },
-    'required': ['songName']
-  }
-})
-export default class PlayMusicDemo extends InsightIntentEntryExecutor<string> {
-  songName: string = '';
-
-  onExecute(): Promise<insightIntent.IntentResult<string>> {
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo executeMode %{public}s', JSON.stringify(this.executeMode));
-    hilog.info(0x0000, LOG_TAG, '%{public}s', JSON.stringify(this));
-    let storage = new LocalStorage();
-    storage.setOrCreate('songName', this.songName);
-    // Start the PlayMusicPage page based on the executeMode parameter.
-    if (this.executeMode == insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND) {
-      this.windowStage?.loadContent('pages/PlayMusicPage', storage);
-    } else if (this.executeMode == insightIntent.ExecuteMode.UI_EXTENSION_ABILITY) {
-      this.uiExtensionSession?.loadContent('pages/PlayMusicPage', storage);
-    }
-    // Define the intent execution result.
-    let result: insightIntent.IntentResult<string> = {
-      code: 123,
-      result: 'result'
-    }
-    hilog.info(0x0000, LOG_TAG, 'PlayMusicDemo return %{public}s', JSON.stringify(result));
-    // Return the intent execution result in Promise mode.
-    return Promise.reject(result);
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -110,8 +45,6 @@ The insight intent context.
 **Type:** [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,8 +64,6 @@ The insight intent execute mode.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -151,8 +82,6 @@ The UIExtension content session.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -170,8 +99,6 @@ The window stage.
 **Type:** window.WindowStage
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

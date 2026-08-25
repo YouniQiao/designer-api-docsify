@@ -4,14 +4,12 @@ Describes the codec information.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
+import { a2dp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## codecBitRateArray
@@ -25,8 +23,6 @@ codec bit rate list.
 **Type:** [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md)[]
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,8 +38,6 @@ codec bits per sample list.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## codecChannelModeArray
@@ -57,8 +51,6 @@ codec channel mode list.
 **Type:** [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md)[]
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,8 +66,6 @@ codec frame length list.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## codecSampleRateArray
@@ -90,8 +80,6 @@ codec sample rate list.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## codecType
@@ -105,7 +93,5 @@ codec type
 **Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

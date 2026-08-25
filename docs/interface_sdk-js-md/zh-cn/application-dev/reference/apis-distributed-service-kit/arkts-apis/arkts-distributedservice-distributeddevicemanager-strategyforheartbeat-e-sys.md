@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ TEMP_STOP_HEARTBEAT = 100
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ START_HEARTBEAT = 101
 开始心跳广播。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

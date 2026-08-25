@@ -4,8 +4,6 @@ Enumerates the signature types of the key generated or imported.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_SECURE_SIGN_WITH_AUTHINFO
@@ -18,8 +16,6 @@ The signature carries authentication information. This field is specified when a
 **NOTE：**The carried authentication information includes identity information. You need to describe the purpose, retention policy, and destruction method of the identity information in the privacy statement.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

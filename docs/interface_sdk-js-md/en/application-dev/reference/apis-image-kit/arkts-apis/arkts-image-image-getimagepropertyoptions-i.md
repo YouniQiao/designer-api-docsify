@@ -4,8 +4,6 @@ Describes the image properties.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
@@ -15,7 +13,7 @@ Describes the image properties.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## defaultValue
@@ -29,8 +27,6 @@ Default property value. The default value is null.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -49,8 +45,6 @@ Index of the image. The default value is **0**.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11  
 

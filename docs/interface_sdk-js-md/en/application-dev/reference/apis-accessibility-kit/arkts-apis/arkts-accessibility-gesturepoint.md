@@ -8,7 +8,7 @@ GesturePoint represents a gesture touch point and is the basic unit that constit
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
+import { GesturePoint } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## Summary

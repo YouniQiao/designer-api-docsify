@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getScanInfos
@@ -15,8 +15,6 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 获取扫描结果，使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -32,28 +30,6 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 | --- |
 | Promise & lt;Array & lt;WifiScanInfo & gt; & gt; |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getScanInfos().then(result => {
-    let len = result.length;
-    console.info("wifi received scan info: " + len);
-    for (let i = 0; i < len; ++i) {
-        console.info("ssid: " + result[i].ssid);
-        console.info("bssid: " + result[i].bssid);
-        console.info("capabilities: " + result[i].capabilities);
-        console.info("securityType: " + result[i].securityType);
-        console.info("rssi: " + result[i].rssi);
-        console.info("band: " + result[i].band);
-        console.info("frequency: " + result[i].frequency);
-        console.info("channelWidth: " + result[i].channelWidth);
-        console.info("timestamp: " + result[i].timestamp);
-    }
-});
-```
-
 
 ## getScanInfos
 
@@ -64,8 +40,6 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 获取扫描结果，使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -80,7 +54,3 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |
-
-**示例**
-
-参见 [getScanInfos](#getscaninfos)

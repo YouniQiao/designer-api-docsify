@@ -4,8 +4,6 @@ Enumerates the text that can be displayed on the paste button.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PASTE
@@ -17,8 +15,6 @@ PASTE = 0
 Paste
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

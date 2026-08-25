@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
+import { inspector } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -23,9 +21,6 @@ import { inspector } from '@kit.ArkUI';
 | 名称 |
 | --- |
 | [createComponentObserver(布局回调)](arkts-arkui-inspector-createcomponentobserver-f.md) |
-| [getInspectorByKey(布局回调)](arkts-arkui-inspector-getinspectorbykey-f.md) |
-| [getInspectorTree(布局回调)](arkts-arkui-inspector-getinspectortree-f.md) |
-| [sendEventByKey(布局回调)](arkts-arkui-inspector-sendeventbykey-f.md) |
 
 ### 接口
 

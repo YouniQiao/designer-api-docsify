@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isRamConstrainedDevice
@@ -15,8 +15,6 @@ function isRamConstrainedDevice(): Promise<boolean>
 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,32 +32,6 @@ function isRamConstrainedDevice(): Promise<boolean>
 | --- |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.isRamConstrainedDevice().then((data) => {
-  console.info(`The result of isRamConstrainedDevice is: ${data}`);
-}).catch((err: Error) => {
-  let error = err as BusinessError;
-  console.error(`error: ${error.code} ${error.message}`);
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRamConstrainedDevice((err, data) => {
-  if (err) {
-    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-  }
-});
-```
-
 
 ## isRamConstrainedDevice
 
@@ -70,8 +42,6 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -89,7 +59,3 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [isRamConstrainedDevice](#isramconstraineddevice)

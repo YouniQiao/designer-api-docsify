@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
+import { deviceInfo } from 'kits/@kit.MDMKit';
 ```
 
 ## getDeviceName
@@ -15,8 +15,6 @@ function getDeviceName(admin: Want, callback: AsyncCallback<string>): void
 Obtains the device name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,45 +45,6 @@ Obtains the device name. This API uses an asynchronous callback to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDeviceName(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting device name, result : ${result}`);
-});
-```
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDeviceName(wantTemp).then((result) => {
-  console.info(`Succeeded in getting device name, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getDeviceName
 
@@ -96,8 +55,6 @@ function getDeviceName(admin: Want): Promise<string>
 Obtains the device name. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -132,7 +89,3 @@ Obtains the device name. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getDeviceName](#getdevicename)

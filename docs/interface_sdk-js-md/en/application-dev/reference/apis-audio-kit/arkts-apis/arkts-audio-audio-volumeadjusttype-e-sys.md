@@ -4,8 +4,6 @@ Enumerates volume adjustment types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Adjust volume up.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ VOLUME_DOWN = 1
 Adjust volume down.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

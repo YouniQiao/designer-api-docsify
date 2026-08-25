@@ -4,8 +4,6 @@ The enum of SPP type.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [SppType](arkts-connectivity-socket-spptype-e.md)
@@ -21,8 +19,6 @@ SPP_RFCOMM = 0
 RFCOMM
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

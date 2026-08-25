@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## installDLPSandbox
@@ -15,8 +15,6 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) 卸载沙箱。DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -49,33 +47,6 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
-  console.info('dlpSandboxInfo: ', JSON.stringify(dlpSandboxInfo));
-}).catch((error: BusinessError)=> {
-  console.error(error.message);
-}); // 安装DLP沙箱。
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
-  if (err) {
-    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-}); // 安装DLP沙箱。
-```
-
 
 ## installDLPSandbox
 
@@ -86,8 +57,6 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) 卸载沙箱。DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -114,7 +83,3 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [installDLPSandbox](#installdlpsandbox)

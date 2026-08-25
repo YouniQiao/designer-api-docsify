@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isDistributedEnabled
@@ -15,8 +15,6 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 Checks whether the device supports cross-device notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -39,54 +37,6 @@ Checks whether the device supports cross-device notifications. This API uses an 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isDistributedEnabledCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isDistributedEnabled success ${JSON.stringify(data)}`);
-  }
-};
-notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isDistributedEnabled().then((data: boolean) => {
-  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      let deviceType: string = "wearable";
-      notificationManager.isDistributedEnabled(deviceType).then((data: boolean) => {
-        console.info('isDistributedEnabled succeeded, result = ' + data);
-      }).catch((err: BusinessError) => {
-        console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
 
 ## isDistributedEnabled
 
@@ -97,8 +47,6 @@ function isDistributedEnabled(): Promise<boolean>
 Checks whether the device supports cross-device notifications. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -119,7 +67,3 @@ Checks whether the device supports cross-device notifications. This API uses a p
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
-
-**Examples**
-
-See [isDistributedEnabled](#isdistributedenabled)

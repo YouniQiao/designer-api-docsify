@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getPhotoAccessHelper
@@ -15,8 +15,6 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,87 +39,3 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
-// 请在组件内获取context，确保this.getUiContext().getHostContext()返回结果为UIAbilityContext
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Button("example").onClick(async () => {
-        let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-        // 此处101表示其他用户空间的userid
-        let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context, 101);
-      }).width('100%')
-    }
-    .height('90%')
-  }
-}
-```
-
-```TypeScript
-// 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Button("example").onClick(async () => {
-        let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-        let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-      }).width('100%')
-    }
-    .height('90%')
-  }
-}
-```
-
-
-## getPhotoAccessHelper
-
-```TypeScript
-function getPhotoAccessHelper(context: Context): PhotoAccessHelper | null
-```
-
-获取相册管理模块的实例，用于访问和修改相册中的媒体文件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| PhotoAccessHelper \| null |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getPhotoAccessHelper](#getphotoaccesshelper)

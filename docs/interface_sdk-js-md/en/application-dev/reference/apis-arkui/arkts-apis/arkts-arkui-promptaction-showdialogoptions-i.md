@@ -4,14 +4,12 @@ Describes the options for showing the dialog box.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## alignment
@@ -20,13 +18,12 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.<br> Default value: **DialogAlignment.Default**<br> **NOTE：**<br> If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+Alignment mode of the dialog box in the vertical direction.Default value: **DialogAlignment.Default**  
+**NOTE：**If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
-**Type:** DialogAlignment
+**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +37,14 @@ Alignment mode of the dialog box in the vertical direction.<br> Default value: *
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE：**<br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_ULTRA_THICK**   
+**NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +60,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style. For details about the default value, see **BackgroundBlurStyleOptions**.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,15 +76,14 @@ Options for customizing the background blur style. For details about the default
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. <br>Default value: **Color.Transparent**. <br>**NOTE：**<br>The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
+Background color of the dialog box. Default value: **Color.Transparent**.   
+**NOTE：**The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,11 +99,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect. For details about the default value, see **BackgroundEffectOptions**.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +121,6 @@ Array of buttons in the dialog box. The array structure is {text:'button',&nbsp;
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -142,15 +131,14 @@ Array of buttons in the dialog box. The array structure is {text:'button',&nbsp;
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. <br>Default value: **false**, meaning not to respond when the device is in semi-folded mode. <br>**NOTE：**<br>For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. Default value: **false**, meaning not to respond when the device is in semi-folded mode.   
+**NOTE：**For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,15 +152,13 @@ Whether to respond when the device is in semi-folded mode. The value **true** me
 hoverModeArea?: HoverModeAreaType
 ```
 
-Default display area of the dialog box in semi-folded mode. <br>Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Default display area of the dialog box in semi-folded mode. Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,15 +172,16 @@ Default display area of the dialog box in semi-folded mode. <br>Default value: *
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box. <br>**NOTE：**<br>- Default value: **ImmersiveMode.DEFAULT** <br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level dialog box.   
+**NOTE：**
+- Default value: **ImmersiveMode.DEFAULT**
+- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,15 +195,15 @@ Overlay effect for the page-level dialog box. <br>**NOTE：**<br>- Default value
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. <br>**true**: The dialog box is a modal. <br>**false**: The dialog box is not a modal. <br>Default value: **true**.
+Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box.   
+**true**: The dialog box is a modal.   
+**false**: The dialog box is not a modal. Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,15 +217,16 @@ Whether the dialog box is a modal, which has a mask applied and does not allow f
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box. <br>**NOTE：**<br>- Default value: **LevelMode.OVERLAY** <br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level of the dialog box.   
+**NOTE：**
+- Default value: **LevelMode.OVERLAY**
+- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,15 +240,16 @@ Display level of the dialog box. <br>**NOTE：**<br>- Default value: **LevelMode
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box. <br>**NOTE：**<br>- Default value: **LevelOrder.clamp(0)** <br>- Dynamic updating is not supported.
+Display order of the dialog box.   
+**NOTE：**
+- Default value: **LevelOrder.clamp(0)**
+- Dynamic updating is not supported.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -274,13 +263,13 @@ Display order of the dialog box. <br>**NOTE：**<br>- Default value: **LevelOrde
 levelUniqueId?: number
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. <br>Value range: a number no less than 0<br>**NOTE：**<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Unique ID of the node under the display level for the page-level dialog box. Value range: a number no less than 0  
+**NOTE：**
+- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,13 +283,13 @@ Unique ID of the node under the display level for the page-level dialog box. <br
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events within the mask area are blocked, while events outside the mask area are transmitted.<br> Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**<br> **NOTE：**<br> **maskRect** does not take effect when **showInSubWindow** is set to **true**.<br> If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
+Mask area of the dialog box. Events within the mask area are blocked, while events outside the mask area are transmitted.Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**  
+**NOTE：**
+ **maskRect** does not take effect when **showInSubWindow** is set to **true**.If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
 
-**Type:** Rectangle
+**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,13 +303,11 @@ Mask area of the dialog box. Events within the mask area are blocked, while even
 message?: string | Resource
 ```
 
-Text body.<br>Default value: **undefined**, which indicates that no content is displayed by default.
+Text body.Default value: **undefined**, which indicates that no content is displayed by default.
 
 **Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,13 +319,11 @@ Text body.<br>Default value: **undefined**, which indicates that no content is d
 offset?: Offset
 ```
 
-Offset of the dialog box relative to the alignment position.<br> Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
+Offset of the dialog box relative to the alignment position.Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
 **Type:** Offset
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,13 +337,16 @@ Offset of the dialog box relative to the alignment position.<br> Default value: 
 onDidAppear?: Callback<void>
 ```
 
-Callback invoked after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
+Callback invoked after the dialog box appears.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 
+2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 
+3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 
+4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -372,13 +360,13 @@ Callback invoked after the dialog box appears. <br>**NOTE：**<br>1. The normal 
 onDidDisappear?: Callback<void>
 ```
 
-Callback invoked after the dialog box disappears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
+Callback invoked after the dialog box disappears.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -392,13 +380,14 @@ Callback invoked after the dialog box disappears. <br>**NOTE：**<br>1. The norm
 onWillAppear?: Callback<void>
 ```
 
-Callback invoked before the dialog box appearance animation. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Callback invoked before the dialog box appearance animation.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 
+2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -412,13 +401,13 @@ Callback invoked before the dialog box appearance animation. <br>**NOTE：**<br>
 onWillDisappear?: Callback<void>
 ```
 
-Callback invoked before the dialog box disappearance animation. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
+Callback invoked before the dialog box disappearance animation.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,13 +421,11 @@ Callback invoked before the dialog box disappearance animation. <br>**NOTE：**<
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box. <br> Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
+Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,15 +439,15 @@ Shadow of the dialog box. <br> Default value on 2-in-1 devices: **ShadowStyle.OU
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. <br>**true**: The dialog box is shown in a subwindow. <br>**false** (default): The dialog box is displayed within the application, not in a separate subwindow. <br>Note: A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**.
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window.   
+**true**: The dialog box is shown in a subwindow.   
+**false** (default): The dialog box is displayed within the application, not in a separate subwindow. Note: A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -476,11 +463,9 @@ systemMaterial?: SystemUiMaterial
 
 System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -494,13 +479,11 @@ System material of the dialog box. Different materials have different effects an
 title?: string | Resource
 ```
 
-Title of the dialog box.<br>Default value: **undefined**, which indicates that no title is not displayed by default.
+Title of the dialog box.Default value: **undefined**, which indicates that no title is not displayed by default.
 
 **Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

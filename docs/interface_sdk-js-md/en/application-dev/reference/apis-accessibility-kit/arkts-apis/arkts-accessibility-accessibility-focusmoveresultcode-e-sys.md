@@ -4,8 +4,6 @@ Enumerates the result codes returned by the focusable node query.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NOT_SUPPORTED = -1
 Query is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,8 +32,6 @@ The node is queried successfully.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1
 The node query is successful. It is recommended to use the parameter bypassSelfDescendants in the next query to improve query efficiency.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,8 +60,6 @@ Failed to query the node. The current page has no focusable node.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ SEARCH_FAILURE_IN_CHILD_TREE = 3
 Failed to query the node. The current container has no focusable node.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,8 +88,6 @@ Failed to query the node. The start node is not found.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ SEARCH_NEXT = 5
 The returned node is not focusable. Continue to query from the returned node.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,8 +116,6 @@ The returned node is not focusable. Continue to query from all descendants of th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -148,8 +130,6 @@ The returned node is not focusable. Continue to query from the last child node o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -163,8 +143,6 @@ SEARCH_FAILURE_IN_SCROLL = 8
 Failed to query the node in the scrollable component.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

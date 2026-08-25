@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -15,8 +15,6 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 Obtain the information about the found devices.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ Obtain the information about the found devices.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // The peer device list can be obtained only after the P2P discovery is complete.
-  wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
-    if (err) {
-        console.error("get P2P peer devices error");
-        return;
-    }
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pPeerDevices().then(data => {
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-```
-
 
 ## getP2pPeerDevices
 
@@ -64,8 +44,6 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 Obtain the information about the found devices.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -85,7 +63,3 @@ Obtain the information about the found devices.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-See [getP2pPeerDevices](#getp2ppeerdevices)

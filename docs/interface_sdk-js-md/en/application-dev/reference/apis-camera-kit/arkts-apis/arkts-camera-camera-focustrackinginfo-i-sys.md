@@ -4,8 +4,6 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## trackingMode
@@ -27,8 +25,6 @@ Tracing mode.
 **Type:** [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -45,8 +41,6 @@ Tracking region.
 **Type:** Rect
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

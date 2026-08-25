@@ -4,8 +4,6 @@ Enumerates the intent execution modes. It specifies the mode of execution passed
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SERVICE_EXTENSION_ABILITY
@@ -17,8 +15,6 @@ SERVICE_EXTENSION_ABILITY = 3
 Starts a ServiceExtensionAbility.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

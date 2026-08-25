@@ -4,8 +4,6 @@ Provides detailed information about clicking or touching and holding a same-laye
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Unique ID of the same-layer tag.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## mouseEvent
@@ -41,8 +37,6 @@ Information about clicking or touching and holding using the mouse or touchpad.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## result
@@ -56,7 +50,5 @@ Mouse event consumption result.
 **Type:** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core

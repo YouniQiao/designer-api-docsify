@@ -4,14 +4,12 @@ The **metadataBinding** module provides metadata binding–specific functions su
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -21,9 +19,7 @@ import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [off](arkts-multimodalawareness-metadatabinding-off-f.md#offoperationsubmitmetadata) |
-| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) |
 | [on](arkts-multimodalawareness-metadatabinding-on-f.md#onoperationsubmitmetadata) |
-| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) |
 | [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md) |
 
 <!--Del-->

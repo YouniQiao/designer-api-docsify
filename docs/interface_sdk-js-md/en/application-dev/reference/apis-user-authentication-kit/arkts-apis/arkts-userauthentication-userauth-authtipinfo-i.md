@@ -4,14 +4,12 @@ Represents the intermediate authentication status. This API is used to describe 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## tipCode
@@ -25,8 +23,6 @@ Intermediate status. It indicates the specific intermediate status type, such as
 **Type:** [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,8 +39,6 @@ Authentication type of the intermediate status. It indicates the authentication 
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

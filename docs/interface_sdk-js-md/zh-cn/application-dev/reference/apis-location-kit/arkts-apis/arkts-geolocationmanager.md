@@ -4,15 +4,13 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** 
 - API版本11+：SystemCapability.Location.Location.Core
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## 汇总
@@ -62,15 +60,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [off(位置服务)](arkts-location-geolocationmanager-off-f.md#offgnssfencestatuschange) |
 | [off(位置服务)](arkts-location-geolocationmanager-off-f.md#offcountrycodechange) |
 | [off(位置服务)](arkts-location-geolocationmanager-off-f.md#offbluetoothscanresultchange) |
-| [offBluetoothScanResultChange(位置服务)](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md) |
-| [offCachedGnssLocationsChange(位置服务)](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md) |
-| [offCountryCodeChange(位置服务)](arkts-location-geolocationmanager-offcountrycodechange-f.md) |
-| [offGnssFenceStatusChange(位置服务)](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md) |
 | [offLocationChange(位置服务)](arkts-location-geolocationmanager-offlocationchange-f.md) |
-| [offLocationEnabledChange(位置服务)](arkts-location-geolocationmanager-offlocationenabledchange-f.md) |
-| [offLocationError(位置服务)](arkts-location-geolocationmanager-offlocationerror-f.md) |
-| [offNmeaMessage(位置服务)](arkts-location-geolocationmanager-offnmeamessage-f.md) |
-| [offSatelliteStatusChange(位置服务)](arkts-location-geolocationmanager-offsatellitestatuschange-f.md) |
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#onlocationchange) |
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#onlocationerror) |
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#onlocationenabledchange) |
@@ -80,15 +70,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#ongnssfencestatuschange) |
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#oncountrycodechange) |
 | [on(位置服务)](arkts-location-geolocationmanager-on-f.md#onbluetoothscanresultchange) |
-| [onBluetoothScanResultChange(位置服务)](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md) |
-| [onCachedGnssLocationsChange(位置服务)](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md) |
-| [onCountryCodeChange(位置服务)](arkts-location-geolocationmanager-oncountrycodechange-f.md) |
-| [onGnssFenceStatusChange(位置服务)](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md) |
 | [onLocationChange(位置服务)](arkts-location-geolocationmanager-onlocationchange-f.md) |
-| [onLocationEnabledChange(位置服务)](arkts-location-geolocationmanager-onlocationenabledchange-f.md) |
-| [onLocationError(位置服务)](arkts-location-geolocationmanager-onlocationerror-f.md) |
-| [onNmeaMessage(位置服务)](arkts-location-geolocationmanager-onnmeamessage-f.md) |
-| [onSatelliteStatusChange(位置服务)](arkts-location-geolocationmanager-onsatellitestatuschange-f.md) |
 | [removeBeaconFence(位置服务)](arkts-location-geolocationmanager-removebeaconfence-f.md) |
 | [removeGnssGeofence(位置服务)](arkts-location-geolocationmanager-removegnssgeofence-f.md) |
 | [sendCommand(位置服务)](arkts-location-geolocationmanager-sendcommand-f.md) |
@@ -116,14 +98,10 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [isFusionFenceSupported(位置服务)](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md) |
 | [isLocationEnabledByUserId(位置服务)](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md) |
 | [isLocationPrivacyConfirmed(位置服务)](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md) |
-| [off(位置服务)](arkts-location-geolocationmanager-off-f-sys.md#offlocatingrequireddatachange) |
-| [off(位置服务)](arkts-location-geolocationmanager-off-f-sys.md#offlocationiconstatuschange) |
-| [offLocatingRequiredDataChange(位置服务)](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md) |
-| [offLocationIconStatusChange(位置服务)](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md) |
-| [on(位置服务)](arkts-location-geolocationmanager-on-f-sys.md#onlocatingrequireddatachange) |
-| [on(位置服务)](arkts-location-geolocationmanager-on-f-sys.md#onlocationiconstatuschange) |
-| [onLocatingRequiredDataChange(位置服务)](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md) |
-| [onLocationIconStatusChange(位置服务)](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md) |
+| off(位置服务) |
+| off(位置服务) |
+| on(位置服务) |
+| on(位置服务) |
 | [removeFusionFence(位置服务)](arkts-location-geolocationmanager-removefusionfence-f-sys.md) |
 | [setLocationPrivacyConfirmStatus(位置服务)](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md) |
 | [setLocationSwitchIgnored(位置服务)](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md) |

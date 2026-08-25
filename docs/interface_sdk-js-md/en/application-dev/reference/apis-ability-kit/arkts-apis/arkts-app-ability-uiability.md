@@ -16,7 +16,7 @@ UIAbility is an application component that has the UI. It inherits from
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -36,11 +36,3 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 | [Caller](arkts-ability-app-ability-uiability-caller-i.md) |
 | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) |
 | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [CalleeCallback](arkts-ability-calleecallback-t.md) |
-| [OnReleaseCallback](arkts-ability-onreleasecallback-t.md) |
-| [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-t.md) |

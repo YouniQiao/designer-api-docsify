@@ -4,8 +4,6 @@ Enumerates the authorization results after the **PasteButton** component is tapp
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 0
 Authorization is successful.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ TEMPORARY_AUTHORIZATION_FAILED = 1
 Authorization fails.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

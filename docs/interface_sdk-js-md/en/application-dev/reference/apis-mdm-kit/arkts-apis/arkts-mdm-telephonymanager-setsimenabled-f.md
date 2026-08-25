@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setSimEnabled
@@ -17,8 +17,6 @@ Enables the SIM card in a specified slot. After it has been disabled with **setS
 > **SIM management**, as this **setSimEnabled** API cannot re-enable it directly.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -41,23 +39,3 @@ Enables the SIM card in a specified slot. After it has been disabled with **setS
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let slotId: number = 0;
-  telephonyManager.setSimEnabled(wantTemp, slotId);
-  console.info(`Succeeded in setting slotId: ${slotId} enabled.`);
-} catch (err) {
-  console.error(`Failed to set slotId enabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

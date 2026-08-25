@@ -1,7 +1,5 @@
 # RegExp
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 compile(pattern: string, flags?: string): this
 ```
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -36,8 +32,6 @@ exec(string: string): RegExpExecArray | null
 
 Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -55,8 +49,6 @@ test(string: string): boolean
 ```
 
 Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -78,8 +70,6 @@ Returns a Boolean value indicating the state of the global flag (g) used with a 
 
 **Type:** boolean
 
-**ArkTS mode:** 
-
 ## ignoreCase
 
 ```TypeScript
@@ -90,8 +80,6 @@ Returns a Boolean value indicating the state of the ignoreCase flag (i) used wit
 
 **Type:** boolean
 
-**ArkTS mode:** 
-
 ## lastIndex
 
 ```TypeScript
@@ -99,8 +87,6 @@ lastIndex: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## multiline
 
@@ -112,8 +98,6 @@ Returns a Boolean value indicating the state of the multiline flag (m) used with
 
 **Type:** boolean
 
-**ArkTS mode:** 
-
 ## source
 
 ```TypeScript
@@ -123,5 +107,3 @@ readonly source: string
 Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal.
 
 **Type:** string
-
-**ArkTS mode:** 

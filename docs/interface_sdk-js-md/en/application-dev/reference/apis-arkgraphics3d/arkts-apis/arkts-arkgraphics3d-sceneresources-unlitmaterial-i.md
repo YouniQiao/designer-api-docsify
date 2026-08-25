@@ -6,8 +6,6 @@ Material that is not affected by lighting. The shading value of the material is 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## baseColor
@@ -21,7 +19,5 @@ Base color property, which defines the base color information of the material.
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

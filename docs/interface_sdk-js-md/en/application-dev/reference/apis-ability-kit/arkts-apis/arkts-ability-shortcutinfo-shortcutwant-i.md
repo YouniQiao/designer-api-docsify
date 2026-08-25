@@ -4,8 +4,6 @@ Describes a collection of target [Wants](../../../quick-start/module-configurati
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## parameters
@@ -14,13 +12,11 @@ Describes a collection of target [Wants](../../../quick-start/module-configurati
 parameters?: Array<ParameterItem>
 ```
 
-Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024 characters long.
+Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024 characters number.
 
 **Type:** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,8 +32,6 @@ Target ability name of the shortcut.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetBundle
@@ -52,8 +46,6 @@ Target bundle name of the shortcut.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetModule
@@ -67,7 +59,5 @@ Target module name of the shortcut.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

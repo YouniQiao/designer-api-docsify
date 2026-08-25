@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { MarginType, PromptOptions, ExceptionPrompt } from '@kit.ArkUI';
+import { MarginType, PromptOptions, ExceptionPrompt } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

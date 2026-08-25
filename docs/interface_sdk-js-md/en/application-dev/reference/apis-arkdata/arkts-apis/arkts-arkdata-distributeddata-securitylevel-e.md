@@ -4,8 +4,6 @@ Enumerates the KV store security levels.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SecurityLevel
@@ -22,8 +20,6 @@ No security level is set for the KV store (deprecated).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -38,8 +34,6 @@ The KV store security level is public (deprecated).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -53,8 +47,6 @@ S1 = 2
 Low security level. If data leakage occurs, minor impact will be caused. For example, a KV store that contains system data such as wallpapers.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -72,8 +64,6 @@ Medium security level. If data leakage occurs, moderate impact will be caused. F
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** S2
@@ -90,8 +80,6 @@ High security level. If data leakage occurs, major impact will be caused. For ex
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** S3
@@ -107,8 +95,6 @@ S4 = 6
 Critical security level. If data leakage occurs, severe impact will be caused. For example, a KV store that contains information such as authentication credentials and financial data.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

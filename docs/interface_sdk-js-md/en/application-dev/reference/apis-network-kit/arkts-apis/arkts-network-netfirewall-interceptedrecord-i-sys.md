@@ -4,8 +4,6 @@ Intercepted record.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Intercepted record.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## appUid
@@ -27,8 +25,6 @@ Application or service ID.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -46,8 +42,6 @@ Blocked domain name information.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Local IP.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -82,8 +74,6 @@ Local port.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Transport layer protocol.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -118,8 +106,6 @@ Remote IP.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -136,8 +122,6 @@ Remote port.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -153,8 +137,6 @@ Time stamp.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

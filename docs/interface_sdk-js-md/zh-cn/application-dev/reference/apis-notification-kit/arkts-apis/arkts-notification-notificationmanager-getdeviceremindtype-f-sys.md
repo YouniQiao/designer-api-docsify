@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDeviceRemindType
@@ -15,8 +15,6 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 获取通知的提醒方式。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -44,63 +42,6 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDeviceRemindTypeCallback = (err: BusinessError, data: notificationManager.DeviceRemindType): void => {
-    if (err) {
-        console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDeviceRemindType success, data is ${JSON.stringify(data)}`);
-    }
-};
-notificationManager.getDeviceRemindType(getDeviceRemindTypeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDeviceRemindTypeCallback = (err: BusinessError | null, data: notificationManager.DeviceRemindType | undefined | null): void => {
-    if (err) {
-        console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDeviceRemindType success, data is ${data}`);
-    }
-};
-notificationManager.getDeviceRemindType(getDeviceRemindTypeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getDeviceRemindType failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## getDeviceRemindType
 
@@ -111,8 +52,6 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 获取通知的提醒方式。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -138,7 +77,3 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [getDeviceRemindType](#getdeviceremindtype)

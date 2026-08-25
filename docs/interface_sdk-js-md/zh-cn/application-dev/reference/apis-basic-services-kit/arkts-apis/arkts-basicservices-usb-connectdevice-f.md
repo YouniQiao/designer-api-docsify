@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -16,8 +16,6 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)
@@ -28,17 +26,10 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | 是 |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Readonly & lt;USBDevicePipe & gt; |
-
-**示例**
-
-```TypeScript
-let devicepipe= usb.connectDevice(device);
-console.info(`devicepipe = ${devicepipe}`);
-```

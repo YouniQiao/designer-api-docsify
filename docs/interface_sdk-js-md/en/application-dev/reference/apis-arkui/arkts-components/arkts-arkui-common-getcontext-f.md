@@ -15,8 +15,6 @@ Obtains the Context object associated with a component on the page.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 18
 
 **Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)
@@ -31,7 +29,7 @@ Obtains the Context object associated with a component on the page.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | No |
+| component | Object | No |
 
 **Return value:**
 

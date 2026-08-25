@@ -4,8 +4,6 @@ Enumerates input types, which are used to identify the input modes supported by 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NONE = -1
 No input.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Camera input, indicating that the system is in camera input mode. This type is t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -55,8 +49,6 @@ SECURITY_INPUT = 1
 Security input, indicating that the system panel is in secure input mode. This type is used for entering sensitive information such as passwords.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +66,6 @@ Voice input, indicating that the system panel is in voice input mode. This type 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -91,8 +81,6 @@ FLOATING_VOICE_INPUT = 3
 Floating voice input, indicating that the system panel is in floating voice input mode and provides the voice input function in a floating window.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

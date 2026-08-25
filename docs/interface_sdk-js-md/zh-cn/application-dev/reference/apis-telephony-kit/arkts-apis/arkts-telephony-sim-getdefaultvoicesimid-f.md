@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getDefaultVoiceSimId
 
 ```TypeScript
-function getDefaultVoiceSimId(callback: AsyncCallback<int>): void
+function getDefaultVoiceSimId(callback: AsyncCallback<number>): void
 ```
 
 获取默认语音业务的SIM卡ID。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,7 +22,7 @@ function getDefaultVoiceSimId(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -38,41 +36,16 @@ function getDefaultVoiceSimId(callback: AsyncCallback<int>): void
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301001](../errorcode-telephony.md#8301001-sim卡未激活) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getDefaultVoiceSimId((err: BusinessError, data: number) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDefaultVoiceSimId();
-promise.then((data: number) => {
-    console.info(`getDefaultVoiceSimId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultVoiceSimId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getDefaultVoiceSimId
 
 ```TypeScript
-function getDefaultVoiceSimId(): Promise<int>
+function getDefaultVoiceSimId(): Promise<number>
 ```
 
 获取默认语音业务的SIM卡ID。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -80,7 +53,7 @@ function getDefaultVoiceSimId(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -92,7 +65,3 @@ function getDefaultVoiceSimId(): Promise<int>
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301001](../errorcode-telephony.md#8301001-sim卡未激活) |
-
-**示例**
-
-参见 [getDefaultVoiceSimId](#getdefaultvoicesimid)

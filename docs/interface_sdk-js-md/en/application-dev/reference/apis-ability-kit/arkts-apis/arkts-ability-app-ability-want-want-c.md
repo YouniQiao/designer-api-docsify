@@ -4,14 +4,12 @@ Want is a carrier for information transfer between objects (application componen
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## Modules to Import
 
 ```TypeScript
-import { Want } from '@kit.AbilityKit';
+import { Want } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ Ability name of the application. It represents the ability name of the target ap
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -61,8 +55,6 @@ Bundle name of the application. It represents the bundle name of the target appl
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Device ID. It indicates the device ID of the target application in the applicati
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -98,8 +88,6 @@ Additional category information (such as browser and video player) of the abilit
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -107,16 +95,14 @@ Additional category information (such as browser and video player) of the abilit
 ## fds
 
 ```TypeScript
-readonly fds?: Record<string, int>
+readonly fds?: Record<string, number>
 ```
 
 File descriptor (FD). The FD written by the launcher in the application launch scenario is set to this parameter.This API can be used in atomic services since API version 15.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
+**Type:** Record&lt;string, number&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -125,16 +111,14 @@ File descriptor (FD). The FD written by the launcher in the application launch s
 ## flags
 
 ```TypeScript
-flags?: int
+flags?: number
 ```
 
 How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md). A numeric value should be passed by default.For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -153,8 +137,6 @@ Module name of the application. It represents the module name of the target appl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -168,7 +150,23 @@ parameters?: Record<string, Object>
 List of parameters in the Want object.
 1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the
 system automatically changes the values to the actual values during data transfer.  
-- **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string. - **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string. - **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string. - **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is a string. - **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string. - **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string. - **ohos.aafwk.param.callerToken**: token of the caller. The value is a string. - **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md), that is, the application's UID in the bundle information. The value is a number. - **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type. - **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type. - **moduleName**: module name of the caller. The value is a string. - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of the Boolean type. - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of wantConstant.ShowMode.  
+- **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string.  
+- **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string.  
+- **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string.  
+- **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is  
+a string.  
+- **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string.  
+- **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string.  
+- **ohos.aafwk.param.callerToken**: token of the caller. The value is a string.  
+- **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md), that is,  
+the application's UID in the bundle information. The value is a number.  
+- **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type.  
+- **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type.  
+- **moduleName**: module name of the caller. The value is a string.  
+- **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of  
+the Boolean type.  
+- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
+wantConstant.ShowMode.  
 **NOTE：**In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
 2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the
 keys and their values, see wantConstant.Params.
@@ -178,8 +176,6 @@ keys and their values, see wantConstant.Params.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -197,8 +193,6 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -215,277 +209,6 @@ URI, which is used with **type** to specify the data type to be processed in the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
-
-**Examples**
-
-Basic usage: called in a UIAbility object, as shown in the example below. For details about how to obtain the context, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      deviceId: '', // An empty deviceId indicates the local device.
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      moduleName: 'entry' // moduleName is optional.
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        // Start an ability explicitly. The bundleName, abilityName, and moduleName parameters work together to uniquely identify an ability.
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-String
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        keyForString: 'str',
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-Number
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        keyForInt: 100,
-        keyForDouble: 99.99,
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-Boolean
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        keyForBool: true,
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-Object
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        keyForObject: {
-          keyForObjectString: 'str',
-          keyForObjectInt: -200,
-          keyForObjectDouble: 35.5,
-          keyForObjectBool: false,
-        },
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-Array
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        keyForArrayString: ['str1', 'str2', 'str3'],
-        keyForArrayInt: [100, 200, 300, 400],
-        keyForArrayDouble: [0.1, 0.2],
-        keyForArrayObject: [{ obj1: 'aaa' }, { obj2: 100 }],
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-FD
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let fd: number = 0;
-
-    try {
-      fd = fileIo.openSync('/data/storage/el2/base/haps/pic.png').fd;
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`Failed to openSync. Code: ${code}, message: ${message}`);
-    }
-    let want: Want = {
-      deviceId: '', // An empty deviceId indicates the local device.
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      moduleName: 'entry', // moduleName is optional.
-      parameters: {
-        'keyFd': { 'type': 'FD', 'value': fd } // {'type':'FD', 'value':fd} is a fixed usage, indicating that the data is a file descriptor.
-      }
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-parameters usage: parameters carries custom parameters. It is transferred by UIAbilityA to UIAbilityB and obtained from UIAbilityB.
-
-```TypeScript
-// (1) UIAbilityA calls startAbility to start UIAbilityB.
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIAbilityB',
-      parameters: {
-        developerParameters: 'parameters',
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// (2) If the UIAbilityB instance is started for the first time, it enters the onCreate lifecycle.
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-
-class UIAbilityB extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info(`onCreate, want parameters: ${want.parameters?.developerParameters}`);
-  }
-}
-```
-
-Usage of the keys of [wantConstant](arkts-app-ability-wantconstant.md) in parameters.
-
-```TypeScript
-import { UIAbility, Want, wantConstant } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'FuncAbility',
-      parameters: {
-        [wantConstant.Params.CONTENT_TITLE_KEY]: 'contentTitle',
-      },
-    };
-
-    this.context.startAbility(want, (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to startAbility. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```

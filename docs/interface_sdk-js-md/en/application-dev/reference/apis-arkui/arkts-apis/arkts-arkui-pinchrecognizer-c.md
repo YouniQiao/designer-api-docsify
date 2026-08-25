@@ -6,8 +6,6 @@ Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ getDistance(): number
 Obtains the minimum distance required for the pinch gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

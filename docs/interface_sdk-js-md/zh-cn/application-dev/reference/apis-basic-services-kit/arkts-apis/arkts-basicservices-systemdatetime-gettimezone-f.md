@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -16,8 +16,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -25,80 +23,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone((error: BusinessError, timezone: string) => {
-    if (error) {
-      console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting timezone: ${timezone}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone((error: BusinessError<void> | null, data: string | undefined) => {
-    if (error) {
-      console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in get timezone : ${data}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone().then((timezone: string) => {
-    console.info(`Succeeded in getting timezone: ${timezone}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone().then((data: string) => {
-    console.info(`Succeeded in getting timezone: ${data}`);
-  }).catch((error: Error) => {
-    console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
 
 
 ## getTimezone
@@ -111,8 +35,6 @@ function getTimezone(): Promise<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **返回值：**
@@ -120,7 +42,3 @@ function getTimezone(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-参见 [getTimezone](#gettimezone)

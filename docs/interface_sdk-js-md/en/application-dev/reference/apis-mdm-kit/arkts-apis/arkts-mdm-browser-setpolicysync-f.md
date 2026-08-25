@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## setPolicySync
@@ -15,8 +15,6 @@ function setPolicySync(admin: Want, appId: string, policyName: string, policyVal
 Sets a browser sub-policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -41,28 +39,3 @@ Sets a browser sub-policy for a specified browser. This API is applicable to sce
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace the value of appId with the specified application ID of the browser.
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
-let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
-
-try {
-  browser.setPolicySync(wantTemp, appId, policyName, policyValue);
-  console.info('Succeeded in setting browser policies.');
-} catch (err) {
-  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

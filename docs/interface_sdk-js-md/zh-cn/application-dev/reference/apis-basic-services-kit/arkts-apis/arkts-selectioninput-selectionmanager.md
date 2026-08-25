@@ -17,8 +17,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -26,7 +24,7 @@
 ## 导入模块
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -39,9 +37,7 @@ import { selectionManager } from '@kit.BasicServicesKit';
 | [destroyPanel(划词管理)](arkts-basicservices-selectionmanager-destroypanel-f.md) |
 | [getSelectionContent(划词管理)](arkts-basicservices-selectionmanager-getselectioncontent-f.md) |
 | [off(划词管理)](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) |
-| [offSelectionComplete(划词管理)](arkts-basicservices-selectionmanager-offselectioncomplete-f.md) |
 | [on(划词管理)](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) |
-| [onSelectionComplete(划词管理)](arkts-basicservices-selectionmanager-onselectioncomplete-f.md) |
 
 ### 接口
 

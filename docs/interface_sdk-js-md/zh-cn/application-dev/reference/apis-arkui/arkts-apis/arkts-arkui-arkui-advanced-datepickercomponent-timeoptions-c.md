@@ -9,14 +9,12 @@ TimeOptions定义时间选择器的选项。继承于[CommonOptions](arkts-arkui
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## format
@@ -33,8 +31,6 @@ format?: TimeFormat
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -48,7 +44,8 @@ useMilitaryTime?: boolean
 ```
 
 指定是否使用24小时制显示时间。  
-- true：时间以24小时制展示，适用于国际化应用、需要精确时间表达的专业场景（如医疗、交通、军事等）。 - false：时间以12小时制展示，适用于面向普通用户的日常应用场景，更符合用户的日常阅读习惯。  
+- true：时间以24小时制展示，适用于国际化应用、需要精确时间表达的专业场景（如医疗、交通、军事等）。  
+- false：时间以12小时制展示，适用于面向普通用户的日常应用场景，更符合用户的日常阅读习惯。  
 默认值：false
 
 **类型：** boolean
@@ -56,8 +53,6 @@ useMilitaryTime?: boolean
 **默认值：** false
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

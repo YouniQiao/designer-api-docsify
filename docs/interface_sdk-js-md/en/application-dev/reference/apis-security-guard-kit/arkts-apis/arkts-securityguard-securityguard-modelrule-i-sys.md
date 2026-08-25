@@ -4,8 +4,6 @@ Provides the ModelRule type.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the ModelRule type.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## modelName
@@ -27,8 +25,6 @@ The security model rule
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -45,8 +41,6 @@ The model param.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

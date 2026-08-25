@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapUsingAllocator
@@ -16,8 +16,6 @@ function createPixelMapUsingAllocator(colors: ArrayBuffer, param: Initialization
 Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -42,43 +40,3 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapUseAllocator() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  let opts: image.InitializationOptions = { editable: true, srcPixelFormat: image.PixelMapFormat.RGBA_8888, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 } }
-  image.createPixelMapUsingAllocator(color, opts, image.AllocatorType.AUTO).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating pixelmap.');
-  }).catch((error: BusinessError) => {
-    console.error("Failed to create pixelmap. code is ", error.code);
-  })
-}
-```
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```

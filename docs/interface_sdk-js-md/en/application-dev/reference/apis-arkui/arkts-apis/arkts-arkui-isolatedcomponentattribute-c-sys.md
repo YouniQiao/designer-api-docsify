@@ -6,8 +6,6 @@ Only the width, height, and backgroundColor universal attributes are supported.T
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,8 +26,6 @@ onError(
 Invoked when an error occurs during the running of the **IsolatedComponent**. You can obtain the error information based on the **code**, **name**, and **message** parameters in the callback and rectify the exception accordingly.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

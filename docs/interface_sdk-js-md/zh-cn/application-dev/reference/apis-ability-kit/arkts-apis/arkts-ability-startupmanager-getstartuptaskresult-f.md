@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
+import { startupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getStartupTaskResult
@@ -15,8 +15,6 @@ function getStartupTaskResult(startupTask: string): Object
 获取指定启动任务或so预加载任务的执行结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,75 +37,3 @@ function getStartupTaskResult(startupTask: string): Object
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    try {
-      startupManager.run(['StartupTask_001']).then(() => {
-        hilog.info(0x0000, 'testTag', 'StartupTask_001 init successful');
-      }).catch((error: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
-      });
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    let result = startupManager.getStartupTaskResult('StartupTask_001'); // 手动获取启动任务结果
-    hilog.info(0x0000, 'testTag', 'getStartupTaskResult result = %{public}s', JSON.stringify(result));
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err) {
-        let error = err as BusinessError;
-        hilog.error(0x0000, 'testTag',
-          `Failed to load the content. Cause: error code ${error.code}, error msg ${error.message}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-    });
-  }
-}
-```
-
-
-## getStartupTaskResult
-
-```TypeScript
-function getStartupTaskResult(startupTask: string): Any
-```
-
-获取指定启动任务或so预加载任务的执行结果。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AppStartup
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startupTask | string | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Any |
-
-**示例**
-
-参见 [getStartupTaskResult](#getstartuptaskresult)

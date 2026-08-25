@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetFirewallPolicy
@@ -15,8 +15,6 @@ function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>
 查询系统用户ID的防火墙策略，包含防火墙开关状态，默认出站入站行为（允许/阻止）。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.GET_NET_FIREWALL
 
@@ -44,16 +42,3 @@ function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-netFirewall.getNetFirewallPolicy(100).then((result: netFirewall.NetFirewallPolicy) => {
-  console.info('firewall policy: ', JSON.stringify(result));
-}, (reason: BusinessError) => {
-  console.error('get firewall policy failed: ', JSON.stringify(reason));
-});
-```

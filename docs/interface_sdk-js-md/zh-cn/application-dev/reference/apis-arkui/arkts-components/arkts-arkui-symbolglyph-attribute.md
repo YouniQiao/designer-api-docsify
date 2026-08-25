@@ -1,12 +1,10 @@
 # SymbolGlyph属性/事件
 
-支持通用属性，不支持文本通用属性，仅支持以下特有属性。支持通用事件。
+支持[通用属性](arkts-arkui-commonmethod-c.md)，不支持文本通用属性，仅支持以下特有属性。支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +29,6 @@ effectStrategy(value: SymbolEffectStrategy)
 > 用，详见[symbolEffect](#symboleffect)接口说明。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,8 +57,6 @@ fontColor(value: Array<ResourceColor>)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -75,7 +69,7 @@ fontColor(value: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor & gt; | 是 |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## fontColor
 
@@ -90,8 +84,6 @@ fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -104,7 +96,7 @@ fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor \ | ColorMetrics & gt; \ | undefined | 是 |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; \ | undefined | 是 |
 
 ## fontSize
 
@@ -118,8 +110,6 @@ fontSize(value: number | string | Resource)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +138,6 @@ fontWeight(value: number | FontWeight | string)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -174,8 +162,6 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -189,7 +175,7 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
+| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
 
 ## maxFontScale
 
@@ -201,8 +187,6 @@ maxFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -213,7 +197,7 @@ maxFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | 是 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
 
 ## minFontScale
 
@@ -225,8 +209,6 @@ minFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -237,7 +219,7 @@ minFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | 是 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
 
 ## renderingStrategy
 
@@ -251,8 +233,6 @@ renderingStrategy(value: SymbolRenderingStrategy)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -274,11 +254,9 @@ renderingStrategy(value: SymbolRenderingStrategy)
 shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle)
 ```
 
-设置SymbolGlyph组件的渐变色效果。可以显示为径向渐变RadialGradientStyle或线性渐变LinearGradientStyle或纯色 ColorShaderStyle，shaderStyle的优先级高于 [fontColor](#fontcolor)和AI识别，纯色建议使用 [fontColor](#fontcolor)。
+设置SymbolGlyph组件的渐变色效果。可以显示为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色 [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)，shaderStyle的优先级高于 [fontColor](#fontcolor)和AI识别，纯色建议使用 [fontColor](#fontcolor)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,7 +268,7 @@ shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| shader | Array & lt;ShaderStyle \ | undefined & gt; \ | [ShaderStyle](#shaderstyle) | 是 |
+| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined & gt; \ | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | 是 |
 
 ## symbolEffect
 
@@ -304,8 +282,6 @@ symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)
 > 动效属性，仅支持使用effectStrategy属性或单个symbolEffect属性，不支持多种动效属性混合使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,8 +308,6 @@ symbolEffect(symbolEffect: SymbolEffect, triggerValue?: number)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -359,8 +333,6 @@ symbolShadow(shadow: Optional<ShadowOptions>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -373,4 +345,4 @@ symbolShadow(shadow: Optional<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| shadow | Optional & lt;ShadowOptions & gt; | 是 |
+| shadow | [Optional](arkts-arkui-optional-t.md)&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 |

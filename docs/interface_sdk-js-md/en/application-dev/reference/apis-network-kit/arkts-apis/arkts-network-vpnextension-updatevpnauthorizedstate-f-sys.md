@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## updateVpnAuthorizedState
@@ -15,8 +15,6 @@ function updateVpnAuthorizedState(bundleName: string): boolean
 Updates the VPN pop-up authorization status.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

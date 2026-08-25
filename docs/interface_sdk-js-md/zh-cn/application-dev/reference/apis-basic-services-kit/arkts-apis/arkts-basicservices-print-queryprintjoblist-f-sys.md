@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrintJobList
@@ -15,8 +15,6 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 查询所有打印任务，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -37,32 +35,6 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
-    if (err) {
-        console.error('queryPrintJobList failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
-    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryPrintJobList
 
@@ -73,8 +45,6 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 查询所有打印任务，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -94,7 +64,3 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [queryPrintJobList](#queryprintjoblist)

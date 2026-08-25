@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## dateStyle
@@ -24,13 +22,11 @@ import { intl } from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-日期显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+日期显示格式，取值包括："number", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -54,8 +50,6 @@ day?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
@@ -72,13 +66,11 @@ day?: string
 dayPeriod?: string
 ```
 
-时段的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时段的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -96,13 +88,11 @@ dayPeriod?: string
 era?: string
 ```
 
-纪元的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+纪元的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -126,8 +116,6 @@ formatMatcher?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
@@ -149,8 +137,6 @@ hour?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -174,8 +160,6 @@ true表示使用12小时制，false表示使用24小时制。同时设置hour12�
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
@@ -197,8 +181,6 @@ hourCycle?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -222,8 +204,6 @@ locale?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -243,8 +223,6 @@ localeMatcher?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -268,8 +246,6 @@ minute?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
@@ -286,13 +262,11 @@ minute?: string
 month?: string
 ```
 
-月份的显示格式，取值包括："numeric", "2-digit", "long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+月份的显示格式，取值包括："numeric", "2-digit", "number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -316,8 +290,6 @@ numberingSystem?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
@@ -340,8 +312,6 @@ second?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
@@ -358,13 +328,11 @@ second?: string
 timeStyle?: string
 ```
 
-时间显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时间显示格式，取值包括："number", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -388,8 +356,6 @@ timeZone?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
@@ -406,13 +372,11 @@ timeZone?: string
 timeZoneName?: string
 ```
 
-时区名称的本地化表示，取值包括："long", "short", "auto"。不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时区名称的本地化表示，取值包括："number", "short", "auto"。不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -430,13 +394,11 @@ timeZoneName?: string
 weekday?: string
 ```
 
-星期的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+星期的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -459,8 +421,6 @@ year?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 

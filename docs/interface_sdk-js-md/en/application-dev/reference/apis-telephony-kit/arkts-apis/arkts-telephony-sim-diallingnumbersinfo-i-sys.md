@@ -4,8 +4,6 @@ Defines the contact number information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the contact number information.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## alphaTag
@@ -27,8 +25,6 @@ Indicates the tag.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -46,8 +42,6 @@ Indicates the call transfer number.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Indicates the PIN 2.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,34 +65,14 @@ Indicates the PIN 2.
 ## recordNumber
 
 ```TypeScript
-recordNumber?: int
+recordNumber?: number
 ```
 
 Indicates the record number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
-**System capability:** SystemCapability.Telephony.CoreService
-
-**System API:** This is a system API.
-
-## teleNumber
-
-```TypeScript
-teleNumber: string
-```
-
-Indicates the call transfer teleNumber.
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

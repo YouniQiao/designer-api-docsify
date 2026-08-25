@@ -8,8 +8,6 @@ Values in buckets are stored in key-value pairs, change {[key: string]: ValueTyp
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** Record&lt;string, ValueType&gt;

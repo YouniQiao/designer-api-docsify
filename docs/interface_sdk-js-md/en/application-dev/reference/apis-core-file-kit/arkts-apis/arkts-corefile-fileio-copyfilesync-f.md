@@ -15,8 +15,6 @@ Copies a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md)
@@ -30,11 +28,3 @@ Copies a file. This API returns the result synchronously.
 | src | string \| number | Yes |
 | dest | string \| number | Yes |
 | mode | number | No |
-
-**Examples**
-
-```TypeScript
-let srcPath = pathDir + "srcDir/test.txt";
-let dstPath = pathDir + "dstDir/test.txt";
-fileio.copyFileSync(srcPath, dstPath);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## requestEnableLocation
@@ -15,8 +15,6 @@ function requestEnableLocation(callback: AsyncCallback<boolean>): void
 Request enable location
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -30,27 +28,6 @@ Request enable location
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.requestEnableLocation((err, data) => {
-    if (err) {
-        console.info('requestEnableLocation: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('requestEnableLocation: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.requestEnableLocation().then((result) => {
-    console.info('promise, requestEnableLocation: ' + JSON.stringify(result));
-});
-```
-
 
 ## requestEnableLocation
 
@@ -61,8 +38,6 @@ function requestEnableLocation(): Promise<boolean>
 Request enable location
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -75,7 +50,3 @@ Request enable location
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [requestEnableLocation](#requestenablelocation)

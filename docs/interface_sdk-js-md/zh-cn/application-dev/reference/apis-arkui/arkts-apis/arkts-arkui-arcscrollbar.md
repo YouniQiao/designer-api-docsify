@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
 
 ### 类
 
@@ -25,7 +18,6 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) |
 | [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) |
 | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) |
 
@@ -33,5 +25,5 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbar) |
+| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md) |
 | [ArcScrollBarInstance](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbarinstance) |

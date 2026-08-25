@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## setAppShareOptions
@@ -15,8 +15,6 @@ function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): v
 Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for the application data. Currently, only the drag- and-drop data channel is supported.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 14+: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
@@ -40,16 +38,3 @@ Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [20400001](../errorcode-udmf.md#20400001-settings-already-exist) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  unifiedDataChannel.setAppShareOptions(unifiedDataChannel.Intention.DRAG, unifiedDataChannel.ShareOptions.IN_APP);
-  console.info(`[UDMF]setAppShareOptions success. `);
-}catch (e){
-  let error: BusinessError = e as BusinessError;
-  console.error(`[UDMF]setAppShareOptions throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```

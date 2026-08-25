@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isModifyAutoStartAppsDisallowed
@@ -15,8 +15,6 @@ function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accoun
 Checks whether a specified user is prohibited from canceling application auto-start.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,29 +43,3 @@ Checks whether a specified user is prohibited from canceling application auto-st
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let autoStartApp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.autoStartApplication',
-  abilityName: 'EntryAbility'
-};
-
-try {
-  let res: boolean = applicationManager.isModifyAutoStartAppsDisallowed(wantTemp, autoStartApp, 100);
-  console.info(`Succeeded in getting disallow modify auto start app: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get disallow modify auto start app. Code: ${err.code}, message: ${err.message}`);
-}
-```

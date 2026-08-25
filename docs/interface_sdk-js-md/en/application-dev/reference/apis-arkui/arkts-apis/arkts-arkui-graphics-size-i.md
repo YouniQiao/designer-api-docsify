@@ -4,8 +4,6 @@ Returns the width and height of the component. The default unit is vp, but APIs 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -19,8 +17,6 @@ Height of the component.Unit: vp.Value range: [0, +∞).
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +35,6 @@ Width of the component.Unit: vp.Value range: [0, +∞).
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

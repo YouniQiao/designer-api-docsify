@@ -4,8 +4,6 @@ Page flip mode of Swiper and Tabs on mouse wheel event.@enum { number } PageFlip
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUOUS
@@ -17,8 +15,6 @@ CONTINUOUS = 0
 Turn pages continuously according to the number of mouse wheel events.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ SINGLE = 1
 The page-turning animation remains unresponsive to other mouse wheel events until it completes.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

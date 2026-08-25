@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@kit.ConnectivityKit';
+import { opp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createOppServerProfile
@@ -15,8 +15,6 @@ function createOppServerProfile(): OppServerProfile
 create the instance of OPP server profile.
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,15 +34,3 @@ create the instance of OPP server profile.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let oppProfile = opp.createOppServerProfile();
-    console.info('oppServer success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

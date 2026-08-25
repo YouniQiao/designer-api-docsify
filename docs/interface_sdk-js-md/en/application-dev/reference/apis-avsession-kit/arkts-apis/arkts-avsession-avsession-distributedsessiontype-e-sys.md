@@ -4,8 +4,6 @@ Define different distributed session type
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ TYPE_SESSION_REMOTE = 0
 Remote session sensed from remote device.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -36,8 +32,6 @@ Migrated session from remote device to this device.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ TYPE_SESSION_MIGRATE_OUT = 2
 Migrated session from this device to remote device.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 

@@ -4,8 +4,6 @@ Describes the **ListItemGroup** component parameter.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ footer?: CustomBuilder
 
 Footer of the list item group.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,8 +38,6 @@ Footer of the list item group, in the type of ComponentContent. This parameter t
 **Type:** ComponentContent
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Footer style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -81,11 +73,9 @@ header?: CustomBuilder
 
 Header of the list item group.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,8 +92,6 @@ Header of the list item group, in the type of ComponentContent. This parameter t
 **Type:** ComponentContent
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +113,6 @@ Header style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -139,15 +125,13 @@ Header style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFo
 space?: number | string
 ```
 
-Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. <br>Default value: **0**<br>Unit: vp
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. Default value: **0**Unit: vp
 
 **Type:** number \| string
 
 **Default:** 0
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,13 +143,12 @@ Spacing between list items. This parameter only affects the spacing between list
 spaceWidth?: Dimension
 ```
 
-Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. <br>Default value: **0**<br>Unit: vp <br>**NOTE：**<br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence. When **spaceWidth** is **undefined** or **null**, **space** takes effect.
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. Default value: **0**Unit: vp   
+**NOTE：**If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence. When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,8 +167,6 @@ Style of the list item.
 **Type:** [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

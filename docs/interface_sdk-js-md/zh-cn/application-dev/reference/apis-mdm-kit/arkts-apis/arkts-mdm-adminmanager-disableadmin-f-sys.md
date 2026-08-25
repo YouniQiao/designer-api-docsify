@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disableAdmin
@@ -15,8 +15,6 @@ function disableAdmin(admin: Want, callback: AsyncCallback<void>): void
 将当前用户下指定的普通设备管理应用解除激活。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -42,62 +40,6 @@ function disableAdmin(admin: Want, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.disableAdmin(wantTemp, 100).catch((err: BusinessError) => {
-  console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.disableAdmin(wantTemp, (err) => {
-  if (err) {
-    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disabling admin');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.disableAdmin(wantTemp, 100, (err) => {
-  if (err) {
-    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disabling admin');
-});
-```
-
 
 ## disableAdmin
 
@@ -108,8 +50,6 @@ function disableAdmin(admin: Want, userId: number, callback: AsyncCallback<void>
 将指定用户（通过userId指定）下指定的普通管理应用解除激活。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -135,7 +75,3 @@ function disableAdmin(admin: Want, userId: number, callback: AsyncCallback<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [disableAdmin](#disableadmin)

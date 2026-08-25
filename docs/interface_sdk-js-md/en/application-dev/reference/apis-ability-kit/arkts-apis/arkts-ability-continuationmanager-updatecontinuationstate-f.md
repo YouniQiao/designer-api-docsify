@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateContinuationState
@@ -20,8 +20,6 @@ function updateContinuationState(
 Instructs the device selection module to update the device connection state. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -51,45 +49,6 @@ Instructs the device selection module to update the device connection state. Thi
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED, (err) => {
-    if (err.code != 0) {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('updateContinuationState finished. ');
-  });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-    .then(() => {
-      console.info('updateContinuationState finished. ');
-    })
-    .catch((err: BusinessError) => {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## updateContinuationState
 
@@ -100,8 +59,6 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 Instructs the device selection module to update the device connection state. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -135,7 +92,3 @@ Instructs the device selection module to update the device connection state. Thi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-
-**Examples**
-
-See [updateContinuationState](#updatecontinuationstate)

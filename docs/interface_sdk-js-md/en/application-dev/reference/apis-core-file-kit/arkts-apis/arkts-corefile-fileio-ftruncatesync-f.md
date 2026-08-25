@@ -15,8 +15,6 @@ Truncates a file based on the file descriptor. This API returns the result synch
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md)
@@ -29,12 +27,3 @@ Truncates a file based on the file descriptor. This API returns the result synch
 | --- | --- | --- |
 | fd | number | Yes |
 | len | number | No |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let len = 5;
-fileio.ftruncateSync(fd, len);
-```

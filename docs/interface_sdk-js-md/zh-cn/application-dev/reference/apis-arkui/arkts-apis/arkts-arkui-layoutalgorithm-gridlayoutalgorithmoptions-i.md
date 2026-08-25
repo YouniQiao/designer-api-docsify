@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnsGap
@@ -22,8 +20,6 @@ columnsGap?: LengthMetrics
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -38,13 +34,11 @@ columnsTemplate?: string | ItemFillPolicy
 
 设置当前网格布局的列数。默认值：'1fr'非法值：按默认值处理。装饰器类型：@Trace
 
-**类型：** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**类型：** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ rowsGap?: LengthMetrics
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

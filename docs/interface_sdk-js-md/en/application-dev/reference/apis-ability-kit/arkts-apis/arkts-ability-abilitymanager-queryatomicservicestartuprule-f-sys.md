@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryAtomicServiceStartupRule
@@ -15,8 +15,6 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,26 +42,3 @@ Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-abilit
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let appId: string = '6918661953712445909';
-    try {
-      abilityManager.queryAtomicServiceStartupRule(this.context, appId).then((data: abilityManager.AtomicServiceStartupRule) => {
-        console.info(`queryAtomicServiceStartupRule data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`queryAtomicServiceStartupRule failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      console.error(`param is invalid, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

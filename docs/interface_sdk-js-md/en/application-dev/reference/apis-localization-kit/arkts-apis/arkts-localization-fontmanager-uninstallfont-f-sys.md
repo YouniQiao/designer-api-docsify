@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## uninstallFont
 
 ```TypeScript
-function uninstallFont(fullName: string): Promise<int>
+function uninstallFont(fullName: string): Promise<number>
 ```
 
 Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -34,7 +32,7 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -45,19 +43,3 @@ Uninstalls an installed font file from the system font library by font name. Thi
 | [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
 | [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
 | [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-async uninstallFont() {
-  try {
-    let res = await fontManager.uninstallFont('fontName');
-    console.info('uninstallFont suc. res is ' + res);
-  } catch (error) {
-    console.error('uninstallFont err.' + error.code);
-  }
-  return;
-}
-```

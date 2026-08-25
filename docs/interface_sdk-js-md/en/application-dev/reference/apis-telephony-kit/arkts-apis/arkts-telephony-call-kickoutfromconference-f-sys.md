@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## kickOutFromConference
 
 ```TypeScript
-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void
+function kickOutFromConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
 Removes a specified call from a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ Removes a specified call from a conference call. This API uses an asynchronous c
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,42 +41,16 @@ Removes a specified call from a conference call. This API uses an asynchronous c
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.kickOutFromConference(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`kickOutFromConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`kickOutFromConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.kickOutFromConference(1).then(() => {
-    console.info(`kickOutFromConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`kickOutFromConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## kickOutFromConference
 
 ```TypeScript
-function kickOutFromConference(callId: int): Promise<void>
+function kickOutFromConference(callId: number): Promise<void>
 ```
 
 Removes a specified call from a conference call. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -90,7 +62,7 @@ Removes a specified call from a conference call. This API uses a promise to retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -109,7 +81,3 @@ Removes a specified call from a conference call. This API uses a promise to retu
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [kickOutFromConference](#kickoutfromconference)

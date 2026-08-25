@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## verifyAbc
@@ -15,8 +15,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RUN_DYN_CODE
 
@@ -41,73 +39,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 | [17700201](../errorcode-bundle.md#17700201-abc文件校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true).then((data) => {
-    hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新abcPaths。
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true).then(() => {
-    hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
-}
-```
-
 
 ## verifyAbc
 
@@ -118,8 +49,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RUN_DYN_CODE
 
@@ -148,7 +77,3 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700201](../errorcode-bundle.md#17700201-abc文件校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [verifyAbc](#verifyabc)

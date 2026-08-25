@@ -4,23 +4,19 @@ AutoFillRect describes the rectangle used for auto-fill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 Height of the AutoFill form or page node. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,16 +27,14 @@ Height of the AutoFill form or page node. The unit is px.
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 Distance between the AutoFill form or page node and the left boundary of the page. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,16 +45,14 @@ Distance between the AutoFill form or page node and the left boundary of the pag
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 Distance between the AutoFill form or page node and the upper boundary of the page. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ Distance between the AutoFill form or page node and the upper boundary of the pa
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 Width of the AutoFill form or page node. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

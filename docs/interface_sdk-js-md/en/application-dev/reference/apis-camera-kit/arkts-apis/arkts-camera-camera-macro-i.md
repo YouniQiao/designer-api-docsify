@@ -6,14 +6,12 @@
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableMacro
@@ -29,8 +27,6 @@ Enables or disables macro photography.
 > current device supports macro photography.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -49,14 +45,3 @@ Enables or disables macro photography.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-
-**Examples**
-
-```TypeScript
-function enableMacro(photoSession: camera.PhotoSession): void {
-  let isSupported: boolean = photoSession.isMacroSupported();
-  if (isSupported) {
-    photoSession.enableMacro(true);
-  }
-}
-```

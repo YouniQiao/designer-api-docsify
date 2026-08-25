@@ -10,8 +10,6 @@ Enumerates the storage security levels of a key.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 11: SystemCapability.Security.Huks.Extension
@@ -25,8 +23,6 @@ HUKS_AUTH_STORAGE_LEVEL_DE = 0
 The key can be accessed only after the device is started.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ The key can be accessed only after the first unlock of the device.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -61,8 +55,6 @@ HUKS_AUTH_STORAGE_LEVEL_ECE = 2
 The key can be accessed only when the device is unlocked.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

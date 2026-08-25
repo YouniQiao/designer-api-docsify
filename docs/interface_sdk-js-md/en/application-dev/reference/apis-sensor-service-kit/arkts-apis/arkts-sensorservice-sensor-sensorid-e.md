@@ -4,8 +4,6 @@ Enumerates the sensor types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ACCELEROMETER
@@ -17,8 +15,6 @@ ACCELEROMETER = 1
 Acceleration sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Gyroscope sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -50,8 +44,6 @@ Ambient light sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## MAGNETIC_FIELD
@@ -63,8 +55,6 @@ MAGNETIC_FIELD = 6
 Magnetic field sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -78,8 +68,6 @@ Barometer sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## HALL
@@ -91,8 +79,6 @@ HALL = 10
 Hall effect sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -106,8 +92,6 @@ Proximity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## HUMIDITY
@@ -120,8 +104,6 @@ Humidity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ORIENTATION
@@ -133,8 +115,6 @@ ORIENTATION = 256
 Orientation sensor.This API can be used in atomic services since API version 11.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,8 +130,6 @@ Gravity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## LINEAR_ACCELEROMETER
@@ -163,8 +141,6 @@ LINEAR_ACCELEROMETER = 258
 Linear acceleration sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -178,8 +154,6 @@ Rotation vector sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## AMBIENT_TEMPERATURE
@@ -191,8 +165,6 @@ AMBIENT_TEMPERATURE = 260
 Ambient temperature sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -206,8 +178,6 @@ Uncalibrated magnetic field sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## GYROSCOPE_UNCALIBRATED
@@ -219,8 +189,6 @@ GYROSCOPE_UNCALIBRATED = 263
 Uncalibrated gyroscope sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -234,8 +202,6 @@ Significant motion sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## PEDOMETER_DETECTION
@@ -247,8 +213,6 @@ PEDOMETER_DETECTION = 265
 Pedometer detection sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -262,8 +226,6 @@ Pedometer sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## HEART_RATE
@@ -275,8 +237,6 @@ HEART_RATE = 278
 Heart rate sensor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -290,8 +250,6 @@ Wear detection sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ACCELEROMETER_UNCALIBRATED
@@ -304,8 +262,6 @@ Uncalibrated acceleration sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## FUSION_PRESSURE
@@ -317,7 +273,5 @@ FUSION_PRESSURE = 283
 Fused pressure sensor.This sensor is available only on smart watches.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

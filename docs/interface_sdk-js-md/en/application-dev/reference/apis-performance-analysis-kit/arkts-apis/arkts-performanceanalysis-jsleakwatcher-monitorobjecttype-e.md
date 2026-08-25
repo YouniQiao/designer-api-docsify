@@ -4,8 +4,6 @@ Enumerates the types of component objects to be monitored.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## ALL
@@ -17,8 +15,6 @@ ALL = -1
 All component types are monitored.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -32,8 +28,6 @@ Custom component types are monitored.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## WINDOW
@@ -45,8 +39,6 @@ WINDOW = 1 << 1
 The **Window** component type is monitored.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -60,8 +52,6 @@ The **NodeContainer** component type is monitored.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## X_COMPONENT
@@ -74,8 +64,6 @@ The **XComponent** component type is monitored.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## ABILITY
@@ -87,7 +75,5 @@ ABILITY = 1 << 4
 The **Ability** component type is monitored.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker

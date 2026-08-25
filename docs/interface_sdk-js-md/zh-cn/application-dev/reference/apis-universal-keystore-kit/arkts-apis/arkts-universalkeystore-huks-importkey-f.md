@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## importKey
@@ -21,8 +21,6 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
@@ -36,100 +34,6 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 | keyAlias | string | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 以导入AES256密钥为例 */
-
-let plainTextSize32 = makeRandomArr(32);
-
-function makeRandomArr(size: number) {
-  let arr = new Uint8Array(size);
-  for (let i = 0; i < size; i++) {
-    arr[i] = Math.floor(Math.random() * 10);
-  }
-  return arr;
-};
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_AES
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value:
-    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PADDING,
-    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-    value: huks.HuksCipherMode.HUKS_MODE_ECB
-  }
-];
-let options: huks.HuksOptions = {
-  properties: properties,
-  inData: plainTextSize32
-};
-huks.importKey(keyAlias, options, (err, data) => {
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 以导入AES128为例 */
-
-function makeRandomArr(size: number) {
-  let arr = new Uint8Array(size);
-  for (let i = 0; i < size; i++) {
-    arr[i] = Math.floor(Math.random() * 10);
-  }
-  return arr;
-};
-
-/* 1. 生成密钥 */
-let plainTextSize32 = makeRandomArr(32);
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_AES
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_128
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PADDING,
-    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-    value: huks.HuksCipherMode.HUKS_MODE_ECB
-  }
-];
-let huksOptions: huks.HuksOptions = {
-  properties: properties,
-  inData: plainTextSize32
-};
-/* 2. 导入密钥 */
-let result = huks.importKey(keyAlias, huksOptions);
-```
 
 
 ## importKey
@@ -145,8 +49,6 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 > [huks.importKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-importkeyitem-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -166,7 +68,3 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 | 类型 |
 | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
-
-**示例**
-
-参见 [importKey](#importkey)

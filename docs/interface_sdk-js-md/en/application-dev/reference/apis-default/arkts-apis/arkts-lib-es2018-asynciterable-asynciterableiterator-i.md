@@ -1,7 +1,5 @@
 # AsyncIterableIterator
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 [Symbol.asyncIterator](): AsyncIterableIterator<T>
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

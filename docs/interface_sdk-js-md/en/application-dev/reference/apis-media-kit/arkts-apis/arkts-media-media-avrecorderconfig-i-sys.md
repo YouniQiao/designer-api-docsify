@@ -4,14 +4,12 @@ Describes the audio and video recording parameters.The **audioSourceType** and *
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## metaSourceTypes
@@ -25,8 +23,6 @@ Meta source types, details see @MetaSourceType .
 **Type:** Array&lt;[MetaSourceType](arkts-media-media-metasourcetype-e-sys.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 

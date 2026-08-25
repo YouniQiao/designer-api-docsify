@@ -4,8 +4,6 @@ Defines the subtype of a continuous task. It is usually used together with the m
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_CAR_KEY_NORMAL_NOTIFICATION
@@ -18,8 +16,6 @@ SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_NORMAL_NOTIFICATION
@@ -31,8 +27,6 @@ SUBMODE_NORMAL_NOTIFICATION = 2
 Normal text notification.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -48,8 +42,6 @@ Live view notification.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION
@@ -61,8 +53,6 @@ SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 Audio and video playback. It is of the normal text notification type. You can access [AVSession](../../../media/avsession/avsession-overview.md) as needed.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -78,8 +68,6 @@ Audio and video playback scenario where [AVSession](../../../media/avsession/avs
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -94,8 +82,6 @@ Recording. It is of the normal text notification type.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION
@@ -107,8 +93,6 @@ SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7
 Recording. It is of the normal text notification type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -122,8 +106,6 @@ Call. It is of the normal text notification type.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION
@@ -135,8 +117,6 @@ SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9
 Media processing. For example, an application exports media files in the background. It is of the normal text notification type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -150,8 +130,6 @@ Video casting. For example, an application uses a third-party casting component 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_WORK_OUT_NORMAL_NOTIFICATION
@@ -163,8 +141,6 @@ SUBMODE_WORK_OUT_NORMAL_NOTIFICATION = 11
 Exercise. For example, an application has an indoor running scenario in the background, and the notification type is common text notification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

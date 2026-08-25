@@ -1,7 +1,5 @@
 # DateTimeRangeFormatPart
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ source: "startRange" | "endRange" | "shared"
 ```
 
 **Type:** "startRange" \| "endRange" \| "shared"
-
-**ArkTS mode:** 

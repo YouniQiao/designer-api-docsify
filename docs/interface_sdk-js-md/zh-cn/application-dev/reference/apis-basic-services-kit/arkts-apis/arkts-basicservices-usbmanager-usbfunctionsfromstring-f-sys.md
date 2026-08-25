@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsFromString
@@ -15,8 +15,6 @@ function usbFunctionsFromString(funcs: string): number
 在设备模式下，将字符串形式的USB功能列表转换为数字掩码。适用于需要将配置文件或用户输入的字符串形式USB功能列表转换为系统内部使用的数字掩码的场景，以便后续调用setDeviceFunctions等接口设置USB功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -43,12 +41,3 @@ function usbFunctionsFromString(funcs: string): number
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// 定义USB功能字符串
-let funcs: string = 'acm';
-// 将字符串转化为数字掩码
-let ret: number = usbManager.usbFunctionsFromString(funcs);
-```

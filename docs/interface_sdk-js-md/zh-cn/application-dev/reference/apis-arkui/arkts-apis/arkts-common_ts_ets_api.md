@@ -46,3 +46,11 @@
 | [IPropertySubscriber(System API)](arkts-arkui-ipropertysubscriber-i-sys.md) |
 | [ISinglePropertyChangeSubscriber(System API)](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) |
 <!--DelEnd-->
+
+<!--Del-->
+### 属性（系统接口）
+
+| 名称 |
+| --- |
+| [appStorage(System API)](arkts-arkui-commontsetsapi-p-sys.md) |
+<!--DelEnd-->

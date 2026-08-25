@@ -4,8 +4,6 @@ Describes the header and footer of the menu item group.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ footer?: ResourceStr | CustomBuilder
 
 Footer of the menu item group.
 
-**Type:** ResourceStr \| CustomBuilder
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,11 +35,9 @@ header?: ResourceStr | CustomBuilder
 
 Header of the menu item group.
 
-**Type:** ResourceStr \| CustomBuilder
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

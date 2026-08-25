@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('appForegroundState')
@@ -16,8 +16,6 @@ Unregisters the observer used to listen for application start or exit events.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,7 +27,7 @@ Unregisters the observer used to listen for application start or exit events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'appForegroundState' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i.md) | No |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [AppForegroundStateObserver](arkts-ability-appmanager-appforegroundstateobserver-t-sys.md) | No |
 
 **Error codes:**
 
@@ -39,40 +37,6 @@ Unregisters the observer used to listen for application start or exit events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer_: appManager.AppForegroundStateObserver | undefined;
-// 1. Register an observer to listen for application start or exit events.
-let observer: appManager.AppForegroundStateObserver = {
-  onAppStateChanged(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStateChanged: ${JSON.stringify(appStateData)}`);
-  },
-};
-
-try {
-  appManager.on('appForegroundState', observer);
-  // Save the observer object.
-  observer_ = observer;
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-
-// 2. Deregister the observer.
-try {
-  appManager.off('appForegroundState',  observer_);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
 
 
 ## off('abilityFirstFrameState')
@@ -84,8 +48,6 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 Deregisters the observer used to listen for the complete of the first frame rendering of a given ability.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -108,32 +70,3 @@ Deregisters the observer used to listen for the complete of the first frame rend
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityFirstFrameStateObserverForAll: appManager.AbilityFirstFrameStateObserver = {
-  onAbilityFirstFrameDrawn(abilityStateData: appManager.AbilityFirstFrameStateData) {
-    console.info("abilityFirstFrame: ", JSON.stringify(abilityStateData));
-  }
-};
-
-try {
-  appManager.on('abilityFirstFrameState', abilityFirstFrameStateObserverForAll);
-} catch (e) {
-  let code = (e as BusinessError).code;
-  let message = (e as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-
-try {
-  appManager.off('abilityFirstFrameState', abilityFirstFrameStateObserverForAll);
-} catch (e) {
-  let code = (e as BusinessError).code;
-  let message = (e as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```

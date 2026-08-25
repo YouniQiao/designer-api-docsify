@@ -4,44 +4,38 @@ Manages text chunk process configurations.@interface SplitConfig
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## overlapRatio
 
 ```TypeScript
-overlapRatio: double
+overlapRatio: number
 ```
 
 The ratio of overlap between adjacent chunks.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 The maximun size of chunks.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core

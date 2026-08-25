@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,17 +21,9 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-xComponentController: XComponentController = new XComponentController();
-```
 
 ## getXComponentContext
 
@@ -44,8 +34,6 @@ getXComponentContext(): Object
 获取XComponent对象的context。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +55,6 @@ getXComponentSurfaceId(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -79,31 +65,6 @@ getXComponentSurfaceId(): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-
-@Entry
-  @Component
-  struct Index {
-    myXComponentController: XComponentController = new XComponentController();
-
-    build() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-        XComponent({
-          type: XComponentType.SURFACE,
-          controller: this.myXComponentController
-        })
-          .onLoad(() => {
-            let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
-            console.info("XComponent SurfaceId: " + surfaceId);
-          })
-      }
-    }
-  }
-```
-
 ## getXComponentSurfaceRect
 
 ```TypeScript
@@ -113,8 +74,6 @@ getXComponentSurfaceRect(): SurfaceRect
 获取XComponent所持有的surface的矩形。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,8 +97,6 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -161,8 +118,6 @@ lockCanvas(): DrawingCanvas | null
 获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,8 +141,6 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 **说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -213,8 +166,6 @@ onSurfaceCreated(surfaceId: string): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -237,8 +188,6 @@ onSurfaceDestroyed(surfaceId: string): void
 **说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,8 +214,6 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -289,8 +236,6 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -312,8 +257,6 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。 该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -339,8 +282,6 @@ setXComponentSurfaceSize(value: {
 设置XComponent所持有的surface的宽度和高度。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。单位：px。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -369,8 +310,6 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -381,7 +320,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | 是 |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 |
 
 **返回值：**
 
@@ -412,8 +351,6 @@ stopImageAnalyzer(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -429,8 +366,6 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 将Canvas的新内容发布到XComponent创建的surface，并释放该Canvas。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

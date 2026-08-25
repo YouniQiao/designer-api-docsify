@@ -4,8 +4,6 @@ Enumerates the window orientations. <!--Del-->For details of the differences bet
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## UNSPECIFIED
@@ -17,8 +15,6 @@ UNSPECIFIED = 0
 Unspecified. The orientation is determined by the system.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Portrait.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -49,8 +43,6 @@ LANDSCAPE = 2
 Landscape.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Reverse portrait.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -81,8 +71,6 @@ LANDSCAPE_INVERTED = 4
 Reverse landscape.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ Automatically rotates with the sensor to four orientations: portrait, landscape,
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -113,8 +99,6 @@ AUTO_ROTATION_PORTRAIT = 6
 Automatically rotates with the sensor to two orientations: portrait and reverse portrait. This rotation is not controlled by the rotation switch in Control Panel.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ Automatically rotates with the sensor to two orientations: landscape and reverse
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -145,8 +127,6 @@ AUTO_ROTATION_RESTRICTED = 8
 Automatically rotates with the sensor to four orientations: portrait, landscape, reverse portrait, and reverse landscape. This rotation is controlled by the rotation switch in Control Panel.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,8 +142,6 @@ Automatically rotates with the sensor to two orientations: portrait and reverse 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -177,8 +155,6 @@ AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 Automatically rotates with the sensor to two orientations: landscape and reverse landscape. This rotation is controlled by the rotation switch in Control Panel.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,8 +170,6 @@ Locked mode, where the window orientation is consistent with the current screen 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -209,8 +183,6 @@ AUTO_ROTATION_UNSPECIFIED = 12
 Automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system. For example, the window can rotate to portrait, landscape, or reverse landscape, but not reverse portrait, on a certain device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,8 +198,6 @@ Temporarily rotates to portrait mode, and then automatically rotates with the se
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -241,8 +211,6 @@ USER_ROTATION_LANDSCAPE = 14
 Temporarily rotates to landscape mode, and then automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -258,8 +226,6 @@ Temporarily rotates to reverse portrait mode, and then automatically rotates wit
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -274,8 +240,6 @@ Temporarily rotates to reverse landscape mode, and then automatically rotates wi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -289,8 +253,6 @@ FOLLOW_DESKTOP = 17
 Follows the orientation of the home screen, where the window will rotate if the home screen rotates and will not rotate if the home screen does not.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

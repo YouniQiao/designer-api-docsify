@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -15,8 +15,6 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 创建并显示操作菜单，菜单响应结果异步返回。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -31,54 +29,6 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 | options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showActionMenu({
-  title: 'Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-}, (err, data) => {
-  if (err) {
-    console.info('showActionMenu err: ' + err);
-    return;
-  }
-  console.info('showActionMenu success callback, click button: ' + data.index);
-})
-```
-
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err:Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
-
 
 ## showActionMenu
 
@@ -89,8 +39,6 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 创建并显示操作菜单，菜单响应后同步返回结果。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -109,7 +57,3 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 | 类型 |
 | --- |
 | Promise & lt;ActionMenuSuccessResponse & gt; |
-
-**示例**
-
-参见 [showActionMenu](#showactionmenu)

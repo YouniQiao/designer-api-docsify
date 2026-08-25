@@ -1,7 +1,5 @@
 # ResolvedPluralRulesOptions
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@ locale: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## maximumFractionDigits
 
 ```TypeScript
@@ -24,8 +20,6 @@ maximumFractionDigits: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -35,8 +29,6 @@ maximumSignificantDigits?: number
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## minimumFractionDigits
 
 ```TypeScript
@@ -44,8 +36,6 @@ minimumFractionDigits: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -55,8 +45,6 @@ minimumIntegerDigits: number
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## minimumSignificantDigits
 
 ```TypeScript
@@ -65,17 +53,13 @@ minimumSignificantDigits?: number
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## pluralCategories
 
 ```TypeScript
 pluralCategories: LDMLPluralRule[]
 ```
 
-**Type:** LDMLPluralRule[]
-
-**ArkTS mode:** 
+**Type:** [LDMLPluralRule](arkts-intl-ldmlpluralrule-t.md)[]
 
 ## type
 
@@ -83,6 +67,4 @@ pluralCategories: LDMLPluralRule[]
 type: PluralRuleType
 ```
 
-**Type:** PluralRuleType
-
-**ArkTS mode:** 
+**Type:** [PluralRuleType](arkts-intl-pluralruletype-t.md)

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## DATA_CHANGE
@@ -17,8 +15,6 @@ DATA_CHANGE = 0
 表示是数据发生变更。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
@@ -34,8 +30,6 @@ ASSET_CHANGE = 1
 表示是资产附件发生了变更。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC

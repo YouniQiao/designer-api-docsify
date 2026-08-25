@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
@@ -22,8 +20,6 @@ SYNC_MODE_PUSH = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [SYNC_MODE_PUSH](arkts-arkdata-relationalstore-syncmode-e.md#sync_mode_push)
@@ -39,8 +35,6 @@ SYNC_MODE_PULL = 1
 表示数据从远程设备拉至本地设备。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

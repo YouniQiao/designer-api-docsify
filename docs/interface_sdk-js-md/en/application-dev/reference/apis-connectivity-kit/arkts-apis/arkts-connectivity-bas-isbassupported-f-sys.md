@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from '@kit.ConnectivityKit';
+import { bas } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isBasSupported
@@ -15,8 +15,6 @@ function isBasSupported(): boolean
 Determine whether the local device can obtain the battery level of the remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

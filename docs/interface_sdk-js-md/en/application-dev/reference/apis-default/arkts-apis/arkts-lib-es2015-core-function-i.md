@@ -1,7 +1,5 @@
 # Function
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,5 +14,3 @@ readonly name: string
 Returns the name of the function. Function names are read-only and can not be changed.
 
 **Type:** string
-
-**ArkTS mode:** 

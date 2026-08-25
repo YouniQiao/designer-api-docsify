@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isNetworkInterfaceDisabled
@@ -15,8 +15,6 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callb
 Queries whether a specified network interface is disabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,47 +46,6 @@ Queries whether a specified network interface is disabled. This API uses an asyn
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0', (err, result) => {
-  if (err) {
-    console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isNetworkInterfaceDisabled
 
@@ -99,8 +56,6 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Prom
 Queries whether a specified network interface is disabled. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -136,7 +91,3 @@ Queries whether a specified network interface is disabled. This API uses a promi
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [isNetworkInterfaceDisabled](#isnetworkinterfacedisabled)

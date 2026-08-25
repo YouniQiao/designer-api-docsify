@@ -4,8 +4,6 @@ Enumerates the sources of a key.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_CLASS_DEFAULT
@@ -18,8 +16,6 @@ Key managed by HUKS locally.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_CLASS_EXTENSION
@@ -31,7 +27,5 @@ HUKS_KEY_CLASS_EXTENSION = 1
 Key managed by the external key management extension.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.Extension

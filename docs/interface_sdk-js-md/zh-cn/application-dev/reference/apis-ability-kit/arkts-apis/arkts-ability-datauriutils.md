@@ -4,8 +4,6 @@ DataUriUtils模块提供用于处理uri对象的能力，包括获取、绑定�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [dataUriUtils/dataUriUtils](arkts-app-ability-datauriutils.md)

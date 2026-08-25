@@ -4,8 +4,6 @@ This interface is used to notify the listener of personalized spatialization ena
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ This interface is used to notify the listener of personalized spatialization ena
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## deviceDescriptor
@@ -27,8 +25,6 @@ Audio device description.
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Personalized spatialization enable state.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

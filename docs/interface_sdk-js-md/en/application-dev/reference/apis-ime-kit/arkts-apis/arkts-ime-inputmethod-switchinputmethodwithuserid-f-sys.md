@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## switchInputMethodWithUserId
 
 ```TypeScript
-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>
+function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: number): Promise<void>
 ```
 
 Switch input method and subtype of a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -32,7 +30,7 @@ Switch input method and subtype of a specified user.
 | --- | --- | --- |
 | bundleName | string | Yes |
 | subtypeId | string | No |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 

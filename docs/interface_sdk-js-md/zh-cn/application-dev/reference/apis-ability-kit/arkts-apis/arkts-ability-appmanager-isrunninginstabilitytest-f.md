@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isRunningInStabilityTest
@@ -18,8 +18,6 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,32 +36,6 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRunningInStabilityTest((err, flag) => {
-  if (err) {
-    console.error(`isRunningInStabilityTest fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-  }
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.isRunningInStabilityTest().then((flag) => {
-  console.info(`The result of isRunningInStabilityTest is: ${flag}`);
-}).catch((err: Error) => {
-  let error=err as BusinessError;
-  console.error(`error: code: ${error.code} message: ${error.message}`);
-});
-```
-
 
 ## isRunningInStabilityTest
 
@@ -77,8 +49,6 @@ function isRunningInStabilityTest(): Promise<boolean>
 > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -95,7 +65,3 @@ function isRunningInStabilityTest(): Promise<boolean>
 | 错误码ID |
 | --- |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [isRunningInStabilityTest](#isrunninginstabilitytest)

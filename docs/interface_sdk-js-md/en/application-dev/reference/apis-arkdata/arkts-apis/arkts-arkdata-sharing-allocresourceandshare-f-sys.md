@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## allocResourceAndShare
@@ -20,8 +20,6 @@ function allocResourceAndShare(
 Allocates a shared resource ID based on the data that matches the specified predicates. This API uses a promise to return the result set of the data to share, which also includes the column names if they are specified.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -50,114 +48,6 @@ Allocates a shared resource ID based on the data that matches the specified pred
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { relationalStore } from '@kit.ArkData';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-let sharingResource: string;
-let predicates = new relationalStore.RdbPredicates('test_table');
-predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data']).then((resultSet) => {
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
-  }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-}).catch((err: BusinessError) => {
-  console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-let sharingResource: string;
-let predicates = new relationalStore.RdbPredicates('test_table');
-predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data'], (err: BusinessError, resultSet) => {
-  if (err) {
-    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
-  }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
-```
-
-```TypeScript
-import { relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-let sharingResource: string;
-let predicates = new relationalStore.RdbPredicates('test_table');
-predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (err: BusinessError, resultSet) => {
-  if (err) {
-    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
-  }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
-```
-
 
 ## allocResourceAndShare
 
@@ -173,8 +63,6 @@ function allocResourceAndShare(
 Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -197,10 +85,6 @@ Allocates a shared resource ID based on the data that matches the specified pred
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-See [allocResourceAndShare](#allocresourceandshare)
-
 
 ## allocResourceAndShare
 
@@ -217,8 +101,6 @@ function allocResourceAndShare(
 Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result set of the data to share, which includes the shared resource ID and column names.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -241,7 +123,3 @@ Allocates a shared resource ID based on the data that matches the specified pred
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [allocResourceAndShare](#allocresourceandshare)

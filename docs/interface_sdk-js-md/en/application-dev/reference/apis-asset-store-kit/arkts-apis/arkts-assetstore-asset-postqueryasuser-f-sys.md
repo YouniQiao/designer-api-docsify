@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## postQueryAsUser
@@ -15,8 +15,6 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 Performs postprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md) together. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -50,17 +48,3 @@ Performs postprocessing for the asset query in the specified user space. This AP
 | [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let userId: number = 100;
-let handle: asset.AssetMap = new Map();
-// The new Uint8Array(32) is only an example. Pass in the challenge value returned by asset.preQueryAsUser.
-handle.set(asset.Tag.AUTH_CHALLENGE, new Uint8Array(32));
-asset.postQueryAsUser(userId, handle).then(() => {
-  console.info(`Succeeded in post-querying Asset from user space.`);
-});
-```

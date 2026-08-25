@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md) |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md) |
 
 ### 类
 
@@ -26,9 +19,7 @@ import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayou
 
 | 名称 |
 | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |
 | [LazyVWaterFlowLayoutInterface](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutinterface-i.md) |
-| [LazyWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) |
 
 ### 常量
 

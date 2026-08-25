@@ -4,29 +4,25 @@ NDEF标签Record属性的定义，参考NDEF标签技术规范《NFCForum-TS-NDE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## id
 
 ```TypeScript
-id: int[]
+id: number[]
 ```
 
 NDEF Record的ID，每个number十六进制表示，范围是0x00~0xFF。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ NDEF Record的ID，每个number十六进制表示，范围是0x00~0xFF。
 ## payload
 
 ```TypeScript
-payload: int[]
+payload: number[]
 ```
 
 NDEF Record的PAYLOAD，每个number十六进制表示，范围是0x00~0xFF。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ NDEF Record的PAYLOAD，每个number十六进制表示，范围是0x00~0xFF。
 ## rtdType
 
 ```TypeScript
-rtdType: int[]
+rtdType: number[]
 ```
 
 NDEF Record的RTD(Record Type Definition)类型值，每个number十六进制表示，范围是0x00~0xFF。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ NDEF Record的RTD(Record Type Definition)类型值，每个number十六进制表
 ## tnf
 
 ```TypeScript
-tnf: int
+tnf: number
 ```
 
 NDEF Record的TNF(Type Name Field)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## enableHapticsInSilentMode
@@ -23,8 +21,6 @@ enableHapticsInSilentMode(enable: boolean): void
 Enable haptics when the ringer mode is silent mode. 这个方法只能在播放器start前，或stop后release前调用
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -53,8 +49,6 @@ Check whether the device supports haptics intensity adjustment.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +75,6 @@ Check whether the device supports haptics intensity ramp effect.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -101,21 +93,13 @@ Check whether the device supports haptics intensity ramp effect.
 
 ## setHapticsIntensity
 
-ArkTS-Dyn:
 ```TypeScript
 setHapticsIntensity(intensity: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setHapticsIntensity(intensity: double): Promise<void>
 ```
 
 Set haptics intensity for this player. This method uses a promise to return the result. 这个方法只能在播放器释放前调用，并且每次播放过程只能设置一次。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -125,7 +109,7 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| intensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| intensity | number | 是 |
 
 **返回值：**
 
@@ -144,21 +128,13 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 ## setHapticsRamp
 
-ArkTS-Dyn:
 ```TypeScript
 setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>
 ```
 
 Set haptics intensity ramp effect for this player. This method uses a promise to return the result. 这个方法只能在播放器start前，或stop后release前调用
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -168,9 +144,9 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| startIntensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| endIntensity | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| duration | number | 是 |
+| startIntensity | number | 是 |
+| endIntensity | number | 是 |
 
 **返回值：**
 

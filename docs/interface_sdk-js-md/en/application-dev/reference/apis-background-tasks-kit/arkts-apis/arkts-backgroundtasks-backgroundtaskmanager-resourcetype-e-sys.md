@@ -4,8 +4,6 @@ Enumerates the efficiency resource types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CPU = 1
 CPU resource. Such type of resource prevents an application from being suspended.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -36,8 +32,6 @@ Common event resource. Such type of resource ensures that an application in the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ TIMER = 1 << 2
 Timer resource. Such type of resource ensures that an application in the suspended state can be woken up by system timers.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -68,8 +60,6 @@ Deferred task resource. Such type of resource provides a loose control policy fo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ BLUETOOTH = 1 << 4
 Bluetooth resource. Such type of resource ensures that an application in the suspended state can be woken up by Bluetooth-related events.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -100,8 +88,6 @@ GPS resource. Such type of resource ensures that an application in the suspended
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ AUDIO = 1 << 6
 Audio resource. Such type of resource prevents an application from being suspended when the application has an audio being played.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -132,8 +116,6 @@ RUNNING_LOCK resources are not proxied when the application is suspended.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -147,8 +129,6 @@ SENSOR = 1 << 8
 Sensor callbacks are not intercepted.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

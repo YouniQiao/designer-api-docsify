@@ -8,8 +8,6 @@ type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => v
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -21,28 +19,3 @@ type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
-  (info: Array<formInfo.TemplateFormDetailInfo>): void => {
-    console.info('template form detail info callback success.');
-  };
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formInfo } from '@kit.FormKit';
-
-let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
-  (info): void => {
-    console.info('template form detail info callback success.');
-  };
-```

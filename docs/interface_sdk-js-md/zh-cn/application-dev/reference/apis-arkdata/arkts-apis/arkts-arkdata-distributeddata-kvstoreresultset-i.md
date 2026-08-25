@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)
@@ -27,8 +25,6 @@ getCount(): number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** getCount
@@ -41,25 +37,6 @@ getCount(): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const count = resultSet.getCount();
-    console.log("getCount succeed:" + count);
-} catch (e) {
-    console.log("getCount failed: " + e);
-}
-```
-
 ## getEntry
 
 ```TypeScript
@@ -69,8 +46,6 @@ getEntry(): Entry
 从当前位置获取对应的键值对。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -82,26 +57,7 @@ getEntry(): Entry
 
 | 类型 |
 | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const entry  = resultSet.getEntry();
-    console.log("getEntry succeed:" + JSON.stringify(entry));
-} catch (e) {
-    console.log("getEntry failed: " + e);
-}
-```
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
 
 ## getPosition
 
@@ -112,8 +68,6 @@ getPosition(): number
 获取结果集中当前的读取位置。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -127,25 +81,6 @@ getPosition(): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeeded.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const position = resultSet.getPosition();
-    console.log("getPosition succeed:" + position);
-} catch (e) {
-    console.log("getPosition failed: " + e);
-}
-```
-
 ## isAfterLast
 
 ```TypeScript
@@ -155,8 +90,6 @@ isAfterLast(): boolean
 检查读取位置是否在最后一行之后。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -170,25 +103,6 @@ isAfterLast(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const isafterlast = resultSet.isAfterLast();
-    console.log("Check isAfterLast succeed:" + isafterlast);
-} catch (e) {
-    console.log("Check isAfterLast failed: " + e);
-}
-```
-
 ## isBeforeFirst
 
 ```TypeScript
@@ -198,8 +112,6 @@ isBeforeFirst(): boolean
 检查读取位置是否在第一行之前。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -213,25 +125,6 @@ isBeforeFirst(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const isbeforefirst = resultSet.isBeforeFirst();
-    console.log("Check isBeforeFirst succeed: " + isbeforefirst);
-} catch (e) {
-    console.log("Check isBeforeFirst failed: " + e);
-}
-```
-
 ## isFirst
 
 ```TypeScript
@@ -241,8 +134,6 @@ isFirst(): boolean
 检查读取位置是否为第一行。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -256,25 +147,6 @@ isFirst(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const isfirst = resultSet.isFirst();
-    console.log("Check isFirst succeed:" + isfirst);
-} catch (e) {
-    console.log("Check isFirst failed: " + e);
-}
-```
-
 ## isLast
 
 ```TypeScript
@@ -284,8 +156,6 @@ isLast(): boolean
 检查读取位置是否为最后一行。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -299,25 +169,6 @@ isLast(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const islast = resultSet.isLast();
-    console.log("Check isLast succeed: " + islast);
-} catch (e) {
-    console.log("Check isLast failed: " + e);
-}
-```
-
 ## move
 
 ```TypeScript
@@ -327,8 +178,6 @@ move(offset: number): boolean
 将读取位置移动到当前位置的相对偏移量。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -348,25 +197,6 @@ move(offset: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved5 = resultSet.move(1);
-    console.log("move succeed:" + moved5);
-} catch (e) {
-    console.log("move failed: " + e);
-}
-```
-
 ## moveToFirst
 
 ```TypeScript
@@ -376,8 +206,6 @@ moveToFirst(): boolean
 将读取位置移动到第一行。如果结果集为空，则返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -391,25 +219,6 @@ moveToFirst(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved1 = resultSet.moveToFirst();
-    console.log("moveToFirst succeed: " + moved1);
-} catch (e) {
-    console.log("moveToFirst failed " + e);
-}
-```
-
 ## moveToLast
 
 ```TypeScript
@@ -419,8 +228,6 @@ moveToLast(): boolean
 将读取位置移动到最后一行。如果结果集为空，则返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -434,25 +241,6 @@ moveToLast(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved2 = resultSet.moveToLast();
-    console.log("moveToLast succeed:" + moved2);
-} catch (e) {
-    console.log("moveToLast failed: " + e);
-}
-```
-
 ## moveToNext
 
 ```TypeScript
@@ -462,8 +250,6 @@ moveToNext(): boolean
 将读取位置移动到下一行。如果结果集为空，则返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -477,25 +263,6 @@ moveToNext(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved3 = resultSet.moveToNext();
-    console.log("moveToNext succeed: " + moved3);
-} catch (e) {
-    console.log("moveToNext failed: " + e);
-}
-```
-
 ## moveToPosition
 
 ```TypeScript
@@ -505,8 +272,6 @@ moveToPosition(position: number): boolean
 将读取位置从 0 移动到绝对位置。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -526,25 +291,6 @@ moveToPosition(position: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved6 = resultSet.moveToPosition(1);
-    console.log("moveToPosition succeed: " + moved6);
-} catch (e) {
-    console.log("moveToPosition failed: " + e);
-}
-```
-
 ## moveToPrevious
 
 ```TypeScript
@@ -554,8 +300,6 @@ moveToPrevious(): boolean
 将读取位置移动到上一行。如果结果集为空，则返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -568,22 +312,3 @@ moveToPrevious(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let resultSet;
-    kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
-        resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
-    });
-    const moved4 = resultSet.moveToPrevious();
-    console.log("moveToPrevious succeed:" + moved4);
-} catch (e) {
-    console.log("moveToPrevious failed: " + e);
-}
-```

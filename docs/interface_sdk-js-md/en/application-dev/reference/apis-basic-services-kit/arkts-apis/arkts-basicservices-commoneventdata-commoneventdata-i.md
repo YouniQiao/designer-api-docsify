@@ -4,8 +4,6 @@ Describes the data of a common event. The **CommonEventData** module is used to 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -20,8 +18,6 @@ Bundle name of the common event publisher. The default value is an empty string.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -29,18 +25,16 @@ Bundle name of the common event publisher. The default value is an empty string.
 ## code
 
 ```TypeScript
-code?: int
+code?: number
 ```
 
 Common event data received by the subscriber. The value of this field is the same as that of the **code** field in CommonEventPublishData when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event. The value ranges from –2147483648 to 2147483647. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,8 +52,6 @@ Common event data received by the subscriber. The data size cannot exceed 64 KB.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -76,8 +68,6 @@ Name of the common event that is being received.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -93,8 +83,6 @@ Additional information about the common event received by the subscriber. The va
 **Type:** { [key: string]: any }
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

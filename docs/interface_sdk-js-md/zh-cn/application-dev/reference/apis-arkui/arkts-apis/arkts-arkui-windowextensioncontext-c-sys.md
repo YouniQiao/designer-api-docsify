@@ -11,8 +11,6 @@ WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 21
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -33,8 +31,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 > 。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 21
 
@@ -59,84 +55,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, StartOptions } from '@kit.AbilityKit';
-
-class WindowExtAbility extends WindowExtensionAbility {
-  
-  onConnect() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'MainAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 102
-    };
-
-    try {
-      this.context.startAbility(want, options, (error: BusinessError) => {
-        let message = (error as BusinessError).message;
-        let errCode = (error as BusinessError).code;
-        if (errCode) {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // 处理入参错误异常
-      let message = (paramError as BusinessError).message;
-      let errCode = (paramError as BusinessError).code;
-      console.error(`error.code: ${errCode}, error.message: ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, StartOptions } from '@kit.AbilityKit';
-
-class WindowExtAbility extends WindowExtensionAbility {
-
-  onConnect() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MainAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 102,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // 处理业务逻辑错误
-          let message = (error as BusinessError).message;
-          let errCode = (error as BusinessError).code;
-          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
-        });
-    } catch (paramError) {
-      // 处理入参错误异常
-      let message = (paramError as BusinessError).message;
-      let errCode = (paramError as BusinessError).code;
-      console.error(`error.code: ${errCode}, error.message: ${message}`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -151,8 +69,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 > 。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 21
 
@@ -181,7 +97,3 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [startAbility](#startability)

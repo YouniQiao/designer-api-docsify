@@ -4,8 +4,6 @@ Returns the application notification silent reminder switch state.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Bundle name of the application.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -36,13 +32,15 @@ Bundle name of the application.
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-Enabling state of the application's silent reminder. - **USER_MODIFIED_OFF**: disabled state set by the user. - **USER_MODIFIED_ON**: enabled state set by the user. - **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting. - **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
+Enabling state of the application's silent reminder.  
+- **USER_MODIFIED_OFF**: disabled state set by the user.  
+- **USER_MODIFIED_ON**: enabled state set by the user.  
+- **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting.  
+- **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
 
 **Type:** notificationManager.SwitchState
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +51,14 @@ Enabling state of the application's silent reminder. - **USER_MODIFIED_OFF**: di
 ## uid
 
 ```TypeScript
-readonly uid: int
+readonly uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

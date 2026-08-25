@@ -6,8 +6,6 @@ Defines the lazy grid layout attribute.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ columnsGap(value: LengthMetrics): T
 Sets the gap between columns. Values less than 0 are treated as the default value.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ Sets the footer of the lazy grid layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -67,7 +61,7 @@ Sets the footer of the lazy grid layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -85,8 +79,6 @@ Sets the header of the lazy grid layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -97,7 +89,7 @@ Sets the header of the lazy grid layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -115,8 +107,6 @@ Sets a callback for **onVisibleIndexesChange**. This callback is triggered when 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -127,7 +117,7 @@ Sets a callback for **onVisibleIndexesChange**. This callback is triggered when 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | Yes |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -144,8 +134,6 @@ rowsGap(value: LengthMetrics): T
 Sets the gap between rows. Values less than 0 are treated as the default value.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,8 +163,6 @@ Sets the sticky style for header and footer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -187,7 +173,7 @@ Sets the sticky style for header and footer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [sticky](#sticky) | StickyStyle \| undefined | Yes |
+| [sticky](#sticky) | [StickyStyle](arkts-arkui-stickystyle-e.md) \| undefined | Yes |
 
 **Return value:**
 

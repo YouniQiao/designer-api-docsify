@@ -15,8 +15,6 @@ function clearMission(missionId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md)
@@ -34,46 +32,6 @@ function clearMission(missionId: number, callback: AsyncCallback<void>): void
 | missionId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 清理指定任务
-  missionManager.clearMission(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`clearMission sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 清理指定任务
-  missionManager.clearMission(testMissionId).then((data) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 
 ## clearMission
 
@@ -84,8 +42,6 @@ function clearMission(missionId: number): Promise<void>
 清理指定任务id的任务，无论该任务是否被锁定。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -108,7 +64,3 @@ function clearMission(missionId: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [clearMission](#clearmission)

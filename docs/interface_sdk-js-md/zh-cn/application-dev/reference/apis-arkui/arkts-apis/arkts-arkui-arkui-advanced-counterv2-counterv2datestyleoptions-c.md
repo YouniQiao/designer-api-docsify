@@ -6,14 +6,12 @@ CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。继�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## onDateChange
@@ -26,8 +24,6 @@ onDateChange?: OnDateCounterV2ChangeCallback
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ onDateChange?: OnDateCounterV2ChangeCallback
 ## day
 
 ```TypeScript
-day?: int
+day?: number
 ```
 
 设置日期内联型初始日。默认值：1取值范围：[1, 31]必须为合法日期，如month为2月时，day传入30将视为异常值，按默认值处理。超出取值范围按默认值处理。值为undefined时，按默认值处理。
@@ -48,8 +44,6 @@ day?: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -59,7 +53,7 @@ day?: int
 ## month
 
 ```TypeScript
-month?: int
+month?: number
 ```
 
 设置日期内联型初始月份。默认值：1取值范围：[1, 12]超出取值范围按默认值处理。值为undefined时，按默认值处理。
@@ -70,8 +64,6 @@ month?: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -81,7 +73,7 @@ month?: int
 ## year
 
 ```TypeScript
-year?: int
+year?: number
 ```
 
 设置日期内联型初始年份。默认值：1取值范围：[1, 5000]超出取值范围按默认值处理。值为undefined时，按默认值处理。
@@ -91,8 +83,6 @@ year?: int
 **默认值：** 1
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

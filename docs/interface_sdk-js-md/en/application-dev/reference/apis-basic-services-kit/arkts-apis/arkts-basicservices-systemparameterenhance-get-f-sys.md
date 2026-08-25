@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## get
@@ -15,8 +15,6 @@ function get(key: string, callback: AsyncCallback<string>): void
 Obtains a value of the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -38,54 +36,6 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | [14700103](../errorcode-device-info.md#14700103-operation-permission-denied) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    systemParameterEnhance.get("const.ohos.apiversion", (err: BusinessError, data: string) => {
-    if (err == undefined) {
-        console.info("get test.parameter.key value success:" + data)
-    } else {
-        console.error(" get test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("get unexpected error: " + e);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    systemParameterEnhance.get("const.ohos.apiversion", "default", (err: BusinessError, data: string) => {
-        if (err == undefined) {
-            console.info("get test.parameter.key value success:" + data)
-        } else {
-            console.error(" get test.parameter.key value err:" + err.code)
-        }
-    });
-} catch(e) {
-    console.error("get unexpected error:" + e)
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let p: Promise<string> = systemParameterEnhance.get("const.ohos.apiversion");
-    p.then((value: string) => {
-        console.info("get test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error("get test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("get unexpected error: " + e);
-}
-```
-
 
 ## get
 
@@ -96,8 +46,6 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 Obtains a value of the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -120,10 +68,6 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | [14700103](../errorcode-device-info.md#14700103-operation-permission-denied) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) |
 
-**Examples**
-
-See [get](#get)
-
 
 ## get
 
@@ -134,8 +78,6 @@ function get(key: string, def?: string): Promise<string>
 Obtains a value of the specified key. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -162,7 +104,3 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | [14700101](../errorcode-system-parameterV9.md#14700101-failure-to-query-the-system-parameter) |
 | [14700103](../errorcode-device-info.md#14700103-operation-permission-denied) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) |
-
-**Examples**
-
-See [get](#get)

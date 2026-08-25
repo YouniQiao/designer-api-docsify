@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## permitInjection
@@ -15,8 +15,6 @@ function permitInjection(result: boolean): void
 Specifies whether to authorize event injection.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INJECT_INPUT_EVENT
 

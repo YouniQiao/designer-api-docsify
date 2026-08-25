@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetExtAttributeSync
@@ -18,8 +18,6 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 > 该接口所需的权限目前仅支持PC设备。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.SET_NET_EXT_ATTRIBUTE
 
@@ -40,16 +38,3 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netExtAttribute: string = "xxx";
-let netHandle = connection.getDefaultNetSync();
-if (netHandle.netId != 0) {
-  connection.setNetExtAttributeSync(netHandle, netExtAttribute);
-}
-```

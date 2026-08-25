@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md)
@@ -23,8 +21,6 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 在应用中安装hap，支持多hap安装。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,33 +40,6 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundleInstall from '@ohos.bundle.installer';
-import { BusinessError } from '@ohos.base';
-
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: bundleInstall.InstallParam = {
-  userId: 100,
-  isKeepData: false,
-  installFlag: 1,
-};
-
-bundleInstall.getBundleInstaller().then(installer => {
-  installer.install(hapFilePaths, installParam, err => {
-    if (err) {
-      console.error('install failed:' + JSON.stringify(err));
-    } else {
-      console.info('install successfully.');
-    }
-  });
-}).catch((error: BusinessError)=> {
-  let message = (error as BusinessError).message;
-  console.error('getBundleInstaller failed. Cause: ' + message);
-});
-```
-
 ## recover
 
 ```TypeScript
@@ -80,8 +49,6 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 恢复一个应用程序，使用callback异步回调。当预置应用被卸载后，可以通过此接口进行恢复。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -101,33 +68,6 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundleInstall from '@ohos.bundle.installer';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = 'com.example.myapplication';
-let installParam: bundleInstall.InstallParam = {
-  userId: 100,
-  isKeepData: false,
-  installFlag: 1,
-};
-
-bundleInstall.getBundleInstaller().then(installer => {
-  installer.recover(bundleName, installParam, err => {
-    if (err) {
-      console.error('recover failed:' + JSON.stringify(err));
-    } else {
-      console.info('recover successfully.');
-    }
-  });
-}).catch((error: BusinessError) => {
-  let message = (error as BusinessError).message;
-  console.error('getBundleInstaller failed. Cause: ' + message);
-});
-```
-
 ## uninstall
 
 ```TypeScript
@@ -137,8 +77,6 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 卸载应用程序，使用callback异步回调，返回安装状态信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -157,30 +95,3 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 | bundleName | string | 是 |
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import bundleInstall from '@ohos.bundle.installer';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = 'com.example.myapplication';
-let installParam: bundleInstall.InstallParam = {
-  userId: 100,
-  isKeepData: false,
-  installFlag: 1,
-};
-
-bundleInstall.getBundleInstaller().then(installer => {
-  installer.uninstall(bundleName, installParam, err => {
-    if (err) {
-      console.error('uninstall failed:' + JSON.stringify(err));
-    } else {
-      console.info('uninstall successfully.');
-    }
-  });
-}).catch((error: BusinessError) => {
-  let message = (error as BusinessError).message;
-  console.error('getBundleInstaller failed. Cause: ' + message);
-});
-```

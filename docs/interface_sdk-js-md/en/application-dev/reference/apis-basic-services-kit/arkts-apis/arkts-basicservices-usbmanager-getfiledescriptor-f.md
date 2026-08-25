@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getFileDescriptor
 
 ```TypeScript
-function getFileDescriptor(pipe: USBDevicePipe): int
+function getFileDescriptor(pipe: USBDevicePipe): number
 ```
 
 Obtains a file descriptor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -30,7 +28,7 @@ Obtains a file descriptor.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -38,22 +36,3 @@ Obtains a file descriptor.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-function getFileDescriptor() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  let ret: number = usbManager.getFileDescriptor(devicepipe);
-  console.info(`getFileDescriptor = ${ret}`);
-  let closeRet: number = usbManager.closePipe(devicepipe);
-  console.info(`closePipe = ${closeRet}`);
-}
-```

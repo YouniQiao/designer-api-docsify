@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ imageAIOptions?: ImageAIOptions
 
 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。异常值null和undefined按不开启AI分析功能处理。默认值：不开启AI分析功能。
 
-**类型：** ImageAIOptions
+**类型：** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ unit?: LengthMetricsUnit
 **类型：** LengthMetricsUnit
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

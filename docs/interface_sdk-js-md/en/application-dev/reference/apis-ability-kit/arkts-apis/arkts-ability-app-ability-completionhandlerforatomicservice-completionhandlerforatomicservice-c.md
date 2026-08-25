@@ -4,14 +4,12 @@ CompletionHandlerForAtomicService provides two callback functions, [onAtomicServ
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure
@@ -23,8 +21,6 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 Called when the atomic service fails to be launched.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,10 +36,6 @@ Called when the atomic service fails to be launched.
 | failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes |
 | failureMessage | string | Yes |
 
-**Examples**
-
-For details, see CompletionHandlerForAtomicService Usage Example.
-
 ## onAtomicServiceRequestSuccess
 
 ```TypeScript
@@ -53,8 +45,6 @@ onAtomicServiceRequestSuccess(appId: string): void
 Called when the atomic service is successfully launched.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,7 +57,3 @@ Called when the atomic service is successfully launched.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-
-**Examples**
-
-For details, see CompletionHandlerForAtomicService Usage Example.

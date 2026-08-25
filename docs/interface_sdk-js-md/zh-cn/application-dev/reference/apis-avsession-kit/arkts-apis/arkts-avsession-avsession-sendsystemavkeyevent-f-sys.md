@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## sendSystemAVKeyEvent
@@ -15,8 +15,6 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 发送按键事件给置顶会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -41,30 +39,6 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 
-**示例**
-
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event, () => {
-    console.info('Succeeded in sending system AV key event.');
-});
-```
-
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event).then(() => {
-  console.info('Succeeded in sending system AV key event.');
-});
-```
-
 
 ## sendSystemAVKeyEvent
 
@@ -75,8 +49,6 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 发送按键事件给置顶会话。结果通过Promise异步回调方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -105,7 +77,3 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-
-**示例**
-
-参见 [sendSystemAVKeyEvent](#sendsystemavkeyevent)

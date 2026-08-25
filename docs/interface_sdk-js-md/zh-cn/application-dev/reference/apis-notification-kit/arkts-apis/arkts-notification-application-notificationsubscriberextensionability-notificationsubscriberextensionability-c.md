@@ -4,14 +4,12 @@ NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -24,8 +22,6 @@ onCancelMessages(hashCodes: Array<string>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -35,32 +31,6 @@ onCancelMessages(hashCodes: Array<string>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | hashCodes | Array & lt;string & gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onCancelMessages(hashCodes: Array<string>): void {
-    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onCancelMessages(hashCodes: Array<string>): void {
-    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -72,37 +42,9 @@ onDestroy(): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onDestroy(): void {
-    console.info(`${TAG} onDestroy`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onDestroy(): void {
-    console.info(`${TAG} onDestroy`);
-  }
-}
-```
 
 ## onReceiveMessage
 
@@ -114,8 +56,6 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -125,32 +65,6 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
-    console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
-    console.info(`${TAG}  onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
-  }
-}
-```
 
 ## context
 
@@ -163,8 +77,6 @@ NotificationSubscriberExtensionAbility的上下文环境。
 **类型：** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

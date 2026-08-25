@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
+import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总

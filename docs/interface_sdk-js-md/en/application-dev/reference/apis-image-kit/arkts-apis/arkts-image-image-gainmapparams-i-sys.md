@@ -4,8 +4,6 @@ Describes gainmap generation parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes gainmap generation parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## isFullSizeGainmap
@@ -27,8 +25,6 @@ Indicates generating a full-size gainmap or a 1/2 downscaled gainmap.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

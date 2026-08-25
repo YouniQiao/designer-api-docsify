@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setSimDisabled
@@ -15,8 +15,6 @@ function setSimDisabled(admin: Want, slotId: number): void
 Disables the SIM card in the specified slot. After being disabled, the SIM card in the specified slot cannot be used for making or receiving calls, sending or receiving SMSs, or accessing the internet. For example, an enterprise device administrator can disable the SIM card when an employee leaves the company or a device is lost, preventing unauthorized use. This is applicable in scenarios where enterprises need to restrict employee devices'communication capabilities, such as preventing SIM card misuse after employee departure or device loss, thereby ensuring enterprise communication security and cost control.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -39,23 +37,3 @@ Disables the SIM card in the specified slot. After being disabled, the SIM card 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let slotId: number = 0;
-  telephonyManager.setSimDisabled(wantTemp, slotId);
-  console.info(`Succeeded in setting slotId: ${slotId} disabled.`);
-} catch (err) {
-  console.error(`Failed to set slotId disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

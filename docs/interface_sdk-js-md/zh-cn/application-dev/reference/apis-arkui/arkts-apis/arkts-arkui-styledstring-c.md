@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 属性字符串的构造函数。不支持在 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 之前创建。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ equals(other: StyledString): boolean
 判断两个属性字符串是否相等。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,8 +71,6 @@ static fromHtml(html: string): Promise<StyledString>
 将HTML格式字符串转换成属性字符串，HTML标签将映射为对应的属性字符串样式（如加粗类标签映射为TextStyle、装饰类标签映射为DecorationStyle）。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt;h5&gt;、\
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,8 +107,6 @@ getString(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -138,8 +128,6 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。该接口仅返回开发者设置的样式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -177,8 +165,6 @@ subStyledString(start: number, length?: number): StyledString
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -213,8 +199,6 @@ static toHtml(styledString: StyledString): string
 将属性字符串转换成HTML格式字符串，属性字符串样式将映射为对应的HTML标签（如TextStyle映射为含style属性的span标签、ImageAttachment映射为img标签）。支持转换的属性字符串 [StyledStringKey](arkts-arkui-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、 StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。使用方法参考 [示例12（fromHtml和toHtml互相转换）](#styledstring)。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,8 +236,6 @@ readonly length: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

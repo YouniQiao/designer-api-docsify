@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSmbDeviceAsRegisteredUser
@@ -15,8 +15,6 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 以注册用户身份对SMB设备进行身份验证，并获取可用打印机。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 

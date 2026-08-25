@@ -4,14 +4,12 @@ VCard是电子名片的文件格式标准，它可包含的信息有：姓名、
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'kits/@kit.TelephonyKit';
 ```
 
 ## 汇总

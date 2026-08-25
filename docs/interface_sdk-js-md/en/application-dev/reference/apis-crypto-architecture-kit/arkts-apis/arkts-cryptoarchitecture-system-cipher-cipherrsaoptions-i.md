@@ -4,8 +4,6 @@ Defines the input parameters of **cipher.rsa()**.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -15,7 +13,7 @@ Defines the input parameters of **cipher.rsa()**.
 ## Modules to Import
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -27,8 +25,6 @@ complete: () => void
 Called when the execution is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -45,8 +41,6 @@ fail: (data: string, code: number) => void
 Called when data fails to be encrypted or decrypted.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -70,8 +64,6 @@ success: (data: CipherResponse) => void
 Called when data is encrypted or decrypted successfully.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -99,8 +91,6 @@ Action to perform. The options are as follows:
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -118,8 +108,6 @@ RSA key. It is a public key in encryption and a private key in decryption.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -139,8 +127,6 @@ Text to be encrypted or decrypted.The text to be encrypted must be a common text
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -158,8 +144,6 @@ RSA padding. The default value is **RSA/None/OAEPWithSHA256AndMGF1Padding**.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 

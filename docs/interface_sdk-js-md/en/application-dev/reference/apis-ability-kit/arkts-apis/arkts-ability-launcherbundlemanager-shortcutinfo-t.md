@@ -8,8 +8,6 @@ Defines the shortcut information defined in the [module.json5](../../../quick-st
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **Property type:** _ShortcutInfo

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## closeAccessory
@@ -15,8 +15,6 @@ function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -33,18 +31,3 @@ Closes the accessory file descriptor. You need to call [usbManager.openAccessory
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |
-
-**Examples**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.requestAccessoryRight(accList[0])
-  let handle = usbManager.openAccessory(accList[0])
-  usbManager.closeAccessory(handle)
-  hilog.info(0, 'testTag ui', `closeAccessory success`)
-} catch (error) {
-  hilog.info(0, 'testTag ui', `closeAccessory error ${error.code}, message is ${error.message}`)
-}
-```

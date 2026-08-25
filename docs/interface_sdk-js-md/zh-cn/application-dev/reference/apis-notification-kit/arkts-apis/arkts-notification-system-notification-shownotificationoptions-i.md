@@ -2,8 +2,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 7
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -11,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## clickAction
@@ -25,8 +23,6 @@ clickAction?: ActionResult
 **类型：** [ActionResult](arkts-notification-system-notification-actionresult-i.md)
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 7
 
@@ -44,8 +40,6 @@ contentText?: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 7
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -61,8 +55,6 @@ contentTitle?: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 7
 

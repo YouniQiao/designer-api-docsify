@@ -4,14 +4,12 @@ Represents optional configuration items for AdvancedMeasureFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## unitUsage
@@ -25,8 +23,6 @@ Scenarios for MeasureFormat.
 **Type:** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

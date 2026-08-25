@@ -15,8 +15,6 @@ function configure(config: ConfigOption): boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [configure](arkts-performanceanalysis-hiappevent-configure-f.md)
@@ -34,19 +32,3 @@ function configure(config: ConfigOption): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// 配置应用事件打点功能开关
-let config1: hiAppEvent.ConfigOption = {
-  disable: true,
-};
-hiAppEvent.configure(config1);
-
-// 配置事件文件目录存储限额大小
-let config2: hiAppEvent.ConfigOption = {
-  maxStorage: '100MB',
-};
-hiAppEvent.configure(config2);
-```

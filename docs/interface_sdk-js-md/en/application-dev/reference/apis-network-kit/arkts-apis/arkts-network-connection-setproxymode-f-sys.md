@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setProxyMode
@@ -15,8 +15,6 @@ function setProxyMode(mode: ProxyMode): Promise<void>
 Sets the proxy mode. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -42,16 +40,3 @@ Sets the proxy mode. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.setProxyMode(connection.ProxyMode.PROXY_MODE_AUTO).then(() => {
-    console.info("Proxy mode set successfully.");
-}).catch((error: BusinessError) => {
-    console.error("Error setting proxy mode:", error);
-});
-```

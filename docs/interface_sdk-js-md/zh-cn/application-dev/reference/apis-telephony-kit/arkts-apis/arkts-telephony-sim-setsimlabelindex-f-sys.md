@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setSimLabelIndex
 
 ```TypeScript
-function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
+function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 ```
 
 设置SIM卡标签索引。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,8 +26,8 @@ function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| simId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [simLabelIndex](arkts-telephony-sim-iccaccountinfo-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| simId | number | 是 |
+| [simLabelIndex](arkts-telephony-sim-iccaccountinfo-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -47,16 +45,3 @@ function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setSimLabelIndex(1,  0).then(() => {
-    console.info(`setSimLabelIndex success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setSimLabelIndex failed, promise: err->${JSON.stringify(err)}`);
-});
-```

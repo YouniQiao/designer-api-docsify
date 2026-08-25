@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## once
@@ -15,8 +15,6 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 Obtains data of the acceleration sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -48,8 +46,6 @@ Obtains data of the uncalibrated acceleration sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -80,8 +76,6 @@ Obtains data of the ambient light sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -108,8 +102,6 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 Obtains data of the temperature sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -138,8 +130,6 @@ Obtains data of the barometer sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -167,8 +157,6 @@ Obtains data of the gravity sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -195,8 +183,6 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 Obtains data of the gyroscope sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -228,8 +214,6 @@ Obtains data of the uncalibrated gyroscope sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -260,8 +244,6 @@ Obtains data of the Hall effect sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -288,8 +270,6 @@ function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>):
 Obtains data of the heart rate sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -321,8 +301,6 @@ Obtains data of the humidity sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -349,8 +327,6 @@ function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAcce
 Obtains data of the linear acceleration sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -382,8 +358,6 @@ Obtains data of the magnetic field sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -410,8 +384,6 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 Obtains data of the uncalibrated magnetic field sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -440,8 +412,6 @@ Obtains data of the orientation sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -468,8 +438,6 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 Obtains data of the pedometer sensor once. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -501,8 +469,6 @@ Obtains data of the pedometer sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -533,8 +499,6 @@ Obtains data of the proximity sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -561,8 +525,6 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 Obtains data of the rotation vector sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -591,8 +553,6 @@ Obtains the significant motion sensor data once.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -619,8 +579,6 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 Obtains data of the wear detection sensor once.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -649,8 +607,6 @@ Subscribes to only one data change of the acceleration sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
@@ -676,8 +632,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 Subscribes to only one data change of the uncalibrated acceleration sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -705,8 +659,6 @@ Subscribes to only one data change of the ambient light sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
@@ -730,8 +682,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 Subscribes to only one data change of the ambient temperature sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -757,8 +707,6 @@ Subscribes to only one data change of the barometer sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
@@ -783,8 +731,6 @@ Subscribes to only one data change of the gravity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
@@ -808,8 +754,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 Subscribes to only one data change of the gyroscope sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -837,8 +781,6 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
@@ -865,8 +807,6 @@ Subscribes to only one data change of the Hall effect sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
@@ -890,8 +830,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 Subscribes to only one data change of the heart rate sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -919,8 +857,6 @@ Subscribes to only one data change of the humidity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
@@ -944,8 +880,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 Subscribes to only one data change of the linear acceleration sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -973,8 +907,6 @@ Subscribes to only one data change of the magnetic field sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
@@ -998,8 +930,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 Subscribes to only one data change of the uncalibrated magnetic field sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1025,8 +955,6 @@ Subscribes to only one data change of the orientation sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
@@ -1050,8 +978,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 Subscribes to only one data change of the pedometer sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1079,8 +1005,6 @@ Subscribes to only one data change of the pedometer detection sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
@@ -1107,8 +1031,6 @@ Subscribes to only one data change of the proximity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
@@ -1132,8 +1054,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 Subscribes to only one data change of the rotation vector sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1159,8 +1079,6 @@ Subscribes to only one data change of the significant motion sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
@@ -1184,8 +1102,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 Subscribes to only one data change of the wear detection sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

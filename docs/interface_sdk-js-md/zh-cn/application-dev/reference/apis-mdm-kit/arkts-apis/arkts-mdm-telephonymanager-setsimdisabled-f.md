@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setSimDisabled
@@ -15,8 +15,6 @@ function setSimDisabled(admin: Want, slotId: number): void
 禁用指定卡槽的SIM卡。禁用后，无法使用该卡槽的SIM卡接打电话、收发短信、上网。例如，企业设备管理员可在员工离职或设备丢失时，禁用SIM卡防止未授权使用。适用于企业需要限制员工设备通话能力的场景，例如员工离职或设备遗失时防止 SIM卡被滥用，保障企业通信安全和成本控制。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -39,25 +37,3 @@ function setSimDisabled(admin: Want, slotId: number): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 设置要禁用的卡槽ID
-  let slotId: number = 0;
-  // 禁用指定卡槽的SIM卡
-  telephonyManager.setSimDisabled(wantTemp, slotId);
-  console.info(`Succeeded in setting slotId: ${slotId} disabled.`);
-} catch (err) {
-  console.error(`Failed to set slotId disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

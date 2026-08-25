@@ -4,8 +4,6 @@ Enumerates the sensor types.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SensorId](arkts-sensorservice-sensor-sensorid-e.md)
@@ -21,8 +19,6 @@ SENSOR_TYPE_ID_ACCELEROMETER = 1
 Acceleration sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Gyroscope sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
@@ -57,8 +51,6 @@ SENSOR_TYPE_ID_AMBIENT_LIGHT = 5
 Ambient light sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Magnetic field sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field)
@@ -93,8 +83,6 @@ SENSOR_TYPE_ID_BAROMETER = 8
 Barometer sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ Hall effect sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HALL](arkts-sensorservice-sensor-sensorid-e.md#hall)
@@ -129,8 +115,6 @@ SENSOR_TYPE_ID_PROXIMITY = 12
 Proximity sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -148,8 +132,6 @@ Humidity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#humidity)
@@ -165,8 +147,6 @@ SENSOR_TYPE_ID_ORIENTATION = 256
 Orientation sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -184,8 +164,6 @@ Gravity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#gravity)
@@ -201,8 +179,6 @@ SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258
 Linear acceleration sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -220,8 +196,6 @@ Rotation vector sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#rotation_vector)
@@ -237,8 +211,6 @@ SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260
 Ambient temperature sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -256,8 +228,6 @@ Uncalibrated magnetic field sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field_uncalibrated)
@@ -273,8 +243,6 @@ SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263
 Uncalibrated gyroscope sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -292,8 +260,6 @@ Significant motion sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#significant_motion)
@@ -309,8 +275,6 @@ SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265
 Pedometer detection sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -328,8 +292,6 @@ Pedometer sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#pedometer)
@@ -345,8 +307,6 @@ SENSOR_TYPE_ID_HEART_RATE = 278
 Heart rate sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -364,8 +324,6 @@ Wear detection sensor.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
@@ -381,8 +339,6 @@ SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281
 Uncalibrated acceleration sensor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

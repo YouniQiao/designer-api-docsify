@@ -4,8 +4,6 @@ Enumerates the memory pressure levels. When an application clears the cache occu
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MEMORY_PRESSURE_LEVEL_MODERATE
@@ -17,8 +15,6 @@ MEMORY_PRESSURE_LEVEL_MODERATE = 1
 Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -33,8 +29,6 @@ MEMORY_PRESSURE_LEVEL_CRITICAL = 2
 Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

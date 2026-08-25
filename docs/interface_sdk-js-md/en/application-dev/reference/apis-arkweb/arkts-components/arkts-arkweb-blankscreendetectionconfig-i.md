@@ -4,8 +4,6 @@ Provides the policy configuration options for blank screen detection, including 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ This parameter takes effect only when the contentful node detection strategy is 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## detectionMethods
@@ -43,8 +39,6 @@ Default value: **[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEE
 **Type:** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -63,8 +57,6 @@ Default value: [1.0, 3.0, 5.0].
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## enable
@@ -78,7 +70,5 @@ Whether to enable the white screen policy feature. The value **true** indicates 
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

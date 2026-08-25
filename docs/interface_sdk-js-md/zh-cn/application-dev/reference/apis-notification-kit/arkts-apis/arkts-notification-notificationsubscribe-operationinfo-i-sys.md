@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## actionName
@@ -28,8 +26,6 @@ actionName?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ actionName?: string
 ## buttonIndex
 
 ```TypeScript
-buttonIndex?: int
+buttonIndex?: number
 ```
 
 用户点击的非实况通知按钮序号或实况通知辅助区序号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -55,17 +49,18 @@ buttonIndex?: int
 ## operationType
 
 ```TypeScript
-operationType?: int
+operationType?: number
 ```
 
 用户点击操作类型。  
-- 0：用户点击非实况通知本体。 - 1：用户点击非实况通知按钮。 - 32：用户点击实况通知本体。 - 33：用户点击实况通知辅助区
+- 0：用户点击非实况通知本体。  
+- 1：用户点击非实况通知按钮。  
+- 32：用户点击实况通知本体。  
+- 33：用户点击实况通知辅助区
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -82,8 +77,6 @@ userInput?: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

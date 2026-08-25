@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pLinkedInfo
@@ -15,8 +15,6 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 获取P2P连接信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  wifiManager.getP2pLinkedInfo((err, data:wifiManager.WifiP2pLinkedInfo) => {
-    if (err) {
-        console.error("get p2p linked info error");
-        return;
-    }
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLinkedInfo().then(data => {
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-```
-
 
 ## getP2pLinkedInfo
 
@@ -64,8 +44,6 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 获取P2P连接信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -85,7 +63,3 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 | [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) |
-
-**示例**
-
-参见 [getP2pLinkedInfo](#getp2plinkedinfo)

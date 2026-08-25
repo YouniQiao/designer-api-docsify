@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -19,8 +19,6 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -31,61 +29,6 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { featureAbility, wantConstant } from '@kit.AbilityKit';
-
-// 启动新的Ability
-featureAbility.startAbility(
-  {
-    want:
-    {
-      action: '',
-      entities: [''],
-      type: '',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      /* FA模型中abilityName由package + Ability name组成 */
-      abilityName: 'com.example.myapplication.secondAbility',
-      uri: ''
-    },
-  },
-  (error, data) => {
-    if (error && error.code !== 0) {
-      console.error(`startAbility fail, error: ${JSON.stringify(error)}`);
-    } else {
-      console.info(`startAbility success, data: ${JSON.stringify(data)}`);
-    }
-  }
-);
-```
-
-```TypeScript
-import { featureAbility, wantConstant } from '@kit.AbilityKit';
-
-// 启动新的Ability
-featureAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      /* FA模型中abilityName由package + Ability name组成 */
-      abilityName: 'com.example.myapplication.secondAbility',
-      uri: ''
-    },
-  }
-).then((data) => {
-  console.info(`startAbility data: ${JSON.stringify(data)}`);
-});
-```
 
 
 ## startAbility
@@ -100,8 +43,6 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -118,7 +59,3 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [startAbility](#startability)

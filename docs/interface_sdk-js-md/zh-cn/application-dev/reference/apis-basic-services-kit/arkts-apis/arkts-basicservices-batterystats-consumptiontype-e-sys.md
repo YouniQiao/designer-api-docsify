@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ CONSUMPTION_TYPE_INVALID = -17
 表示电量消耗类型未知。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -36,8 +32,6 @@ CONSUMPTION_TYPE_APP
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ CONSUMPTION_TYPE_BLUETOOTH
 表示蓝牙消耗的电量类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -68,8 +60,6 @@ CONSUMPTION_TYPE_IDLE
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ CONSUMPTION_TYPE_PHONE
 表示通话消耗的电量类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -100,8 +88,6 @@ CONSUMPTION_TYPE_RADIO
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ CONSUMPTION_TYPE_SCREEN
 表示屏幕消耗的电量类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -132,8 +116,6 @@ CONSUMPTION_TYPE_USER
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -147,8 +129,6 @@ CONSUMPTION_TYPE_WIFI
 表示无线网消耗的电量类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 

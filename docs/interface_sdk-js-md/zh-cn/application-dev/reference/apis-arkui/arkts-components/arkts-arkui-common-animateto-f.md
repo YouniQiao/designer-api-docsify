@@ -28,8 +28,6 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 18
 
 **替代接口：** animateTo

@@ -15,8 +15,6 @@ Updates the remote grant status. This function enables or disables the remote au
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset

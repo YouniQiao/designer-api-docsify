@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## decompressFile
@@ -21,8 +21,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 > the error code 900003 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,79 +44,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
 
-**Examples**
-
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
-  parallel: zlib.ParallelStrategy.PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION
-};
-
-try {
-  zlib.decompressFile(inFile, outFileDir, options, (errData: BusinessError) => {
-    if (errData !== null) {
-      console.error(`decompressFile errData is errCode:${errData.code}  message:${errData.message}`);
-    } else {
-      console.info(`decompressFile success.`);
-    }
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`decompressFile errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION
-};
-
-try {
-  zlib.decompressFile(inFile, outFileDir, options).then((data: void) => {
-    console.info('decompressFile success. data: ' + JSON.stringify(data));
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-
-try {
-  zlib.decompressFile(inFile, outFileDir, (errData: BusinessError) => {
-    if (errData !== null) {
-      console.error(`decompressFile failed. code is ${errData.code}, message is ${errData.message}`);
-    } else {
-      console.info(`decompressFile success.`);
-    }
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`decompressFile failed. code is ${code}, message is ${message}`);
-}
-```
-
 
 ## decompressFile
 
@@ -135,8 +60,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 > the error code 900003 is returned.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,10 +82,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
 
-**Examples**
-
-See [decompressFile](#decompressfile)
-
 
 ## decompressFile
 
@@ -179,8 +98,6 @@ Decompresses a file. This API uses a promise to return the result.
 > the error code 900003 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -208,7 +125,3 @@ Decompresses a file. This API uses a promise to return the result.
 | [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) |
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
-
-**Examples**
-
-See [decompressFile](#decompressfile)

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## INVALID
@@ -17,8 +15,6 @@ INVALID = 0
 无效设备。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ EARPIECE = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -49,8 +43,6 @@ SPEAKER = 2
 扬声器。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ WIRED_HEADSET = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -81,8 +71,6 @@ WIRED_HEADPHONES = 4
 有线耳机，不带麦克风。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ BLUETOOTH_SCO = 7
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -113,8 +99,6 @@ BLUETOOTH_A2DP = 8
 蓝牙设备A2DP（Advanced Audio Distribution Profile）连接。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -130,8 +114,6 @@ MIC = 15
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -145,8 +127,6 @@ USB_HEADSET = 22
 USB耳机，带麦克风。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -162,8 +142,6 @@ DisplayPort（显示接口，简称DP），用于外接扩展设备。从API ver
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -177,8 +155,6 @@ REMOTE_CAST = 24
 音频被系统应用投送到其他的远程设备。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -194,8 +170,6 @@ USB设备（不包含USB耳机）。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## HDMI
@@ -207,8 +181,6 @@ HDMI = 27
 HDMI设备（例如HDMI、ARC、eARC等）。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -222,8 +194,6 @@ LINE_DIGITAL = 28
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## REMOTE_DAUDIO
@@ -235,8 +205,6 @@ REMOTE_DAUDIO = 25
 Distributed virtual audio device.
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
 
@@ -252,8 +220,6 @@ HEARING_AID = 30
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## NEARLINK
@@ -265,8 +231,6 @@ NEARLINK = 31
 星闪设备。Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -280,8 +244,6 @@ SYSTEM_PRIVATE = 200
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## DEFAULT
@@ -293,8 +255,6 @@ DEFAULT = 1000
 默认设备类型。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

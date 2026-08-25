@@ -4,8 +4,6 @@ Provides information about the action to dismiss the dialog box.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Callback for dismissing the dialog box. This API is called only when the dialog 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -41,11 +37,9 @@ reason: DismissReason
 
 Reason why the dialog box cannot be dismissed. You must specify whether to close the dialog box for each of the listed actions.
 
-**Type:** DismissReason
+**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

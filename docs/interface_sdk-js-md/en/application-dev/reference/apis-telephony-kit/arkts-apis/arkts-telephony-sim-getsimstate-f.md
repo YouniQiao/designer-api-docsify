@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSimState
 
 ```TypeScript
-function getSimState(slotId: int, callback: AsyncCallback<SimState>): void
+function getSimState(slotId: number, callback: AsyncCallback<SimState>): void
 ```
 
 Obtains the state of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,7 +22,7 @@ Obtains the state of the SIM card in the specified slot. This API uses an asynch
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | Yes |
 
 **Error codes:**
@@ -37,40 +35,16 @@ Obtains the state of the SIM card in the specified slot. This API uses an asynch
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimState(0, (err: BusinessError, data: sim.SimState) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimState(0).then((data: sim.SimState) => {
-    console.info(`getSimState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getSimState
 
 ```TypeScript
-function getSimState(slotId: int): Promise<SimState>
+function getSimState(slotId: number): Promise<SimState>
 ```
 
 Obtains the state of the SIM card in the specified slot. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -78,7 +52,7 @@ Obtains the state of the SIM card in the specified slot. This API uses a promise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -95,7 +69,3 @@ Obtains the state of the SIM card in the specified slot. This API uses a promise
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getSimState](#getsimstate)

@@ -4,8 +4,6 @@ Enumerates the directions of pixel rounding at the component level.@interface Pi
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,15 +17,13 @@ Enumerates the directions of pixel rounding at the component level.@interface Pi
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge. <br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's bottom edge. Invalid values are rounded using the round-half-up rule.
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,15 +39,13 @@ Rounding alignment for the component's bottom edge. <br>Invalid values are round
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge. <br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's end edge. Invalid values are rounded using the round-half-up rule.
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,15 +61,13 @@ Rounding alignment for the component's end edge. <br>Invalid values are rounded 
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge. <br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's start edge. Invalid values are rounded using the round-half-up rule.
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,15 +83,13 @@ Rounding alignment for the component's start edge. <br>Invalid values are rounde
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge. <br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's top edge. Invalid values are rounded using the round-half-up rule.
 
-**Type:** PixelRoundCalcPolicy
+**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

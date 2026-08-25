@@ -2,8 +2,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 26.0.0
 
 **替代接口：** [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)
@@ -30,8 +28,6 @@ showActionSheet需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.m
 > [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)来明确UI的执行上下文。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 

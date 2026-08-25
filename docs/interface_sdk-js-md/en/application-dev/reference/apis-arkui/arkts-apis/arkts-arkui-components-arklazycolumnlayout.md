@@ -3,17 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md) |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md) |
 
 ### Classes
 
@@ -25,7 +18,6 @@ import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |
 | [LazyColumnLayoutInterface](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutinterface-i.md) |
 
 ### Constants

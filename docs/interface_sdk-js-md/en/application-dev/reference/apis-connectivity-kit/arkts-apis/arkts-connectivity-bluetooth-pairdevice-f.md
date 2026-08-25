@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## pairDevice
@@ -15,8 +15,6 @@ function pairDevice(deviceId: string): boolean
 Starts pairing with a remote Bluetooth device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -37,10 +35,3 @@ Starts pairing with a remote Bluetooth device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// The address can be scanned.
-let result : boolean = bluetooth.pairDevice("XX:XX:XX:XX:XX:XX");
-```

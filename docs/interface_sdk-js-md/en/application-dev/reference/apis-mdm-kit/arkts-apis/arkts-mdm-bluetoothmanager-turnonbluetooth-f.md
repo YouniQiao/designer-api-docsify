@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## turnOnBluetooth
@@ -15,8 +15,6 @@ function turnOnBluetooth(admin: Want): void
 Enables Bluetooth. After Bluetooth is enabled, the user can manually disable it.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -38,22 +36,3 @@ Enables Bluetooth. After Bluetooth is enabled, the user can manually disable it.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-    bluetoothManager.turnOnBluetooth(wantTemp);
-    console.info(`Succeeded in turning on bluetooth.`);
-} catch(err) {
-    console.error(`Failed to turn on bluetooth. Code: ${err.code}, message: ${err.message}`);
-}
-```

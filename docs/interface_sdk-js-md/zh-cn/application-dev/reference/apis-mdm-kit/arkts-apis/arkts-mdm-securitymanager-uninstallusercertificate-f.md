@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -15,8 +15,6 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 卸载用户证书，使用Promise异步回调。适用于企业证书管理场景，如证书过期更换、撤销员工对企业资源的访问权限等。企业可在证书过期、更换或不再需要时调用此接口卸载证书，确保设备证书管理的灵活性和安全性。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -46,24 +44,3 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 | [9201001](../errorcode-enterpriseDeviceManager.md#9201001-管理证书失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let aliasStr = "certName";
-securityManager.uninstallUserCertificate(wantTemp, aliasStr).then(() => {
-  console.info(`Succeeded in uninstalling user certificate.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall user certificate. Code is ${err.code}, message is ${err.message}`);
-});
-```

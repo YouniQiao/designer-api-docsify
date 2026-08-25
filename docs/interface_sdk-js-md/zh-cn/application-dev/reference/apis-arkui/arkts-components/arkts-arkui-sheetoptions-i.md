@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 **说明：**当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，如果已注册回调函数，模态窗口将不会立即关闭。要关闭半模态，需在回调函数中调用shouldDismiss.dismiss()方法来实现。如果不注册该回调函数，则用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，正常关闭半模态，无其他行为。侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +50,6 @@ blurStyle?: BlurStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -71,11 +65,9 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 设置半模态页面的边框颜色。默认值：Color.Black如果使用borderColor属性，需要和borderWidth属性一起使用。  
 **说明：**底部弹窗时，底部边框颜色设置无效。
 
-**类型：** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,11 +84,9 @@ borderStyle?: BorderStyle | EdgeStyles
 设置半模态页面的边框样式。默认值：BorderStyle.Solid如果使用borderStyle属性，需要和borderWidth属性一起使用。  
 **说明：**底部弹窗时，底部边框样式设置无效。
 
-**类型：** BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md)
+**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,11 +103,9 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 设置半模态页面的边框宽度。可分别设置4个边框宽度。默认值：0百分比参数方式：以父元素半模态页面宽的百分比来设置半模态页面的边框宽度。当半模态页面左边框和右边框大于半模态页面宽度，半模态页面上边框和下边框大于半模态页面高度，显示可能不符合预期。  
 **说明：**底部弹窗时，底部边框宽度设置无效。
 
-**类型：** Dimension \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,8 +126,6 @@ detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -159,13 +145,11 @@ detentSelection?: SheetSize | Length
 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。
 3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
 
-**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** detents[0]
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -187,8 +171,6 @@ dragBar?: boolean
 **默认值：** true
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,8 +198,6 @@ effectEdge?: number
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -238,8 +218,6 @@ enableFloatingDragBar?: boolean
 **默认值：** false
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,8 +240,6 @@ enableHoverMode?: boolean
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -284,8 +260,6 @@ enableOutsideInteractive?: boolean
 **默认值：** false
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -309,13 +283,11 @@ height?: SheetSize | Length
 6. 居中弹窗和跟手弹窗当使用Length设置的高度时，高度大于最大高度，则显示最大高度，小于最小高度，则显示最小高度。
 7. 如果半模态使用SheetSize.FIT_CONTENT自适应模式，且类型设置为居中弹窗或跟手弹窗，API version 22及之前版本，高度大于最大高度时显示最大高度，高度小于最小高度时显示最小高度。从API version 23开始，高度大于最大高度时显示最大高度，高度小于最小高度时按照实际自适应高度生效。
 
-**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** SheetSize.LARGE
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -336,8 +308,6 @@ hoverModeArea?: HoverModeAreaType
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -360,8 +330,6 @@ keyboardAvoidMode?: SheetKeyboardAvoidMode
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -376,11 +344,9 @@ maskColor?: ResourceColor
 
 半模态页面的背景蒙层颜色。默认值：\$r('sys.color.ohos_id_color_mask_thin')。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -401,8 +367,6 @@ bindSheet全屏模态样式的系统转场方式。默认值：ModalTransition.D
 **默认值：** ModalTransition.DEFAULT
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -428,8 +392,6 @@ mode?: SheetMode
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -448,8 +410,6 @@ onDetentsDidChange?: Callback<number>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -470,8 +430,6 @@ onHeightDidChange?: Callback<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -490,8 +448,6 @@ onTypeDidChange?: Callback<SheetType>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;[SheetType](arkts-arkui-sheettype-e.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -512,8 +468,6 @@ onWidthDidChange?: Callback<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -532,8 +486,6 @@ onWillDismiss?: Callback<DismissSheetAction>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -554,8 +506,6 @@ onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -575,13 +525,11 @@ placement?: Placement
 3. 如果在四个方向上均无法容纳当前的popup样式弹窗，处理方式遵循开发者设置的placementOnTarget属性：
 1）若属性值为true，将依据设定的placement，向其镜像方向平移，直至弹窗能够完全显示。2）若属性值为false，则在四个方向中，选择能够完全展示弹窗宽度且剩余高度最大的方向，通过调整半模态高度以适应当前方向，确保弹窗能够放下，同时保持预设placement对应的对齐方式不变。
 
-**类型：** Placement
+**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **默认值：** Placement.Bottom
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -602,8 +550,6 @@ placementOnTarget?: boolean
 **默认值：** true
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -629,8 +575,6 @@ preferType?: SheetType
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -652,11 +596,9 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。
 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -673,13 +615,11 @@ radiusRenderStrategy?: RenderStrategy
 设置组件绘制圆角的模式。默认值：RenderStrategy.FAST  
 **说明：**: 当半模态设置模糊时，可通过设置为OFFSCREEN离屏模式解决半模态顶部或顶部圆角区域内显示效果异常问题。popup样式不支持设置组件绘制圆角模式。
 
-**类型：** RenderStrategy
+**类型：** [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md)
 
 **默认值：** RenderStrategy.FAST
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -701,8 +641,6 @@ scrollSizeMode?: ScrollSizeMode
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -720,8 +658,6 @@ shadow?: ShadowOptions | ShadowStyle
 **类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -743,8 +679,6 @@ showClose?: boolean | Resource
 **默认值：** true
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -772,8 +706,6 @@ showInSubWindow?: boolean
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -793,8 +725,6 @@ systemMaterial?: SystemUiMaterial
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -812,8 +742,6 @@ title?: SheetTitleOptions | CustomBuilder
 **类型：** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -834,8 +762,6 @@ uiContext?: UIContext
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -850,11 +776,9 @@ width?: Dimension
 
 设置半模态页面的宽度。百分比参数方式：以父元素宽的百分比来设置半模态页面的宽度。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

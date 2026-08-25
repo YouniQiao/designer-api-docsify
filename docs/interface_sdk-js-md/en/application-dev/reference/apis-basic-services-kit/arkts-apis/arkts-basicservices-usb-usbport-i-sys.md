@@ -4,8 +4,6 @@ Represents a USB port.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)
@@ -17,7 +15,7 @@ Represents a USB port.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## id
@@ -31,8 +29,6 @@ Unique identifier of a USB port.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ USB port role.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
@@ -75,8 +69,6 @@ Numeric mask combination for the supported mode list.
 **Type:** PortModeType
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

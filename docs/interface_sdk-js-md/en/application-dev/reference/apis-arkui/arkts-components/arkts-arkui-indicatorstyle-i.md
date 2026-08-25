@@ -4,8 +4,6 @@ Represents an indicator style object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ borderRadius?: Length
 
 Rounded corner radius of the indicator. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ color?: ResourceColor
 
 Color of the indicator and board.Default value: **#FF007DFF**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,11 +57,9 @@ height?: Length
 
 Height of the indicator. It cannot be set in percentage.Default value: **2.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,13 +75,11 @@ marginTop?: Length
 
 Spacing between the indicator and text. It cannot be set in percentage.Default value: **8.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 8
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,13 +96,11 @@ width?: Length
 Width of the indicator. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)  
 **NOTE：**If this parameter is set to **0**, the tab text width will be used instead.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ ControllerHandler is a helper class provided by ArkWeb for handling the allocati
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Constructs a **ControllerHandler** API.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ setWebController(controller: WebviewController): void
 Sets the WebviewController object for the newly created Web component. If the app decides not to create a new window, this parameter must be set to null to notify the web kernel; otherwise, the render process will be blocked.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

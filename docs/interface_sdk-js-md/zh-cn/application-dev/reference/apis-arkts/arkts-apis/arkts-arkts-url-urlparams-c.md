@@ -4,45 +4,12 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
-```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<[string, string]>
-```
-
-返回一个迭代器，迭代器的每一项都是一个Array。Array的第一项是name，Array的第二项是value。该方法与[Symbol.iterator]行为一致，均返回键值对的迭代器。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; |
-
-**示例**
-
-```TypeScript
-let paramsObject = new url.URLParams('fod=bay&edg=bap');
-for (let pair of paramsObject) {
-	console.info( pair[0] + ', ' + pair[1]);
-}
+import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -55,8 +22,6 @@ for (let pair of paramsObject) {
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -65,32 +30,7 @@ for (let pair of paramsObject) {
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; |
-
-**示例**
-
-```TypeScript
-// 构造URLParams对象
-const paramsObject = new url.URLParams('fod=bay&edg=bap');
-// 获取Symbol.iterator迭代器
-let iter = paramsObject[Symbol.iterator]();
-// 遍历键值对
-for (let pair of iter) {
-  console.info(pair[0] + ', ' + pair[1]);
-}
-// fod, bay
-// edg, bap
-```
-
-```TypeScript
-const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
-let pairs = paramsObject[Symbol.iterator]();
-for (let pair of pairs) {
-  console.info(pair[0] + ', ' + pair[1]);
-}
-// fod, bay
-// edg, bap
-```
+| IterableIterator & lt;[string, string] & gt; |
 
 ## append
 
@@ -101,8 +41,6 @@ append(name: string, value: string): void
 将新的键值对插入到查询字符串。与[set](#set)方法不同，append不会替换已存在的键名对应的值， 而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -115,23 +53,6 @@ append(name: string, value: string): void
 | name | string | 是 |
 | value | string | 是 |
 
-**示例**
-
-```TypeScript
-// 解析URL字符串
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 构造URLParams对象
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-// 追加键值对
-paramsObject.append('fod', '3');
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
-paramsObject.append('fod', '3');
-```
-
 ## constructor
 
 ```TypeScript
@@ -141,8 +62,6 @@ constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)URLParams的构造函数，用于创建URL参数对象，适用于需要解析、构造或操作URL查询参数的场景。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -154,96 +73,6 @@ ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; 
 | --- | --- | --- |
 | init | string[][] \| Record & lt;string, string & gt; \ | string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 通过string[][]方式构造URLParams对象：
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// 通过Record<string, string>方式构造URLParams对象：
-let objectParams1 = new url.URLParams({'fod' : '1' , 'bard' : '2'});
-// 通过string方式构造URLParams对象：
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// 通过url对象的search属性构造URLParams对象：
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// 通过url对象的params属性获取URLParams对象：
-let secondUrlObj = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = secondUrlObj.params;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 通过string[][]方式构造URLParams对象：
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// 通过Record<string, string>方式构造URLParams对象：
-let record: Record<string, string> = { "fod": '1', "bard": '2' }
-let objectParams1 = new url.URLParams(record);
-// 通过string方式构造URLParams对象：
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// 通过url对象的search属性构造URLParams对象：
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// 通过url对象的params属性获取URLParams对象：
-let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = urlObject1.params;
-```
-
-```TypeScript
-let baseUrl = 'https://username:password@host:8080';
-let rootPathUrl = new url.URL("/", baseUrl); // Output 'https://username:password@host:8080/';
-let absoluteUrl = new url.URL(baseUrl); // Output 'https://username:password@host:8080/';
-new url.URL('path/path1', absoluteUrl); // Output 'https://username:password@host:8080/path/path1';
-let relativePathUrl = new url.URL('/path/path1', absoluteUrl);  // Output 'https://username:password@host:8080/path/path1'; 
-new url.URL('/path/path1', relativePathUrl); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', rootPathUrl); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
-new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-new url.URL('https://www.example.com', ); // Output https://www.example.com/
-new url.URL('https://www.example.com', absoluteUrl); // Output https://www.example.com/
-```
-
-```TypeScript
-let a = new url.URL();
-```
-
-```TypeScript
-let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
-let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
-let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search);
-```
-
-## constructor
-
-```TypeScript
-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)
-```
-
-用于创建URLParams实例的参数化构造函数。 作为构造函数的输入参数，init支持四种类型。 输入参数是字符串二维数组。 输入参数是对象列表。 输入参数是字符串。 输入参数是URLParams对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| init | [string, string][] \| Record & lt;string, string & gt; \ | string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 |
-
-**示例**
-
-参见 [constructor](#constructor)
-
 ## delete
 
 ```TypeScript
@@ -253,8 +82,6 @@ delete(name: string): void
 删除指定名称的所有键值对。如果指定名称不存在，则不做任何操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -266,23 +93,6 @@ delete(name: string): void
 | --- | --- | --- |
 | name | string | 是 |
 
-**示例**
-
-```TypeScript
-// 解析URL字符串
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 构造URLParams对象
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-// 删除指定名称的键值对
-paramsObject.delete('fod');
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
-paramsObject.delete('fod');
-```
-
 ## entries
 
 ```TypeScript
@@ -293,8 +103,6 @@ entries(): IterableIterator<[string, string]>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -303,51 +111,7 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 构造URLParams对象
-let paramsObject = new url.URLParams('keyName1=valueName1&keyName2=valueName2');
-// 获取entries迭代器
-let pair = paramsObject.entries();
-// 遍历键值对
-for (let item of pair) {
-  console.info(item[0] + '=' + item[1]);
-}
-// keyName1=valueName1
-// keyName2=valueName2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let params = new url.URLParams("key1=value1&key2=value2");
-
-let i = 0;
-let arr = new Array<string>();
-for (let pair of params.entries()) {
-  arr.push(pair[0]);
-  i++;
-  arr.push(pair[1]);
-  i++;
-}
-
-console.info(arr[1]); // value1
-```
-
-```TypeScript
-let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
-let iter = searchParamsObject.entries();
-for (let pair of iter) {
-  console.info(pair[0]+ ', '+ pair[1]);
-}
-// keyName1, valueName1
-// keyName2, valueName2
-```
+| IterableIterator & lt;[string, string] & gt; |
 
 ## forEach
 
@@ -358,8 +122,6 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 通过回调函数按照插入顺序遍历URLParams实例对象上的键值对。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -372,64 +134,6 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 | callbackFn | (value: string, key: string, searchParams: URLParams) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
-**示例**
-
-```TypeScript
-// 解析URL
-const myURLObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 通过回调函数遍历URLParams键值对
-myURLObject.params.forEach((value, name, searchParams) => {
-    console.info(name, value, myURLObject.params === searchParams);
-});
-```
-
-```TypeScript
-let params = new url.URLParams("key1=value1&key2=value2")
-let arr = new Array<string>();
-let i = 0;
-let urlCB: url.UrlCbFn = (value: string, key: string, searchParams:url.URLParams) => {
-  arr.push(value + " " + key + " " + (params == searchParams));
-  i++
-}
-
-params.forEach(urlCB);
-
-console.info(arr[0]); // value1 key1 true
-```
-
-```TypeScript
-const myURLObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-myURLObject.searchParams.forEach((value, name, searchParams) => {
-    console.info(name, value, myURLObject.searchParams === searchParams);
-});
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: UrlCbFn): void
-```
-
-通过回调函数来遍历URLSearchParams实例对象上的键值对。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | 是 |
-
-**示例**
-
-参见 [forEach](#foreach)
-
 ## get
 
 ```TypeScript
@@ -439,8 +143,6 @@ get(name: string): string | null
 获取指定名称对应的第一个值。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -458,57 +160,6 @@ get(name: string): string | null
 | --- |
 | string \| null |
 
-**示例**
-
-```TypeScript
-let paramsObject = new url.URLParams('name=Jonathan&age=18');
-let name = paramsObject.get('name'); // is the string "Jonathan"
-let age = paramsObject.get('age'); // is the string "18"
-let absentValue = paramsObject.get('abc'); // undefined
-```
-
-```TypeScript
-let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
-let name = paramsObject.get("name"); // is the string "Jonathan"
-let age = paramsObject.get("age"); // is the string '18'
-let getObj = paramsObject.get("abc"); // undefined
-```
-
-## get
-
-```TypeScript
-get(name: string): string | undefined
-```
-
-根据指定的键获取第一个键值对的值。
-
-> **说明：**&gt;
-> 若查找一个不存在的键值对名称时返回值为undefined。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| name | string | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| string \| undefined |
-
-**示例**
-
-参见 [get](#get)
-
 ## getAll
 
 ```TypeScript
@@ -518,8 +169,6 @@ getAll(name: string): string[]
 获取指定名称的所有键对应值的集合。若查找一个不存在的键值对名称时返回值为空数组。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -537,24 +186,6 @@ getAll(name: string): string[]
 | --- |
 | string[] |
 
-**示例**
-
-```TypeScript
-// 解析URL并构造URLParams对象
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLParams(urlObject.search.slice(1));
-params.append('fod', '3'); // 追加第二个fod参数值
-// 获取指定名称fod的所有值
-console.info(params.getAll('fod').toString()); // Output ["1","3"]
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search.slice(1));
-params.append('fod', '3'); // Add a second value for the fod parameter.
-console.info(params.getAll('fod').toString()) // Output ["1","3"].
-```
-
 ## has
 
 ```TypeScript
@@ -564,8 +195,6 @@ has(name: string): boolean
 判断一个指定的键名对应的值是否存在。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -583,23 +212,6 @@ has(name: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-// 解析URL字符串
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 构造URLParams对象
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-// 判断键名bard是否存在
-let result = paramsObject.has('bard');
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
-paramsObject.has('bard') === true;
-```
-
 ## keys
 
 ```TypeScript
@@ -610,8 +222,6 @@ keys(): IterableIterator<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -620,32 +230,7 @@ keys(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
-
-**示例**
-
-```TypeScript
-// 构造URLParams对象
-let paramsObject = new url.URLParams("key1=value1&key2=value2");
-// 获取所有键名的迭代器
-let keys = paramsObject.keys();
-// 遍历输出键名
-for (let key of keys) {
-  console.info(key);
-}
-// key1
-// key2
-```
-
-```TypeScript
-let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
-let keys = searchParamsObject.keys();
-for (let key of keys) {
-  console.info(key);
-}
-// key1
-// key2
-```
+| IterableIterator & lt;string & gt; |
 
 ## set
 
@@ -656,8 +241,6 @@ set(name: string, value: string): void
 将与name关联的URLParams对象中的值设置为value。如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -670,20 +253,6 @@ set(name: string, value: string): void
 | name | string | 是 |
 | value | string | 是 |
 
-**示例**
-
-```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLParams(urlObject.search.slice(1));
-paramsObject.set('baz', '3'); // Add a third parameter.
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
-paramsObject.set('baz', '3'); // Add a third parameter.
-```
-
 ## sort
 
 ```TypeScript
@@ -694,25 +263,9 @@ sort(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
-paramsObject.sort(); // Sort the key/value pairs
-console.info(paramsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
-```
-
-```TypeScript
-let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
-searchParamsObject.sort(); // Sort the key/value pairs
-console.info(searchParamsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
-```
 
 ## toString
 
@@ -724,8 +277,6 @@ toString(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -735,31 +286,6 @@ toString(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-// 解析URL字符串
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 构造URLParams对象
-let params = new url.URLParams(urlObject.search.slice(1));
-// 追加参数
-params.append('fod', '3');
-// 将参数序列化为字符串
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
-
-```TypeScript
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search.slice(1));
-params.append('fod', '3');
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
 
 ## values
 
@@ -771,8 +297,6 @@ values(): IterableIterator<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -781,29 +305,4 @@ values(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
-
-**示例**
-
-```TypeScript
-// 构造URLParams对象
-let paramsObject = new url.URLParams("key1=value1&key2=value2");
-// 获取所有值的迭代器
-let values = paramsObject.values();
-// 遍历输出值
-for (let value of values) {
-  console.info(value);
-}
-// value1
-// value2
-```
-
-```TypeScript
-let searchParams = new url.URLSearchParams("key1=value1&key2=value2");
-let values = searchParams.values();
-for (let value of values) {
-  console.info(value);
-}
-// value1
-// value2
-```
+| IterableIterator & lt;string & gt; |

@@ -4,8 +4,6 @@ Describes a spatial device type group.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SPATIAL_DEVICE_TYPE_NONE = 0
 Audio Spatial Device Type none.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -36,8 +32,6 @@ Audio Spatial Device Type in-ear headphone.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2
 Audio Spatial Device Type half-in-ear headphone.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -68,8 +60,6 @@ Audio Spatial Device Type over-ear headphone.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -84,8 +74,6 @@ Audio Spatial Device Type glasses.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -99,8 +87,6 @@ SPATIAL_DEVICE_TYPE_OTHERS = 5
 Audio Spatial Device Type others.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 

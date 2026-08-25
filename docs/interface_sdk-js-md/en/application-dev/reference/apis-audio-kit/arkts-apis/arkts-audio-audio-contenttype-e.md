@@ -4,8 +4,6 @@ Enumerates the audio content types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
@@ -21,8 +19,6 @@ CONTENT_TYPE_UNKNOWN = 0
 Unknown content.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Speech.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#stream_usage_voice_communication)
@@ -57,8 +51,6 @@ CONTENT_TYPE_MUSIC = 2
 Music.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -76,8 +68,6 @@ Movie.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#stream_usage_movie)
@@ -94,8 +84,6 @@ Notification tone.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#stream_usage_notification)
@@ -111,8 +99,6 @@ CONTENT_TYPE_RINGTONE = 5
 Ringtone.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 

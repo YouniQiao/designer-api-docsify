@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## getReusePool
@@ -24,8 +22,6 @@ getReusePool(): IReusePool | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -37,40 +33,3 @@ getReusePool(): IReusePool | undefined
 | 类型 |
 | --- |
 | [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) \| undefined |
-
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@ReusableV2
-@ComponentV2
-struct ReusableChild {
-  build() {
-    Text('ReusableChild')
-  }
-}
-
-@Entry
-@ComponentV2({ reusePool: 'perInstance', poolAccepts: [ReusableChild], freezeWhenInactive: false })
-struct PoolOwner {
-  checkPool() {
-    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
-    if (pool) {
-      console.info('Global reuse pool configured.');
-    } else {
-      console.info('No global reuse pool configured.');
-    }
-  }
-
-  build() {
-    Column() {
-      ReusableChild()
-      Button('Check Pool')
-        .onClick(() => {
-          this.checkPool();
-        })
-    }
-  }
-}
-```

@@ -1,10 +1,8 @@
 # AudioConcurrencyMode
 
-Enumerates the audio concurrency modes.@enum { int } [since 12 - 24]
+Enumerates the audio concurrency modes.@enum { number } [since 12 - 24]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -17,8 +15,6 @@ CONCURRENCY_DEFAULT = 0
 Uses the system strategy by default.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -34,8 +30,6 @@ Concurrent with other audio streams, that is, audio mixing.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -50,8 +44,6 @@ Ducks other audio streams.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -65,8 +57,6 @@ CONCURRENCY_PAUSE_OTHERS = 3
 Pauses other audio streams.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

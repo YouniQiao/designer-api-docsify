@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFileSyncState
@@ -15,8 +15,6 @@ function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 异步方法获取文件同步状态。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -47,107 +45,6 @@ function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 | 13900002 |
 | 14000002 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState>) => {
-  for(let i = 0, len = syncStates.length; i < len; i++){
-    console.info("get file sync state successfully" + syncStates[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`get file sync state failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState>): void => {
-  for(let i = 0, len = syncStates.length; i < len; i++){
-    console.info("get file sync state successfully" + syncStates[i]);
-  }
-}).catch((err: BusinessError<void>): void => {
-  console.error("get file sync state failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
-  if (err) {
-    console.error(`get file sync state with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-  }
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError<void> | null, syncStates: Array<cloudSync.FileSyncState> | undefined): void => {
-  if (err && err.code) {
-    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    if (syncStates == undefined) {
-      console.error("get file sync state successfully, but syncStates is undefined.");
-      return;
-    }
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-    }
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  console.error("getFileSyncStatefailed with error: " + JSON.stringify(err));
-}
-```
-
 
 ## getFileSyncState
 
@@ -158,8 +55,6 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 异步方法获取文件同步状态。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -185,10 +80,6 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 | 13900002 |
 | 14000002 |
 
-**示例**
-
-参见 [getFileSyncState](#getfilesyncstate)
-
 
 ## getFileSyncState
 
@@ -199,8 +90,6 @@ function getFileSyncState(uri: string): FileSyncState
 获取文件同步状态。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -231,7 +120,3 @@ function getFileSyncState(uri: string): FileSyncState
 | 13900031 |
 | 13900042 |
 | 14000002 |
-
-**示例**
-
-参见 [getFileSyncState](#getfilesyncstate)

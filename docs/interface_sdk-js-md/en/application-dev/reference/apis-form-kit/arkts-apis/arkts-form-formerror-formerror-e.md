@@ -1,10 +1,8 @@
 # FormError
 
-Error of form.@enum { int }
+Error of form.@enum { number }
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,8 +16,6 @@ A common internal error occurs during form processing.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_PERMISSION_DENY
@@ -31,8 +27,6 @@ ERR_PERMISSION_DENY = 2
 The application does not have permission to use forms. Ensure that the application is granted with the ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED permissions.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -46,8 +40,6 @@ Failed to obtain the configuration information about the form specified by the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_GET_BUNDLE_FAILED
@@ -59,8 +51,6 @@ ERR_GET_BUNDLE_FAILED = 5
 Failed to obtain the bundle to which the form belongs based on the request parameters. Ensure that the bundle to which the form to be added belongs is available.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -74,8 +64,6 @@ Failed to initialize the form layout based on the request parameters. Ensure tha
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_ADD_INVALID_PARAM
@@ -87,8 +75,6 @@ ERR_ADD_INVALID_PARAM = 7
 Invalid input parameter during form operation. Ensure that all input parameters are valid.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -102,8 +88,6 @@ The form configuration to be obtained using an existing form ID is different fro
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_NOT_EXIST_ID
@@ -115,8 +99,6 @@ ERR_NOT_EXIST_ID = 9
 The ID of the form to be operated does not exist in the Form Manager Service.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -130,8 +112,6 @@ Failed to bind the Form Manager Service to the provider service.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_MAX_SYSTEM_FORMS
@@ -143,8 +123,6 @@ ERR_MAX_SYSTEM_FORMS = 11
 The total number of added forms exceeds the maximum allowed by the system.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -158,8 +136,6 @@ The number of form instances generated using the same form configuration exceeds
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_OPERATION_FORM_NOT_SELF
@@ -171,8 +147,6 @@ ERR_OPERATION_FORM_NOT_SELF = 13
 The form being requested was added by other applications and cannot be operated by the current application.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -186,8 +160,6 @@ The Form Manager Service failed to instruct the form provider to delete the form
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_MAX_FORMS_PER_CLIENT
@@ -199,8 +171,6 @@ ERR_MAX_FORMS_PER_CLIENT = 15
 The total number of added forms exceeds the maximum per client.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -214,8 +184,6 @@ The total number of added temp forms exceeds the maximum in system.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_FORM_NO_SUCH_MODULE
@@ -227,8 +195,6 @@ ERR_FORM_NO_SUCH_MODULE = 17
 The module can not be find in system.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -242,8 +208,6 @@ The ability can not be find in system.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_FORM_NO_SUCH_DIMENSION
@@ -255,8 +219,6 @@ ERR_FORM_NO_SUCH_DIMENSION = 19
 The dimension is not exist in the form.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -270,8 +232,6 @@ The ability is not installed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_SYSTEM_RESPONSES_FAILED
@@ -283,8 +243,6 @@ ERR_SYSTEM_RESPONSES_FAILED = 30
 Failed to obtain the RPC object of the Form Manager Service because the service is not started.Please try again after the service is started.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -298,8 +256,6 @@ Failed to obtain the form requested by the client because another form with the 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## ERR_IN_RECOVERY
@@ -311,7 +267,5 @@ ERR_IN_RECOVERY = 36
 The form is being restored. Perform operations on the form only after the restoration is complete.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form

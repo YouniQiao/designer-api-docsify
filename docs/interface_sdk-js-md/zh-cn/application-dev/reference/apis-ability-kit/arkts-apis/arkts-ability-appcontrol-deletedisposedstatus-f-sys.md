@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDisposedStatus
@@ -15,8 +15,6 @@ function deleteDisposedStatus(appId: string, callback: AsyncCallback<void>): voi
 删除应用的处置状态。使用callback异步回调，成功返回null，失败返回对应错误信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -41,98 +39,6 @@ function deleteDisposedStatus(appId: string, callback: AsyncCallback<void>): voi
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: BusinessError) => {
-      let message = (error as BusinessError).message;
-      console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新appId。
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: Error) => {
-      let message = (error as BusinessError).message;
-      console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-try {
-  appControl.deleteDisposedStatus(appId, (error: BusinessError, data) => {
-    if (error) {
-      console.error('deleteDisposedStatus failed ' + error.message);
-      return;
-    }
-    console.info('deleteDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新appId。
-let appId = "com.example.myapplication_xxxxx";
-try {
-  appControl.deleteDisposedStatus(appId, (error: BusinessError | null, data) => {
-    if (error) {
-      console.error('deleteDisposedStatus failed ' + error.message);
-      return;
-    }
-    console.info('deleteDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
 
 ## deleteDisposedStatus
 
@@ -143,8 +49,6 @@ function deleteDisposedStatus(appId: string): Promise<void>
 删除应用的处置状态。使用promise异步回调，成功返回null，失败返回对应错误信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -173,7 +77,3 @@ function deleteDisposedStatus(appId: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
-
-**示例**
-
-参见 [deleteDisposedStatus](#deletedisposedstatus)

@@ -1,7 +1,5 @@
 # SymbolConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Returns a new unique Symbol value.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ for(key: string): symbol
 
 Returns a Symbol object from the global symbol registry matching the given key if found. Otherwise, returns a new symbol with this key.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ keyFor(sym: symbol): string | undefined
 ```
 
 Returns a key from the global symbol registry matching the given Symbol if found. Otherwise, returns a undefined.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -75,6 +67,4 @@ readonly prototype: Symbol
 
 A reference to the prototype.
 
-**Type:** Symbol
-
-**ArkTS mode:** 
+**Type:** [Symbol](arkts-libes2015symbol-p.md)

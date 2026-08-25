@@ -4,8 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_50
@@ -17,8 +15,6 @@ BAUDRATE_50 = 50
 传输波特率为50比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ BAUDRATE_75 = 75
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_110
@@ -45,8 +39,6 @@ BAUDRATE_110 = 110
 传输波特率为110比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -60,8 +52,6 @@ BAUDRATE_134 = 134
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_150
@@ -73,8 +63,6 @@ BAUDRATE_150 = 150
 传输波特率为150比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -88,8 +76,6 @@ BAUDRATE_200 = 200
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_300
@@ -101,8 +87,6 @@ BAUDRATE_300 = 300
 传输波特率为300比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -116,8 +100,6 @@ BAUDRATE_600 = 600
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1200
@@ -129,8 +111,6 @@ BAUDRATE_1200 = 1200
 传输波特率为1200比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -144,8 +124,6 @@ BAUDRATE_1800 = 1800
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_2400
@@ -157,8 +135,6 @@ BAUDRATE_2400 = 2400
 传输波特率为2400比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -172,8 +148,6 @@ BAUDRATE_4800 = 4800
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_9600
@@ -185,8 +159,6 @@ BAUDRATE_9600 = 9600
 传输波特率为9600比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -200,8 +172,6 @@ BAUDRATE_19200 = 19200
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_38400
@@ -213,8 +183,6 @@ BAUDRATE_38400 = 38400
 传输波特率为38400比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -228,8 +196,6 @@ BAUDRATE_57600 = 57600
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_115200
@@ -241,8 +207,6 @@ BAUDRATE_115200 = 115200
 传输波特率为115200比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -256,8 +220,6 @@ BAUDRATE_230400 = 230400
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_460800
@@ -269,8 +231,6 @@ BAUDRATE_460800 = 460800
 传输波特率为460800比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -284,8 +244,6 @@ BAUDRATE_500000 = 500000
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_576000
@@ -297,8 +255,6 @@ BAUDRATE_576000 = 576000
 传输波特率为576000比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -312,8 +268,6 @@ BAUDRATE_921600 = 921600
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1000000
@@ -325,8 +279,6 @@ BAUDRATE_1000000 = 1000000
 传输波特率为1000000比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -340,8 +292,6 @@ BAUDRATE_1152000 = 1152000
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1500000
@@ -353,8 +303,6 @@ BAUDRATE_1500000 = 1500000
 传输波特率为1500000比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -368,8 +316,6 @@ BAUDRATE_2000000 = 2000000
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_2500000
@@ -381,8 +327,6 @@ BAUDRATE_2500000 = 2500000
 传输波特率为2500000比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -396,8 +340,6 @@ BAUDRATE_3000000 = 3000000
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_3500000
@@ -410,8 +352,6 @@ BAUDRATE_3500000 = 3500000
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_4000000
@@ -423,7 +363,5 @@ BAUDRATE_4000000 = 4000000
 传输波特率为4000000比特/秒。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

@@ -4,8 +4,6 @@ Result returned when querying whether a shortcut exists.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -21,8 +19,6 @@ SHORTCUT_EXISTENCE_EXISTS = 0
 Exists.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Does not exist.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -57,8 +51,6 @@ SHORTCUT_EXISTENCE_UNKNOW = 2
 Unknown.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

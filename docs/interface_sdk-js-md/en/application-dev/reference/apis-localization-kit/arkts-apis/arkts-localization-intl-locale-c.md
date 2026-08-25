@@ -4,8 +4,6 @@ Provides APIs for obtaining locale information.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
@@ -15,7 +13,7 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,8 +26,6 @@ Creates a **Locale** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -40,102 +36,6 @@ Creates a **Locale** object.
 
 **System capability:** SystemCapability.Global.I18n
 
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// The current system locale is used by the default constructor.
-let locale = new intl.Locale();
-// Return the current system locale ID.
-let localeID = locale.toString();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a zh-CN locale object.
-let locale = new intl.Locale('zh-CN');
-let localeID = locale.toString(); // localeID = 'zh-CN'
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a DateTimeFormat object using the current system locale ID.
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a DateTimeFormat object with locale ID being zh-CN, dateStyle being full, and timeStyle being medium.
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyle: 'full', timeStyle: 'medium' });
-
-// Create a DateTimeFormat object with a locale ID array. The locale ID ban is invalid and therefore locale ID zh is used.
-formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object using the current system locale ID.
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a NumberFormat object with locale ID being en-GB, style being decimal, and notation being scientific.
-let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object using the current system locale ID.
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object with the locale ID being zh-CN, localeMatcher being lookup, and usage being sort.
-let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object using the current system locale ID.
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object with the locale ID being zh-CN, localeMatcher being lookup, and type being cardinal.
-let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a RelativeTimeFormat object using the current system locale ID.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a RelativeTimeFormat object with the locale ID being zh-CN, localeMatcher being lookup, and style being long.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
-  localeMatcher: 'lookup',
-  numeric: 'always',
-  style: 'long'
-});
-```
-
 ## constructor
 
 ```TypeScript
@@ -145,8 +45,6 @@ constructor(locale: string, options?: LocaleOptions)
 Creates a **Locale** object.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -163,11 +61,7 @@ Creates a **Locale** object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | locale | string | Yes |
-| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | No |
-
-**Examples**
-
-See [constructor](#constructor)
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No |
 
 ## maximize
 
@@ -178,8 +72,6 @@ maximize(): Locale
 Maximizes locale information by supplementing the missing script and country/region information.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -197,24 +89,6 @@ Maximizes locale information by supplementing the missing script and country/reg
 | --- |
 | [Locale](arkts-localization-intl-locale-c.md) |
 
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a zh locale object.
-let locale = new intl.Locale('zh');
-// Supplement the locale object's script and region.
-let maximizedLocale = locale.maximize();
-let localeID = maximizedLocale.toString(); // localeID = 'zh-Hans-CN'
-
-// Create an en-US locale object.
-locale = new intl.Locale('en-US');
-// Supplement the locale object's script.
-maximizedLocale = locale.maximize();
-localeID = maximizedLocale.toString(); // localeID = 'en-Latn-US'
-```
-
 ## minimize
 
 ```TypeScript
@@ -224,8 +98,6 @@ minimize(): Locale
 Minimizes locale information by removing the script and country/region information.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -243,24 +115,6 @@ Minimizes locale information by removing the script and country/region informati
 | --- |
 | [Locale](arkts-localization-intl-locale-c.md) |
 
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a zh-Hans-CN locale object.
-let locale = new intl.Locale('zh-Hans-CN');
-// Remove the locale object's script and region.
-let minimizedLocale = locale.minimize();
-let localeID = minimizedLocale.toString(); // localeID = 'zh'
-
-// Create an en-US locale object.
-locale = new intl.Locale('en-US');
-// Remove locale object's region.
-minimizedLocale = locale.minimize();
-localeID = minimizedLocale.toString(); // localeID = 'en'
-```
-
 ## toString
 
 ```TypeScript
@@ -270,8 +124,6 @@ toString(): string
 Obtains the string that represents a **Locale** object.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -289,16 +141,6 @@ Obtains the string that represents a **Locale** object.
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create an en-GB locale object.
-let locale = new intl.Locale('en-GB');
-let localeID = locale.toString(); // localeID = 'en-GB'
-```
-
 ## baseName
 
 ```TypeScript
@@ -310,8 +152,6 @@ Locale information, which consists of the language, script, and country/region, 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -335,8 +175,6 @@ Calendar for the locale. The value can be: The value can be any of the following
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
@@ -358,8 +196,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -383,8 +219,6 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
@@ -406,8 +240,6 @@ Time system for the locale. The value can be:"h11", "h12", "h23", or "h24". For 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -431,8 +263,6 @@ Language associated with the locale, for example, **zh**. The value complies wit
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
@@ -454,8 +284,6 @@ Numbering system for the locale. The value can be: **adlm**, **ahom**, **arab**,
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -479,8 +307,6 @@ Whether to use special sorting rules for digits. The value **true** means to use
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
@@ -503,8 +329,6 @@ Country/region associated with the locale, for example, **CN**. The value compli
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
@@ -526,8 +350,6 @@ Script type of the language, for example, **Hans**. The value complies with the 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 

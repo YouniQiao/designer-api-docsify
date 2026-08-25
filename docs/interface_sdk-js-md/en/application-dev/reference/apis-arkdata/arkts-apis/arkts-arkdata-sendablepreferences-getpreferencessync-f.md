@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## getPreferencesSync
@@ -15,8 +15,6 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 Obtains a **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,19 +42,3 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 | [15501001](../errorcode-preferences.md#15501001-stage-model-required) |
 | [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
-
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-let preferences: sendablePreferences.Preferences;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: sendablePreferences.Options = { name: 'myStore' };
-    preferences = sendablePreferences.getPreferencesSync(this.context, options);
-  }
-}
-```

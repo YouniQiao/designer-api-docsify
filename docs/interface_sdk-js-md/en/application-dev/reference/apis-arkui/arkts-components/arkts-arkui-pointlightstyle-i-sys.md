@@ -4,8 +4,6 @@ You apply a point light style by setting the light source that emits illuminatio
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -29,8 +27,6 @@ Luminous intensity of the component. The recommended value range is 0-1.Default 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -45,13 +41,11 @@ illuminated?: IlluminatedType
 
 Whether the current component can be illuminated by the light source and the illuminated type.Default value: **IlluminatedType.NONE**
 
-**Type:** IlluminatedType
+**Type:** [IlluminatedType](../arkts-apis/arkts-arkui-illuminatedtype-e-sys.md)
 
 **Default:** IlluminatedType.NONE
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +66,6 @@ Light source. The light source affects the surrounding components that are marke
 **Default:** undefined
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

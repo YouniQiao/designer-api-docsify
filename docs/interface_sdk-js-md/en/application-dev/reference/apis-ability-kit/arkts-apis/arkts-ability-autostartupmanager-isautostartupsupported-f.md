@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isAutoStartupSupported
@@ -15,8 +15,6 @@ function isAutoStartupSupported(): boolean
 Check whether the current device supports auto startup on this device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

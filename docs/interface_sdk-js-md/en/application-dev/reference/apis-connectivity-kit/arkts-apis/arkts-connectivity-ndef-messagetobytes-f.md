@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## messageToBytes
 
 ```TypeScript
-function messageToBytes(ndefMessage: NdefMessage): int[]
+function messageToBytes(ndefMessage: NdefMessage): number[]
 ```
 
 Converts an NDEF message to bytes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +30,7 @@ Converts an NDEF message to bytes.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
+| number[] |
 
 **Error codes:**
 

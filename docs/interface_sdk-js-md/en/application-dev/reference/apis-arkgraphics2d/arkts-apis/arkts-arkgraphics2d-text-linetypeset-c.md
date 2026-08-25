@@ -4,33 +4,23 @@ Implements a carrier that stores the text content and style. It can be used to c
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createLine
 
-ArkTS-Dyn:
 ```TypeScript
 createLine(startIndex: number, count: number): TextLine
-```
-
-ArkTS-Sta:
-```TypeScript
-createLine(startIndex: int, count: int): TextLine
 ```
 
 Generates a text line object based on the specified layout range.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -40,8 +30,8 @@ Generates a text line object based on the specified layout range.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| startIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| count | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| startIndex | number | Yes |
+| count | number | Yes |
 
 **Return value:**
 
@@ -55,32 +45,15 @@ Generates a text line object based on the specified layout range.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let startIndex = 0;
-let width = 100.0;
-let count = lineTypeset.getLineBreak(startIndex, width);
-let line : text.TextLine = lineTypeset.createLine(startIndex, count);
-```
-
 ## getLineBreak
 
-ArkTS-Dyn:
 ```TypeScript
 getLineBreak(startIndex: number, width: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getLineBreak(startIndex: int, width: double): int
 ```
 
 Obtains the number of characters that can fit in the layout from the specified position within a limited width.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -90,25 +63,17 @@ Obtains the number of characters that can fit in the layout from the specified p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| startIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| startIndex | number | Yes |
+| width | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let startIndex = 0;
-let width = 100.0;
-let count = lineTypeset.getLineBreak(startIndex, width);
-```

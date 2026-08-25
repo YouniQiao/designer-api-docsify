@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## cancelPrintJob
@@ -15,8 +15,6 @@ function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 取消已发送到打印机的打印任务，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = '121212';
-print.cancelPrintJob(jobId, (err: BusinessError) => {
-    if (err) {
-        console.error('cancelPrintJob failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('cancelPrintJob success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = '121212';
-print.cancelPrintJob(jobId).then(() => {
-    console.info('cancelPrintJob success');
-}).catch((error: BusinessError) => {
-    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
-})
-```
-
 
 ## cancelPrintJob
 
@@ -77,8 +47,6 @@ function cancelPrintJob(jobId: string): Promise<void>
 取消已发送到打印机的打印任务，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ function cancelPrintJob(jobId: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [cancelPrintJob](#cancelprintjob)

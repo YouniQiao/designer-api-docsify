@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from '@kit.AdsKit';
+import { identifier } from 'kits/@kit.AdsKit';
 ```
 
 ## getOAID
@@ -19,8 +19,6 @@ Obtains the OAID. This API uses an asynchronous callback to return the result.
 > in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
@@ -38,28 +36,6 @@ Obtains the OAID. This API uses an asynchronous callback to return the result.
 | --- |
 | [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-
-identifier.getOAID().then((data: string) => {
-  const oaid: string = data;
-});
-```
-
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-identifier.getOAID((err: BusinessError, data: string) => {
-  if (err.code) {
-    return;
-  }
-  const oaid: string = data;
-});
-```
-
 
 ## getOAID
 
@@ -74,8 +50,6 @@ Obtains the OAID. This API uses a promise to return the result.
 > in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
@@ -92,7 +66,3 @@ Obtains the OAID. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
-
-**Examples**
-
-See [getOAID](#getoaid)

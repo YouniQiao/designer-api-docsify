@@ -15,8 +15,6 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)
@@ -33,32 +31,6 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let getDeviceRemindTypeCallback = (err: Base.BusinessError, data: Notification.DeviceRemindType) => {
-  if (err) {
-    console.info("getDeviceRemindType failed " + JSON.stringify(err));
-  } else {
-    console.info("getDeviceRemindType success");
-  }
-};
-
-Notification.getDeviceRemindType(getDeviceRemindTypeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.getDeviceRemindType().then((data: Notification.DeviceRemindType) => {
-  console.info("getDeviceRemindType success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getDeviceRemindType failed, code is ${err}`);
-});
-```
-
 
 ## getDeviceRemindType
 
@@ -69,8 +41,6 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 Obtains the notification reminder type. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -87,7 +57,3 @@ Obtains the notification reminder type. This API uses a promise to return the re
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;DeviceRemindType & gt; |
-
-**Examples**
-
-See [getDeviceRemindType](#getdeviceremindtype)

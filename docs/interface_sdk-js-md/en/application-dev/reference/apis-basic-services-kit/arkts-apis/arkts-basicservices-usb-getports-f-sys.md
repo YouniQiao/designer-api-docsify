@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPorts
@@ -15,8 +15,6 @@ function getPorts(): Array<USBPort>
 Obtains the list of all physical USB ports.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -31,9 +29,3 @@ Obtains the list of all physical USB ports.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;USBPort & gt; |
-
-**Examples**
-
-```TypeScript
-let ret = usb.getPorts();
-```

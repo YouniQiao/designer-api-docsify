@@ -4,38 +4,14 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { PlainArray } from 'kits/@kit.ArkTS';
+import { PlainArrayForEachCb } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<[int, T]>
-```
-
-returns an iterator. Each item of the iterator is a ArkTS Object
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| IterableIterator & lt;[int, T] & gt; |
 
 ## [Symbol.iterator]
 
@@ -47,8 +23,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -57,7 +31,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[number, T] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, T]&gt; |
 
 **Error codes:**
 
@@ -65,49 +39,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-
-for (let item of plainArray) {
-  console.info("value:" + item[1], "index:" + item[0]);
-}
-// value:squirrel index:1
-// value:sparrow index:2
-```
-
-```TypeScript
-// You are not advised to use the add, remove, or removeAt APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let plainArray = new PlainArray<string>();
-for(let i = 0; i < 10; i++) {
-  plainArray.add(i,"123");
-}
-
-for(let i = 0; i < 10; i++) {
-  plainArray.remove(i);
-}
-```
-
 ## add
 
-ArkTS-Dyn:
 ```TypeScript
 add(key: number, value: T): void
-```
-
-ArkTS-Sta:
-```TypeScript
-add(key: int, value: T): void
 ```
 
 Adds an element to this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -117,7 +57,7 @@ Adds an element to this PlainArray.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| key | number | Yes |
 | value | T | Yes |
 
 **Error codes:**
@@ -125,14 +65,6 @@ Adds an element to this PlainArray.
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-console.info("result:", plainArray.get(1));  // result: squirrel
-```
 
 ## clear
 
@@ -144,8 +76,6 @@ Clears this PlainArray and sets its length to **0**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -156,17 +86,6 @@ Clears this PlainArray and sets its length to **0**.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-plainArray.clear();
-let result = plainArray.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## clone
 
 ```TypeScript
@@ -176,8 +95,6 @@ clone(): PlainArray<T>
 Clones this PlainArray and returns a copy. The modification to the copy does not affect the original instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -195,16 +112,6 @@ Clones this PlainArray and returns a copy. The modification to the copy does not
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let newPlainArray = plainArray.clone();
-console.info("result:", newPlainArray.get(1));  // result: squirrel
-```
-
 ## constructor
 
 ```TypeScript
@@ -214,8 +121,6 @@ constructor()
 A constructor used to create a **PlainArray** instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -227,12 +132,6 @@ A constructor used to create a **PlainArray** instance.
 | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-```
-
 ## forEach
 
 ```TypeScript
@@ -242,8 +141,6 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 Uses a callback to traverse each element in the **PlainArray** instance.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -262,57 +159,6 @@ Uses a callback to traverse each element in the **PlainArray** instance.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-plainArray.forEach((value: string, index: number) => {
-  console.info("value:" + value, "index:" + index);
-});
-// value:squirrel index:1
-// value:sparrow index:2
-```
-
-```TypeScript
-// You are not advised to use the add, remove, or removeAt APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let plainArray = new PlainArray<string>();
-for(let i = 0; i < 10; i++) {
-  plainArray.add(i,"123");
-}
-
-for(let i = 0; i < 10; i++) {
-  plainArray.remove(i);
-}
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: PlainArrayForEachCb<T>): void
-```
-
-Executes a provided function once for each value in the PlainArray object.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md)&lt;T&gt; | Yes |
-
-**Examples**
-
-See [forEach](#foreach)
-
 ## get
 
 ```TypeScript
@@ -322,8 +168,6 @@ get(key: number): T
 Obtains the value of the specified key in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -347,71 +191,15 @@ Obtains the value of the specified key in this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.get(1);
-console.info("result:", result);  // result: squirrel
-```
-
-## get
-
-```TypeScript
-get(key: int): T | undefined
-```
-
-Queries the value associated with the specified key
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | int | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-
-**Examples**
-
-See [get](#get)
-
 ## getIndexOfKey
 
-ArkTS-Dyn:
 ```TypeScript
 getIndexOfKey(key: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getIndexOfKey(key: int): int
 ```
 
 Obtains the index of the element with the specified key in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -421,13 +209,13 @@ Obtains the index of the element with the specified key in this PlainArray.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| key | number | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -435,33 +223,15 @@ Obtains the index of the element with the specified key in this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.getIndexOfKey(2);
-console.info("result = ", result); // result = 1
-```
-
 ## getIndexOfValue
 
-ArkTS-Dyn:
 ```TypeScript
 getIndexOfValue(value: T): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getIndexOfValue(value: T): int
 ```
 
 Obtains the index of the first occurrence of an element with the specified value in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -477,7 +247,7 @@ Obtains the index of the first occurrence of an element with the specified value
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -485,34 +255,16 @@ Obtains the index of the first occurrence of an element with the specified value
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.getIndexOfValue("squirrel");
-console.info("result:", result);  // result: 0
-```
-
 ## getKeyAt
 
-ArkTS-Dyn:
 ```TypeScript
 getKeyAt(index: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getKeyAt(index: int): int
 ```
 
 Obtains the key of the element at the specified position in this PlainArray.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -521,13 +273,13 @@ Obtains the key of the element at the specified position in this PlainArray.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| index | number | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -535,33 +287,15 @@ Obtains the key of the element at the specified position in this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.getKeyAt(1);
-console.info("result = ", result); // result = 2
-```
-
 ## getValueAt
 
-ArkTS-Dyn:
 ```TypeScript
 getValueAt(index: number): T
-```
-
-ArkTS-Sta:
-```TypeScript
-getValueAt(index: int): T
 ```
 
 Obtains the value of an element at the specified position in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -571,7 +305,7 @@ Obtains the value of an element at the specified position in this PlainArray.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| index | number | Yes |
 
 **Return value:**
 
@@ -586,33 +320,15 @@ Obtains the value of an element at the specified position in this PlainArray.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.getValueAt(1);
-console.info("result:", result);  // result: sparrow
-```
-
 ## has
 
-ArkTS-Dyn:
 ```TypeScript
 has(key: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-has(key: int): boolean
 ```
 
 Checks whether PlainArray has the specified key.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -622,7 +338,7 @@ Checks whether PlainArray has the specified key.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| key | number | Yes |
 
 **Return value:**
 
@@ -635,15 +351,6 @@ Checks whether PlainArray has the specified key.
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-let result = plainArray.has(1);
-console.info("result = ", result); // result = true
-```
 
 ## isEmpty
 
@@ -655,8 +362,6 @@ Checks whether this PlainArray is empty.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -673,14 +378,6 @@ Checks whether this PlainArray is empty.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const plainArray = new PlainArray<string>();
-let result = plainArray.isEmpty();
-console.info("result = ", result); // result =  true
-```
-
 ## remove
 
 ```TypeScript
@@ -690,8 +387,6 @@ remove(key: number): T
 Removes a key-value pair with the specified key.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -715,54 +410,6 @@ Removes a key-value pair with the specified key.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.remove(2);
-console.info("result:", result);  // result: sparrow
-```
-
-## remove
-
-```TypeScript
-remove(key: int): T | undefined
-```
-
-Remove the key-value pair based on a specified key if it exists and return the value
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | int | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-
-**Examples**
-
-See [remove](#remove)
-
 ## removeAt
 
 ```TypeScript
@@ -772,8 +419,6 @@ removeAt(index: number): T
 Removes an element at the specified position from this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -797,71 +442,15 @@ Removes an element at the specified position from this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.removeAt(1);
-console.info("result:", result);  // result: sparrow
-```
-
-## removeAt
-
-```TypeScript
-removeAt(index: int): T | undefined
-```
-
-Remove the key-value pair at a specified index if it exists and return the value
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | int | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| T \| undefined |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-
-**Examples**
-
-See [removeAt](#removeat)
-
 ## removeRangeFrom
 
-ArkTS-Dyn:
 ```TypeScript
 removeRangeFrom(index: number, size: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-removeRangeFrom(index: int, size: int): int
 ```
 
 Removes elements within the specified range.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -871,14 +460,14 @@ Removes elements within the specified range.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| index | number | Yes |
+| size | number | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -887,33 +476,15 @@ Removes elements within the specified range.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.removeRangeFrom(1, 3);
-console.info("result:", result);  // result: 1
-```
-
 ## setValueAt
 
-ArkTS-Dyn:
 ```TypeScript
 setValueAt(index: number, value: T): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setValueAt(index: int, value: T): void
 ```
 
 Sets a value for an element at the specified position in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -923,7 +494,7 @@ Sets a value for an element at the specified position in this PlainArray.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| index | number | Yes |
 | value | T | Yes |
 
 **Error codes:**
@@ -932,17 +503,6 @@ Sets a value for an element at the specified position in this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string | number>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-plainArray.setValueAt(1, 3546);
-let result = plainArray.getValueAt(1);
-console.info("result:", result);  // result: 3546
-```
 
 ## toString
 
@@ -953,8 +513,6 @@ toString(): String
 Obtains a string that contains all elements in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -972,16 +530,6 @@ Obtains a string that contains all elements in this PlainArray.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let plainArray = new PlainArray<string>();
-plainArray.add(1, "squirrel");
-plainArray.add(2, "sparrow");
-let result = plainArray.toString();
-console.info("result:", result);  // result: 1:squirrel,2:sparrow
-```
-
 ## length
 
 ```TypeScript
@@ -993,8 +541,6 @@ Number of elements in a PlainArray.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

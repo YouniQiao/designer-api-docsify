@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## finishSession
@@ -15,8 +15,6 @@ function finishSession(handle: number, options: HuksOptions, callback: AsyncCall
 Finishes the key operation. This API uses an asynchronous callback to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +70,6 @@ Finishes the key operation by segment. The **finishSession** operation is used f
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -119,8 +115,6 @@ function finishSession(handle: number, options: HuksOptions, token?: Uint8Array)
 Finishes the key operation. This API uses a promise to return the result.The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

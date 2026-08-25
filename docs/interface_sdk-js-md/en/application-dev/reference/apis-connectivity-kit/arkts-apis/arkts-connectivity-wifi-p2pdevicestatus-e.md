@@ -4,8 +4,6 @@ P2P device status.@enum { number } P2pDeviceStatus
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md)
@@ -21,8 +19,6 @@ CONNECTED = 0
 Indicate p2p device is connected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Indicate p2p device is invited.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [INVITED](arkts-connectivity-wifimanager-p2pdevicestatus-e.md#invited)
@@ -57,8 +51,6 @@ FAILED = 2
 Indicate p2p device is failed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Indicate p2p device is available.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AVAILABLE](arkts-connectivity-wifimanager-p2pdevicestatus-e.md#available)
@@ -93,8 +83,6 @@ UNAVAILABLE = 4
 Indicate p2p device is unavailable.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

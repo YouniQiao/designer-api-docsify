@@ -4,8 +4,6 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md)
@@ -15,7 +13,7 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## address
@@ -29,8 +27,6 @@ Endpoint address.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Endpoint attributes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [attributes](arkts-basicservices-usbmanager-usbendpoint-i.md#attributes)
@@ -69,8 +63,6 @@ Endpoint direction.
 **Type:** USBRequestDirection
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Unique ID of the interface to which the endpoint belongs.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceid)
@@ -109,8 +99,6 @@ Endpoint interval.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Maximum size of data packets on the endpoint.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxpacketsize)
@@ -150,8 +136,6 @@ Endpoint number.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [number](arkts-basicservices-usbmanager-usbendpoint-i.md#number)
@@ -169,8 +153,6 @@ Endpoint type.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

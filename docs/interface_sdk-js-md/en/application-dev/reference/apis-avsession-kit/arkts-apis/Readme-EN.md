@@ -5,7 +5,6 @@
   - [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md)
 - [@ohos.multimedia.avCastPicker](arkts-multimedia-avcastpicker.md)
   - [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)
-  - [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 - [@ohos.multimedia.avCastPickerParam](arkts-multimedia-avcastpickerparam.md)
   - [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
   - [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)
@@ -111,10 +110,6 @@
 - [@ohos.multimedia.avsession](arkts-multimedia-avsession.md)
   <!--Del-->
   - [castAudio(system api)](arkts-avsession-avsession-castaudio-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [castAudioSession(system api)](arkts-avsession-avsession-castaudiosession-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [castAudioSessionAll(system api)](arkts-avsession-avsession-castaudiosessionall-f-sys.md)<!--DelEnd-->
   - [createAVSession](arkts-avsession-avsession-createavsession-f.md)
   - [createController](arkts-avsession-avsession-createcontroller-f.md)
   <!--Del-->
@@ -138,20 +133,8 @@
   - [off(system api)](arkts-avsession-avsession-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offActiveSessionChanged(system api)](arkts-avsession-avsession-offactivesessionchanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offDeviceAvailable(system api)](arkts-avsession-avsession-offdeviceavailable-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offDeviceLogEvent(system api)](arkts-avsession-avsession-offdevicelogevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offDeviceOffline(system api)](arkts-avsession-avsession-offdeviceoffline-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offDeviceStateChanged(system api)](arkts-avsession-avsession-offdevicestatechanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offDistributedSessionChange(system api)](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md)<!--DelEnd-->
   - [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md)
   - [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md)
-  <!--Del-->
-  - [offSessionServiceDie(system api)](arkts-avsession-avsession-offsessionservicedie-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offSystemCommonEvent(system api)](arkts-avsession-avsession-offsystemcommonevent-f-sys.md)<!--DelEnd-->
   - [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md)
@@ -159,20 +142,8 @@
   - [on(system api)](arkts-avsession-avsession-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onActiveSessionChanged(system api)](arkts-avsession-avsession-onactivesessionchanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onDeviceAvailable(system api)](arkts-avsession-avsession-ondeviceavailable-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onDeviceLogEvent(system api)](arkts-avsession-avsession-ondevicelogevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onDeviceOffline(system api)](arkts-avsession-avsession-ondeviceoffline-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onDeviceStateChanged(system api)](arkts-avsession-avsession-ondevicestatechanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onDistributedSessionChange(system api)](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md)<!--DelEnd-->
   - [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md)
   - [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md)
-  <!--Del-->
-  - [onSessionServiceDie(system api)](arkts-avsession-avsession-onsessionservicedie-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onSystemCommonEvent(system api)](arkts-avsession-avsession-onsystemcommonevent-f-sys.md)<!--DelEnd-->
   - [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md)
@@ -238,13 +209,11 @@
   - [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
   - [AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)
   - [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
-  - [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md)
   - [EventProcess](arkts-avsession-avsession-eventprocess-t.md)
   - [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)
   - [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md)
   - [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md)
   - [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)
-  - [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md)
   - [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
   - [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md)
   - [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md)

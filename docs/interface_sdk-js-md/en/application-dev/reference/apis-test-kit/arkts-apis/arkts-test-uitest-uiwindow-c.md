@@ -4,15 +4,13 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## close
@@ -24,8 +22,6 @@ close(): Promise<void>
 Closes a window. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,19 +41,6 @@ Closes a window. This API uses a promise to return the result.
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.close();
-}
-```
-
 ## focus
 
 ```TypeScript
@@ -67,8 +50,6 @@ focus(): Promise<void>
 Focuses a window. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -87,19 +68,6 @@ Focuses a window. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.focus();
-}
-```
-
 ## getBounds
 
 ```TypeScript
@@ -109,8 +77,6 @@ getBounds(): Promise<Rect>
 Obtains the bounds information of a window. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,30 +95,6 @@ Obtains the bounds information of a window. This API uses a promise to return th
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let rect = await button.getBounds();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let rect = await window.getBounds();
-}
-```
-
 ## getBundleName
 
 ```TypeScript
@@ -162,8 +104,6 @@ getBundleName(): Promise<string>
 Obtains the bundle name of the application to which a window belongs. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,36 +122,15 @@ Obtains the bundle name of the application to which a window belongs. This API u
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let name: string = await window.getBundleName();
-}
-```
-
 ## getDisplayId
 
-ArkTS-Dyn:
 ```TypeScript
 getDisplayId(): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getDisplayId(): Promise<int>
 ```
 
 Obtains the ID of the display to which a window belongs. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -221,7 +140,7 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -229,30 +148,6 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('TextInput'));
-  let displayId = await button.getDisplayId();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiWindow, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let id = await window.getDisplayId();
-}
-```
 
 ## getTitle
 
@@ -264,8 +159,6 @@ Obtains the window title. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -283,19 +176,6 @@ Obtains the window title. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let title = await window.getTitle();
-}
-```
-
 ## getWindowMode
 
 ```TypeScript
@@ -305,8 +185,6 @@ getWindowMode(): Promise<WindowMode>
 Obtains the window mode. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -325,19 +203,6 @@ Obtains the window mode. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let mode = await window.getWindowMode();
-}
-```
-
 ## isActive
 
 ```TypeScript
@@ -347,8 +212,6 @@ isActive(): Promise<boolean>
 Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -367,19 +230,6 @@ Checks whether a window is active. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isActive();
-}
-```
-
 ## isActived
 
 ```TypeScript
@@ -389,8 +239,6 @@ isActived(): Promise<boolean>
 Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -411,19 +259,6 @@ Checks whether a window is active. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let focused = await window.isActived();
-}
-```
-
 ## isFocused
 
 ```TypeScript
@@ -433,8 +268,6 @@ isFocused(): Promise<boolean>
 Checks whether a window is focused. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -453,49 +286,6 @@ Checks whether a window is focused. This API uses a promise to return the result
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  let focused = await window.isFocused();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
 ## maximize
 
 ```TypeScript
@@ -505,8 +295,6 @@ maximize(): Promise<void>
 Maximizes a window. A window can be resumed to its previous mode using [resume](#resume). This API uses a promise to return the result. This API is applicable to windows that can be maximized.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -525,19 +313,6 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.maximize();
-}
-```
 
 ## minimize
 
@@ -549,8 +324,6 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -569,36 +342,15 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.minimize();
-}
-```
-
 ## moveTo
 
-ArkTS-Dyn:
 ```TypeScript
 moveTo(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveTo(x: int, y: int): Promise<void>
 ```
 
 Moves a window to the target point. This API uses a promise to return the result. This API is applicable to moveable windows.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -608,8 +360,8 @@ Moves a window to the target point. This API uses a promise to return the result
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 **Return value:**
 
@@ -626,36 +378,15 @@ Moves a window to the target point. This API uses a promise to return the result
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.moveTo(100, 100);
-}
-```
-
 ## resize
 
-ArkTS-Dyn:
 ```TypeScript
 resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 ```
 
 Resizes a window based on the specified width, height, and direction. This API uses a promise to return the result. This API is applicable to resizable windows.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -665,8 +396,8 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| wide | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| wide | number | Yes |
+| height | number | Yes |
 | direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes |
 
 **Return value:**
@@ -684,19 +415,6 @@ Resizes a window based on the specified width, height, and direction. This API u
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ResizeDirection, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.resize(100, 100, ResizeDirection.LEFT);
-}
-```
-
 ## resume
 
 ```TypeScript
@@ -706,8 +424,6 @@ resume(): Promise<void>
 Resumes a window to its previous mode. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -726,19 +442,6 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.resume();
-}
-```
 
 ## split
 
@@ -750,8 +453,6 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -769,16 +470,3 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ actived: true });
-  await window.split();
-}
-```

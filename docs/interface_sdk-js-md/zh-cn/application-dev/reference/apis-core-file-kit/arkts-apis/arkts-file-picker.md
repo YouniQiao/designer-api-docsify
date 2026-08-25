@@ -7,14 +7,12 @@ Picker（选择器）是一个封装DocumentViewPicker、AudioViewPicker、Photo
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -42,15 +40,6 @@ import { picker } from '@kit.CoreFileKit';
 | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) |
 | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) |
 <!--DelEnd-->
-
-### 接口
-
-| 名称 |
-| --- |
-| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-i.md) |
-| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-i.md) |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-i.md) |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-i.md) |
 
 ### 枚举
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## unsubscribe
@@ -12,11 +12,9 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): number
 ```
 
-取消订阅用户状态监控。与subscribe()方法成对使用，用于取消订阅回调并释放资源。必须在subscribe()之后调用，取消未订阅的featureId返回失败。 <br>建议在应用退出或不再需要监控时调用unsubscribe()。
+取消订阅用户状态监控。与subscribe()方法成对使用，用于取消订阅回调并释放资源。必须在subscribe()之后调用，取消未订阅的featureId返回失败。 建议在应用退出或不再需要监控时调用unsubscribe()。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

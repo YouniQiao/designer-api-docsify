@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('callDetailsChange')
@@ -15,8 +15,6 @@ function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>)
 订阅callDetailsChange事件。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -43,14 +41,6 @@ function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>)
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('callDetailsChange', (data: call.CallAttributeOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('callEventChange')
 
@@ -61,8 +51,6 @@ function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void
 订阅callEventChange事件。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -89,14 +77,6 @@ function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('callEventChange', (data: call.CallEventOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('callDisconnectedCause')
 
@@ -107,8 +87,6 @@ function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetail
 订阅callDisconnectedCause事件。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -135,14 +113,6 @@ function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetail
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('callDisconnectedCause', (data: call.DisconnectedDetails) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('mmiCodeResult')
 
@@ -153,8 +123,6 @@ function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void
 订阅mmiCodeResult事件。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -181,14 +149,6 @@ function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('mmiCodeResult', (data: call.MmiCodeResults) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('audioDeviceChange')
 
@@ -199,8 +159,6 @@ function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInf
 订阅通话音频设备切换事件。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -227,14 +185,6 @@ function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInf
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('postDialDelay')
 
@@ -245,8 +195,6 @@ function on(type: 'postDialDelay', callback: Callback<string>): void
 订阅拨号后延迟事件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -273,14 +221,6 @@ function on(type: 'postDialDelay', callback: Callback<string>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-call.on('postDialDelay', (data: string) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('imsCallModeChange')
 
@@ -291,8 +231,6 @@ function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): voi
 订阅imsCallModeChange事件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -319,16 +257,6 @@ function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): voi
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.on('imsCallModeChange', (data: call.ImsCallModeInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('callSessionEvent')
 
@@ -339,8 +267,6 @@ function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): voi
 订阅callSessionEvent事件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -367,16 +293,6 @@ function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): voi
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.on('callSessionEvent', (data: call.CallSessionEvent) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('peerDimensionsChange')
 
@@ -387,8 +303,6 @@ function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetai
 订阅peerDimensionsChange事件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -415,16 +329,6 @@ function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetai
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.on('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('cameraCapabilitiesChange')
 
@@ -435,8 +339,6 @@ function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilit
 订阅cameraCapabilitiesChange事件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -462,11 +364,3 @@ function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilit
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-call.on('cameraCapabilitiesChange', (data: call.CameraCapabilities) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```

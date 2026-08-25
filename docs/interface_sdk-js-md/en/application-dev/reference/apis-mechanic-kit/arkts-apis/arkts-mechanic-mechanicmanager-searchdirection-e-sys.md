@@ -1,10 +1,8 @@
 # SearchDirection (System API)
 
-Search direction.@enum { int }
+Search direction.@enum { number }
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -20,8 +18,6 @@ System Default Direction.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Leftward direction. Also indicates clockwise direction.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ RIGHTWARD = 2
 Rightward direction. Also indicates the counterclockwise direction.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

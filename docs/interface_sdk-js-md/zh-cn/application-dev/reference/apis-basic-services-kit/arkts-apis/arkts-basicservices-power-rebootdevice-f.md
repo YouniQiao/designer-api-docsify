@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## rebootDevice
@@ -15,8 +15,6 @@ function rebootDevice(reason: string): void
 重启设备。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,9 +29,3 @@ function rebootDevice(reason: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | reason | string | 是 |
-
-**示例**
-
-```TypeScript
-power.rebootDevice('reboot_test');
-```

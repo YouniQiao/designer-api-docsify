@@ -4,8 +4,6 @@ Startup wizard completion scenario. When the initial switch to a sub-user (only 
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## USER_SETUP
@@ -17,8 +15,6 @@ USER_SETUP = 0
 A sub-user is switched to for the first time and the startup wizard for the sub-user is complete (only on PCs). The callback will not be triggered when the sub-user is switched again.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ The OTA upgrade is complete.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ DEVICE_PROVISION = 2
 The initial startup wizard is complete.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

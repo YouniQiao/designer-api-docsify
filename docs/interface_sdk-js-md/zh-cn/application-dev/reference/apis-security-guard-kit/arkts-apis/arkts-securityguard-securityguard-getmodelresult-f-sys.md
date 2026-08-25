@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## getModelResult
@@ -15,8 +15,6 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 请求安全模型检测结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.QUERY_SECURITY_MODEL_RESULT
 

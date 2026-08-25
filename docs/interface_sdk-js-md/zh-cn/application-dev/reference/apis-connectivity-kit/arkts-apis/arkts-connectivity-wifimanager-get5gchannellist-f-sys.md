@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## get5GChannelList
 
 ```TypeScript
-function get5GChannelList(): Array<int>
+function get5GChannelList(): Array<number>
 ```
 
 获取设备支持的5G信道列表。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -28,7 +26,7 @@ function get5GChannelList(): Array<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
@@ -38,16 +36,3 @@ function get5GChannelList(): Array<int>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let channelList = wifiManager.get5GChannelList();
-  console.info("channelList:" + JSON.stringify(channelList));    
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

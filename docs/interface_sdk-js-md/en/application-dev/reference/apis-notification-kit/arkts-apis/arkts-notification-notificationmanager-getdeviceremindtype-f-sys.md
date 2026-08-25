@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDeviceRemindType
@@ -15,8 +15,6 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 Obtains the notification reminder type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -44,31 +42,6 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDeviceRemindTypeCallback = (err: BusinessError, data: notificationManager.DeviceRemindType): void => {
-    if (err) {
-        console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDeviceRemindType success, data is ${JSON.stringify(data)}`);
-    }
-};
-notificationManager.getDeviceRemindType(getDeviceRemindTypeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getDeviceRemindType
 
@@ -79,8 +52,6 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 Obtains the notification reminder type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -106,7 +77,3 @@ Obtains the notification reminder type. This API uses a promise to return the re
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [getDeviceRemindType](#getdeviceremindtype)

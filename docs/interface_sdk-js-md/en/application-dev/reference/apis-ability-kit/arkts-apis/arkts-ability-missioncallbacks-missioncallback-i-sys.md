@@ -4,8 +4,6 @@ MissionCallback registered by app.@interface MissionCallback
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Called by system when mission changed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -29,31 +25,6 @@ Called by system when mission changed.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-
-distributedMissionManager.registerMissionListener(
-  {
-    deviceId: '123456'
-  },
-  {
-    notifyMissionsChanged: (deviceId: string) => {
-      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
-    },
-    notifySnapshot: (deviceId: string, mission: number) => {
-      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
-    },
-    notifyNetDisconnect: (deviceId: string, state: number) => {
-      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
-    }
-  }
-);
-```
 
 ## notifyNetDisconnect
 
@@ -65,8 +36,6 @@ Called by system when network disconnect.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -74,31 +43,6 @@ Called by system when network disconnect.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-
-distributedMissionManager.registerMissionListener(
-  {
-    deviceId: '123456'
-  },
-  {
-    notifyMissionsChanged: (deviceId: string) => {
-      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
-    },
-    notifySnapshot: (deviceId: string, mission: number) => {
-      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
-    },
-    notifyNetDisconnect: (deviceId: string, state: number) => {
-      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
-    }
-  }
-);
-```
 
 ## notifySnapshot
 
@@ -110,8 +54,6 @@ Called by system when snapshot changed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -119,28 +61,3 @@ Called by system when snapshot changed.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-
-distributedMissionManager.registerMissionListener(
-  {
-    deviceId: '123456'
-  },
-  {
-    notifyMissionsChanged: (deviceId: string) => {
-      console.info(`notifyMissionsChanged deviceId: ${JSON.stringify(deviceId)}`);
-    },
-    notifySnapshot: (deviceId: string, mission: number) => {
-      console.info(`notifySnapshot deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifySnapshot mission: ${JSON.stringify(mission)}`);
-    },
-    notifyNetDisconnect: (deviceId: string, state: number) => {
-      console.info(`notifyNetDisconnect deviceId: ${JSON.stringify(deviceId)}`);
-      console.info(`notifyNetDisconnect state: ${JSON.stringify(state)}`);
-    }
-  }
-);
-```

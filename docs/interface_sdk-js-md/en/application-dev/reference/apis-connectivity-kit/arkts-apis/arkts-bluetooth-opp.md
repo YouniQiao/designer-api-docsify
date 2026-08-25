@@ -4,8 +4,6 @@ Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related ca
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -13,7 +11,7 @@ Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related ca
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@kit.ConnectivityKit';
+import { opp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

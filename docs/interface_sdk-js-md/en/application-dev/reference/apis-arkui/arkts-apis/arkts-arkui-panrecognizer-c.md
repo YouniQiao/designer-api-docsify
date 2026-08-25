@@ -6,8 +6,6 @@ Gesture recognizer object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ getDirection(): PanDirection
 Obtains the recognized direction of the current pan gesture recognizer.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -73,12 +67,10 @@ Obtains the minimum pan distances required for different input sources to trigge
 
 > **NOTE：**&gt;
 > This API only returns thresholds for input sources that have been explicitly configured during pan gesture
-> initialization. The default threshold can be queried using the SourceTool.Unknown type.
+> initialization. The default threshold can be queried using the [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md).Unknown type.
 > Thresholds for unconfigured device types are not available.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +82,7 @@ Obtains the minimum pan distances required for different input sources to trigge
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Map & lt;SourceTool, number & gt; |
+| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt; |
 
 ## getPanGestureOptions
 
@@ -101,8 +93,6 @@ getPanGestureOptions(): PanGestureOptions
 Obtains the properties of this pan gesture recognizer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

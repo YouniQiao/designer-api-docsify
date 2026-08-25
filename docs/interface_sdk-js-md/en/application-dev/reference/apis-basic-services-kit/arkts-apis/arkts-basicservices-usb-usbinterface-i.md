@@ -4,8 +4,6 @@ Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)
@@ -15,7 +13,7 @@ Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## alternateSetting
@@ -29,8 +27,6 @@ Settings for alternating between descriptors of the same USB interface.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Device type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clazz](arkts-basicservices-usbmanager-usbinterface-i.md#clazz)
@@ -69,8 +63,6 @@ Endpoints that belong to the USB interface.
 **Type:** Array&lt;USBEndpoint&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Unique ID of the USB interface.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-basicservices-usbmanager-usbinterface-i.md#id)
@@ -109,8 +99,6 @@ Interface name.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Interface protocol.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [protocol](arkts-basicservices-usbmanager-usbinterface-i.md#protocol)
@@ -149,8 +135,6 @@ Device subclass.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

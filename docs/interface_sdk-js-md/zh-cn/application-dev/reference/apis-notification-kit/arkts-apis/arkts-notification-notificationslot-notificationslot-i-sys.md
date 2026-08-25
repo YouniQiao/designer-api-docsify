@@ -4,24 +4,21 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## authorizedStatus
 
 ```TypeScript
-readonly authorizedStatus?: int
+readonly authorizedStatus?: number
 ```
 
 授权状态。  
-- 0：表示已授权。 - 1：表示待授权。
+- 0：表示已授权。  
+- 1：表示待授权。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -30,17 +27,20 @@ readonly authorizedStatus?: int
 ## reminderMode
 
 ```TypeScript
-readonly reminderMode?: int
+readonly reminderMode?: number
 ```
 
 通知提醒模式。  
-- bit0：铃声提示。0表示关闭，1表示开启。 - bit1：锁屏。0表示关闭，1表示开启。 - bit2：横幅。0表示关闭，1表示开启。 - bit3：亮屏。0表示关闭，1表示开启。 - bit4：振动。0表示关闭，1表示开启。 - bit5：状态栏通知图标。0表示关闭，1表示开启。
+- bit0：铃声提示。0表示关闭，1表示开启。  
+- bit1：锁屏。0表示关闭，1表示开启。  
+- bit2：横幅。0表示关闭，1表示开启。  
+- bit3：亮屏。0表示关闭，1表示开启。  
+- bit4：振动。0表示关闭，1表示开启。  
+- bit5：状态栏通知图标。0表示关闭，1表示开启。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

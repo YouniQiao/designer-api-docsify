@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## updateSimMessage
@@ -15,8 +15,6 @@ function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallb
 更新SIM卡消息。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -43,43 +41,6 @@ function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallb
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-let promise = sms.updateSimMessage(updateSimMessageOptions);
-promise.then(() => {
-    console.info(`updateSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## updateSimMessage
 
@@ -90,8 +51,6 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 更新SIM卡消息。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -122,7 +81,3 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [updateSimMessage](#updatesimmessage)

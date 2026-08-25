@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## showAd
@@ -19,8 +19,6 @@ Shows a full-screen ad.
 > 2. This API only supports displaying rewarded ads and interstitial ads.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,19 +39,3 @@ Shows a full-screen ad.
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 | [21800004](../errorcode-ads.md#21800004-ad-display-failure) |
-
-**Examples**
-
-For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-
-function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext): void {
-  // Ad display parameters. You can set the parameters based on the project requirements.
-  const adDisplayOptions: advertising.AdDisplayOptions = {};
-  // Show the ad.
-  advertising.showAd(ad, adDisplayOptions, context);
-}
-```

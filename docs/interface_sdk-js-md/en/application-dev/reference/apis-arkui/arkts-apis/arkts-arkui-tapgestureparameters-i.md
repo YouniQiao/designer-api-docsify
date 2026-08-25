@@ -11,8 +11,6 @@ Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-b
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,8 +34,6 @@ recognition fails. In multi-finger scenarios, the tapped position is the average
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -56,8 +52,6 @@ Movement threshold for the tap gesture. If the value is less than or equal to 0 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +74,6 @@ after the first finger; when fingers are lifted, if the remaining number of fing
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

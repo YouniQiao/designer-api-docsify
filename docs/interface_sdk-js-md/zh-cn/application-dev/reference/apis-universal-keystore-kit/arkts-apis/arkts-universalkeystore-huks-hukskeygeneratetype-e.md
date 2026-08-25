@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -19,8 +17,6 @@ HUKS_KEY_GENERATE_TYPE_DEFAULT = 0
 默认生成的密钥。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ HUKS_KEY_GENERATE_TYPE_DERIVE = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -55,8 +49,6 @@ HUKS_KEY_GENERATE_TYPE_AGREE = 2
 协商生成的密钥。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

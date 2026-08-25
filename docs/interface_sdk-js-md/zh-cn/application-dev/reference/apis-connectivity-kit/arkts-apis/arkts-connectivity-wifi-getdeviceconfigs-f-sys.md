@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,8 +15,6 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 获取网络配置。<p>只能获取本应用创建的网络配置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -33,16 +31,3 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 | 类型 |
 | --- |
 | Array & lt;WifiDeviceConfig & gt; |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let configs = wifi.getDeviceConfigs();
-    console.info("configs:" + JSON.stringify(configs));
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

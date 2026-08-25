@@ -4,14 +4,12 @@ Provides recording strategy management, including collaborative recording and re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## enableSystemRecordController
@@ -23,8 +21,6 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 Enables or disables the system recording controller panel. The application can call this API to pull up the recording controller panel before starting the recording stream, allowing the user to finish selecting the recording device or audio effect parameters. The recording service can then be started to avoid inconsistent audio effects caused by switching during the recording process. The application must be in the foreground to enable the panel; the enable operation does not take effect if the application is in the background. Disabling the panel is not restricted by the application's foreground or background status. The API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

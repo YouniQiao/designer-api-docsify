@@ -1,7 +1,5 @@
 # BigIntConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (value: bigint | boolean | number | string): bigint
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -28,12 +24,10 @@
 ## asIntN
 
 ```TypeScript
-asIntN(bits: number, int: bigint): bigint
+asIntN(bits: number, number: bigint): bigint
 ```
 
 Interprets the low bits of a BigInt as a 2's-complement signed integer. All higher bits are discarded.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -49,12 +43,10 @@ Interprets the low bits of a BigInt as a 2's-complement signed integer. All high
 ## asUintN
 
 ```TypeScript
-asUintN(bits: number, int: bigint): bigint
+asUintN(bits: number, number: bigint): bigint
 ```
 
 Interprets the low bits of a BigInt as an unsigned integer. All higher bits are discarded.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -74,5 +66,3 @@ readonly prototype: BigInt
 ```
 
 **Type:** [BigInt](arkts-lib-es2020-bigint-bigint-i.md)
-
-**ArkTS mode:** 

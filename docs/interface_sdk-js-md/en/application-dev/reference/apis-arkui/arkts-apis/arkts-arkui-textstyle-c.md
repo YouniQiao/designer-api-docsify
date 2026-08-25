@@ -4,8 +4,6 @@ Describes the text style.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ constructor(value?: TextStyleInterface)
 A constructor used to create a text style.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ readonly fontColor?: ResourceColor
 
 Text color of the styled string.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,11 +59,9 @@ readonly fontConfigs?: FontConfigs
 
 Font configuration of the styled string.Default value: **undefined**, indicating that fontConfigs is not set.
 
-**Type:** FontConfigs
+**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,8 +81,6 @@ Font family of the styled string.Returns **undefined** by default.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,8 +99,6 @@ Font size of the styled string.Unit: vp
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -128,8 +116,6 @@ Font style of the styled string.
 **Type:** FontStyle
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,8 +136,6 @@ Array of variable font attributes.Default value: **undefined**, indicating that 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -170,8 +154,6 @@ Font weight of the styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -186,11 +168,9 @@ readonly strokeColor?: ResourceColor
 
 Text stroke color of the styled string.Default value: same as the text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,11 +187,9 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 Text stroke join style of the styled string.Default value: **StrokeJoinStyle.MITER_JOIN**.  
 **Since**: 26.0.0.
 
-**Type:** StrokeJoinStyle
+**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -231,8 +209,6 @@ Text stroke width of the styled string.Default value: **0**, in vp.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -247,11 +223,9 @@ readonly superscript?: SuperscriptStyle
 
 Superscript or subscript for the styled string.Default value: **SuperscriptStyle.NORMAL**.
 
-**Type:** SuperscriptStyle
+**Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

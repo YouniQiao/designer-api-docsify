@@ -4,14 +4,12 @@ Defines information about the socket connection.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## address
@@ -26,8 +24,6 @@ Peer IP address.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## family
@@ -37,14 +33,13 @@ family: 'IPv4' | 'IPv6'
 ```
 
 Network protocol type.  
-- IPv4 - IPv6  
+- IPv4  
+- IPv6  
 The default value is **IPv4**.
 
 **Type:** 'IPv4' \| 'IPv6'
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -60,8 +55,6 @@ Port number. The value ranges from **0** to **65535**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## size
@@ -75,7 +68,5 @@ Length of the server response message, in bytes.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack

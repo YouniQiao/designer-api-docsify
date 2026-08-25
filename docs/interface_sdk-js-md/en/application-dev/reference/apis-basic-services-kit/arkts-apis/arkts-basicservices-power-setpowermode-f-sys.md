@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setPowerMode
@@ -15,8 +15,6 @@ function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): voi
 Sets the power mode of a device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
@@ -40,28 +38,6 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) |
 
-**Examples**
-
-```TypeScript
-power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
-    if (typeof err === 'undefined') {
-        console.info('set power mode to MODE_PERFORMANCE');
-    } else {
-        console.error('set power mode failed, err: ' + err);
-    }
-});
-```
-
-```TypeScript
-power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)
-.then(() => {
-    console.info('set power mode to MODE_PERFORMANCE');
-})
-.catch((err : Error)=> {
-    console.error('set power mode failed, err: ' + err);
-});
-```
-
 
 ## setPowerMode
 
@@ -72,8 +48,6 @@ function setPowerMode(mode: DevicePowerMode): Promise<void>
 Sets the power mode of a device. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
@@ -101,7 +75,3 @@ Sets the power mode of a device. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) |
-
-**Examples**
-
-See [setPowerMode](#setpowermode)

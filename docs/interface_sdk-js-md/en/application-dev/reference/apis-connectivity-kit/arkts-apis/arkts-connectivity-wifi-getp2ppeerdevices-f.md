@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -15,8 +15,6 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 Obtains the information about the found devices.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -32,24 +30,6 @@ Obtains the information about the found devices.
 | --- |
 | Promise & lt;WifiP2pDevice[] & gt; |
 
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
-   if (err) {
-       console.error("get P2P peer devices error");
-       return;
-   }
-	console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-
-wifi.getP2pPeerDevices().then(data => {
-	console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-```
-
 
 ## getP2pPeerDevices
 
@@ -60,8 +40,6 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 Obtains the information about the found devices.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,7 +54,3 @@ Obtains the information about the found devices.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes |
-
-**Examples**
-
-See [getP2pPeerDevices](#getp2ppeerdevices)

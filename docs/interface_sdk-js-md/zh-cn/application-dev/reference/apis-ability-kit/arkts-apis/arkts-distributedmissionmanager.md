@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -29,10 +27,8 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
-| [off](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) |
-| [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) |
-| [on](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) |
-| [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) |
+| off |
+| on |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) |

@@ -4,8 +4,6 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## bundleName
@@ -28,8 +26,6 @@ Indicates the name of a bundle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Indicates the name of a bundle.
 ## lastIncrementalTime
 
 ```TypeScript
-lastIncrementalTime: long
+lastIncrementalTime: number
 ```
 
 Time of the last incremental backup
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

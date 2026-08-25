@@ -10,8 +10,6 @@ Specifies which audio streams are affected by changes on the ringing mode and Do
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -25,8 +23,6 @@ const AFFECTED_MUTE_STREAMS: string
 Specifies which audio streams are affected by the mute mode.<p>If you want a specific audio stream to remain muted in mute mode, set the corresponding bit to {@code 1}.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -42,8 +38,6 @@ Indicates the storage area of the system default alarm.<p>You can obtain the URI
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -57,8 +51,6 @@ const DEFAULT_NOTIFICATION_SOUND: string
 Indicates the storage area of the system default notification tone.<p>You can obtain the URI of the system default notification tone.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -74,8 +66,6 @@ Indicates the storage area of the system default ringtone.<p>You can obtain the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -86,11 +76,9 @@ Indicates the storage area of the system default ringtone.<p>You can obtain the 
 const DTMF_TONE_TYPE_WHILE_DIALING: string
 ```
 
-Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing.<p>The value {@code 0} indicates the normal short sound effect, and {@code 1} indicates the long sound effect.
+Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing.<p>The value {@code 0} indicates the normal short sound effect, and {@code 1} indicates the number sound effect.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -106,8 +94,6 @@ Specifies whether the DTMF tone is played when dialing.<p>If the value is {@code
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -121,8 +107,6 @@ const HAPTIC_FEEDBACK_STATUS: string
 Indicates whether the device enables haptic feedback.<p>The value is of the boolean type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -138,8 +122,6 @@ Specifies whether the sound effects are enabled.<p>If the value is {@code 0}, th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -154,8 +136,6 @@ Specifies whether the device vibrates for an event. This parameter is used insid
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -169,8 +149,6 @@ const VIBRATE_WHILE_RINGING: string
 Indicates whether the device vibrates when it is ringing for an incoming call.<p>This constant will be used by Phone and Settings applications. The value is of the boolean type. This constant affects only the scenario where the device rings for an incoming call. It does not affect any other application or scenario.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 

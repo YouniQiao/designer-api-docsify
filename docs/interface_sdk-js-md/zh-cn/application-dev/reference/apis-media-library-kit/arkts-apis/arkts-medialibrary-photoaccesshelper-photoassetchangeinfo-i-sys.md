@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## albumChangeInfos
@@ -25,8 +23,6 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 **类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] \| null
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ assetSourceType?: AssetSourceType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -57,16 +51,14 @@ assetSourceType?: AssetSourceType
 ## dateAddedMs
 
 ```TypeScript
-dateAddedMs: long
+dateAddedMs: number
 ```
 
 文件创建时的Unix时间戳（单位：毫秒）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,8 +76,6 @@ dateDay: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,16 +83,16 @@ dateDay: string
 ## dateModifiedMs
 
 ```TypeScript
-dateModifiedMs?: long
+dateModifiedMs?: number
 ```
 
-文件修改时的Unix时间戳。<br> 单位为毫秒。
+文件修改时的Unix时间戳。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+ 单位为毫秒。
+
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,16 +103,14 @@ dateModifiedMs?: long
 ## dateTakenMs
 
 ```TypeScript
-dateTakenMs: long
+dateTakenMs: number
 ```
 
 文件拍摄时的Unix时间戳（单位：毫秒）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -131,16 +119,14 @@ dateTakenMs: long
 ## dateTrashedMs
 
 ```TypeScript
-dateTrashedMs: long
+dateTrashedMs: number
 ```
 
 文件删除时的Unix时间戳（单位：毫秒）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,8 +144,6 @@ displayName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -167,16 +151,14 @@ displayName?: string
 ## fileId
 
 ```TypeScript
-fileId: int
+fileId: number
 ```
 
 媒体资产（图片/视频）的id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -185,16 +167,16 @@ fileId: int
 ## hiddenTime
 
 ```TypeScript
-hiddenTime?: long
+hiddenTime?: number
 ```
 
-媒体资产（图片/视频）的隐藏时间。<br> 单位为毫秒。
+媒体资产（图片/视频）的隐藏时间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+ 单位为毫秒。
+
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,8 +196,6 @@ isHidden: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -232,8 +212,6 @@ position?: PositionType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -241,16 +219,14 @@ position?: PositionType
 ## size
 
 ```TypeScript
-size?: long
+size?: number
 ```
 
 媒体资产（图片/视频）的文件大小（单位：字节）。动态照片的size包括图片和视频的总大小。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -268,8 +244,6 @@ strongAssociation: StrongAssociationType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -285,8 +259,6 @@ thumbnailVisible: ThumbnailVisibility
 **类型：** ThumbnailVisibility
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

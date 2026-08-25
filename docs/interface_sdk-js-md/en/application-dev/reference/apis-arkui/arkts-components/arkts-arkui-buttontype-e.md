@@ -21,7 +21,7 @@ Enumerates the button types.
 > In this case, the corner radius does not change with the button height and is subject to the **controlSize**
 > property. When **controlSize** is **NORMAL**, the corner radius is 20 vp; when **controlSize** is **SMALL**, the
 > corner radius is 14 vp.&gt;
-> - When border is set for the
+> - When [border](arkts-arkui-commonmethod-c.md#border) is set for the
 > button, a default
 > borderRadius value is
 > automatically applied. When both **border** and **borderRadius** attributes are used, **borderRadius** must be
@@ -29,8 +29,6 @@ Enumerates the button types.
 > border style.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,8 +41,6 @@ Capsule
 Capsule-type button (the round corner is half of the height by default).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,8 +58,6 @@ Circular button.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -80,8 +74,6 @@ Normal button, with no rounded corners by default.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -97,8 +89,6 @@ ROUNDED_RECTANGLE = 3
 Rounded rectangle button (default value: when **controlSize** is **NORMAL**, the corner radius is 20 vp; when controlSize is **SMALL**, the corner radius is 14 vp).
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

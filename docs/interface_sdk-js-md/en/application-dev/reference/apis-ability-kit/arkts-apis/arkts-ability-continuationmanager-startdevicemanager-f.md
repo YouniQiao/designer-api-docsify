@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startDeviceManager
@@ -16,8 +16,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -32,55 +30,6 @@ Starts the device selection module to show the list of available devices on the 
 | --- | --- | --- |
 | token | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.startDeviceManager(token, (err) => {
-  if (err.code != 0) {
-    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('startDeviceManager finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  },
-  (err) => {
-    if (err.code != 0) {
-      console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('startDeviceManager finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  }).then(() => {
-    console.info('startDeviceManager finished. ');
-  }).catch((err: BusinessError) => {
-    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-});
-```
 
 
 ## startDeviceManager
@@ -93,8 +42,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -108,12 +55,8 @@ Starts the device selection module to show the list of available devices on the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [startDeviceManager](#startdevicemanager)
 
 
 ## startDeviceManager
@@ -126,8 +69,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -141,14 +82,10 @@ Starts the device selection module to show the list of available devices on the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [startDeviceManager](#startdevicemanager)

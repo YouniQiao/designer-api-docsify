@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -20,14 +18,13 @@ lg?: number
 ```
 
 在大宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为12。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为12。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,14 +39,13 @@ md?: number
 ```
 
 在中等宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为8。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为8。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -64,14 +60,13 @@ sm?: number
 ```
 
 在小宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为4。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为4。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -86,14 +81,13 @@ xl?: number
 ```
 
 在特大宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为12。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为12。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,14 +102,13 @@ xs?: number
 ```
 
 在最小宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为2。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为2。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -130,14 +123,13 @@ xxl?: number
 ```
 
 在超大宽度类型设备上，栅格容器组件的栅格列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为12。  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为12。  
 非法值：按默认值处理。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

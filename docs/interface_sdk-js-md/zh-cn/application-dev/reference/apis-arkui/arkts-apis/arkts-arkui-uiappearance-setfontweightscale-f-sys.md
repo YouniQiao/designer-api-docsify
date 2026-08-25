@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## setFontWeightScale
@@ -15,8 +15,6 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 设置系统字体粗细。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -43,23 +41,3 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [500001](../errorcode-uiappearance.md#500001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fontWeightScale = 1;
-
-try {
-  uiAppearance.setFontWeightScale(fontWeightScale).then(() => {
-    console.info('Set fontWeightScale successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Set fontWeightScale failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`Set fontWeightScale failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

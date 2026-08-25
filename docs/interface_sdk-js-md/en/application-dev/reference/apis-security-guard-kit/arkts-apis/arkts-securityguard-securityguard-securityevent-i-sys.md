@@ -4,8 +4,6 @@ Provides the SecurityEvent type, including the event id, version info, report co
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the SecurityEvent type, including the event id, version info, report co
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## content
@@ -27,8 +25,6 @@ The report content
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,8 +42,6 @@ The event id
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ The event timestamp, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ The version of a security event. Different versions indicate different data form
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

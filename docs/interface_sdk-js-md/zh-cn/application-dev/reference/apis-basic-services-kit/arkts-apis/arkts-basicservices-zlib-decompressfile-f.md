@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## decompressFile
@@ -19,8 +19,6 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,79 +42,6 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
 
-**示例**
-
-```TypeScript
-// 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
-  parallel: zlib.ParallelStrategy.PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION
-};
-
-try {
-  zlib.decompressFile(inFile, outFileDir, options, (errData: BusinessError) => {
-    if (errData) {
-      console.error(`decompressFile errData is errCode:${errData.code}  message:${errData.message}`);
-    } else {
-      console.info(`decompressFile success.`);
-    }
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`decompressFile errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-// 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION
-};
-
-try {
-  zlib.decompressFile(inFile, outFileDir, options).then((data: void) => {
-    console.info('decompressFile success. data: ' + JSON.stringify(data));
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-// 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-
-try {
-  zlib.decompressFile(inFile, outFileDir, (errData: BusinessError) => {
-    if (errData) {
-      console.error(`decompressFile failed. code is ${errData.code}, message is ${errData.message}`);
-    } else {
-      console.info(`decompressFile success.`);
-    }
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`decompressFile failed. code is ${code}, message is ${message}`);
-}
-```
-
 
 ## decompressFile
 
@@ -131,8 +56,6 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -155,10 +78,6 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
 
-**示例**
-
-参见 [decompressFile](#decompressfile)
-
 
 ## decompressFile
 
@@ -173,8 +92,6 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -202,7 +119,3 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 | [900001](../../apis-ability-kit/errorcode-zlib.md#900001-传入的源文件错误) |
 | [900002](../../apis-ability-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 | [900003](../../apis-ability-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-
-**示例**
-
-参见 [decompressFile](#decompressfile)

@@ -9,8 +9,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
@@ -22,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -34,10 +32,10 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 | --- |
 | [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
 | [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| on |
+| on |
+| off |
+| off |
 | [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
 | [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
 | [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |

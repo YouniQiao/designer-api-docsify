@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## getFormsInfo
@@ -15,8 +15,6 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,73 +41,6 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: BusinessError, data: formInfo.FormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost getFormsInfo success.');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: BusinessError, data: formInfo.FormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost getFormsInfo success.');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
-    console.info('formHost getFormsInfo success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-const filter: formInfo.FormInfoFilter = {
-  bundleName: 'ohos.samples.FormApplication',
-  moduleName: 'entry',
-  supportedDimensions: [FormDimension.Dimension_1_2, FormDimension.Dimension_2_2, FormDimension.Dimension_2_4]
-};
-try {
-  formHost.getFormsInfo(filter).then((data: formInfo.FormInfo[]) => {
-    console.info('formHost getFormsInfo success.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getFormsInfo
 
@@ -124,8 +55,6 @@ function getFormsInfo(
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -153,10 +82,6 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-See [getFormsInfo](#getformsinfo)
-
 
 ## getFormsInfo
 
@@ -167,8 +92,6 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -201,10 +124,6 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-See [getFormsInfo](#getformsinfo)
-
 
 ## getFormsInfo
 
@@ -215,8 +134,6 @@ function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.F
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -247,7 +164,3 @@ Obtains the widget information provided by a specified application on the device
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [getFormsInfo](#getformsinfo)

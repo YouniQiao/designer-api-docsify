@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## queryCapabilities
@@ -15,8 +15,6 @@ function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomi
 Queries device-supported atomic capabilities.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

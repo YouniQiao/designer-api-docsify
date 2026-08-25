@@ -7,8 +7,6 @@ Enumerates the ability subtypes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -23,8 +21,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -38,8 +34,6 @@ CA = 1
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

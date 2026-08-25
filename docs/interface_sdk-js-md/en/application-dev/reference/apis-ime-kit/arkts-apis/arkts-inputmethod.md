@@ -4,21 +4,19 @@
  <br>
  <br>Provides the constants.
  <br>
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |
 | -------- | -------- | -------- |
-| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md)<sup>8+</sup> | number | 128 |
+| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md)<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>8+</sup> | number | 128 |
 
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## Summary
@@ -90,7 +88,7 @@ import { inputMethod } from '@kit.IMEKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [AttachFailureReason(Input Method Framework)](arkts-ime-inputmethod-attachfailurereason-e.md) |
-| [CapitalizeMode(Input Method Framework)](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br> \ | Name\| Value\| Description\| \| -------- \| -- \| -------- \| \| NONE \| 0 \| The first letter is not capitalized.\| \| SENTENCES \| 1 \| The first letter of each sentence is capitalized.\| \| WORDS \| 2 \| The first letter of each word is capitalized.\| \| CHARACTERS \| 3 \| All letters are capitalized.\|
+| [CapitalizeMode(Input Method Framework)](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.   \| Name\| Value\| Description\| \| -------- \| -- \| -------- \| \| NONE \| 0 \| The first letter is not capitalized.\| \| SENTENCES \| 1 \| The first letter of each sentence is capitalized.\| \| WORDS \| 2 \| The first letter of each word is capitalized.\| \| CHARACTERS \| 3 \| All letters are capitalized.\|
 | [Direction(Input Method Framework)](arkts-ime-inputmethod-direction-e.md) |
 | [EnabledState(Input Method Framework)](arkts-ime-inputmethod-enabledstate-e.md) |
 | [EnterKeyType(Input Method Framework)](arkts-ime-inputmethod-enterkeytype-e.md) |
@@ -103,10 +101,6 @@ import { inputMethod } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [GetTextCallback(Input Method Framework)](arkts-ime-inputmethod-gettextcallback-t.md) |
-| [GetTextIndexAtCursorCallback(Input Method Framework)](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) |
-| [ImeChangeCallback(Input Method Framework)](arkts-ime-inputmethod-imechangecallback-t.md) |
-| [OnMessageCallback(Input Method Framework)](arkts-ime-inputmethod-onmessagecallback-t.md) |
 | [SetPreviewTextCallback(Input Method Framework)](arkts-ime-inputmethod-setpreviewtextcallback-t.md) |
 
 <!--Del-->

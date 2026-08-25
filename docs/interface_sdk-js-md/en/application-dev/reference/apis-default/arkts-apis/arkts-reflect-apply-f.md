@@ -17,8 +17,6 @@ function apply<T, A extends readonly any[], R>(
 
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -37,8 +35,6 @@ Calls the function with the specified object as the this value and the elements 
 ```TypeScript
 function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

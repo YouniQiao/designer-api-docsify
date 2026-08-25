@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStatsInfoByInterval
@@ -11,8 +11,8 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```TypeScript
 function queryBundleStatsInfoByInterval(
     byInterval: IntervalType,
-    begin: long,
-    end: long,
+    begin: number,
+    end: number,
     callback: AsyncCallback<Array<BundleStatsInfo>>
   ): void
 ```
@@ -20,8 +20,6 @@ function queryBundleStatsInfoByInterval(
 Queries usage information about each bundle within a specified period at a specified interval.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -34,8 +32,8 @@ Queries usage information about each bundle within a specified period at a speci
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| begin | number | Yes |
+| end | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | Yes |
 
 **Error codes:**
@@ -53,54 +51,20 @@ Queries usage information about each bundle within a specified period at a speci
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryBundleStatsInfoByInterval(0, 0, 20000000000000, (err: BusinessError, res: Array<usageStatistics.BundleStatsInfo>) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE queryBundleStatsInfoByInterval callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval callback success.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryBundleStatsInfoByInterval(0, 0, 20000000000000).then((res: Array<usageStatistics.BundleStatsInfo>) => {
-  console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryBundleStatsInfoByInterval promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStatsInfoByInterval promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 ## queryBundleStatsInfoByInterval
 
 ```TypeScript
 function queryBundleStatsInfoByInterval(
     byInterval: IntervalType,
-    begin: long,
-    end: long
+    begin: number,
+    end: number
   ): Promise<Array<BundleStatsInfo>>
 ```
 
 Queries usage information about each bundle within a specified period at a specified interval.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -113,8 +77,8 @@ Queries usage information about each bundle within a specified period at a speci
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| begin | number | Yes |
+| end | number | Yes |
 
 **Return value:**
 
@@ -136,7 +100,3 @@ Queries usage information about each bundle within a specified period at a speci
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) |
-
-**Examples**
-
-See [queryBundleStatsInfoByInterval](#querybundlestatsinfobyinterval)

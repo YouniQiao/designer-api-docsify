@@ -4,8 +4,6 @@ interface of app lifecycle.@interface LifecycleApp
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onWindowDisplayModeChanged?(isShownInMultiWindow: boolean, newConfig: resourceMa
 Called when the window display mode of this ability changes, for example, from fullscreen mode to multi-window mode or from multi-window mode to fullscreen mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

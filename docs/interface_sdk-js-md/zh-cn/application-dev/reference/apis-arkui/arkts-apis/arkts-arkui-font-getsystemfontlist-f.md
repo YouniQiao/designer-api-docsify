@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## getSystemFontList
@@ -25,8 +25,6 @@ function getSystemFontList(): Array<string>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 18
 
 **替代接口：** getSystemFontList
@@ -42,27 +40,3 @@ function getSystemFontList(): Array<string>
 | 类型 |
 | --- |
 | Array & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct FontExample {
-  fontList: Array<string> = new Array<string>();
-
-  build() {
-    Column() {
-      Button("getSystemFontList")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontList = font.getSystemFontList(); // 建议使用 this.getUIContext().getFont().getSystemFontList()接口
-        })
-    }.width('100%')
-  }
-}
-```

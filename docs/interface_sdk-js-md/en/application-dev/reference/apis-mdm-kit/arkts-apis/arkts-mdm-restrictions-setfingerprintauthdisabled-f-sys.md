@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setFingerprintAuthDisabled
@@ -15,8 +15,6 @@ function setFingerprintAuthDisabled(admin: Want, disabled: boolean): void
 Enables or disables fingerprint authentication.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -35,7 +33,7 @@ Enables or disables fingerprint authentication.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| disabled | boolean | Yes |
+| [disabled](../../apis-arkui/arkts-components/arkts-arkui-statestyles-i.md) | boolean | Yes |
 
 **Error codes:**
 
@@ -46,23 +44,3 @@ Enables or disables fingerprint authentication.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.setFingerprintAuthDisabled(wantTemp, true);
-  console.info('Succeeded in disabling the fingerprint auth');
-} catch (err) {
-  console.error(`Failed to disable fingerprint auth. Code: ${err.code}, message: ${err.message}`);
-};
-```

@@ -4,8 +4,6 @@ Parameter list of BrightnessBlender, used to configure various properties of the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Parameter list of BrightnessBlender, used to configure various properties of the
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## cubicRate
 
 ```TypeScript
-cubicRate: double
+cubicRate: number
 ```
 
 Third-order coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -39,16 +35,14 @@ Third-order coefficient for grayscale adjustment. The value range is [-20, 20]. 
 ## degree
 
 ```TypeScript
-degree: double
+degree: number
 ```
 
 Grayscale adjustment ratio. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -59,16 +53,14 @@ Grayscale adjustment ratio. The value range is [-20, 20]. Values outside the ran
 ## fraction
 
 ```TypeScript
-fraction: double
+fraction: number
 ```
 
 Blending ratio for the brightness effect. The value range is [0, 1]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -79,16 +71,14 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values outs
 ## linearRate
 
 ```TypeScript
-linearRate: double
+linearRate: number
 ```
 
 Linear coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -99,16 +89,14 @@ Linear coefficient for grayscale adjustment. The value range is [-20, 20]. Value
 ## negativeCoefficient
 
 ```TypeScript
-negativeCoefficient: [double, double, double]
+negativeCoefficient: [number, number, number]
 ```
 
 Negative RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [number, number, number]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -119,16 +107,14 @@ Negative RGB adjustment coefficients based on the base saturation. The value ran
 ## positiveCoefficient
 
 ```TypeScript
-positiveCoefficient: [double, double, double]
+positiveCoefficient: [number, number, number]
 ```
 
 Positive RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [number, number, number]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -139,16 +125,14 @@ Positive RGB adjustment coefficients based on the base saturation. The value ran
 ## quadraticRate
 
 ```TypeScript
-quadraticRate: double
+quadraticRate: number
 ```
 
 Second-order coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -159,16 +143,14 @@ Second-order coefficient for grayscale adjustment. The value range is [-20, 20].
 ## saturation
 
 ```TypeScript
-saturation: double
+saturation: number
 ```
 
 Base saturation for brightness. The value range is [0, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 

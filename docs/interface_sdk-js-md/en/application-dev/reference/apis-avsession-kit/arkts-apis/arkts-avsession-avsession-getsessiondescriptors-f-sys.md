@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getSessionDescriptors
@@ -15,8 +15,6 @@ function getSessionDescriptors(category: SessionCategory): Promise<Array<Readonl
 Get session descriptors of the system based on different session category.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

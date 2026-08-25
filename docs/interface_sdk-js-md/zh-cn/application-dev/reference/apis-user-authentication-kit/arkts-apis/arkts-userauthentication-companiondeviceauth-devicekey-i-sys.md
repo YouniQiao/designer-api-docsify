@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## deviceId
@@ -28,8 +26,6 @@ deviceId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -39,16 +35,14 @@ deviceId: string
 ## deviceIdType
 
 ```TypeScript
-deviceIdType: int
+deviceIdType: number
 ```
 
 设备ID类型。用于指定设备业务标识的类型，可在[DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md)基础上自定义扩展，如使用UNIFIED_DEVICE_ID(1)表示统一 设备ID，或使用厂商自定义值（≥10000）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,16 +53,14 @@ deviceIdType: int
 ## deviceUserId
 
 ```TypeScript
-deviceUserId: int
+deviceUserId: number
 ```
 
 设备用户ID。设备上的用户标识，为非负整数，用于区分设备上的不同用户。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

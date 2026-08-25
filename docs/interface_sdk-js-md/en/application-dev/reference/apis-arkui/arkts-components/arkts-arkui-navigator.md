@@ -16,11 +16,9 @@ Called when the route jumps.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
-**Substitutes:** NavPathInfo
+**Substitutes:** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,11 +40,9 @@ Called when using the navigator.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
-**Substitutes:** NavigationAttribute
+**Substitutes:** [NavigationAttribute](arkts-arkui-navigation-attribute.md#navigationattribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

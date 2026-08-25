@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('connect')
@@ -15,8 +15,6 @@ function on(type: 'connect', callback: Callback<VpnConnectState>): void
 订阅VPN连接状态变化事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
@@ -52,8 +50,6 @@ function on(type: 'connectMulti', callback: Callback<MultiVpnConnectState>): voi
 订阅VPN连接状态变化事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 

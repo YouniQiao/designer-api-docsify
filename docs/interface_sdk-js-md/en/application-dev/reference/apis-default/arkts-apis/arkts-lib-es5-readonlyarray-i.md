@@ -1,7 +1,5 @@
 # ReadonlyArray
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ concat(...items: ConcatArray<T>[]): T[]
 ```
 
 Combines two or more arrays.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ concat(...items: (T | ConcatArray<T>)[]): T[]
 
 Combines two or more arrays.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ every<S extends T>(predicate: (value: T, index: number, array: readonly T[]) => 
 ```
 
 Determines whether all the members of an array satisfy the specified test.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -76,8 +68,6 @@ every(predicate: (value: T, index: number, array: readonly T[]) => unknown, this
 
 Determines whether all the members of an array satisfy the specified test.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -96,8 +86,6 @@ filter<S extends T>(predicate: (value: T, index: number, array: readonly T[]) =>
 ```
 
 Returns the elements of an array that meet the condition specified in a callback function.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -118,8 +106,6 @@ filter(predicate: (value: T, index: number, array: readonly T[]) => unknown, thi
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -139,8 +125,6 @@ forEach(callbackfn: (value: T, index: number, array: readonly T[]) => void, this
 
 Performs the specified action for each element in an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -155,8 +139,6 @@ indexOf(searchElement: T, fromIndex?: number): number
 ```
 
 Returns the index of the first occurrence of a value in an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -177,8 +159,6 @@ join(separator?: string): string
 
 Adds all the elements of an array separated by the specified separator string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -196,8 +176,6 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 ```
 
 Returns the index of the last occurrence of a specified value in an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -218,8 +196,6 @@ map<U>(callbackfn: (value: T, index: number, array: readonly T[]) => U, thisArg?
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -239,8 +215,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -256,8 +230,6 @@ Calls the specified callback function for all the elements in an array. The retu
 ```TypeScript
 reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T, initialValue: T): T
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -278,8 +250,6 @@ reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, 
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -299,8 +269,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -316,8 +284,6 @@ Calls the specified callback function for all the elements in an array, in desce
 ```TypeScript
 reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T, initialValue: T): T
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -338,8 +304,6 @@ reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: num
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -358,8 +322,6 @@ slice(start?: number, end?: number): T[]
 ```
 
 Returns a section of an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -380,8 +342,6 @@ some(predicate: (value: T, index: number, array: readonly T[]) => unknown, thisA
 
 Determines whether the specified callback function returns true for any element of an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -401,8 +361,6 @@ toLocaleString(): string
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -414,8 +372,6 @@ toString(): string
 ```
 
 Returns a string representation of an array.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -429,8 +385,6 @@ readonly [n: number]: T
 
 **Type:** T
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -440,5 +394,3 @@ readonly length: number
 Gets the length of the array. This is a number one higher than the highest element defined in an array.
 
 **Type:** number
-
-**ArkTS mode:** 

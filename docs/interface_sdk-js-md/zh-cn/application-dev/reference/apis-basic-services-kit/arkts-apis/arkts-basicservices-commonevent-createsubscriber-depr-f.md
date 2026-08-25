@@ -18,8 +18,6 @@ function createSubscriber(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md)( subscribeInfo: CommonEventSubscribeInfo, callback: AsyncCallback&lt;CommonEventSubscriber&gt; )
@@ -33,53 +31,6 @@ function createSubscriber(
 | subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
-
-// 订阅者信息
-let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
-    events: ["event"]
-};
-
-// 创建订阅者回调
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
-    if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
-    } else {
-        console.info("createSubscriber");
-        subscriber = commonEventSubscriber;
-    }
-}
-
-// 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCB);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
-
-// 订阅者信息
-let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
-    events: ["event"]
-};
-
-// 创建订阅者
-commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
-    console.info("createSubscriber");
-    subscriber = commonEventSubscriber;
-}).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
-});
-```
-
 
 ## createSubscriber
 
@@ -90,8 +41,6 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 以Promise形式创建订阅者。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -110,7 +59,3 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 | 类型 |
 | --- |
 | Promise&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; |
-
-**示例**
-
-参见 [createSubscriber](#createsubscriber)

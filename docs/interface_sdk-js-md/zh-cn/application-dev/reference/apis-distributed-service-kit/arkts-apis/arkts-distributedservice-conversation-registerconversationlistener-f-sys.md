@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
+import { conversation } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## registerConversationListener
@@ -20,8 +20,6 @@ function registerConversationListener(
 **配对调用**：需与注销监听器[unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md)配对 使用，不再需要接收消息时应调用注销监听器以释放资源，未注销会导致资源持续占用。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 
@@ -48,23 +46,3 @@ function registerConversationListener(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2000001](../errorcode-conversation.md#2000001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName: string = 'com.example.demo';
-  let abilityName: string = 'EntryAbility';
-
-  conversation.registerConversationListener(bundleName, abilityName, (deviceId: string, msg: ArrayBuffer) => {
-    console.info(`received message, deviceId: ${deviceId}, msg length: ${msg.byteLength}`);
-  });
-  console.info(`registerConversationListener success`);
-} catch (err) {
-  const e: BusinessError = err as BusinessError;
-  console.error(`registerConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSupportDoNotDisturbMode
@@ -15,8 +15,6 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 查询是否支持免打扰功能。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,65 +40,6 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isSupportDoNotDisturbModeCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.isSupportDoNotDisturbMode(isSupportDoNotDisturbModeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isSupportDoNotDisturbModeCallback = (err: BusinessError | null, data: boolean | undefined | null): void => {
-    if (err) {
-        console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.isSupportDoNotDisturbMode(isSupportDoNotDisturbModeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isSupportDoNotDisturbMode failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## isSupportDoNotDisturbMode
 
@@ -111,8 +50,6 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 查询是否支持免打扰功能。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -136,7 +73,3 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [isSupportDoNotDisturbMode](#issupportdonotdisturbmode)

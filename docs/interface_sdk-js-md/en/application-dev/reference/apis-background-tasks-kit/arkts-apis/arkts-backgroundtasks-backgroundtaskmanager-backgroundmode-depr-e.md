@@ -4,8 +4,6 @@ Defines the type of a continuous task.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)
@@ -21,8 +19,6 @@ DATA_TRANSFER = 1
 Data transfer.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Audio playback.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** AUDIO_PLAYBACK
@@ -57,8 +51,6 @@ AUDIO_RECORDING = 3
 Audio recording.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Positioning and navigation.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** LOCATION
@@ -93,8 +83,6 @@ BLUETOOTH_INTERACTION = 5
 Bluetooth-related task.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ Multi-device connection.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** MULTI_DEVICE_CONNECTION
@@ -129,8 +115,6 @@ TASK_KEEPING = 9
 Computing task (effective only for specific devices).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

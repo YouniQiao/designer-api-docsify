@@ -8,8 +8,6 @@ Base interface of profile.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Property type:** baseProfile.BaseProfile

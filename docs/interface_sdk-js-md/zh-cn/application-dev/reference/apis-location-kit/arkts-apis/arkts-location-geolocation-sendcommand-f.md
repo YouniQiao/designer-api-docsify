@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -15,8 +15,6 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 给位置服务子系统的各个部件发送扩展命令。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -33,29 +31,6 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 | command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo, (err, result) => {
-    if (err) {
-        console.info('sendCommand: err=' + JSON.stringify(err));
-    }
-    if (result) {
-        console.info('sendCommand: result=' + JSON.stringify(result));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo).then((result) => {
-    console.info('promise, sendCommand: ' + JSON.stringify(result));
-});
-```
-
 
 ## sendCommand
 
@@ -66,8 +41,6 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 给位置服务子系统的各个部件发送扩展命令。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -88,7 +61,3 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [sendCommand](#sendcommand)

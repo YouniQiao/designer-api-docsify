@@ -8,14 +8,12 @@ The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-over
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

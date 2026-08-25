@@ -4,29 +4,25 @@ DNG metadata.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## activeArea
 
 ```TypeScript
-readonly activeArea?: int[]
+readonly activeArea?: number[]
 ```
 
 The active area.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +31,14 @@ The active area.
 ## analogBalance
 
 ```TypeScript
-readonly analogBalance?: double[]
+readonly analogBalance?: number[]
 ```
 
 The analog balance.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ The analog balance.
 ## antiAliasStrength
 
 ```TypeScript
-readonly antiAliasStrength?: double
+readonly antiAliasStrength?: number
 ```
 
 The anti-alias strength.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ An ICC profile.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -89,16 +79,14 @@ An ICC profile.
 ## asShotNeutral
 
 ```TypeScript
-readonly asShotNeutral?: double[]
+readonly asShotNeutral?: number[]
 ```
 
 The as-shot neutral.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,16 +95,14 @@ The as-shot neutral.
 ## asShotPreProfileMatrix
 
 ```TypeScript
-readonly asShotPreProfileMatrix?: double[]
+readonly asShotPreProfileMatrix?: number[]
 ```
 
 The as-shot pre-profile matrix.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,8 +120,6 @@ The as-shot camera profile.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -143,16 +127,14 @@ The as-shot camera profile.
 ## asShotWhiteXY
 
 ```TypeScript
-readonly asShotWhiteXY?: double[]
+readonly asShotWhiteXY?: number[]
 ```
 
 The as-shot white, encoded as x-y chromaticity coordinates.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,16 +143,14 @@ The as-shot white, encoded as x-y chromaticity coordinates.
 ## baselineExposure
 
 ```TypeScript
-readonly baselineExposure?: double
+readonly baselineExposure?: number
 ```
 
 The baseline exposure.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,16 +159,14 @@ The baseline exposure.
 ## baselineExposureOffset
 
 ```TypeScript
-readonly baselineExposureOffset?: double
+readonly baselineExposureOffset?: number
 ```
 
 The baseline exposure offset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,16 +175,14 @@ The baseline exposure offset.
 ## baselineNoise
 
 ```TypeScript
-readonly baselineNoise?: double
+readonly baselineNoise?: number
 ```
 
 The baseline noise.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,16 +191,14 @@ The baseline noise.
 ## baselineSharpness
 
 ```TypeScript
-readonly baselineSharpness?: double
+readonly baselineSharpness?: number
 ```
 
 The baseline sharpness.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,16 +207,14 @@ The baseline sharpness.
 ## bayerGreenSplit
 
 ```TypeScript
-readonly bayerGreenSplit?: int
+readonly bayerGreenSplit?: number
 ```
 
 The Bayer green split.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,16 +223,14 @@ The Bayer green split.
 ## bestQualityScale
 
 ```TypeScript
-readonly bestQualityScale?: double
+readonly bestQualityScale?: number
 ```
 
 The best quality scale.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -269,16 +239,14 @@ The best quality scale.
 ## blackLevel
 
 ```TypeScript
-readonly blackLevel?: double[]
+readonly blackLevel?: number[]
 ```
 
 The zero-light encoding level.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,16 +255,14 @@ The zero-light encoding level.
 ## blackLevelDeltaH
 
 ```TypeScript
-readonly blackLevelDeltaH?: double[]
+readonly blackLevelDeltaH?: number[]
 ```
 
 The black level delta H.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -305,16 +271,14 @@ The black level delta H.
 ## blackLevelDeltaV
 
 ```TypeScript
-readonly blackLevelDeltaV?: double[]
+readonly blackLevelDeltaV?: number[]
 ```
 
 The black level delta V.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -323,16 +287,14 @@ The black level delta V.
 ## blackLevelRepeatDim
 
 ```TypeScript
-readonly blackLevelRepeatDim?: int[]
+readonly blackLevelRepeatDim?: number[]
 ```
 
 The black level repeat dimension.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,16 +303,14 @@ The black level repeat dimension.
 ## calibrationIlluminant1
 
 ```TypeScript
-readonly calibrationIlluminant1?: int
+readonly calibrationIlluminant1?: number
 ```
 
 The first calibration illuminant.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,16 +319,14 @@ The first calibration illuminant.
 ## calibrationIlluminant2
 
 ```TypeScript
-readonly calibrationIlluminant2?: int
+readonly calibrationIlluminant2?: number
 ```
 
 The second calibration illuminant.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -377,16 +335,14 @@ The second calibration illuminant.
 ## cameraCalibration1
 
 ```TypeScript
-readonly cameraCalibration1?: double[]
+readonly cameraCalibration1?: number[]
 ```
 
 A calibration matrix under the first calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -395,16 +351,14 @@ A calibration matrix under the first calibration illuminant.
 ## cameraCalibration2
 
 ```TypeScript
-readonly cameraCalibration2?: double[]
+readonly cameraCalibration2?: number[]
 ```
 
 A calibration matrix under the second calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -422,8 +376,6 @@ The camera calibration signature.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -440,8 +392,6 @@ The serial number of the camera.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -449,16 +399,14 @@ The serial number of the camera.
 ## cfaLayout
 
 ```TypeScript
-readonly cfaLayout?: int
+readonly cfaLayout?: number
 ```
 
 The CFA (color filter array) layout.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -467,16 +415,14 @@ The CFA (color filter array) layout.
 ## cfaPlaneColor
 
 ```TypeScript
-readonly cfaPlaneColor?: int[]
+readonly cfaPlaneColor?: number[]
 ```
 
 The CFA (color filter array) plane color.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -485,16 +431,14 @@ The CFA (color filter array) plane color.
 ## chromaBlurRadius
 
 ```TypeScript
-readonly chromaBlurRadius?: double
+readonly chromaBlurRadius?: number
 ```
 
 The chroma blur radius.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -503,16 +447,14 @@ The chroma blur radius.
 ## colorimetricReference
 
 ```TypeScript
-readonly colorimetricReference?: int
+readonly colorimetricReference?: number
 ```
 
 The colorimetric reference.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,16 +463,14 @@ The colorimetric reference.
 ## colorMatrix1
 
 ```TypeScript
-readonly colorMatrix1?: double[]
+readonly colorMatrix1?: number[]
 ```
 
 A transformation matrix under the first calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -539,16 +479,14 @@ A transformation matrix under the first calibration illuminant.
 ## colorMatrix2
 
 ```TypeScript
-readonly colorMatrix2?: double[]
+readonly colorMatrix2?: number[]
 ```
 
 A transformation matrix under the second calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -566,8 +504,6 @@ The current ICC profile.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -575,16 +511,14 @@ The current ICC profile.
 ## currentPreProfileMatrix
 
 ```TypeScript
-readonly currentPreProfileMatrix?: double[]
+readonly currentPreProfileMatrix?: number[]
 ```
 
 The current pre-profile matrix.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -593,16 +527,14 @@ The current pre-profile matrix.
 ## defaultBlackRender
 
 ```TypeScript
-readonly defaultBlackRender?: int
+readonly defaultBlackRender?: number
 ```
 
 The default black render.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -611,16 +543,14 @@ The default black render.
 ## defaultCropOrigin
 
 ```TypeScript
-readonly defaultCropOrigin?: double[]
+readonly defaultCropOrigin?: number[]
 ```
 
 The default crop origin.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -629,16 +559,14 @@ The default crop origin.
 ## defaultCropSize
 
 ```TypeScript
-readonly defaultCropSize?: int[]
+readonly defaultCropSize?: number[]
 ```
 
 The default crop size.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -647,16 +575,14 @@ The default crop size.
 ## defaultScale
 
 ```TypeScript
-readonly defaultScale?: double[]
+readonly defaultScale?: number[]
 ```
 
 The default scale.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -665,16 +591,14 @@ The default scale.
 ## defaultUserCrop
 
 ```TypeScript
-readonly defaultUserCrop?: int[]
+readonly defaultUserCrop?: number[]
 ```
 
 The default user crop.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -683,16 +607,14 @@ The default user crop.
 ## dngBackwardVersion
 
 ```TypeScript
-readonly dngBackwardVersion?: int[]
+readonly dngBackwardVersion?: number[]
 ```
 
 The DNG backward compatibility version.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -710,8 +632,6 @@ The private data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -719,16 +639,14 @@ The private data.
 ## dngVersion
 
 ```TypeScript
-readonly dngVersion?: int[]
+readonly dngVersion?: number[]
 ```
 
 The DNG version.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -737,16 +655,14 @@ The DNG version.
 ## extraCameraProfiles
 
 ```TypeScript
-readonly extraCameraProfiles?: int[]
+readonly extraCameraProfiles?: number[]
 ```
 
 The extra camera profiles.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -755,16 +671,14 @@ The extra camera profiles.
 ## forwardMatrix1
 
 ```TypeScript
-readonly forwardMatrix1?: double[]
+readonly forwardMatrix1?: number[]
 ```
 
 The first forward matrix.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -773,16 +687,14 @@ The first forward matrix.
 ## forwardMatrix2
 
 ```TypeScript
-readonly forwardMatrix2?: double[]
+readonly forwardMatrix2?: number[]
 ```
 
 The second forward matrix.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -791,16 +703,14 @@ The second forward matrix.
 ## lensInfo
 
 ```TypeScript
-readonly lensInfo?: double[]
+readonly lensInfo?: number[]
 ```
 
 Information about the lens.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -809,16 +719,14 @@ Information about the lens.
 ## linearizationTable
 
 ```TypeScript
-readonly linearizationTable?: int[]
+readonly linearizationTable?: number[]
 ```
 
 The linearization table.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -827,16 +735,14 @@ The linearization table.
 ## linearResponseLimit
 
 ```TypeScript
-readonly linearResponseLimit?: double
+readonly linearResponseLimit?: number
 ```
 
 The linear response limit.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -854,8 +760,6 @@ A localized camera model.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -872,8 +776,6 @@ Whether the EXIF MakerNote tag is safe.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -881,16 +783,14 @@ Whether the EXIF MakerNote tag is safe.
 ## maskedAreas
 
 ```TypeScript
-readonly maskedAreas?: int[]
+readonly maskedAreas?: number[]
 ```
 
 The masked areas.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -908,8 +808,6 @@ A modified MD5 digest of the raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -917,16 +815,14 @@ A modified MD5 digest of the raw image data.
 ## noiseProfile
 
 ```TypeScript
-readonly noiseProfile?: double[]
+readonly noiseProfile?: number[]
 ```
 
 The noise profile.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -935,16 +831,14 @@ The noise profile.
 ## noiseReductionApplied
 
 ```TypeScript
-readonly noiseReductionApplied?: double
+readonly noiseReductionApplied?: number
 ```
 
 The applied noise reduction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -962,8 +856,6 @@ The first opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -979,8 +871,6 @@ The second opcode list.
 **Type:** ArrayBuffer
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -998,8 +888,6 @@ The third opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1007,16 +895,14 @@ The third opcode list.
 ## originalBestQualityFinalSize
 
 ```TypeScript
-readonly originalBestQualityFinalSize?: int[]
+readonly originalBestQualityFinalSize?: number[]
 ```
 
 The original best quality final size.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1025,16 +911,14 @@ The original best quality final size.
 ## originalDefaultCropSize
 
 ```TypeScript
-readonly originalDefaultCropSize?: double[]
+readonly originalDefaultCropSize?: number[]
 ```
 
 The original default crop size.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1043,16 +927,14 @@ The original default crop size.
 ## originalDefaultFinalSize
 
 ```TypeScript
-readonly originalDefaultFinalSize?: int[]
+readonly originalDefaultFinalSize?: number[]
 ```
 
 The original default final size.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1070,8 +952,6 @@ The original raw file data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1087,8 +967,6 @@ An MD5 digest of the data stored in the OriginalRawFileData.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1106,8 +984,6 @@ The original raw file name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1123,8 +999,6 @@ The preview application name.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1142,8 +1016,6 @@ The preview application version.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1151,16 +1023,14 @@ The preview application version.
 ## previewColorSpace
 
 ```TypeScript
-readonly previewColorSpace?: int
+readonly previewColorSpace?: number
 ```
 
 The preview color space.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1178,8 +1048,6 @@ The preview date time.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1195,8 +1063,6 @@ The preview settings digest.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1214,8 +1080,6 @@ The preview settings name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1231,8 +1095,6 @@ The profile calibration signature.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1250,8 +1112,6 @@ The profile copyright.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1259,16 +1119,14 @@ The profile copyright.
 ## profileEmbedPolicy
 
 ```TypeScript
-readonly profileEmbedPolicy?: int
+readonly profileEmbedPolicy?: number
 ```
 
 The profile embed policy.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1277,16 +1135,14 @@ The profile embed policy.
 ## profileHueSatMapData1
 
 ```TypeScript
-readonly profileHueSatMapData1?: double[]
+readonly profileHueSatMapData1?: number[]
 ```
 
 The first hue/saturation mapping table data.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1295,16 +1151,14 @@ The first hue/saturation mapping table data.
 ## profileHueSatMapData2
 
 ```TypeScript
-readonly profileHueSatMapData2?: double[]
+readonly profileHueSatMapData2?: number[]
 ```
 
 The second hue/saturation mapping table data.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1313,16 +1167,14 @@ The second hue/saturation mapping table data.
 ## profileHueSatMapDims
 
 ```TypeScript
-readonly profileHueSatMapDims?: int[]
+readonly profileHueSatMapDims?: number[]
 ```
 
 The profile hue/saturation map dims.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1331,16 +1183,14 @@ The profile hue/saturation map dims.
 ## profileHueSatMapEncoding
 
 ```TypeScript
-readonly profileHueSatMapEncoding?: int
+readonly profileHueSatMapEncoding?: number
 ```
 
 The profile hue/saturation map encoding.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1349,16 +1199,14 @@ The profile hue/saturation map encoding.
 ## profileLookTableData
 
 ```TypeScript
-readonly profileLookTableData?: double[]
+readonly profileLookTableData?: number[]
 ```
 
 The profile lookup table data.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1367,16 +1215,14 @@ The profile lookup table data.
 ## profileLookTableDims
 
 ```TypeScript
-readonly profileLookTableDims?: int[]
+readonly profileLookTableDims?: number[]
 ```
 
 The profile lookup table dimensions.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1385,16 +1231,14 @@ The profile lookup table dimensions.
 ## profileLookTableEncoding
 
 ```TypeScript
-readonly profileLookTableEncoding?: int
+readonly profileLookTableEncoding?: number
 ```
 
 The profile lookup table encoding.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1412,8 +1256,6 @@ The profile name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1421,16 +1263,14 @@ The profile name.
 ## profileToneCurve
 
 ```TypeScript
-readonly profileToneCurve?: double[]
+readonly profileToneCurve?: number[]
 ```
 
 The profile tone curve.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1448,8 +1288,6 @@ The unique identifier of raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1466,8 +1304,6 @@ An MD5 digest of the raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1475,16 +1311,14 @@ An MD5 digest of the raw image data.
 ## rawToPreviewGain
 
 ```TypeScript
-readonly rawToPreviewGain?: double
+readonly rawToPreviewGain?: number
 ```
 
 The gain between the main raw IFD and the preview IFD.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1493,16 +1327,14 @@ The gain between the main raw IFD and the preview IFD.
 ## reductionMatrix1
 
 ```TypeScript
-readonly reductionMatrix1?: double[]
+readonly reductionMatrix1?: number[]
 ```
 
 A dimensionality reduction matrix under the first calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1511,16 +1343,14 @@ A dimensionality reduction matrix under the first calibration illuminant.
 ## reductionMatrix2
 
 ```TypeScript
-readonly reductionMatrix2?: double[]
+readonly reductionMatrix2?: number[]
 ```
 
 A dimensionality reduction matrix under the second calibration illuminant.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1529,16 +1359,14 @@ A dimensionality reduction matrix under the second calibration illuminant.
 ## rowInterleaveFactor
 
 ```TypeScript
-readonly rowInterleaveFactor?: int
+readonly rowInterleaveFactor?: number
 ```
 
 The row interleave factor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1547,16 +1375,14 @@ The row interleave factor.
 ## shadowScale
 
 ```TypeScript
-readonly shadowScale?: double
+readonly shadowScale?: number
 ```
 
 The shadow scale.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1565,16 +1391,14 @@ The shadow scale.
 ## subTileBlockSize
 
 ```TypeScript
-readonly subTileBlockSize?: int[]
+readonly subTileBlockSize?: number[]
 ```
 
 The sub‑tile block size.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1592,8 +1416,6 @@ A unique camera model.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1601,16 +1423,14 @@ A unique camera model.
 ## whiteLevel
 
 ```TypeScript
-readonly whiteLevel?: double[]
+readonly whiteLevel?: number[]
 ```
 
 The white level.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

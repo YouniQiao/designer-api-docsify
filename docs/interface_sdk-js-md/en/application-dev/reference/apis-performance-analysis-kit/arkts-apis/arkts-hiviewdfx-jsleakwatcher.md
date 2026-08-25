@@ -1,17 +1,15 @@
 # @ohos.hiviewdfx.jsLeakWatcher
 
-This module provides the capability of monitoring whether JS objects are leaked.
+This module provides the capability of monitoring whether ArkTS objects are leaked.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

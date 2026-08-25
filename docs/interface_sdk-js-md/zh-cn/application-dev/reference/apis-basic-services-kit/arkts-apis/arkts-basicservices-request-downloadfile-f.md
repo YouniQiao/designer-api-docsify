@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## downloadFile
@@ -18,8 +18,6 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -43,96 +41,6 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 | [13400002](../errorcode-request.md#13400002-文件路径异常) |
 | [13400003](../errorcode-request.md#13400003-服务异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-     let downloadTask: request.DownloadTask = data;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  try {
-    // 需要手动将url替换为真实服务器的HTTP协议地址
-    request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-      let downloadTask: request.DownloadTask = data;
-    }).catch((err: Error) => {
-      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-    })
-  } catch (err) {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  }
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, {
-    url: 'https://xxxx/xxxxx.hap',
-    filePath: 'xxx/xxxxx.hap'
-  }, (err: BusinessError, data: request.DownloadTask) => {
-    if (err) {
-      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-  });
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, {
-    url: 'https://xxxx/xxxxx.hap',
-    filePath: 'xxx/xxxxx.hap'
-  }, (err: Error, data: request.DownloadTask): void => {
-    if (err) {
-      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-  });
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## downloadFile
 
@@ -146,8 +54,6 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -175,7 +81,3 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 | [13400001](../errorcode-request.md#13400001-文件操作异常) |
 | [13400002](../errorcode-request.md#13400002-文件路径异常) |
 | [13400003](../errorcode-request.md#13400003-服务异常) |
-
-**示例**
-
-参见 [downloadFile](#downloadfile)

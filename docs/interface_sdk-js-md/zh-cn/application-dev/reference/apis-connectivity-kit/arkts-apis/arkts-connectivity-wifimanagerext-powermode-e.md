@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 ## SLEEPING
@@ -17,8 +15,6 @@ SLEEPING = 0
 睡眠模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,8 +28,6 @@ GENERAL = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## THROUGH_WALL
@@ -45,7 +39,5 @@ THROUGH_WALL = 2
 穿墙模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

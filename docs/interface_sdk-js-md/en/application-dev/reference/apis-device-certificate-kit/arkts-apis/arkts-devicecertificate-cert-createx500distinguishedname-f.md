@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## createX500DistinguishedName
@@ -15,8 +15,6 @@ function createX500DistinguishedName(nameStr: string): Promise<X500Distinguished
 Creates an **X500DistinguishedName** object with a name in the form of a string. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -49,62 +47,6 @@ Creates an **X500DistinguishedName** object with a name in the form of a string.
 | [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
 | [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
 
-**Examples**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let nameStr = '/CN=John Doe/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS';
-async function createX500DistinguishedName() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameDer =
-  new Uint8Array([48, 41, 49, 11, 48, 9, 6, 3, 85, 4, 3, 12, 2, 67, 65, 49, 13, 48, 11, 6, 3, 85, 4, 10, 12, 4, 116,
-    101, 115, 116, 49, 11, 48, 9, 6, 3, 85, 4, 6, 19, 2, 67, 78]);
-
-async function createX500DistinguishedName() {
-  try {
-    cert.createX500DistinguishedName(nameDer)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      })
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
 
 ## createX500DistinguishedName
 
@@ -115,8 +57,6 @@ function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500Distingui
 Creates an **X500DistinguishedName** object with a name in DER format. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -148,7 +88,3 @@ Creates an **X500DistinguishedName** object with a name in DER format. This API 
 | [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
 | [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
 | [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
-
-**Examples**
-
-See [createX500DistinguishedName](#createx500distinguishedname)

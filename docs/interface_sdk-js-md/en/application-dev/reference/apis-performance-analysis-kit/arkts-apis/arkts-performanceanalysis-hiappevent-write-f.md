@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -15,8 +15,6 @@ function write(info: AppEventInfo): Promise<void>
 Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,54 +45,6 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 | [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
 | [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let eventParams: Record<string, number | string> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-
-// Application event logging. This API uses an asynchronous callback to return the result.
-hiAppEvent.write({
-  domain: "test_domain",
-  name: "test_event",
-  eventType: hiAppEvent.EventType.FAULT,
-  params: eventParams,
-}, (err: BusinessError) => {
-  if (err) {
-    hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let eventParams: Record<string, number | string> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-
-// Application event logging. This API uses a promise to return the result.
-hiAppEvent.write({
-  domain: "test_domain",
-  name: "test_event",
-  eventType: hiAppEvent.EventType.FAULT,
-  params: eventParams,
-}).then(() => {
-  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## write
 
@@ -105,8 +55,6 @@ function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -131,7 +79,3 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 | [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
 | [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
 | [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
-
-**Examples**
-
-See [write](#write)

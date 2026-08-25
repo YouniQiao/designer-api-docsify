@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_UNDEFINED
@@ -17,8 +15,6 @@ WINDOW_MODE_UNDEFINED = 0
 未定义。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,8 +30,6 @@ WINDOW_MODE_FULLSCREEN = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -49,8 +43,6 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 屏幕如果是水平方向表示左分屏，屏幕如果是竖直方向表示上分屏。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -66,8 +58,6 @@ WINDOW_MODE_SPLIT_SECONDARY = 101
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -82,16 +72,6 @@ WINDOW_MODE_FLOATING = 102
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
-
-**示例**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.AbilityWindowConfiguration.WINDOW_MODE_UNDEFINED
-```

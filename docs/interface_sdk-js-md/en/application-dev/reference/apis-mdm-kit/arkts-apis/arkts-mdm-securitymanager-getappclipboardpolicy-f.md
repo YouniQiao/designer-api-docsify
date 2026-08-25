@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAppClipboardPolicy
@@ -16,8 +16,6 @@ Obtains the device clipboard policy.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,47 +43,6 @@ Obtains the device clipboard policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let tokenId: number = 586874394;
-try {
-    let result: string = securityManager.getAppClipboardPolicy(wantTemp, tokenId);
-    console.info(`Succeeded in getting password policy, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-    let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
-    console.info(`Succeeded in getting password policy, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## getAppClipboardPolicy
@@ -98,8 +55,6 @@ Obtains the device clipboard policy. Enterprises can use this API to query the c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -128,10 +83,6 @@ Obtains the device clipboard policy. Enterprises can use this API to query the c
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getAppClipboardPolicy](#getappclipboardpolicy)
-
 
 ## getAppClipboardPolicy
 
@@ -142,8 +93,6 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 Obtains the device clipboard policy of a specified application for a specified user.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -173,10 +122,6 @@ Obtains the device clipboard policy of a specified application for a specified u
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-See [getAppClipboardPolicy](#getappclipboardpolicy)
-
 
 ## getAppClipboardPolicy
 
@@ -187,8 +132,6 @@ function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId
 Obtains the device clipboard policy of a specified application for a specified user. Enterprises can use this API to query the clipboard usage permission configuration of a specific application for policy audit and compliance check.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -217,7 +160,3 @@ Obtains the device clipboard policy of a specified application for a specified u
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getAppClipboardPolicy](#getappclipboardpolicy)

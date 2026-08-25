@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPowerModel
@@ -15,8 +15,6 @@ function getPowerModel(): Promise<PowerModel>
 获取功率模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -42,8 +40,6 @@ function getPowerModel(callback: AsyncCallback<PowerModel>): void
 获取功率模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

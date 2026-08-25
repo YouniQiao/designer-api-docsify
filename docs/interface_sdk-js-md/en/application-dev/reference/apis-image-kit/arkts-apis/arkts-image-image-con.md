@@ -3,14 +3,12 @@
 ## CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW
 
 ```TypeScript
-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int
+const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : number
 ```
 
 Capture mode: night view with front lens.The value is 7.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -19,14 +17,12 @@ Capture mode: night view with front lens.The value is 7.
 ## CAPTURE_MODE_LIGHT_GRAFFITI
 
 ```TypeScript
-const CAPTURE_MODE_LIGHT_GRAFFITI : int
+const CAPTURE_MODE_LIGHT_GRAFFITI : number
 ```
 
 Capture mode: light graffiti.The value is 10.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,14 +31,12 @@ Capture mode: light graffiti.The value is 10.
 ## CAPTURE_MODE_MOVING_PHOTO
 
 ```TypeScript
-const CAPTURE_MODE_MOVING_PHOTO : int
+const CAPTURE_MODE_MOVING_PHOTO : number
 ```
 
 Capture mode: moving photos.The value is 20.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,14 +45,12 @@ Capture mode: moving photos.The value is 20.
 ## CAPTURE_MODE_PANORAMA
 
 ```TypeScript
-const CAPTURE_MODE_PANORAMA : int
+const CAPTURE_MODE_PANORAMA : number
 ```
 
 Capture mode: panorama.The value is 8.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,14 +59,12 @@ Capture mode: panorama.The value is 8.
 ## CAPTURE_MODE_PORTRAIT
 
 ```TypeScript
-const CAPTURE_MODE_PORTRAIT : int
+const CAPTURE_MODE_PORTRAIT : number
 ```
 
 Capture mode: portrait.The value is 23.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,14 +73,12 @@ Capture mode: portrait.The value is 23.
 ## CAPTURE_MODE_PROFESSIONAL
 
 ```TypeScript
-const CAPTURE_MODE_PROFESSIONAL : int
+const CAPTURE_MODE_PROFESSIONAL : number
 ```
 
 Capture mode: professional.The value is 2.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,14 +87,12 @@ Capture mode: professional.The value is 2.
 ## CAPTURE_MODE_REAR_LENS_NIGHT_VIEW
 
 ```TypeScript
-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int
+const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : number
 ```
 
 Capture mode: night view with rear lens.The value is 42.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,14 +101,12 @@ Capture mode: night view with rear lens.The value is 42.
 ## CAPTURE_MODE_SILKY_WATER
 
 ```TypeScript
-const CAPTURE_MODE_SILKY_WATER : int
+const CAPTURE_MODE_SILKY_WATER : number
 ```
 
 Capture mode: silky water.The value is 11.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,14 +115,12 @@ Capture mode: silky water.The value is 11.
 ## CAPTURE_MODE_SNAP_SHOT
 
 ```TypeScript
-const CAPTURE_MODE_SNAP_SHOT : int
+const CAPTURE_MODE_SNAP_SHOT : number
 ```
 
 Capture mode: snap shot.The value is 62.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,14 +129,12 @@ Capture mode: snap shot.The value is 62.
 ## CAPTURE_MODE_STAR_TRACK
 
 ```TypeScript
-const CAPTURE_MODE_STAR_TRACK : int
+const CAPTURE_MODE_STAR_TRACK : number
 ```
 
 Capture mode: star track.The value is 12.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,14 +143,12 @@ Capture mode: star track.The value is 12.
 ## CAPTURE_MODE_SUPER_MACRO
 
 ```TypeScript
-const CAPTURE_MODE_SUPER_MACRO : int
+const CAPTURE_MODE_SUPER_MACRO : number
 ```
 
 Capture mode: super macro.The value is 47.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,14 +157,12 @@ Capture mode: super macro.The value is 47.
 ## CAPTURE_MODE_TAIL_LIGHT
 
 ```TypeScript
-const CAPTURE_MODE_TAIL_LIGHT : int
+const CAPTURE_MODE_TAIL_LIGHT : number
 ```
 
 Capture mode: tail light.The value is 9.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,14 +171,12 @@ Capture mode: tail light.The value is 9.
 ## CAPTURE_MODE_WIDEAPERTURE
 
 ```TypeScript
-const CAPTURE_MODE_WIDEAPERTURE : int
+const CAPTURE_MODE_WIDEAPERTURE : number
 ```
 
 Capture mode: wide aperture.The value is 19.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,8 +192,6 @@ XMP namespace: dublin core. Namespace uri: 'http://purl.org/dc/elements/1.1/', p
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -233,8 +205,6 @@ const EXIF: XMPNamespace
 XMP namespace: exif. Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,8 +220,6 @@ XMP namespace: tiff. Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'ti
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -259,14 +227,12 @@ XMP namespace: tiff. Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'ti
 ## XMAGE_WATERMARK_MODE_AT_THE_BOTTOM
 
 ```TypeScript
-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int
+const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : number
 ```
 
 The XMAGE watermark is at the bottom of the photo.The value is 9.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,14 +241,12 @@ The XMAGE watermark is at the bottom of the photo.The value is 9.
 ## XMAGE_WATERMARK_MODE_BORDER
 
 ```TypeScript
-const XMAGE_WATERMARK_MODE_BORDER : int
+const XMAGE_WATERMARK_MODE_BORDER : number
 ```
 
 The XMAGE watermark is around the edges of the photo.The value is 10.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,8 +262,6 @@ XMP namespace: XMP basic. Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix:
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -313,8 +275,6 @@ const XMP_RIGHTS: XMPNamespace
 XMP namespace: XMP rights. Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

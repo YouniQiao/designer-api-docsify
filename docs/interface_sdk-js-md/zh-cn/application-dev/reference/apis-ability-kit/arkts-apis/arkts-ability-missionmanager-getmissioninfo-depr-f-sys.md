@@ -15,8 +15,6 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md)
@@ -35,46 +33,6 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 | missionId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let missionId: number = 0;
-
-// 获取指定任务信息
-missionManager.getMissionInfo('', missionId, (error, mission) => {
-  if (error.code) {
-    console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
-    return;
-  }
-
-  console.info(`mission.missionId = ${mission.missionId}`);
-  console.info(`mission.runningState = ${mission.runningState}`);
-  console.info(`mission.lockedState = ${mission.lockedState}`);
-  console.info(`mission.timestamp = ${mission.timestamp}`);
-  console.info(`mission.label = ${mission.label}`);
-  console.info(`mission.iconPath = ${mission.iconPath}`);
-});
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 1;
-try {
-  // 获取指定任务信息
-  missionManager.getMissionInfo('', testMissionId).then((data) => {
-    console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionInfo failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionInfo failed. Cause: ${error.message}`);
-}
-```
-
 
 ## getMissionInfo
 
@@ -85,8 +43,6 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 获取单个任务信息。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -110,7 +66,3 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 | 类型 |
 | --- |
 | Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; |
-
-**示例**
-
-参见 [getMissionInfo](#getmissioninfo)

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.LOCATION
@@ -21,8 +19,6 @@ INPUT_PARAMS_ERROR
 表示输入参数错误。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ REVERSE_GEOCODE_ERROR
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.LOCATION
@@ -57,8 +51,6 @@ GEOCODE_ERROR
 表示地理编码接口调用失败。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ LOCATOR_ERROR
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.LOCATION
@@ -93,8 +83,6 @@ LOCATION_SWITCH_ERROR
 表示定位开关。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -112,8 +100,6 @@ LAST_KNOWN_LOCATION_ERROR
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.LOCATION
@@ -129,8 +115,6 @@ LOCATION_REQUEST_TIMEOUT_ERROR
 表示单次定位，没有在指定时间内返回位置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

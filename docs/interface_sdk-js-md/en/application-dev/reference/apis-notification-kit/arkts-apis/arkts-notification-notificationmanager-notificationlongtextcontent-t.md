@@ -4,11 +4,9 @@
 export type NotificationLongTextContent = _NotificationLongTextContent
 ```
 
-Describes the long text notification.
+Describes the number text notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

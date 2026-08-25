@@ -6,8 +6,6 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## createAreaModeContext
@@ -20,8 +18,6 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -32,7 +28,7 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| areaMode | contextConstant.AreaMode | 是 |
+| [areaMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-statemanagement-connectoptions-c.md) | contextConstant.AreaMode | 是 |
 
 **返回值：**
 
@@ -40,46 +36,15 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 | --- |
 | [Context](arkts-ability-context-c.md) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
-    let areaModeContext: common.Context;
-    try {
-      // 创建特定数据加密级别的应用上下文
-      areaModeContext = this.context.createAreaModeContext(areaMode);
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-    hilog.error(0x0000, 'testTag', 'Failed to create area mode context. Code: %{public}d, message: %{public}s', err.code, err.message);
-    }
-  }
-}
-```
-
 ## createDisplayContext
 
-ArkTS-Dyn:
 ```TypeScript
 createDisplayContext(displayId: number): Context
-```
-
-ArkTS-Sta:
-```TypeScript
-createDisplayContext(displayId: long): Context
 ```
 
 根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md)和屏幕方向 [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md)）的应用上下文。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,7 +56,7 @@ createDisplayContext(displayId: long): Context
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| displayId | number | 是 |
 
 **返回值：**
 
@@ -104,28 +69,6 @@ createDisplayContext(displayId: long): Context
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let displayContext: common.Context;
-    try {
-      // displayId通过display.getDefaultDisplay()等接口获取，详见屏幕管理开发指导
-      displayContext = this.context.createDisplayContext(0);
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      hilog.error(0x0000, 'testTag', 'Failed to create display context. Code: %{public}d, message: %{public}s', err.code, err.message);
-    }
-  }
-}
-```
 
 ## createModuleContext
 
@@ -140,8 +83,6 @@ createModuleContext(moduleName: string): Context
 > - 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -171,43 +112,6 @@ createModuleContext(moduleName: string): Context
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      // 根据模块名创建上下文
-      moduleContext = this.context.createModuleContext('entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## getApplicationContext
 
 ```TypeScript
@@ -217,8 +121,6 @@ getApplicationContext(): ApplicationContext
 获取当前应用上下文。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -238,26 +140,6 @@ getApplicationContext(): ApplicationContext
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let applicationContext: common.Context;
-    try {
-      // 获取当前应用上下文
-      applicationContext = this.context.getApplicationContext();
-    } catch (error) {
-      console.error(`Failed to get application context. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## getGroupDir
 
 ```TypeScript
@@ -267,8 +149,6 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 通过应用中的Group ID获取对应的共享目录，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,50 +170,6 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let groupId = '1';
-    let getGroupDirContext: common.Context = this.context;
-    try {
-      // 通过Group ID获取共享目录（Promise方式）
-      getGroupDirContext.getGroupDir(groupId).then(data => {
-        console.info('getGroupDir result:' + data);
-      })
-    } catch (error) {
-      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let getGroupDirContext: common.Context = this.context;
-
-    // 通过Group ID获取共享目录（callback方式）
-    getGroupDirContext.getGroupDir("1", (err: BusinessError<void> | null, data: String | undefined) => {
-      if (err) {
-        console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
-      } else {
-        console.info(`getGroupDir result is: ${JSON.stringify(data)}`);
-      }
-    });
-  }
-}
-```
-
 ## getGroupDir
 
 ```TypeScript
@@ -343,8 +179,6 @@ getGroupDir(dataGroupID: string): Promise<string>
 通过应用中的Group ID获取对应的共享目录，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -371,10 +205,6 @@ getGroupDir(dataGroupID: string): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
-**示例**
-
-参见 [getGroupDir](#getgroupdir)
-
 ## isContextOf
 
 ```TypeScript
@@ -384,8 +214,6 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 判断当前Context是否为指定的ContextType类型。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -405,22 +233,6 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { UIAbility, contextConstant } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    hilog.info(0x0000, 'testTag', `%{public}s`, 'Ability onCreate');
-    // 判断当前Context是否为指定的ContextType类型
-    let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
-    hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
-  }
-}
-```
-
 ## applicationInfo
 
 ```TypeScript
@@ -432,8 +244,6 @@ applicationInfo: ApplicationInfo
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -453,8 +263,6 @@ area: contextConstant.AreaMode
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -472,8 +280,6 @@ bundleCodeDir: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -493,8 +299,6 @@ cacheDir: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -512,8 +316,6 @@ cloudFileDir: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -533,8 +335,6 @@ databaseDir: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -552,8 +352,6 @@ distributedFilesDir: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -573,8 +371,6 @@ eventHub: EventHub
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -592,8 +388,6 @@ filesDir: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -613,8 +407,6 @@ get logFileDir(): string
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -633,8 +425,6 @@ preferences目录，详情参考[应用沙箱目录](../../../file-management/ap
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -652,8 +442,6 @@ processName: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -676,8 +464,6 @@ resourceDir: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -696,8 +482,6 @@ resourceManager: resmgr.ResourceManager
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -715,8 +499,6 @@ tempDir: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

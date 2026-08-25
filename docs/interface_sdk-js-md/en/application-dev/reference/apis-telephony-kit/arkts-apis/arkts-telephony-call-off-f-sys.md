@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## off('callDetailsChange')
@@ -15,8 +15,6 @@ function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions
 Unsubscribes from **callDetailsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -43,14 +41,6 @@ Unsubscribes from **callDetailsChange** events. This API uses an asynchronous ca
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('callDetailsChange', (data: call.CallAttributeOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('callEventChange')
 
@@ -61,8 +51,6 @@ function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): vo
 Unsubscribes from **callEventChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -89,14 +77,6 @@ Unsubscribes from **callEventChange** events. This API uses an asynchronous call
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('callEventChange', (data: call.CallEventOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('callDisconnectedCause')
 
@@ -107,8 +87,6 @@ function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDeta
 Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -135,14 +113,6 @@ Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronou
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('callDisconnectedCause', (data: call.DisconnectedDetails) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('mmiCodeResult')
 
@@ -153,8 +123,6 @@ function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void
 Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -181,14 +149,6 @@ Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callba
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('mmiCodeResult', (data: call.MmiCodeResults) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('audioDeviceChange')
 
@@ -199,8 +159,6 @@ function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackI
 Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -227,14 +185,6 @@ Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous ca
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('postDialDelay')
 
@@ -245,8 +195,6 @@ function off(type: 'postDialDelay', callback?: Callback<string>): void
 Unsubscribes from **postDialDelay** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -273,14 +221,6 @@ Unsubscribes from **postDialDelay** events. This API uses an asynchronous callba
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-call.off('postDialDelay', (data: string) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('imsCallModeChange')
 
@@ -291,8 +231,6 @@ function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): v
 Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -319,16 +257,6 @@ Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous ca
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('imsCallModeChange', (data: call.ImsCallModeInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('callSessionEvent')
 
@@ -339,8 +267,6 @@ function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): v
 Unsubscribes from **callSessionEvent** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -367,16 +293,6 @@ Unsubscribes from **callSessionEvent** events. This API uses an asynchronous cal
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('callSessionEvent', (data: call.CallSessionEvent) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('peerDimensionsChange')
 
@@ -387,8 +303,6 @@ function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDet
 Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -415,16 +329,6 @@ Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('cameraCapabilitiesChange')
 
@@ -435,8 +339,6 @@ function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabil
 Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -462,11 +364,3 @@ Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchro
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-call.off('cameraCapabilitiesChange', (data: call.CameraCapabilities) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```

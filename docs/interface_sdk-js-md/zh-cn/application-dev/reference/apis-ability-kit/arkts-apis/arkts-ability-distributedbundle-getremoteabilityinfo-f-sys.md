@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedBundle } from '@kit.AbilityKit';
+import { distributedBundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -15,8 +15,6 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -45,8 +43,6 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

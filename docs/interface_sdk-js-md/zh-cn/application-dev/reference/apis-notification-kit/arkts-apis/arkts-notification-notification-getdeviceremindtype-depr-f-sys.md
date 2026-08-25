@@ -15,8 +15,6 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)
@@ -33,32 +31,6 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let getDeviceRemindTypeCallback = (err: Base.BusinessError, data: Notification.DeviceRemindType) => {
-  if (err) {
-    console.error("getDeviceRemindType failed " + JSON.stringify(err));
-  } else {
-    console.info("getDeviceRemindType success");
-  }
-};
-
-Notification.getDeviceRemindType(getDeviceRemindTypeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.getDeviceRemindType().then((data: Notification.DeviceRemindType) => {
-  console.info("getDeviceRemindType success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getDeviceRemindType failed, code is ${err}`);
-});
-```
-
 
 ## getDeviceRemindType
 
@@ -69,8 +41,6 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 获取通知的提醒方式（Promise形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -87,7 +57,3 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 | 类型 |
 | --- |
 | Promise & lt;DeviceRemindType & gt; |
-
-**示例**
-
-参见 [getDeviceRemindType](#getdeviceremindtype)

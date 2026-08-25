@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## responsiveSpringMotion
@@ -15,8 +15,6 @@ function responsiveSpringMotion(response?: number, dampingFraction?: number, ove
 构造弹性跟手动画曲线对象，是[springMotion](arkts-arkui-curves-springmotion-f.md)的一种特例，仅默认参数不同，可与springMotion混合使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,11 +32,4 @@ function responsiveSpringMotion(response?: number, dampingFraction?: number, ove
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-curves.responsiveSpringMotion() // 创建一个默认弹性跟手动画曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

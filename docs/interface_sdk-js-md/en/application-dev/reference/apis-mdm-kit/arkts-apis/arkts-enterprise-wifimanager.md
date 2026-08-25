@@ -2,9 +2,13 @@
 
 This module provides Wi-Fi management capabilities for enterprise devices, including querying the Wi-Fi enabling status, configuring Wi-Fi connections, and managing the Wi-Fi list.  
 **Use cases:**  
-- Configuring Wi-Fi connections for enterprise devices in batches, simplifying the device initialization process - Controlling the Wi-Fi networks that devices can connect to, implementing network access compliance management - Managing the Wi-Fi switch of enterprise devices and unifying network policies  
+- Configuring Wi-Fi connections for enterprise devices in batches, simplifying the device initialization process  
+- Controlling the Wi-Fi networks that devices can connect to, implementing network access compliance management  
+- Managing the Wi-Fi switch of enterprise devices and unifying network policies  
 **Benefits:**  
-- Improve enterprise network management efficiency and reduces IT O&M costs. - Ensure that devices connect only to secure Wi-Fi networks, reducing security risks. - Implement unified management and control of network policies to meet enterprise compliance requirements.
+- Improve enterprise network management efficiency and reduces IT O&M costs.  
+- Ensure that devices connect only to secure Wi-Fi networks, reducing security risks.  
+- Implement unified management and control of network policies to meet enterprise compliance requirements.
 
 > **NOTE：**&gt;
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
@@ -14,8 +18,6 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -23,7 +25,7 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

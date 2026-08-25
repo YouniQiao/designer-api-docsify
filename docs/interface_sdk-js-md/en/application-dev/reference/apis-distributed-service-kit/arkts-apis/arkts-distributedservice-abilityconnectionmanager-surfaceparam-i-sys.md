@@ -4,8 +4,6 @@ Surface configuration parameters.@interface SurfaceParam
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Surface configuration parameters.@interface SurfaceParam
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## flip
@@ -27,8 +25,6 @@ This value indicates whether the video is reversed.
 **Type:** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Video PixelFormat, this option must be configured on the sender. Must be set bef
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -59,16 +53,14 @@ Video PixelFormat, this option must be configured on the sender. Must be set bef
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Encoding length. Must be set before stream starts and cannot update once set.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,16 +71,14 @@ Encoding length. Must be set before stream starts and cannot update once set.
 ## rotation
 
 ```TypeScript
-rotation?: int
+rotation?: number
 ```
 
 This value identifies the rotation angle of the video. the range of rotation angle should be {0, 90, 180, 270}, default is 0
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ This value identifies the rotation angle of the video. the range of rotation ang
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Encoding width. Must be set before stream starts and cannot update once set.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

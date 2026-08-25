@@ -13,7 +13,7 @@ This module manages input method extension information. It enables the ArkUI edi
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from 'kits/@kit.IMEKit';
 ```
 
 ## Summary

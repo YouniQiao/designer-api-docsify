@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addFirewallRule
@@ -21,8 +21,6 @@ function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 > 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -45,36 +43,3 @@ function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let firewallRule: networkManager.FirewallRule = {
-  // 需根据实际情况进行替换
-  "srcAddr": "192.168.1.1-192.168.22.66",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "appUid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-try {
-  networkManager.addFirewallRule(wantTemp, firewallRule);
-  console.info('Succeeded in adding firewall rule.');
-} catch (err) {
-  console.error(`Failed to add firewall rule. Code: ${err.code}, message: ${err.message}`);
-}
-```

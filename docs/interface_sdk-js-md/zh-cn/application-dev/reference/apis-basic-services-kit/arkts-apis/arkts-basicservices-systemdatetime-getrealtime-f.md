@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getRealTime
@@ -15,8 +15,6 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -37,57 +35,6 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime(true, (error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime().then((time: number) => {
-    console.info(`Succeeded in getting real time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getRealTime
 
@@ -98,8 +45,6 @@ function getRealTime(callback: AsyncCallback<number>): void
 获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -119,10 +64,6 @@ function getRealTime(callback: AsyncCallback<number>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [getRealTime](#getrealtime)
-
 
 ## getRealTime
 
@@ -133,8 +74,6 @@ function getRealTime(isNano?: boolean): Promise<number>
 获取自系统启动以来经过的时间，包括深度睡眠时间，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -159,7 +98,3 @@ function getRealTime(isNano?: boolean): Promise<number>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getRealTime](#getrealtime)

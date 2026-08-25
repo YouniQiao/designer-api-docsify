@@ -4,8 +4,6 @@ The enum of ranging state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## RANGING_STOPPED
@@ -17,8 +15,6 @@ RANGING_STOPPED = 0
 The current ranging state is stopped.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ RANGING_STARTED = 1
 The current ranging state is started.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,10 @@
 # SymbolSpan属性/事件
 
-不支持通用属性，支持以下属性。不支持通用事件。
+不支持[通用属性](arkts-arkui-commonmethod-c.md)，支持以下属性。不支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-attribute.md)&gt; | 是 |
+| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-attribute.md)&gt; | 是 |
 
 ## effectStrategy
 
@@ -51,8 +47,6 @@ effectStrategy(value: SymbolEffectStrategy)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,14 +68,12 @@ effectStrategy(value: SymbolEffectStrategy)
 fontColor(value: Array<ResourceColor>)
 ```
 
-设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默 认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考 SymbolRenderingStrategy。
+设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默 认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考 [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。
 
 > **说明：**&gt;
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,7 +87,7 @@ fontColor(value: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor & gt; | 是 |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## fontSize
 
@@ -109,8 +101,6 @@ fontSize(value: number | string | Resource)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -139,8 +129,6 @@ fontWeight(value: number | FontWeight | string)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -165,8 +153,6 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -180,7 +166,7 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
+| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
 
 ## renderingStrategy
 
@@ -194,8 +180,6 @@ renderingStrategy(value: SymbolRenderingStrategy)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

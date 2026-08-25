@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { ChildProcessArgs } from '@kit.AbilityKit';
+import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
 ```
 
 ## entryParams
@@ -26,8 +24,6 @@ entryParams?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -35,121 +31,17 @@ entryParams?: string
 ## fds
 
 ```TypeScript
-fds?: Record<string, int>
+fds?: Record<string, number>
 ```
 
 文件描述符句柄集合，用于主进程和子进程通信，不传入时子进程无法获取主进程传递的文件句柄。 该参数通过key-value的形式传入到子进程中，其中key为自定义字符串，value为文件描述符句柄。可以在 [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)方法中通过args.fds获取fd句柄。&lt;b&gt;说明：&lt;/b&gt;  
-- fds最多支持16组，每组key的最大长度为20字符。 - 传递到子进程中的句柄数字可能会变，但是指向的文件是一致的。
+- fds最多支持16组，每组key的最大长度为20字符。  
+- 传递到子进程中的句柄数字可能会变，但是指向的文件是一致的。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
+**类型：** Record&lt;string, number&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-// 主进程中:
-import { common, ChildProcessArgs, childProcessManager } from '@kit.AbilityKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-            let path = context.filesDir + '/test.txt';
-            let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
-            let args: ChildProcessArgs = {
-              entryParams: 'testParam',
-              fds: {
-                'key1': file.fd
-              }
-            };
-            childProcessManager.startArkChildProcess('entry/./ets/process/DemoProcess.ets', args);
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// 子进程中:
-import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
-
-export default class DemoProcess extends ChildProcess {
-
-  onStart(args?: ChildProcessArgs) {
-    let entryParams = args?.entryParams;
-    let fd = args?.fds?.key1;
-    // ...
-  }
-}
-```
-
-示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-'use static'
-// 主进程中：
-import { common, ChildProcessArgs, childProcessManager } from '@kit.AbilityKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { Entry, Component, Row, Column, Text, FontWeight } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-            let path = context.filesDir + "/test.txt";
-            let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
-            let args: ChildProcessArgs = {
-              entryParams: "testParam",
-              fds: {
-                "key1": file.fd
-              }
-            };
-            childProcessManager.startArkChildProcess("entry/./ets/process/DemoProcess.ets", args);
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// 子进程中：
-import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
-
-export default class DemoProcess extends ChildProcess {
-  onStart(args?: ChildProcessArgs) {
-    let entryParams = args?.entryParams;
-    let fd = args?.fds!['key1'];
-    // ..
-  }
-}
-```

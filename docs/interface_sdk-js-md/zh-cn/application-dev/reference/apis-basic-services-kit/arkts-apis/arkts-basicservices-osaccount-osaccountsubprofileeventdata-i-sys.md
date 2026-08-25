@@ -1,10 +1,8 @@
 # OsAccountSubProfileEventData（系统接口）
 
-表示系统账号子Profile事件数据。
+系统账号子身份资料事件数据。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## event
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 event: OsAccountSubProfileEvent
 ```
 
-发生的事件。
+表示发生的事件。
 
 **类型：** [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,16 +35,14 @@ event: OsAccountSubProfileEvent
 ## osAccountLocalId
 
 ```TypeScript
-osAccountLocalId: int
+osAccountLocalId: number
 ```
 
-系统账号本地ID。 取值范围为全体整数。
+表示系统账号本地ID。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,16 +53,14 @@ osAccountLocalId: int
 ## previousSubProfileId
 
 ```TypeScript
-previousSubProfileId?: int
+previousSubProfileId?: number
 ```
 
-上一个系统账号子Profile标识符。 取值范围为全体整数。
+表示上一个系统账号子身份资料标识符。仅在SWITCHING和SWITCHED事件中有效。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,16 +71,14 @@ previousSubProfileId?: int
 ## subProfileId
 
 ```TypeScript
-subProfileId: int
+subProfileId: number
 ```
 
-系统账号子profile标识。 取值范围为全体整数。
+系统账号子身份资料的标识符。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

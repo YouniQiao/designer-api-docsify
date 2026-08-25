@@ -14,7 +14,7 @@ PerfTest provides white-box performance test capabilities in test scenarios. It 
 ## Modules to Import
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## Summary

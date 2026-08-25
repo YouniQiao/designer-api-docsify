@@ -3,8 +3,6 @@
 An object with some or all of properties of `options` parameter of `Intl.RelativeTimeFormat` constructor.  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -18,9 +16,7 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 
 The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
 
-**Type:** RelativeTimeFormatLocaleMatcher
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatLocaleMatcher](arkts-intl-relativetimeformatlocalematcher-t.md)
 
 ## numeric
 
@@ -30,9 +26,7 @@ numeric?: RelativeTimeFormatNumeric
 
 The format of output message.
 
-**Type:** RelativeTimeFormatNumeric
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
 
 ## style
 
@@ -42,6 +36,4 @@ style?: RelativeTimeFormatStyle
 
 The length of the internationalized message.
 
-**Type:** RelativeTimeFormatStyle
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)

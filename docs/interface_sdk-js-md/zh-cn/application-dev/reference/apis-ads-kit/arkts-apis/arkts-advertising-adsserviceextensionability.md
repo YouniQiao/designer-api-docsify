@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from 'kits/@kit.AdsKit';
 ```
 
 ## 汇总

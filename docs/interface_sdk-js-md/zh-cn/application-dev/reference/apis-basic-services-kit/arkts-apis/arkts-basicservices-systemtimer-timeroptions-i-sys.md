@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## callback
@@ -25,8 +23,6 @@ callback?: () => void
 用户需要执行的回调函数。默认值为空。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -44,8 +40,6 @@ autoRestore?: boolean
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -53,16 +47,14 @@ autoRestore?: boolean
 ## interval
 
 ```TypeScript
-interval?: long
+interval?: number
 ```
 
 定时器时间间隔，单位：毫秒。如果是循环定时器，interval值最小为1s，最大为365天，建议interval值不小于5000毫秒；单次定时器interval值为0。默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -80,8 +72,6 @@ name?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -98,8 +88,6 @@ repeat: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -107,16 +95,14 @@ repeat: boolean
 ## type
 
 ```TypeScript
-type: int
+type: number
 ```
 
 定时器类型，可以使用 '|' 多选。取值为1，表示为系统启动时间定时器（定时器启动时间不能晚于当前设置的系统时间）；取值为2，表示为唤醒定时器；取值为4，表示为精准定时器（APP被冻结时，定时器也会被冻结，并且定时器受统一心跳管控，因此即使是精准定时器也不能确保在指定时间点触发）；取值为8，表示为IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -133,8 +119,6 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 

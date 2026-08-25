@@ -15,8 +15,6 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang

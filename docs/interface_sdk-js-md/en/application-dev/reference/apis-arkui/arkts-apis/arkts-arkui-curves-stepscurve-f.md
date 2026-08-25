@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## stepsCurve
@@ -15,8 +15,6 @@ function stepsCurve(count: number, end: boolean): ICurve
 Creates a step curve.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,11 +31,4 @@ Creates a step curve.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.stepsCurve(9, true)  // Create a step curve.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

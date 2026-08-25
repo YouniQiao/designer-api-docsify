@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## savePdfFileJob
 
 ```TypeScript
-function savePdfFileJob(jobId: string, fd: int): Promise<void>
+function savePdfFileJob(jobId: string, fd: number): Promise<void>
 ```
 
 Save the pdf file for a print job.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -31,7 +29,7 @@ Save the pdf file for a print job.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | jobId | string | Yes |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| fd | number | Yes |
 
 **Return value:**
 

@@ -15,8 +15,6 @@ function getArguments(): AbilityDelegatorArgs
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
@@ -28,14 +26,3 @@ function getArguments(): AbilityDelegatorArgs
 | 类型 |
 | --- |
 | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) |
-
-**示例**
-
-```TypeScript
-import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
-
-let args = AbilityDelegatorRegistry.getArguments();
-console.info(`getArguments bundleName: ${args.bundleName}`);
-console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
-console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
-```

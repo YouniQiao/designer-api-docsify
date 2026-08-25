@@ -4,14 +4,12 @@ Describes the configuration for window animation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## curve
@@ -26,8 +24,6 @@ Type of animation curve.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -35,16 +31,14 @@ Type of animation curve.
 ## duration
 
 ```TypeScript
-duration?: long
+duration?: number
 ```
 
 Duration for playing the animation, in milliseconds (ms).The default value is 0, and the maximum value is 3000.Whether it is required depends on the animation curve type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -61,8 +55,6 @@ Parameters for the animation curve. Whether it is required depends on the animat
 **Type:** [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 ## NFC_RF_LEAVE
@@ -18,8 +16,6 @@ NFC离场事件。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 ## NFC_RF_ENTER
@@ -31,7 +27,5 @@ NFC_RF_ENTER = 1
 NFC进场事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.ConnectedTag

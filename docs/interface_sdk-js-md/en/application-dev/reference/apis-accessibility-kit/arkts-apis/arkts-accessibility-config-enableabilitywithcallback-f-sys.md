@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## enableAbilityWithCallback
@@ -19,8 +19,6 @@ function enableAbilityWithCallback(
 Enables an accessibility extension and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) as the callback for disconnection events of the accessibility extension. This API uses a promise to return the result.When the accessibility extension process is abnormally disconnected, the onDisconnect callback of ConnectCallback will be triggered. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md).
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -52,24 +50,3 @@ Enables an accessibility extension and specifies [ConnectCallback](arkts-accessi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) |
-
-**Examples**
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-let connectCallback: config.ConnectCallback = {
-  onDisconnect: () => {
-    console.info(`Ability is disconnected.`)
-  }
-}
-
-config.enableAbilityWithCallback(name, capability, connectCallback).then(() => {
-  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
-});
-```

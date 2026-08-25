@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getProfileByAbilitySync
@@ -15,8 +15,6 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 以同步方法根据给定的moduleName、abilityName和metadataName（module.json5中 [metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数 组。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -45,42 +43,3 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  // 通过模块名称和ability名称获取相应配置文件的json格式字符串信息
-  let data = bundleManager.getProfileByAbilitySync(moduleName, abilityName);
-  hilog.info(0x0000, 'testTag', 'getProfileByAbilitySync successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbilitySync failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName: string = 'entry';
-let abilityName: string = 'EntryAbility';
-let metadataName: string = 'ability_metadata';
-
-try {
-  // 通过模块名称，ability名称和UIAbility组件的元信息名称获取相应配置文件的json格式字符串信息
-  let data = bundleManager.getProfileByAbilitySync(moduleName, abilityName, metadataName);
-  hilog.info(0x0000, 'testTag', 'getProfileByAbilitySync successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbilitySync failed. Cause: %{public}s', message);
-}
-```

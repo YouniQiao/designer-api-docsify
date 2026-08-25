@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## installUserTrustedCertificateSync
@@ -15,8 +15,6 @@ function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScop
 Installs a user CA certificate.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
@@ -45,25 +43,3 @@ Installs a user CA certificate.
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) |
 | [17500007](../errorcode-certManager.md#17500007-device-in-advanced-security-mode) |
-
-**Examples**
-
-```TypeScript
-import {certificateManager} from '@kit.DeviceCertificateKit';
-
-/* The CA certificate data must be assigned by the service. In this example, the data is not CA certificate data. */
-let certData: Uint8Array = new Uint8Array([
-    0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-try {
-    let result: certificateManager.CMResult = certificateManager.installUserTrustedCertificateSync(certData, certificateManager.CertScope.CURRENT_USER);
-    let certUri = result.uri;
-    if (certUri === undefined) {
-        console.error("The result of install user trusted certificate is undefined.");
-    } else {
-        console.info("Succeeded to install user trusted certificate.");
-    }
-} catch (error) {
-    console.error(`Failed to install user trusted certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

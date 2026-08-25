@@ -1,32 +1,16 @@
 # InputMethodListDialog
 
-InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) <br> <br>Implements a dialog box showing the input method list.
+InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## controller
 
@@ -36,11 +20,9 @@ controller: CustomDialogController
 
 Sets the controller.
 
-**Type:** CustomDialogController
+**Type:** [CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -55,7 +37,5 @@ Sets the pattern options. This parameter can be left blank when it is not defaul
 **Type:** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

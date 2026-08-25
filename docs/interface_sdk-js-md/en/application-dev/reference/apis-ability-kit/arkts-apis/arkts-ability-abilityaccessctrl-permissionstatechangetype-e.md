@@ -4,8 +4,6 @@ Enumerates the operations that trigger permission state changes.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 ## PERMISSION_REVOKED_OPER
@@ -17,8 +15,6 @@ PERMISSION_REVOKED_OPER = 0
 Operation to revoke a permission.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -33,8 +29,6 @@ PERMISSION_GRANTED_OPER = 1
 Operation to grant a permission.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

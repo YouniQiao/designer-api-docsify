@@ -4,8 +4,6 @@ Enumerates the parity check modes.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_NONE
@@ -17,8 +15,6 @@ PARITY_NONE = 0
 No parity.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ Odd parity.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_EVEN
@@ -45,8 +39,6 @@ PARITY_EVEN = 2
 Even parity.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -60,8 +52,6 @@ Mark parity, whose parity bit is fixed at **1**.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_SPACE
@@ -73,7 +63,5 @@ PARITY_SPACE = 4
 Space parity, whose parity bit is fixed at **0**.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial

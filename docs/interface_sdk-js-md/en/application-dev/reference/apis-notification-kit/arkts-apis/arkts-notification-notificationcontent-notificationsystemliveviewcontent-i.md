@@ -9,8 +9,6 @@ Describes the system live view notification content, which is used to display re
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## button
@@ -24,8 +22,6 @@ Button of the notification. This parameter is left empty by default.
 **Type:** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -41,8 +37,6 @@ Capsule of the notification. This parameter is left empty by default.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## progress
@@ -56,8 +50,6 @@ Progress of the notification. This parameter is left empty by default.
 **Type:** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -73,22 +65,18 @@ Time of the notification. This parameter is left empty by default.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## typeCode
 
 ```TypeScript
-typeCode: int
+typeCode: number
 ```
 
 Type identifier for marking the caller's service type, which is used to distinguish different live view service scenarios.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

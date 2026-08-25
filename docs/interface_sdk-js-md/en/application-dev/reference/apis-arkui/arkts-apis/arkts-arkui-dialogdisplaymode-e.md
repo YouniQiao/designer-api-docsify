@@ -4,8 +4,6 @@ Dialog display mode.@enum { DialogDisplayMode }
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SCREEN_BASED
@@ -17,8 +15,6 @@ SCREEN_BASED = 0
 The dialog displayed based on screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ WINDOW_BASED = 1
 The dialog displayed based on application window.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

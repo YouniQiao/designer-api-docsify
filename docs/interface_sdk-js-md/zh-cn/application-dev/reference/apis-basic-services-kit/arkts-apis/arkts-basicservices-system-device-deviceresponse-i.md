@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## apiVersion
@@ -27,8 +25,6 @@ apiVersion: number
 **类型：** number
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
 **废弃版本：** 6
 
@@ -46,8 +42,6 @@ brand: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -63,8 +57,6 @@ deviceType: string
 **类型：** string
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
 **废弃版本：** 6
 
@@ -82,8 +74,6 @@ language: string
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -99,8 +89,6 @@ manufacturer: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 6
 
@@ -118,8 +106,6 @@ model: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -135,8 +121,6 @@ product: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 6
 
@@ -154,8 +138,6 @@ region: string
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -171,8 +153,6 @@ screenDensity: number
 **类型：** number
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
 **废弃版本：** 6
 
@@ -192,8 +172,6 @@ screenShape: 'rect' | 'circle'
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -209,8 +187,6 @@ sdkMinorApiVersion?: number
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **废弃版本：** 26.0.0
 
@@ -230,8 +206,6 @@ sdkPatchApiVersion?: number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **废弃版本：** 26.0.0
 
 **模型约束：** 此接口仅可在FA模型下使用。
@@ -250,8 +224,6 @@ windowHeight: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
@@ -267,8 +239,6 @@ windowWidth: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 6
 

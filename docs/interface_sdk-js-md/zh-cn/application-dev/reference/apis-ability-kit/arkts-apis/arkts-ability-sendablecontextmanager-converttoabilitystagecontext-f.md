@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## convertToAbilityStageContext
@@ -15,8 +15,6 @@ function convertToAbilityStageContext(sendableContext: SendableContext): common.
 将SendableContext对象转换为AbilityStageContext。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,89 +39,3 @@ function convertToAbilityStageContext(sendableContext: SendableContext): common.
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-主线程传递Context：
-
-```TypeScript
-import { AbilityStage, sendableContextManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { worker } from '@kit.ArkTS';
-
-@Sendable
-export class SendableObject {
-  constructor(sendableContext: sendableContextManager.SendableContext, contextName: string) {
-    this.sendableContext = sendableContext;
-    this.contextName = contextName;
-  }
-
-  sendableContext: sendableContextManager.SendableContext;
-  contextName: string;
-}
-
-export default class MyAbilityStage extends AbilityStage {
-  worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
-
-  onCreate(): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'AbilityStage onCreate');
-
-    // convert and post
-    try {
-      let sendableContext: sendableContextManager.SendableContext =
-        sendableContextManager.convertFromContext(this.context);
-      let object: SendableObject = new SendableObject(sendableContext, 'AbilityStageContext');
-      hilog.info(0x0000, 'testTag', '%{public}s', 'AbilityStage post message');
-      this.worker.postMessageWithSharedSendable(object);
-    } catch (error) {
-      hilog.error(
-        0x0000, 'testTag', `convertFromContext failed, error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-}
-```
-
-Worker线程接收Context：
-
-```TypeScript
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-import { common, sendableContextManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Sendable
-export class SendableObject {
-  constructor(sendableContext: sendableContextManager.SendableContext, contextName: string) {
-    this.sendableContext = sendableContext;
-    this.contextName = contextName;
-  }
-
-  sendableContext: sendableContextManager.SendableContext;
-  contextName: string;
-}
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (e: MessageEvents) => {
-  let object: SendableObject = e.data;
-  let sendableContext: sendableContextManager.SendableContext = object.sendableContext;
-  if (object.contextName == 'AbilityStageContext') {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'convert to abilitystage context.');
-    try {
-      let context: common.AbilityStageContext = sendableContextManager.convertToAbilityStageContext(sendableContext);
-      // 获取context后获取沙箱路径
-      hilog.info(0x0000, 'testTag', 'worker context.databaseDir: %{public}s', context.databaseDir);
-    } catch (error) {
-      hilog.error(0x0000,
-        'testTag', `convertToAbilityStageContext failed, error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-}
-
-workerPort.onmessageerror = (e: MessageEvents) => {
-  hilog.error(0x0000, 'testTag', '%{public}s', 'onmessageerror');
-}
-
-workerPort.onerror = (e: ErrorEvent) => {
-  hilog.error(0x0000, 'testTag', '%{public}s', 'onerror');
-}
-```

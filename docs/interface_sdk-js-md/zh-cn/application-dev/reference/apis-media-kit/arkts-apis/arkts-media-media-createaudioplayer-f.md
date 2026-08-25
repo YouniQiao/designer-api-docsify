@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createAudioPlayer
@@ -21,8 +21,6 @@ function createAudioPlayer(): AudioPlayer
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
@@ -33,10 +31,4 @@ function createAudioPlayer(): AudioPlayer
 
 | 类型 |
 | --- |
-| [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md) |
-
-**示例**
-
-```TypeScript
-let audioPlayer: media.AudioPlayer = media.createAudioPlayer();
-```
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) |

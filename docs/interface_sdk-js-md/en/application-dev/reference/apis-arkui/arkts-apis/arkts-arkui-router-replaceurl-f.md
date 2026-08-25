@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## replaceUrl
@@ -21,8 +21,6 @@ Replaces the current page with another one in the application and destroys the c
 > with the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -47,96 +45,6 @@ Replaces the current page with another one in the application and destroys the c
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.error(`replaceUrl finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`replaceUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1:string;
-
-  constructor(str:string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.error(`replaceUrl finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`replaceUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-});
-```
-
 
 ## replaceUrl
 
@@ -153,8 +61,6 @@ Replaces the current page with another one in the application and destroys the c
 > with the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -184,10 +90,6 @@ Replaces the current page with another one in the application and destroys the c
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
-**Examples**
-
-See [replaceUrl](#replaceurl)
-
 
 ## replaceUrl
 
@@ -204,8 +106,6 @@ Replaces the current page with another one in the application and destroys the c
 > with the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -231,10 +131,6 @@ Replaces the current page with another one in the application and destroys the c
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
-**Examples**
-
-See [replaceUrl](#replaceurl)
-
 
 ## replaceUrl
 
@@ -251,8 +147,6 @@ Replaces the current page with another one in the application and destroys the c
 > with the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -282,7 +176,3 @@ Replaces the current page with another one in the application and destroys the c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
-
-**Examples**
-
-See [replaceUrl](#replaceurl)

@@ -4,14 +4,12 @@ Provides methods to create a **Query** object, which defines different data quer
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,8 +22,6 @@ Creates a **Query** object with the AND condition.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -35,25 +31,6 @@ Creates a **Query** object with the AND condition.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo("field", "value1");
-      query.and();
-      query.notEqualTo("field", "value2");
-      console.info("query is " + query.getSqlLike());
-    }
-    query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
-}
-```
 
 ## beginGroup
 
@@ -65,8 +42,6 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -76,25 +51,6 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.beginGroup();
-      query.isNotNull("field");
-      query.endGroup();
-      console.info("query is " + query.getSqlLike());
-    }
-    query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
-}
-```
 
 ## constructor
 
@@ -106,31 +62,9 @@ Defines a constructor used to create a **Query** instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-
-**Examples**
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
 
 ## deviceId
 
@@ -148,8 +82,6 @@ Creates a **Query** object with the device ID as the key prefix.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,23 +105,6 @@ Creates a **Query** object with the device ID as the key prefix.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.deviceId("deviceId");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## endGroup
 
 ```TypeScript
@@ -199,8 +114,6 @@ endGroup(): Query
 Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,35 +125,10 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.beginGroup();
-      query.isNotNull("field");
-      query.endGroup();
-      console.info("query is " + query.getSqlLike());
-    }
-    query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
-}
-```
-
 ## equalTo
 
-ArkTS-Dyn:
 ```TypeScript
 equalTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
@@ -253,8 +141,6 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -264,7 +150,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | Yes |
+| value | number \| number \| string \| boolean | Yes |
 
 **Return value:**
 
@@ -278,24 +164,6 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.equalTo("field", "value");
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## getSqlLike
 
 ```TypeScript
@@ -305,8 +173,6 @@ getSqlLike(): string
 Obtains the query statement of the **Query** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,32 +184,10 @@ Obtains the query statement of the **Query** object.
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      let sql1 = query.getSqlLike();
-      console.info(`GetSqlLike sql= ${sql1}`);
-    }
-} catch (e) {
-    console.error("duplicated calls should be ok : " + e);
-}
-```
-
 ## greaterThan
 
-ArkTS-Dyn:
 ```TypeScript
 greaterThan(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
@@ -356,8 +200,6 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -367,7 +209,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | Yes |
+| value | number \| number \| string \| boolean | Yes |
 
 **Return value:**
 
@@ -381,34 +223,10 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.greaterThan("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## greaterThanOrEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
@@ -421,8 +239,6 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -432,7 +248,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | Yes |
+| value | number \| number \| string | Yes |
 
 **Return value:**
 
@@ -446,34 +262,10 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.greaterThanOrEqualTo("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## inNumber
 
-ArkTS-Dyn:
 ```TypeScript
 inNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
@@ -486,8 +278,6 @@ Creates a **Query** object to match the specified field whose value is within th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -497,7 +287,7 @@ Creates a **Query** object to match the specified field whose value is within th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| valueList | ArkTS-Dyn: number[] \| number[]<br>ArkTS-Sta：long[] \ | double[] | Yes |
+| valueList | number[] \| number[] | Yes |
 
 **Return value:**
 
@@ -510,24 +300,6 @@ Creates a **Query** object to match the specified field whose value is within th
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.inNumber("field", [0, 1]);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## inString
 
@@ -544,8 +316,6 @@ Creates a **Query** object to match the specified field whose value is within th
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -570,24 +340,6 @@ Creates a **Query** object to match the specified field whose value is within th
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.inString("field", ['test1', 'test2']);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## isNotNull
 
 ```TypeScript
@@ -603,8 +355,6 @@ Creates a **Query** object to match the specified field whose value is not **nul
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -627,24 +377,6 @@ Creates a **Query** object to match the specified field whose value is not **nul
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.isNotNull("field");
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## isNull
 
@@ -662,8 +394,6 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -686,34 +416,10 @@ Creates a **Query** object to match the specified field whose value is **null**.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.isNull("field");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## lessThan
 
-ArkTS-Dyn:
 ```TypeScript
 lessThan(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-lessThan(field: string, value: long | double | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
@@ -726,8 +432,6 @@ Creates a **Query** object to match the specified field whose value is less than
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -737,7 +441,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | Yes |
+| value | number \| number \| string | Yes |
 
 **Return value:**
 
@@ -751,34 +455,10 @@ Creates a **Query** object to match the specified field whose value is less than
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.lessThan("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## lessThanOrEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 lessThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
@@ -791,8 +471,6 @@ Creates a **Query** object to match the specified field whose value is less than
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -802,7 +480,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | Yes |
+| value | number \| number \| string | Yes |
 
 **Return value:**
 
@@ -815,24 +493,6 @@ Creates a **Query** object to match the specified field whose value is less than
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.lessThanOrEqualTo("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## like
 
@@ -849,8 +509,6 @@ Creates a **Query** object to match the specified field whose value is similar t
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -875,41 +533,15 @@ Creates a **Query** object to match the specified field whose value is similar t
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.like("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## limit
 
-ArkTS-Dyn:
 ```TypeScript
 limit(total: number, offset: number): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-limit(total: int, offset: int): Query
 ```
 
 Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -919,8 +551,8 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| total | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| total | number | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
@@ -934,37 +566,10 @@ Creates a **Query** object to specify the number of records of the query result 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let total = 10;
-let offset = 1;
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.notEqualTo("field", "value");
-    query.limit(total, offset);
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## notEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 notEqualTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
@@ -977,8 +582,6 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -988,7 +591,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | Yes |
+| value | number \| number \| string \| boolean | Yes |
 
 **Return value:**
 
@@ -1002,34 +605,10 @@ Creates a **Query** object to match the specified field whose value is not equal
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.notEqualTo("field", "value");
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## notInNumber
 
-ArkTS-Dyn:
 ```TypeScript
 notInNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
@@ -1042,8 +621,6 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1053,7 +630,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| valueList | ArkTS-Dyn: number[] \| number[]<br>ArkTS-Sta：long[] \ | double[] | Yes |
+| valueList | number[] \| number[] | Yes |
 
 **Return value:**
 
@@ -1066,24 +643,6 @@ Creates a **Query** object to match the specified field whose value is not withi
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notInNumber("field", [0, 1]);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## notInString
 
@@ -1100,8 +659,6 @@ Creates a **Query** object to match the specified field whose value is not withi
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1126,24 +683,6 @@ Creates a **Query** object to match the specified field whose value is not withi
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notInString("field", ['test1', 'test2']);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## or
 
 ```TypeScript
@@ -1154,8 +693,6 @@ Creates a **Query** object with the OR condition.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1165,25 +702,6 @@ Creates a **Query** object with the OR condition.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo("field", "value1");
-      query.or();
-      query.notEqualTo("field", "value2");
-      console.info("query is " + query.getSqlLike());
-    }
-    query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
-}
-```
 
 ## orderByAsc
 
@@ -1201,8 +719,6 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1224,25 +740,6 @@ Creates a **Query** object to sort the query results in ascending order.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo("field", "value");
-      query.orderByAsc("field");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## orderByDesc
 
@@ -1260,8 +757,6 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1284,25 +779,6 @@ Creates a **Query** object to sort the query results in descending order.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo("field", "value");
-      query.orderByDesc("field");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## prefixKey
 
 ```TypeScript
@@ -1312,8 +788,6 @@ prefixKey(prefix: string): Query
 Creates a **Query** object with a specified key prefix.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1337,25 +811,6 @@ Creates a **Query** object with a specified key prefix.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.prefixKey("$.name");
-      query.prefixKey("0");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## reset
 
 ```TypeScript
@@ -1365,8 +820,6 @@ reset(): Query
 Resets the **Query** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1378,25 +831,6 @@ Resets the **Query** object.
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.equalTo("key", "value");
-    console.info("query is " + query.getSqlLike());
-    query.reset();
-    console.info("query is " + query.getSqlLike());
-  }
-  query = null;
-} catch (e) {
-  console.error("simply calls should be ok :" + e);
-}
-```
-
 ## setSuggestIndex
 
 ```TypeScript
@@ -1406,8 +840,6 @@ setSuggestIndex(index: string): Query
 Creates a **Query** object with an index preferentially used for query.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1431,25 +863,6 @@ Creates a **Query** object with an index preferentially used for query.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.setSuggestIndex("$.name");
-      query.setSuggestIndex("0");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## unlike
 
 ```TypeScript
@@ -1465,8 +878,6 @@ Creates a **Query** object to match the specified field whose value is not simil
 > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1490,21 +901,3 @@ Creates a **Query** object to match the specified field whose value is not simil
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.unlike("field", "value");
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
-}
-```

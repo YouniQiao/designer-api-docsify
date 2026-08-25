@@ -15,8 +15,6 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md)
@@ -34,58 +32,6 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | missionId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let testMissionId = 2;
-try {
-  missionManager.moveMissionToFront(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`moveMissionToFront failed: ${err.message}`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  console.error(`moveMissionToFront failed: ${err.message}`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let testMissionId = 2;
-try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
-    if (err) {
-      console.error(`moveMissionToFront failed: ${err.message}`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  console.error(`moveMissionToFront failed: ${err.message}`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  missionManager.moveMissionToFront(testMissionId).then((data) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-}
-```
-
 
 ## moveMissionToFront
 
@@ -96,8 +42,6 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -117,10 +61,6 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-See [moveMissionToFront](#movemissiontofront)
-
 
 ## moveMissionToFront
 
@@ -131,8 +71,6 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -156,7 +94,3 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [moveMissionToFront](#movemissiontofront)

@@ -7,8 +7,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## 汇总
@@ -39,16 +37,12 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperate) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemessage) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemouse) |
-| [offCooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) |
-| [offCooperateMouseEvent](arkts-distributedservice-cooperate-offcooperatemouseevent-f-sys.md) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperate) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemessage) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemouse) |
-| [onCooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) |
-| [onCooperateMouseEvent](arkts-distributedservice-cooperate-oncooperatemouseevent-f-sys.md) |
+| off |
+| [off](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
+| off |
+| on |
+| [on](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
+| on |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
 | [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) |

@@ -6,8 +6,6 @@ Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(fillStyle?: EffectFillStyle)
 A constructor used to create a **HierarchicalSymbolEffect** instance, which comes with a hierarchical animation effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ Effect fill style.Default value: **EffectFillStyle.CUMULATIVE**
 **Type:** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

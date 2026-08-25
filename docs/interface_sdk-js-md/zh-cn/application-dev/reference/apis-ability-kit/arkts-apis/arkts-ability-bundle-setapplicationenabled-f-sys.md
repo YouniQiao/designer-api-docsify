@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## setApplicationEnabled
@@ -15,8 +15,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 设置是否启用指定的应用程序，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -36,35 +34,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 | isEnable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-
-bundle.setApplicationEnabled(bundleName, false, err => {
-  if (err) {
-    console.error('setApplicationEnabled failed.');
-  } else {
-    console.info('setApplicationEnabled successfully.');
-  }
-});
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-
-bundle.setApplicationEnabled(bundleName, false).then(() => {
-  console.info('setApplicationEnabled successfully.');
-}).catch((error: BusinessError) => {
-  console.error('setApplicationEnabled failed.');
-});
-```
-
 
 ## setApplicationEnabled
 
@@ -75,8 +44,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 设置是否启用指定的应用程序，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -100,7 +67,3 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setApplicationEnabled](#setapplicationenabled)

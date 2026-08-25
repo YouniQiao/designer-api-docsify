@@ -4,8 +4,6 @@ Defines the particle color property updater configs. @interface ParticleColorPro
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ Defines the particle color property updater configs. @interface ParticleColorPro
 
 The color changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0–3000 ms, 3000–5000 ms, and 5000–8000 ms.
 
-**Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;ResourceColor&gt;&gt;
+**Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ The color does not change.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -64,8 +58,6 @@ The color changes randomly, with the per-second change difference being a value 
 **Type:** [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

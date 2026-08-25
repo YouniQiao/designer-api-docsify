@@ -15,8 +15,6 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md)
@@ -31,42 +29,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isDistributedEnabledByBundleCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isDistributedEnabledByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("isDistributedEnabledByBundle success" + JSON.stringify(data));
-  }
-};
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-Notification.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-Notification.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
-  console.info("isDistributedEnabledByBundle success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isDistributedEnabledByBundle failed, code is ${err}`);
-});
-```
 
 
 ## isDistributedEnabledByBundle
@@ -79,8 +43,6 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md)
@@ -95,14 +57,10 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isDistributedEnabledByBundle](#isdistributedenabledbybundle)

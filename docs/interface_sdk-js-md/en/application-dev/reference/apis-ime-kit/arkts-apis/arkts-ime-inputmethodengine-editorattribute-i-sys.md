@@ -4,14 +4,12 @@ Represents the attributes of the edit box.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## fluidLightMode
@@ -20,13 +18,11 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default. <br> <br>This attribute is available only to system applications.
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default. This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

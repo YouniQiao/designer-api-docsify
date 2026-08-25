@@ -6,14 +6,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -26,27 +24,11 @@ onBackground(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onBackground() {
-    // UIAbility回到后台
-    hilog.info(0x0000, 'testTag', `onBackground`);
-  }
-}
-```
 
 ## onBackPressed
 
@@ -55,11 +37,10 @@ onBackPressed(): boolean
 ```
 
 UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回值决定是否销毁UIAbility。  
-- 当targetSdkVersion&lt;12时，默认返回值为false，会销毁UIAbility。 - 当targetSdkVersion&gt;=12时，默认返回值为true，会将UIAbility移动到后台不销毁。
+- 当targetSdkVersion&lt;12时，默认返回值为false，会销毁UIAbility。  
+- 当targetSdkVersion&gt;=12时，默认返回值为true，会将UIAbility移动到后台不销毁。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,18 +53,6 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onBackPressed() {
-    return true;
-  }
-}
-```
 
 ## onCollaborate
 
@@ -106,8 +75,6 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -124,75 +91,6 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 | --- |
 | AbilityConstant.CollaborateResult |
 
-**示例**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCollaborate(wantParam: Record<string, Object>) {
-    return AbilityConstant.CollaborateResult.ACCEPT;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-export default class MyAbility extends UIAbility {
-  onCollaborate(wantParam: Record<string, RecordData>) {
-    return AbilityConstant.CollaborateResult.ACCEPT;
-  }
-}
-```
-
-## onCollaborate
-
-```TypeScript
-onCollaborate(wantParam: Record<string, RecordData>): AbilityConstant.CollaborateResult
-```
-
-UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。
-
-> **说明：**&gt;
-> - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。&gt;
-> - 通过
-> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
-> 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为
-> FLAG_ABILITY_ON_COLLABORATE。&gt;
-> - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在
-> [onForeground](#onforeground)前或[onBackground](#onbackground)后调用；
-> [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在
-> [onNewWant](#onnewwant)前调用。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| AbilityConstant.CollaborateResult |
-
-**示例**
-
-参见 [onCollaborate](#oncollaborate)
-
 ## onContinue
 
 ```TypeScript
@@ -206,8 +104,6 @@ onContinue(wantParam: Record<string, Object>):
 > 对于API version 18（不含18） 之前版本仅支持同步调用，从API version 18及后续版本可支持异步调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -228,46 +124,6 @@ onContinue(wantParam: Record<string, Object>):
 | AbilityConstant.OnContinueResult |
 | AbilityConstant.OnContinueResult \| Promise & lt;AbilityConstant.OnContinueResult & gt; |
 
-**示例**
-
-应用迁移时使用同步接口进行数据保存，示例如下：
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onContinue(wantParam: Record<string, Object>) {
-    console.info('onContinue');
-    wantParam['myData'] = 'my1234567'; // 保存待迁移的业务数据
-    return AbilityConstant.OnContinueResult.AGREE;
-  }
-}
-```
-
-应用迁移时使用异步接口进行数据保存，示例如下：
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  async setWant(wantParams: Record<string, Object>) {
-    console.info('setWant start');
-    for (let time = 0; time < 1000; ++time) {
-      wantParams[time] = time;
-    }
-    console.info('setWant end');
-  }
-
-  async onContinue(wantParams: Record<string, Object>) {
-    console.info('onContinue');
-    // 异步保存待迁移数据
-    return this.setWant(wantParams).then(() => {
-      return AbilityConstant.OnContinueResult.AGREE;
-    });
-  }
-}
-```
-
 ## onCreate
 
 ```TypeScript
@@ -277,8 +133,6 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 当UIAbility实例创建完成时，系统会触发该回调，开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。该回调仅会在UIAbility [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时触发。同步接口，不支持异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -292,21 +146,6 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 | launchParam | AbilityConstant.LaunchParam | 是 |
-
-**示例**
-
-```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // 执行异步任务
-    hilog.info(0x0000, 'testTag',
-      `onCreate, want: ${want.abilityName}, the launchReason is ${launchParam.launchReason}, the lastExitReason is ${launchParam.lastExitReason}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -322,103 +161,11 @@ onDestroy(): void | Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-同步回调示例如下：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用同步函数...
-  }
-}
-```
-
-Promise异步回调示例如下：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  async onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用异步函数...
-  }
-}
-```
-
-同步回调示例如下：
-
-```TypeScript
-'use static'
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onDestroy(): Promise<void> {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用同步函数...
-  }
-}
-```
-
-Promise异步回调示例如下：
-
-```TypeScript
-'use static'
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  async onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用异步函数...
-  }
-}
-```
-
-## onDestroy
-
-```TypeScript
-onDestroy(): Promise<void> | undefined
-```
-
-当UIAbility被销毁（例如使用 [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) 接口停止UIAbility）时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。
-
-> **说明：**&gt;
-> - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。&gt;
-> - 该回调仅在UIAbility正常退出时触发，当UIAbility异常退出（例如低内存终止进程）时，该回调将不被触发。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; \ | undefined |
-
-**示例**
-
-参见 [onDestroy](#ondestroy)
 
 ## onDidBackground
 
@@ -430,73 +177,11 @@ UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBa
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { audio } from '@kit.AudioKit';
-
-export default class MyUIAbility extends UIAbility {
-  static audioRenderer: audio.AudioRenderer | null = null;
-
-  // ...
-  onForeground(): void {
-    let audioStreamInfo: audio.AudioStreamInfo = {
-      samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率，单位：Hz。
-      channels: audio.AudioChannel.CHANNEL_2, // 通道。
-      sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
-      encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
-    };
-
-    let audioRendererInfo: audio.AudioRendererInfo = {
-      usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // 音频流使用类型：音乐。根据业务场景配置，参考StreamUsage。
-      rendererFlags: 0 // 音频渲染器标志。
-    };
-
-    let audioRendererOptions: audio.AudioRendererOptions = {
-      streamInfo: audioStreamInfo,
-      rendererInfo: audioRendererInfo
-    };
-
-    // 在前台时申请audioRenderer，用于播放PCM（Pulse Code Modulation）音频数据
-    audio.createAudioRenderer(audioRendererOptions).then((data) => {
-      MyUIAbility.audioRenderer = data;
-      hilog.info(0x0000, 'testTag', `AudioRenderer Created : Success : Stream Type: SUCCESS.`);
-    }).catch((error: Error) => {
-      let err = error as BusinessError;
-      hilog.error(0x0000, 'testTag', `AudioRenderer Created : F : code: ${err.code} message: ${err.message}.`);
-    });
-  }
-
-  onDidBackground(): void {
-    // 转到后台后，释放audioRenderer资源
-    const renderer = MyUIAbility.audioRenderer;
-    if (renderer === null) {
-      hilog.warn(0x0000, 'testTag', 'AudioRenderer is null, cannot release');
-      return;
-    }
-    renderer.release((error: BusinessError | null) => {
-      if (error) {
-        // let err=error as BusinessError;
-        hilog.error(0x0000, 'testTag',
-          `AudioRenderer release failed, error: code: ${error.code} message: ${error.message}.`);
-      } else {
-        hilog.info(0x0000, 'testTag', `AudioRenderer released.`);
-      }
-    });
-  }
-}
-```
 
 ## onDidForeground
 
@@ -508,17 +193,11 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参考[onWillForeground](#onwillforeground)。
 
 ## onDump
 
@@ -529,8 +208,6 @@ onDump(params: Array<string>): Array<string>
 应用调测场景下，通过命令行dump UIAbility数据时，系统会触发该回调。开发者可以在该回调中返回UIAbility要转储的非敏感信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -550,19 +227,6 @@ onDump(params: Array<string>): Array<string>
 | --- |
 | Array & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onDump(params: Array<string>) {
-    console.info(`dump, params: ${JSON.stringify(params)}`);
-    return ['params'];
-  }
-}
-```
-
 ## onForeground
 
 ```TypeScript
@@ -573,26 +237,11 @@ onForeground(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onForeground() {
-    hilog.info(0x0000, 'testTag', `onForeground`);
-  }
-}
-```
 
 ## onNewWant
 
@@ -603,8 +252,6 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 当已经启动的UIAbility实例再次被拉起时，系统会触发该回调。若在特定场景下（参见 [Scenarios](arkts-ability-contextconstant-scenarios-e.md)），不需要触发该生命周期回调，可以使用 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口设置。同步接口，不支持异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -618,19 +265,6 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 | launchParam | AbilityConstant.LaunchParam | 是 |
-
-**示例**
-
-```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info(`onNewWant, want: ${want.abilityName}`);
-    console.info(`onNewWant, launchParam: ${JSON.stringify(launchParam)}`);
-  }
-}
-```
 
 ## onPrepareToTerminate
 
@@ -647,12 +281,10 @@ onPrepareToTerminate(): boolean
 > 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
 > dock栏或系统托盘处右键点击关闭，本回调函数将不执行。&gt;
 > - 如果应用本身或者所使用的三方框架注册了
-> [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)
+> window.WindowStage.on
 > 监听，本回调函数将不执行。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PREPARE_APP_TERMINATE
 
@@ -667,40 +299,6 @@ onPrepareToTerminate(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { UIAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onPrepareToTerminate() {
-    // 开发者定义预关闭动作
-    // 例如拉起另一个ability，根据ability处理结果执行异步关闭
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      moduleName: 'entry',
-      abilityName: 'SecondAbility'
-    }
-    this.context.startAbilityForResult(want)
-      .then((result: common.AbilityResult) => {
-        // 获取ability处理结果，当返回结果的resultCode为0关闭当前UIAbility
-        console.info('startAbilityForResult success, resultCode is ' + result.resultCode);
-        if (result && result.resultCode === 0) {
-          this.context.terminateSelf(); // 关闭当前UIAbility
-        }
-      }).catch((error: Error) => {
-      // 异常处理
-      let err = error as BusinessError;
-      console.error(`startAbilityForResult failed, err: ${err.code} , ${err.message}`);
-      this.context.terminateSelf();
-    });
-
-    return true; // 已定义预关闭操作后，返回true表示UIAbility取消关闭
-  }
-}
-```
 
 ## onPrepareToTerminateAsync
 
@@ -722,8 +320,6 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.PREPARE_APP_TERMINATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -737,21 +333,6 @@ onPrepareToTerminateAsync(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  async onPrepareToTerminateAsync(): Promise<boolean> {
-    await new Promise<boolean>((res, rej) => {
-      setTimeout(res, 2000); // 延时2秒
-    });
-    return true; // 已定义预关闭操作后，返回true表示UIAbility取消关闭
-  }
-}
-```
 
 ## onSaveState
 
@@ -768,8 +349,6 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -788,74 +367,6 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 | 类型 |
 | --- |
 | AbilityConstant.OnSaveResult |
-
-**示例**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
-    console.info('onSaveState');
-    wantParam['myData'] = 'my1234567'; // 保存UIAbility的状态数据，用于故障恢复
-    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-export default class MyUIAbility extends UIAbility {
-  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>) {
-    console.info('onSaveState');
-    wantParam['myData'] = 'my1234567';
-    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
-  }
-}
-```
-
-## onSaveState
-
-```TypeScript
-onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>): AbilityConstant.OnSaveResult
-```
-
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
-
-> **说明：**&gt;
-> 从API version 20开始，当
-> [onSaveStateAsync](#onsavestateasync)
-> 实现时，本回调函数将不执行。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| reason | AbilityConstant.StateType | 是 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| AbilityConstant.OnSaveResult |
-
-**示例**
-
-参见 [onSaveState](#onsavestate)
 
 ## onSaveStateAsync
 
@@ -867,8 +378,6 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -888,72 +397,6 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 | --- |
 | Promise & lt;AbilityConstant.OnSaveResult & gt; |
 
-**示例**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-class MyUIAbility extends UIAbility {
-  async onSaveStateAsync(stateType: AbilityConstant.StateType,
-    wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult> {
-    await new Promise<string>((res, rej) => {
-      setTimeout(res, 1000); // 延时1秒后执行
-    });
-    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-class MyUIAbility extends UIAbility {
-  async onSaveStateAsync(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>) : Promise<AbilityConstant.OnSaveResult> {
-    await new Promise<string>((res, rej) => {
-      setTimeout(res, 1000); // 延时1秒后执行
-    });
-    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
-  }
-}
-```
-
-## onSaveStateAsync
-
-```TypeScript
-onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, RecordData>): Promise<AbilityConstant.OnSaveResult>
-```
-
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | AbilityConstant.StateType | 是 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;AbilityConstant.OnSaveResult & gt; |
-
-**示例**
-
-参见 [onSaveStateAsync](#onsavestateasync)
-
 ## onShare
 
 ```TypeScript
@@ -963,8 +406,6 @@ onShare(wantParam: Record<string, Object>): void
 当跨端分享原子化服务时，系统触发该回调。开发者可以在该回调中设置待分享原子化服务的标题、摘要和URL等数据。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -978,60 +419,6 @@ onShare(wantParam: Record<string, Object>): void
 | --- | --- | --- |
 | wantParam | Record & lt;string, Object & gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onShare(wantParams: Record<string, Object>) {
-    console.info('onShare');
-    wantParams['ohos.extra.param.key.shareUrl'] = 'example.com';
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-export default class MyUIAbility extends UIAbility {
-  onShare(wantParams: Record<string, RecordData>) {
-    console.info('onShare');
-    wantParams['ohos.extra.param.key.shareUrl'] = 'example.com';
-  }
-}
-```
-
-## onShare
-
-```TypeScript
-onShare(wantParam: Record<string, RecordData>): void
-```
-
-当跨端分享原子化服务时，系统触发该回调。开发者可以在该回调中设置待分享原子化服务的标题、摘要和URL等数据。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-
-**示例**
-
-参见 [onShare](#onshare)
-
 ## onWillBackground
 
 ```TypeScript
@@ -1042,44 +429,11 @@ UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBa
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hiAppEvent, hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyUIAbility extends UIAbility {
-  onWillBackground(): void {
-    let eventParams: Record<string, number | string> = {
-      "int_data": 100,
-      "str_data": "strValue",
-    };
-    // 写入打点应用故障信息
-    hiAppEvent.write({
-      domain: "test_domain",
-      name: "test_event",
-      eventType: hiAppEvent.EventType.FAULT,
-      params: eventParams,
-    }, (error) => {
-      if (error) {
-        let err = error as BusinessError;
-        hilog.error(0x0000, 'testTag', `hiAppEvent code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `hiAppEvent success to write event`);
-    });
-  }
-}
-```
 
 ## onWillForeground
 
@@ -1091,69 +445,11 @@ UIAbility生命周期回调，应用转到前台前触发，在[onForeground](#o
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hiAppEvent, hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWillForeground(): void {
-    // 应用开始进入前台事件打点
-    let eventParams: Record<string, number> = { 'xxxx': 100 };
-    let eventInfo: hiAppEvent.AppEventInfo = {
-      // 事件领域定义
-      domain: "lifecycle",
-      // 事件名称定义
-      name: "onwillforeground",
-      // 事件类型定义
-      eventType: hiAppEvent.EventType.BEHAVIOR,
-      // 事件参数定义
-      params: eventParams,
-    };
-    hiAppEvent.write(eventInfo).then(() => {
-      hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
-    }).catch((error: Error) => {
-      let err = error as BusinessError;
-      hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
-    });
-  }
-
-  // ...
-
-  onDidForeground(): void {
-    // 应用进入前台后事件打点
-    let eventParams: Record<string, number> = { 'xxxx': 100 };
-    let eventInfo: hiAppEvent.AppEventInfo = {
-      // 事件领域定义
-      domain: "lifecycle",
-      // 事件名称定义
-      name: "ondidforeground",
-      // 事件类型定义
-      eventType: hiAppEvent.EventType.BEHAVIOR,
-      // 事件参数定义
-      params: eventParams,
-    };
-    hiAppEvent.write(eventInfo).then(() => {
-      hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
-    }).catch((error: Error) => {
-      let err = error as BusinessError;
-      hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
-    });
-  }
-}
-```
 
 ## onWindowStageCreate
 
@@ -1164,8 +460,6 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 当[WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md)实例创建完成后，系统会触发该回调。开发者可以在该回调中通过WindowStage加载页面。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1179,27 +473,6 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 | --- | --- | --- |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-
-export default class MyUIAbility extends UIAbility {
-  // 主窗口已创建，为该UIAbility设置主页面
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err?.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err)}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```
-
 ## onWindowStageDestroy
 
 ```TypeScript
@@ -1210,27 +483,11 @@ onWindowStageDestroy(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onWindowStageDestroy() {
-    // 主窗口已销毁，释放UI相关资源
-    hilog.info(0x0000, 'testTag', `onWindowStageDestroy`);
-  }
-}
-```
 
 ## onWindowStageRestore
 
@@ -1248,8 +505,6 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1262,20 +517,6 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 | --- | --- | --- |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-
-export default class MyUIAbility extends UIAbility {
-  onWindowStageRestore(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', `onWindowStageRestore`);
-  }
-}
-```
-
 ## onWindowStageWillDestroy
 
 ```TypeScript
@@ -1285,8 +526,6 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 当WindowStage即将销毁时，系统触发该回调。开发者可以在该生命周期中取消windowStage事件的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1300,20 +539,6 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 | --- | --- | --- |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-
-export default class MyUIAbility extends UIAbility {
-  onWindowStageWillDestroy(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', `onWindowStageWillDestroy`);
-  }
-}
-```
-
 ## callee
 
 ```TypeScript
@@ -1325,8 +550,6 @@ callee: Callee
 **类型：** [Callee](arkts-ability-app-ability-uiability-callee-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1344,8 +567,6 @@ UIAbility的上下文。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1359,13 +580,12 @@ lastRequestWant: Want
 ```
 
 最近一次拉起UIAbility请求的Want参数。  
-- 首次拉起UIAbility时，取值为[onCreate](#oncreate)接收到的Want参数。 - 重复拉起UIAbility时，取值为[onNewWant](#onnewwant)最近一次接收到的Want参数。
+- 首次拉起UIAbility时，取值为[onCreate](#oncreate)接收到的Want参数。  
+- 重复拉起UIAbility时，取值为[onNewWant](#onnewwant)最近一次接收到的Want参数。
 
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1385,8 +605,6 @@ UIAbility[冷启动](../../../application-models/uiability-intra-device-interact
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1404,8 +622,6 @@ specifiedId?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,29 +4,25 @@ Wi-Fi connection information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## chload
 
 ```TypeScript
-chload: int
+chload: number
 ```
 
 The load value of this Wi-Fi connection. A greater value indicates a higher load.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,8 +40,6 @@ Whether the Wi-Fi hotspot is HiLinkPro network.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -53,16 +47,14 @@ Whether the Wi-Fi hotspot is HiLinkPro network.
 ## networkId
 
 ```TypeScript
-networkId: int
+networkId: number
 ```
 
 The ID(uniquely identifies) of a Wi-Fi connection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -71,16 +63,14 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 ## snr
 
 ```TypeScript
-snr: int
+snr: number
 ```
 
 The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -98,8 +88,6 @@ The state of the supplicant of this Wi-Fi connection.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -115,8 +103,6 @@ Whether Wi-Fi Tx and Rx are both working properly
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

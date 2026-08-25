@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRemoteBundleVersionCode
 
 ```TypeScript
-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>
+function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<number>
 ```
 
 Obtains the version information of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -37,7 +35,7 @@ Obtains the version information of an app with a specified bundle name on a spec
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getDsdsMode
@@ -15,8 +15,6 @@ function getDsdsMode(callback: AsyncCallback<DsdsMode>): void
 Obtains the value of dsds mode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -41,33 +39,6 @@ Obtains the value of dsds mode.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getDsdsMode((err: BusinessError, data: sim.DsdsMode) => {
-    if (err) {
-        console.error(`getDsdsMode failed, callback: err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getDsdsMode success, callback: data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDsdsMode();
-promise.then((data: sim.DsdsMode) => {
-    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getDsdsMode
 
@@ -78,8 +49,6 @@ function getDsdsMode(): Promise<DsdsMode>
 Obtains the value of dsds mode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -103,7 +72,3 @@ Obtains the value of dsds mode.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getDsdsMode](#getdsdsmode)

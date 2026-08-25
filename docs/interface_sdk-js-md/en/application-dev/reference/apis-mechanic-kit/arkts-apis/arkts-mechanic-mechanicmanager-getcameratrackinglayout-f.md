@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getCameraTrackingLayout
@@ -15,8 +15,6 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 Obtains the camera tracking layout of this mechanical device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -32,11 +30,3 @@ Obtains the camera tracking layout of this mechanical device.
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
-
-**Examples**
-
-```TypeScript
-console.info('Query layout');
-let layout = mechanicManager.getCameraTrackingLayout();
-console.info(`'Query layout successful, current layout:' ${layout}`);
-```

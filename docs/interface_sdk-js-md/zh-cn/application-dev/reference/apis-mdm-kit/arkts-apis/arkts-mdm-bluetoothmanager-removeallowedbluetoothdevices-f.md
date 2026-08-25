@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeAllowedBluetoothDevices
@@ -15,8 +15,6 @@ function removeAllowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 移除蓝牙设备可用名单。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -39,26 +37,3 @@ function removeAllowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 定义蓝牙设备MAC地址数组（需根据实际情况进行替换）
-let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E", "AA:BB:CC:DD:EE:FF"];
-try {
-  // 移除蓝牙设备允许名单
-  bluetoothManager.removeAllowedBluetoothDevices(wantTemp, deviceIds);
-  console.info(`Succeeded in removing allowed bluetooth devices.`);
-} catch (err) {
-  console.error(`Failed to remove allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

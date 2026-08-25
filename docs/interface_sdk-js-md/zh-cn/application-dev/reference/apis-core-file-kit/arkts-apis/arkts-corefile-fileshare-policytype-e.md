@@ -1,10 +1,8 @@
 # PolicyType
 
-枚举所查询策略信息对应的授权模式。@enum { int } policyType
+枚举所查询策略信息对应的授权模式。@enum { number } policyType
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -18,8 +16,6 @@ TEMPORARY_TYPE = 0
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## PERSISTENT_TYPE
@@ -31,7 +27,5 @@ PERSISTENT_TYPE = 1
 持久化授权。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

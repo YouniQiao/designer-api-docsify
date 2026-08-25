@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setSecurityLabelSync
@@ -15,8 +15,6 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 Sets the data security level for a file or directory in synchronous mode. The level can only be adjusted from low to high, or set to the same level.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -39,10 +37,3 @@ Sets the data security level for a file or directory in synchronous mode. The le
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabelSync(filePath, "s0");
-```

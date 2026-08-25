@@ -6,8 +6,6 @@ A plane geometry type that inherits from GeometryDefinition.@extends GeometryDef
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -21,7 +19,5 @@ Width and height of the plane, indicating the size of the plane. The unit is the
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

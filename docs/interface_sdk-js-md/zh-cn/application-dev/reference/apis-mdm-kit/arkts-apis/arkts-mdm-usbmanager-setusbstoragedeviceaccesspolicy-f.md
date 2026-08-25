@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setUsbStorageDeviceAccessPolicy
@@ -27,8 +27,6 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 通过本接口设置，或者通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)接口添加存储类型的USB设备，均可禁用USB存储设备。推荐使用后者。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
@@ -55,23 +53,3 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.DISABLED;
-  usbManager.setUsbStorageDeviceAccessPolicy(wantTemp, policy);
-  console.info(`Succeeded in setting USB storage device access policy.`);
-} catch (err) {
-  console.error(`Failed to set USB storage device access policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

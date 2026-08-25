@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## toSendableAsset
@@ -15,8 +15,6 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 Converts the asset data that cannot be passed across threads into the data that can be passed across threads.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,7 +28,7 @@ Converts the asset data that cannot be passed across threads into the data that 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 
 **Error codes:**
 
@@ -38,17 +36,3 @@ Converts the asset data that cannot be passed across threads into the data that 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
-
-**Examples**
-
-```TypeScript
-const asset1: sendableRelationalStore.NonSendableAsset = {
-  name: 'hangman',
-  uri: '//path/example',
-  path: '//path/example',
-  createTime: 'createTime1',
-  modifyTime: 'modifyTime1',
-  size: 'size1'
-};
-const sendableAsset = sendableRelationalStore.toSendableAsset(asset1);
-```

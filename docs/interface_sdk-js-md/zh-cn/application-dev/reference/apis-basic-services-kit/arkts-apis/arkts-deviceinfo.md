@@ -10,14 +10,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## 导入模块
 
 ```TypeScript
-import { deviceInfo } from '@kit.BasicServicesKit';
+import { deviceInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

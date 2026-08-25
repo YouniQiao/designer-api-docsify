@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ ALLOWED_LIST = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ DISALLOWED_LIST = 2
 不允许运行指定功能的列表。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

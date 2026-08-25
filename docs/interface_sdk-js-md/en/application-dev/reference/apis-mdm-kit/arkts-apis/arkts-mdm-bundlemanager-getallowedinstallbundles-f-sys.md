@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedInstallBundles
@@ -15,8 +15,6 @@ function getAllowedInstallBundles(admin: Want, callback: AsyncCallback<Array<str
 Obtains the applications that can be installed by the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,64 +45,6 @@ Obtains the applications that can be installed by the current user. This API use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getAllowedInstallBundles(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting allowed install bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getAllowedInstallBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting allowed install bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getAllowedInstallBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting allowed install bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getAllowedInstallBundles
 
@@ -115,8 +55,6 @@ function getAllowedInstallBundles(admin: Want, userId: number, callback: AsyncCa
 Obtains the applications that can be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -148,10 +86,6 @@ Obtains the applications that can be installed by the user specified by **userId
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getAllowedInstallBundles](#getallowedinstallbundles)
-
 
 ## getAllowedInstallBundles
 
@@ -162,8 +96,6 @@ function getAllowedInstallBundles(admin: Want, userId?: number): Promise<Array<s
 Obtains the list of applications that are allowed to be installed by the current or specified user. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -199,7 +131,3 @@ Obtains the list of applications that are allowed to be installed by the current
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getAllowedInstallBundles](#getallowedinstallbundles)

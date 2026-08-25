@@ -8,8 +8,6 @@ type ValueType = number | string | boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 | 类型 |

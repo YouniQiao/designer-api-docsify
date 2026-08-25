@@ -9,8 +9,6 @@ How the color property is updated.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -37,8 +35,6 @@ In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -56,8 +52,6 @@ Type of property updating.The default value of **type** is **ParticleUpdater.NON
 **Type:** UPDATER
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

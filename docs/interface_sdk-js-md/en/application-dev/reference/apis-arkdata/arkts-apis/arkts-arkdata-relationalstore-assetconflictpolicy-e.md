@@ -4,8 +4,6 @@ Describes the asset conflict policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## CONFLICT_POLICY_DEFAULT
@@ -17,8 +15,6 @@ CONFLICT_POLICY_DEFAULT = 0
 Indicates the default conflict policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Indicates the time-first conflict policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -49,8 +43,6 @@ CONFLICT_POLICY_TEMP_PATH = 2
 Indicates the temporary path conflict policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -9,8 +9,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import { performanceMonitor } from '@kit.ArkUI';
+import { performanceMonitor } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

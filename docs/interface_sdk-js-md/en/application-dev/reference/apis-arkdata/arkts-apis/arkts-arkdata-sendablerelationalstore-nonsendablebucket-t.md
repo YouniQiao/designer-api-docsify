@@ -8,8 +8,6 @@ Represents the KV pair that cannot be passed across threads.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** relationalStore.ValuesBucket

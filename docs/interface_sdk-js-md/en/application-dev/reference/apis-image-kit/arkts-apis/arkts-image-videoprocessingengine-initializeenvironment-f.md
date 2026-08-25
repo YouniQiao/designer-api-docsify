@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## initializeEnvironment
@@ -15,8 +15,6 @@ function initializeEnvironment(): Promise<void>
 Initialize global environment for image processing.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
@@ -36,13 +34,3 @@ Initialize global environment for image processing.
 | [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) |
 | [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-
-**Examples**
-
-```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
-
-async function initializeEnvironment() {
-  videoProcessingEngine.initializeEnvironment();
-}
-```

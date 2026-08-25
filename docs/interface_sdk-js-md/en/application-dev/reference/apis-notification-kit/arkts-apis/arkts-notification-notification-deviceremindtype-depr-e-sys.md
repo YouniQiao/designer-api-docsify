@@ -4,8 +4,6 @@ Defines the notification reminder type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md)
@@ -23,8 +21,6 @@ IDLE_DONOT_REMIND = 0
 The device is not in use. No notification is required.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ The device is not in use.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#idle_remind)
@@ -64,8 +58,6 @@ The device is in use. No notification is required.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#active_donot_remind)
@@ -83,8 +75,6 @@ ACTIVE_REMIND = 3
 The device is in use.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

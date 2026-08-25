@@ -4,14 +4,12 @@ Defines the properties of PasteData in the pasteboard, including the timestamp, 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## additions
@@ -25,8 +23,6 @@ Additional property data. It does not allow for dynamic adding of properties. Pr
 **Type:** Record&lt;string, object&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Whether the pasteboard content is for local access only. The default value is **
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -61,8 +55,6 @@ Data types of all records in PasteData.
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -98,8 +88,6 @@ Custom tag. This parameter is left empty by default.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -107,16 +95,14 @@ Custom tag. This parameter is left empty by default.
 ## timestamp
 
 ```TypeScript
-readonly timestamp: long
+readonly timestamp: number
 ```
 
 Timestamp when data is written to the pasteboard (unit: nanoseconds since the device is powered on).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

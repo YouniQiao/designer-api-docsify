@@ -4,14 +4,12 @@ Declare type SelectOption
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onSelect
@@ -21,11 +19,10 @@ onSelect?: (index: number, value?: string) => void
 ```
 
 Callback invoked when an item in the drop-down list box is selected.  
-- **index**: index of the selected option. - **value**: value of the selected option.
+- **index**: index of the selected option.  
+- **value**: value of the selected option.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +53,6 @@ Whether the drop-down button is the default focus.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -76,8 +71,6 @@ Set the id for the select.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -92,11 +85,9 @@ options: Array<SelectOption>
 
 Options of an item in the drop-down list box.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +107,6 @@ Index of the initially selected item in the drop-down list box.The value must be
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -132,11 +121,9 @@ value?: ResourceStr
 
 Text content of the drop-down list button itself.The default value is an empty string.Note: If the text length exceeds the column width, it will be truncated. The Resource type is supported since API version 20.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

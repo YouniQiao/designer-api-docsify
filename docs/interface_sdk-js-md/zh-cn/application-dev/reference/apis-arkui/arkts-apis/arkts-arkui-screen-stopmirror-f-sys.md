@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## stopMirror
 
 ```TypeScript
-function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): void
+function stopMirror(mirrorScreen:Array<number>, callback: AsyncCallback<void>): void
 ```
 
 停止屏幕的镜像模式，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +24,7 @@ function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mirrorScreen | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;long & gt; | 是 |
+| mirrorScreen | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -37,80 +35,16 @@ function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取
-let mirrorScreenIds: Array<number> = [1, 2, 3]; // 镜像屏ID集合
-// 停止屏幕镜像模式
-screen.stopMirror(mirrorScreenIds, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to stop mirror screens. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in stopping mirror screens.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mirrorScreenIds: Array<long> = [1, 2, 3];
-screen.stopMirror(mirrorScreenIds, (err: BusinessError | null) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to stop mirror screens. Code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info('Succeeded in stopping mirror screens.');
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取
-let mirrorScreenIds: Array<number> = [1, 2, 3]; // 镜像屏ID集合
-// 停止屏幕镜像模式
-screen.stopMirror(mirrorScreenIds).then(() => {
-  console.info('Succeeded in stopping mirror screens.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop mirror screens. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let mirrorScreenIds: Array<long> = [1, 2, 3];
-screen.stopMirror(mirrorScreenIds).then(() => {
-  console.info('Succeeded in stopping mirror screens.');
-}).catch((err: Error) => {
-  console.error(`Failed to stop mirror screens. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 
 ## stopMirror
 
 ```TypeScript
-function stopMirror(mirrorScreen:Array<long>): Promise<void>
+function stopMirror(mirrorScreen:Array<number>): Promise<void>
 ```
 
 停止屏幕的镜像模式，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -120,7 +54,7 @@ function stopMirror(mirrorScreen:Array<long>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mirrorScreen | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;long & gt; | 是 |
+| mirrorScreen | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
@@ -135,7 +69,3 @@ function stopMirror(mirrorScreen:Array<long>): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-
-**示例**
-
-参见 [stopMirror](#stopmirror)

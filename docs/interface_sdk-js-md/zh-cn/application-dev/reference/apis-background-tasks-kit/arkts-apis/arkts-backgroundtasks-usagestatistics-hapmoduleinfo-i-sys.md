@@ -4,8 +4,6 @@ FA模型的使用信息属性集合。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ FA模型的使用信息属性集合。
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityDescriptionId
 
 ```TypeScript
-abilityDescriptionId?: long
+abilityDescriptionId?: number
 ```
 
 FA的MainAbility descriptionId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -37,16 +33,14 @@ FA的MainAbility descriptionId。
 ## abilityIconId
 
 ```TypeScript
-abilityIconId?: long
+abilityIconId?: number
 ```
 
 FA的MainAbility iconId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -55,16 +49,14 @@ FA的MainAbility iconId。
 ## abilityLableId
 
 ```TypeScript
-abilityLableId?: long
+abilityLableId?: number
 ```
 
 FA的MainAbility labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -82,8 +74,6 @@ FA的MainAbility名。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -91,16 +81,14 @@ FA的MainAbility名。
 ## appLabelId
 
 ```TypeScript
-appLabelId?: long
+appLabelId?: number
 ```
 
 FA的应用labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -118,8 +106,6 @@ bundleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -127,16 +113,14 @@ bundleName: string
 ## descriptionId
 
 ```TypeScript
-descriptionId?: long
+descriptionId?: number
 ```
 
 FA所属的应用descriptionId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -154,8 +138,6 @@ deviceId?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -172,8 +154,6 @@ FA中卡片的使用记录。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -181,16 +161,14 @@ FA中卡片的使用记录。
 ## labelId
 
 ```TypeScript
-labelId?: long
+labelId?: number
 ```
 
 FA所属module的labelId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -199,16 +177,14 @@ FA所属module的labelId。
 ## lastModuleUsedTime
 
 ```TypeScript
-lastModuleUsedTime: long
+lastModuleUsedTime: number
 ```
 
 FA的上一次使用时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -217,16 +193,14 @@ FA的上一次使用时间，单位：ms。
 ## launchedCount
 
 ```TypeScript
-launchedCount: int
+launchedCount: number
 ```
 
 FA的启动次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -243,8 +217,6 @@ FA所属module名。
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

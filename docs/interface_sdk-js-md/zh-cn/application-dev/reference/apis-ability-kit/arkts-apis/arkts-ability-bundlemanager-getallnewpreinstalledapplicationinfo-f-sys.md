@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllNewPreinstalledApplicationInfo
@@ -15,8 +15,6 @@ function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledAppli
 获取设备OTA升级期间当前用户下新增的所有预置应用信息。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -38,45 +36,3 @@ function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledAppli
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    bundleManager.getAllNewPreinstalledApplicationInfo().then((data)=>{
-        hilog.info(0x0000, 'testTag', 'getAllPreinstalledApplicationInfo success, Data: %{public}s', JSON.stringify(data));
-    }).catch((err: BusinessError) => {
-        hilog.error(0x0000, 'testTag', 'getAllPreinstalledApplicationInfo failed. Cause: %{public}s', err.message);
-    });
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'getAllPreinstalledApplicationInfo failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    bundleManager.getAllNewPreinstalledApplicationInfo().then((data: Array<bundleManager.PreinstalledApplicationInfo>)=>{
-        hilog.info(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo success, Data: %{public}s', JSON.stringify(data));
-    }).catch((err: Error) => {
-        hilog.error(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo failed. Cause: %{public}s', (err as BusinessError).message);
-    });
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'getAllNewPreinstalledApplicationInfo failed: %{public}s', message);
-}
-```

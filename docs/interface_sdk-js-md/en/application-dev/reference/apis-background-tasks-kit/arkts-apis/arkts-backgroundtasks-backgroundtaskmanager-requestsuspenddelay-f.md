@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## requestSuspendDelay
@@ -19,8 +19,6 @@ Requests a transient task.
 > [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -48,25 +46,3 @@ Requests a transient task.
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9900001](../errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) |
 | [9900002](../errorcode-backgroundTaskMgr.md#9900002-transient-task-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let myReason = 'test requestSuspendDelay';
-try {
-  let delayInfo = backgroundTaskManager.requestSuspendDelay(myReason, () => {
-  // Callback function, which is triggered when the transient task is about to time out. The application can carry out data clear and annotation, and cancel the task in the callback.
-  // The callback is independent of the service of the application. After the request for the transient task is successful, the application normally executes its own service logic.
-    console.info("Request suspension delay will time out.");
-  })
-  let id = delayInfo.requestId;
-  let time = delayInfo.actualDelayTime;
-  console.info("The requestId is: " + id);
-  console.info("The actualDelayTime is: " + time);
-} catch (error) {
-  console.error(`requestSuspendDelay failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

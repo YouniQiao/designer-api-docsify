@@ -4,8 +4,6 @@ Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Placement position of the toolbar item.Default value: **ToolBarItemPlacement.TOP
 **Type:** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

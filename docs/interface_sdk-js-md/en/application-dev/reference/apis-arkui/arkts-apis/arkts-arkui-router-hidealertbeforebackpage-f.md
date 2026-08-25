@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## hideAlertBeforeBackPage
@@ -22,8 +22,6 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 18
 
 **Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
@@ -31,9 +29,3 @@ Disables the display of a confirm dialog box before returning to the previous pa
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-this.getUIContext().getRouter().hideAlertBeforeBackPage();
-```

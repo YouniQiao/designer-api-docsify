@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -23,8 +21,6 @@ getColorSpaceName(): ColorSpace
 获取色域类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -40,43 +36,23 @@ getColorSpaceName(): ColorSpace
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
-**示例**
-
-```TypeScript
-try {
-  // 获取色域类型
-  let spaceName = colorSpace.getColorSpaceName();
-  console.info(`spaceName: ` + spaceName.toString());
-} catch (err) {
-  console.error(`Failed to get colorSpace's name. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getGamma
 
-ArkTS-Dyn:
 ```TypeScript
 getGamma(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getGamma(): double
 ```
 
 获取色域gamma值。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -84,58 +60,26 @@ getGamma(): double
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
-**示例**
-
-```TypeScript
-try {
-  // 获取色域gamma值
-  let gamma = colorSpace.getGamma();
-  console.info(`gamma: ` + gamma.toString());
-} catch (err) {
-  console.error(`Failed to get gamma. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getWhitePoint
 
-ArkTS-Dyn:
 ```TypeScript
 getWhitePoint(): Array<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getWhitePoint(): Array<double>
 ```
 
 获取色域白点值。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
-
-**示例**
-
-```TypeScript
-try {
-  // 获取色域白点值
-  let point = colorSpace.getWhitePoint();
-  console.info(`point: ` + point.toString());
-} catch (err) {
-  console.error(`Failed to get white point. Code: ${err.code}, message: ${err.message}`);
-}
-```

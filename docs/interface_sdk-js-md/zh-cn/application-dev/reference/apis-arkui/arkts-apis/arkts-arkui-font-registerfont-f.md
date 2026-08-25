@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## registerFont
@@ -24,8 +24,6 @@ function registerFont(options: FontOptions): void
 > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 

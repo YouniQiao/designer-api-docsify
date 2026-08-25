@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## showToast
@@ -16,8 +16,6 @@ function showToast(options: ShowToastOptions): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** showToast
@@ -29,13 +27,3 @@ function showToast(options: ShowToastOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showToast({
-  message: 'Message Info',
-  duration: 2000
-});
-```

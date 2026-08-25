@@ -4,8 +4,6 @@ UIAbility启动后的进程模式。 ProcessMode作为[StartOptions](arkts-abili
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NEW_PROCESS_ATTACH_TO_PARENT
@@ -18,8 +16,6 @@ NEW_PROCESS_ATTACH_TO_PARENT = 1
 **约束：**使用此模式时，要求目标UIAbility跟调用方是在同一个应用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -53,48 +47,6 @@ ATTACH_TO_STATUS_BAR_ITEM = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { UIAbility, Want, StartOptions, contextConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    // 构造Want对象，指定目标UIAbility信息
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'MainAbility2'
-    };
-  // 创建启动选项，设置进程模式和启动可见性
-  let options: StartOptions = {
-        processMode: contextConstant.ProcessMode.NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM,
-        startupVisibility: contextConstant.StartupVisibility.STARTUP_HIDE
-      };
-
-    try {
-      this.context.startAbility(want, options, (err: BusinessError<void> | null) => {
-        if (err) {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed: ${JSON.stringify(err)}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```

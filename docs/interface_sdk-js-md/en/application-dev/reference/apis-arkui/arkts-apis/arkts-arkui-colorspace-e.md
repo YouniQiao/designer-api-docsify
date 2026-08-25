@@ -4,8 +4,6 @@ Enumerates color space types for specifying color rendering modes.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SRGB
@@ -17,8 +15,6 @@ SRGB = 0
 Standard RGB color space, suitable for most display devices.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ DISPLAY_P3 = 1
 Display P3 color space with wider gamut, designed for high-end display devices.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

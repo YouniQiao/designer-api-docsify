@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getProcessRunningInfos
@@ -15,8 +15,6 @@ function getProcessRunningInfos(): Promise<Array<ProcessInformation>>
 Obtains information about the running processes of the current application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -51,8 +49,6 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessInformation
 Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

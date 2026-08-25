@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readSync
@@ -21,8 +21,6 @@ declare function readSync(
 Reads data from a file. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,37 +54,3 @@ Reads data from a file. This API returns the result synchronously.
 | 13900034 |
 | 13900042 |
 | 13900044 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-let buf = new ArrayBuffer(4096);
-fs.readSync(file.fd, buf);
-fs.closeSync(file);
-```
-
-```TypeScript
-import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let stream = fs.createStreamSync(filePath, "r+");
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-let buf = new ArrayBuffer(4096);
-let num = stream.readSync(buf, readOption);
-stream.close();
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-let randomAccessFile = fs.createRandomAccessFileSync(file);
-let length: number = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fs.closeSync(file);
-```

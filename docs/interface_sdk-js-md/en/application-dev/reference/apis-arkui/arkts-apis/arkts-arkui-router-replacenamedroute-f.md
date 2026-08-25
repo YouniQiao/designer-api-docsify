@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## replaceNamedRoute
@@ -21,8 +21,6 @@ Replaces the current page with another one using the named route and destroys th
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -49,96 +47,6 @@ Replaces the current page with another one using the named route and destroys th
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.error(`replaceNamedRoute finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`replaceNamedRoute failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, (err) => {
-  if (err) {
-    console.error(`replaceNamedRoute failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('replaceNamedRoute success');
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.error(`replaceNamedRoute finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`replaceNamedRoute failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceNamedRoute failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('replaceNamedRoute success');
-});
-```
-
 
 ## replaceNamedRoute
 
@@ -155,8 +63,6 @@ Replaces the current page with another one using the named route and destroys th
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -188,10 +94,6 @@ Replaces the current page with another one using the named route and destroys th
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-See [replaceNamedRoute](#replacenamedroute)
-
 
 ## replaceNamedRoute
 
@@ -208,8 +110,6 @@ Replaces the current page with another one using the named route and destroys th
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -237,10 +137,6 @@ Replaces the current page with another one using the named route and destroys th
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-See [replaceNamedRoute](#replacenamedroute)
-
 
 ## replaceNamedRoute
 
@@ -257,8 +153,6 @@ Replaces the current page with another one using the named route and destroys th
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -290,7 +184,3 @@ Replaces the current page with another one using the named route and destroys th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
-
-**Examples**
-
-See [replaceNamedRoute](#replacenamedroute)

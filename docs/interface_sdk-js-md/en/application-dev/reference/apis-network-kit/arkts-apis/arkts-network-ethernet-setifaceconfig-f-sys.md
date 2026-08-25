@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## setIfaceConfig
@@ -15,8 +15,6 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 Sets the network interface configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -47,52 +45,6 @@ Sets the network interface configuration information. This API uses an asynchron
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) |
 | [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) |
 
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: ethernet.InterfaceConfiguration = {
-  mode: 0,
-  ipAddr: "192.168.xx.xxx",
-  route: "192.168.xx.xxx",
-  gateway: "192.168.xx.xxx",
-  netMask: "255.255.255.0",
-  dnsServers: "1.1.1.1"
-};
-
-ethernet.setIfaceConfig("eth0", config, (error: BusinessError) => {
-  if (error) {
-    console.error("setIfaceConfig callback error = " + JSON.stringify(error));
-  } else {
-    console.info("setIfaceConfig callback ok");
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: ethernet.InterfaceConfiguration = {
-  mode: 0,
-  ipAddr: "192.168.xx.xxx",
-  route: "192.168.xx.xxx",
-  gateway: "192.168.xx.xxx",
-  netMask: "255.255.255.0",
-  dnsServers: "1.1.1.1"
-};
-
-const setConfigPromise = ethernet.setIfaceConfig("eth0", config);
-
-setConfigPromise.then(() => {
-  console.info("setIfaceConfig promise ok");
-}).catch((error: BusinessError)  => {
-  console.error("setIfaceConfig promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## setIfaceConfig
 
@@ -103,8 +55,6 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void
 Sets the network interface configuration information. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -139,7 +89,3 @@ Sets the network interface configuration information. This API uses a promise to
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) |
 | [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) |
-
-**Examples**
-
-See [setIfaceConfig](#setifaceconfig)

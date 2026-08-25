@@ -8,8 +8,6 @@ publish form cross bundle control callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
@@ -27,15 +25,3 @@ publish form cross bundle control callback.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
-  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
-    console.info('publish form cross bundle info callback success.');
-    return true;
-  };
-```

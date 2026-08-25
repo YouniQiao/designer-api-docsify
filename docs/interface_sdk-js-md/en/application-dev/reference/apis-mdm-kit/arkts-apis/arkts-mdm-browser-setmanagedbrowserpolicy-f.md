@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## setManagedBrowserPolicy
@@ -19,8 +19,6 @@ Sets a browser policy for a specified browser. This API is applicable to scenari
 > first admin, it can no longer be configured by other admins.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -45,27 +43,3 @@ Sets a browser policy for a specified browser. This API is applicable to scenari
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.testbrowser';
-let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
-let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
-
-try {
-  browser.setManagedBrowserPolicy(wantTemp, bundleName, policyName, policyValue);
-  console.info('Succeeded in setting managed browser policy.');
-} catch (err) {
-  console.error(`Failed to set managed browser policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

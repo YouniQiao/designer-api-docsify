@@ -4,8 +4,6 @@ Describes the text paragraph style.Except the first paragraph, all paragraphs ar
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ constructor(value?: ParagraphStyleInterface)
 A constructor used to create a text paragraph style.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ readonly leadingMargin?: number | LeadingMarginPlaceholder
 
 Indent of the text paragraph.If the return value is of the number type, the unit is vp.
 
-**Type:** number \| LeadingMarginPlaceholder
+**Type:** number \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Custom indentation information for text paragraphs in the styled string.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -89,8 +81,6 @@ Maximum number of lines in the text paragraph.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -103,13 +93,11 @@ Maximum number of lines in the text paragraph.
 readonly overflow?: TextOverflow
 ```
 
-Display mode when the text is too long in the text paragraph.
+Display mode when the text is too number in the text paragraph.
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,8 +117,6 @@ Paragraph spacing of the styled string text.Unit: vp
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -146,11 +132,9 @@ readonly shaderStyle?: ShaderStyle
 Text shader effect.  
 **Since**: 26.0.0.
 
-**Type:** ShaderStyle
+**Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +154,6 @@ Get the tail indentation of the StyledString. The unit is vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -189,8 +171,6 @@ Horizontal alignment mode of the text paragraph.
 **Type:** TextAlign
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,8 +190,6 @@ Text direction.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -229,8 +207,6 @@ First line indent of the text paragraph.Unit: VP.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,8 +226,6 @@ Vertical alignment mode of the text paragraph.The effect of this attribute is no
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -269,8 +243,6 @@ Word break rule of the text paragraph.
 **Type:** WordBreak
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

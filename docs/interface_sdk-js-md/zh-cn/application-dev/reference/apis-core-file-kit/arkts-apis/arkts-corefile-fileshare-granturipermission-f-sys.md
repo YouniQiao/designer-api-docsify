@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## grantUriPermission
@@ -20,8 +20,6 @@ function grantUriPermission(
 为应用授予公共目录文件URI的临时访问权限，使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_MEDIA
 
@@ -47,75 +45,6 @@ function grantUriPermission(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14300001 |
 
-**示例**
-
-```TypeScript
-import { wantConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-let uri: string =
-  'file://docs/storage/Users/currentUser/Document/1.txt'; // 推荐使用系统接口生成URI。fileUri.getUriFromPath('沙箱路径');
-let bundleName: string = 'com.demo.test';
-try {
-  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
-    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION, (err: BusinessError) => {
-    if (err) {
-      console.error(`grantUriPermission failed with error: ${JSON.stringify(err)}`);
-      return;
-    }
-    console.info('grantUriPermission success!');
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
-}
-```
-
-```TypeScript
-import { wantConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-let uri: string =
-  'file://docs/storage/Users/currentUser/Document/1.txt'; // 推荐使用系统接口生成URI。fileUri.getUriFromPath('沙箱路径');
-let bundleName: string = 'com.demo.test';
-try {
-  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
-    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION).then(() => {
-    console.info('grantUriPermission success!');
-  }).catch((error: BusinessError) => {
-    console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function grantUriPermissionExample() {
-  try {
-    let uri = 'file://docs/storage/Users/currentUser/Documents/1.txt';
-    let policyInfo: fileShare.PolicyInfo = {
-      uri: uri,
-      operationMode: fileShare.OperationMode.CREATE_MODE | fileShare.OperationMode.READ_MODE,
-    };
-    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
-
-    fileShare.grantUriPermission(policies, 'com.example.myapplicationtest', 0).then(() => {
-    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
-      console.error(`grantUriPermission failed. Code: ${err.code}, message: ${err.message}`);
-    });
-  } catch (error) {
-    console.info(`grantUriPermission error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
 
 ## grantUriPermission
 
@@ -126,8 +55,6 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 为应用授予公共目录文件URI的临时访问权限，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_MEDIA
 
@@ -158,22 +85,16 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14300001 |
 
-**示例**
-
-参见 [grantUriPermission](#granturipermission)
-
 
 ## grantUriPermission
 
 ```TypeScript
-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>
+function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
 给应用授予目标文件临时权限，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -187,7 +108,7 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 | --- | --- | --- |
 | policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 |
 | targetBundleName | string | 是 |
-| appCloneIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| appCloneIndex | number | 是 |
 
 **返回值：**
 
@@ -204,7 +125,3 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
 | 13900011 |
-
-**示例**
-
-参见 [grantUriPermission](#granturipermission)

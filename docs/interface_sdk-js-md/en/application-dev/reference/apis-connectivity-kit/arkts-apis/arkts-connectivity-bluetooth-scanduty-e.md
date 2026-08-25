@@ -4,8 +4,6 @@ The enum of scan duty.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ScanDuty](arkts-connectivity-bluetoothmanager-scanduty-e.md)
@@ -21,8 +19,6 @@ SCAN_MODE_LOW_POWER = 0
 low power mode
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ balanced power mode
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SCAN_MODE_BALANCED](arkts-connectivity-bluetoothmanager-scanduty-e.md#scan_mode_balanced)
@@ -57,8 +51,6 @@ SCAN_MODE_LOW_LATENCY = 2
 Scan using highest duty cycle
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

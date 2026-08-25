@@ -6,14 +6,12 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSessionConflictFunctions
@@ -25,8 +23,6 @@ getSessionConflictFunctions(): Array<VideoConflictFunctions>
 Gets session conflict functions.
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -53,8 +49,6 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFuncti
 Gets session functions.
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -89,8 +83,6 @@ Unsubscribes from LCD flash status change events.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -108,14 +100,6 @@ Unsubscribes from LCD flash status change events.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-function unregisterLcdFlashStatus(videoSession: camera.VideoSession): void {
-  videoSession.off('lcdFlashStatus');
-}
-```
-
 ## off('focusTrackingInfoAvailable')
 
 ```TypeScript
@@ -125,8 +109,6 @@ off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>):
 Unsubscribes from focus tracking information events.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -145,14 +127,6 @@ Unsubscribes from focus tracking information events.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-function unregisterFocusTrackingInfoChanged(session: camera.VideoSessionForSys): void {
-  session.off('focusTrackingInfoAvailable');
-}
-```
-
 ## off('effectSuggestionChange')
 
 ```TypeScript
@@ -162,8 +136,6 @@ off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionTyp
 Unsubscribes from effect suggestion change events.
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -192,8 +164,6 @@ Unsubscribes from camera light status changes.
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -211,30 +181,6 @@ Unsubscribes from camera light status changes.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function LightStatusCallback(err: BusinessError, lightStatus: camera.LightStatus) : void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`lightStatus: ${lightStatus}`);
-}
-
-function handleLightStatusOff(mSession: camera.VideoSessionForSys): void {
-  console.info('handleLightStatusOff');
-  try {
-    mSession.on('lightStatusChange', LightStatusCallback);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`handleLightStatusOff err:${err}`);
-  }
-}
-```
-
 ## offApertureInfoChange
 
 ```TypeScript
@@ -244,8 +190,6 @@ offApertureInfoChange(callback?: Callback<ApertureInfo>): void
 Unsubscribes from aperture info event callback.
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,118 +209,6 @@ Unsubscribes from aperture info event callback.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## offEffectSuggestionChange
-
-```TypeScript
-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
-```
-
-Unsubscribes from effect suggestion change events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## offFocusTrackingInfoAvailable
-
-```TypeScript
-offFocusTrackingInfoAvailable(callback?: Callback<FocusTrackingInfo>): void
-```
-
-Unsubscribes from focus tracking info event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## offLightStatusChange
-
-```TypeScript
-offLightStatusChange(callback?: AsyncCallback<LightStatus>): void
-```
-
-Unsubscribes camera light status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
 ## on('lcdFlashStatus')
 
 ```TypeScript
@@ -386,8 +218,6 @@ on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -406,25 +236,6 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
-  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
-}
-
-function registerLcdFlashStatus(videoSession: camera.VideoSession): void {
-  videoSession.on('lcdFlashStatus', callback);
-}
-```
-
 ## on('focusTrackingInfoAvailable')
 
 ```TypeScript
@@ -434,8 +245,6 @@ on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): v
 Subscribes to focus tracking information events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -454,22 +263,6 @@ Subscribes to focus tracking information events. This API uses an asynchronous c
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-function callback(focusTrackingInfo: camera.FocusTrackingInfo): void {
-  console.info(`Focus tracking mode: ${focusTrackingInfo.trackingMode}`);
-  console.info(`Focus tracking Region: topLeftX ${focusTrackingInfo.trackingRegion.topLeftX}
-                                       topLeftY ${focusTrackingInfo.trackingRegion.topLeftY}
-                                       width ${focusTrackingInfo.trackingRegion.width}
-                                       height ${focusTrackingInfo.trackingRegion.height}`);
-}
-
-function registerFocusTrackingInfoChanged(session: camera.VideoSessionForSys): void {
-  session.on('focusTrackingInfoAvailable', callback);
-}
-```
-
 ## on('effectSuggestionChange')
 
 ```TypeScript
@@ -479,8 +272,6 @@ on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>
 Subscribes to effect suggestion change events.
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -509,8 +300,6 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -528,30 +317,6 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function handleLightStatusCallback(err: BusinessError, lightStatus: camera.LightStatus) : void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`lightStatus: ${lightStatus}`);
-}
-
-function handleLightStatusOn(mSession: camera.VideoSessionForSys): void {
-  console.info('handleLightStatusOn');
-  try {
-    mSession.on('lightStatusChange', handleLightStatusCallback);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`handleLightStatusOn err:${err}`);
-  }
-}
-```
-
 ## onApertureInfoChange
 
 ```TypeScript
@@ -561,8 +326,6 @@ onApertureInfoChange(callback: Callback<ApertureInfo>): void
 Subscribes aperture info event callback.
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -575,118 +338,6 @@ Subscribes aperture info event callback.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## onEffectSuggestionChange
-
-```TypeScript
-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
-```
-
-Subscribes to effect suggestion change events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## onFocusTrackingInfoAvailable
-
-```TypeScript
-onFocusTrackingInfoAvailable(callback: Callback<FocusTrackingInfo>): void
-```
-
-Subscribes to focus tracking info event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## onLcdFlashStatus
-
-```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
-```
-
-Subscribes to lcd flash status.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-## onLightStatusChange
-
-```TypeScript
-onLightStatusChange(callback: AsyncCallback<LightStatus>): void
-```
-
-Subscribes camera light status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 是 |
 
 **错误码：**
 

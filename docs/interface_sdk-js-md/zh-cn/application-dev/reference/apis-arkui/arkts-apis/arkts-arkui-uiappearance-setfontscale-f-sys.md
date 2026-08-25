@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## setFontScale
@@ -15,8 +15,6 @@ function setFontScale(fontScale: number): Promise<void>
 设置系统字体大小。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -44,23 +42,3 @@ function setFontScale(fontScale: number): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [500001](../errorcode-uiappearance.md#500001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fontScale = 1.5;
-
-try {
-  uiAppearance.setFontScale(fontScale).then(() => {
-    console.info('Set fontScale successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Set fontScale failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`Set fontScale failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

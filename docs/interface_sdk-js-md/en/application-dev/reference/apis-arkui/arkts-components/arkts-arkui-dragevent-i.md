@@ -4,8 +4,6 @@ Provides information about the drag event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 Sets the execution function of the custom drop animation. This parameter is valid only when [useCustomDropAnimation](#usecustomdropanimation) is set to **true**.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ getData(): UnifiedData
 Obtains drag-related data.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +72,6 @@ Obtains the ID of the screen where the current drag event occurs. This API is no
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -101,8 +93,6 @@ getDisplayX(): number
 Obtains the x-coordinate of the drag point relative to the upper left corner of the screen.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +116,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -149,8 +137,6 @@ getDragSource(): string
 Obtains the package name of the drag source application.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,8 +160,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -198,8 +182,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -221,8 +203,6 @@ getModifierKeyState?(keys: Array<string>): boolean
 Obtains the pressed status of modifier keys.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,8 +238,6 @@ Obtains the position of the drag preview relative to the current window and the 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -281,8 +259,6 @@ getResult(): DragResult
 Obtains the drag result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,8 +282,6 @@ Obtains a summary of drag data, including data type and size information. In a d
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -329,8 +303,6 @@ getVelocity(): number
 Obtains the dragging velocity along the main axis.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,8 +326,6 @@ Obtains the dragging velocity along the x-axis.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -377,8 +347,6 @@ getVelocityY(): number
 Obtains the dragging velocity along the y-axis.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,8 +370,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -425,8 +391,6 @@ getWindowY(): number
 Obtains the y-coordinate of the drag point relative to the upper left corner of the window.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,8 +416,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [getWindowX](#getwindowx)
@@ -478,8 +440,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [getWindowY](#getwindowy)
@@ -501,8 +461,6 @@ isRemote(): boolean
 Checks whether the drag operation is cross-device.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -526,8 +484,6 @@ Sets drag-related data in **DragEvent**.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -549,8 +505,6 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application, the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](#setdata), the last called API takes precedence. This API takes effect only in the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) callback.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -574,8 +528,6 @@ Sets the drag result in **DragEvent**.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -597,8 +549,6 @@ startDataLoading(options: DataSyncOptions): string
 Asynchronously obtains drag data and notifies you of the current data synchronization progress. This API is only supported in the **onDrop** callback.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -637,8 +587,6 @@ Set the uniqueId or uniqueId array of components that need to be automatically h
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -659,8 +607,6 @@ Copy or paste mode.Default value: **DragBehavior.COPY**
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -678,8 +624,6 @@ Whether to disable the default drop animation when the dragging ends.If this par
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

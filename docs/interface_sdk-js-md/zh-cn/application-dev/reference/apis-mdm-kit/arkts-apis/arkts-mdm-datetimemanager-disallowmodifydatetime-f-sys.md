@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowModifyDateTime
@@ -15,8 +15,6 @@ function disallowModifyDateTime(admin: Want, disallow: boolean, callback: AsyncC
 禁止设备修改系统时间。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -48,45 +46,6 @@ function disallowModifyDateTime(admin: Want, disallow: boolean, callback: AsyncC
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.disallowModifyDateTime(wantTemp, true, (err) => {
-  if (err) {
-    console.error(`Failed to disallow modify date time. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disallowing modify date time');
-})
-```
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.disallowModifyDateTime(wantTemp, true).then(() => {
-  console.info('Succeeded in disallowing modify date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disallow modify date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 ## disallowModifyDateTime
 
@@ -97,8 +56,6 @@ function disallowModifyDateTime(admin: Want, disallow: boolean): Promise<void>
 禁止设备修改系统时间。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -134,7 +91,3 @@ function disallowModifyDateTime(admin: Want, disallow: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [disallowModifyDateTime](#disallowmodifydatetime)

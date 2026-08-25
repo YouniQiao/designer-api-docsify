@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ checkboxShape(value: CheckBoxShape)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -39,7 +35,7 @@ checkboxShape(value: CheckBoxShape)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [CheckBoxShape](#checkboxshape) | 是 |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 |
 
 ## checkboxShape
 
@@ -50,8 +46,6 @@ checkboxShape(shape: Optional<CheckBoxShape>)
 设置CheckboxGroup组件形状，包括圆形和圆角方形。与[checkboxShape](#checkboxshape)&lt;sup&gt;12+&lt;/sup&gt;相比，shape参数新增了对undefined类型的支持。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,7 +59,7 @@ checkboxShape(shape: Optional<CheckBoxShape>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| shape | Optional & lt;CheckBoxShape & gt; | 是 |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | 是 |
 
 ## contentModifier
 
@@ -80,8 +74,6 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>)
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -92,7 +84,7 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md)&gt;&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md)&gt;&gt; | 是 |
 
 ## mark
 
@@ -104,8 +96,6 @@ mark(value: MarkStyle)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -116,7 +106,7 @@ mark(value: MarkStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-units-markstyle-i.md) | 是 |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 |
 
 ## mark
 
@@ -128,8 +118,6 @@ mark(style: Optional<MarkStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -140,7 +128,7 @@ mark(style: Optional<MarkStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;MarkStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | 是 |
 
 ## onChange
 
@@ -151,8 +139,6 @@ onChange(callback: OnCheckboxGroupChangeCallback)
 CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。在与带有缓存功能的组件（如List）配合使用时，需注意未创建的Checkbox的选中状态对回调结果的影响。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -176,8 +162,6 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -190,7 +174,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md)&gt; | 是 |
 
 ## selectAll
 
@@ -201,8 +185,6 @@ selectAll(value: boolean)
 设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -226,8 +208,6 @@ selectAll(isAllSelected: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -240,7 +220,7 @@ selectAll(isAllSelected: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isAllSelected | Optional & lt;boolean & gt; | 是 |
+| isAllSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## selectedColor
 
@@ -251,8 +231,6 @@ selectedColor(value: ResourceColor)
 设置被选中或部分选中状态的颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -276,8 +254,6 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -290,7 +266,7 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## unselectedColor
 
@@ -301,8 +277,6 @@ unselectedColor(value: ResourceColor)
 设置非选中状态边框颜色。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,8 +300,6 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -338,4 +310,4 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |

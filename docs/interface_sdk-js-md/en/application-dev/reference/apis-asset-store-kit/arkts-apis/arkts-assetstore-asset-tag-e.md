@@ -4,8 +4,6 @@ Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-asset-assetm
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## SECRET
@@ -17,8 +15,6 @@ SECRET = TagType.BYTES | 0x01
 Asset plaintext.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,8 +30,6 @@ Asset alias, which uniquely identifies an asset.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -49,8 +43,6 @@ ACCESSIBILITY = TagType.NUMBER | 0x03
 Access control based on the lock screen status.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -66,8 +58,6 @@ Whether the asset is accessible only when a lock screen password is set.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -81,8 +71,6 @@ AUTH_TYPE = TagType.NUMBER | 0x05
 Type of user authentication required for accessing the asset.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -98,8 +86,6 @@ Validity period of the user authentication.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -113,8 +99,6 @@ AUTH_CHALLENGE = TagType.BYTES | 0x07
 Challenge for the user authentication.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -130,8 +114,6 @@ Authorization token obtained after the user authentication is successful.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -145,8 +127,6 @@ SYNC_TYPE = TagType.NUMBER | 0x10
 Asset sync type.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -162,8 +142,6 @@ Whether to retain the asset when the application is uninstalled.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## DATA_LABEL_CRITICAL_1
@@ -175,8 +153,6 @@ DATA_LABEL_CRITICAL_1 = TagType.BYTES | 0x20
 Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -192,8 +168,6 @@ Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -207,8 +181,6 @@ DATA_LABEL_CRITICAL_3 = TagType.BYTES | 0x22
 Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -224,8 +196,6 @@ Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -239,8 +209,6 @@ DATA_LABEL_NORMAL_1 = TagType.BYTES | 0x30
 Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -256,8 +224,6 @@ Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -271,8 +237,6 @@ DATA_LABEL_NORMAL_3 = TagType.BYTES | 0x32
 Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -288,8 +252,6 @@ Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -303,8 +265,6 @@ DATA_LABEL_NORMAL_LOCAL_1 = TagType.BYTES | 0x34
 Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -320,8 +280,6 @@ Local information about the asset. The value is assigned by the service without 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -335,8 +293,6 @@ DATA_LABEL_NORMAL_LOCAL_3 = TagType.BYTES | 0x36
 Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -352,8 +308,6 @@ Local information about the asset. The value is assigned by the service without 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -368,8 +322,6 @@ Type of the asset query result to return.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -383,8 +335,6 @@ RETURN_LIMIT = TagType.NUMBER | 0x41
 Maximum number of asset records to return.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -401,8 +351,6 @@ Offset of the asset query result.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -418,8 +366,6 @@ Sorting order of the query results. Currently, the results can be sorted only by
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -433,8 +379,6 @@ CONFLICT_RESOLUTION = TagType.NUMBER | 0x44
 Policy for resolving the conflict (for example, a duplicate alias).
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -450,8 +394,6 @@ Data update time, in timestamp.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -466,8 +408,6 @@ Additional operation type.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## REQUIRE_ATTR_ENCRYPTED
@@ -479,8 +419,6 @@ REQUIRE_ATTR_ENCRYPTED = TagType.BOOL | 0x47
 Whether to encrypt the additional asset information customized by the service.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -496,8 +434,6 @@ Group to which the asset belongs.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## WRAP_TYPE
@@ -509,7 +445,5 @@ WRAP_TYPE = TagType.NUMBER | 0x49
 Encrypted import/export type supported by the asset.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Security.Asset

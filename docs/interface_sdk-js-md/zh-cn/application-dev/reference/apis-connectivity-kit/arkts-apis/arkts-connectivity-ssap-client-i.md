@@ -4,14 +4,12 @@ SSAP客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## close
@@ -23,8 +21,6 @@ close(): void
 关闭客户端，断开与远端服务端的连接。如仅需断开当前连接而保留实例，请使用[disconnect](#disconnect)方法。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -49,8 +45,6 @@ connect(): Promise<void>
 向服务端发起连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -82,8 +76,6 @@ disconnect(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -113,8 +105,6 @@ getServices(): Promise<Service[]>
 获取服务端支持的服务列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -146,8 +136,6 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -161,14 +149,12 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 ## offMtuChange
 
 ```TypeScript
-offMtuChange(callback?: Callback<int>): void
+offMtuChange(callback?: Callback<number>): void
 ```
 
 取消订阅MTU变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -190,8 +176,6 @@ offPropertyChange(callback?: Callback<Property>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -212,8 +196,6 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -227,14 +209,12 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ## onMtuChange
 
 ```TypeScript
-onMtuChange(callback: Callback<int>): void
+onMtuChange(callback: Callback<number>): void
 ```
 
 订阅MTU变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,8 +236,6 @@ onPropertyChange(callback: Callback<Property>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -277,8 +255,6 @@ readProperty(property: Property): Promise<Property>
 读取服务端属性。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -311,14 +287,12 @@ readProperty(property: Property): Promise<Property>
 ## requestMtuSize
 
 ```TypeScript
-requestMtuSize(mtu: int): Promise<void>
+requestMtuSize(mtu: number): Promise<void>
 ```
 
 发起MTU协商请求。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -355,8 +329,6 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 设置[Property](arkts-connectivity-ssap-property-i.md)变化通知。需在调用[connect](#connect)成功建立连接后使用。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -396,8 +368,6 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 写入服务端属性值。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

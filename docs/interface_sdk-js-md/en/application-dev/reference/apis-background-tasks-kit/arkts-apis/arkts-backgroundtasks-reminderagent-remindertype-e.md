@@ -4,8 +4,6 @@ Enumerates reminder types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
@@ -21,8 +19,6 @@ REMINDER_TYPE_TIMER = 0
 Countdown reminder.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Calendar reminder.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** REMINDER_TYPE_CALENDAR
@@ -57,8 +51,6 @@ REMINDER_TYPE_ALARM = 2
 Alarm reminder.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

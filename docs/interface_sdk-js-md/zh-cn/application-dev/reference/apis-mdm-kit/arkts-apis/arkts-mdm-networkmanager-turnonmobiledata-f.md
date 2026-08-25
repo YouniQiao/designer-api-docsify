@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## turnOnMobileData
@@ -15,8 +15,6 @@ function turnOnMobileData(admin: Want, isForce: boolean): void
 开启移动数据网络。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -38,22 +36,3 @@ function turnOnMobileData(admin: Want, isForce: boolean): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  networkManager.turnOnMobileData(wantTemp, true);
-  console.info(`Turn on mobile data succeeded`);
-} catch (err) {
-  console.error(`Failed to turn on mobile data. Code: ${err.code}, message: ${err.message}`);
-}
-```

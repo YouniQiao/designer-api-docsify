@@ -1,10 +1,8 @@
 # ContainerSpan属性/事件
 
-仅支持以下属性：不支持通用事件。
+仅支持以下属性：不支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,8 +21,6 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -35,7 +31,7 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-attribute.md)&gt; | 是 |
+| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-attribute.md)&gt; | 是 |
 
 ## textBackgroundStyle
 
@@ -50,8 +46,6 @@ textBackgroundStyle(style: TextBackgroundStyle)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -62,4 +56,4 @@ textBackgroundStyle(style: TextBackgroundStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | [TextBackgroundStyle](#textbackgroundstyle) | 是 |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 |

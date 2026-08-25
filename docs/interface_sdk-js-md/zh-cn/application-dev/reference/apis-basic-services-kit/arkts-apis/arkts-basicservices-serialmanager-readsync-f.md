@@ -3,21 +3,22 @@
 ## 导入模块
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## readSync
 
 ```TypeScript
-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int
+function readSync(portId: number, buffer: Uint8Array, timeout?: number): number
 ```
 
 从串口设备同步读取数据，读取的数据将存储在buffer参数中，返回实际读取的数据长度。使用前需先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口设备。适用于需要阻塞式等待数据、对读取顺序有严格要求、或实 时性要求不高的简单通信场景。  
-**前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
+**前置条件：**  
+- 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号  
+- 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限  
+- 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -25,15 +26,15 @@ function readSync(portId: int, buffer: Uint8Array, timeout?: int): int
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 | buffer | Uint8Array | 是 |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| timeout | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 

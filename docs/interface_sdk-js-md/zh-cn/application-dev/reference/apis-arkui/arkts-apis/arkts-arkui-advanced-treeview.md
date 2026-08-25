@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -34,9 +34,3 @@ import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener,
 | 名称 |
 | --- |
 | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## addSlot
@@ -15,8 +15,6 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 创建指定类型的通知渠道。使用callback异步回调。通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。 发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。 同一类型的通知渠道只能创建一个。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -45,138 +43,6 @@ removeAllSlots 删除所有渠道通知。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot回调
-let addSlotCallBack = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in adding slot.`);
-  }
-}
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot回调
-let addSlotCallBack = (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in adding slot.`);
-  }
-}
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info(`Succeeded in adding slot.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info(`Succeeded in adding slot.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to add slot. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot回调
-let addSlotCallBack = (err: BusinessError): void => {
-    if (err) {
-        console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('addSlot success');
-    }
-}
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot, addSlotCallBack);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot回调
-let addSlotCallBack = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('addSlot success');
-    }
-}
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot, addSlotCallBack);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot).then(() => {
-    console.info('addSlot success');
-}).catch((err: BusinessError) => {
-    console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot).then(() => {
-    console.info('addSlot success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`addSlot failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## addSlot
 
@@ -187,8 +53,6 @@ function addSlot(type: SlotType): Promise<void>
 创建指定类型的通知渠道。使用Promise异步回调。通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。 发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。 同一类型的通知渠道只能创建一个。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -221,7 +85,3 @@ removeAllSlots 删除当前应用的所有渠道通知。
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-参见 [addSlot](#addslot)

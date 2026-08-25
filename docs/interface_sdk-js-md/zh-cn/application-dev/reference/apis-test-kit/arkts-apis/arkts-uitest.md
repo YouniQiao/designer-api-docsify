@@ -22,17 +22,11 @@ UiTest提供UI自动化测试能力，供开发者在测试场景使用，主要
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## 汇总
-
-### 命名空间
-
-| 名称 |
-| --- |
-| [ON](arkts-test-on-n.md) |
 
 ### 类
 
@@ -79,3 +73,10 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 | [UiDirection](arkts-test-uitest-uidirection-e.md) |
 | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) |
 | [WindowMode](arkts-test-uitest-windowmode-e.md) |
+
+### 属性
+
+| 名称 |
+| --- |
+| [BY](arkts-test-ohosuitest-p.md) |
+| [ON](arkts-test-ohosuitest-p.md) |

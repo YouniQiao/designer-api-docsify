@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## execute
@@ -15,8 +15,6 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 将待执行的函数放入taskpool的内部任务队列，函数不会立即执行，而是等待分发到工作线程执行。在当前执行模式下， 不支持取消任务。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,263 +42,6 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
-  console.info("taskpool result: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
-  console.info("taskpool result: " + value); // "taskpool result: 100"
-});
-
-taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: test"
-});
-
-taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number, time: number): number {
-  let start = Date.now();
-  while (Date.now() - start < time) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, 100, 1000);
-let config: taskpool.Configs = { timeout: 500, priority: taskpool.Priority.HIGH };
-taskpool.execute(task, config).catch((e: BusinessError) => {
-  // Failed to execute task. Code: 10200058, message: Task timed out.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-})
-try {
-  taskpool.execute(task, { timeout: 500 });
-} catch (e) {
-  // Failed to execute task. Code: 10200057, message: The task cannot be executed by two APIs, the timeout task cannot be executed again.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
-taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number, time: number): number {
-  let start = Date.now();
-  while (Date.now() - start < time) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.GenericsTask<[number, number], number>(printArgs, 100, 1000);
-let config: taskpool.Configs = { timeout: 500, priority: taskpool.Priority.MEDIUM };
-taskpool.execute<[number, number], number>(task, config).catch((e: BusinessError) => {
-  // Failed to execute task. Code: 10200058, message: Task timed out.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-})
-try {
-  taskpool.execute<[number, number], number>(task, { timeout: 500 });
-} catch (e) {
-  // Failed to execute task. Code: 10200057, message: The task cannot be executed by two APIs, the timeout task cannot be executed again.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup1.addTask(printArgs, 10); // 10: test number
-taskGroup1.addTask(printArgs, 20); // 20: test number
-taskGroup1.addTask(printArgs, 30); // 30: test number
-
-let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskGroup2.addTask(task1);
-taskGroup2.addTask(task2);
-taskGroup2.addTask(task3);
-taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-  console.info("Succeeded in executing task, res is:" + res);
-});
-taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-  console.info("Succeeded in executing task, res is:" + res);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number, time: number): number {
-  let start = Date.now();
-  while (Date.now() - start < time) {
-    continue;
-  }
-  return args;
-}
-
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup.addTask(printArgs, 10, 1000);
-let config: taskpool.Configs = {timeout: 500, priority: taskpool.Priority.HIGH};
-taskpool.execute(taskGroup, config).catch((e:BusinessError) => {
-  // Failed to execute task. Code: 10200070, message: TaskGroup timed out.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-})
-try {
-  taskpool.execute(taskGroup, config);
-} catch (e) {
-  // Failed to execute task. Code: 10200059, message: TaskGroup cannot be re-executed, taskGroup has already set timeout.
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-@Concurrent
-function additionDelay(delay: number): void {
-  let start: number = new Date().getTime();
-  while (new Date().getTime() - start < delay) {
-    continue;
-  }
-}
-@Concurrent
-function waitForRunner(finalString: string): string {
-  return finalString;
-}
-async function seqRunner() {
-  let finalString:string = "";
-  let task1:taskpool.Task = new taskpool.Task(additionDelay, 3000);
-  let task2:taskpool.Task = new taskpool.Task(additionDelay, 2000);
-  let task3:taskpool.Task = new taskpool.Task(additionDelay, 1000);
-  let task4:taskpool.Task = new taskpool.Task(waitForRunner, finalString);
-
-  let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner();
-  runner.execute(task1).then(() => {
-    finalString += 'a';
-    console.info("seqrunner: task1 done.");
-  });
-  runner.execute(task2).then(() => {
-    finalString += 'b';
-    console.info("seqrunner: task2 done");
-  });
-  runner.execute(task3).then(() => {
-    finalString += 'c';
-    console.info("seqrunner: task3 done");
-  });
-  await runner.execute(task4);
-  console.info("seqrunner: task4 done, finalString is " + finalString);
-}
-```
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function additionDelay(delay: number): void {
-  let start: number = new Date().getTime();
-  while (new Date().getTime() - start < delay) {
-    continue;
-  }
-}
-async function asyncRunner() {
-  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
-  for (let i = 0; i < 30; i++) {
-    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
-    runner.execute(task).then(() => {
-      console.info("asyncRunner: task" + i + " done.");
-    }).catch((e: BusinessError) => {
-      console.error("asyncRunner: task" + i + " error." + e.code + "-" + e.message);
-    });
-  }
-}
-
-async function asyncRunner2() {
-  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
-  for (let i = 0; i < 20; i++) {
-    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
-    runner.execute(task).then(() => {
-      console.info("asyncRunner: task" + i + " done.");
-    });
-  }
-}
-```
-
 
 ## execute
 
@@ -311,8 +52,6 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 校验并发函数的参数类型和返回类型后，将函数添加到taskpool的任务队列。在当前执行模式下，不支持取消任务。使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -338,10 +77,6 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -356,8 +91,6 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 > - 长时任务只能调用一次，非长时任务可以多次调用执行。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -387,10 +120,6 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -401,8 +130,6 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 将创建好的泛型任务放入taskpool的内部任务队列，校验任务的参数类型和返回值类型。使用Promise异步回调。 execute任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -430,10 +157,6 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -444,8 +167,6 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后， 结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -471,10 +192,6 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
 | [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -498,8 +215,6 @@ function execute(task: Task, configs: Configs): Promise<Object>
 > - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -528,10 +243,6 @@ function execute(task: Task, configs: Configs): Promise<Object>
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 | [10200058](../errorcode-utils.md#10200058-任务执行超时) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -555,8 +266,6 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 > - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -585,10 +294,6 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 | [10200058](../errorcode-utils.md#10200058-任务执行超时) |
 
-**示例**
-
-参见 [execute](#execute)
-
 
 ## execute
 
@@ -603,8 +308,6 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 > - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -630,7 +333,3 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
 | [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
 | [10200070](../errorcode-utils.md#10200070-任务组执行超时) |
-
-**示例**
-
-参见 [execute](#execute)

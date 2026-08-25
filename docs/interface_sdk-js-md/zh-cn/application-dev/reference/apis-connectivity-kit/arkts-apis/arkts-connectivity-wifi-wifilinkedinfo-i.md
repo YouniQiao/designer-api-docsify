@@ -4,8 +4,6 @@ WLAN连接信息。@interface WifiLinkedInfo
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
@@ -15,7 +13,7 @@ WLAN连接信息。@interface WifiLinkedInfo
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -29,8 +27,6 @@ WLAN AP的频段。
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ WLAN热点的BSSID
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [bssid](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#bssid)
@@ -69,8 +63,6 @@ connState: ConnState
 **类型：** ConnState
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ WLAN AP的频率。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [frequency](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#frequency)
@@ -109,8 +99,6 @@ ipAddress: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -130,8 +118,6 @@ isHidden: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [isHidden](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#ishidden)
@@ -149,8 +135,6 @@ isRestricted: boolean
 **类型：** boolean
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -170,8 +154,6 @@ WLAN AP的速度。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [linkSpeed](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#linkspeed)
@@ -189,8 +171,6 @@ macAddress: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -210,8 +190,6 @@ WLAN AP的RSSI(dBm)。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [rssi](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#rssi)
@@ -229,8 +207,6 @@ WLAN热点的SSID
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

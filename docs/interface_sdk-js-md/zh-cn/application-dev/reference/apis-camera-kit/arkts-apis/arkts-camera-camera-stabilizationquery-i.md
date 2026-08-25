@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isVideoStabilizationModeSupported
@@ -26,8 +24,6 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 查询是否支持指定的视频防抖模式。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -50,37 +46,3 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 | 错误码ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isVideoStabilizationModeSupported(captureSession: camera.CaptureSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = captureSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isVideoStabilizationModeSupported(videoSession: camera.VideoSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = videoSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```

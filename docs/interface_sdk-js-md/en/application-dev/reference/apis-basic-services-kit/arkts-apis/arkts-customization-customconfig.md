@@ -4,14 +4,12 @@ This module provides APIs for applications to obtain custom configurations, such
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Customization.CustomConfig
 
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from '@kit.BasicServicesKit';
+import { customConfig } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

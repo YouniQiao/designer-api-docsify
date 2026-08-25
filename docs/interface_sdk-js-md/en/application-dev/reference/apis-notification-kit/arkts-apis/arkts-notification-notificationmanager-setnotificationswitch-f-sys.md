@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setNotificationSwitch
 
 ```TypeScript
-function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>
+function setNotificationSwitch(switchName: string, switchState: boolean, userId: number): Promise<void>
 ```
 
 Sets the notification switch state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -32,7 +30,7 @@ Sets the notification switch state. This API uses a promise to return the result
 | --- | --- | --- |
 | [switchName](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | string | Yes |
 | switchState | boolean | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 

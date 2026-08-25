@@ -4,8 +4,6 @@ FlexAlign enumeration description.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -17,8 +15,6 @@ Start
 The element is aligned at the head of the principal axis, the first element is aligned with the head of the row, and subsequent elements are aligned with the previous one.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,8 +32,6 @@ The elements are centered in the direction of the principal axis, and the first 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -53,8 +47,6 @@ End
 The element is aligned at the tail of the principal axis, the last element is aligned at the end of the row, and the other elements are aligned with the next.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +64,6 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -90,8 +80,6 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -107,8 +95,6 @@ SpaceEvenly
 Elements in the Flex axis direction are evenly spaced. The spacing between adjacent elements, the spacing between the first element and the beginning of the row, and the spacing between the last element and the end of the row are the same.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

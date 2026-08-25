@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setEventConfig
@@ -13,7 +13,12 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 ```
 
 Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name.Configuration items vary depending on events. Currently, only the following events are supported:  
-- **MAIN_THREAD_JANK** (For details about the parameter configuration, see [Main Thread Jank Event Overview](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig).) - **APP_CRASH** (For details about the parameter configuration, see [Crash Log Configuration Parameters](../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications).) - **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see [Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
+- **MAIN_THREAD_JANK** (For details about the parameter configuration, see  
+[Main Thread Jank Event Overview](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig).)  
+- **APP_CRASH** (For details about the parameter configuration, see  
+[Crash Log Configuration Parameters](../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications).)  
+- **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see  
+[Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
 
 > **NOTE：**&gt;
 > Since API version 26.0.0, all settings of this API are supported by
@@ -21,8 +26,6 @@ Sets event configuration. This method uses a promise to return the result. In th
 > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md).
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -46,25 +49,3 @@ Sets event configuration. This method uses a promise to return the result. In th
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-The following example sets the collection stack parameters of the MAIN_THREAD_JANK event:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let params: Record<string, hiAppEvent.ParamType> = {
-  "log_type": "1",
-  "sample_interval": "100",
-  "ignore_startup_time": "11",
-  "sample_count": "21",
-  "report_times_per_app": "3"
-};
-hiAppEvent.setEventConfig(hiAppEvent.event.MAIN_THREAD_JANK, params).then(() => {
-  hilog.info(0x0000, 'hiAppEvent', `Successfully set sampling stack parameters.`);
-}).catch((err: BusinessError) => {
-hilog.error(0x0000, 'hiAppEvent', `Failed to set sample stack value. Code: ${err.code}, message: ${err.message}`);
-});
-```

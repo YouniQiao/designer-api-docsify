@@ -4,8 +4,6 @@ Provides the information about the nested scrollable containers.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ child: Scroller
 
 Controller of the scrollable container nested within the target scrollable container. This scrollable container is a child component of the target scrollable container.
 
-**Type:** Scroller
+**Type:** [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ parent: Scroller
 
 Controller of the target scrollable container.
 
-**Type:** Scroller
+**Type:** [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

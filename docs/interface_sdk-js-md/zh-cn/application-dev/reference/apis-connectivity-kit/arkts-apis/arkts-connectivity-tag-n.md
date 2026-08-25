@@ -11,14 +11,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -50,13 +48,9 @@ import { tag } from '@kit.ConnectivityKit';
 | [registerForegroundDispatch(标准NFC-Tag)](arkts-connectivity-tag-registerforegrounddispatch-f.md) |
 | [unregisterForegroundDispatch(标准NFC-Tag)](arkts-connectivity-tag-unregisterforegrounddispatch-f.md) |
 | [on(标准NFC-Tag)](arkts-connectivity-tag-on-f.md#onreadermode) |
-| [onReaderMode(标准NFC-Tag)](arkts-connectivity-tag-onreadermode-f.md) |
 | [off(标准NFC-Tag)](arkts-connectivity-tag-off-f.md#offreadermode) |
-| [offReaderMode(标准NFC-Tag)](arkts-connectivity-tag-offreadermode-f.md) |
 | [on(标准NFC-Tag)](arkts-connectivity-tag-on-f.md#onreadermodewithinterval) |
-| [onReaderModeWithInterval(标准NFC-Tag)](arkts-connectivity-tag-onreadermodewithinterval-f.md) |
 | [off(标准NFC-Tag)](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) |
-| [offReaderModeWithInterval(标准NFC-Tag)](arkts-connectivity-tag-offreadermodewithinterval-f.md) |
 | [getBarcodeTag(标准NFC-Tag)](arkts-connectivity-tag-getbarcodetag-f.md) |
 
 ### 接口

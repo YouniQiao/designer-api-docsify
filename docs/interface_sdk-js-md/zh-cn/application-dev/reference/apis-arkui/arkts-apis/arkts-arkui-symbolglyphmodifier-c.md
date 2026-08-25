@@ -2,11 +2,9 @@
 
 Defines SymbolGlyph Modifier
 
-**继承/实现关系：** SymbolGlyphModifier extends SymbolGlyphAttribute implements AttributeModifier<SymbolGlyphAttribute>
+**继承/实现关系：** SymbolGlyphModifier extends [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md#symbolglyphattribute) implements AttributeModifier<SymbolGlyphAttribute>
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +18,6 @@ applyNormalAttribute?(instance: SymbolGlyphAttribute): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -32,7 +28,7 @@ applyNormalAttribute?(instance: SymbolGlyphAttribute): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| instance | [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) | 是 |
+| instance | [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) | 是 |
 
 ## constructor
 
@@ -43,8 +39,6 @@ constructor(src?: Resource)
 SymbolGlyphModifier的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

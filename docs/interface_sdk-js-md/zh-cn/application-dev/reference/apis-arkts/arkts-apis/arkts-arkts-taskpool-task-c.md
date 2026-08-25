@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## addDependency
@@ -23,8 +21,6 @@ addDependency(...tasks: Task[]): void
 为当前任务添加对其他任务的依赖。使用该方法前需先构造**Task**实例。该任务和被依赖的任务不能是任务组任务、串行队列任务、 异步队列任务、已执行任务或周期任务。存在依赖关系的任务（依赖其他任务的任务或被依赖的任务）执行后不可再次执行。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,39 +40,6 @@ addDependency(...tasks: Task[]): void
 | [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) |
 | [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task1:taskpool.Task = new taskpool.Task(delay, 100);
-let task2:taskpool.Task = new taskpool.Task(delay, 200);
-let task3:taskpool.Task = new taskpool.Task(delay, 200);
-
-console.info("dependency: add dependency start");
-task1.addDependency(task2);
-task2.addDependency(task3);
-console.info("dependency: add dependency end");
-
-console.info("dependency: start execute second");
-taskpool.execute(task1).then(() => {
-  console.info("dependency: second task1 success");
-})
-taskpool.execute(task2).then(() => {
-  console.info("dependency: second task2 success");
-})
-taskpool.execute(task3).then(() => {
-  console.info("dependency: second task3 success");
-})
-```
-
 ## constructor
 
 ```TypeScript
@@ -86,8 +49,6 @@ constructor(func: Function, ...args: Object[])
 Task的构造函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -106,92 +67,6 @@ Task的构造函数。
 | --- |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs, "this is my first GenericsTask");
-
-let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
-
-let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-let taskGroup = new taskpool.TaskGroup();
-```
-
-```TypeScript
-let taskGroupName: string = "groupName";
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
-let name: string = taskGroup.name;
-```
-
-```TypeScript
-let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
-```
-
-```TypeScript
-let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
-```
-
-```TypeScript
-let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
-```
-
-```TypeScript
-let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
-```
-
 ## constructor
 
 ```TypeScript
@@ -201,8 +76,6 @@ constructor(name: string, func: Function, ...args: Object[])
 Task的构造函数用于创建任务，并可指定任务名称。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -222,10 +95,6 @@ Task的构造函数用于创建任务，并可指定任务名称。
 | --- |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
-**示例**
-
-参见 [constructor](#constructor)
-
 ## isCanceled
 
 ```TypeScript
@@ -239,8 +108,6 @@ static isCanceled(): boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -250,54 +117,6 @@ static isCanceled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-@Concurrent
-function inspectStatus(arg: number): number {
-    // ...
-    if (taskpool.Task.isCanceled()) {
-      console.info("task has been canceled.");
-      // ...
-      return arg + 1;
-    }
-    // ...
-    return arg;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function inspectStatus(arg: number): number {
-  // 第一次检查任务是否已经取消并作出响应
-  if (taskpool.Task.isCanceled()) {
-    console.info("task has been canceled before 2s sleep.");
-    return arg + 2;
-  }
-  // 延时2s
-  let t: number = Date.now();
-  while (Date.now() - t < 2000) {
-    continue;
-  }
-  // 第二次检查任务是否已经取消并作出响应
-  if (taskpool.Task.isCanceled()) {
-    console.info("task has been canceled after 2s sleep.");
-    return arg + 3;
-  }
-  return arg + 1;
-}
-
-let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
-taskpool.execute(task).then((res: Object) => {
-  console.info("Succeeded in executing task, result: " + res);
-}).catch((e: BusinessError) => {
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-});
-// 不调用cancel，isCanceled()默认返回false，task执行的结果为101
-```
 
 ## isDone
 
@@ -309,8 +128,6 @@ isDone(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -321,39 +138,6 @@ isDone(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function inspectStatus(arg: number): number {
-  // 1s sleep
-  let t: number = Date.now();
-  while (Date.now() - t < 1000) {
-    continue;
-  }
-  return arg + 1;
-}
-
-async function taskpoolCancel(): Promise<void> {
-  let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
-  taskpool.execute(task).then((res: Object) => {
-    console.info("Succeeded in executing task, result: " + res);
-  }).catch((e: BusinessError) => {
-    console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-  });
-
-  setTimeout(() => {
-    if (!task.isDone()) {
-      taskpool.cancel(task);
-    }
-  }, 3000); // 延时3s，确保任务已执行
-}
-
-taskpoolCancel();
-```
-
 ## onEnqueued
 
 ```TypeScript
@@ -363,8 +147,6 @@ onEnqueued(callback: CallbackFunction): void
 注册回调函数，任务入队时将调用该函数。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -382,29 +164,6 @@ onEnqueued(callback: CallbackFunction): void
 | --- |
 | [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) |
 
-**示例**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onEnqueued(() => {
-  console.info("taskpool: onEnqueued");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
-
 ## onExecutionFailed
 
 ```TypeScript
@@ -414,8 +173,6 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 注册回调函数，任务执行失败时调用该回调函数（周期任务不支持）。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -433,33 +190,6 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 | --- |
 | [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) |
 
-**示例**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { HashMap } from '@kit.ArkTS';
-
-@Concurrent
-function hashMapFunc(args: number) {
-  let t = Date.now();
-  while ((Date.now() - t) < 100) {
-    continue;
-  }
-  return () => {};
-}
-
-let task2 = new taskpool.Task(hashMapFunc, 1);
-task2.onExecutionFailed((e: Error) => {
-  console.error("taskpool: onExecutionFailed error is " + e.message);
-})
-taskpool.execute(task2).then(() => {
-  console.info("taskpool: execute task success");
-}).catch((e:BusinessError) => {
-  console.error(`taskpool: error code: ${e.code}, error message: ${e.message}`);
-})
-```
-
 ## onExecutionSucceeded
 
 ```TypeScript
@@ -469,8 +199,6 @@ onExecutionSucceeded(callback: CallbackFunction): void
 注册一个回调函数，并在任务执行成功时调用它（周期任务不支持）。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -487,29 +215,6 @@ onExecutionSucceeded(callback: CallbackFunction): void
 | 错误码ID |
 | --- |
 | [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) |
-
-**示例**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onExecutionSucceeded(() => {
-  console.info("taskpool: onExecutionSucceeded");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
 
 ## onReceiveData
 
@@ -525,8 +230,6 @@ onReceiveData(callback?: Function): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -537,33 +240,6 @@ onReceiveData(callback?: Function): void
 | --- | --- | --- |
 | callback | Function | 否 |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function concurrentFunc(num: number): number {
-  let res: number = num * 10;
-  taskpool.Task.sendData(res);
-  return num;
-}
-
-function printLog(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-async function testFunc(): Promise<void> {
-  try {
-    let task: taskpool.Task = new taskpool.Task(concurrentFunc, 1);
-    task.onReceiveData(printLog);
-    await taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-testFunc();
-```
-
 ## onStartExecution
 
 ```TypeScript
@@ -573,8 +249,6 @@ onStartExecution(callback: CallbackFunction): void
 注册回调函数，任务开始执行前将调用该函数。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -592,29 +266,6 @@ onStartExecution(callback: CallbackFunction): void
 | --- |
 | [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) |
 
-**示例**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(delay, 1);
-task.onStartExecution(() => {
-  console.info("taskpool: onStartExecution");
-});
-taskpool.execute(task).then(() => {
-  console.info("taskpool: execute task success");
-});
-```
-
 ## removeDependency
 
 ```TypeScript
@@ -624,8 +275,6 @@ removeDependency(...tasks: Task[]): void
 删除当前任务对其他任务的依赖。在使用该方法之前，需要先构造**Task**对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -645,43 +294,6 @@ removeDependency(...tasks: Task[]): void
 | [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) |
 | [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function delay(args: number): number {
-  let t: number = Date.now();
-  while ((Date.now() - t) < 1000) {
-    continue;
-  }
-  return args;
-}
-
-let task1:taskpool.Task = new taskpool.Task(delay, 100);
-let task2:taskpool.Task = new taskpool.Task(delay, 200);
-let task3:taskpool.Task = new taskpool.Task(delay, 200);
-
-console.info("dependency: add dependency start");
-task1.addDependency(task2);
-task2.addDependency(task3);
-console.info("dependency: add dependency end");
-console.info("dependency: remove dependency start");
-task1.removeDependency(task2);
-task2.removeDependency(task3);
-console.info("dependency: remove dependency end");
-
-console.info("dependency: start execute");
-taskpool.execute(task1).then(() => {
-  console.info("dependency: task1 success");
-})
-taskpool.execute(task2).then(() => {
-  console.info("dependency: task2 success");
-})
-taskpool.execute(task3).then(() => {
-  console.info("dependency: task3 success");
-})
-```
-
 ## sendData
 
 ```TypeScript
@@ -698,8 +310,6 @@ static sendData(...args: Object[]): void
 > - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -720,63 +330,6 @@ static sendData(...args: Object[]): void
 | [10200023](../errorcode-utils.md#10200023-未在并发函数中调用的函数) |
 | [10200024](../errorcode-utils.md#10200024-未在宿主线程中注册的函数) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function sendDataTest(num: number): number {
-  let res: number = num * 10;
-  taskpool.Task.sendData(res);
-  return num;
-}
-
-function printLog(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-async function taskpoolTest(): Promise<void> {
-  try {
-    let task: taskpool.Task = new taskpool.Task(sendDataTest, 1);
-    task.onReceiveData(printLog);
-    await taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
-```TypeScript
-// 异步函数中调用该方法
-@Concurrent
-async function sendDataTest(num: number) {
-  let asyncSleepAndSendData = async () => {
-    let asyncSleep = async (time: number): Promise<Object> => {
-      return new Promise(resolve => setTimeout(resolve, time));
-    }
-    await asyncSleep(10000);
-    let res: number = num * 10;
-    taskpool.Task.sendData(res);
-  }
-  await asyncSleepAndSendData(); // 需要使用await来确保该异步函数在任务中同步执行完成。
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.Task(sendDataTest, 10);
-    task.onReceiveData((data: number) => {
-      console.info("taskpool: data is: " + data);
-    });
-    taskpool.execute(task);
-  } catch (e) {
-    console.error(`taskpool: error code: ${e.code}, info: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
 ## setCloneList
 
 ```TypeScript
@@ -791,8 +344,6 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 > [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -810,135 +361,6 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 | --- |
 | [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) |
 
-**示例**
-
-```TypeScript
-// sendable.ets
-// 定义两个Sendable class：BaseClass及其子类DeriveClass
-@Sendable
-export class BaseClass {
-  private str: string = "sendable: BaseClass";
-  static num :number = 10;
-  str1: string = "sendable: this is BaseClass's string";
-  num1: number = 5;
-  isDone1: boolean = false;
-
-  private fibonacciRecursive(n: number): number {
-    if (n <= 1) {
-      return n;
-    } else {
-      return this.fibonacciRecursive(n - 1) + this.fibonacciRecursive(n - 2);
-    }
-  }
-
-  private privateFunc(num: number): number{
-    let res: number = this.fibonacciRecursive(num);
-    console.info("sendable: BaseClass privateFunc res is: " + res);
-    return res;
-  }
-
-  publicFunc(num: number): number {
-    return this.privateFunc(num);
-  }
-
-  get GetNum(): number {
-    return this.num1;
-  }
-  set SetNum(num: number) {
-    this.num1 = num;
-  }
-
-  constructor() {
-    console.info(this.str);
-    this.isDone1 = true;
-  }
-}
-
-@Sendable
-export class DeriveClass extends BaseClass {
-  name: string = "sendable: this is DeriveClass";
-  printName() {
-    console.info(this.name);
-  }
-  constructor() {
-    super();
-  }
-}
-```
-
-```TypeScript
-// index.ets
-// 宿主线程（这里的宿主线程为UI主线程）调用taskpool，在taskpool线程中调用BaseClass和DeriveClass的方法、访问对应属性
-import { taskpool } from '@kit.ArkTS';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { BaseClass, DeriveClass } from './sendable';
-
-@Concurrent
-function testFunc(arr: Array<BaseClass>, num: number): number {
-  let baseInstance1 = arr[0];
-  console.info("sendable: str1 is: " + baseInstance1.str1);
-  baseInstance1.SetNum = 100;
-  console.info("sendable: num1 is: " + baseInstance1.GetNum);
-  console.info("sendable: isDone1 is: " + baseInstance1.isDone1);
-  // 获取斐波那契数列第num项的结果
-  let res: number = baseInstance1.publicFunc(num);
-  return res;
-}
-
-@Concurrent
-function printLog(arr: Array<DeriveClass>): void {
-  let deriveInstance = arr[0];
-  deriveInstance.printName();
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-        Button() {
-          Text("TaskPool Test");
-        }.onClick(() => {
-          // task1访问调用BaseClass.str1/BaseClass.SetNum/BaseClass.GetNum/BaseClass.isDone1/BaseClass.publicFunc
-          let baseInstance1: BaseClass = new BaseClass();
-          let array1 = new Array<BaseClass>();
-          array1.push(baseInstance1);
-          let task1 = new taskpool.Task(testFunc, array1, 10);
-          task1.setCloneList(array1);
-          taskpool.execute(task1).then((res: Object) => {
-            console.info("sendable: task1 res is: " + res);
-          }).catch((e:BusinessError) => {
-            console.error(`sendable: task1 execute Code is ${e.code}, message is ${e.message}`);
-          })
-
-          // task2调用DeriveClass.printName
-          let deriveInstance: DeriveClass = new DeriveClass();
-          let array2 = new Array<DeriveClass>();
-          array2.push(deriveInstance);
-          let task2 = new taskpool.Task(printLog, array2);
-          task2.setCloneList(array2);
-          taskpool.execute(task2).then(() => {
-            console.info("sendable: task2 execute success");
-          }).catch((e:BusinessError) => {
-            console.error(`sendable: task2 execute Code is ${e.code}, message is ${e.message}`);
-          })
-        })
-        .height('15%')
-        .width('30%')
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## setTransferList
 
 ```TypeScript
@@ -954,8 +376,6 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -964,7 +384,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| transfer | ArrayBuffer[] | 否 |
+| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 否 |
 
 **错误码：**
 
@@ -972,54 +392,17 @@ setTransferList(transfer?: ArrayBuffer[]): void
 | --- |
 | [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function testTransfer(arg1: ArrayBuffer, arg2: ArrayBuffer): number {
-  console.info("testTransfer arg1 byteLength: " + arg1.byteLength);
-  console.info("testTransfer arg2 byteLength: " + arg2.byteLength);
-  return 100;
-}
-
-let buffer: ArrayBuffer = new ArrayBuffer(8);
-let view: Uint8Array = new Uint8Array(buffer);
-let buffer1: ArrayBuffer = new ArrayBuffer(16);
-let view1: Uint8Array = new Uint8Array(buffer1);
-
-console.info("testTransfer view byteLength: " + view.byteLength);
-console.info("testTransfer view1 byteLength: " + view1.byteLength);
-// 执行结果为：
-// testTransfer view byteLength: 8
-// testTransfer view1 byteLength: 16
-
-let task: taskpool.Task = new taskpool.Task(testTransfer, view, view1);
-task.setTransferList([view.buffer, view1.buffer]);
-taskpool.execute(task).then((res: Object) => {
-  console.info("test result: " + res);
-}).catch((e: string) => {
-  console.error("test catch: " + e);
-})
-console.info("testTransfer view2 byteLength: " + view.byteLength);
-console.info("testTransfer view3 byteLength: " + view1.byteLength);
-// 经过transfer转移之后值为0，执行结果为：
-// testTransfer view2 byteLength: 0
-// testTransfer view3 byteLength: 0
-```
-
 ## arguments
 
 ```TypeScript
 arguments?: Object[]
 ```
 
-创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Object[]
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1031,15 +414,13 @@ arguments?: Object[]
 cpuDuration: number
 ```
 
-执行任务CPU耗时。单位：ms。不建议修改此值。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+执行任务CPU耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1051,13 +432,11 @@ cpuDuration: number
 function: Function
 ```
 
-待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰， 支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰， 支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Function
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1069,15 +448,13 @@ function: Function
 ioDuration: number
 ```
 
-执行任务异步IO耗时。单位：ms。不建议修改此值。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+执行任务异步IO耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1089,13 +466,11 @@ ioDuration: number
 name: string
 ```
 
-创建任务时指定的任务名称。不建议修改此值。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+创建任务时指定的任务名称。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1107,15 +482,13 @@ name: string
 taskId: number
 ```
 
-任务的ID。系统默认提供全局唯一值，不建议修改此值。<br> 从API version 18开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。从API version 18开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1127,15 +500,13 @@ taskId: number
 totalDuration: number
 ```
 
-执行任务总耗时。单位：ms。不建议修改此值。<br> 从API version 11开始，该接口支持在原子化服务中使用。
+执行任务总耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

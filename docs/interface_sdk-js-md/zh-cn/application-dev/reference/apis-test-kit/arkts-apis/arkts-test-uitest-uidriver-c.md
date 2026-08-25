@@ -7,8 +7,6 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [Driver](arkts-test-uitest-driver-c.md)
@@ -18,8 +16,8 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -35,8 +33,6 @@ assertComponentExist(by: By): Promise<void>
 > 代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -64,28 +60,6 @@ assertComponentExist(by: By): Promise<void>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 | [17000003](../errorcode-uitest.md#17000003-断言失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.assertComponentExist(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.assertComponentExist(BY.text('next page'));
-}
-```
-
 ## click
 
 ```TypeScript
@@ -98,8 +72,6 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -120,52 +92,6 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ON, Component } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.click();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.click(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.click(100, 100);
-}
-```
-
 ## create
 
 ```TypeScript
@@ -179,8 +105,6 @@ static create(): UiDriver
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-test-uitest-driver-c.md#create)
@@ -192,35 +116,6 @@ static create(): UiDriver
 | 类型 |
 | --- |
 | [UiDriver](arkts-test-uitest-uidriver-c.md) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { PointerMatrix } from '@kit.TestKit';
-
-async function demo() {
-  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-}
-```
 
 ## delayMs
 
@@ -234,8 +129,6 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -255,28 +148,6 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.delayMs(1000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.delayMs(1000);
-}
-```
-
 ## doubleClick
 
 ```TypeScript
@@ -289,8 +160,6 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -311,52 +180,6 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.doubleClick();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.doubleClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
 ## findComponent
 
 ```TypeScript
@@ -369,8 +192,6 @@ findComponent(by: By): Promise<UiComponent>
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -390,38 +211,6 @@ findComponent(by: By): Promise<UiComponent>
 | --- |
 | Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.text('next page'));
-}
-```
-
 ## findComponents
 
 ```TypeScript
@@ -434,8 +223,6 @@ findComponents(by: By): Promise<Array<UiComponent>>
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -455,38 +242,6 @@ findComponents(by: By): Promise<Array<UiComponent>>
 | --- |
 | Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let buttonList: Array<UiComponent> = await driver.findComponents(BY.text('next page'));
-}
-```
-
 ## longClick
 
 ```TypeScript
@@ -499,8 +254,6 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -521,52 +274,6 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.longClick();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.longClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.longClick(100, 100);
-}
-```
-
 ## pressBack
 
 ```TypeScript
@@ -580,8 +287,6 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [pressBack](arkts-test-uitest-driver-c.md#pressback)()
@@ -593,38 +298,6 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.pressBack();
-}
-```
 
 ## screenCap
 
@@ -638,8 +311,6 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -659,38 +330,6 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
 ## swipe
 
 ```TypeScript
@@ -703,8 +342,6 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[swipe&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#swipe)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -727,28 +364,6 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.swipe(100, 100, 200, 200, 600);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.swipe(100, 100, 200, 200);
-}
-```
-
 ## triggerKey
 
 ```TypeScript
@@ -761,8 +376,6 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -781,38 +394,3 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键
-}
-```

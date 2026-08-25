@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryToolSummaries
@@ -15,8 +15,6 @@ function queryToolSummaries(): Promise<Array<ToolSummary>>
 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.QUERY_CLI_TOOL
 

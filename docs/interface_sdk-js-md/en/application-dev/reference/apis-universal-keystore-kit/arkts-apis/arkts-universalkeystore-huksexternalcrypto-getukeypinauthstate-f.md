@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getUkeyPinAuthState
@@ -15,8 +15,6 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 Obtains the PIN authentication state. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -46,24 +44,3 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 | [12000020](../errorcode-huks.md#12000020-dependent-module-error) |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
-
-**Examples**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-function StringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-const testResourceId = "{\"providerName\":\"testProviderName\", \"bundleName\":\"com.example.cryptoapplication\", \"abilityName\":\"CryptoExtension\",\"index\":{\"key\":\"testKey\"}}";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-huksExternalCrypto.getUkeyPinAuthState(testResourceId, extProperties)
-    .then((data) => {
-      console.info(`promise: getUkeyPinAuthState success, data: ${data}`);
-    });
-```

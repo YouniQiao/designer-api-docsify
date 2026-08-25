@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfoById
@@ -15,8 +15,6 @@ function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.Runni
 Obtains the information of a specified widget that has been added to the home screen. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,22 +41,3 @@ Obtains the information of a specified widget that has been added to the home sc
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-
-**Examples**
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const formId: string = '388344236';
-
-try {
-  formProvider.getPublishedRunningFormInfoById(formId).then((data: formInfo.RunningFormInfo) => {
-    console.info(`formProvider getPublishedRunningFormInfoById, data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

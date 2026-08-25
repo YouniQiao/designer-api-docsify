@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## disconnectAgentExtensionAbility
@@ -15,8 +15,6 @@ function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>
 断开与指定proxy的[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md) 的连接。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.CONNECT_AGENT
 

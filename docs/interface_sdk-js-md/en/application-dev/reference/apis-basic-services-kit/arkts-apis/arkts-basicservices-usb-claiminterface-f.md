@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## claimInterface
@@ -15,8 +15,6 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 Claims a USB interface.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and USB interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -30,17 +28,10 @@ Claims a USB interface.Before you do this, call [usb.getDevices](arkts-basicserv
 | --- | --- | --- |
 | [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
 | iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes |
-| force | boolean | No |
+| [force](../../apis-arkui/arkts-components/arkts-arkui-historicalpoint-i.md) | boolean | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let ret = usb.claimInterface(devicepipe, interfaces);
-console.info(`claimInterface = ${ret}`);
-```

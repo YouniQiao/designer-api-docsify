@@ -1,10 +1,8 @@
 # FoldState (System API)
 
-Define the folding state of wallpaper@enum { int } FoldState
+Define the folding state of wallpaper@enum { number } FoldState
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -20,8 +18,6 @@ Indicates the device type is normal device.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Indicates the once unfold state.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ UNFOLD_TWICE_STATE = 2
 Indicates the secondary unfold state.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 

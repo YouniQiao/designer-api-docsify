@@ -4,14 +4,12 @@ Provides enhanced audio device management capabilities.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getSoundCardInfo
@@ -23,8 +21,6 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 Obtains the sound card information. This method uses a Promise to return the query result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

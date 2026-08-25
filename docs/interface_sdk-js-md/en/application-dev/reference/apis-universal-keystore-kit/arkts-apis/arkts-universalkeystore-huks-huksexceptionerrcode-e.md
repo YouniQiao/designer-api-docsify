@@ -4,8 +4,6 @@ Enumerates error codes and error details.For details about the error codes, see 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_ERR_CODE_PERMISSION_FAIL
@@ -17,8 +15,6 @@ HUKS_ERR_CODE_PERMISSION_FAIL = 201
 Permission verification failed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ The caller is not a system application and cannot call the system API.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_ERR_CODE_ILLEGAL_ARGUMENT
@@ -47,8 +41,6 @@ HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401
 Invalid parameters are detected. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,8 +56,6 @@ The API is not supported.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -79,8 +69,6 @@ HUKS_ERR_CODE_FEATURE_NOT_SUPPORTED = 12000001
 The feature is not supported.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,8 +84,6 @@ Key algorithm parameters are missing.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -111,8 +97,6 @@ HUKS_ERR_CODE_INVALID_CRYPTO_ALG_ARGUMENT = 12000003
 Invalid key algorithm parameters are detected.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,8 +112,6 @@ The file operation failed.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -143,8 +125,6 @@ HUKS_ERR_CODE_COMMUNICATION_FAIL = 12000005
 The communication failed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,8 +140,6 @@ Failed to operate the algorithm library.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -175,8 +153,6 @@ HUKS_ERR_CODE_KEY_AUTH_PERMANENTLY_INVALIDATED = 12000007
 Failed to access the key because the key has expired.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -192,8 +168,6 @@ Failed to access the key because the authentication has failed.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -207,8 +181,6 @@ HUKS_ERR_CODE_KEY_AUTH_TIME_OUT = 12000009
 Key access timed out.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -224,8 +196,6 @@ The number of key operation sessions has reached the limit.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -239,8 +209,6 @@ HUKS_ERR_CODE_ITEM_NOT_EXIST = 12000011
 The target object does not exist.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -256,8 +224,6 @@ An external error occurs.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -271,8 +237,6 @@ HUKS_ERR_CODE_CREDENTIAL_NOT_EXIST = 12000013
 The credential does not exist.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -288,8 +252,6 @@ The memory is insufficient.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -303,8 +265,6 @@ HUKS_ERR_CODE_CALL_SERVICE_FAILED = 12000015
 Failed to call other system services.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -320,8 +280,6 @@ The required lock screen password is not set.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -335,8 +293,6 @@ HUKS_ERR_CODE_KEY_ALREADY_EXIST = 12000017
 A key with the same name already exists.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -352,8 +308,6 @@ The argument is invalid.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -367,8 +321,6 @@ HUKS_ERR_CODE_ITEM_EXISTS = 12000019
 A provider with the same name has been registered.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -384,8 +336,6 @@ The external module on which this API depends returns an error.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -399,8 +349,6 @@ HUKS_ERR_CODE_PIN_LOCKED = 12000021
 The UKey PIN is locked.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -416,8 +364,6 @@ The UKey PIN is incorrect.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -431,8 +377,6 @@ HUKS_ERR_CODE_PIN_NO_AUTH = 12000023
 The UKey PIN is not authenticated.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -448,8 +392,6 @@ The device or resource is busy.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -463,8 +405,6 @@ HUKS_ERR_CODE_EXCEED_LIMIT = 12000025
 The resource limit is exceeded.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -480,8 +420,6 @@ The secure element is faulty.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -495,8 +433,6 @@ HUKS_ERR_CODE_NETWORK_UNAVAILABLE = 12000027
 The network is unavailable.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

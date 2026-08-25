@@ -10,8 +10,6 @@ Specifies whether data roaming is enabled.<p>If the value is {@code true}, data 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -26,8 +24,6 @@ Indicates the host name and port number of the global HTTP proxy. The host name 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -41,8 +37,6 @@ const NETWORK_PREFERENCE_USAGE: string
 Indicates the user preferences of the network to use.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 

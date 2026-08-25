@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType
@@ -28,8 +26,6 @@ eventType: EventType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ eventType: EventType
 ## hookId
 
 ```TypeScript
-hookId?: long
+hookId?: number
 ```
 
 控制事件对应的hook ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -55,16 +49,14 @@ hookId?: long
 ## sessionId
 
 ```TypeScript
-sessionId: long
+sessionId: number
 ```
 
 控制事件要操作的session ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -73,16 +65,14 @@ sessionId: long
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 控制事件要操作的窗口的window ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

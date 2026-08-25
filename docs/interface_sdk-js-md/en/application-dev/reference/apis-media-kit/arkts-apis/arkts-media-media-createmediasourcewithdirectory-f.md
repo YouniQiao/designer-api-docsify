@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createMediaSourceWithDirectory
@@ -15,8 +15,6 @@ function createMediaSourceWithDirectory(path: string): Promise< MediaSource | un
 Create a MediaSource object from the given directory.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

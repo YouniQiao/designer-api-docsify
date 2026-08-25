@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## sendSystemControlCommand
@@ -15,8 +15,6 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 发送控制命令给置顶会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -42,52 +40,6 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
 
-**示例**
-
-```TypeScript
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd: avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand, () => {
-    console.info('Succeeded in sending system control command.');
-});
-```
-
-```TypeScript
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd : avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand).then(() => {
-  console.info('Succeeded in sending system control command.');
-});
-```
-
 
 ## sendSystemControlCommand
 
@@ -98,8 +50,6 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 发送控制命令给置顶会话。结果通过Promise异步回调方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -129,7 +79,3 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
-
-**示例**
-
-参见 [sendSystemControlCommand](#sendsystemcontrolcommand)

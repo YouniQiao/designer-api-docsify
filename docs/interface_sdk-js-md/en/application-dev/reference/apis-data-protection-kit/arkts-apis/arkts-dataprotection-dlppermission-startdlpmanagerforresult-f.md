@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## startDLPManagerForResult
@@ -18,8 +18,6 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 > This API can be called only by domain accounts.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,27 +46,3 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 | [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) |
 | [19100017](../errorcode-dlp.md#19100017-displayname-missing-in-parameters-of-want) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { common, Want } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-try {
-  let context = new UIContext().getHostContext() as common.UIAbilityContext; // Obtain the current UIAbilityContext.
-  let want: Want = {
-    "uri": "file://docs/storage/Users/currentUser/Desktop/1.txt",
-    "parameters": {
-      "displayName": "1.txt"
-    }
-  }; // Request parameters.
-  dlpPermission.startDLPManagerForResult(context, want).then((res) => {
-    console.info('res.resultCode', res.resultCode);
-    console.info('res.want', JSON.stringify(res.want));
-  }); // Start the DLP manager application.
-} catch (err) {
-  console.error('error', err.code, err.message); // Throw an error if the operation fails.
-}
-```

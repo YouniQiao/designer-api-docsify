@@ -1,7 +1,5 @@
 # ObjectConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ entries<T>(o: { [s: string]: T } | ArrayLike<T>): [string, T][]
 ```
 
 Returns an array of key/values of the enumerable properties of an object
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ entries(o: {}): [string, any][]
 
 Returns an array of key/values of the enumerable properties of an object
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ getOwnPropertyDescriptors<T>(o: T): {[P in keyof T]: TypedPropertyDescriptor<T[P
 ```
 
 Returns an object containing all own property descriptors of an object
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -75,8 +67,6 @@ values<T>(o: { [s: string]: T } | ArrayLike<T>): T[]
 
 Returns an array of values of the enumerable properties of an object
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -94,8 +84,6 @@ values(o: {}): any[]
 ```
 
 Returns an array of values of the enumerable properties of an object
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -15,8 +15,6 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 发送星闪广播。使用Promise异步回调。适用于设备发现、设备信息广播等需要将本端设备能力或数据对外发布的业务场景，配合 [advertising.onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)可监听广播启停状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

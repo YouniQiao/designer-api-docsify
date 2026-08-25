@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -36,8 +34,6 @@ columnWidths?: LengthMetrics[]
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -62,8 +58,6 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 **类型：** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -92,8 +86,6 @@ selected?: number | number[]
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -110,18 +102,16 @@ value?: ResourceStr | ResourceStr[]
 > 1. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 2. 从API version 20开始，支持Resource类型。
 > 3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
-> 4. 单列数据选择器使用ResourceStr类型。
-> 5. 多列非联动数据选择器使用ResourceStr[]类型，数组长度与列数一致。
-> 6. 多列联动数据选择器使用ResourceStr[]类型，数组长度与层级数一致。
+> 4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型。
+> 5. 多列非联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]类型，数组长度与列数一致。
+> 6. 多列联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]类型，数组长度与层级数一致。
 > 7. 当selected和value均未设置，或selected值无效时，使用默认值。
 
-**类型：** ResourceStr \| ResourceStr[]
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
 **默认值：** value of the first item [since 8 - 9]
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

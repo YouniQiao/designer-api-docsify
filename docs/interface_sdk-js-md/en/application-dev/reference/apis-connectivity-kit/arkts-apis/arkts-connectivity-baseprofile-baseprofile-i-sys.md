@@ -4,14 +4,12 @@ Base interface of profile.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from '@kit.ConnectivityKit';
+import { baseProfile } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getConnectionStrategy
@@ -23,8 +21,6 @@ getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrate
 Get connection strategy of this profile.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -54,36 +50,6 @@ Get connection strategy of this profile.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX', (err: BusinessError, data: baseProfile.ConnectionStrategy) => {
-        console.info('getConnectionStrategy, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX').then((data: baseProfile.ConnectionStrategy) => {
-        console.info('getConnectionStrategy');
-    }, (err: BusinessError) => {
-        console.error('getConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getConnectionStrategy
 
 ```TypeScript
@@ -93,8 +59,6 @@ getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>
 Get connection strategy of this profile.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -129,10 +93,6 @@ Get connection strategy of this profile.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-See [getConnectionStrategy](#getconnectionstrategy)
-
 ## setConnectionStrategy
 
 ```TypeScript
@@ -142,8 +102,6 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<v
 Set connection strategy of this profile.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -179,36 +137,6 @@ Set connection strategy of this profile.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 0, (err: BusinessError) => {
-        console.info('setConnectionStrategy, err: ' + JSON.stringify(err));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 1).then(() => {
-        console.info('setConnectionStrategy');
-    }, (err: BusinessError) => {
-        console.error('setConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## setConnectionStrategy
 
 ```TypeScript
@@ -218,8 +146,6 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: 
 Set connection strategy of this profile.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -249,7 +175,3 @@ Set connection strategy of this profile.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-See [setConnectionStrategy](#setconnectionstrategy)

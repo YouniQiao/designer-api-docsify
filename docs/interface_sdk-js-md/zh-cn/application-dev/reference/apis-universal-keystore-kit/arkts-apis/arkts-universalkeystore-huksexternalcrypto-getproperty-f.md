@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getProperty
@@ -13,11 +13,12 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 ```
 
 调用此接口获取属性值并返回结果。使用Promise异步回调。propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义的SKF接口名作为属性ID，支持的ID包括如下：  
-- SKF_EnumDev - SKF_GetDevInfo - SKF_EnumApplication - SKF_EnumContainer
+- SKF_EnumDev  
+- SKF_GetDevInfo  
+- SKF_EnumApplication  
+- SKF_EnumContainer
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,34 +53,3 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) |
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-let propertyId = "SKF_EnumDev";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-
-console.info('promise: await huksExternalCrypto getProperty.');
-async function testFunction() : Promise<void>
-{
-  try {
-    await huksExternalCrypto.getProperty(testResourceId, propertyId, extProperties)
-      .then((data) => {
-        console.info(`promise: getProperty success, data: ` + JSON.stringify(data));
-      });
-  } catch (error) {
-    console.error(`promise: getProperty failed, errCode : ${error.code}, errMsg : ${error.message}`);
-  }
-}
-```

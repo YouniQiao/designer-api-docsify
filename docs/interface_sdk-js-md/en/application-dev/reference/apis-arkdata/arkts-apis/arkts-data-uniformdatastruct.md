@@ -4,8 +4,6 @@ As a part of the Unified Data Management Framework (UDMF), the **uniformDataStru
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -13,7 +11,7 @@ As a part of the Unified Data Management Framework (UDMF), the **uniformDataStru
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

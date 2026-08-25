@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## remove
@@ -15,8 +15,6 @@ function remove(id: string, callback: AsyncCallback<void>): void
 Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,46 +35,6 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900006](../errorcode-request.md#21900006-task-not-found) |
 
-**Examples**
-
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-uploadTask.remove((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in removing the upload task.');
-  }
-});
-```
-
-```TypeScript
-downloadTask.remove().then((result) => {
-  console.info('Succeeded in removing the download task.');
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-downloadTask.remove((err, result)=>{
-  if(err) {
-    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing the download task.');
-});
-```
-
 
 ## remove
 
@@ -87,8 +45,6 @@ function remove(id: string): Promise<void>
 Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -113,7 +69,3 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900006](../errorcode-request.md#21900006-task-not-found) |
-
-**Examples**
-
-See [remove](#remove)

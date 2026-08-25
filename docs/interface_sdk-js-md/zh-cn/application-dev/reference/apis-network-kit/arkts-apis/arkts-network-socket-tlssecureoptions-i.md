@@ -4,14 +4,12 @@ TLS安全相关操作。当本地证书cert和私钥key不为空时，开启双�
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## ca
@@ -25,8 +23,6 @@ ca?: string | Array<string>
 **类型：** string \| Array&lt;string&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ cert?: string | Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## cipherSuite
@@ -57,8 +51,6 @@ cipherSuite?: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -74,8 +66,6 @@ isBidirectionalAuthentication?: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## key
@@ -89,8 +79,6 @@ key?: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -106,8 +94,6 @@ password?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## protocols
@@ -121,8 +107,6 @@ TLS的协议版本，默认为"TLSv1.2"。
 **类型：** Protocol \| Array&lt;Protocol&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -138,8 +122,6 @@ signatureAlgorithms?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## useRemoteCipherPrefer
@@ -153,7 +135,5 @@ useRemoteCipherPrefer?: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack

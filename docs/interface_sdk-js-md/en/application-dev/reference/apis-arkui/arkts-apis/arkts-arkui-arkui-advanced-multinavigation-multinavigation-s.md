@@ -13,31 +13,13 @@
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build multiNavigation.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## navDestination
 
@@ -48,8 +30,6 @@ navDestination: NavDestinationBuildFunction
 Routing rules for loading the target page.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +47,6 @@ Callback invoked when the home page is on the top of the navigation stack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -84,8 +62,6 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 Callback invoked when the mode of the **MultiNavigation** component changes.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,28 +81,8 @@ Navigation stack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## navDestination
-
-```TypeScript
-navDestination: PageMapBuilder | undefined
-```
-
-build function of NavDestination.
-
-**Type:** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

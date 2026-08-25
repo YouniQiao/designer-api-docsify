@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listUserdataDirInfo
@@ -15,8 +15,6 @@ function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 Queries the space usage of the **\/data** directory on the user device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -40,16 +38,3 @@ Queries the space usage of the **\/data** directory on the user device. This API
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13600015 |
-
-**Examples**
-
-```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.listUserdataDirInfo().then((dirInfos: storageStatistics.UserdataDirInfo[]) => {
-  console.info("listUserdataDirInfo successfully.");
-}).catch((err: BusinessError) => {
-  console.error(`listUserdataDirInfo failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

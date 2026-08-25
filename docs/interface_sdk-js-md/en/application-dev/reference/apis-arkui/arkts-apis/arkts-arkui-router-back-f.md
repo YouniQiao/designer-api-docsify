@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## back
@@ -22,8 +22,6 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
@@ -37,20 +35,6 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | No |
-
-**Examples**
-
-```TypeScript
-this.getUIContext().getRouter().back({ url: 'pages/detail' });
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning with parameters.
-```
 
 
 ## back
@@ -69,8 +53,6 @@ Returns to the specified page, which deletes all pages between the current page 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 18
 
 **Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
@@ -87,7 +69,3 @@ Returns to the specified page, which deletes all pages between the current page 
 | --- | --- | --- |
 | index | number | Yes |
 | params | Object | No |
-
-**Examples**
-
-See [back](#back)

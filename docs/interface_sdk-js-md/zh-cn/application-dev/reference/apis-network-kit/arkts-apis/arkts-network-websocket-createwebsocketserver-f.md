@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## createWebSocketServer
@@ -19,8 +19,6 @@ function createWebSocketServer(): WebSocketServer
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -28,9 +26,3 @@ function createWebSocketServer(): WebSocketServer
 | 类型 |
 | --- |
 | [WebSocketServer](arkts-network-websocket-websocketserver-i.md) |
-
-**示例**
-
-```TypeScript
-let ws: webSocket.WebSocketServer = webSocket.createWebSocketServer();
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeFreezeExemptedApps
@@ -15,8 +15,6 @@ function removeFreezeExemptedApps(admin: Want, applicationInstances: Array<commo
 为指定用户删除后台防冻结应用名单。删除后，应用可以被系统冻结。执行删除策略时，若参数列表中包含未安装应用，删除操作仍能成功执行；已安装的应用将被删除，未安装的应用不影响删除操作。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -39,32 +37,3 @@ function removeFreezeExemptedApps(admin: Want, applicationInstances: Array<commo
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let applicationInstances: Array<common.ApplicationInstance> = [
-  // 需根据实际情况进行替换
-  {
-    appIdentifier: '0123456789123456789',
-    accountId: 100,
-    appIndex: 0
-  }
-];
-
-try {
-  applicationManager.removeFreezeExemptedApps(wantTemp, applicationInstances);
-  console.info('Succeeded in removing FreezeExempted applications.');
-} catch (err) {
-  console.error(`Failed to remove FreezeExempted applications. Code: ${err.code}, message: ${err.message}`);
-}
-```

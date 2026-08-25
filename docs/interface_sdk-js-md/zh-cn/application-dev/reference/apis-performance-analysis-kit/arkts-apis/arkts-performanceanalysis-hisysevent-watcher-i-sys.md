@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onEvent
@@ -25,8 +23,6 @@ onEvent: (info: SysEventInfo) => void
 订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) =&gt; void。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -48,8 +44,6 @@ onServiceDied: () => void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -65,8 +59,6 @@ rules: WatchRule[]
 **类型：** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

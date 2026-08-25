@@ -13,31 +13,13 @@ The **SubHeader** component is positioned at the top of list items or content se
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleBuilder
 
@@ -48,8 +30,6 @@ titleBuilder?: () => void
 Content of the custom title area.Default value: **undefined**, indicating that no custom title is used.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +45,12 @@ contentMargin?: LocalizedMargin
 
 Margin of the content. Negative numbers are not supported.Default value:`{start: LengthMetrics.resource(``\$r('sys.float.margin_left'))`,`end: LengthMetrics.resource(``\$r('sys.float.margin_right'))}`
 
-**Type:** LocalizedMargin
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
+ end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,13 +66,13 @@ contentPadding?: LocalizedPadding
 
 Padding of the content.Default value:If a secondary title, with or without an icon, is displayed on the left:{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
 
-**Type:** LocalizedPadding
+**Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
-**Default:** set different default values according to the width of the subHeader: <br> When the left area is secondaryTitle or the group of secondaryTitle and icon, <br> the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
+**Default:** set different default values according to the width of the subHeader: 
+ When the left area is secondaryTitle or the group of secondaryTitle and icon, 
+ the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,11 +88,9 @@ icon?: ResourceStr
 
 Icon.Default value: **undefined**, indicating that no icon is displayed.The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,8 +110,6 @@ Icon symbol options. This parameter is available when **icon** is set to a symbo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -152,8 +127,6 @@ Items in the operation area (right).Default value: **undefined**, indicating tha
 **Type:** Array&lt;[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,8 +146,6 @@ Icon symbol options.This parameter is available when **operationType** is set to
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -193,8 +164,6 @@ Style of elements in the operation area (right).Default value: **OperationType.B
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -209,11 +178,9 @@ primaryTitle?: ResourceStr
 
 Primary title.Default value: **undefined**, indicating that no primary title is displayed.When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,8 +200,6 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -249,11 +214,9 @@ secondaryTitle?: ResourceStr
 
 Secondary title.Default value: **undefined**, indicating that no secondary title is displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,8 +236,6 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -293,8 +254,6 @@ Content and events for selection.Default value: **undefined**, indicating that n
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -309,11 +268,9 @@ titleAccessibilityText?: ResourceStr
 
 Customized content to be read in the title.Default value: **undefined**.If the value is **undefined**, the title content displayed by the component is read by default.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +289,6 @@ Set the titleId for title.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

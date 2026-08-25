@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## height
@@ -20,13 +18,11 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 height?: number | string
 ```
 
-形状的高度。类型为number时取值范围是0, +∞)，string时是[Length。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
+形状的高度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
 
 **类型：** number \| string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,13 +38,11 @@ height?: number | string
 width?: number | string
 ```
 
-形状的宽度。类型为number时取值范围是0, +∞)，string时是[Length。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
+形状的宽度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
 
 **类型：** number \| string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

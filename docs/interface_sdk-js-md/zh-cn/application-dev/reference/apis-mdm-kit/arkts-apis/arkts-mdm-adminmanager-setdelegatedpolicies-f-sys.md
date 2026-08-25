@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDelegatedPolicies
@@ -15,8 +15,6 @@ function setDelegatedPolicies(bundleName: string, accountId: number, policies: A
 委托其他应用来设置设备的管控策略。被委托的其他应用需申请委托策略对应接口所需权限。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -41,43 +39,3 @@ function setDelegatedPolicies(bundleName: string, accountId: number, policies: A
 | [9200009](../errorcode-enterpriseDeviceManager.md#9200009-授予应用权限失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let policies: Array<string> = ["disabled_hdc"];
-
-try {
-  // 参数需根据实际情况进行替换
-  adminManager.setDelegatedPolicies(admin, "com.example.enterprise.xxx", policies);
-  console.info('Succeeded in setting delegated policies.');
-} catch (err) {
-  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-
-// 需根据实际情况进行替换
-let bundleName = 'com.example.myapplication';
-let userId = 100;
-let policies: Array<string> = ["disabled_hdc"];
-
-try {
-  adminManager.setDelegatedPolicies(bundleName, userId, policies);
-  console.info(`Succeeded in setting delegated policies.`);
-} catch (err) {
-  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```

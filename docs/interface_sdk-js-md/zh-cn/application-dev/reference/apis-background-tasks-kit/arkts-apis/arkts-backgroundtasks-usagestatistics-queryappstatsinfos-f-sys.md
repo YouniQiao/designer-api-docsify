@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppStatsInfos
 
 ```TypeScript
-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>
+function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 ```
 
 通过指定起始和结束时间，查询应用使用时长的具体信息（包含分身应用），统计的最小颗粒度是天。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,8 +26,8 @@ function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| begin | number | 是 |
+| end | number | 是 |
 
 **返回值：**
 
@@ -51,17 +49,3 @@ function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryAppStatsInfos(0, 20000000000000).then((res:usageStatistics.AppStatsMap) => {
-  console.info('queryAppStatsInfos promise success.');
-  console.info('queryAppStatsInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('queryAppStatsInfos promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```

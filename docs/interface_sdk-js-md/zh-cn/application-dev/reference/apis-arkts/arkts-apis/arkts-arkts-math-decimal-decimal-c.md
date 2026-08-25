@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## abs
@@ -23,8 +21,6 @@ abs(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的绝对值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,8 +42,6 @@ static abs(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -56,7 +50,7 @@ static abs(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -79,8 +73,6 @@ acos(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的反余弦值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -108,8 +100,6 @@ static acos(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -118,7 +108,7 @@ static acos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -142,8 +132,6 @@ acosh(): Decimal
 返回一个新的Decimal对象，其值是此Decimal值的双曲余弦的倒数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -171,8 +159,6 @@ static acosh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -181,7 +167,7 @@ static acosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -206,8 +192,6 @@ add(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -216,7 +200,7 @@ add(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -240,8 +224,6 @@ static add(x: Value, y: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -250,8 +232,8 @@ static add(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -274,8 +256,6 @@ asin(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的反正弦值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -303,8 +283,6 @@ static asin(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -313,7 +291,7 @@ static asin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -337,8 +315,6 @@ asinh(): Decimal
 返回一个新的Decimal对象，其值是此Decimal值的双曲正弦的倒数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -366,8 +342,6 @@ static asinh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -376,7 +350,7 @@ static asinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -400,8 +374,6 @@ atan(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的反正切值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -429,8 +401,6 @@ static atan(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -439,7 +409,7 @@ static atan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -464,8 +434,6 @@ static atan2(y: Value, x: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -474,8 +442,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -499,8 +467,6 @@ atanh(): Decimal
 返回一个新的Decimal对象，其值是此Decimal值的双曲正切的倒数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -528,8 +494,6 @@ static atanh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -538,7 +502,7 @@ static atanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -563,8 +527,6 @@ cbrt(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -585,8 +547,6 @@ static cbrt(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -595,7 +555,7 @@ static cbrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -619,8 +579,6 @@ ceil(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -641,8 +599,6 @@ static ceil(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -651,7 +607,7 @@ static ceil(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -675,8 +631,6 @@ clamp(min: Value, max: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -685,8 +639,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -711,8 +665,6 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -721,9 +673,9 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -740,21 +692,13 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 ## comparedTo
 
-ArkTS-Dyn:
 ```TypeScript
 comparedTo(n: Value): number
-```
-
-ArkTS-Sta:
-```TypeScript
-comparedTo(n: Value): double
 ```
 
 返回该Decimal与比较值的比较结果。 1 如果此Decimal大于n的值， -1 如果此Decimal小于n的值， 0 如果两者的值相等， NaN 如果两者中任一Decimal的值为NaN。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -764,13 +708,13 @@ comparedTo(n: Value): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -788,8 +732,6 @@ Decimal的构造函数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -798,7 +740,7 @@ Decimal的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **错误码：**
 
@@ -815,8 +757,6 @@ cos(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的余弦值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -838,8 +778,6 @@ static cos(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -848,7 +786,7 @@ static cos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -872,8 +810,6 @@ cosh(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -894,8 +830,6 @@ static cosh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -904,7 +838,7 @@ static cosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -920,21 +854,13 @@ static cosh(n: Value): Decimal
 
 ## decimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 decimalPlaces(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-decimalPlaces(): double
 ```
 
 返回Decimal对象的小数位数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -944,7 +870,7 @@ decimalPlaces(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## div
 
@@ -956,8 +882,6 @@ div(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -966,7 +890,7 @@ div(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -990,8 +914,6 @@ static div(x: Value, y: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1000,8 +922,8 @@ static div(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1025,8 +947,6 @@ dividedToIntegerBy(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1035,7 +955,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1059,8 +979,6 @@ equals(n: Value): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1069,7 +987,7 @@ equals(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1092,8 +1010,6 @@ exp(): Decimal
 返回一个新的Decimal对象，其值是此Decimal值的自然指数（即以e为底，此Decimal值为指数的幂）。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1121,8 +1037,6 @@ static exp(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1131,7 +1045,7 @@ static exp(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1156,8 +1070,6 @@ floor(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1178,8 +1090,6 @@ static floor(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1188,7 +1098,7 @@ static floor(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1212,8 +1122,6 @@ greaterThan(n: Value): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1222,7 +1130,7 @@ greaterThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1246,8 +1154,6 @@ greaterThanOrEqualTo(n: Value): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1256,7 +1162,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1280,8 +1186,6 @@ static hypot(...n: Value[]): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1290,7 +1194,7 @@ static hypot(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1314,8 +1218,6 @@ isFinite(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1335,8 +1237,6 @@ isInteger(): boolean
 返回此Decimal是否为整数，是整数返回true，否则返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1358,8 +1258,6 @@ isNaN(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1379,8 +1277,6 @@ isNegative(): boolean
 返回此Decimal是否为负数（区分正负零），是负数返回true，否则返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1402,8 +1298,6 @@ isPositive(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1423,8 +1317,6 @@ isZero(): boolean
 返回此Decimal是否为0或是-0，是返回true，否则返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1446,8 +1338,6 @@ lessThan(n: Value): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1456,7 +1346,7 @@ lessThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1480,8 +1370,6 @@ lessThanOrEqualTo(n: Value): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1490,7 +1378,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1513,8 +1401,6 @@ ln(): Decimal
 返回一个新的Decimal对象，其值是此Decimal值的自然对数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1542,8 +1428,6 @@ static ln(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1552,7 +1436,7 @@ static ln(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1577,8 +1461,6 @@ log(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1587,7 +1469,7 @@ log(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1612,8 +1494,6 @@ static log(n: Value, base: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1622,8 +1502,8 @@ static log(n: Value, base: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1648,8 +1528,6 @@ static log10(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1658,7 +1536,7 @@ static log10(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1683,8 +1561,6 @@ static log2(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1693,7 +1569,7 @@ static log2(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1718,8 +1594,6 @@ static max(...n: Value[]): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1728,7 +1602,7 @@ static max(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1752,8 +1626,6 @@ static min(...n: Value[]): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1762,7 +1634,7 @@ static min(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1786,8 +1658,6 @@ mod(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1796,7 +1666,7 @@ mod(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1820,8 +1690,6 @@ static mod(x: Value, y: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1830,8 +1698,8 @@ static mod(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1855,8 +1723,6 @@ mul(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1865,7 +1731,7 @@ mul(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1889,8 +1755,6 @@ static mul(x: Value, y: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1899,8 +1763,8 @@ static mul(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1924,8 +1788,6 @@ negate(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1946,8 +1808,6 @@ pow(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1956,7 +1816,7 @@ pow(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -1981,8 +1841,6 @@ static pow(base: Value, exponent: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1991,8 +1849,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| exponent | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| exponent | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2009,21 +1867,13 @@ static pow(base: Value, exponent: Value): Decimal
 
 ## precision
 
-ArkTS-Dyn:
 ```TypeScript
 precision(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-precision(): double
 ```
 
 返回Decimal对象的有效数字位数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2033,25 +1883,17 @@ precision(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## precision
 
-ArkTS-Dyn:
 ```TypeScript
 precision(includeZeros: boolean | number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-precision(includeZeros: boolean | int): double
 ```
 
 返回Decimal对象的有效数字位数，可通过includeZeros判断是否计算整数部分的尾随零。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2061,13 +1903,13 @@ precision(includeZeros: boolean | int): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| includeZeros | ArkTS-Dyn: boolean \| number<br>ArkTS-Sta：boolean \ | int | 是 |
+| includeZeros | boolean \| number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -2084,8 +1926,6 @@ static random(): Decimal
 返回一个新的Decimal对象，其值为大于等于0且小于1的随机值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2105,21 +1945,13 @@ static random(): Decimal
 
 ## random
 
-ArkTS-Dyn:
 ```TypeScript
 static random(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-static random(significantDigits: double): Decimal
 ```
 
 返回一个新的Decimal对象，其值为大于等于0且小于1的随机值，并保留significantDigits位有效数字（若产生尾随零则可能少于该位数）。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2129,7 +1961,7 @@ static random(significantDigits: double): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 
 **返回值：**
 
@@ -2154,8 +1986,6 @@ static round(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2164,7 +1994,7 @@ static round(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2188,8 +2018,6 @@ static set(config: DecimalConfig): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2210,21 +2038,13 @@ static set(config: DecimalConfig): void
 
 ## sign
 
-ArkTS-Dyn:
 ```TypeScript
 static sign(n: Value): number
-```
-
-ArkTS-Sta:
-```TypeScript
-static sign(n: Value): double
 ```
 
 根据参数n的值返回对应的符号： 1 如果 n &gt; 0， -1 如果 n &lt; 0， 0 如果 n 为 0， NaN 其他情况
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2234,14 +2054,14 @@ static sign(n: Value): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -2258,8 +2078,6 @@ sin(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的正弦值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2281,8 +2099,6 @@ static sin(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2291,7 +2107,7 @@ static sin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2315,8 +2131,6 @@ sinh(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2337,8 +2151,6 @@ static sinh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2347,7 +2159,7 @@ static sinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2371,8 +2183,6 @@ sqrt(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2393,8 +2203,6 @@ static sqrt(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2403,7 +2211,7 @@ static sqrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2427,8 +2235,6 @@ sub(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2437,7 +2243,7 @@ sub(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2461,8 +2267,6 @@ static sub(x: Value, y: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2471,8 +2275,8 @@ static sub(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2496,8 +2300,6 @@ static sum(...n: Value[]): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2506,7 +2308,7 @@ static sum(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2530,8 +2332,6 @@ tan(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2552,8 +2352,6 @@ static tan(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2562,7 +2360,7 @@ static tan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2586,8 +2384,6 @@ tanh(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2608,8 +2404,6 @@ static tanh(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2618,7 +2412,7 @@ static tanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -2642,8 +2436,6 @@ toBinary(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2656,21 +2448,13 @@ toBinary(): string
 
 ## toBinary
 
-ArkTS-Dyn:
 ```TypeScript
 toBinary(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toBinary(significantDigits: double): string
 ```
 
 将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2680,7 +2464,7 @@ toBinary(significantDigits: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 
 **返回值：**
 
@@ -2696,21 +2480,13 @@ toBinary(significantDigits: double): string
 
 ## toBinary
 
-ArkTS-Dyn:
 ```TypeScript
 toBinary(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toBinary(significantDigits: double, rounding: Rounding): string
 ```
 
 将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2720,7 +2496,7 @@ toBinary(significantDigits: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -2745,8 +2521,6 @@ toDecimalPlaces(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2759,21 +2533,13 @@ toDecimalPlaces(): Decimal
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toDecimalPlaces(decimalPlaces: double): Decimal
 ```
 
 返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2783,7 +2549,7 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -2799,21 +2565,13 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 ```
 
 返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2823,7 +2581,7 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -2848,8 +2606,6 @@ toExponential(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2862,21 +2618,13 @@ toExponential(): string
 
 ## toExponential
 
-ArkTS-Dyn:
 ```TypeScript
 toExponential(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toExponential(decimalPlaces: double): string
 ```
 
 将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2886,7 +2634,7 @@ toExponential(decimalPlaces: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -2902,21 +2650,13 @@ toExponential(decimalPlaces: double): string
 
 ## toExponential
 
-ArkTS-Dyn:
 ```TypeScript
 toExponential(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toExponential(decimalPlaces: double, rounding: Rounding): string
 ```
 
 将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2926,7 +2666,7 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -2951,8 +2691,6 @@ toFixed(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2965,21 +2703,13 @@ toFixed(): string
 
 ## toFixed
 
-ArkTS-Dyn:
 ```TypeScript
 toFixed(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toFixed(decimalPlaces: double): string
 ```
 
 将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2989,7 +2719,7 @@ toFixed(decimalPlaces: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -3005,21 +2735,13 @@ toFixed(decimalPlaces: double): string
 
 ## toFixed
 
-ArkTS-Dyn:
 ```TypeScript
 toFixed(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toFixed(decimalPlaces: double, rounding: Rounding): string
 ```
 
 将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3029,7 +2751,7 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3054,8 +2776,6 @@ toFraction(): Decimal[]
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3076,8 +2796,6 @@ toFraction(maxDenominator: Value): Decimal[]
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3086,7 +2804,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -3110,8 +2828,6 @@ toHexadecimal(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3124,21 +2840,13 @@ toHexadecimal(): string
 
 ## toHexadecimal
 
-ArkTS-Dyn:
 ```TypeScript
 toHexadecimal(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toHexadecimal(significantDigits: double): string
 ```
 
 将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3148,7 +2856,7 @@ toHexadecimal(significantDigits: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 
 **返回值：**
 
@@ -3164,21 +2872,13 @@ toHexadecimal(significantDigits: double): string
 
 ## toHexadecimal
 
-ArkTS-Dyn:
 ```TypeScript
 toHexadecimal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toHexadecimal(significantDigits: double, rounding: Rounding): string
 ```
 
 将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3188,7 +2888,7 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3213,8 +2913,6 @@ toNearest(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3223,7 +2921,7 @@ toNearest(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -3247,8 +2945,6 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3257,7 +2953,7 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3275,21 +2971,13 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 ## toNumber
 
-ArkTS-Dyn:
 ```TypeScript
 toNumber(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-toNumber(): double
 ```
 
 将值转换为number类型。零保留其符号。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3299,7 +2987,7 @@ toNumber(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## toOctal
 
@@ -3310,8 +2998,6 @@ toOctal(): string
 将Decimal转换为八进制表示的字符串。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3325,21 +3011,13 @@ toOctal(): string
 
 ## toOctal
 
-ArkTS-Dyn:
 ```TypeScript
 toOctal(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toOctal(significantDigits: double): string
 ```
 
 将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3349,7 +3027,7 @@ toOctal(significantDigits: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 | {double \| string \|
+| significantDigits | number | 是 | {number \| string \|
 
 **返回值：**
 
@@ -3365,21 +3043,13 @@ toOctal(significantDigits: double): string
 
 ## toOctal
 
-ArkTS-Dyn:
 ```TypeScript
 toOctal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toOctal(significantDigits: double, rounding: Rounding): string
 ```
 
 将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3389,7 +3059,7 @@ toOctal(significantDigits: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 | {double \| string \|
+| significantDigits | number | 是 | {number \| string \|
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3414,8 +3084,6 @@ toPrecision(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3428,21 +3096,13 @@ toPrecision(): string
 
 ## toPrecision
 
-ArkTS-Dyn:
 ```TypeScript
 toPrecision(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toPrecision(significantDigits: double): string
 ```
 
 将数值转换为字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3452,7 +3112,7 @@ toPrecision(significantDigits: double): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 
 **返回值：**
 
@@ -3468,21 +3128,13 @@ toPrecision(significantDigits: double): string
 
 ## toPrecision
 
-ArkTS-Dyn:
 ```TypeScript
 toPrecision(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toPrecision(significantDigits: double, rounding: Rounding): string
 ```
 
 将数值转换为字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3492,7 +3144,7 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3517,8 +3169,6 @@ toSignificantDigits(): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3531,21 +3181,13 @@ toSignificantDigits(): Decimal
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
 ```TypeScript
 toSignificantDigits(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toSignificantDigits(significantDigits: double): Decimal
 ```
 
 返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3555,7 +3197,7 @@ toSignificantDigits(significantDigits: double): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 
 **返回值：**
 
@@ -3571,21 +3213,13 @@ toSignificantDigits(significantDigits: double): Decimal
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
 ```TypeScript
 toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 ```
 
 返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3595,7 +3229,7 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| significantDigits | number | 是 |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
@@ -3620,8 +3254,6 @@ toString(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3641,8 +3273,6 @@ trunc(): Decimal
 返回一个新的Decimal对象，其值是将参数n截断为整数部分。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3664,8 +3294,6 @@ static trunc(n: Value): Decimal
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3674,7 +3302,7 @@ static trunc(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {number \| string \|
 
 **返回值：**
 
@@ -3698,8 +3326,6 @@ valueOf(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3722,8 +3348,6 @@ digits：表示Decimal数整数部分和小数部分的数组。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3731,16 +3355,14 @@ digits：表示Decimal数整数部分和小数部分的数组。
 ## e
 
 ```TypeScript
-get e(): double
+get e(): number
 ```
 
 exponent：表示Decimal数的十进制指数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3758,8 +3380,6 @@ static readonly EUCLIDEAN : 9
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3775,8 +3395,6 @@ static readonly ROUND_CEILING : 2
 **类型：** 2
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3794,8 +3412,6 @@ static readonly ROUND_DOWN : 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3811,8 +3427,6 @@ static readonly ROUND_FLOOR : 3
 **类型：** 3
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3830,8 +3444,6 @@ static readonly ROUND_HALF_CEILING : 7
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3847,8 +3459,6 @@ static readonly ROUND_HALF_DOWN : 5
 **类型：** 5
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3866,8 +3476,6 @@ static readonly ROUND_HALF_EVEN : 6
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3883,8 +3491,6 @@ static readonly ROUND_HALF_FLOOR : 8
 **类型：** 8
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3902,8 +3508,6 @@ static readonly ROUND_HALF_UP : 4
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3920,8 +3524,6 @@ static readonly ROUND_UP : 0
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -3929,16 +3531,14 @@ static readonly ROUND_UP : 0
 ## s
 
 ```TypeScript
-get s(): double
+get s(): number
 ```
 
 sign：表示Decimal数的符号位，0表示正数，1表示负数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

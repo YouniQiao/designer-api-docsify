@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -34,9 +34,3 @@ import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener,
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) |

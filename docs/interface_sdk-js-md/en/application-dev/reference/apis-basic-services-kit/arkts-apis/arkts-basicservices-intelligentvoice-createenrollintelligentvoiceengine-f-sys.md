@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createEnrollIntelligentVoiceEngine
@@ -15,8 +15,6 @@ function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEn
 Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md) instance. This method uses an asynchronous callback to return the EnrollIntelligentVoiceEngine instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -41,40 +39,6 @@ Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-e
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
-intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor, (err: BusinessError, data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
-  if (err) {
-    console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-  } else {
-    console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
-    enrollIntelligentVoiceEngine = data;
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
-intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor).then((data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
-  enrollIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
-
 
 ## createEnrollIntelligentVoiceEngine
 
@@ -85,8 +49,6 @@ function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEn
 Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md) instance. This method uses a promise to return the EnrollIntelligentVoiceEngine instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -115,7 +77,3 @@ Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-e
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-
-**Examples**
-
-See [createEnrollIntelligentVoiceEngine](#createenrollintelligentvoiceengine)

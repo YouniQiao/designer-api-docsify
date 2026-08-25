@@ -4,29 +4,25 @@ Device Information Definition
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## authenticationStatus
 
 ```TypeScript
-authenticationStatus?: int
+authenticationStatus?: number
 ```
 
 Define different authentication status. 0: Device not authenticated. 1: Device already authenticated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -43,8 +39,6 @@ HiPlayDeviceInfo is used to obtain device-specific information for HiPlay. trans
 **Type:** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +58,6 @@ device ip address if available.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -82,8 +74,6 @@ Indicates the current device is legacy or not.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ Indicates the current device is legacy or not.
 ## mediumTypes
 
 ```TypeScript
-mediumTypes?: int
+mediumTypes?: number
 ```
 
 Medium types used to discover devices. 1: BLE 2: COAP
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -118,8 +106,6 @@ Network id.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -127,16 +113,14 @@ Network id.
 ## providerId
 
 ```TypeScript
-providerId?: int
+providerId?: number
 ```
 
 device provider which supplies the route capability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

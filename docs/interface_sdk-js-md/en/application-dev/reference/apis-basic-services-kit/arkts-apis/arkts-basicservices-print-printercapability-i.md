@@ -4,45 +4,39 @@ Defines the printer capabilities.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## colorMode
 
 ```TypeScript
-colorMode: int
+colorMode: number
 ```
 
 Color mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## duplexMode
 
 ```TypeScript
-duplexMode: int
+duplexMode: number
 ```
 
 Simplex or duplex mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,8 +52,6 @@ Minimum margin of the printer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## options
@@ -73,8 +65,6 @@ Printer options. The value is a JSON object string.
 **Type:** Object
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ List of page sizes supported by the printer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## resolution
@@ -105,7 +93,5 @@ List of resolutions supported by the printer.
 **Type:** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

@@ -4,8 +4,6 @@ Enumerates the device states.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 The device state is unknown after the device goes online. Before the device state changes to available, distributed services cannot be used.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -32,8 +28,6 @@ The information between devices has been synchronized in the Distributed Data Se
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNAVAILABLE
@@ -45,7 +39,5 @@ UNAVAILABLE = 2
 The device goes offline, and the device state is unknown.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isDistributedEnabledBySlot
@@ -15,8 +15,6 @@ function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise
 查询指定渠道的通知是否支持通知跨设备协同至指定类型设备。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -44,37 +42,3 @@ function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let slot: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-let deviceType: string = 'wearable';
-
-notificationManager.isDistributedEnabledBySlot(slot, deviceType).then((data: boolean) => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `isDistributedEnabledBySlot success.`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `isDistributedEnabledBySlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slot: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-let deviceType: string = 'wearable';
-
-notificationManager.isDistributedEnabledBySlot(slot, deviceType).then((data: boolean) => {
-    console.info('isDistributedEnabledBySlot success.');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isDistributedEnabledBySlot failed, code is ${error.code}, message is ${error.message}`);
-});
-```

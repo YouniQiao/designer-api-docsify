@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLaunchWant
@@ -15,8 +15,6 @@ function getLaunchWant(): Want
 获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -33,20 +31,3 @@ function getLaunchWant(): Want
 | 错误码ID |
 | --- |
 | [17700072](../errorcode-bundle.md#17700072-launch-want不存在) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let want = bundleManager.getLaunchWant();
-  hilog.info(0x0000, 'testTag', 'getLaunchWant ability name: %{public}s', want.abilityName);
-  hilog.info(0x0000, 'testTag', 'getLaunchWant bundle name: %{public}s', want.bundleName);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLaunchWant failed: %{public}s', message);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## setManagedBrowserPolicy
@@ -18,8 +18,6 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 > 在多MDM应用场景下，针对同一浏览器的同一策略，一旦被首个Admin配置并生效，其他Admin将无法配置。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -44,30 +42,3 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-// 浏览器应用包名
-let bundleName: string = 'com.example.testbrowser';
-// 浏览器策略名称
-let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
-// 浏览器策略值
-let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
-
-try {
-  browser.setManagedBrowserPolicy(wantTemp, bundleName, policyName, policyValue);
-  console.info('Succeeded in setting managed browser policy.');
-} catch (err) {
-  console.error(`Failed to set managed browser policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

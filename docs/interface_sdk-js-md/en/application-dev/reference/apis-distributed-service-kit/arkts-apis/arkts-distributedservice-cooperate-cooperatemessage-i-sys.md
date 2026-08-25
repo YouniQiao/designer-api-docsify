@@ -4,8 +4,6 @@ Defines a screen hopping status change event.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a screen hopping status change event.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## networkId
@@ -27,8 +25,6 @@ Descriptor of the target device for screen hopping.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -45,8 +41,6 @@ Screen hopping status.
 **Type:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

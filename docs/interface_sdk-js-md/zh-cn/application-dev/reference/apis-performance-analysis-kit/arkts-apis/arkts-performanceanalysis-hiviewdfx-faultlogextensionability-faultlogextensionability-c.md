@@ -10,14 +10,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## 导入模块
 
 ```TypeScript
-import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
+import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect
@@ -30,21 +28,9 @@ FaultLogExtensionAbility生命周期回调。当系统服务完成连接时调�
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**示例**
-
-```TypeScript
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onConnect() {
-      console.info('onConnect');
-    }
-}
-```
 
 ## onDisconnect
 
@@ -56,21 +42,9 @@ FaultLogExtensionAbility生命周期回调。当系统服务完成断开连接�
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**示例**
-
-```TypeScript
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onDisconnect() {
-      console.info('onDisconnect');
-    }
-}
-```
 
 ## onFaultReportReady
 
@@ -82,34 +56,9 @@ FaultLogExtensionAbility回调。系统服务通知FaultLogExtensionAbility可�
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**示例**
-
-```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
-
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onFaultReportReady() {
-        hiAppEvent.addWatcher({
-            name: "watcher",
-            appEventFilters: [
-                {
-                    domain: hiAppEvent.domain.OS,
-                    names: [hiAppEvent.event.APP_CRASH, hiAppEvent.event.APP_FREEZE]
-                }
-            ],
-            onReceive: (domain: string, appEventGroups: Array<hiAppEvent.AppEventGroup>) => {
-                // 进行故障事件处理
-            }
-        });
-    }
-}
-```
 
 ## context
 
@@ -122,8 +71,6 @@ FaultLogExtensionAbility的上下文环境， 继承自[ExtensionContext](../../
 **类型：** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

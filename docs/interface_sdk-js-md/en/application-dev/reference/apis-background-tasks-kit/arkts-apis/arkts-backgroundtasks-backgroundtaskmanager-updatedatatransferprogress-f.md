@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## updateDataTransferProgress
@@ -15,8 +15,6 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 Update notification. Only data transfer ContinuousTasks are supported.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

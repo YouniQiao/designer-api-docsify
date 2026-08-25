@@ -4,14 +4,12 @@ Describes the strut style, which determines the line spacing, baseline alignment
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## enabled
@@ -25,8 +23,6 @@ Whether to enable the strut style. The value **true** means to enable the strut 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ Array of font families. By default, the array is empty, indicating that all syst
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,16 +47,14 @@ Array of font families. By default, the array is empty, indicating that all syst
 ## fontSize
 
 ```TypeScript
-fontSize?: double
+fontSize?: number
 ```
 
 Font size, a floating-point value with a default value of **14.0**, measured in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -80,8 +72,6 @@ Font style. The default value is **NORMAL**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -97,8 +87,6 @@ Font weight. The default value is **W400**. Before <!--RP1-->OpenHarmony 6.1<!--
 **Type:** FontWeight
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -116,8 +104,6 @@ Font width. The default value is **NORMAL**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -133,8 +119,6 @@ Whether to forcibly use the strut height for all lines. The value **true** means
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -152,8 +136,6 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -161,16 +143,14 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 ## height
 
 ```TypeScript
-height?: double
+height?: number
 ```
 
 Scale factor of the line height. The value is a floating point number. The default value is **1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -188,8 +168,6 @@ Whether to override the height. The value **true** means to override the height,
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -197,16 +175,14 @@ Whether to override the height. The value **true** means to override the height,
 ## leading
 
 ```TypeScript
-leading?: double
+leading?: number
 ```
 
 Custom line spacing applied to the strut, a floating-point value in physical pixels (px), with a default value of **-1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

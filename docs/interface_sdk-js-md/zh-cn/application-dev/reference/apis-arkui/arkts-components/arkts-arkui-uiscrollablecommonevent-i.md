@@ -6,8 +6,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 设置onReachEnd事件的回调。方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ setOnReachStart(callback: Callback<void> | undefined): void
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -73,8 +67,6 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -85,7 +77,7 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | OnScrollFrameBeginCallback \| undefined | 是 |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | 是 |
 
 ## setOnScrollStart
 
@@ -96,8 +88,6 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 设置onScrollStart事件的回调。方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,8 +110,6 @@ setOnScrollStop(callback: Callback<void> | undefined): void
 设置onScrollStop事件的回调。方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

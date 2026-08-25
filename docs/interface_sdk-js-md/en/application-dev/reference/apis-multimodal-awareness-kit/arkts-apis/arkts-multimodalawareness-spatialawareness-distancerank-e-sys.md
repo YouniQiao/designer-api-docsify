@@ -4,8 +4,6 @@ Enum for distance rank.@enum { string } DistanceRank
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 indicates ultra-short range
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ indicates short range
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -56,8 +50,6 @@ indicates medium-short range
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -73,8 +65,6 @@ RANK_MEDIUM_RANGE = 'rankMedium'
 indicates medium range
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

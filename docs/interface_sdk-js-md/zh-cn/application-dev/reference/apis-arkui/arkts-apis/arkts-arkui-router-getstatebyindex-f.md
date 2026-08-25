@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getStateByIndex
@@ -26,8 +26,6 @@ function getStateByIndex(index: number): RouterState | undefined
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 18
 
 **替代接口：** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
@@ -49,17 +47,3 @@ function getStateByIndex(index: number): RouterState | undefined
 | 类型 |
 | --- |
 | RouterState \| undefined |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-let options: router.RouterState | undefined = router.getStateByIndex(1);
-if (options != undefined) {
-  console.info('index = ' + options.index);
-  console.info('name = ' + options.name);
-  console.info('path = ' + options.path);
-  console.info(`params = ${JSON.stringify(options.params)}`);
-}
-```

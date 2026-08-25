@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## capability
@@ -29,8 +27,6 @@ capability: SubscribeCap
 **类型：** [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -50,8 +46,6 @@ freq: ExchangeFreq
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -69,8 +63,6 @@ isSameAccount: boolean
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -90,8 +82,6 @@ isWakeRemote: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -109,8 +99,6 @@ medium: ExchangeMedium
 **类型：** [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -130,8 +118,6 @@ mode: DiscoverMode
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -149,8 +135,6 @@ subscribeId: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 

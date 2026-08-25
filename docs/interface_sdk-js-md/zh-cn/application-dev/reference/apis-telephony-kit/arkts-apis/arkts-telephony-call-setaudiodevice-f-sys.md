@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setAudioDevice
@@ -15,8 +15,6 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 设置通话音频设备。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -43,36 +41,6 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioDevice: call.AudioDevice = {
-    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
-}
-call.setAudioDevice(audioDevice, (err: BusinessError) => {
-    if (err) {
-        console.error(`setAudioDevice fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setAudioDevice success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioDevice: call.AudioDevice = {
-    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
-}
-call.setAudioDevice(audioDevice).then(() => {
-    console.info(`setAudioDevice success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setAudioDevice fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setAudioDevice
 
@@ -83,8 +51,6 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 设置通话音频设备。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -115,7 +81,3 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setAudioDevice](#setaudiodevice)

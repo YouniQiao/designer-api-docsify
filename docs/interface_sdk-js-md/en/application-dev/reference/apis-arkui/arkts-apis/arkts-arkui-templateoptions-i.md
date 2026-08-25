@@ -14,8 +14,6 @@ When **cachedCount** is set to the maximum number of nodes in the display area o
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,25 +33,8 @@ Maximum number of child component nodes that can be cached in the cache pool of 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-// arr is an array of the Array<string> type. Use Repeat in a List container component with virtual scrolling enabled.
-// Define a reusable template temp for generating Text components. Use the temp template for all data items.
-// Set the maximum cache count for the temp template to 2.
-List() {
-  Repeat<string>(this.arr)
-    .each((obj: RepeatItem<string>) => {})
-    .virtualScroll()
-    .template('temp', (obj: RepeatItem<string>) => { ListItem() { Text(obj.item) }}, { cachedCount: 2 })
-    .templateId((item: string, index: number) => { return 'temp' })
-}
-```

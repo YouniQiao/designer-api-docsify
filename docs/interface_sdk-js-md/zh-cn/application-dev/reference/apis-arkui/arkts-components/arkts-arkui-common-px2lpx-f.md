@@ -15,8 +15,6 @@ Converts a number in units of px to a number in units of lpx.
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** px2lpx

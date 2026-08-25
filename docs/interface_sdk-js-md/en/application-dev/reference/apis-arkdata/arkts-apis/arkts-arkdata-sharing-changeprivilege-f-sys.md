@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## changePrivilege
@@ -19,8 +19,6 @@ function changePrivilege(
 Changes the privilege on the shared data. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -42,60 +40,6 @@ Changes the privilege on the shared data. This API uses an asynchronous callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-
-cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
-  console.info(`change privilege succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-
-cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError, result) => {
-  if (err) {
-    console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`change privilege succeeded, result: ${result}`);
-}))
-```
-
 
 ## changePrivilege
 
@@ -109,8 +53,6 @@ function changePrivilege(
 Changes the privilege on the shared data. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -136,7 +78,3 @@ Changes the privilege on the shared data. This API uses a promise to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [changePrivilege](#changeprivilege)

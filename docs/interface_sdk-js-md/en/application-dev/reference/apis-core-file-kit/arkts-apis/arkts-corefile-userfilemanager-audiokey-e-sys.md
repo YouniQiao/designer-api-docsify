@@ -4,8 +4,6 @@ Defines the key information about an audio file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -23,8 +21,6 @@ URI = 0
 URI of the file.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ File name displayed.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -63,8 +57,6 @@ DATE_ADDED = 2
 Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -84,8 +76,6 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -103,8 +93,6 @@ TITLE = 4
 Title of the file.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -124,8 +112,6 @@ Author of the file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -143,8 +129,6 @@ AUDIOALBUM = 6
 Audio album.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -164,8 +148,6 @@ Duration, in ms.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -183,8 +165,6 @@ FAVORITE = 8
 Whether the file is added to favorites.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

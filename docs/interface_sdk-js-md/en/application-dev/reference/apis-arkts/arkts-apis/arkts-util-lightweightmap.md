@@ -19,8 +19,8 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from 'kits/@kit.ArkTS';
+import { LightWeightMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -30,9 +30,3 @@ import { LightWeightMapCbFn } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md) |

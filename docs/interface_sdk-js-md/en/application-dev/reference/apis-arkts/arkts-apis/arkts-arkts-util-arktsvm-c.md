@@ -4,14 +4,12 @@ A class that provides VM maintenance and test capabilities for developers.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## enableLocalHandleDetection
@@ -23,8 +21,6 @@ static enableLocalHandleDetection(): void
 Enable the local handle detection to avoid memory leakage in the event looper of Libuv or EventHandler.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,8 +35,6 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 Get all heap memory information from ArkTS-VMs and the shared heap.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -77,8 +69,6 @@ static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: H
 Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC. It must be called on the main thread and only one callback can be registered.NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,8 +97,6 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -120,17 +108,6 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 | enabled | boolean | Yes |
 | options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No |
 
-**Examples**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-// Enable multithreading detection.
-util.ArkTSVM.setMultithreadingDetectionEnabled(true);
-// Disable multithreading detection.
-util.ArkTSVM.setMultithreadingDetectionEnabled(false);
-```
-
 ## setTrackGlobalRef
 
 ```TypeScript
@@ -140,8 +117,6 @@ static setTrackGlobalRef(enable: boolean): void
 Enable or disable tracking of the relationship between napi_ref and global handle. When enabled, heap snapshot will include native reference address information. When disabled (enable is false), the tracking will be stopped and heap snapshot will not display the relationship between native reference and global handle.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

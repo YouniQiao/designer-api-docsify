@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## offSeniorModeStateChangeForApp
@@ -15,8 +15,6 @@ function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>):
 取消监听所有应用“长辈模式”的状态变化事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -38,30 +36,3 @@ function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>):
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback = (data: config.AppSeniorModeInfo) => {
-    console.info(`callback data, name: ${data.bundleName}, appIndex: ${data.appIndex}, seniorModeState: ${data.seniorModeState}`);
-  }
-
-  aboutToAppear(): void {
-    config.onSeniorModeStateChangeForApp(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    config.offSeniorModeStateChangeForApp(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

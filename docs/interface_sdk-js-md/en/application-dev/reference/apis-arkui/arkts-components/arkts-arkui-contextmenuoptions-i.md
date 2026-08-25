@@ -9,8 +9,6 @@ Configures menu item information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Callback triggered when the menu is about to appear.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,8 +41,6 @@ aboutToDisappear?: () => void
 Callback triggered when the menu is about to disappear.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +58,6 @@ Callback invoked after the menu appears.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -81,8 +73,6 @@ onDisappear?: () => void
 Callback invoked after the menu disappears.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +100,6 @@ Display position of the menu relative to the upper left corner of the bound comp
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -127,13 +115,11 @@ arrowOffset?: Length
 Offset of the arrow relative to the context menu. The offset settings take effect only when the value is valid, can be converted to a number greater than 0, and does not cause the arrow to extend beyond the safe area of the context menu.Default value: **0**Unit: vp  
 **NOTE：**The safe distance of the arrow from the four sides of the menu is the sum of the menu's corner radius and half the width of the arrow.The value of **placement** determines whether the offset is horizontal or vertical.When the arrow is in the horizontal direction of the menu, the offset is the distance from the arrow to the leftmost arrow's safe distance. When the arrow is in the vertical direction of the menu, the offset is the distance from the arrow to the topmost arrow's safe distance.The default position where the arrow is displayed varies with the value of **placement**:Table 2 describes the relationship between the final position of the arrow and the value of **placement** in cases where the menu does not trigger repositioning.This API is supported in **bindContextMenu** since API version 10 and **bindMenu** since API version 12.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0vp
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,8 +139,6 @@ Available layout area of the preview image. The percentage of the preview image 
 **Type:** [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,8 +160,6 @@ Background blur style of the menu.Default value: **BlurStyle.COMPONENT_ULTRA_THI
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -196,8 +178,6 @@ Background blur style.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -212,13 +192,11 @@ backgroundColor?: ResourceColor
 
 Background color of the menu.Default value: **Color.Transparent**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,8 +216,6 @@ Background effect.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -255,13 +231,11 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 Default value: **8vp** for 2-in-1 devices and **20vp** for other devices  
 **NOTE：**The value can be in percentage.If the sum of the two maximum corner radii in the horizontal direction exceeds the menu's width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu's height, the default corner radius of the menu will be used.When the Length type is used: Invalid input values will trigger a fallback to the default corner radius.When the BorderRadiuses or LocalizedBorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default.
 
-**Type:** Length \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** 8vp for 2-in-1 devices and 20vp for other devices
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -283,8 +257,6 @@ Define the menu theme color mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -305,8 +277,6 @@ Whether to display an arrow. If the size and position of the context menu are in
 **Default:** false
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +302,6 @@ Whether to respond when the device is in hover mode (semi-folded state), that is
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -351,8 +319,6 @@ Define the grid style of menu. Only fixed-style menus are effective. For example
 **Type:** [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,8 +341,6 @@ Haptic feedback mode when the menu is displayed.Default value: **HapticFeedbackM
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -398,8 +362,6 @@ Whether the menu avoids the soft keyboard.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -415,13 +377,11 @@ layoutRegionMargin?: Margin
 Minimum margin between the preview and menu layout for top, bottom, left, and right edges.  
 **NOTE：**Only vp, px, fp, lpx, and percentage units are supported.Any abnormal or negative values will be treated as the default values.If **preview** is set to **CustomBuilder**, setting **margin.left** or **margin.right** will remove the maximum grid width restriction for the preview.Be cautious not to set excessively large margins that are too large, which could reduce the layout area and affect the proper layout of the preview and menu.If the sum of horizontal margins exceeds the maximum layout width, **margin.left** and **margin.right** will be ignored and default values will be applied.If the sum of vertical margins exceeds the maximum layout width, **margin.top** and **margin.bottom** will be ignored and default values will be applied.The default margin values are 16 vp for the left and right, 16 vp for top, and 4 vp for bottom.
 
-**Type:** Margin
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Default:** 12vp for left and right, 16vp for top and bottom
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -445,8 +405,6 @@ Sets whether a menu has a mask and the mask style.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -464,8 +422,6 @@ Defines the max height of menu.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -485,8 +441,6 @@ Minimum distance for the menu to avoid the soft keyboard.
 **Type:** LengthMetrics
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -509,8 +463,6 @@ Modal mode of a menu.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -531,8 +483,6 @@ Offset for showing the context menu, which should not cause the menu to extend b
 **Default:** - [since 10 - 10] @default {x:0,y:0} - Percentage values are not supported. [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -564,8 +514,6 @@ Callback invoked after the menu appears.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -594,8 +542,6 @@ Callback invoked after the menu disappears.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -623,8 +569,6 @@ Callback triggered when the menu is about to appear.
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -655,8 +599,6 @@ Callback triggered when the menu is about to disappear.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -672,13 +614,11 @@ outlineColor?: ResourceColor | EdgeColors
 Outline color of the menu border.  
 **NOTE：**Default value: **'#19ffffff'**
 
-**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md)
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
 **Default:** '#19ffffff'
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -695,13 +635,11 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 Outline width of the menu border.Default value: **0vp**  
 **NOTE：**Percentage values are not supported. **outlineWidth** is mandatory for customizing an outline effect.
 
-**Type:** Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 
 **Default:** 0vp - Percentage values are not supported.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -722,13 +660,11 @@ Preferred position of the context menu. If the set position is insufficient for 
 3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu), its default value is **Placement.BottomLeft**.
 4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
 
-**Type:** Placement
+**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **Default:** - [since 10 - 10] @default Placement.BottomLeft [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -742,17 +678,18 @@ Preferred position of the context menu. If the set position is insufficient for 
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-Preview displayed when the context menu is triggered by a long-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu). It can be a screenshot of the target component or custom content.Default value: **MenuPreviewMode.NONE**, indicating no preview.  
+Preview displayed when the context menu is triggered by a number-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu). It can be a screenshot of the target component or custom content.Default value: **MenuPreviewMode.NONE**, indicating no preview.  
 **NOTE：**
-- This parameter has no effect when **responseType** is set to **ResponseType.RightClick**. - If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective. - If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when **enableArrow** is **true**.
+- This parameter has no effect when **responseType** is set to **ResponseType.RightClick**.
+- If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective.
+- If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when
+**enableArrow** is **true**.
 
 **Type:** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Default:** MenuPreviewMode.NONE
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -766,7 +703,7 @@ Preview displayed when the context menu is triggered by a long-press or by calli
 previewAnimationOptions?: ContextMenuAnimationOptions
 ```
 
-Display effect of the long-press preview.Default value: **{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }**  
+Display effect of the number-press preview.Default value: **{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }**  
 **NOTE：**If the value is less than or equal to **0**, this parameter does not take effect.
 
 **Type:** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
@@ -774,8 +711,6 @@ Display effect of the long-press preview.Default value: **{ scale: [0.95, 1.1], 
 **Default:** { scale: [0.95, 1.1], transition: undefined, hoverScale: undefined } [since 12]
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -798,8 +733,6 @@ Border corner radius for the preview image.Default value: **16vp**
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -821,8 +754,6 @@ Preview image scaling mode.Default value: **PreviewScaleMode.AUTO**
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -837,13 +768,11 @@ scrollBar?: BarState
 
 Defines the scroll bar state of menu.
 
-**Type:** BarState
+**Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 
 **Default:** BarState.Auto
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -863,8 +792,6 @@ Set system-styled materials for menu. The material effect behaves differently on
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -882,8 +809,6 @@ Sets the space between the menu and target. When both targetSpace and offset are
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -903,8 +828,6 @@ Transition effect for the entrance and exit of the menu.
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

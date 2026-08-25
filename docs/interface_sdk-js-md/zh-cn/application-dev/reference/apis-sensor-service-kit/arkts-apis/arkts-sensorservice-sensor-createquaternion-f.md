@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## createQuaternion
@@ -21,8 +21,6 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
@@ -35,39 +33,6 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 | --- | --- | --- |
 | rotationVector | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
-                        (err: BusinessError, data: Array<number>) => {
-  if (err) {
-    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
-  }
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting createQuaternion_promise');
-  for (let i = 0; i < data.length; i++) {
-    console.info('data[' + i + ']: ' + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get promise.`);
-})
-```
 
 
 ## createQuaternion
@@ -83,8 +48,6 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 > [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -103,7 +66,3 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;number & gt; & gt; |
-
-**示例**
-
-参见 [createQuaternion](#createquaternion)

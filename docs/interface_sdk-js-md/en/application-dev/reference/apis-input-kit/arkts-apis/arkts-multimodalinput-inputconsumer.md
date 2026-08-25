@@ -8,14 +8,12 @@ The **inputConsumer** module implements listening for combination key events as 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
@@ -27,12 +25,8 @@ import { inputConsumer } from '@kit.InputKit';
 | [getAllSystemHotkeys(Global Shortcut Keys)](arkts-input-inputconsumer-getallsystemhotkeys-f.md) |
 | [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f.md#offhotkeychange) |
 | [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f.md#offkeypressed) |
-| [offHotkeyChange(Global Shortcut Keys)](arkts-input-inputconsumer-offhotkeychange-f.md) |
-| [offKeyPressed(Global Shortcut Keys)](arkts-input-inputconsumer-offkeypressed-f.md) |
 | [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f.md#onhotkeychange) |
 | [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f.md#onkeypressed) |
-| [onHotkeyChange(Global Shortcut Keys)](arkts-input-inputconsumer-onhotkeychange-f.md) |
-| [onKeyPressed(Global Shortcut Keys)](arkts-input-inputconsumer-onkeypressed-f.md) |
 
 <!--Del-->
 ### Functions(System API)
@@ -40,11 +34,9 @@ import { inputConsumer } from '@kit.InputKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [getShieldStatus(Global Shortcut Keys)](arkts-input-inputconsumer-getshieldstatus-f-sys.md) |
-| [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f-sys.md#offkey) |
+| off(Global Shortcut Keys) |
 | [offKey(Global Shortcut Keys)](arkts-input-inputconsumer-offkey-f-sys.md) |
-| [offKey(Global Shortcut Keys)](arkts-input-inputconsumer-offkey-f-sys.md) |
-| [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f-sys.md#onkey) |
-| [onKey(Global Shortcut Keys)](arkts-input-inputconsumer-onkey-f-sys.md) |
+| on(Global Shortcut Keys) |
 | [onKey(Global Shortcut Keys)](arkts-input-inputconsumer-onkey-f-sys.md) |
 | [setShieldStatus(Global Shortcut Keys)](arkts-input-inputconsumer-setshieldstatus-f-sys.md) |
 <!--DelEnd-->

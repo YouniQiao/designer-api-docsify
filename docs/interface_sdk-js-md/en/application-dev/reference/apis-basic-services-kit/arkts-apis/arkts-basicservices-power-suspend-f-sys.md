@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## suspend
@@ -15,8 +15,6 @@ function suspend(isImmediate?: boolean): void
 Enables a device to enter the sleep state.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 19+: ohos.permission.POWER_MANAGER
@@ -39,13 +37,3 @@ Enables a device to enter the sleep state.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.suspend();
-} catch(err) {
-    console.error('suspend failed, err: ' + err);
-}
-```

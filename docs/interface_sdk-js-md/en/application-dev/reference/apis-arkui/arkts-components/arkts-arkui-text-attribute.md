@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ baselineOffset(value: number | ResourceStr)
 Sets the offset of the text baseline.Percentage values follow default display behavior.A positive value moves the content upwards, while a negative value moves it downwards.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,7 +42,7 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-Sets the custom selection menu.The long-press response duration of **bindSelectionMenu** is 600 ms while that of bindContextMenu is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.When the custom menu is too long, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
+Sets the custom selection menu.The number-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to number press, **bindSelectionMenu** takes precedence.When the custom menu is too number, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
 
 > **NOTE：**&gt;
 > This API cannot be called within attributeModifier.&gt;
@@ -56,8 +52,6 @@ Sets the custom selection menu.The long-press response duration of **bindSelecti
 > trigger conditions are fully customizable.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +77,6 @@ caretColor(color: ResourceColor)
 Sets the color of the text selection handle, also known as the caret, in the text box.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,8 +105,6 @@ Sets whether to enable leading punctuation compression.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -125,7 +115,7 @@ Sets whether to enable leading punctuation compression.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## contentTransition
 
@@ -133,11 +123,9 @@ Sets whether to enable leading punctuation compression.
 contentTransition(transition: Optional<ContentTransition>)
 ```
 
-Applies a transition animation to text content. Supports numeric flip animation via NumericTextTransition.
+Applies a transition animation to text content. Supports numeric flip animation via [NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,7 +137,7 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| transition | Optional & lt;ContentTransition & gt; | Yes |
+| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | Yes |
 
 ## copyOption
 
@@ -158,14 +146,16 @@ copyOption(value: CopyOptions)
 ```
 
 Sets whether copy and paste operations are allowed.Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.  
-- When the **Text** component contains child elements, only Span and ImageSpan support HTML-formatted pasteboard content. - For styled strings, refer to toHtml for supported HTML conversion scope.  
+- When the **Text** component contains child elements, only Span and  
+ImageSpan support HTML-formatted pasteboard content.  
+- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.  
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:  
-- A long press on the text will display a menu that offers the copy and select-all options. - By default, selected text is draggable. To disable dragging, set **draggable** to **false**. - To support **Ctrl+C** copying, also set [textSelectable](#textselectable) to **TextSelectableMode.SELECTABLE_FOCUSABLE**.  
-The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use parallelGesture on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).Because widgets do not have the long press event, the menu will not be displayed when users long press text.
+- A number press on the text will display a menu that offers the copy and select-all options.  
+- By default, selected text is draggable. To disable dragging, set **draggable** to **false**.  
+- To support **Ctrl+C** copying, also set [textSelectable](#textselectable) to  
+**TextSelectableMode.SELECTABLE_FOCUSABLE**.The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).Because widgets do not have the number press event, the menu will not be displayed when users number press text.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -185,11 +175,9 @@ The **Text** component listens for **onClick**, which is a non-bubbling event. T
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures text recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
+Configures text recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +207,6 @@ Style and color of the text decorative line.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -242,8 +228,6 @@ draggable(value: boolean)
 Sets the drag effect of the selected text.This attribute cannot be used together with the onDragStart event.If set to **true**, **draggable** must be used in conjunction with CopyOptions. When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -272,8 +256,6 @@ Sets the extended options for the custom menu, including the text content, icon,
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -284,7 +266,7 @@ Sets the extended options for the custom menu, including the text content, icon,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | Yes |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
 
 ## ellipsisMode
 
@@ -296,8 +278,6 @@ Sets the ellipsis position.For the settings to work, **overflow** must be set to
 **EllipsisMode.START** and **EllipsisMode.CENTER** take effect only when text overflows in a single line.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,8 +301,6 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -333,7 +311,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableDataDetector
 
@@ -350,8 +328,6 @@ Sets whether to enable special entity detection within the text. Special entitie
 <!--RP2--><!--RP2End-->
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -378,8 +354,6 @@ Sets whether to enable haptic feedback.To enable haptic feedback, you must decla
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -401,8 +375,6 @@ enableSelectedDataDetector(enable: boolean | undefined)
 Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,8 +398,6 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -438,7 +408,7 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## font
 
@@ -449,8 +419,6 @@ font(value: Font)
 Sets the text style, covering the font size, font width, font family, and font style.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -474,8 +442,6 @@ Sets the font style, with support for font settings.It is only effective for the
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -489,7 +455,7 @@ Sets the font style, with support for font settings.It is only effective for the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | fontValue | [Font](#font) | Yes |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-textcommon-fontsettingoptions-i.md) | No |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No |
 
 ## fontColor
 
@@ -500,8 +466,6 @@ fontColor(value: ResourceColor)
 Sets the font color.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -527,8 +491,6 @@ Sets the font family.
 > You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -559,7 +521,7 @@ Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;fea
 > When multiple **Text** components are placed in the Row container with no specific layout or space
 > allocation settings configured, the components are laid out based on the maximum size of the container. To make
 > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
-> layoutWeight or use the flex layout.&gt;
+> [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight) or use the flex layout.&gt;
 > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
 > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the
 > ligature feature can avoid this issue.&gt;
@@ -568,8 +530,6 @@ Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;fea
 > marks, enumeration commas, and question marks, is not affected by this feature.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -595,8 +555,6 @@ Sets the text size.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -618,8 +576,6 @@ fontStyle(value: FontStyle)
 Sets the font style.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -643,8 +599,6 @@ Set the font variation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -666,8 +620,6 @@ fontWeight(value: number | FontWeight | ResourceStr)
 Sets the font weight. If the value is too large, the text may be clipped depending on the font.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -691,8 +643,6 @@ Sets the text font weight, with support for font settings.It is only effective f
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -706,7 +656,7 @@ Sets the text font weight, with support for font settings.It is only effective f
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-textcommon-fontsettingoptions-i.md) | No |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No |
 
 ## halfLeading
 
@@ -717,8 +667,6 @@ halfLeading(halfLeading: boolean)
 Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -739,11 +687,14 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 ```
 
 Sets the font size adjustment strategy for adaptive text layout.The available modes are as follows:  
-- **MAX_LINES_FIRST**: prioritizes using the [maxLines](#maxlines) attribute to control text height. If the **maxLines** setting results in a layout beyond the layout constraints, the text will shrink to a font size between [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to allow for more content to be shown. - **MIN_FONT_SIZE_FIRST**: prioritizes using the **minFontSize** attribute to control text height. If the text fits on one line at **minFontSize**, the system attempts to increase the font size between **minFontSize** and **maxFontSize** to fill the line with the largest available font size. If the text cannot fit on a single line even at **minFontSize**, it sticks with **minFontSize**. - **LAYOUT_CONSTRAINT_FIRST**: prioritizes using layout constraints to control text height. If the resultant layout is beyond the layout constraints, the text will shrink to a font size between **minFontSize** and **maxFontSize** to respect the layout constraints. If the text still extends beyond the layout constraints after shrinking to **minFontSize**, the lines that exceed the constraints are deleted.
+- **MAX_LINES_FIRST**: prioritizes using the [maxLines](#maxlines) attribute to control text  
+height. If the **maxLines** setting results in a layout beyond the layout constraints, the text will shrink to a font size between [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to allow for more content to be shown.  
+- **MIN_FONT_SIZE_FIRST**: prioritizes using the **minFontSize** attribute to control text height. If the text fits  
+on one line at **minFontSize**, the system attempts to increase the font size between **minFontSize** and **maxFontSize** to fill the line with the largest available font size. If the text cannot fit on a single line even at **minFontSize**, it sticks with **minFontSize**.  
+- **LAYOUT_CONSTRAINT_FIRST**: prioritizes using layout constraints to control text height. If the resultant layout  
+is beyond the layout constraints, the text will shrink to a font size between **minFontSize** and **maxFontSize** to respect the layout constraints. If the text still extends beyond the layout constraints after shrinking to **minFontSize**, the lines that exceed the constraints are deleted.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -755,7 +706,7 @@ Sets the font size adjustment strategy for adaptive text layout.The available mo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes |
 
 ## includeFontPadding
 
@@ -767,8 +718,6 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -779,7 +728,7 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| include | Optional & lt;boolean & gt; | Yes |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## incrementalUpdatePolicy
 
@@ -791,8 +740,6 @@ Sets the incremental update policy for text rendering.This API takes effect only
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -803,7 +750,7 @@ Sets the incremental update policy for text rendering.This API takes effect only
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| policy | IncrementalUpdatePolicy \| undefined | Yes |
+| policy | [IncrementalUpdatePolicy](../arkts-apis/arkts-arkui-incrementalupdatepolicy-e.md) \| undefined | Yes |
 
 ## letterSpacing
 
@@ -814,8 +761,6 @@ letterSpacing(value: number | ResourceStr)
 Sets the letter spacing for a text style.If the value specified is a percentage or **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.Negative values compress text. Excessive compression may reduce content area to zero, hiding content.This setting applies to every character, including those at line endings.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -839,8 +784,6 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -851,7 +794,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| strategy | [LineBreakStrategy](#linebreakstrategy) | Yes |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes |
 
 ## lineHeight
 
@@ -867,8 +810,6 @@ Sets the text line height.If the value is less than or equal to **0**, the line 
 > line height to ensure proper layout rendering.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -896,8 +837,6 @@ Sets the line height of text in multiple mode.The line height equals the input p
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -922,8 +861,6 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -945,8 +882,6 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 Sets the line spacing for text. When **LineSpacingOptions** is not specified, line spacing is applied above the first line and below the last line by default.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -971,8 +906,6 @@ Sets the marquee effect for text.The **marqueeOptions** settings take effect onl
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -983,7 +916,7 @@ Sets the marquee effect for text.The **marqueeOptions** settings take effect onl
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | Optional&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | Yes |
 
 ## maxFontScale
 
@@ -994,8 +927,6 @@ maxFontScale(scale: number | Resource)
 Sets the maximum font scale factor for text.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1019,8 +950,6 @@ Sets the maximum font size.For the string type, numeric string values with optio
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1042,8 +971,6 @@ maxLineHeight(value: LengthMetrics | undefined)
 Sets the maximum line height of text. If the value is less than or equal to 0, the maximum line height is unrestricted.If **maxLineHeight** is less than **minLineHeight**, **maxLineHeight** takes effect using the value of **minLineHeight**.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1069,8 +996,6 @@ Sets the maximum number of lines for text.By default, text is automatically fold
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1092,8 +1017,6 @@ minFontScale(scale: number | Resource)
 Sets the minimum font scale factor for text.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1117,8 +1040,6 @@ Sets the minimum font size.For the string type, numeric string values with optio
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1140,8 +1061,6 @@ minLineHeight(value: LengthMetrics | undefined)
 Sets the minimum line height of text. If the value is less than or equal to 0, the default value **0** is used.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1167,8 +1086,6 @@ Sets the minimum number of lines for text.If the actual text height is less than
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -1181,7 +1098,7 @@ Sets the minimum number of lines for text.If the actual text height is less than
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [minLines](#minlines) | Optional & lt;number & gt; | Yes |
+| [minLines](#minlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## onCopy
 
@@ -1189,11 +1106,9 @@ Sets the minimum number of lines for text.If the actual text height is less than
 onCopy(callback: (value: string) => void)
 ```
 
-Called when data is copied to the pasteboard, which is displayed when the text box is long pressed. Currently, only text can be copied.
+Called when data is copied to the pasteboard, which is displayed when the text box is number pressed. Currently, only text can be copied.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1217,8 +1132,6 @@ Called when the marquee animation reaches the specified state.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1240,8 +1153,6 @@ onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) =
 Called when the text selection position changes.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1266,8 +1177,6 @@ Called before the copy operation is performed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1287,11 +1196,11 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 ```
 
 Sets whether to optimize trailing spaces at line endings during text layout, resolving alignment display issues caused by trailing spaces.When **Text.optimizeTrailingSpace** is set to **true**:  
-* Trailing space optimization applies to multi-line text, single-line text, and text and image layouts (particularly noticeable with **TextAlign.Center** or **TextAlign.End**). * For text containing only spaces, decoration lines, shadows, and background colors follow the space text display. * Leading spaces are not optimized. When text with trailing spaces wraps, trailing spaces on each line are optimized based on component width.When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set backgroundColor, [decoration](#decoration), and [textAlign](#textalign) attributes.
+* Trailing space optimization applies to multi-line text, single-line text, and text and image layouts (particularly noticeable with **TextAlign.Center** or **TextAlign.End**).  
+* For text containing only spaces, decoration lines, shadows, and background colors follow the space text display.  
+* Leading spaces are not optimized. When text with trailing spaces wraps, trailing spaces on each line are optimized based on component width.When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set backgroundColor, [decoration](#decoration), and [textAlign](#textalign) attributes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1303,7 +1212,7 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| optimize | Optional & lt;boolean & gt; | Yes |
+| optimize | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## orphanCharOptimization
 
@@ -1316,8 +1225,6 @@ Sets whether to enable orphan character optimization during text typesetting. If
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1326,7 +1233,7 @@ Sets whether to enable orphan character optimization during text typesetting. If
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## privacySensitive
 
@@ -1337,8 +1244,6 @@ privacySensitive(supported: boolean)
 Sets whether to enable privacy mode on widgets.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1364,8 +1269,6 @@ Whether to enable punctuation overflow at line ends.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1376,7 +1279,7 @@ Whether to enable punctuation overflow at line ends.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## selectedBackgroundColor
 
@@ -1387,8 +1290,6 @@ selectedBackgroundColor(color: ResourceColor)
 Sets the background color of the selected text. If the opacity is not set, a 20% opacity will be used.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1408,11 +1309,9 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 ```
 
-Applies a transition animation to text content. Supports numeric flip animation via NumericTextTransition.
+Applies a transition animation to text content. Supports numeric flip animation via [NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md).
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1424,7 +1323,7 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | Yes |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes |
 
 ## selection
 
@@ -1435,8 +1334,6 @@ selection(selectionStart: number, selectionEnd: number)
 Sets text selection.The selected text is highlighted, with selection handles and the text selection menu displayed.If [copyOption](#copyoption) is set to **CopyOptions.None**, the setting of the **selection** attribute does not take effect.If [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of the **selection** attribute does not take effect.If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the text content. If the value is less than 0, the value **0** will be used. If the value is greater than **textSize**, **textSize** will be used.If the selection range falls within a truncated or invisible area, selection is ignored. When clip is set to **false**, the text outside the parent component can be selected.You can obtain the selection range change result through the [onTextSelectionChange](#ontextselectionchange) API.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1457,11 +1354,9 @@ Sets text selection.The selected text is highlighted, with selection handles and
 shaderStyle(shader: ShaderStyle)
 ```
 
-Applies gradient or solid color effects to text. Supports RadialGradientStyle, LinearGradientStyle, and ColorShaderStyle. **shaderStyle** takes precedence over fontColor and AI-based styling. For solid colors, prefer using fontColor.
+Applies gradient or solid color effects to text. Supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). **shaderStyle** takes precedence over fontColor and AI-based styling. For solid colors, prefer using fontColor.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1473,7 +1368,7 @@ Applies gradient or solid color effects to text. Supports RadialGradientStyle, L
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shader | [ShaderStyle](#shaderstyle) | Yes |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes |
 
 ## tailIndents
 
@@ -1481,11 +1376,9 @@ Applies gradient or solid color effects to text. Supports RadialGradientStyle, L
 tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 ```
 
-Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. <br>If the value is set to undefined, the default value 0 is used. </p>
+Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: When a single LengthMetrics value is provided, all lines share the same tail indent. When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. Negative values are treated as 0. If the value is set to undefined, the default value 0 is used. </p>
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1497,7 +1390,7 @@ Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Optional & lt;LengthMetrics \ | Array & lt;LengthMetrics & gt; & gt; | Yes |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | Yes |
 
 ## textAlign
 
@@ -1506,7 +1399,9 @@ textAlign(value: TextAlign)
 ```
 
 Sets the horizontal alignment of the text.The text takes up the full width of the **Text** component.The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows:  
-- **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top. - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically. - **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
+- **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
+- **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  
+- **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
 When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) property must be configured according to the text content. The last line of text aligns to the start horizontally and does not participate in justification.
 
 > **NOTE：**&gt;
@@ -1515,8 +1410,6 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 > [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1540,8 +1433,6 @@ Sets the text case.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1552,7 +1443,7 @@ Sets the text case.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextCase](#textcase) | Yes |
+| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes |
 
 ## textContentAlign
 
@@ -1564,8 +1455,6 @@ Sets the vertical alignment of the text content area within the component.This A
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -1576,7 +1465,7 @@ Sets the vertical alignment of the text content area within the component.This A
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [textContentAlign](#textcontentalign) | Optional & lt;TextContentAlign & gt; | Yes |
+| [textContentAlign](#textcontentalign) | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | Yes |
 
 ## textDirection
 
@@ -1587,8 +1476,6 @@ textDirection(direction: TextDirection | undefined)
 Specifies the text layout direction. If this attribute is not set, the default text layout direction follows the component layout direction.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1612,8 +1499,6 @@ Sets the indent of the first line text.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1633,13 +1518,25 @@ textOverflow(options: TextOverflowOptions)
 ```
 
 Sets the display mode for overflowing text.When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**:  
-- **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines. - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...). - This must be used with [maxLines](#maxlines) for the settings to take effect. - Line breaking behavior is controlled by [wordBreak](#wordbreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**. - Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported. - Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow) and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->.  
-When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:  
-- Text scrolls horizontally within a single line. - [maxLines](#maxlines) and[copyOption](#copyoption) are ignored. - The clip attribute of the **Text** component defaults to **true**. - CustomSpan is not supported in marquee mode. - Behavior of [textAlign](#textalign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored. - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
+- **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines.  
+- **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...).  
+- This must be used with [maxLines](#maxlines) for the settings to take effect.  
+- Line breaking behavior is controlled by [wordBreak](#wordbreak). By default, it uses  
+**WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**.  
+- Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes  
+effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported.  
+- Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow)  
+and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->.When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:  
+- Text scrolls horizontally within a single line.  
+- [maxLines](#maxlines) and[copyOption](#copyoption) are ignored.  
+- The clip attribute of the **Text** component defaults to **true**.  
+- [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) is not supported in marquee mode.  
+- Behavior of [textAlign](#textalign): If the text does not scroll, **textAlign** applies; if  
+the text scrolls, **textAlign** is ignored.  
+- Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and  
+images are allowed to scroll within a single line.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1663,8 +1560,6 @@ Sets whether the text is selectable and focusable.This attribute must be used in
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1675,7 +1570,7 @@ Sets whether the text is selectable and focusable.This attribute must be used in
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [TextSelectableMode](../arkts-apis/arkts-arkui-enums-textselectablemode-e.md) | Yes |
+| mode | [TextSelectableMode](../arkts-apis/arkts-arkui-textselectablemode-e.md) | Yes |
 
 ## textShadow
 
@@ -1686,8 +1581,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 Sets the text shadow.Intelligent color extraction is not supported for the **type**, **fill**, and **color** fields of the **ShadowOptions** object.Since API version 11, this API supports input parameters in an array to implement multiple text shadows.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1701,7 +1594,7 @@ Sets the text shadow.Intelligent color extraction is not supported for the **typ
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ShadowOptions \| Array & lt;ShadowOptions & gt; | Yes |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |
 
 ## textVerticalAlign
 
@@ -1723,8 +1616,6 @@ Sets the vertical alignment of the text.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1735,7 +1626,7 @@ Sets the vertical alignment of the text.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [textVerticalAlign](#textverticalalign) | Optional & lt;TextVerticalAlign & gt; | Yes |
+| [textVerticalAlign](#textverticalalign) | [Optional](arkts-arkui-optional-t.md)&lt;TextVerticalAlign&gt; | Yes |
 
 ## wordBreak
 
@@ -1746,8 +1637,6 @@ wordBreak(value: WordBreak)
 Sets the word break rule.By default, when **wordBreak** is not called or is set to **WordBreak.BREAK_WORD**, text is broken by word. (for example, English text is broken at word boundaries).To break text by character, with the excess part displayed as an ellipsis (...), use **WordBreak.BREAK_ALL** in combination with **{overflow: TextOverflow.Ellipsis}** and **maxLines**.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

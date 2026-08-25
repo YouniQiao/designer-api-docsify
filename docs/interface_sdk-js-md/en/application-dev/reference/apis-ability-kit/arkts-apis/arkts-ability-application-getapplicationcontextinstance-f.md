@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationContextInstance
@@ -15,8 +15,6 @@ export function getApplicationContextInstance(): ApplicationContext
 Obtains the application context. This API provides context access independent of the base class **Context**. Repeated calls to this API obtain the same ApplicationContext instance.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,22 +33,3 @@ Obtains the application context. This API provides context access independent of
 | Error Code ID |
 | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, application, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      let applicationContext: common.ApplicationContext = application.getApplicationContextInstance();
-    } catch (error) {
-      let code: number = (error as BusinessError).code;
-      let message: string = (error as BusinessError).message;
-      console.error(`getApplicationContextInstance failed, error.code: ${code}, error.message: ${message}`);
-    }
-  }
-}
-```

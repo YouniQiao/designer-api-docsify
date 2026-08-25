@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## publishAsBundle
@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function publishAsBundle(
     request: NotificationRequest,
     representativeBundle: string,
-    userId: int,
+    userId: number,
     callback: AsyncCallback<void>
   ): void
 ```
@@ -20,8 +20,6 @@ function publishAsBundle(
 Publishes a notification through the reminder agent. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -35,7 +33,7 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -65,102 +63,16 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publishAsBundle callback
-let callback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("publishAsBundle success");
-    }
-}
-// Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-// NotificationRequest object
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId, callback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-// NotificationRequest object
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId).then(() => {
-    console.info("publishAsBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Bundle information of the application whose notification function is taken over by the reminder agent.
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-// NotificationRequest object
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-notificationManager.publishAsBundle(representativeBundle, request).then(() => {
-    console.info("publishAsBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## publishAsBundle
 
 ```TypeScript
-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>
+function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: number): Promise<void>
 ```
 
 Publishes a notification through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -174,7 +86,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -209,10 +121,6 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
 
-**Examples**
-
-See [publishAsBundle](#publishasbundle)
-
 
 ## publishAsBundle
 
@@ -224,8 +132,6 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -236,7 +142,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes |
 
 **Return value:**
@@ -271,7 +177,3 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) |
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-
-**Examples**
-
-See [publishAsBundle](#publishasbundle)

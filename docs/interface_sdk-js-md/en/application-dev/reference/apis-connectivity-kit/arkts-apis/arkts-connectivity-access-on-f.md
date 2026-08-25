@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('stateChange')
@@ -15,8 +15,6 @@ function on(type: 'stateChange', callback: Callback<BluetoothState>): void
 Subscribe the event reported when the Bluetooth state changes.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** 
 - API version 10 - 17: ohos.permission.ACCESS_BLUETOOTH
@@ -40,18 +38,3 @@ Subscribe the event reported when the Bluetooth state changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onReceiveEvent(data: access.BluetoothState) {
-    console.info('bluetooth state = '+ JSON.stringify(data));
-}
-try {
-    access.on('stateChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

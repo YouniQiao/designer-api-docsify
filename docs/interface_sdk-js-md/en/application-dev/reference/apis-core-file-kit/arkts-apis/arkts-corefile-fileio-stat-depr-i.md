@@ -4,8 +4,6 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md)
@@ -27,8 +25,6 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
@@ -41,18 +37,6 @@ Checks whether this file is a block special file. A block special file supports 
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isBLockDevice = dir.readSync().isBlockDevice();
-```
-
 ## isCharacterDevice
 
 ```TypeScript
@@ -62,8 +46,6 @@ isCharacterDevice(): boolean
 Checks whether this file is a character special file. A character special file supports random access, and it is not cached when accessed.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -77,18 +59,6 @@ Checks whether this file is a character special file. A character special file s
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isCharacterDevice = dir.readSync().isCharacterDevice();
-```
-
 ## isDirectory
 
 ```TypeScript
@@ -98,8 +68,6 @@ isDirectory(): boolean
 Checks whether this file is a directory.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -113,18 +81,6 @@ Checks whether this file is a directory.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let dirPath = pathDir + "/test";
-let isDirectory = fileio.statSync(dirPath).isDirectory();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isDirectory = dir.readSync().isDirectory();
-```
-
 ## isFIFO
 
 ```TypeScript
@@ -134,8 +90,6 @@ isFIFO(): boolean
 Checks whether this file is a named pipe (or FIFO). Named pipes are used for inter-process communication.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -149,18 +103,6 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFIFO = fileio.statSync(filePath).isFIFO();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFIFO = dir.readSync().isFIFO();
-```
-
 ## isFile
 
 ```TypeScript
@@ -170,8 +112,6 @@ isFile(): boolean
 Checks whether this file is a regular file.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -185,18 +125,6 @@ Checks whether this file is a regular file.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFile = fileio.statSync(filePath).isFile();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFile = dir.readSync().isFile();
-```
-
 ## isSocket
 
 ```TypeScript
@@ -206,8 +134,6 @@ isSocket(): boolean
 Checks whether this file is a socket.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -221,18 +147,6 @@ Checks whether this file is a socket.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSocket = fileio.statSync(filePath).isSocket();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSocket = dir.readSync().isSocket();
-```
-
 ## isSymbolicLink
 
 ```TypeScript
@@ -242,8 +156,6 @@ isSymbolicLink(): boolean
 Checks whether this file is a symbolic link.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -257,18 +169,6 @@ Checks whether this file is a symbolic link.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test";
-let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSymbolicLink = dir.readSync().isSymbolicLink();
-```
-
 ## atime
 
 ```TypeScript
@@ -280,8 +180,6 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -301,8 +199,6 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -318,8 +214,6 @@ Time of the last status change of the file. The value is the number of seconds e
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -339,8 +233,6 @@ Major device number.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -356,8 +248,6 @@ ID of the user group of the file.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -377,8 +267,6 @@ File identifier, which varies with files on the same device.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** ino
@@ -391,13 +279,34 @@ File identifier, which varies with files on the same device.
 readonly mode: number
 ```
 
-File type and permissions. The first four bits indicate the file type, and the last 12 bits indicate the permissions. The bit fields are described as follows: - **0o170000**: mask used to obtain the file type. - **0o140000**: The file is a socket. - **0o120000**: The file is a symbolic link. - **0o100000**: The file is a regular file. - **0o060000**: The file is a block device. - **0o040000**: The file is a directory. - **0o020000**: The file is a character device. - **0o010000**: The file is a named pipe (FIFO). - **0o0700**: mask used to obtain the owner permissions. - **0o0400**: The owner has the permission to read a regular file or a directory entry. - **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry. - **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a directory. - **0o0070**: mask used to obtain the user group permissions. - **0o0040**: The user group has the permission to read a regular file or a directory entry. - **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry. - **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a directory. - **0o0007**: mask used to obtain the permissions of other users. - **0o0004**: Other users have the permission to read a regular file or a directory entry. - **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry. - **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a directory.
+File type and permissions. The first four bits indicate the file type, and the last 12 bits indicate the permissions. The bit fields are described as follows:  
+- **0o170000**: mask used to obtain the file type.  
+- **0o140000**: The file is a socket.  
+- **0o120000**: The file is a symbolic link.  
+- **0o100000**: The file is a regular file.  
+- **0o060000**: The file is a block device.  
+- **0o040000**: The file is a directory.  
+- **0o020000**: The file is a character device.  
+- **0o010000**: The file is a named pipe (FIFO).  
+- **0o0700**: mask used to obtain the owner permissions.  
+- **0o0400**: The owner has the permission to read a regular file or a directory entry.  
+- **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry.  
+- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a  
+directory.  
+- **0o0070**: mask used to obtain the user group permissions.  
+- **0o0040**: The user group has the permission to read a regular file or a directory entry.  
+- **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry.  
+- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a  
+directory.  
+- **0o0007**: mask used to obtain the permissions of other users.  
+- **0o0004**: Other users have the permission to read a regular file or a directory entry.  
+- **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry.  
+- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a  
+directory.
 
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -417,8 +326,6 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
@@ -437,8 +344,6 @@ Number of hard links in the file.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -455,8 +360,6 @@ Minor device number.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -472,8 +375,6 @@ File size, in bytes. This parameter is valid only for regular files.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -492,8 +393,6 @@ ID of the file owner.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

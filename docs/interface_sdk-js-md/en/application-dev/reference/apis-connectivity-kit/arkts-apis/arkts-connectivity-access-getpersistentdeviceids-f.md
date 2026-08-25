@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPersistentDeviceIds
@@ -15,8 +15,6 @@ function getPersistentDeviceIds(): string[]
 Obtains the persistent randomized device address of the application.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
@@ -38,15 +36,3 @@ Obtains the persistent randomized device address of the application.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let deviceIds = access.getPersistentDeviceIds();
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

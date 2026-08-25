@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getInstalledBundleStorageStats
@@ -25,8 +25,6 @@ Obtains the storage usage of installed applications of a specified user on a dev
 > of user 101.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -25,8 +23,6 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -37,14 +33,6 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 | --- | --- | --- |
 | owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
-link.aboutToBeDeleted();
-```
-
 ## id
 
 ```TypeScript
@@ -54,8 +42,6 @@ id(): number
 获取ID时调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

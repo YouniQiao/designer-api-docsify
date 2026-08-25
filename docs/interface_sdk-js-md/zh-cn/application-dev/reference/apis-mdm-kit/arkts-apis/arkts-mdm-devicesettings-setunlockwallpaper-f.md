@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setUnlockWallpaper
@@ -15,8 +15,6 @@ function setUnlockWallpaper(admin: Want, fd: number):  Promise<void>
 设置锁屏壁纸，使用Promise异步回调。企业设备管理应用可通过此接口统一设置企业设备的锁屏壁纸，用于企业形象展示或安全管控等场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_WALLPAPER
 
@@ -45,32 +43,3 @@ function setUnlockWallpaper(admin: Want, fd: number):  Promise<void>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// 参数根据实际情况进行替换
-let filename: string = "lockwallpaper.jpg";
-let filePath: string = context.filesDir + '/' + filename;
-let fd: number = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE).fd;
-deviceSettings.setUnlockWallpaper(wantTemp, fd).then(() => {
-  console.info('Succeeded in setting lock wallpaper');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set lock wallpaper. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(fd);
-});
-```

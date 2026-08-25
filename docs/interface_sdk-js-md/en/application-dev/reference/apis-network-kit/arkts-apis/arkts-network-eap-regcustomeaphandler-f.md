@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## regCustomEapHandler
@@ -15,8 +15,6 @@ function regCustomEapHandler(netType: number, eapCode: number, eapType: number, 
 Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -41,22 +39,3 @@ Registers a custom handler of Extensible Authentication Protocol (EAP) packets f
 | [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) |
 | [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
 | [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-
-**Examples**
-
-```TypeScript
-import {eap} from '@kit.NetworkKit';
-let netType = 1;
-let eapCode = 1;
-let eapType = 25;
-let  eapData = (eapData:eap.EapData):void => {
-  console.info("rsp result",JSON.stringify(eapData))
-}
-    
-try {
-  eap.regCustomEapHandler(netType, eapCode, eapType, eapData);
-  console.info('regCustomEapHandler success');
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

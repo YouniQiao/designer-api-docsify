@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -27,8 +25,6 @@ authStatusInfo?: AuthStatusInfo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -45,8 +41,6 @@ permission: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -62,8 +56,6 @@ permissionStatus: abilityAccessCtrl.PermissionStatus
 **类型：** abilityAccessCtrl.PermissionStatus
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 

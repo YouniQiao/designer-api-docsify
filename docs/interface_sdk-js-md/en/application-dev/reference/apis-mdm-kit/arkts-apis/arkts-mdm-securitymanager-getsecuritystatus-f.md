@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getSecurityStatus
@@ -15,8 +15,6 @@ function getSecurityStatus(admin: Want, item: string): string
 Obtains the security status of the current device. This API is applicable to scenarios such as device compliance check, security status audit, and policy execution effect verification, helping enterprise administrators determine whether devices meet security requirements. Enterprises can use this API to monitor the security patch status and file encryption status of devices in real time, enabling timely detection of device security risks and prompt action to protect enterprise devices and data.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -45,23 +43,3 @@ Obtains the security status of the current device. This API is applicable to sce
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: string = securityManager.getSecurityStatus(wantTemp, 'patch');
-  console.info(`Succeeded in getting security patch tag. tag: ${result}`);
-} catch (err) {
-  console.error(`Failed to get security patch tag. Code: ${err.code}, message: ${err.message}`);
-}
-```

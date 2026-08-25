@@ -4,8 +4,6 @@ Defines a **LogEntry** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines a **LogEntry** object.
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## mtime
 
 ```TypeScript
-mtime: long
+mtime: number
 ```
 
 Time of the last modification to the file. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -46,8 +42,6 @@ Log file name.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Log file name.
 ## size
 
 ```TypeScript
-size: long
+size: number
 ```
 
 File size, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 

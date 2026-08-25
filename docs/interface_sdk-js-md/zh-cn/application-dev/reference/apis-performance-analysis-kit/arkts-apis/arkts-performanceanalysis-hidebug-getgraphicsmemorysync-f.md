@@ -3,23 +3,21 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getGraphicsMemorySync
 
 ```TypeScript
-function getGraphicsMemorySync(): int
+function getGraphicsMemorySync(): number
 ```
 
 使用同步方式获取应用显存总大小（gl + graph）。
 
-> **注意**&gt;
+> **注意**：&gt;
 > 由于该接口涉及多次跨进程通信，其耗时可能达到秒级。为了避免引入性能问题，建议不要在主线程调用该接口，推荐使用异步接口`getGraphicsMemory`。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -29,23 +27,10 @@ function getGraphicsMemorySync(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
-
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  console.info(`graphicsMemory: ${hidebug.getGraphicsMemorySync()}`)
-} catch (error) {
-  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
-}
-```

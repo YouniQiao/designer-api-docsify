@@ -4,14 +4,12 @@ Defines the struct of CustomTheme.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from 'kits/@kit.ArkUI';
 ```
 
 ## colors
@@ -25,8 +23,6 @@ Define tokens associated with color resources..
 **Type:** [CustomColors](arkts-arkui-customcolors-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Define tokens associated with dark mode color resources.
 **Default:** If not set darkColors, color value will same as colors under light mode and will not change with color mode, unless the color is setted by resource in dark directory.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

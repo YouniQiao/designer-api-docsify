@@ -4,8 +4,6 @@ global dom
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## createElement
@@ -17,8 +15,6 @@ static createElement(tag: string): Element
 create a dynamic dom by tag, return element
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 

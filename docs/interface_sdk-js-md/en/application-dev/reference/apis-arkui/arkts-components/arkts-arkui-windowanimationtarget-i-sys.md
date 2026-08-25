@@ -4,8 +4,6 @@ Window animation target.@interface WindowAnimationTarget
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,8 +23,6 @@ readonly abilityName: string
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -40,8 +36,6 @@ readonly bundleName: string
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,8 +51,6 @@ readonly missionId: number
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -72,8 +64,6 @@ readonly windowBounds: RRect
 **Type:** [RRect](arkts-arkui-rrect-i-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

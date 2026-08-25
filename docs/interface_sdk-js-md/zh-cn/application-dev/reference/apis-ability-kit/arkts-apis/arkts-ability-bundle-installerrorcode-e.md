@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -22,8 +20,6 @@ SUCCESS = 0
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,8 +35,6 @@ STATUS_INSTALL_FAILURE = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -54,8 +48,6 @@ STATUS_INSTALL_FAILURE_ABORTED = 2
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -71,8 +63,6 @@ STATUS_INSTALL_FAILURE_INVALID = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -86,8 +76,6 @@ STATUS_INSTALL_FAILURE_CONFLICT = 4
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -103,8 +91,6 @@ STATUS_INSTALL_FAILURE_STORAGE = 5
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -118,8 +104,6 @@ STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -135,8 +119,6 @@ STATUS_UNINSTALL_FAILURE = 7
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -150,8 +132,6 @@ STATUS_UNINSTALL_FAILURE_BLOCKED = 8
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -167,8 +147,6 @@ STATUS_UNINSTALL_FAILURE_ABORTED = 9
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -182,8 +160,6 @@ STATUS_UNINSTALL_FAILURE_CONFLICT = 10
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -199,8 +175,6 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -214,8 +188,6 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -231,8 +203,6 @@ STATUS_RECOVER_FAILURE_INVALID = 0x0D
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -246,8 +216,6 @@ STATUS_ABILITY_NOT_FOUND = 0x40
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -263,8 +231,6 @@ STATUS_BMS_SERVICE_ERROR = 0x41
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -278,8 +244,6 @@ STATUS_FAILED_NO_SPACE_LEFT = 0x42
 缺少卸载权限。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -295,8 +259,6 @@ STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -311,8 +273,6 @@ STATUS_INSTALL_PERMISSION_DENIED = 0x44
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -326,8 +286,6 @@ STATUS_UNINSTALL_PERMISSION_DENIED = 0x45
 缺少卸载权限。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

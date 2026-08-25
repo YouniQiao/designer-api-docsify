@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## open
@@ -17,8 +17,6 @@ declare function open(path: string, mode?: number): Promise<File>
 打开文件或目录，支持使用URI打开文件。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -69,101 +67,6 @@ declare function open(path: string, mode?: number): Promise<File>
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).then((file: fileIo.File) => {
-  console.info(`Succeeded in getting file fd: ${file.fd}`);
-  fileIo.closeSync(file);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to open file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE).then((file:fileIo.File) => {
-  console.info(`Succeeded in getting file fd: ${file.fd}`);
- fileIo.closeSync(file);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to open file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE, (err: BusinessError, file: fileIo.File) => {
-  if (err) {
-    console.error(`Failed to open. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting file fd: ${file.fd}`);
-    fileIo.closeSync(file);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE, (err: BusinessError<void> | null, file:fileIo.File | undefined) => {
-  if (err) {
-    console.error(`Failed to open. Code: ${err.code}, message: ${err.message}`);
-  } else if (file) {
-    console.info(`Succeeded in getting file fd: ${file.fd}`);
-    fileIo.closeSync(file);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath, (err: BusinessError, file: fileIo.File) => {
-  if (err) {
-    console.error(`Failed to open. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting file fd: ${file.fd}`);
-    fileIo.closeSync(file);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.open(filePath, (err: BusinessError<void> | null, file:fileIo.File | undefined) => {
-  if (err) {
-    console.error(`Failed to open. Code: ${err.code}, message: ${err.message}`);
-  } else if (file) {
-    console.info(`Succeeded in getting file fd: ${file.fd}`);
-    fileIo.closeSync(file);
-  }
-});
-```
-
 
 ## open
 
@@ -174,8 +77,6 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 打开文件或目录，支持使用URI打开文件。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -219,10 +120,6 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [open](#open)
-
 
 ## open
 
@@ -233,8 +130,6 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 打开文件或目录，可设置打开文件的选项。使用callback异步回调。支持使用URI打开文件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -278,7 +173,3 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [open](#open)

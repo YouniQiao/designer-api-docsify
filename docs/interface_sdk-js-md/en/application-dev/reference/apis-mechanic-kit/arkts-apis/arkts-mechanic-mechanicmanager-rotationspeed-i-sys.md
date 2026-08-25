@@ -4,8 +4,6 @@ Rotational speed. A negative value indicates a clockwise rotation, and a positiv
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Rotational speed. A negative value indicates a clockwise rotation, and a positiv
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## pitchSpeed
 
 ```TypeScript
-pitchSpeed?: double
+pitchSpeed?: number
 ```
 
 Pitch speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -37,16 +33,14 @@ Pitch speed, measured in radians per second.
 ## rollSpeed
 
 ```TypeScript
-rollSpeed?: double
+rollSpeed?: number
 ```
 
 Roll speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -55,16 +49,14 @@ Roll speed, measured in radians per second.
 ## yawSpeed
 
 ```TypeScript
-yawSpeed?: double
+yawSpeed?: number
 ```
 
 Yaw speed, measured in radians per second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSimpleDateTimeFormatBySkeleton
@@ -15,8 +15,6 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -41,34 +39,6 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 | --- |
 | [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 
 ## getSimpleDateTimeFormatBySkeleton
 
@@ -79,8 +49,6 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **废弃版本：** 20
 
@@ -108,7 +76,3 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 | 错误码ID |
 | --- |
 | [890001](../errorcode-i18n.md#890001-参数校验错误) |
-
-**示例**
-
-参见 [getSimpleDateTimeFormatBySkeleton](#getsimpledatetimeformatbyskeleton)

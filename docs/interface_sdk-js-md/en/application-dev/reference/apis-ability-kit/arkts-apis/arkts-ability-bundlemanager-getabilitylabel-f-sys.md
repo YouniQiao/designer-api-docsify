@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityLabel
@@ -15,8 +15,6 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -47,52 +45,6 @@ Obtains the ability label based on the given bundle name, module name, and abili
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  bundleManager.getAbilityLabel(bundleName, moduleName, abilityName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAbilityLabel failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAbilityLabel successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityLabel failed: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  bundleManager.getAbilityLabel(bundleName, moduleName, abilityName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAbilityLabel successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAbilityLabel failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityLabel failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getAbilityLabel
 
@@ -103,8 +55,6 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -139,7 +89,3 @@ Obtains the ability label based on the given bundle name, module name, and abili
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
-
-**Examples**
-
-See [getAbilityLabel](#getabilitylabel)

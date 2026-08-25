@@ -4,29 +4,25 @@ Dng图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## activeArea
 
 ```TypeScript
-readonly activeArea?: int[]
+readonly activeArea?: number[]
 ```
 
 有效图像区域。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ readonly activeArea?: int[]
 ## analogBalance
 
 ```TypeScript
-readonly analogBalance?: double[]
+readonly analogBalance?: number[]
 ```
 
 模拟增益平衡系数。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ readonly analogBalance?: double[]
 ## antiAliasStrength
 
 ```TypeScript
-readonly antiAliasStrength?: double
+readonly antiAliasStrength?: number
 ```
 
 抗锯齿滤波器强度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ readonly asShotICCProfile?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -89,16 +79,14 @@ readonly asShotICCProfile?: ArrayBuffer
 ## asShotNeutral
 
 ```TypeScript
-readonly asShotNeutral?: double[]
+readonly asShotNeutral?: number[]
 ```
 
 拍摄时的中性白点。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,16 +95,14 @@ readonly asShotNeutral?: double[]
 ## asShotPreProfileMatrix
 
 ```TypeScript
-readonly asShotPreProfileMatrix?: double[]
+readonly asShotPreProfileMatrix?: number[]
 ```
 
 应用ICC配置文件前的预变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,8 +120,6 @@ readonly asShotProfileName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -143,16 +127,14 @@ readonly asShotProfileName?: string
 ## asShotWhiteXY
 
 ```TypeScript
-readonly asShotWhiteXY?: double[]
+readonly asShotWhiteXY?: number[]
 ```
 
 拍摄时白点的CIE（1931色彩空间） x-y色度坐标。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -161,16 +143,14 @@ readonly asShotWhiteXY?: double[]
 ## baselineExposure
 
 ```TypeScript
-readonly baselineExposure?: double
+readonly baselineExposure?: number
 ```
 
 基准曝光补偿值，单位：EV。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -179,16 +159,14 @@ readonly baselineExposure?: double
 ## baselineExposureOffset
 
 ```TypeScript
-readonly baselineExposureOffset?: double
+readonly baselineExposureOffset?: number
 ```
 
 基准曝光偏移量，单位：EV。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -197,16 +175,14 @@ readonly baselineExposureOffset?: double
 ## baselineNoise
 
 ```TypeScript
-readonly baselineNoise?: double
+readonly baselineNoise?: number
 ```
 
 基准噪声水平。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -215,16 +191,14 @@ readonly baselineNoise?: double
 ## baselineSharpness
 
 ```TypeScript
-readonly baselineSharpness?: double
+readonly baselineSharpness?: number
 ```
 
 基准锐度增益。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -233,16 +207,14 @@ readonly baselineSharpness?: double
 ## bayerGreenSplit
 
 ```TypeScript
-readonly bayerGreenSplit?: int
+readonly bayerGreenSplit?: number
 ```
 
 Bayer图像中两个绿色通道的分离程度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -251,16 +223,14 @@ Bayer图像中两个绿色通道的分离程度。
 ## bestQualityScale
 
 ```TypeScript
-readonly bestQualityScale?: double
+readonly bestQualityScale?: number
 ```
 
 最佳画质缩放比例。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -269,16 +239,14 @@ readonly bestQualityScale?: double
 ## blackLevel
 
 ```TypeScript
-readonly blackLevel?: double[]
+readonly blackLevel?: number[]
 ```
 
 零光照下的编码电平。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,16 +255,14 @@ readonly blackLevel?: double[]
 ## blackLevelDeltaH
 
 ```TypeScript
-readonly blackLevelDeltaH?: double[]
+readonly blackLevelDeltaH?: number[]
 ```
 
 水平方向黑电平校正增量。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -305,16 +271,14 @@ readonly blackLevelDeltaH?: double[]
 ## blackLevelDeltaV
 
 ```TypeScript
-readonly blackLevelDeltaV?: double[]
+readonly blackLevelDeltaV?: number[]
 ```
 
 垂直方向黑电平校正增量。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -323,16 +287,14 @@ readonly blackLevelDeltaV?: double[]
 ## blackLevelRepeatDim
 
 ```TypeScript
-readonly blackLevelRepeatDim?: int[]
+readonly blackLevelRepeatDim?: number[]
 ```
 
 黑电平重复维度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -341,16 +303,14 @@ readonly blackLevelRepeatDim?: int[]
 ## calibrationIlluminant1
 
 ```TypeScript
-readonly calibrationIlluminant1?: int
+readonly calibrationIlluminant1?: number
 ```
 
 第一校准光源类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -359,16 +319,14 @@ readonly calibrationIlluminant1?: int
 ## calibrationIlluminant2
 
 ```TypeScript
-readonly calibrationIlluminant2?: int
+readonly calibrationIlluminant2?: number
 ```
 
 第二校准光源类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -377,16 +335,14 @@ readonly calibrationIlluminant2?: int
 ## cameraCalibration1
 
 ```TypeScript
-readonly cameraCalibration1?: double[]
+readonly cameraCalibration1?: number[]
 ```
 
 第一校准光源下的相机校准矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -395,16 +351,14 @@ readonly cameraCalibration1?: double[]
 ## cameraCalibration2
 
 ```TypeScript
-readonly cameraCalibration2?: double[]
+readonly cameraCalibration2?: number[]
 ```
 
 第二校准光源下的相机校准矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -422,8 +376,6 @@ readonly cameraCalibrationSignature?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -440,8 +392,6 @@ readonly cameraSerialNumber?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -449,16 +399,14 @@ readonly cameraSerialNumber?: string
 ## cfaLayout
 
 ```TypeScript
-readonly cfaLayout?: int
+readonly cfaLayout?: number
 ```
 
 CFA（Color Filter Array）布局类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -467,16 +415,14 @@ CFA（Color Filter Array）布局类型。
 ## cfaPlaneColor
 
 ```TypeScript
-readonly cfaPlaneColor?: int[]
+readonly cfaPlaneColor?: number[]
 ```
 
 CFA（Color Filter Array）各平面的颜色通道定义。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -485,16 +431,14 @@ CFA（Color Filter Array）各平面的颜色通道定义。
 ## chromaBlurRadius
 
 ```TypeScript
-readonly chromaBlurRadius?: double
+readonly chromaBlurRadius?: number
 ```
 
 色度模糊半径。单位：像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -503,16 +447,14 @@ readonly chromaBlurRadius?: double
 ## colorimetricReference
 
 ```TypeScript
-readonly colorimetricReference?: int
+readonly colorimetricReference?: number
 ```
 
 色度参考标准。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -521,16 +463,14 @@ readonly colorimetricReference?: int
 ## colorMatrix1
 
 ```TypeScript
-readonly colorMatrix1?: double[]
+readonly colorMatrix1?: number[]
 ```
 
 第一校准光源下的色彩变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -539,16 +479,14 @@ readonly colorMatrix1?: double[]
 ## colorMatrix2
 
 ```TypeScript
-readonly colorMatrix2?: double[]
+readonly colorMatrix2?: number[]
 ```
 
 第二校准光源下的色彩变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -566,8 +504,6 @@ readonly currentICCProfile?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -575,16 +511,14 @@ readonly currentICCProfile?: ArrayBuffer
 ## currentPreProfileMatrix
 
 ```TypeScript
-readonly currentPreProfileMatrix?: double[]
+readonly currentPreProfileMatrix?: number[]
 ```
 
 当前ICC配置文件前的预变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -593,16 +527,14 @@ readonly currentPreProfileMatrix?: double[]
 ## defaultBlackRender
 
 ```TypeScript
-readonly defaultBlackRender?: int
+readonly defaultBlackRender?: number
 ```
 
 默认黑场渲染方式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -611,16 +543,14 @@ readonly defaultBlackRender?: int
 ## defaultCropOrigin
 
 ```TypeScript
-readonly defaultCropOrigin?: double[]
+readonly defaultCropOrigin?: number[]
 ```
 
 默认裁剪区域的左上角坐标（x, y）。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -629,16 +559,14 @@ readonly defaultCropOrigin?: double[]
 ## defaultCropSize
 
 ```TypeScript
-readonly defaultCropSize?: int[]
+readonly defaultCropSize?: number[]
 ```
 
 默认裁剪区域的宽度和高度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -647,16 +575,14 @@ readonly defaultCropSize?: int[]
 ## defaultScale
 
 ```TypeScript
-readonly defaultScale?: double[]
+readonly defaultScale?: number[]
 ```
 
 默认缩放比例。格式为[水平缩放比例, 垂直缩放比例]。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -665,16 +591,14 @@ readonly defaultScale?: double[]
 ## defaultUserCrop
 
 ```TypeScript
-readonly defaultUserCrop?: int[]
+readonly defaultUserCrop?: number[]
 ```
 
 默认用户裁剪区域。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -683,16 +607,14 @@ readonly defaultUserCrop?: int[]
 ## dngBackwardVersion
 
 ```TypeScript
-readonly dngBackwardVersion?: int[]
+readonly dngBackwardVersion?: number[]
 ```
 
 DNG文件向后兼容的最低版本号。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -710,8 +632,6 @@ readonly dngPrivateData?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -719,16 +639,14 @@ readonly dngPrivateData?: ArrayBuffer
 ## dngVersion
 
 ```TypeScript
-readonly dngVersion?: int[]
+readonly dngVersion?: number[]
 ```
 
 DNG图片的版本号。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -737,16 +655,14 @@ DNG图片的版本号。
 ## extraCameraProfiles
 
 ```TypeScript
-readonly extraCameraProfiles?: int[]
+readonly extraCameraProfiles?: number[]
 ```
 
 额外相机配置文件索引列表。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -755,16 +671,14 @@ readonly extraCameraProfiles?: int[]
 ## forwardMatrix1
 
 ```TypeScript
-readonly forwardMatrix1?: double[]
+readonly forwardMatrix1?: number[]
 ```
 
 第一前向变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -773,16 +687,14 @@ readonly forwardMatrix1?: double[]
 ## forwardMatrix2
 
 ```TypeScript
-readonly forwardMatrix2?: double[]
+readonly forwardMatrix2?: number[]
 ```
 
 第二前向变换矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -791,16 +703,14 @@ readonly forwardMatrix2?: double[]
 ## lensInfo
 
 ```TypeScript
-readonly lensInfo?: double[]
+readonly lensInfo?: number[]
 ```
 
 镜头信息。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -809,16 +719,14 @@ readonly lensInfo?: double[]
 ## linearizationTable
 
 ```TypeScript
-readonly linearizationTable?: int[]
+readonly linearizationTable?: number[]
 ```
 
 线性化查找表，用于将原始传感器值映射为线性光强度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -827,16 +735,14 @@ readonly linearizationTable?: int[]
 ## linearResponseLimit
 
 ```TypeScript
-readonly linearResponseLimit?: double
+readonly linearResponseLimit?: number
 ```
 
 线性响应上限。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -854,8 +760,6 @@ readonly localizedCameraModel?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -872,8 +776,6 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -881,16 +783,14 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 ## maskedAreas
 
 ```TypeScript
-readonly maskedAreas?: int[]
+readonly maskedAreas?: number[]
 ```
 
 被遮蔽区域列表。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -908,8 +808,6 @@ readonly newRawImageDigest?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -917,16 +815,14 @@ readonly newRawImageDigest?: string
 ## noiseProfile
 
 ```TypeScript
-readonly noiseProfile?: double[]
+readonly noiseProfile?: number[]
 ```
 
 噪声剖面参数。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -935,16 +831,14 @@ readonly noiseProfile?: double[]
 ## noiseReductionApplied
 
 ```TypeScript
-readonly noiseReductionApplied?: double
+readonly noiseReductionApplied?: number
 ```
 
 已应用的降噪强度级别。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -962,8 +856,6 @@ readonly opcodeList1?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -979,8 +871,6 @@ readonly opcodeList2?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -998,8 +888,6 @@ readonly opcodeList3?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1007,16 +895,14 @@ readonly opcodeList3?: ArrayBuffer
 ## originalBestQualityFinalSize
 
 ```TypeScript
-readonly originalBestQualityFinalSize?: int[]
+readonly originalBestQualityFinalSize?: number[]
 ```
 
 原始最佳画质输出尺寸。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1025,16 +911,14 @@ readonly originalBestQualityFinalSize?: int[]
 ## originalDefaultCropSize
 
 ```TypeScript
-readonly originalDefaultCropSize?: double[]
+readonly originalDefaultCropSize?: number[]
 ```
 
 原始默认裁剪尺寸。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1043,16 +927,14 @@ readonly originalDefaultCropSize?: double[]
 ## originalDefaultFinalSize
 
 ```TypeScript
-readonly originalDefaultFinalSize?: int[]
+readonly originalDefaultFinalSize?: number[]
 ```
 
 原始默认最终输出尺寸。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1070,8 +952,6 @@ readonly originalRawFileData?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1087,8 +967,6 @@ readonly originalRawFileDigest?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1106,8 +984,6 @@ readonly originalRawFileName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1123,8 +999,6 @@ readonly previewApplicationName?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1142,8 +1016,6 @@ readonly previewApplicationVersion?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1151,16 +1023,14 @@ readonly previewApplicationVersion?: string
 ## previewColorSpace
 
 ```TypeScript
-readonly previewColorSpace?: int
+readonly previewColorSpace?: number
 ```
 
 预览图色彩空间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1178,8 +1048,6 @@ readonly previewDateTime?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1195,8 +1063,6 @@ readonly previewSettingsDigest?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1214,8 +1080,6 @@ readonly previewSettingsName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1231,8 +1095,6 @@ readonly profileCalibrationSignature?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1250,8 +1112,6 @@ readonly profileCopyright?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1259,16 +1119,14 @@ readonly profileCopyright?: string
 ## profileEmbedPolicy
 
 ```TypeScript
-readonly profileEmbedPolicy?: int
+readonly profileEmbedPolicy?: number
 ```
 
 配置文件嵌入策略。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1277,16 +1135,14 @@ readonly profileEmbedPolicy?: int
 ## profileHueSatMapData1
 
 ```TypeScript
-readonly profileHueSatMapData1?: double[]
+readonly profileHueSatMapData1?: number[]
 ```
 
 第一组色调/饱和度映射表数据。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1295,16 +1151,14 @@ readonly profileHueSatMapData1?: double[]
 ## profileHueSatMapData2
 
 ```TypeScript
-readonly profileHueSatMapData2?: double[]
+readonly profileHueSatMapData2?: number[]
 ```
 
 第二组色调/饱和度映射表数据。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1313,16 +1167,14 @@ readonly profileHueSatMapData2?: double[]
 ## profileHueSatMapDims
 
 ```TypeScript
-readonly profileHueSatMapDims?: int[]
+readonly profileHueSatMapDims?: number[]
 ```
 
 色调/饱和度映射表维度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1331,16 +1183,14 @@ readonly profileHueSatMapDims?: int[]
 ## profileHueSatMapEncoding
 
 ```TypeScript
-readonly profileHueSatMapEncoding?: int
+readonly profileHueSatMapEncoding?: number
 ```
 
 色调/饱和度映射表编码方式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1349,16 +1199,14 @@ readonly profileHueSatMapEncoding?: int
 ## profileLookTableData
 
 ```TypeScript
-readonly profileLookTableData?: double[]
+readonly profileLookTableData?: number[]
 ```
 
 色彩表数据。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1367,16 +1215,14 @@ readonly profileLookTableData?: double[]
 ## profileLookTableDims
 
 ```TypeScript
-readonly profileLookTableDims?: int[]
+readonly profileLookTableDims?: number[]
 ```
 
 ProfileLookTableData的维度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1385,16 +1231,14 @@ ProfileLookTableData的维度。
 ## profileLookTableEncoding
 
 ```TypeScript
-readonly profileLookTableEncoding?: int
+readonly profileLookTableEncoding?: number
 ```
 
 色彩表编码方式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1412,8 +1256,6 @@ readonly profileName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1421,16 +1263,14 @@ readonly profileName?: string
 ## profileToneCurve
 
 ```TypeScript
-readonly profileToneCurve?: double[]
+readonly profileToneCurve?: number[]
 ```
 
 配置文件色调曲线。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1448,8 +1288,6 @@ readonly rawDataUniqueID?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1466,8 +1304,6 @@ readonly rawImageDigest?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1475,16 +1311,14 @@ readonly rawImageDigest?: string
 ## rawToPreviewGain
 
 ```TypeScript
-readonly rawToPreviewGain?: double
+readonly rawToPreviewGain?: number
 ```
 
 主RAW图与预览图之间的增益比。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1493,16 +1327,14 @@ readonly rawToPreviewGain?: double
 ## reductionMatrix1
 
 ```TypeScript
-readonly reductionMatrix1?: double[]
+readonly reductionMatrix1?: number[]
 ```
 
 第一校准光源下的降维矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1511,16 +1343,14 @@ readonly reductionMatrix1?: double[]
 ## reductionMatrix2
 
 ```TypeScript
-readonly reductionMatrix2?: double[]
+readonly reductionMatrix2?: number[]
 ```
 
 第二校准光源下的降维矩阵。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1529,16 +1359,14 @@ readonly reductionMatrix2?: double[]
 ## rowInterleaveFactor
 
 ```TypeScript
-readonly rowInterleaveFactor?: int
+readonly rowInterleaveFactor?: number
 ```
 
 行交织因子。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1547,16 +1375,14 @@ readonly rowInterleaveFactor?: int
 ## shadowScale
 
 ```TypeScript
-readonly shadowScale?: double
+readonly shadowScale?: number
 ```
 
 阴影区域缩放因子。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1565,16 +1391,14 @@ readonly shadowScale?: double
 ## subTileBlockSize
 
 ```TypeScript
-readonly subTileBlockSize?: int[]
+readonly subTileBlockSize?: number[]
 ```
 
 图像分块存储，定义块的长和宽。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1592,8 +1416,6 @@ readonly uniqueCameraModel?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1601,16 +1423,14 @@ readonly uniqueCameraModel?: string
 ## whiteLevel
 
 ```TypeScript
-readonly whiteLevel?: double[]
+readonly whiteLevel?: number[]
 ```
 
 白电平，表示传感器最大有效输出。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

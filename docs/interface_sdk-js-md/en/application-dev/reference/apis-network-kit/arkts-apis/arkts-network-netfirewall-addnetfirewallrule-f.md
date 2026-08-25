@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## addNetFirewallRule
@@ -61,8 +61,6 @@ Adds a firewall rule for the system user ID. The supported rule types are IP, Do
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -95,108 +93,3 @@ Adds a firewall rule for the system user ID. The supported rule types are IP, Do
 | [29400004](../errorcode-net-netfirewall.md#29400004-number-of-domain-name-rules-in-the-firewall-rule-exceeds-the-maximum) |
 | [29400005](../errorcode-net-netfirewall.md#29400005-number-of-fuzzy-domain-name-rules-exceeds-the-maximum) |
 | [29400007](../errorcode-net-netfirewall.md#29400007-dns-rule-duplication) |
-
-**Examples**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ipRule: netFirewall.NetFirewallRule = {
-  name: "rule1",
-  description: "rule1 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_IP,
-  isEnabled: true,
-  appUid: 20001,
-  localIps: [
-    {
-      family: 1,
-      type: 1,
-      address: "10.10.1.1",
-      mask: 32
-    },{
-      family: 1,
-      type: 2,
-      startIp: "10.20.1.1",
-      endIp: "10.20.1.10"
-    }],
-  remoteIps:[
-    {
-      family: 1,
-      type: 1,
-      address: "20.10.1.1",
-      mask: 32
-    },{
-      family: 1,
-      type: 2,
-      startIp: "20.20.1.1",
-      endIp: "20.20.1.10"
-    }],
-  protocol: 6,
-  localPorts: [
-    {
-      startPort: 1000,
-      endPort: 1000
-    },{
-      startPort: 2000,
-      endPort: 2001
-    }],
-  remotePorts: [
-    {
-      startPort: 443,
-      endPort: 443
-    }],
-  userId: 100
-};
-netFirewall.addNetFirewallRule(ipRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-
-let domainRule: netFirewall.NetFirewallRule = {
-  name: "rule2",
-  description: "rule2 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_DOMAIN,
-  isEnabled: true,
-  appUid: 20002,
-  domains: [
-    {
-      isWildcard: false,
-      domain: "www.example.cn"
-    },{
-      isWildcard: true,
-      domain: "*.example.cn"
-    }],
-  userId: 100
-};
-netFirewall.addNetFirewallRule(domainRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-
-let dnsRule: netFirewall.NetFirewallRule = {
-  name: "rule3",
-  description: "rule3 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_DNS,
-  isEnabled: true,
-  appUid: 20003,
-  dns:{
-   primaryDns: "4.4.4.4",
-   standbyDns: "8.8.8.8",
-  },
-  userId: 100
-};
-netFirewall.addNetFirewallRule(dnsRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-```

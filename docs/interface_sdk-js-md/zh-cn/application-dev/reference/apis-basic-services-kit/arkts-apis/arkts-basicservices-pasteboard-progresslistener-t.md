@@ -8,8 +8,6 @@ type ProgressListener = (progress: ProgressInfo) => void
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard

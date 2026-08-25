@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSilentReminderEnabled
@@ -16,8 +16,6 @@ function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
@@ -47,36 +45,3 @@ function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.isSilentReminderEnabled(bundle).then((data: notificationManager.SwitchState) => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `isSilentReminderEnabled success, switchState:  ${JSON.stringify(data)}.`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `isSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-try {
-    notificationManager.isSilentReminderEnabled(bundle).then((data: notificationManager.SwitchState) => {
-        console.info(`Reminder data is ${JSON.stringify(data)}`);
-    });
-} catch (err) {
-    console.info(`isSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-}
-```

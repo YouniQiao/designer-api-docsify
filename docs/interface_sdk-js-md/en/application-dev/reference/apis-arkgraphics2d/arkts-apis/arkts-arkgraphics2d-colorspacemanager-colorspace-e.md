@@ -4,8 +4,6 @@ Enumerates the color space types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 Unknown type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The enc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -49,8 +43,6 @@ DCI_P3 = 2
 DCI-P3.The conversion function is of the Gamma 2.6 type.The encoding range is of the Full type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Display P3.The conversion function is of the SRGB type.The encoding range is of 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -81,8 +71,6 @@ SRGB = 4
 SRGB.The conversion function is of the SRGB type.The encoding range is of the Full type.This is the default color space type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ BT709.The conversion function is of the BT709 type.The encoding range is of the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -113,8 +99,6 @@ BT601_EBU = 7
 BT601_P.The conversion function is of the BT709 type.The encoding range is of the Full type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ BT601_N.The conversion function is of the BT709 type.The encoding range is of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -145,8 +127,6 @@ BT2020_HLG = 9
 BT2020.The conversion function is of the HLG type.The encoding range is of the Full type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,8 +142,6 @@ BT2020.The conversion function is of the PQ type.The encoding range is of the Fu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -177,8 +155,6 @@ P3_HLG = 11
 Display P3.The conversion function is of the HLG type.The encoding range is of the Full type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,8 +170,6 @@ Display P3.The conversion function is of the PQ type.The encoding range is of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -209,8 +183,6 @@ ADOBE_RGB_1998_LIMIT = 13
 Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The encoding range is of the Limit type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,8 +198,6 @@ Display P3.The conversion function is of the SRGB type.The encoding range is of 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -241,8 +211,6 @@ SRGB_LIMIT = 15
 SRGB.The conversion function is of the SRGB type.The encoding range is of the Limit type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -258,8 +226,6 @@ BT709.The conversion function is of the BT709 type.The encoding range is of the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -273,8 +239,6 @@ BT601_EBU_LIMIT = 17
 BT601_P.The conversion function is of the BT709 type.The encoding range is of the Limit type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -290,8 +254,6 @@ BT601_N.The conversion function is of the BT709 type.The encoding range is of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -305,8 +267,6 @@ BT2020_HLG_LIMIT = 19
 BT2020.The conversion function is of the HLG type.The encoding range is of the Limit type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -322,8 +282,6 @@ BT2020.The conversion function is of the PQ type.The encoding range is of the Li
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -337,8 +295,6 @@ P3_HLG_LIMIT = 21
 Display P3.The conversion function is of the HLG type.The encoding range is of the Limit type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -354,8 +310,6 @@ Display P3.The conversion function is of the PQ type.The encoding range is of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -369,8 +323,6 @@ LINEAR_P3 = 23
 Display P3.The conversion function is of the Linear type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -386,8 +338,6 @@ SRGB.The conversion function is of the Linear type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -401,8 +351,6 @@ LINEAR_BT709 = LINEAR_SRGB
 Same as that of LINEAR_SRGB.BT709.The conversion function is of the Linear type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -418,8 +366,6 @@ BT2020.The conversion function is of the Linear type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -433,8 +379,6 @@ DISPLAY_SRGB = SRGB
 Same as that of SRGB.SRGB.The conversion function is of the SRGB type.The encoding range is of the Full type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -450,8 +394,6 @@ Same as that of DISPLAY_P3.Display P3.The conversion function is of the SRGB typ
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -465,8 +407,6 @@ DISPLAY_P3_HLG = P3_HLG
 Same as that of P3_HLG.Display P3.The conversion function is of the HLG type.The encoding range is of the Full type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -482,8 +422,6 @@ Same as that of P3_PQ.Display P3.The conversion function is of the PQ type.The e
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -498,8 +436,6 @@ BT2020.The conversion function is of the LOG type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## DISPLAY_BT2020_SRGB
@@ -512,8 +448,6 @@ DISPLAY BT2020.The conversion function is of the SRGB type.The encoding range is
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## CUSTOM
@@ -525,8 +459,6 @@ CUSTOM = 5
 Custom type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

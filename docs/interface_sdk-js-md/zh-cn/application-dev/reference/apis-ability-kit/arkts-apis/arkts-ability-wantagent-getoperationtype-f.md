@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## getOperationType
 
 ```TypeScript
-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
+function getOperationType(agent: WantAgent, callback: AsyncCallback<number>): void
 ```
 
 获取一个WantAgent实例的OperationType信息，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,7 +25,7 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [agent](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-t.md) | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -38,285 +36,16 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | [16000015](../errorcode-ability.md#16000015-服务超时) |
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgentData: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent回调
-let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    // 创建WantAgent成功，保存返回的WantAgent对象
-    wantAgentData = data;
-  }
-  // getOperationTypeCallback回调
-  let getOperationTypeCallback = (err: BusinessError, data: number) => {
-    if (err) {
-      console.error(`getOperationType failed! ${err.code} ${err.message}`);
-    } else {
-      console.info(`getOperationType ok! ${JSON.stringify(data)}`);
-    }
-  }
-  try {
-    // 调用getOperationType接口获取WantAgent实例的操作类型
-    wantAgent.getOperationType(wantAgentData, getOperationTypeCallback);
-  } catch (err) {
-    console.error(`getOperationTypeCallback failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-  }
-}
-
-try {
-  // 调用getWantAgent接口创建WantAgent对象
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch (err) {
-  console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgentData: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters: {
-        'mykey0': 2222,
-        'mykey1': [1, 2, 3],
-        'mykey2': '[1, 2, 3]',
-        'mykey3': 'ssssssssssssssssssssssssss',
-        'mykey4': [false, true, false],
-        'mykey5': ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        'mykey6': true,
-      } as Record<string, RecordData>
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-};
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, (err, data) => {
-    if (err) {
-      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
-      console.error('getWantAgent failed: data is undefined');
-      return;
-    }
-    wantAgentData = data;
-    try {
-      wantAgent.getOperationType(wantAgentData, (err, data) => {
-        if (err) {
-          console.error(`getOperationType failed! ${err.code} ${err.message}`);
-        } else {
-          console.info(`getOperationType ok! ${JSON.stringify(data)}`);
-        }
-      });
-    } catch (error) {
-      let err = error as BusinessError;
-      console.error(`getOperationType failed! ${err.code} ${err.message}`);
-    }
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgentData: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent回调
-let getWantAgentCallback = (err: BusinessError, data: WantAgent) => {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    // 创建WantAgent成功，保存返回的WantAgent对象
-    wantAgentData = data;
-  }
-  try {
-    // 使用Promise方式获取WantAgent实例的操作类型
-    wantAgent.getOperationType(wantAgentData).then((data) => {
-      console.info(`getOperationType ok! ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getOperationType failed! ${err.code} ${err.message}`);
-    });
-  } catch (err) {
-    console.error(`getOperationType failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-  }
-}
-
-try {
-  // 调用getWantAgent接口创建WantAgent对象
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch (err) {
-  console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-// wantAgent对象
-let wantAgentData: WantAgent;
-// WantAgentInfo对象
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters: {
-        'mykey0': 2222,
-        'mykey1': [1, 2, 3],
-        'mykey2': '[1, 2, 3]',
-        'mykey3': 'ssssssssssssssssssssssssss',
-        'mykey4': [false, true, false],
-        'mykey5': ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        'mykey6': true,
-      } as Record<string, RecordData>
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-};
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, (err, data) => {
-    if (err) {
-      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
-      console.error('getWantAgent failed: data is undefined');
-      return;
-    }
-    wantAgentData = data;
-    try {
-      wantAgent.getOperationType(wantAgentData).then((data) => {
-        console.info(`getOperationType ok! ${JSON.stringify(data)}`);
-      }).catch((error) => {
-        let err = error as BusinessError;
-        console.error(`getOperationType failed! ${err.code} ${err.message}`);
-      });
-    } catch (error) {
-      let err = error as BusinessError;
-      console.error(`getOperationType failed! ${err.code} ${err.message}`);
-    }
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`getWantAgent failed! ${err.code} ${err.message}`);
-}
-```
-
 
 ## getOperationType
 
 ```TypeScript
-function getOperationType(agent: WantAgent): Promise<int>
+function getOperationType(agent: WantAgent): Promise<number>
 ```
 
 获取一个WantAgent实例的OperationType信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -332,7 +61,7 @@ function getOperationType(agent: WantAgent): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -342,7 +71,3 @@ function getOperationType(agent: WantAgent): Promise<int>
 | [16000007](../errorcode-ability.md#16000007-服务未响应) |
 | [16000015](../errorcode-ability.md#16000015-服务超时) |
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
-
-**示例**
-
-参见 [getOperationType](#getoperationtype)

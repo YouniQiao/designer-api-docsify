@@ -4,29 +4,25 @@ Process all the information required for compression and decompression.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## adler
 
 ```TypeScript
-adler?: long
+adler?: number
 ```
 
 Adler-32 or CRC-32 value of uncompressed data.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Adler-32 or CRC-32 value of uncompressed data.
 ## availableIn
 
 ```TypeScript
-availableIn?: int
+availableIn?: number
 ```
 
 Number of bytes available for **nextIn**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Number of bytes available for **nextIn**.
 ## availableOut
 
 ```TypeScript
-availableOut?: int
+availableOut?: number
 ```
 
 Number of remaining bytes available for **nextOut**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,16 +63,14 @@ Number of remaining bytes available for **nextOut**.
 ## dataType
 
 ```TypeScript
-dataType?: int
+dataType?: number
 ```
 
 Binary or text of **deflate**, or decoding state of **inflate**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +88,6 @@ Input bytes to be compressed.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -116,8 +104,6 @@ Output bytes after compression.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -125,16 +111,14 @@ Output bytes after compression.
 ## totalIn
 
 ```TypeScript
-totalIn?: long
+totalIn?: number
 ```
 
 Total number of input bytes read so far.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -143,16 +127,14 @@ Total number of input bytes read so far.
 ## totalOut
 
 ```TypeScript
-totalOut?: long
+totalOut?: number
 ```
 
 Total number of output bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

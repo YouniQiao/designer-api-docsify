@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnabledBySlot
@@ -15,8 +15,6 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 Sets whether notifications of a specified slot can be sent to devices of a specified type through cross-device collaboration. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -45,20 +43,3 @@ Sets whether notifications of a specified slot can be sent to devices of a speci
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let slot: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-let deviceType: string = 'wearable';
-let enabled: boolean = true;
-
-notificationManager.setDistributedEnabledBySlot(slot, deviceType, enabled).then(() => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `setDistributedEnabledBySlot success.`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `setDistributedEnabledBySlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```

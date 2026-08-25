@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## springCurve
@@ -16,8 +16,6 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,18 +26,11 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 | --- | --- | --- |
 | velocity | number | Yes |
 | mass | number | Yes |
-| stiffness | number | Yes |
-| damping | number | Yes |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.springCurve(10, 1, 228, 30) // Create a spring curve.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrinterCapabilityByUri
@@ -15,8 +15,6 @@ function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Pro
 Query printer capabilityies by printer uri.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -46,18 +44,3 @@ Query printer capabilityies by printer uri.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13100005](../errorcode-print.md#13100005-invalid-printer) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerUri : string = "testPrinterUri";
-let printerId : string = "testPrinterId";
-print.queryPrinterCapabilityByUri(printerUri, printerId).then((capabilities: print.PrinterCapabilities) => {
-    console.info('queryPrinterCapabilityByUri success' + JSON.stringify(capabilities));
-}).catch((error: BusinessError) => {
-    console.error('queryPrinterCapabilityByUri error : ' + JSON.stringify(error));
-})
-```

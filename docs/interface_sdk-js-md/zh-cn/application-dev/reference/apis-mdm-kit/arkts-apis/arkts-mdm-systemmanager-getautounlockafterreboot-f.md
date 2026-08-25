@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAutoUnlockAfterReboot
@@ -15,8 +15,6 @@ function getAutoUnlockAfterReboot(admin: Want): boolean
 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,37 +43,6 @@ function getAutoUnlockAfterReboot(admin: Want): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: boolean = systemManager.getAutoUnlockAfterReboot(wantTemp);
-  console.info(`Succeeded in getting auto unlock after reboot. result: ${result}`);
-} catch (err) {
-  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  systemManager.getAutoUnlockAfterReboot(null);
-  console.info('Succeeded in getting auto unlock after reboot.');
-} catch (err) {
-  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getAutoUnlockAfterReboot
 
@@ -86,8 +53,6 @@ function getAutoUnlockAfterReboot(admin: Want | null): boolean
 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -115,7 +80,3 @@ function getAutoUnlockAfterReboot(admin: Want | null): boolean
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getAutoUnlockAfterReboot](#getautounlockafterreboot)

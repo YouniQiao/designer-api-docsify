@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## cancelApplicationAutoStartup
@@ -15,8 +15,6 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCall
 Cancels the auto-startup setting for an application component. This API uses an asynchronous callback to return the result. Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
@@ -44,50 +42,6 @@ Cancels the auto-startup setting for an application component. This API uses an 
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.cancelApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
-      return;
-    }
-    console.info(`cancelApplicationAutoStartup success.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  autoStartupManager.cancelApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }).then(() => {
-    console.info(`cancelApplicationAutoStartup success.`);
-  }).catch((err: BusinessError) => {
-    console.error(`cancelApplicationAutoStartup failed, err code: ${err.code}, msg: ${err.message}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`cancelApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
 
 ## cancelApplicationAutoStartup
 
@@ -98,8 +52,6 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 Cancels the auto-startup setting for an application component. This API uses a promise to return the result. Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
@@ -131,7 +83,3 @@ Cancels the auto-startup setting for an application component. This API uses a p
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [cancelApplicationAutoStartup](#cancelapplicationautostartup)

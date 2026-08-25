@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ constructor(value?: TextStyleInterface)
 文本字体样式的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,11 +41,9 @@ readonly fontColor?: ResourceColor
 
 获取属性字符串的文本颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,11 +59,9 @@ readonly fontConfigs?: FontConfigs
 
 获取属性字符串的字体配置。默认返回undefined，表示未设置fontConfigs。
 
-**类型：** FontConfigs
+**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,8 +81,6 @@ readonly fontFamily?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -103,13 +93,11 @@ readonly fontFamily?: string
 readonly fontSize?: number
 ```
 
-获取属性字符串的文本字体大小。单位：vp 
+获取属性字符串的文本字体大小。单位：[vp](arkts-arkui-length-t.md) 
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,8 +117,6 @@ readonly fontStyle?: FontStyle
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -148,8 +134,6 @@ readonly fontVariations?: Array<FontVariation>
 **类型：** Array&lt;FontVariation&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,8 +154,6 @@ readonly fontWeight?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -186,11 +168,9 @@ readonly strokeColor?: ResourceColor
 
 获取属性字符串的文本描边颜色。默认返回字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,11 +186,9 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 
 获取属性字符串的文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,13 +202,11 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 readonly strokeWidth?: number
 ```
 
-获取属性字符串的文本描边宽度。默认返回0，单位为vp。
+获取属性字符串的文本描边宽度。默认返回0，单位为[vp](arkts-arkui-length-t.md)。
 
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,11 +222,9 @@ readonly superscript?: SuperscriptStyle
 
 获取属性字符串的文本上下角标。默认值：SuperscriptStyle.NORMAL。
 
-**类型：** SuperscriptStyle
+**类型：** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

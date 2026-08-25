@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## springMotion
@@ -15,8 +15,6 @@ function springMotion(response?: number, dampingFraction?: number, overlapDurati
 Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object, each animation replaces their predecessor and inherits the velocity.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,14 +32,4 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-curves.springMotion() // Create a spring animation curve with default settings.
-curves.springMotion(0.5) // Create a spring animation curve with the specified response value.
-curves.springMotion(0.5, 0.6) // Create a spring animation curve with the specified response and dampingFraction values.
-curves.springMotion(0.5, 0.6, 0) // Create a spring animation curve with the specified parameter values.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

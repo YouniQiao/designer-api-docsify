@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## triggerAsync
@@ -16,8 +16,6 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,7 +27,7 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [agent](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-t.md) | Yes |
-| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes |
+| triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | Yes |
 | context | [Context](arkts-ability-context-c.md) | Yes |
 
 **Return value:**
@@ -47,78 +45,3 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 | [16000020](../errorcode-ability.md#16000020-context-is-not-an-ability-level-context) |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
 | [16000153](../errorcode-ability.md#16000153-wantagent-object-is-canceled) |
-
-**Examples**
-
-```TypeScript
-import { wantAgent, Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgent object.
-let wantAgentData: WantAgent;
-// triggerInfo
-let triggerInfo: wantAgent.TriggerInfo = {
-  code: 0 // Custom result code.
-};
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  // Custom parameters.
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  // Specified operation.
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  // WantAgent object type.
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-class MyAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      // Create a WantAgent object.
-      wantAgent.getWantAgent(wantAgentInfo, (err: BusinessError, data: WantAgent) => {
-        if (err) {
-          console.info(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-        } else {
-          wantAgentData = data;
-        }
-
-        try {
-          // Proactively trigger a WantAgent object.
-          wantAgent.triggerAsync(wantAgentData, triggerInfo, this.context).then((data) => {
-            console.info(`trigger success, data: ${JSON.stringify(data)}`);
-          }).catch((err: BusinessError) => {
-            console.error(`triggerAsync failed! ${err.code} ${err.message}`);
-          });
-        } catch (err) {
-          console.error(`triggerAsync failed! ${err.code} ${err.message}`);
-        }
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let msg = (err as BusinessError).message;
-      console.error(`getWantAgent failed, code: ${code}, message: ${msg}.`);
-    }
-  }
-}
-```

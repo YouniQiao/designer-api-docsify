@@ -9,8 +9,6 @@ APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [On](arkts-test-uitest-on-c.md)
@@ -20,8 +18,8 @@ APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## clickable
@@ -33,8 +31,6 @@ clickable(b?: boolean): By
 Specifies the clickable attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -54,22 +50,6 @@ Specifies the clickable attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.clickable(true); // Use the static constructor ON to create an On object and specify the clickable attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.clickable(true); // Use the static constructor BY to create a By object and specify the clickable attribute of the target component.
-```
-
 ## enabled
 
 ```TypeScript
@@ -79,8 +59,6 @@ enabled(b?: boolean): By
 Specifies the enabled attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -100,22 +78,6 @@ Specifies the enabled attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.enabled(true); // Use the static constructor ON to create an On object and specify the enabled attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.enabled(true); // Use the static constructor BY to create a By object and specify the enabled attribute of the target component.
-```
-
 ## focused
 
 ```TypeScript
@@ -125,8 +87,6 @@ focused(b?: boolean): By
 Specifies the focused attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -146,22 +106,6 @@ Specifies the focused attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.focused(true); // Use the static constructor ON to create an On object and specify the focused attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.focused(true); // Use the static constructor BY to create a By object and specify the focused attribute of the target component.
-```
-
 ## id
 
 ```TypeScript
@@ -171,8 +115,6 @@ id(id: number): By
 Specifies the ID attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -192,29 +134,6 @@ Specifies the ID attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.id(123); // Use the static constructor BY to create a By object and specify the id attribute of the target component.
-```
-
 ## isAfter
 
 ```TypeScript
@@ -224,8 +143,6 @@ isAfter(by: By): By
 Specifies that the target component is located after the given attribute component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -245,24 +162,6 @@ Specifies that the target component is located after the given attribute compone
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// Use the static constructor ON to create an On object and specify that the target component is located after the given attribute component.
-let on: On = ON.type('Text').isAfter(ON.text('123')); // Search for the first Text component located after the component whose text is 123.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// Use the static constructor BY to create a by object and specify that the target component is located after the given attribute component.
-let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Text component located after the component whose text is 123.
-```
-
 ## isBefore
 
 ```TypeScript
@@ -272,8 +171,6 @@ isBefore(by: By): By
 Specifies that the target component is located before the given attribute component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -293,24 +190,6 @@ Specifies that the target component is located before the given attribute compon
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// Use the static constructor ON to create an On object and specify that the target component is located before the given attribute component.
-let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first Button component located before the component whose text is 123.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
-let by: By = BY.type('Button').isBefore(BY.text('123')); // Search for the first Button component located before the component whose text is 123.
-```
-
 ## key
 
 ```TypeScript
@@ -320,8 +199,6 @@ key(key: string): By
 Specifies the key attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -341,15 +218,6 @@ Specifies the key attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.key('123'); // Use the static constructor BY to create a By object and specify the key attribute of the target component.
-```
-
 ## scrollable
 
 ```TypeScript
@@ -359,8 +227,6 @@ scrollable(b?: boolean): By
 Specifies the scrollable attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -380,22 +246,6 @@ Specifies the scrollable attribute of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.scrollable(true); // Use the static constructor ON to create an On object and specify the scrollable attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.scrollable(true); // Use the static constructor BY to create a By object and specify the scrollable attribute of the target component.
-```
-
 ## selected
 
 ```TypeScript
@@ -405,8 +255,6 @@ selected(b?: boolean): By
 Specifies the selected status of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -426,22 +274,6 @@ Specifies the selected status of the target component.
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.selected(true); // Use the static constructor ON to create an On object and specify the selected attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.selected(true); // Use the static constructor BY to create a By object and specify the selected attribute of the target component.
-```
-
 ## text
 
 ```TypeScript
@@ -451,8 +283,6 @@ text(txt: string, pattern?: MatchPattern): By
 Specifies the text attribute of the target component. Multiple match patterns are supported.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -473,22 +303,6 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // Use the static constructor ON to create an On object and specify the text attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
-```
-
 ## type
 
 ```TypeScript
@@ -498,8 +312,6 @@ type(tp: string): By
 Specifies the type attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -518,26 +330,3 @@ Specifies the type attribute of the target component.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
-```

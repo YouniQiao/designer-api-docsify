@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## getTouchModeSync
@@ -17,8 +17,6 @@ function getTouchModeSync(): string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -30,23 +28,3 @@ function getTouchModeSync(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    let touchMode: string = accessibility.getTouchModeSync();
-    console.info(`current touch mode: ${JSON.stringify(touchMode)}`);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

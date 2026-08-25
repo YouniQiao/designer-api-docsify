@@ -15,8 +15,6 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getSlot](arkts-notification-notificationmanager-getslot-f.md)
@@ -30,34 +28,6 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 | slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// getSlot回调
-let getSlotCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("getSlot failed " + JSON.stringify(err));
-  } else {
-    console.info("getSlot success");
-  }
-}
-let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
-Notification.getSlot(slotType, getSlotCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
-Notification.getSlot(slotType).then((data) => {
-  console.info("getSlot success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getSlot failed, code is ${err}`);
-});
-```
-
 
 ## getSlot
 
@@ -68,8 +38,6 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 获取一个指定类型的通知通道（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -88,7 +56,3 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 | 类型 |
 | --- |
 | Promise&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; |
-
-**示例**
-
-参见 [getSlot](#getslot)

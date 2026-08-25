@@ -10,14 +10,12 @@ The **ArcAlphabetIndexer** component is an arc-shaped component designed for qui
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -29,8 +27,6 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 Creates an instance of the **ArcAlphabetIndexer** component with initialization parameters.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

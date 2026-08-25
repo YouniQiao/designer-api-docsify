@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setMouseScrollRows
 
 ```TypeScript
-function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void
+function setMouseScrollRows(rows: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the number of mouse scroll lines. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -26,7 +24,7 @@ Sets the number of mouse scroll lines. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rows | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rows | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -36,74 +34,16 @@ Sets the number of mouse scroll lines. This API uses an asynchronous callback to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setMouseScrollRows(1, (error: BusinessError) => {
-              if (error) {
-                console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`setMouseScrollRows success`);
-            });
-          } catch (error) {
-            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setMouseScrollRows(20).then(() => {
-              console.info(`setMouseScrollRows success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## setMouseScrollRows
 
 ```TypeScript
-function setMouseScrollRows(rows: int): Promise<void>
+function setMouseScrollRows(rows: number): Promise<void>
 ```
 
 Sets the number of mouse scroll lines. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -113,7 +53,7 @@ Sets the number of mouse scroll lines. This API uses a promise to return the res
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rows | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rows | number | Yes |
 
 **Return value:**
 
@@ -127,7 +67,3 @@ Sets the number of mouse scroll lines. This API uses a promise to return the res
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setMouseScrollRows](#setmousescrollrows)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('operatingHandChanged')
@@ -15,8 +15,6 @@ function off(type: 'operatingHandChanged', callback?: Callback<OperatingHandStat
 Unsubscribes from operating hand change events.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
@@ -41,20 +39,6 @@ Unsubscribes from operating hand change events.
 | [31500001](../errorcode-motion.md#31500001-service-exception) |
 | [31500003](../errorcode-motion.md#31500003-unsubscription-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    motion.off('operatingHandChanged');
-    console.info("off succeeded");
-} catch (err) {
-    let error = err as BusinessError;
-    console.error("Failed off and err code is " + error.code);
-}
-```
-
 
 ## off('holdingHandChanged')
 
@@ -65,8 +49,6 @@ function off(type: 'holdingHandChanged', callback?: Callback<HoldingHandStatus>)
 Disables listening for holding hand status changes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.DETECT_GESTURE
 
@@ -87,17 +69,3 @@ Disables listening for holding hand status changes.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [31500001](../errorcode-motion.md#31500001-service-exception) |
 | [31500003](../errorcode-motion.md#31500003-unsubscription-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  motion.off('holdingHandChanged'); // Unregister all callbacks for the holding hand status change event.
-  console.info('off succeeded');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error('Failed off; err code = ' + error.code);
-}
-```

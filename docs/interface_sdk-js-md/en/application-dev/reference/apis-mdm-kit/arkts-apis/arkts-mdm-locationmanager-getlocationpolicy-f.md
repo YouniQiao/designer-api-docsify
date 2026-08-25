@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from '@kit.MDMKit';
+import { locationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getLocationPolicy
@@ -15,8 +15,6 @@ function getLocationPolicy(admin: Want): LocationPolicy
 Queries the location service policy.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -45,26 +43,6 @@ Queries the location service policy.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-    let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
-    console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch(err) {
-    console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getLocationPolicy
 
@@ -75,8 +53,6 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 Queries the location service policy. This API can be used in enterprise device administrator applications to check the current location service policy state of the device, for policy compliance verification or state confirmation before policy adjustment. It is suitable for scenarios such as confirming the current policy configuration, reading the policy state when the device administrator application starts, and checking the policy when troubleshooting location service issues.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -104,7 +80,3 @@ Queries the location service policy. This API can be used in enterprise device a
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getLocationPolicy](#getlocationpolicy)

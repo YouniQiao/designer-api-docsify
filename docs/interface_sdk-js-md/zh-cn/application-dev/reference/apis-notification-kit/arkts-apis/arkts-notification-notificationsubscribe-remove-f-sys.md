@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## remove
@@ -21,8 +21,6 @@ function remove(
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -33,7 +31,7 @@ function remove(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
@@ -50,222 +48,6 @@ function remove(
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let removeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let bundle: notificationManager.BundleOption = {
-  // 需根据实际情况进行替换
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  // 需根据实际情况进行替换
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError | null ) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
 
 
 ## remove
@@ -278,8 +60,6 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -290,7 +70,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 
@@ -313,10 +93,6 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-参见 [remove](#remove)
-
 
 ## remove
 
@@ -327,8 +103,6 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 通过通知的唯一ID，删除指定通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -355,10 +129,6 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
-
-**示例**
-
-参见 [remove](#remove)
 
 
 ## remove
@@ -371,8 +141,6 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -398,10 +166,6 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-参见 [remove](#remove)
-
 
 ## remove
 
@@ -412,8 +176,6 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 通过通知的唯一ID，删除指定通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -446,10 +208,6 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 
-**示例**
-
-参见 [remove](#remove)
-
 
 ## remove
 
@@ -460,8 +218,6 @@ function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>
 批量删除指定通知。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -492,7 +248,3 @@ function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [remove](#remove)

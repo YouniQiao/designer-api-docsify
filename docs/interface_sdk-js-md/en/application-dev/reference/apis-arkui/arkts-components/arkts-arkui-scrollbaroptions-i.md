@@ -16,8 +16,6 @@ Parameters of the **ScrollBar** component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,13 +29,11 @@ Parameters of the **ScrollBar** component.
 direction?: ScrollBarDirection
 ```
 
-Scrollbar direction in which scrollable components scroll.<br>Default value: **ScrollBarDirection.Vertical**
+Scrollbar direction in which scrollable components scroll.Default value: **ScrollBarDirection.Vertical**
 
 **Type:** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,11 +47,9 @@ scroller: Scroller
 
 Scroller, which can be bound to scrollable components for scrolling control.
 
-**Type:** Scroller
+**Type:** [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,13 +61,11 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-Scrollbar state.<br>Default value: **BarState.Auto**
+Scrollbar state.Default value: **BarState.Auto**
 
-**Type:** BarState
+**Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

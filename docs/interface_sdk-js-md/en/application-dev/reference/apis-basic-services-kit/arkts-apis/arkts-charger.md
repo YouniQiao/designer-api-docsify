@@ -7,8 +7,6 @@ The **charger** module enumerates charging types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The **charger** module enumerates charging types.
 ## Modules to Import
 
 ```TypeScript
-import { charger } from '@kit.BasicServicesKit';
+import { charger } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

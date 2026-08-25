@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## copy
@@ -15,8 +15,6 @@ function copy(logType: string, logName: string, dest: string): Promise<void>
 拷贝指定日志类型的指定文件到目标应用目录下。使用Promise回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
 
@@ -47,88 +45,6 @@ function copy(logType: string, logName: string, dest: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let logFiles = logLibrary.list('HILOG');
-  if (logFiles.length > 0) {
-    logLibrary.copy('HILOG', logFiles[0].name, ''
-    ).then(
-      (copyResult) => {
-        // do something here.
-      }
-    ).catch(
-      (err: BusinessError) => {
-        // do something here.
-      }
-    )
-  }
-} catch (error) {
-    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let logObj = logLibrary.list('HILOG');
-  if (logObj.length > 0) {
-    await logLibrary.copy('HILOG', logObj[0].name, '');
-  }
-} catch (err: BusinessError) {
-  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let logFiles = logLibrary.list('HILOG');
-  if (logFiles.length > 0) {
-    logLibrary.copy('HILOG', logFiles[0].name, 'dir1', (error, copyResult) => {
-      if (error) {
-        console.error(`Failed to copy log file. Code: ${error.code}, message: ${error.message}`);
-      } else {
-        // copy success.
-      }
-    });
-  }
-} catch (error) {
-    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let logObj = logLibrary.list('HILOG');
-  if (logObj.length > 0) {
-    logLibrary.copy('HILOG', logObj[0].name, 'dir1', (err: BusinessError | null) => {
-      // copy结果
-    });
-  }
-} catch (err: BusinessError) {
-  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
-}
-```
-
 
 ## copy
 
@@ -139,8 +55,6 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 拷贝指定日志类型的指定文件到目标应用目录下。使用callback回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
 
@@ -165,7 +79,3 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) |
-
-**示例**
-
-参见 [copy](#copy)

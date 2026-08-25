@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPorts
@@ -15,8 +15,6 @@ function getPorts(): Array<USBPort>
 获取所有物理USB端口描述信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -31,9 +29,3 @@ function getPorts(): Array<USBPort>
 | 类型 |
 | --- |
 | Array & lt;USBPort & gt; |
-
-**示例**
-
-```TypeScript
-let ret = usb.getPorts();
-```

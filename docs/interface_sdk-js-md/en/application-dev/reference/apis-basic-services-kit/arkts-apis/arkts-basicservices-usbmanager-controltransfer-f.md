@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## controlTransfer
@@ -15,8 +15,6 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 Performs control transfer. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -43,39 +41,3 @@ Performs control transfer. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-class PARA {
-  request: number = 0
-  reqType: usbManager.USBControlRequestType = 0
-  target: usbManager.USBRequestTargetType = 0
-  value: number = 0
-  index: number = 0
-  data: Uint8Array = new Uint8Array()
-}
-
-let param: PARA = {
-  request: 0x06,
-  reqType: 0x80,
-  target:0,
-  value: 0x01 << 8 | 0,
-  index: 0,
-  data: new Uint8Array(18)
-};
-
-function controlTransfer() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  usbManager.controlTransfer(devicepipe, param).then((ret: number) => {
-  console.info(`controlTransfer = ${ret}`);
-  })
-}
-```

@@ -8,8 +8,6 @@ The module provides element name information, which can be obtained through Cont
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ElementName](#elementname)
@@ -29,8 +27,6 @@ Ability name.
 **Default:** ability class name.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Bundle name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
@@ -73,8 +67,6 @@ Device ID.
 **Default:** -
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -96,8 +88,6 @@ Short name of the ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** shortName
@@ -117,8 +107,6 @@ Resource ID.
 **Default:** -
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAutoStartApps
@@ -16,8 +16,6 @@ Checks the auto-start applications for the current user.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,44 +42,6 @@ Checks the auto-start applications for the current user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp);
-  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## getAutoStartApps
@@ -94,8 +54,6 @@ Checks the auto-start applications for the current user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -123,10 +81,6 @@ Checks the auto-start applications for the current user.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getAutoStartApps](#getautostartapps)
-
 
 ## getAutoStartApps
 
@@ -137,8 +91,6 @@ function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 Checks the auto-start applications for the specified user.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -167,10 +119,6 @@ Checks the auto-start applications for the specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-See [getAutoStartApps](#getautostartapps)
-
 
 ## getAutoStartApps
 
@@ -181,8 +129,6 @@ function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
 Checks the auto-start applications for the specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -210,7 +156,3 @@ Checks the auto-start applications for the specified user.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getAutoStartApps](#getautostartapps)

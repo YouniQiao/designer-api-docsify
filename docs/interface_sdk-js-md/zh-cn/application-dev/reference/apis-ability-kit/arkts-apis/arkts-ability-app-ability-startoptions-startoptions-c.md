@@ -4,14 +4,12 @@ StartOptions可以作为启动UIAbility接口（例如 [startAbility()](arkts-ab
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { StartOptions } from '@kit.AbilityKit';
+import { StartOptions } from 'kits/@kit.AbilityKit';
 ```
 
 ## completionHandler
@@ -26,8 +24,6 @@ completionHandler?: CompletionHandler
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -37,18 +33,18 @@ completionHandler?: CompletionHandler
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 屏幕ID，取值为大于等于-1的整数。  
-- 取值为-1，表示当前屏幕。 - 取值为0，表示主屏幕。 - 取值为正整数，表示指定ID的屏幕。  
+- 取值为-1，表示当前屏幕。  
+- 取值为0，表示主屏幕。  
+- 取值为正整数，表示指定ID的屏幕。  
 **说明：**从API version 14开始，默认值是-1，即当前屏幕。在API version 14之前版本，默认值为0，即主屏幕。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,8 +67,6 @@ hideStartWindow?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -80,17 +74,15 @@ hideStartWindow?: boolean
 ## maxWindowHeight
 
 ```TypeScript
-maxWindowHeight?: int
+maxWindowHeight?: number
 ```
 
 窗口最大的高度，单位为vp，可以通过getWindowLimitsVP获得当前窗口的尺寸限制。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,17 +91,15 @@ maxWindowHeight?: int
 ## maxWindowWidth
 
 ```TypeScript
-maxWindowWidth?: int
+maxWindowWidth?: number
 ```
 
 窗口最大的宽度，单位为vp，可以通过getWindowLimitsVP获得当前窗口的尺寸限制。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,17 +108,15 @@ maxWindowWidth?: int
 ## minWindowHeight
 
 ```TypeScript
-minWindowHeight?: int
+minWindowHeight?: number
 ```
 
 窗口最小的高度，单位为vp，可以通过getWindowLimitsVP获得当前窗口的尺寸限制。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,17 +125,15 @@ minWindowHeight?: int
 ## minWindowWidth
 
 ```TypeScript
-minWindowWidth?: int
+minWindowWidth?: number
 ```
 
 窗口最小的宽度，单位为vp，可以通过getWindowLimitsVP获得当前窗口的尺寸限制。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -169,8 +155,6 @@ UIAbility启动后的进程模式。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -186,8 +170,6 @@ splitRatio?: window.SplitRatioPreference
 **类型：** window.SplitRatioPreference
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -209,8 +191,6 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -223,13 +203,13 @@ startWindowBackgroundColor?: string
 
 启动当前应用的UIAbility时，启动页所显示的背景颜色。固定为ARGB格式, 如：`#E5FFFFFF`。如果未配置该字段，则默认采用module.json5文件中startWindowBackground字段的配置。  
 **约束：**  
-- 启动其他应用的UIAbility时，该字段不生效。 - 该功能仅在2in1和Tablet设备上生效。 - 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+- 启动其他应用的UIAbility时，该字段不生效。  
+- 该功能仅在2in1和Tablet设备上生效。  
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
 
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,13 +223,14 @@ startWindowIcon?: image.PixelMap
 
 启动当前应用的UIAbility时，启动页所显示的图标。如果未配置该字段，则默认采用module.json5文件中startWindowIcon字段的配置。  
 **约束：**  
-- 启动其他应用的UIAbility时，该字段不生效。 - 该功能仅在2in1和Tablet设备上生效。 - 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。 - 图片数据大小限制为600MB。
+- 启动其他应用的UIAbility时，该字段不生效。  
+- 该功能仅在2in1和Tablet设备上生效。  
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
+- 图片数据大小限制为600MB。
 
 **类型：** image.PixelMap
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,15 +243,15 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
 启动UIAbility时，指定窗口是否显示最大化/窗口化/分屏按键。如果未配置该字段，则默认采用该UIAbility对应的 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值。  
-- FULL_SCREEN：支持全屏模式。 - FLOATING：支持悬浮窗模式。 - SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模 式，支持进入分屏模式。  
-在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。  
+- FULL_SCREEN：支持全屏模式。  
+- FLOATING：支持悬浮窗模式。  
+- SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模  
+式，支持进入分屏模式。在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。  
 **约束：**<!--RP1-->该功能仅在2in1和Tablet设备上生效。<!--RP1End-->
 
 **类型：** Array&lt;bundleManager.SupportWindowMode&gt;
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -288,8 +269,6 @@ windowCreateParams?: window.WindowCreateParams
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -297,17 +276,15 @@ windowCreateParams?: window.WindowCreateParams
 ## windowHeight
 
 ```TypeScript
-windowHeight?: int
+windowHeight?: number
 ```
 
 窗口的高度，单位为px。取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -316,17 +293,15 @@ windowHeight?: int
 ## windowLeft
 
 ```TypeScript
-windowLeft?: int
+windowLeft?: number
 ```
 
 以指定displayId的屏幕的左顶点为原点，窗口在x轴方向偏移量，单位为px，值为正表示在原点右侧，值为负表示在原点左侧。该参数为整数，非整数将向下取整。当窗口左顶点超出指定displayId的屏幕区域时，限制窗口在指定 displayId的屏幕范围内可见。配置该字段时，建议同时配置windowTop。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -335,16 +310,14 @@ windowLeft?: int
 ## windowMode
 
 ```TypeScript
-windowMode?: int
+windowMode?: number
 ```
 
 启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -353,17 +326,15 @@ windowMode?: int
 ## windowTop
 
 ```TypeScript
-windowTop?: int
+windowTop?: number
 ```
 
 以指定displayId的屏幕的左顶点为原点，窗口在y轴方向偏移量，单位为px，值为正表示在原点下方，值为负表示在原点上方。该参数为整数，非整数将向下取整。当窗口顶部超出指定displayId的屏幕区域时，限制窗口在指定 displayId的屏幕范围内可见。配置该字段时，建议同时配置windowLeft。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -372,17 +343,15 @@ windowTop?: int
 ## windowWidth
 
 ```TypeScript
-windowWidth?: int
+windowWidth?: number
 ```
 
 窗口的宽度，单位为px。取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。  
 **约束：**该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,201 +369,6 @@ withAnimation?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility, Want, StartOptions, bundleManager, CompletionHandler } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    let completionHandler: CompletionHandler = {
-      onRequestSuccess: (elementName: bundleManager.ElementName, message: string): void => {
-        console.info(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start succeeded: ${message}`);
-      },
-      onRequestFailure: (elementName: bundleManager.ElementName, message: string): void => {
-        console.error(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start failed: ${message}`);
-      }
-    };
-
-    let color = new ArrayBuffer(512 * 512 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
-    let imagePixelMap: image.PixelMap;
-    let windowParam: window.WindowCreateParams = {};
-    let bufferArr = new Uint8Array(color);
-    for (let i = 0; i < bufferArr.length; i += 4) {
-      bufferArr[i] = 255;
-      bufferArr[i+1] = 0;
-      bufferArr[i+2] = 122;
-      bufferArr[i+3] = 255;
-    }
-    image.createPixelMap(color, {
-      editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
-    }).then((data) => {
-      imagePixelMap = data;
-      // 配置启动UIAbility的选项参数
-      let options: StartOptions = {
-        displayId: 0,
-        startWindowIcon: imagePixelMap,
-        startWindowBackgroundColor: '#E510FFFF',
-        supportWindowModes: [
-          bundleManager.SupportWindowMode.FULL_SCREEN,
-          bundleManager.SupportWindowMode.SPLIT,
-          bundleManager.SupportWindowMode.FLOATING
-        ],
-        minWindowWidth: 320,
-        minWindowHeight: 240,
-        maxWindowWidth: 2560,
-        maxWindowHeight: 2560,
-        completionHandler: completionHandler,
-        hideStartWindow: true,
-        windowCreateParams: windowParam
-      };
-
-      try {
-        // 调用startAbility接口启动目标UIAbility，传入Want参数和启动选项
-        this.context.startAbility(want, options, (err: BusinessError) => {
-          if (err.code) {
-            // 处理业务逻辑错误
-            console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-            return;
-          }
-          // 执行正常业务
-          console.info('startAbility succeed');
-        });
-      } catch (err) {
-        // 处理入参错误异常
-        let code = (err as BusinessError).code;
-        let message = (err as BusinessError).message;
-        console.error(`startAbility failed, code is ${code}, message is ${message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Want, StartOptions, bundleManager, CompletionHandler } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    let completionHandler: CompletionHandler = {
-      onRequestSuccess: (elementName: bundleManager.ElementName, message: string): void => {
-        console.info(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start succeeded: ${message}`);
-      },
-      onRequestFailure: (elementName: bundleManager.ElementName, message: string): void => {
-        console.info(`${elementName.bundleName}-${elementName.moduleName}-${elementName.abilityName} start failed: ${message}`);
-      }
-    };
-
-    let color = new ArrayBuffer(0);
-    let imagePixelMap: image.PixelMap;
-    image.createPixelMap(color, {
-      size: {
-        height: 100,
-        width: 100
-      }
-    }).then((data) => {
-      imagePixelMap = data;
-      let options: StartOptions = {
-        displayId: 0,
-        startWindowIcon: imagePixelMap,
-        startWindowBackgroundColor: '#00000000',
-        supportWindowModes: [
-          bundleManager.SupportWindowMode.FULL_SCREEN,
-          bundleManager.SupportWindowMode.SPLIT,
-          bundleManager.SupportWindowMode.FLOATING
-        ],
-        minWindowWidth: 320,
-        minWindowHeight: 240,
-        maxWindowWidth: 2560,
-        maxWindowHeight: 2560,
-        completionHandler: completionHandler
-      };
-
-      try {
-        this.context.startAbility(want, options, (err: BusinessError<void> | null) => {
-          if (err && err.code !== 0) {
-            // 处理业务逻辑错误
-            console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-            return;
-          }
-          // 执行正常业务
-          console.info('startAbility succeed');
-        });
-      } catch (err) {
-        // 处理入参错误异常
-        let code = (err as BusinessError).code;
-        let message = (err as BusinessError).message;
-        console.error(`startAbility failed, code is ${code}, message is ${message}`);
-      }
-    }).catch((err: BusinessError<void>): void => {
-      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // 启动指定的Ability，传入Want和StartOptions参数
-      this.context.startAbility(want, options, (err: BusinessError | null) => {
-        if (err) {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed: ${JSON.stringify(err)}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```

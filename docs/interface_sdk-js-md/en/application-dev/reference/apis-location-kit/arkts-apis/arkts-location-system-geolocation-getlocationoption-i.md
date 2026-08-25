@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
@@ -15,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## complete
@@ -27,8 +25,6 @@ complete?: () => void
 Called when the execution is completed.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -47,8 +43,6 @@ fail?: (data: string, code: number) => void
 Called when the location types fail to be obtained
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -74,8 +68,6 @@ success?: (data: GeolocationResponse) => void
 Called when the geographic location is obtained.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -103,8 +95,6 @@ Coordinate system type. Available types can be obtained using getSupportedCoordT
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -122,8 +112,6 @@ Timeout duration, in milliseconds. For the rich device, the default value is 300
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 

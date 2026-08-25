@@ -9,31 +9,13 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentBuilder
 
@@ -44,8 +26,6 @@ contentBuilder: () => void
 用于构建弹出框内容区域的组件构建函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +45,6 @@ buttons?: ButtonOptions[]
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -81,11 +59,9 @@ contentAreaPadding?: Padding
 
 弹出框内容区内边距。设置了localizedContentAreaPadding属性时该属性不生效。
 
-**类型：** [Padding](arkts-arkui-units-padding-i.md)
+**类型：** Padding
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,11 +78,9 @@ controller: CustomDialogController
 弹出框控制器，用于控制弹出框的显示和隐藏。  
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
-**类型：** CustomDialogController
+**类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,11 +96,9 @@ localizedContentAreaPadding?: LocalizedPadding
 
 弹出框内容区内边距，支持按语言方向自适应。设置了该属性时，contentAreaPadding不生效。
 
-**类型：** LocalizedPadding
+**类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,11 +115,9 @@ primaryTitle?: ResourceStr
 弹出框标题。默认不设置或设置为undefined，弹出框标题不显示。  
 **说明：** 标题超过两行会显示“...”。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,11 +134,9 @@ secondaryTitle?: ResourceStr
 弹出框辅助文本。默认不设置或设置为undefined，弹出框辅助文本不显示。  
 **说明：** 辅助文本超过两行会显示“...”。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,8 +156,6 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -204,11 +170,9 @@ themeColorMode?: ThemeColorMode
 
 自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
 
-**类型：** ThemeColorMode
+**类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

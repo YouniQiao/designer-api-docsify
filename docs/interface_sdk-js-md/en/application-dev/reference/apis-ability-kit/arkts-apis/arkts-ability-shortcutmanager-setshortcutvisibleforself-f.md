@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setShortcutVisibleForSelf
@@ -15,8 +15,6 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -38,18 +36,3 @@ Sets whether to display the specified shortcut for the current application. This
 | Error Code ID |
 | --- |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
-
-**Examples**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Replace it with the shortcutId field under the shortcuts tag of the module.json5 file.
-shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
-  .then(() => {
-    console.info('setShortcutVisibleForSelf success');
-  }).catch((err: BusinessError) => {
-  console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
-});
-```

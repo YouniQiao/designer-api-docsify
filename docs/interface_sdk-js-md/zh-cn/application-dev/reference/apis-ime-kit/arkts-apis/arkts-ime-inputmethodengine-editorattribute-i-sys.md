@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## fluidLightMode
@@ -20,13 +18,11 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-流光模式。未设置或设置非法值时，默认不使用流光模式。 <br> <br>该属性仅系统应用可以使用。
+流光模式。未设置或设置非法值时，默认不使用流光模式。 该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

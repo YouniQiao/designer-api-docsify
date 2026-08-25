@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offRotateChange
@@ -15,8 +15,6 @@ function offRotateChange(callback?: Callback<RotateEvent>): void
 Unsubscribe to rotate sensor event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

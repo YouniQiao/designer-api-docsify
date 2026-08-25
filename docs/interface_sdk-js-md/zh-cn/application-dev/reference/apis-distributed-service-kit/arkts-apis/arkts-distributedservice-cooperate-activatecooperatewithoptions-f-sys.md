@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## activateCooperateWithOptions
 
 ```TypeScript
-function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: int,
+function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: number,
     cooperateOptions?: CooperateOptions
   ): Promise<void>
 ```
@@ -17,8 +17,6 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 启动键鼠穿越，使用选项开始屏幕跳转。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -31,7 +29,7 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | targetNetworkId | string | 是 |
-| inputDeviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| inputDeviceId | number | 是 |
 | cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | 否 |
 
 **返回值：**
@@ -47,39 +45,3 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activateCooperateWithOptions(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`activateCooperateWithOptions success.`);
-  }, (error: BusinessError) => {
-    console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let targetNetworkId: string = "networkId";
-let inputDeviceId: int = 0;
-try {
-  cooperate.activateCooperateWithOptions(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`activateCooperateWithOptions success.`);
-  }, (error: Error): void => {
-    console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`activateCooperateWithOptions, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```

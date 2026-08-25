@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onIndoorOrOutdoorIdentify
@@ -16,8 +16,6 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 Subscribe to the results of indoorand outdoor identification.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
@@ -44,24 +42,3 @@ Subscribe to the results of indoorand outdoor identification.
 | [35100001](../errorcode-spatialAwareness.md#35100001-service-exception) |
 | [35100002](../errorcode-spatialAwareness.md#35100002-subscription-failed) |
 | [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
-   console.info('call onIndoorOrOutdoorIdentify before');
-   let configParams: spatialAwareness.DistanceMeasurementConfigParams = {
-      deviceList: ["123456"],
-      techType: 2,
-      reportMode: 0,
-      reportFrequency: 340
-   };
-   console.info('call onIndoorOrOutdoorIdentify start');
-   try {
-      spatialAwareness.onIndoorOrOutdoorIdentify(configParams, (data:spatialAwareness.DoorPositionResponse) => {
-         console.info('result = ${data.position}');
-      });
-   } catch (err) {
-      console.error('call onIndoorOrOutdoorIdentify failed, errCode = ' + err.code);
-   }
-```

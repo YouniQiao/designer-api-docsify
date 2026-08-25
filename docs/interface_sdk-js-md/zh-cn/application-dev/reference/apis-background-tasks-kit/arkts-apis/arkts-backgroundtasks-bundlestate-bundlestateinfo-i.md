@@ -2,8 +2,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -11,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## merge
@@ -23,8 +21,6 @@ merge(toMerge: BundleStateInfo): void
 Merges a specified BundleActiveInfo object with this BundleActiveInfo object. The bundle name of both objects must be the same.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -42,13 +38,11 @@ Merges a specified BundleActiveInfo object with this BundleActiveInfo object. Th
 abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds. <br> Unit:ms
+The total duration, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -60,13 +54,11 @@ The total duration, in milliseconds. <br> Unit:ms
 abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds. <br> Unit:ms
+The last time when the application was accessed, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -78,13 +70,11 @@ The last time when the application was accessed, in milliseconds. <br> Unit:ms
 abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds. <br> Unit:ms
+The last time when the application was visible in the foreground, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -96,13 +86,11 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: number
 ```
 
-The total duration when the application was visible in the foreground, in milliseconds. <br> Unit:ms
+The total duration when the application was visible in the foreground, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -120,8 +108,6 @@ The bundle name of the application.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -132,13 +118,11 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: number
 ```
 
-The total duration when the foreground application was accessed, in milliseconds. <br> Unit:ms
+The total duration when the foreground application was accessed, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -150,13 +134,11 @@ The total duration when the foreground application was accessed, in milliseconds
 fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds. <br> Unit:ms
+The last time when the foreground application was accessed, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -174,8 +156,6 @@ The identifier of BundleStateInfo.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -186,13 +166,11 @@ The identifier of BundleStateInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -204,13 +182,11 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

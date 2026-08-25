@@ -1,12 +1,12 @@
 # SymKey
 
-对称密钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在对称加解密时需要将其对象传入 [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法使用。<br>对称密钥通过对称密钥生成器[SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md)来生成。
+对称密钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在对称加解密时需要将其对象传入 [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法使用。
+
+对称密钥通过对称密钥生成器[SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md)来生成。
 
 **继承/实现关系：** SymKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## clearMem
@@ -28,42 +28,8 @@ clearMem(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGenerateAesKeyFun() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
-  let key = await symKeyGenerator.generateSymKey();
-  let encodedKey = key.getEncoded();
-  console.info('key blob: '+ encodedKey.data);
-  key.clearMem();
-  encodedKey = key.getEncoded();
-  console.info('key blob: ' + encodedKey.data);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testClearMem() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-  // 使用密钥生成器随机生成非对称密钥对。
-  let keyGenPromise = eccGenerator.generateKeyPair();
-  keyGenPromise.then(keyPair => {
-    let priKey = keyPair.priKey;
-    let returnBlob = priKey.getEncodedDer('PKCS8');
-    console.info('returnBlob data: ' + returnBlob.data);
-    priKey.clearMem(); // 对于非对称私钥，clearMem()释放内部密钥结构。执行clearMem后，不支持getEncoded()。
-  });
-}
-```

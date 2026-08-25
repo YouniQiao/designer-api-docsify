@@ -4,8 +4,6 @@ Asynchronous callback interface.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
@@ -15,7 +13,7 @@ Asynchronous callback interface.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## [[Call]]
@@ -27,8 +25,6 @@ import { resourceManager } from '@kit.LocalizationKit';
 Defines an asynchronous callback that carries an error parameter and asynchronous return value.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

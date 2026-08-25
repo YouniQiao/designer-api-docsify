@@ -6,8 +6,6 @@ Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ getDirection(): SwipeDirection
 Obtains the direction for recognizing swipe gestures.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ getVelocityThreshold(): number
 Obtains the minimum velocity required for the swipe gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

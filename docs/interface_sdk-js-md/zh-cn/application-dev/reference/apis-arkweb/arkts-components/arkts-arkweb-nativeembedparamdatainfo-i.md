@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -25,8 +23,6 @@ embedId: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## objectAttributeId
@@ -41,8 +37,6 @@ objectAttributeId?: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## paramItems
@@ -56,7 +50,5 @@ paramItems?: Array<NativeEmbedParamItem>
 **类型：** Array&lt;[NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i.md)&gt;
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Web.Webview.Core

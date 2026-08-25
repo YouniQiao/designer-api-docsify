@@ -14,8 +14,6 @@ Display mode of the navigation page. When **Navigation** is displayed in split-c
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Stack
@@ -27,8 +25,6 @@ Stack
 The navigation page and content area are displayed independently of each other, which are equivalent to two pages.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,8 +46,6 @@ The navigation page and content area are displayed in different columns.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -66,8 +60,6 @@ In API version 9 and earlier versions: If the window width is greater than or eq
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -81,8 +73,6 @@ AUTO_WITH_ASPECT_RATIO
 If the navigation width is greater than the sum of minNavBarWidth and minContentWidth, and the navigation component's aspect ratio (height to width) is less than or equal to 1.2, the navigation component is displayed in split mode. Otherwise it's displayed in stack mode.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

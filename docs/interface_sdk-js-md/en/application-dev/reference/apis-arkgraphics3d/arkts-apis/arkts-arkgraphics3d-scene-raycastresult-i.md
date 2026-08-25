@@ -4,23 +4,19 @@ Describes a result object from raycasting, containing details about the 3D objec
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## centerDistance
 
 ```TypeScript
-centerDistance: double
+centerDistance: number
 ```
 
 Distance from the center of the hit object's bounding box to the camera center, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -36,8 +32,6 @@ Exact world coordinates of the collision point between the ray and the object ({
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## node
@@ -51,7 +45,5 @@ node: Node
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

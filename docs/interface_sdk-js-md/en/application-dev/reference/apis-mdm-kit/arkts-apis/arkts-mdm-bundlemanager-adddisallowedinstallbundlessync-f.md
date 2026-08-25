@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedInstallBundlesSync
@@ -15,8 +15,6 @@ function addDisallowedInstallBundlesSync(admin: Want, appIds: Array<string>, acc
 Adds the applications that are not allowed to be installed by the current or specified user. The reinstallation of system apps after uninstallation is not restricted by the API. However, the reinstallation of regular apps after uninstallation is restricted by the API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -40,25 +38,3 @@ Adds the applications that are not allowed to be installed by the current or spe
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-try {
-  bundleManager.addDisallowedInstallBundlesSync(wantTemp, appIds, 100);
-  console.info('Succeeded in adding disallowed install bundles.');
-} catch (err) {
-  console.error(`Failed to add disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

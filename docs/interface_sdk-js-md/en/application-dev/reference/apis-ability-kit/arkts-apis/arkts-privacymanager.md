@@ -51,14 +51,12 @@
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -76,10 +74,8 @@ import { privacyManager } from '@kit.AbilityKit';
 | [getPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) |
 | [getPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) |
 | [getPermissionUsedTypeInfos(Privacy Management)](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md) |
-| [off(Privacy Management)](arkts-ability-privacymanager-off-f-sys.md#offactivestatechange) |
-| [offActiveStateChange(Privacy Management)](arkts-ability-privacymanager-offactivestatechange-f-sys.md) |
-| [on(Privacy Management)](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange) |
-| [onActiveStateChange(Privacy Management)](arkts-ability-privacymanager-onactivestatechange-f-sys.md) |
+| off(Privacy Management) |
+| on(Privacy Management) |
 | [setPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) |
 | [setPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) |
 | [startUsingPermission(Privacy Management)](arkts-ability-privacymanager-startusingpermission-f-sys.md) |

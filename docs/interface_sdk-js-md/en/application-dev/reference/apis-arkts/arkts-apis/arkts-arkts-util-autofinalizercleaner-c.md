@@ -4,14 +4,12 @@ A cleaner for releasing resources managed by developers through a developer-defi
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## register
@@ -23,8 +21,6 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 Register objects that release resources managed by developers.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

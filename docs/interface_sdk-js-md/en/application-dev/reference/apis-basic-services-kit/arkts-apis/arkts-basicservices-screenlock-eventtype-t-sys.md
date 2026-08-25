@@ -25,8 +25,6 @@ Indicates the system event type related to the screen lock management service. A
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.

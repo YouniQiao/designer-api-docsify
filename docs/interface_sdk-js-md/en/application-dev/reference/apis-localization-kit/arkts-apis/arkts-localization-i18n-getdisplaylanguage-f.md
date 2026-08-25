@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getDisplayLanguage
@@ -15,8 +15,6 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 Obtains the localized script for the specified language.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -37,25 +35,3 @@ Obtains the localized script for the specified language.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  // Obtain the display name of Chinese in English.
-  let displayLanguage: string = i18n.System.getDisplayLanguage('zh', 'en-GB'); // displayLanguage = 'Chinese'
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getDisplayLanguage failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
-languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
-```

@@ -6,8 +6,6 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,7 +33,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
 ## getHistoricalPoints
 
@@ -48,8 +44,6 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects.This API can only be called from [MouseEvent](#mouseevent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](#mouseevent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,8 +67,6 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -87,11 +79,9 @@ action: MouseAction
 
 Mouse action.
 
-**Type:** MouseAction
+**Type:** [MouseAction](../arkts-apis/arkts-arkui-mouseaction-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -109,8 +99,6 @@ Mouse button.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -126,8 +114,6 @@ X coordinate of the mouse position in the coordinate system of the current scree
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +132,6 @@ Y coordinate of the mouse position in the coordinate system of the current scree
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +152,6 @@ Unique identifier for event processing.Value range: [0, +∞)
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -187,8 +169,6 @@ X coordinate of the mouse position in the [global coordinate system](../../../wi
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,8 +188,6 @@ Y coordinate of the mouse position in the [global coordinate system](../../../wi
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -227,8 +205,6 @@ Set of buttons being pressed.
 **Type:** MouseButton[]
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -249,8 +225,6 @@ Movement increment of the mouse along the X axis in a two-dimensional plane. The
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -270,8 +244,6 @@ Movement increment of the mouse along the Y axis in a two-dimensional plane. The
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -289,8 +261,6 @@ X coordinate of the mouse position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -310,8 +280,6 @@ Y coordinate of the mouse position in the coordinate system of the current appli
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 10
 
 **Substitutes:** [windowY](#windowy)
@@ -329,8 +297,6 @@ X coordinate of the mouse position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,8 +316,6 @@ Y coordinate of the mouse position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -370,8 +334,6 @@ X coordinate of the mouse point in the [component coordinate system](../../../ui
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -387,8 +349,6 @@ Y coordinate of the mouse point in the [component coordinate system](../../../ui
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

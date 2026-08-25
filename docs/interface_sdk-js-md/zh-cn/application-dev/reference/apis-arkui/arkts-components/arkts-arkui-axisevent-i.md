@@ -6,8 +6,6 @@
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 |
 | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
 ## getHorizontalAxisValue
 
@@ -48,8 +44,6 @@ getHorizontalAxisValue(): number
 获取此次轴事件的水平轴值。
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +67,6 @@ getPinchAxisScaleValue(): number
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -97,8 +89,6 @@ getVerticalAxisValue(): number
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -120,8 +110,6 @@ hasAxis(axisType: AxisType): boolean
 检测此轴事件是否包含指定的轴类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,11 +137,9 @@ action: AxisAction
 
 轴事件的动作类型。
 
-**类型：** AxisAction
+**类型：** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -173,8 +159,6 @@ displayX: number
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -192,8 +176,6 @@ displayY: number
 **类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,8 +196,6 @@ eventHandleId?: number
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -233,8 +213,6 @@ globalDisplayX?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,8 +232,6 @@ globalDisplayY?: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -273,8 +249,6 @@ propagation: Callback<void>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -295,8 +269,6 @@ scrollStep?: number
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -314,8 +286,6 @@ windowX: number
 **类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -335,8 +305,6 @@ windowY: number
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -355,8 +323,6 @@ x: number
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -374,8 +340,6 @@ y: number
 **类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

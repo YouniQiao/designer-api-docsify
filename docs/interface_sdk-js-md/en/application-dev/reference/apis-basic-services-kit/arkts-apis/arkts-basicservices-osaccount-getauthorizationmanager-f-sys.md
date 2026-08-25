@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getAuthorizationManager
@@ -12,11 +12,9 @@ import { osAccount } from '@kit.BasicServicesKit';
 function getAuthorizationManager(): AuthorizationManager
 ```
 
-Obtains this OS account authorization manager.
+Obtains the current OS account authorization manager.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,9 +33,3 @@ Obtains this OS account authorization manager.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-```

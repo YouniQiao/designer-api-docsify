@@ -4,11 +4,9 @@ Route information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack
+**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Name of the navigation destination page to be redirected to.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 13
 
@@ -52,8 +48,6 @@ Parameter transferred during redirection.
 **Type:** unknown
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 13
 

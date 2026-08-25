@@ -4,8 +4,6 @@ The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,13 +17,11 @@ The data returned by the event handler when onScrollFrameBegin.
 offsetRemain: number
 ```
 
-Actual scroll offset relative to the previous frame.<br>Unit: vp Anonymous Object Rectification.
+Actual scroll offset relative to the previous frame.Unit: vp Anonymous Object Rectification.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

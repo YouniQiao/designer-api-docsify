@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## off('hotkeyChange')
@@ -15,8 +15,6 @@ function off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Call
 Unsubscribes from application shortcut key change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -35,68 +33,6 @@ Unsubscribes from application shortcut key change events. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftCtrlKey = 2072;
-          let zKey = 2042;
-          // Disable listening for a single callback.
-          let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`hotkeyOptions: ${JSON.stringify(hotkeyOptions)}`);
-          }
-          let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
-          try {
-            inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
-            inputConsumer.off("hotkeyChange", hotkeyOption, hotkeyCallback);
-            console.info(`Unsubscribe success`);
-          } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftCtrlKey = 2072;
-          let zKey = 2042;
-          // Disable listening for all callbacks.
-          let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`hotkeyOptions: ${JSON.stringify(hotkeyOptions)}`);
-          }
-          let hotkeyOption: inputConsumer.HotkeyOptions = { preKeys: [leftCtrlKey], finalKey: zKey, isRepeat: true };
-          try {
-            inputConsumer.on("hotkeyChange", hotkeyOption, hotkeyCallback);
-            inputConsumer.off("hotkeyChange", hotkeyOption);
-            console.info(`Unsubscribe success`);
-          } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## off('keyPressed')
 
@@ -107,8 +43,6 @@ function off(type: 'keyPressed', callback?: Callback<KeyEvent>): void
 Unsubscribes from key press events. This API uses an asynchronous callback to return the result. If the API call is successful, the system's default response to the key event will be resumed; that is, system-level actions, such as volume adjustment, will be triggered normally.
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -125,38 +59,3 @@ Unsubscribes from key press events. This API uses an asynchronous callback to re
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { inputConsumer, KeyEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Disable listening for a single callback.
-            let options: inputConsumer.KeyPressedConfig = {
-              key: 16,
-              action: 1,
-              isRepeat: false,
-            }
-            let callback = (event: KeyEvent) => {
-              console.info(`Unsubscribe success ${JSON.stringify(event)}`);
-            }
-            inputConsumer.on('keyPressed', options, callback);
-            inputConsumer.off('keyPressed', callback);
-            // Disable listening for all callbacks.
-            inputConsumer.off("keyPressed");
-          } catch (error) {
-            console.error(`Unsubscribe execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

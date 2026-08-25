@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## subscribeContinuousTaskState
@@ -15,8 +15,6 @@ function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): voi
 Registers a callback to listen for the continuous task change events.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.GET_BACKGROUND_TASK_INFO
 
@@ -40,29 +38,3 @@ Registers a callback to listen for the continuous task change events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
-}
-
-try {
-    backgroundTaskManager.subscribeContinuousTaskState(this.backgroundTaskSubscriber);
-    console.info('Operation subscribeContinuousTaskState succeeded');
-} catch (error) {
-    console.error(`Operation subscribeContinuousTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

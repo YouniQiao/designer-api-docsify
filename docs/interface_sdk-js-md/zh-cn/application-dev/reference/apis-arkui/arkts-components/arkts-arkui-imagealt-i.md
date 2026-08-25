@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ error?: ResourceStr | PixelMap
 
 加载失败的占位图。
 
-**类型：** ResourceStr \| PixelMap
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,11 +39,9 @@ placeholder?: ResourceStr | PixelMap
 
 加载过程中的占位图。
 
-**类型：** ResourceStr \| PixelMap
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,8 +6,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## colors
@@ -22,14 +20,12 @@ colors?: Color[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## indices
 
 ```TypeScript
-indices?: int[]
+indices?: number[]
 ```
 
 顶点索引数组，数组中元素的取值范围大于等于0，默认值为undefined。
@@ -39,8 +35,6 @@ indices?: int[]
 **默认值：** undefined
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -55,8 +49,6 @@ normals?: Vec3[]
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -74,8 +66,6 @@ topology?: PrimitiveTopology
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## uvs
@@ -90,8 +80,6 @@ uvs?: Vec2[]
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## vertices
@@ -105,7 +93,5 @@ set vertices(value: Vec3[])
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

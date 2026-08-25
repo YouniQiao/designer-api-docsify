@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDisposedStatusSync
 
 ```TypeScript
-function deleteDisposedStatusSync(appId: string, appIndex?: int): void
+function deleteDisposedStatusSync(appId: string, appIndex?: number): void
 ```
 
 Deletes the disposed status for an application or an application clone. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -29,7 +27,7 @@ Deletes the disposed status for an application or an application clone. This API
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appIndex | number | No |
 
 **Error codes:**
 
@@ -41,19 +39,3 @@ Deletes the disposed status for an application or an application clone. This API
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId: string = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatusSync(appId, 1);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatusSync failed ' + message);
-}
-```

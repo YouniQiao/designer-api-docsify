@@ -4,8 +4,6 @@ Screen hopping options, such as the exit position.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Screen hopping options, such as the exit position.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId: long
+displayId: number
 ```
 
 Screen ID of the peer device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -37,16 +33,14 @@ Screen ID of the peer device.
 ## displayX
 
 ```TypeScript
-displayX: int
+displayX: number
 ```
 
 X coordinate of the mouse cursor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -55,16 +49,14 @@ X coordinate of the mouse cursor.
 ## displayY
 
 ```TypeScript
-displayY: int
+displayY: number
 ```
 
 Y coordinate of the mouse cursor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

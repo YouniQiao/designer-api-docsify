@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setWifiCapability
@@ -15,8 +15,6 @@ function setWifiCapability(capability: WifiCapability, enable: boolean): void
 Set Wi-Fi capability
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.SET_WIFI_CONFIG
 

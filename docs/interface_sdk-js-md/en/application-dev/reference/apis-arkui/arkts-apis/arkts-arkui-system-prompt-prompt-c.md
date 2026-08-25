@@ -4,14 +4,12 @@ Defines the prompt interface.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -24,8 +22,6 @@ Displays the menu.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,36 +31,6 @@ Displays the menu.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import prompt from '@system.prompt';
-class C{
-  showActionMenu() {
-    prompt.showActionMenu({
-      title: 'Title Info',
-      buttons: [
-        {
-          text: 'item1',
-          color: '#666666'
-        },
-        {
-          text: 'item2',
-          color: '#000000'
-        },
-      ],
-      success: (tapIndex)=> {
-        console.info('dialog success callback, click button : ' + tapIndex);
-      },
-      fail: (errMsg)=> {
-        console.info('dialog fail callback' + errMsg);
-      },
-    });
-  }
-}
-export default new C()
-```
 
 ## showDialog
 
@@ -76,8 +42,6 @@ Displays the dialog box.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -87,33 +51,6 @@ Displays the dialog box.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import prompt from '@system.prompt';
-class B{
-  showDialog() {
-    prompt.showDialog({
-      title: 'Title Info',
-      message: 'Message Info',
-      buttons: [
-        {
-          text: 'button',
-          color: '#666666'
-        },
-      ],
-      success: (data)=> {
-        console.info('dialog success callback, click button : ' + data.index);
-      },
-      cancel: ()=> {
-        console.info('dialog cancel callback');
-      },
-    });
-  }
-}
-export default new B()
-```
 
 ## showToast
 
@@ -125,8 +62,6 @@ Displays the notification text.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -136,18 +71,3 @@ Displays the notification text.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import prompt from '@system.prompt';
-class A{
-  showToast() {
-    prompt.showToast({
-      message: 'Message Info',
-      duration: 2000
-    });
-  }
-}
-export default new A()
-```

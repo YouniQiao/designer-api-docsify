@@ -6,6 +6,4 @@ Mesh resource, which inherits from SceneResource.@extends SceneResource @interfa
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D

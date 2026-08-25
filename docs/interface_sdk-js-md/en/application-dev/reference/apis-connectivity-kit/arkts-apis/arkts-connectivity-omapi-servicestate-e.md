@@ -4,8 +4,6 @@ Enumerates the SE service states.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## DISCONNECTED
@@ -18,8 +16,6 @@ The SE service is disconnected.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## CONNECTED
@@ -31,7 +27,5 @@ CONNECTED = 1
 The SE service is connected.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement

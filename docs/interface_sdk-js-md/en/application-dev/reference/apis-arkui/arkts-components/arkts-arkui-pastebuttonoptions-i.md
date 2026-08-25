@@ -14,8 +14,6 @@ Defines options for the paste button, including icon, text and button type.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,8 +33,6 @@ Shape of the **PasteButton** component. Default value: ButtonType.Capsule.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -49,13 +45,11 @@ Shape of the **PasteButton** component. Default value: ButtonType.Capsule.
 icon?: PasteIconStyle
 ```
 
-Icon style of the **PasteButton** component. Default value: No icon is displayed. <br>If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **PasteButton** component. Default value: No icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,13 +63,11 @@ Icon style of the **PasteButton** component. Default value: No icon is displayed
 text?: PasteDescription
 ```
 
-Text on the **PasteButton** component. Default value: No text description is displayed. <br>If the icon is not transferred, the control is displayed in the default style.
+Text on the **PasteButton** component. Default value: No text description is displayed. If the icon is not transferred, the control is displayed in the default style.
 
 **Type:** [PasteDescription](arkts-arkui-pastedescription-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

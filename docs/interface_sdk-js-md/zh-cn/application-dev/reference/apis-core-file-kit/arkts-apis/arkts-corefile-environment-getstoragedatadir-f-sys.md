@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
+import { Environment } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getStorageDataDir
@@ -15,8 +15,6 @@ function getStorageDataDir(): Promise<string>
 异步方法获取内存存储根目录，使用promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
@@ -36,28 +34,6 @@ function getStorageDataDir(): Promise<string>
 | 13900020 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getStorageDataDir().then((path: string) => {
-    console.info("getStorageDataDir successfully, Path: " + path);
-}).catch((err: BusinessError) => {
-    console.error("getStorageDataDir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-Environment.getStorageDataDir((err: BusinessError, path: string) => {
-  if (err) {
-    console.error("getStorageDataDir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getStorageDataDir successfully, Path: " + path);
-  }
-});
-```
-
 
 ## getStorageDataDir
 
@@ -68,8 +44,6 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 异步方法获取内存存储根目录，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
@@ -88,7 +62,3 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900020 |
 | 13900042 |
-
-**示例**
-
-参见 [getStorageDataDir](#getstoragedatadir)

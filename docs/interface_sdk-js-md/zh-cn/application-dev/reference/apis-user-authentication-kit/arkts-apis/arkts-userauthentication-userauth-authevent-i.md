@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## callback
@@ -28,8 +26,6 @@ callback(result: EventInfo): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result: UserAuthResult)
@@ -41,50 +37,3 @@ callback(result: EventInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-// 通过callback获取认证结果。
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
-  // do error.
-}
-// 通过callback获取认证过程中的提示信息。
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  auth.on('tip', {
-    callback: (result: userAuth.TipInfo) => {
-      switch (result.tip) {
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
-          // do something;
-          break;
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
-          // do something;
-          break;
-        default:
-          // do others.
-      }
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
-  // do error.
-}
-```

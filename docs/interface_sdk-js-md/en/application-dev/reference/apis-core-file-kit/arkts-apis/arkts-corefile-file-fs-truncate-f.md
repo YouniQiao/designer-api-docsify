@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## truncate
@@ -17,8 +17,6 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 Truncates a file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,32 +56,6 @@ Truncates a file. This API uses a promise to return the result.
 | 13900033 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let len: number = 5;
-fs.truncate(filePath, len).then(() => {
-  console.info("truncate file succeed");
-}).catch((err: BusinessError) => {
-  console.error("truncate file failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let len: number = 5;
-fs.truncate(filePath, len, (err: BusinessError) => {
-  if (err) {
-    console.error("truncate failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("truncate succeed");
-  }
-});
-```
-
 
 ## truncate
 
@@ -94,8 +66,6 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,10 +99,6 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900033 |
 | 13900042 |
 
-**Examples**
-
-See [truncate](#truncate)
-
 
 ## truncate
 
@@ -143,8 +109,6 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -178,7 +142,3 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900030 |
 | 13900033 |
 | 13900042 |
-
-**Examples**
-
-See [truncate](#truncate)

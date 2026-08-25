@@ -4,8 +4,6 @@ This module provides app domain verification info.@namespace appDomainVerify
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.AppDomainVerify
@@ -15,7 +13,7 @@ This module provides app domain verification info.@namespace appDomainVerify
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from '@kit.AbilityKit';
+import { appDomainVerify } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

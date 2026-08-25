@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## startManualNetworkScan
 
 ```TypeScript
-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void
+function startManualNetworkScan(slotId: number, callback: Callback<NetworkSearchRealTimeResult>): void
 ```
 
 启动手动网络扫描，实时报告
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRea
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkSearchRealTimeResult&gt; | 是 |
 
 **错误码：**
@@ -41,15 +39,3 @@ function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRea
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-radio.startManualNetworkScan(0, (err: BusinessError, data: radio.NetworkSearchRealTimeResult) => {
-    if (err) {
-        console.error(`startManualNetworkScan failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`startManualNetworkScan success, callback: data->${JSON.stringify(data)}`);
-});
-```

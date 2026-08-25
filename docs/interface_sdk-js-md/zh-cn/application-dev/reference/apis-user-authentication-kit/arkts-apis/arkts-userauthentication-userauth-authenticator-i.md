@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## execute
@@ -27,8 +25,6 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 执行用户认证，使用callback方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -46,34 +42,6 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 | level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let authenticator = userAuth.getAuthenticator();
-authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
-  if (code === userAuth.ResultCode.SUCCESS) {
-    console.info('auth successfully.');
-    return;
-  }
-  console.error(`Failed to auth. Code: ${code}`);
-});
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
-    console.info('auth successfully.');
-  });
-} catch (error) {
-  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## execute
 
 ```TypeScript
@@ -83,8 +51,6 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 执行用户认证，使用promise方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -106,7 +72,3 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [execute](#execute)

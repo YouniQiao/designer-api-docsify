@@ -8,8 +8,6 @@ Defines the struct for a HUKS handle.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -19,7 +17,7 @@ Defines the struct for a HUKS handle.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## errorCode
@@ -33,8 +31,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -69,8 +63,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

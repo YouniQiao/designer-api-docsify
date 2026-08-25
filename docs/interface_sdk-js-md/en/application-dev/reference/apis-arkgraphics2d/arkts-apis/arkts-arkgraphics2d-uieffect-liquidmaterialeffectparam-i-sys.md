@@ -4,8 +4,6 @@ Material effect parameters, used to control the display properties of the materi
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Material effect parameters, used to control the display properties of the materi
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## distortFactor
 
 ```TypeScript
-distortFactor : double
+distortFactor : number
 ```
 
 The perturbation effect coefficient. The value must be greater than or equal to 0. Values less than 0 indicate no perturbation effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -37,16 +33,14 @@ The perturbation effect coefficient. The value must be greater than or equal to 
 ## distortProgress
 
 ```TypeScript
-distortProgress : double
+distortProgress : number
 ```
 
 The perturbation effect progress. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. 0 indicates the start of perturbation, and 1 indicates the end.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,8 +58,6 @@ Whether to enable the material effect. true means enabled, false means disabled.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Whether to enable the material effect. true means enabled, false means disabled.
 ## materialFactor
 
 ```TypeScript
-materialFactor : double
+materialFactor : number
 ```
 
 The material coefficient. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A value of 0 means no material effect and the overlay color is used for filling; a larger value indicates a more obvious material effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -91,16 +81,14 @@ The material coefficient. The value range is [0, 1]. Values less than 0 are trea
 ## reflectionFactor
 
 ```TypeScript
-reflectionFactor : double
+reflectionFactor : number
 ```
 
 The reflection coefficient. The value range is [0, 10]. Values less than 0 are treated as 0; values greater than 10 are treated as 10. A value of 0 means no reflection effect; a larger value indicates stronger reflection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -109,16 +97,14 @@ The reflection coefficient. The value range is [0, 10]. Values less than 0 are t
 ## refractionFactor
 
 ```TypeScript
-refractionFactor : double
+refractionFactor : number
 ```
 
 The refraction coefficient. The value range is [0, 10]. Values less than 0 are treated as 0; values greater than 10 are treated as 10. A value of 0 means no refraction effect; a larger value indicates stronger refraction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -127,16 +113,14 @@ The refraction coefficient. The value range is [0, 10]. Values less than 0 are t
 ## ripplePosition
 
 ```TypeScript
-ripplePosition?: Array<[double, double]>
+ripplePosition?: Array<[number, number]>
 ```
 
 The positions where the ripple effect is applied. Pass this parameter when you need to trigger ripple effects at multiple specified positions simultaneously. If not passed, there are no ripple positions by default, and the ripple effect will not take effect. Each position in the array contains x and y dimensions, using normalized coordinates where [0, 0] represents the top-left corner and [1, 1] represents the bottom-right corner. A maximum of 10 position coordinates are supported; exceeding this will make the entire parameter invalid.
 
-**Type:** ArkTS-Dyn: Array&lt;[number, number]&gt;  <br>ArkTS-Sta：Array&lt;[double, double]&gt;
+**Type:** Array&lt;[number, number]&gt;
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -145,16 +129,14 @@ The positions where the ripple effect is applied. Pass this parameter when you n
 ## rippleProgress
 
 ```TypeScript
-rippleProgress : double
+rippleProgress : number
 ```
 
 The ripple effect progress. The value must be greater than or equal to 0. Values less than 0 indicate no ripple effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -163,16 +145,14 @@ The ripple effect progress. The value must be greater than or equal to 0. Values
 ## tintColor
 
 ```TypeScript
-tintColor : [double, double, double, double]
+tintColor : [number, number, number, number]
 ```
 
 The overlay color of the material, where the four variables correspond to RGBA respectively. The value range for each is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1.
 
-**Type:** ArkTS-Dyn: [number, number, number, number]  <br>ArkTS-Sta：[double, double, double, double]
+**Type:** [number, number, number, number]
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 

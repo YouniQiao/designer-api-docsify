@@ -6,8 +6,6 @@ Defines the options of backgroundBlurStyle
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,13 +21,11 @@ inactiveColor?: ResourceColor
 
 Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Blur activation policy.
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

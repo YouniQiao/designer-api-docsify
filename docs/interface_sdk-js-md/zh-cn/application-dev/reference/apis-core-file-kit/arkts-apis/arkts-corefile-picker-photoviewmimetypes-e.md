@@ -4,8 +4,6 @@ Enumerates the media file types that can be selected.
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **替代接口：** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
@@ -21,8 +19,6 @@ IMAGE_TYPE = 'image/*'
 图片类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -42,8 +38,6 @@ VIDEO_TYPE = 'video/*'
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 18
 
 **替代接口：** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
@@ -61,8 +55,6 @@ IMAGE_VIDEO_TYPE = '*/*'
 图片和视频类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 

@@ -4,14 +4,12 @@ Describes the data structure of the task progress.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## extras
@@ -26,8 +24,6 @@ Extra information of the task, for example, the header and body of the response 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -35,16 +31,14 @@ Extra information of the task, for example, the header and body of the response 
 ## index
 
 ```TypeScript
-readonly index: int
+readonly index: number
 ```
 
 Index of the file that is being processed in the task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,16 +47,14 @@ Index of the file that is being processed in the task.
 ## processed
 
 ```TypeScript
-readonly processed: long
+readonly processed: number
 ```
 
 Size of processed data in the current file in the task, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,16 +63,14 @@ Size of processed data in the current file in the task, in bytes.
 ## sizes
 
 ```TypeScript
-readonly sizes: Array<long>
+readonly sizes: Array<number>
 ```
 
 Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +87,6 @@ Current task status.
 **Type:** State
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

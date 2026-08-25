@@ -4,8 +4,6 @@ Enumerates the error codes used for the distributed hardware.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The distributed hardware is not started.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ ERR_CODE_DEVICE_NOT_CONNECTED = 24200102
 The source device is not connected.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

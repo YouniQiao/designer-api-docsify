@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setShowNumber
 
 ```TypeScript
-function setShowNumber(slotId: int, teleNumber: string, callback: AsyncCallback<void>): void
+function setShowNumber(slotId: number, teleNumber: string, callback: AsyncCallback<void>): void
 ```
 
 Set the SIM card number in the specified slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,8 +26,8 @@ Set the SIM card number in the specified slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| teleNumber | string | Yes |
+| slotId | number | Yes |
+| [teleNumber](arkts-telephony-observer-ccallstateinfo-i.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -45,42 +43,16 @@ Set the SIM card number in the specified slot.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let number: string = '+861xxxxxxxxxx';
-sim.setShowNumber(0, number, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let number: string = '+861xxxxxxxxxx';
-sim.setShowNumber(0, number).then(() => {
-    console.info(`setShowNumber success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setShowNumber failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setShowNumber
 
 ```TypeScript
-function setShowNumber(slotId: int, teleNumber: string): Promise<void>
+function setShowNumber(slotId: number, teleNumber: string): Promise<void>
 ```
 
 Set the SIM card number in the specified slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,8 +64,8 @@ Set the SIM card number in the specified slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| teleNumber | string | Yes |
+| slotId | number | Yes |
+| [teleNumber](arkts-telephony-observer-ccallstateinfo-i.md) | string | Yes |
 
 **Return value:**
 
@@ -113,7 +85,3 @@ Set the SIM card number in the specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setShowNumber](#setshownumber)

@@ -4,8 +4,6 @@ Provides the video recorder configuration definitions.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the video recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -27,8 +25,6 @@ audio source type, details see @AudioSourceType .
 **Type:** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -46,8 +42,6 @@ geographical location information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ video recorder profile, can get by "getVideoRecorderProfile", details see @Video
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ video recorder profile, can get by "getVideoRecorderProfile", details see @Video
 ## rotation
 
 ```TypeScript
-rotation?: int
+rotation?: number
 ```
 
 Sets the video rotation angle in output file, and for the file to playback, in degrees. mp4 support. the range of rotation angle should be {0, 90, 180, 270}, default is 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -100,8 +90,6 @@ video output uri.support two kind of uri now. format like: scheme + "://" + "con
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -117,8 +105,6 @@ video source type, details see @VideoSourceType .
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 

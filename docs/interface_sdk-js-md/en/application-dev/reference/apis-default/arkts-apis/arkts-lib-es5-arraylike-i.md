@@ -1,7 +1,5 @@
 # ArrayLike
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@ readonly [n: number]: T
 
 **Type:** T
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -24,5 +20,3 @@ readonly length: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 

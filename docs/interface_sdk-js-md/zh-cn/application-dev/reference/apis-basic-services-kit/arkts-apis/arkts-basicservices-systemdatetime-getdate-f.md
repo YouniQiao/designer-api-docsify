@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getDate
@@ -15,8 +15,6 @@ function getDate(callback: AsyncCallback<Date>): void
 获取当前系统日期，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -36,40 +34,6 @@ function getDate(callback: AsyncCallback<Date>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getDate((error: BusinessError, date: Date) => {
-    if (error) {
-      console.error(`Failed to get date. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting date : ${date}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get date. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getDate().then((date: Date) => {
-    console.info(`Succeeded in getting date : ${date}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get date. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get date. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getDate
 
@@ -80,8 +44,6 @@ function getDate(): Promise<Date>
 获取当前系统日期，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -100,7 +62,3 @@ function getDate(): Promise<Date>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getDate](#getdate)

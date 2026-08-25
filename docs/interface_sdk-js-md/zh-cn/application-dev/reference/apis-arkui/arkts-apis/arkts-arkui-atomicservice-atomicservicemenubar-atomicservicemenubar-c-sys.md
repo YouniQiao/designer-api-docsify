@@ -7,8 +7,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@kit.ArkUI';
+import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -28,8 +26,6 @@ constructor(uiContext: UIContext)
 AtomicServiceMenuBar的构造函数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,7 +39,7 @@ AtomicServiceMenuBar的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 
 ## setVisible
 
@@ -54,8 +50,6 @@ public setVisible(visible: boolean): void
 设置当前原子化服务菜单功能胶囊的显隐状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

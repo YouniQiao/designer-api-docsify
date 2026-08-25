@@ -1,10 +1,8 @@
 # TrackingEvent
 
-跟踪事件@enum { int }
+跟踪事件@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -18,8 +16,6 @@ CAMERA_TRACKING_USER_ENABLED = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## CAMERA_TRACKING_USER_DISABLED
@@ -32,8 +28,6 @@ CAMERA_TRACKING_USER_DISABLED = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## CAMERA_TRACKING_LAYOUT_CHANGED
@@ -45,7 +39,5 @@ CAMERA_TRACKING_LAYOUT_CHANGED = 2
 Camera tracking layout changed. You can call getCameraTrackingLayout to obtain the new layout.
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core

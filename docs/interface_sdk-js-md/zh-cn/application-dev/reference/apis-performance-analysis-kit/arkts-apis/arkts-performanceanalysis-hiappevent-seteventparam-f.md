@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setEventParam
@@ -15,8 +15,6 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 事件自定义参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件领域和事件名称关联系统事件和应用事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -47,43 +45,3 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 | [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
 | [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) |
 | [11101007](../errorcode-hiappevent.md#11101007-非法的事件自定义参数数量) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let params: Record<string, hiAppEvent.ParamType> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-
-// 给应用事件追加自定义参数
-hiAppEvent.setEventParam(params, "test_domain", "test_event").then(() => {
-  hilog.info(0x0000, 'hiAppEvent', `success to set event param`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@ohos.base';
-
-let params: Record<string, hiAppEvent.ParamType> = {
-  "int_data": 100,
-  "str_data": "strValue"
-};
-// 给应用事件追加自定义参数
-  hiAppEvent.setEventParam(params, hiAppEvent.domain.OS, hiAppEvent.event.APP_CRASH).then(() => {
-    hilog.info(0x0000, 'hiAppEvent', `success to set event param`);
-  }).catch((err: Error) => {
-    const bErr = err as BusinessError;
-    hilog.error(0x0000, 'hiAppEvent', `code: ${bErr.code}, message: ${bErr.message}`);
-  });
-```

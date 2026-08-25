@@ -2,11 +2,9 @@
 
 Defines Navigation Modifier@extends NavigationAttribute @implements AttributeModifier&lt;NavigationAttribute&gt;
 
-**Inheritance/Implementation:** NavigationModifier extends NavigationAttribute and implements AttributeModifier<NavigationAttribute>
+**Inheritance/Implementation:** NavigationModifier extends [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md#navigationattribute) and implements AttributeModifier<NavigationAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: NavigationAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

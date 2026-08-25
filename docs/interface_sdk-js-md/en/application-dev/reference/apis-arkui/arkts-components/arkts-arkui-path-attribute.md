@@ -1,12 +1,10 @@
 # Path properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** PathAttribute extends CommonShapeMethod<PathAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ commands(value: ResourceStr)
 Sets a string of path commands that comply with the [SVG path syntax](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax). The unit is px. For details about how to convert pixel units, see Pixel Units.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

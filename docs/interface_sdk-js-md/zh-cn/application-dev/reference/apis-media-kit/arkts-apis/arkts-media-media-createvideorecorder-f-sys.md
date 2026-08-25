@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createVideoRecorder
@@ -16,8 +16,6 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +24,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
@@ -34,72 +32,6 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoRecorder: media.VideoRecorder;
-media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => {
-  if (video != null) {
-    videoRecorder = video;
-    console.info('video createVideoRecorder success');
-  } else {
-    console.error(`video createVideoRecorder fail, error message:${error.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoRecorder: media.VideoRecorder;
-media.createVideoRecorder().then((video: media.VideoRecorder) => {
-  if (video != null) {
-    videoRecorder = video;
-    console.info('video createVideoRecorder success');
-  } else {
-    console.error('video createVideoRecorder fail');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error message:${error.message}`);
-});
-```
-
-
-## createVideoRecorder
-
-```TypeScript
-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void
-```
-
-该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined & gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-
-**示例**
-
-参见 [createVideoRecorder](#createvideorecorder)
 
 
 ## createVideoRecorder
@@ -112,8 +44,6 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -122,7 +52,7 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 类型 |
 | --- |
-| Promise&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; |
+| Promise&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; |
 
 **错误码：**
 
@@ -130,41 +60,3 @@ function createVideoRecorder(): Promise<VideoRecorder>
 | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [createVideoRecorder](#createvideorecorder)
-
-
-## createVideoRecorder
-
-```TypeScript
-function createVideoRecorder(): Promise<VideoRecorder | undefined>
-```
-
-该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-
-**示例**
-
-参见 [createVideoRecorder](#createvideorecorder)

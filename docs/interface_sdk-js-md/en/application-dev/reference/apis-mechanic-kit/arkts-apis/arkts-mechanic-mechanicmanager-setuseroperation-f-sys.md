@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## setUserOperation
@@ -16,8 +16,6 @@ Sets a user operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -28,7 +26,7 @@ Sets a user operation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | Yes |
+| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-operation-e.md) | Yes |
 | mac | string | Yes |
 | params | string | Yes |
 
@@ -39,11 +37,3 @@ Sets a user operation.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
-
-**Examples**
-
-```TypeScript
-console.info('User operate');
-mechanicManager.setUserOperation(mechanicManager.Operation.CONNECT, "58:51:9e:e7:79:6d", "operatingParams");
-console.info('User operation was successful');
-```

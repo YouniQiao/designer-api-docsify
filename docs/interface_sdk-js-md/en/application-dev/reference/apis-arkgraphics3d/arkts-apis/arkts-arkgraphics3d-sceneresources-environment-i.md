@@ -6,8 +6,6 @@ Environment resource, which inherits from SceneResource.@extends SceneResource @
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## backgroundType
@@ -21,8 +19,6 @@ Environment background type.
 **Type:** [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ Environment image. The default value is undefined.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## environmentMapFactor
@@ -53,8 +47,6 @@ Environment map factor.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -72,8 +64,6 @@ Rotation of the ambient light. The default value is undefined. The parameter mus
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -90,8 +80,6 @@ Indirect diffuse factor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## indirectSpecularFactor
@@ -105,8 +93,6 @@ Indirect specular factor.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -122,8 +108,6 @@ Irradiance coefficients. The default value is undefined.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## radianceImage
@@ -137,7 +121,5 @@ Radiance image. The default value is undefined.
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

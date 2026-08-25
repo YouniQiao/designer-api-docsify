@@ -4,8 +4,6 @@ Defines information about the host application window and **UIExtensionComponent
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines information about the host application window and **UIExtensionComponent
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from '@kit.ArkUI';
+import { uiExtensionHost } from 'kits/@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect
@@ -27,8 +25,6 @@ Position, width, and height of the **UIExtensionComponent**.
 **Type:** window.Rect
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

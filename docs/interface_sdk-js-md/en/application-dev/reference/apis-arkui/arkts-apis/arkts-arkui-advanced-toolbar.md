@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -33,9 +33,3 @@ import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } fr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [ItemState](arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ToolBarOptions](arkts-arkui-toolbaroptions-t.md) |

@@ -4,8 +4,6 @@ HiPlay 设备类型定义
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ HiPlay 设备类型定义
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## castMode
 
 ```TypeScript
-castMode?: int
+castMode?: number
 ```
 
 HiPlay 投播模式，设备级和应用级
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,16 +37,14 @@ HiPlay 投播模式，设备级和应用级
 ## castUid
 
 ```TypeScript
-castUid?: int
+castUid?: number
 ```
 
 HiPlay 当前投播uid
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,16 +57,14 @@ HiPlay 当前投播uid
 ## supportCastMode
 
 ```TypeScript
-supportCastMode?: int
+supportCastMode?: number
 ```
 
 支持的Cast Mode，包含设备级和应用级投播
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,16 +77,14 @@ supportCastMode?: int
 ## supportMultiDeviceMode
 
 ```TypeScript
-supportMultiDeviceMode?: int
+supportMultiDeviceMode?: number
 ```
 
 是否支持多设备连接能力。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Defines the align rule options of relative container.
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,13 +19,11 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** Bias
+**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,13 +39,11 @@ bias?: Bias
 bottom?: VerticalAlignParam
 ```
 
-设置底部对齐的参数。<br/>API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+设置底部对齐的参数。API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
 **类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -63,13 +57,11 @@ bottom?: VerticalAlignParam
 center?: VerticalAlignParam
 ```
 
-设置纵向居中对齐方式的参数。<br/>API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
+设置纵向居中对齐方式的参数。API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
 
 **类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -83,13 +75,11 @@ center?: VerticalAlignParam
 left?: HorizontalAlignParam
 ```
 
-设置左对齐参数。<br/>API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+设置左对齐参数。API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
 **类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -103,13 +93,11 @@ left?: HorizontalAlignParam
 middle?: HorizontalAlignParam
 ```
 
-设置横向居中对齐方式的参数。<br/>API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+设置横向居中对齐方式的参数。API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
 **类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -123,13 +111,11 @@ middle?: HorizontalAlignParam
 right?: HorizontalAlignParam
 ```
 
-设置右对齐参数。<br/>API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
+设置右对齐参数。API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
 
 **类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -143,13 +129,11 @@ right?: HorizontalAlignParam
 top?: VerticalAlignParam
 ```
 
-设置顶部对齐的参数。<br/>API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+设置顶部对齐的参数。API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
 **类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@ Enumerates the reasons why a task is waiting.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## TASK_QUEUE_FULL
@@ -17,8 +15,6 @@ TASK_QUEUE_FULL = 0x00
 The task queue is full.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -32,8 +28,6 @@ The required network conditions are not met.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## APP_BACKGROUND
@@ -42,11 +36,9 @@ The required network conditions are not met.
 APP_BACKGROUND = 0x02
 ```
 
-The application has been running in the background for a long time.
+The application has been running in the background for a number time.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -59,7 +51,5 @@ USER_INACTIVATED = 0x03
 The user is inactive.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

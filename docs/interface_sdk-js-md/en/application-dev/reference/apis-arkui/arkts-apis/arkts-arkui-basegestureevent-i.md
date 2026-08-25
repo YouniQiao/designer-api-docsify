@@ -1,12 +1,10 @@
 # BaseGestureEvent
 
-Defines the basic gesture event type. Inherits from BaseEvent.
+Defines the basic gesture event type. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** BaseGestureEvent extends BaseEvent
+**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,8 +27,6 @@ Information about touch points of the gesture event. For gesture events initiate
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -48,8 +44,6 @@ Information about all fingers triggering the event.
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addPrinterToCups
@@ -15,8 +15,6 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 添加打印机到cups，使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -47,20 +45,3 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [13100003](../errorcode-print.md#13100003-打印服务异常) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerUri : string = "testPrinterUri";
-let printerName : string = "testPrinterName";
-let printerMake : string = "testPrinterMake";
-
-print.addPrinterToCups(printerUri, printerName, printerMake).then((result: boolean) => {
-    console.info('addPrinterToCups success' + JSON.stringify(result));
-}).catch((error: BusinessError) => {
-    console.error('addPrinterToCups error : ' + JSON.stringify(error));
-})
-```

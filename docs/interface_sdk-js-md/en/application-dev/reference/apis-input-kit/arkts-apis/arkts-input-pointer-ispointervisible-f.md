@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## isPointerVisible
@@ -15,8 +15,6 @@ function isPointerVisible(callback: AsyncCallback<boolean>): void
 Obtains the visible status of the mouse pointer. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -32,62 +30,6 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.isPointerVisible((error: BusinessError, visible: boolean) => {
-              if (error) {
-                console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`Get pointer visible success, visible: ${JSON.stringify(visible)}`);
-            });
-          } catch (error) {
-            console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.isPointerVisible().then((visible: boolean) => {
-              console.info(`Get pointer visible success, visible: ${JSON.stringify(visible)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## isPointerVisible
 
@@ -99,8 +41,6 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Return value:**
@@ -108,7 +48,3 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isPointerVisible](#ispointervisible)

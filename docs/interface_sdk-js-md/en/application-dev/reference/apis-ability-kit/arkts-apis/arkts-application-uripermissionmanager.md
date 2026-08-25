@@ -4,14 +4,12 @@ The **uriPermissionManager** module provides capabilities for granting the permi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from '@kit.AbilityKit';
+import { uriPermissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -24,12 +22,8 @@ import { uriPermissionManager } from '@kit.AbilityKit';
 | [grantUriPermission](arkts-ability-uripermissionmanager-granturipermission-f-sys.md) |
 | [grantUriPermission](arkts-ability-uripermissionmanager-granturipermission-f-sys.md) |
 | [grantUriPermission](arkts-ability-uripermissionmanager-granturipermission-f-sys.md) |
-| [grantUriPermission](arkts-ability-uripermissionmanager-granturipermission-f-sys.md) |
-| [grantUriPermission](arkts-ability-uripermissionmanager-granturipermission-f-sys.md) |
 | [grantUriPermissionByKey](arkts-ability-uripermissionmanager-granturipermissionbykey-f-sys.md) |
 | [grantUriPermissionByKeyAsCaller](arkts-ability-uripermissionmanager-granturipermissionbykeyascaller-f-sys.md) |
-| [revokeUriPermission](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md) |
-| [revokeUriPermission](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md) |
 | [revokeUriPermission](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md) |
 | [revokeUriPermission](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md) |
 | [revokeUriPermission](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md) |

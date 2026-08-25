@@ -4,14 +4,12 @@ AdsBlockManager是ArkWeb框架中用于管理Web组件广告过滤功能的类�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## addAdsBlockAllowedList
@@ -29,8 +27,6 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -47,120 +43,6 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击向Web组件设置广告过滤的域名策略
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("addAdsBlockAllowedList") }
-          .onClick(() => {
-            // 演示AllowedList优先级：先禁用example.com所有子域名，再重新启用news.example.com
-            let arrDisallowDomainSuffixes = new Array<string>();
-            arrDisallowDomainSuffixes.push('example.com');
-            webview.AdsBlockManager.addAdsBlockDisallowedList(arrDisallowDomainSuffixes);
-
-            let arrAllowedDomainSuffixes = new Array<string>();
-            arrAllowedDomainSuffixes.push('news.example.com');
-            webview.AdsBlockManager.addAdsBlockAllowedList(arrAllowedDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击向Web组件设置广告过滤的域名策略
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button("addAdsBlockAllowedList")
-          .onClick(() => {
-            // 演示AllowedList优先级：先禁用example.com所有子域名，再重新启用news.example.com
-            let arrDisallowDomainSuffixes = new Array<string>();
-            arrDisallowDomainSuffixes.push('example.com');
-            webview.AdsBlockManager.addAdsBlockDisallowedList(arrDisallowDomainSuffixes);
-
-            let arrAllowedDomainSuffixes = new Array<string>();
-            arrAllowedDomainSuffixes.push('news.example.com');
-            webview.AdsBlockManager.addAdsBlockAllowedList(arrAllowedDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
 
 ## addAdsBlockDisallowedList
 
@@ -177,8 +59,6 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -195,112 +75,6 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击向Web组件设置广告过滤的域名策略
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("addAdsBlockDisallowedList") }
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.addAdsBlockDisallowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击向Web组件设置广告过滤的域名策略
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button("addAdsBlockDisallowedList")
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.addAdsBlockDisallowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  } 
-}
-```
 
 ## clearAdsBlockAllowedList
 
@@ -315,8 +89,6 @@ static clearAdsBlockAllowedList(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -326,107 +98,6 @@ static clearAdsBlockAllowedList(): void
 | 错误码ID |
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("clearAdsBlockAllowedList") }
-          .onClick(() => {
-            webview.AdsBlockManager.clearAdsBlockAllowedList();
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-      .onControllerAttached(()=>{
-        this.controller.enableAdsBlock(true);
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller })
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-            .onClick(() => {
-              this.controller.loadUrl(this.input_text);
-            })
-
-          Button("clearAdsBlockAllowedList")
-            .onClick(() => {
-              webview.AdsBlockManager.clearAdsBlockAllowedList();
-            })
-        }
-      }
-
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
 
 ## clearAdsBlockDisallowedList
 
@@ -441,8 +112,6 @@ static clearAdsBlockDisallowedList(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -452,105 +121,6 @@ static clearAdsBlockDisallowedList(): void
 | 错误码ID |
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("clearAdsBlockDisallowedList") }
-          .onClick(() => {
-            webview.AdsBlockManager.clearAdsBlockDisallowedList();
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button("clearAdsBlockDisallowedList")
-          .onClick(() => {
-            webview.AdsBlockManager.clearAdsBlockDisallowedList();
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-      }
-    }
-  }
-```
 
 ## removeAdsBlockAllowedList
 
@@ -565,8 +135,6 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -583,112 +151,6 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击从AdsBlockManager的AllowedList中删除域名元素
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("removeAdsBlockAllowedList") }
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.removeAdsBlockAllowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击从AdsBlockManager的DisallowedList中删除域名元素
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button("removeAdsBlockAllowedList")
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.removeAdsBlockAllowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
 
 ## removeAdsBlockDisallowedList
 
@@ -703,8 +165,6 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -722,112 +182,6 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击从AdsBlockManager的DisallowedList中删除域名元素
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button({type: ButtonType.Capsule}) { Text("Go") }
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button({type: ButtonType.Capsule}) { Text("removeAdsBlockDisallowedList") }
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.removeAdsBlockDisallowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-      }
-    }
-  }
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Row, Flex, Button, TextInput, Color, TextInputController } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-// 演示通过一个按钮的点击从AdsBlockManager的DisallowedList中删除域名元素
-@Entry
-@Component
-struct WebComponent {
-  main_url: string = 'https://www.example.com';
-  text_input_controller: TextInputController = new TextInputController();
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State input_text: string = 'https://www.example.com';
-
-  build() {
-    Column() {
-      Row() {
-        Flex() {
-          TextInput({ text: this.input_text, placeholder: this.main_url, controller: this.text_input_controller})
-            .id("input_url")
-            .height(40)
-            .margin(5)
-            .borderColor(Color.Blue)
-            .onChange((value: string) => {
-              this.input_text = value;
-            })
-
-          Button("Go")
-          .onClick(() => {
-            this.controller.loadUrl(this.input_text);
-          })
-
-          Button("removeAdsBlockDisallowedList")
-          .onClick(() => {
-            let arrDomainSuffixes = new Array<string>();
-            arrDomainSuffixes.push('example.com');
-            arrDomainSuffixes.push('abcdefg.cn');
-            webview.AdsBlockManager.removeAdsBlockDisallowedList(arrDomainSuffixes);
-          })
-        }
-      }
-      Web({ src: this.main_url, controller: this.controller })
-        .onControllerAttached(()=>{
-          this.controller.enableAdsBlock(true);
-        })
-    }
-  }
-}
-```
-
 ## setAdsBlockRules
 
 ```TypeScript
@@ -840,8 +194,6 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 > - 此接口设置的广告过滤规则，内部解析成功后会持久化存储，应用重启后不需要重复设置。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -860,43 +212,3 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { picker, fileUri } from '@kit.CoreFileKit';
-
-// 演示点击按钮，通过filepicker打开一个EasyList规则文件并设置到Web组件中
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Row() {
-      Flex() {
-        Button({ type: ButtonType.Capsule }) {
-          Text("setAdsBlockRules")
-        }
-        .onClick(() => {
-          try {
-            let documentSelectionOptions: ESObject = new picker.DocumentSelectOptions();
-            let documentPicker: ESObject = new picker.DocumentViewPicker();
-            documentPicker.select(documentSelectionOptions).then((documentSelectResult: ESObject) => {
-              if (documentSelectResult && documentSelectResult.length > 0) {
-                let fileRealPath = new fileUri.FileUri(documentSelectResult[0]);
-                console.info('DocumentViewPicker.select successfully, uri: ' + fileRealPath);
-                webview.AdsBlockManager.setAdsBlockRules(fileRealPath.path, true);
-              }
-            })
-          } catch (err) {
-            console.error(`DocumentViewPicker.select failed, Error code: ${err.code}, message: ${err.message}`);
-          }
-        })
-      }
-    }
-  }
-}
-```

@@ -4,8 +4,6 @@ Defines the ImageAttachment Layout Style.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 Radius of the image border corners.Default value: **0**.Unit: vp
 
-**Type:** LengthMetrics \| BorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ margin?: LengthMetrics | Margin
 
 Image margin.Default value: **0**.Unit: vp
 
-**Type:** LengthMetrics \| Margin
+**Type:** LengthMetrics \| [Margin](arkts-arkui-margin-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ padding?: LengthMetrics | Padding
 
 Image padding.Default value: **0**.Unit: vp
 
-**Type:** LengthMetrics \| [Padding](arkts-arkui-units-padding-i.md)
+**Type:** LengthMetrics \| Padding
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

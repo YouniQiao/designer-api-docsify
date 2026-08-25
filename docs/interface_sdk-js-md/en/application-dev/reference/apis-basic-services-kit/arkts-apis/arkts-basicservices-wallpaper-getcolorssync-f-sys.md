@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getColorsSync
@@ -15,8 +15,6 @@ function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>
 Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -42,14 +40,3 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-try {
-    let colors = wallpaper.getColorsSync(wallpaper.WallpaperType.WALLPAPER_SYSTEM);
-    console.info(`success to getColorsSync: ${JSON.stringify(colors)}`);
-} catch (error) {
-    console.error(`failed to getColorsSync. Code: ${error.code}, Message: ${error.message}`);
-}
-```

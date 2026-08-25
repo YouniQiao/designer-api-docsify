@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDomainFilterRule
@@ -16,8 +16,6 @@ Removes the domain name filtering rules. This API is suitable for enterprise net
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.If there is no rule with [Action](arkts-mdm-networkmanager-action-e.md) being **ALLOW** after the rule is removed, the **DENY** rules that are added by default with [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md) will be removed.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -40,41 +38,3 @@ Removes the domain name filtering rules. This API is suitable for enterprise net
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let domainFilterRule: networkManager.DomainFilterRule = {
-  // Replace with actual values.
-  "domainName": "www.example.com",
-  "appUid": "9696",
-  "action": networkManager.Action.DENY,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-// Remove the specified firewall rule.
-try {
-  networkManager.removeDomainFilterRule(wantTemp, domainFilterRule);
-  console.info('Succeeded in removing domain filter rules');
-} catch (err) {
-  console.error(`Failed to remove domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-
-// Remove all firewall rules.
-try {
-  networkManager.removeDomainFilterRule(wantTemp);
-  console.info('Succeeded in removing all domain filter rules');
-} catch (err) {
-  console.error(`Failed to remove all domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-```

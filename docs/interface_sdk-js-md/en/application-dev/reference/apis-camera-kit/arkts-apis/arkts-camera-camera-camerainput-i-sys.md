@@ -4,33 +4,23 @@
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## closeDelayed
 
-ArkTS-Dyn:
 ```TypeScript
 closeDelayed(time: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-closeDelayed(time: int): Promise<void>
 ```
 
 Delay close camera.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -40,7 +30,7 @@ Delay close camera.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| time | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| time | number | Yes |
 
 **Return value:**
 
@@ -65,8 +55,6 @@ controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus)
 Control auxiliary.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -102,8 +90,6 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

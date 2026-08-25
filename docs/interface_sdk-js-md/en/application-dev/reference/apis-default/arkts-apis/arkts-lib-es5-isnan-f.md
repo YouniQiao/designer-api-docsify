@@ -13,8 +13,6 @@ declare function isNaN(number: number): boolean
 
 Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |

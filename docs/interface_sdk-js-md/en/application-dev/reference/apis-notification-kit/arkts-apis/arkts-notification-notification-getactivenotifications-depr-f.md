@@ -15,8 +15,6 @@ Obtains active notifications of this application. This API uses an asynchronous 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md)
@@ -29,34 +27,6 @@ Obtains active notifications of this application. This API uses an asynchronous 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let getActiveNotificationsCallback = (err: Base.BusinessError, data: NotificationManager.NotificationRequest[]) => {
-  if (err) {
-    console.info("getActiveNotifications failed " + JSON.stringify(err));
-  } else {
-    console.info("getActiveNotifications success");
-  }
-}
-
-Notification.getActiveNotifications(getActiveNotificationsCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-Notification.getActiveNotifications().then((data: NotificationManager.NotificationRequest[]) => {
-  console.info("removeGroupByBundle success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeGroupByBundle failed, code is ${err}`);
-});
-```
-
 
 ## getActiveNotifications
 
@@ -67,8 +37,6 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 Obtains active notifications of this application. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -81,7 +49,3 @@ Obtains active notifications of this application. This API uses a promise to ret
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; |
-
-**Examples**
-
-See [getActiveNotifications](#getactivenotifications)

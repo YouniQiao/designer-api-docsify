@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -15,8 +15,6 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): v
 Send extended commands to location subsystem.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -35,40 +33,6 @@ Send extended commands to location subsystem.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
-try {
-  geoLocationManager.sendCommand(requestInfo, (err) => {
-    if (err) {
-      console.error('sendCommand: err=' + JSON.stringify(err));
-    }
-  });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
-try {
-  geoLocationManager.sendCommand(requestInfo).then(() => {
-    console.info('promise, sendCommand success');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, sendCommand: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## sendCommand
 
@@ -79,8 +43,6 @@ function sendCommand(command: LocationCommand): Promise<void>
 Send extended commands to location subsystem.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -103,7 +65,3 @@ Send extended commands to location subsystem.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
-
-**Examples**
-
-See [sendCommand](#sendcommand)

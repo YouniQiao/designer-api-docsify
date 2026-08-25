@@ -4,55 +4,47 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## leftVolume
 
 ```TypeScript
-leftVolume?: double
+leftVolume?: number
 ```
 
 设置左声道音量。设置范围为[0.0, 1.0]，默认值为1.0。当音量超过边界值时自动设置为边界值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## loop
 
 ```TypeScript
-loop?: int
+loop?: number
 ```
 
 设置循环次数。当loop≥0时，实际播放次数为loop+1。当loop＜0时，表示一直循环。默认值：0，表示仅播放一次。当loop为浮点数时只截取整数部分。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## pitch
 
 ```TypeScript
-pitch?: double
+pitch?: number
 ```
 
-Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001. The Deault pitch is 1.0.
+设置音频流播放的音调。设置范围为[0.25, 4.0]，默认值为1.0。当音调超过边界值时自动设置为边界值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,47 +53,41 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 ## priority
 
 ```TypeScript
-priority?: int
+priority?: number
 ```
 
 音频流播放的优先级。0为最低优先级，数值越大优先级越高。通过相互比较数值大小确定播放优先级，设置范围为大于等于0的整数。默认值为0。当优先级为负数时自动设置为0，为浮点数时只截取整数部分。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## rate
 
 ```TypeScript
-rate?: int
+rate?: number
 ```
 
 设置音频播放的倍速，具体倍速范围参照[AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md)。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## rightVolume
 
 ```TypeScript
-rightVolume?: double
+rightVolume?: number
 ```
 
 设置右声道音量（当前不支持左右分别设置，将以左声道音量为准）。设置范围为[0.0, 1.0]，默认值为1.0。当音量超过边界值时自动设置为边界值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool

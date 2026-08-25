@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setKeepAliveForBundle
 
 ```TypeScript
-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>
+function setKeepAliveForBundle(bundleName: string, userId: number, enable: boolean): Promise<void>
 ```
 
 Sets or cancels the keep-alive status for an application that belongs to a specified user. This API uses a promise to return the result. Starting from API version 18, this API can be properly called only on 2-in-1 devices and wearables. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 801 is returned.
@@ -25,8 +25,6 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -38,7 +36,7 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | enable | boolean | Yes |
 
 **Return value:**
@@ -60,24 +58,3 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 | [16300008](../errorcode-ability.md#16300008-specified-package-does-not-have-a-main-uiability) |
 | [16300009](../errorcode-ability.md#16300009-specified-package-does-not-have-a-status-bar) |
 | [16300010](../errorcode-ability.md#16300010-running-application-is-not-attached-to-a-status-bar) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.keepaliveapp";
-  let userId = 100;
-  appManager.setKeepAliveForBundle(bundleName, userId, true).then(() => {
-    console.info(`setKeepAliveForBundle success`);
-  }).catch((err: BusinessError) => {
-    console.error(`setKeepAliveForBundle fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] setKeepAliveForBundle error: ${code}, ${message}`);
-}
-```

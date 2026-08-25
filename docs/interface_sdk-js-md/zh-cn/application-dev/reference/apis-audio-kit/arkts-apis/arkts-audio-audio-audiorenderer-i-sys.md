@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getTarget
@@ -29,8 +27,6 @@ getTarget(): RenderTarget
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -46,20 +42,6 @@ getTarget(): RenderTarget
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-async function getTarget(){
-  // 可选步骤：设置注入模式。
-  await audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE);
-  console.info('Succeeded in setting target.');
-
-  // 调用此接口前，若已经调用过SetTarget接口，请确保SetTarget接口已经设置成功，否则获取到的数值可能不准确。
-  let renderTarget = audioRenderer.getTarget();
-  console.info(`Succeeded in getting target, RenderTarget: ${renderTarget}.`);
-}
-```
 
 ## setTarget
 
@@ -92,8 +74,6 @@ setTarget(target: RenderTarget): Promise<void>
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
@@ -122,15 +102,3 @@ setTarget(target: RenderTarget): Promise<void>
 | [6800103](../errorcode-audio.md#6800103-状态不支持) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE).then(() => {
-  console.info('Succeeded in setting target.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
-});
-```

@@ -1,12 +1,10 @@
 # Scroll属性/事件
 
-除支持通用属性和滚动组件通用属性外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
+除支持通用属性和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
 
 **继承/实现关系：** ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -35,8 +31,8 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](#edgeeffect) | 是 |
-| options | [EdgeEffectOptions](../arkts-apis/arkts-arkui-common-edgeeffectoptions-i.md) | 否 |
+| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 |
 
 ## enableBouncesZoom
 
@@ -47,8 +43,6 @@ enableBouncesZoom(enable: boolean)
 设置是否启用过缩放回弹效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +66,6 @@ enablePaging(value: boolean)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -95,8 +87,6 @@ enableScrollInteraction(value: boolean)
 设置是否支持滚动手势。可用于在自定义拖动、自定义滚动等业务需要接管滑动手势的场景中，临时禁用滚动组件的用户手势滚动。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,8 +110,6 @@ friction(value: number | Resource)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -143,8 +131,6 @@ initialOffset(value: OffsetOptions)
 设置初始滚动偏移量。只在首次布局时生效，后续动态修改该属性值不生效。可用于页面首次显示时定位到指定滚动位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,8 +154,6 @@ maxZoomScale(scale: number)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -191,8 +175,6 @@ minZoomScale(scale: number)
 设置Scroll组件内容的最小手势缩放比例。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,8 +198,6 @@ nestedScroll(value: NestedScrollOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -228,7 +208,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | 是 |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 |
 
 ## onDidScroll
 
@@ -242,8 +222,6 @@ onDidScroll(handler: ScrollOnScrollCallback)
 3. 越界回弹。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,8 +244,6 @@ onDidZoom(event: ScrollOnDidZoomCallback)
 每帧缩放完成时触发。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -293,8 +269,6 @@ onScroll(event: (xOffset: number, yOffset: number) => void)
 3. 越界回弹。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 12
 
@@ -323,8 +297,6 @@ onScrollEdge(event: OnScrollEdgeCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -346,8 +318,6 @@ onScrollEnd(event: () => void)
 2. 通过滚动控制器API接口调用后停止，带过渡动效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -378,8 +348,6 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -402,8 +370,6 @@ onScrollStart(event: VoidCallback)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -425,8 +391,6 @@ onScrollStop(event: VoidCallback)
 2. 通过滚动控制器API接口调用后开始，带过渡动效。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -454,8 +418,6 @@ onWillScroll(handler: ScrollOnWillScrollCallback)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -477,8 +439,6 @@ onZoomStart(event: VoidCallback)
 手势缩放开始触发。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -502,8 +462,6 @@ onZoomStop(event: VoidCallback)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -526,8 +484,6 @@ scrollable(value: ScrollDirection)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -547,8 +503,6 @@ scrollBar(barState: BarState)
 设置滚动条状态。如果容器组件无法滚动，则滚动条不显示。如果容器组件的子组件大小为无穷大，则滚动条不支持拖动和伴随滚动。可用于控制滚动条是否常驻显示、自动显示或隐藏。从API version 10开始，当滚动组件存在圆角时，为避免滚动条被圆角截断，滚动条会自动计算距顶部和底部的避让距离。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -570,8 +524,6 @@ scrollBarColor(color: Color | number | string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -591,8 +543,6 @@ scrollBarColor(color: Color | number | string | Resource)
 设置滚动条的颜色。与[scrollBarColor](#scrollbarcolor)相比，color参数开始支持 Resource类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -616,8 +566,6 @@ scrollBarWidth(value: number | string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -637,8 +585,6 @@ scrollBarWidth(value: number | string | Resource)
 设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Scroll组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp，支持Resource资源类型。未通过该接口设置时，设置滚动条的宽度为4vp。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -662,8 +608,6 @@ scrollSnap(value: ScrollSnapOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -685,8 +629,6 @@ zoomScale(scale: number)
 设置Scroll组件内容的缩放比例。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

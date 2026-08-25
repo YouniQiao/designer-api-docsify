@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## closeToast
@@ -21,8 +21,6 @@ Closes the specified toast.
 > [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closetoast) API through this object.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

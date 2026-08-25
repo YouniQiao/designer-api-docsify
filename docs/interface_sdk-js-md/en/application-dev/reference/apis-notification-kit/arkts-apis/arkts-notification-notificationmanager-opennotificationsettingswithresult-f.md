@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## openNotificationSettingsWithResult
@@ -15,8 +15,6 @@ function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<
 Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed.Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,30 +46,3 @@ isNotificationEnabled checks whether notification
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      notificationManager.openNotificationSettingsWithResult(this.context).then((data) => {
-        hilog.info(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult success, data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult failed, code is ${err.code}, message is ${err.message}`);
-      });
-    });
-  }
-}
-```

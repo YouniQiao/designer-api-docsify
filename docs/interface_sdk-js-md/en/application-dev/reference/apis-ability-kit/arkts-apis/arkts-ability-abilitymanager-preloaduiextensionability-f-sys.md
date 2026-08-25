@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## preloadUIExtensionAbility
 
 ```TypeScript
-function preloadUIExtensionAbility(want: Want): Promise<int>
+function preloadUIExtensionAbility(want: Want): Promise<number>
 ```
 
 Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -36,7 +34,7 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -48,33 +46,3 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const preloadWant: Want = {
-    bundleName: 'com.example.application',
-    abilityName: 'EntryBackupAbility',
-    moduleName: 'entry',
-    parameters: {
-      'ability.want.params.uiExtensionType': 'sys/commonUI'
-    }
-  };
-
-  abilityManager.preloadUIExtensionAbility(preloadWant)
-    .then((preloadId: number) => {
-      console.info(`preloadUIExtensionAbility success, preloadId: ${preloadId}`);
-    })
-    .catch((err: BusinessError) => {
-      console.error(`preloadUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
-}
-```

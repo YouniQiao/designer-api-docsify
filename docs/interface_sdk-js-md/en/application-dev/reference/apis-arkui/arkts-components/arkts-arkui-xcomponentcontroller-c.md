@@ -4,8 +4,6 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,17 +21,9 @@ A constructor used to create a **XComponentController** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-xcomponentController: XComponentController = new XComponentController();
-```
 
 ## getXComponentContext
 
@@ -44,8 +34,6 @@ getXComponentContext(): Object
 Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -67,8 +55,6 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -79,30 +65,6 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  myXComponentController: XComponentController = new XComponentController();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.myXComponentController
-      })
-        .onLoad(() => {
-          let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
-          console.info("XComponent SurfaceId: " + surfaceId);
-        })
-    }
-  }
-}
-```
-
 ## getXComponentSurfaceRect
 
 ```TypeScript
@@ -112,8 +74,6 @@ getXComponentSurfaceRect(): SurfaceRect
 Obtains the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent** type is **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +97,6 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -161,8 +119,6 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -173,7 +129,7 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| DrawingCanvas \| null |
+| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) \| null |
 
 ## onSurfaceChanged
 
@@ -184,8 +140,6 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 Triggered when the surface held by the **XComponent** has its size changed (including the time when the **XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,8 +164,6 @@ Triggered when the surface held by the **XComponent** is created. This API works
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -233,8 +185,6 @@ onSurfaceDestroyed(surfaceId: string): void
 Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,8 +211,6 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -285,8 +233,6 @@ Sets the display area for the surface held by the **XComponent**, including the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -308,8 +254,6 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 Sets whether to lock the orientation of the surface held by this **XComponent** when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,8 +279,6 @@ setXComponentSurfaceSize(value: {
 Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.Unit: px.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -365,8 +307,6 @@ Starts AI image analysis in the given settings. Before calling this API, make su
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -377,7 +317,7 @@ Starts AI image analysis in the given settings. Before calling this API, make su
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes |
 
 **Return value:**
 
@@ -409,8 +349,6 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -427,8 +365,6 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -439,4 +375,4 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | Yes |
+| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Yes |

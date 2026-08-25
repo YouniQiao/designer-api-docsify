@@ -15,8 +15,6 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [trigger](arkts-ability-wantagent-trigger-f.md)
@@ -32,58 +30,3 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 | [agent](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
 | triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
-import { BusinessError } from '@ohos.base';
-
-// wantAgent对象
-let wantAgentObj: _WantAgent;
-
-// getWantAgent回调
-function getWantAgentCallback(err: BusinessError, data: _WantAgent) {
-    console.info('==========================>getWantAgentCallback=======================>');
-    if (err.code == 0) {
-        wantAgentObj = data;
-    } else {
-        console.error('getWantAgent failed, error: ' + JSON.stringify(err));
-        return;
-    }
-
-    // trigger回调
-    let triggerCallback = (data: wantAgent.CompleteData) => {
-        console.info('==========================>triggerCallback=======================>');
-    };
-
-    wantAgent.trigger(wantAgentObj, {code:0}, triggerCallback);
-}
-
-wantAgent.getWantAgent({
-    wants: [
-        {
-            deviceId: 'deviceId',
-            bundleName: 'com.neu.setResultOnAbilityResultTest1',
-            abilityName: 'com.example.test.EntryAbility',
-            action: 'action1',
-            entities: ['entity1'],
-            type: 'MIMETYPE',
-            uri: 'key={true,true,false}',
-            parameters:
-            {
-                mykey0: 2222,
-                mykey1: [1, 2, 3],
-                mykey2: '[1, 2, 3]',
-                mykey3: 'ssssssssssssssssssssssssss',
-                mykey4: [false, true, false],
-                mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-                mykey6: true,
-            }
-        }
-    ],
-    operationType: wantAgent.OperationType.START_ABILITY,
-    requestCode: 0,
-    wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-}, getWantAgentCallback);
-```

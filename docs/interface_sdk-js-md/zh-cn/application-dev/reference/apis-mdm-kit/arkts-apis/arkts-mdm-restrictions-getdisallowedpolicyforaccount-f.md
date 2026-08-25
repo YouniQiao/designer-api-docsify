@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedPolicyForAccount
@@ -15,8 +15,6 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: string, acco
 获取指定用户的某特性状态。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **废弃版本：** 26.0.0
 
@@ -50,47 +48,6 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: string, acco
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, 'fingerprint', 100);
-  console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
-} catch (err) {
-  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp,
-    restrictions.FeatureForAccount.SUPER_HUB, 100);
-  console.info(`Succeeded in querying whether the super hub is disabled: ${result}`);
-} catch (err) {
-  console.error(`Failed to get whether super hub is disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedPolicyForAccount
 
@@ -101,8 +58,6 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAc
 获取指定用户的某特性状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -133,7 +88,3 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAc
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount)

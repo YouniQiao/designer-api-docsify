@@ -4,33 +4,23 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## compress
 
-ArkTS-Dyn:
 ```TypeScript
 compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
-```TypeScript
-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
 将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +32,7 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 | --- | --- | --- |
 | dest | ArrayBuffer | 是 |
 | source | ArrayBuffer | 是 |
-| sourceLen | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| sourceLen | number | 否 |
 
 **返回值：**
 
@@ -57,44 +47,15 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let str = 'hello world! 你好，世界！';
-const enc = util.TextEncoder.create('utf-8');
-const u8 = enc.encodeInto(str);
-const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
-
-let arrayBufferOut = new ArrayBuffer(100);
-let zip = zlib.createZipSync();
-
-zip.compress(arrayBufferOut, arrayBufferIn, 20).then((data) => {
-  console.info('compress success:');
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```
-
 ## compress2
 
-ArkTS-Dyn:
 ```TypeScript
 compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: number,): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
-```TypeScript
-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>
 ```
 
 将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,7 +68,7 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | dest | ArrayBuffer | 是 |
 | source | ArrayBuffer | 是 |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 |
-| sourceLen | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| sourceLen | number | 否 |
 
 **返回值：**
 
@@ -123,44 +84,15 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let str = 'hello world! 你好，世界！';
-const enc = util.TextEncoder.create('utf-8');
-const u8 = enc.encodeInto(str);
-const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
-
-let arrayBufferOut = new ArrayBuffer(100);
-let zip = zlib.createZipSync();
-
-zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-  console.info('compress2 success');
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```
-
 ## compressBound
 
-ArkTS-Dyn:
 ```TypeScript
 compressBound(sourceLen: number): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-compressBound(sourceLen: int): Promise<int>
 ```
 
 计算返回压缩大小的上限。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -170,41 +102,19 @@ compressBound(sourceLen: int): Promise<int>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sourceLen | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| sourceLen | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let str = 'hello world!';
-let arrayBufferIn = new ArrayBuffer(str.length);
-let byteArray = new Uint8Array(arrayBufferIn);
-
-for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i);
-}
-
-let zip = zlib.createZipSync();
-
-zip.compressBound(str.length).then((data) => {
-  console.info('compressBound success')
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```
 
 ## deflate
 
@@ -215,8 +125,6 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 压缩数据。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -243,56 +151,15 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-}
-```
-
 ## deflateBound
 
-ArkTS-Dyn:
 ```TypeScript
 deflateBound(strm: ZStream, sourceLength: number): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 ```
 
 计算压缩大小的上限。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -303,52 +170,19 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| [sourceLength](arkts-basicservices-zlib-decompressionoutputinfo-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| [sourceLength](arkts-basicservices-zlib-decompressionoutputinfo-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateBound({ nextOut: arrayBufferOut }, 12).then((data) => {
-    console.info('deflateBound success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## deflateCopy
 
@@ -359,8 +193,6 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 复制压缩流。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -385,39 +217,6 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateCopy(zip).then((data) => {
-    console.info('deflateCopy success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflateEnd
 
 ```TypeScript
@@ -427,8 +226,6 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -453,44 +250,6 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflateEnd({ nextOut: arrayBufferOut }).then(data => {
-    console.info('deflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflateGetDictionary
 
 ```TypeScript
@@ -500,8 +259,6 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 获取当前压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -527,44 +284,6 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateSetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
-    console.info('deflateSetDictionary success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateGetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
-    console.info('deflateGetDictionary success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflateInit
 
 ```TypeScript
@@ -574,8 +293,6 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 初始化压缩流并设置指定压缩级别。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -601,53 +318,16 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-}
-```
-
 ## deflateInit2
 
-ArkTS-Dyn:
 ```TypeScript
 deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: number,
-        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,
         memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>
 ```
 
 初始化压缩流并设置压缩级别、压缩方法、窗口大小、内存级别和压缩策略。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -660,7 +340,7 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 |
-| windowBits | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| windowBits | number | 是 |
 | [memLevel](arkts-basicservices-zlib-options-i.md) | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 |
 
@@ -677,35 +357,6 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync()
-  await zip.deflateInit2(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED, zlib.CompressMethod.DEFLATED, 28,
-    zlib.MemLevel.MEM_LEVEL_DEFAULT, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
-      console.info('deflateInit2 success');
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-    })
-}
-```
-
 ## deflateParams
 
 ```TypeScript
@@ -715,8 +366,6 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 动态更新压缩级别和压缩策略。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -743,39 +392,6 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync()
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateParams(zStream, zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
-    console.info('deflateParams success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflatePending
 
 ```TypeScript
@@ -785,8 +401,6 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 返回已生成但尚未在可用输出中提供的输出的字节数和位数。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -811,56 +425,15 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflatePending({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('deflatePending success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflatePrime
 
-ArkTS-Dyn:
 ```TypeScript
 deflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
 在压缩流中插入位和值。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -871,8 +444,8 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | 是 |
+| value | number | 是 |
 
 **返回值：**
 
@@ -886,39 +459,6 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflatePrime({ nextOut: arrayBufferOut }, 5, 2).then((data) => {
-    console.info('deflatePrime success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## deflateReset
 
@@ -930,8 +470,6 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -954,39 +492,6 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateReset({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('deflateReset success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## deflateResetKeep
 
@@ -998,8 +503,6 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -1023,39 +526,6 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateResetKeep({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('deflateResetKeep success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflateSetDictionary
 
 ```TypeScript
@@ -1065,8 +535,6 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 从给定的字节序列初始化压缩字典。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1092,39 +560,6 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateSetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
-    console.info('deflateSetDictionary success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## deflateSetHeader
 
 ```TypeScript
@@ -1134,8 +569,6 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 当deflateInit2()请求gzip流时，提供gzip标头信息。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1161,57 +594,15 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync()
-  await zip.deflateInit2(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED, zlib.CompressMethod.DEFLATED, 28,
-    zlib.MemLevel.MEM_LEVEL_DEFAULT, zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY).then((data) => {
-      console.info('deflateInit2 success');
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-    })
-  await zip.deflateSetHeader({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, { isText: true, os: 1, time: 1, xflags: 1, extra: arrayBufferIn, extraLen: 12, name: arrayBufferIn, comment: arrayBufferOut, hcrc: true, done: true }).then((data) => {
-    console.info('deflateSetHeader success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-}
-```
-
 ## deflateTune
 
-ArkTS-Dyn:
 ```TypeScript
 deflateTune(strm: ZStream, goodLength: number, maxLazy: number, niceLength: number, maxChain: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>
 ```
 
 微调deflate的内部压缩参数。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1222,10 +613,10 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| goodLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| maxLazy | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| niceLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| maxChain | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| goodLength | number | 是 |
+| maxLazy | number | 是 |
+| niceLength | number | 是 |
+| maxChain | number | 是 |
 
 **返回值：**
 
@@ -1240,39 +631,6 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateTune({ nextOut: arrayBufferOut }, 2, 2, 2, 2).then((data) => {
-    console.info('deflateTune success:')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## getZStream
 
 ```TypeScript
@@ -1282,8 +640,6 @@ getZStream(): Promise<ZStream>
 输出流。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1295,44 +651,6 @@ getZStream(): Promise<ZStream>
 | --- |
 | Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
-
-let zip = zlib.createZipSync();
-
-zip.getZStream().then(data => {
-  console.info('getZStream success');
-})
-```
-
-## getZStream
-
-```TypeScript
-getZStream(): Promise<ZStream | undefined>
-```
-
-输出流，使用Promise异步返回。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.BundleManager.Zlib
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md) \| undefined & gt; |
-
-**示例**
-
-参见 [getZStream](#getzstream)
-
 ## inflate
 
 ```TypeScript
@@ -1342,8 +660,6 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 解压数据。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1370,60 +686,6 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 | [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zStream: zlib.ZStream = {
-    nextIn: arrayBufferIn,
-    availableIn: 1,
-    nextOut: arrayBufferOut,
-    availableOut: 1
-  };
-  let zip = zlib.createZipSync();
-  await zip.deflateInit(zStream, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflate({ availableOut: 8 }, zlib.CompressFlushMode.FINISH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflateEnd({ nextOut: arrayBufferOut }).then(data => {
-    console.info('deflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflate({ availableIn: 8, availableOut: 8 }, 0).then((data) => {
-    console.info('inflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('inflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateBack
 
 ```TypeScript
@@ -1433,8 +695,6 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 实现原始解压缩，采用回调接口来处理输入和输出。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1463,186 +723,6 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let readIn: (inDesc: object) => ArrayBuffer = (inDesc: object): ArrayBuffer => {
-    console.info("inDesc = ", JSON.stringify(inDesc));
-    let buffer = new ArrayBuffer(26)
-    let array = new Uint8Array(buffer);
-    array.set([31, 139, 8, 0, 0, 0, 0, 0, 0, 10, 243, 72, 205, 201, 201, 231, 2, 0, 22, 53, 150, 49, 6, 0, 0, 0]);
-    return buffer;
-  }
-
-  let writeOut: (outDesc: object, buffer: ArrayBuffer, length: number) => number = (outDesc: object, buffer: ArrayBuffer, length: number): number => {
-    console.info("outDesc = ", outDesc);
-    console.info("buffer = ", buffer);
-    console.info("length = ", length);
-    let array = new Uint8Array(buffer);
-    let dataString = "";
-    for (let i = 0; i < length; i++) {
-      dataString += String.fromCharCode(array[i]);
-    }
-    console.info('writeOut ', dataString);
-    return 0;
-  }
-
-  let have = 0;
-  let first = 1;
-  let arrayBuffer = new ArrayBuffer(26);
-  let next = new Uint8Array(arrayBuffer);
-  let last = 0;
-  let index = 0;
-  let flags = 0;
-  let NEXT2: () => number = (): number => {
-    let o6: object = new Object()
-    if (!have) {
-      arrayBuffer = readIn(o6)
-      next = new Uint8Array(arrayBuffer);
-      console.info('readIn next = ', next.length)
-      have = next.length;
-    }
-    if (have) {
-      have--;
-      last = next[index];
-      index++;
-    }
-    else {
-      last = -1;
-    }
-    return last;
-  }
-
-  let inflateBackTest: () => void = (async () => {
-    try {
-      have = 0;
-      first = 1;
-      arrayBuffer = new ArrayBuffer(26);
-      next = new Uint8Array(arrayBuffer);
-      last = 0;
-      index = 0;
-      flags = 0;
-      let sr = zlib.createZipSync();
-      let buffer = new ArrayBuffer(1024)
-      await sr.inflateBackInit({}, 15, buffer).then((result) => {
-        console.info('inflateBackInit Call result res', result)
-      })
-      let ret = 0;
-      for (; ;) {
-        if (NEXT2() == -1) {
-          ret = 0;
-          console.info('inflateBackTest Call result NEXT2() == -1')
-          break;
-        }
-        console.info('have =  last = ', have, last)
-        if (last != 31 || NEXT2() != 139 ) {
-          ret = first ? -3 : -1;
-          console.info('inflateBackTest Call result last != 31 || (NEXT2() != 139 && last != 157)')
-          break;
-        }
-        first = 0;
-        ret = -5;
-        if (NEXT2() != 8) {
-          if (last < 0) {
-            console.info('inflateBackTest Call result 1 last == -1')
-            break;
-          }
-        }
-        flags = NEXT2();
-        NEXT2();
-        NEXT2();
-        NEXT2();
-        NEXT2();
-        NEXT2();
-        NEXT2();
-        if (last < 0) {
-          console.info('inflateBackTest Call result 2 last == -1')
-          break;
-        }
-        console.info('index =  have = ', next[index], have)
-        let newArrayBuffer = new ArrayBuffer(have);
-        let newNext = new Uint8Array(newArrayBuffer);
-        for (let i = 0; i < have; i++) {
-          newNext[i] = next[26 - have + i];
-        }
-        console.info('newArrayBuffer.length = ', newArrayBuffer.byteLength)
-        console.info('newNext.length = ', newNext.length)
-        let zStream: zlib.ZStream = {
-          nextIn: newArrayBuffer,
-          availableIn: have,
-        };
-        await sr.inflateBack(
-          zStream,
-          readIn,
-          { fileName: 'test.gz' },
-          writeOut,
-          { fileName: 'test.gz' }).then((result) => {
-            ret = result;
-            console.info('inflateBack Call result res', result)
-          })
-        if (ret == 1) {
-          console.info('inflateBackTest Call result success')
-          break;
-        }
-      }
-      await sr.inflateBackEnd({}).then((result) => {
-        console.info('inflateBackEnd Call result res', result)
-      })
-    }
-    catch (errData) {
-      console.error(`errData is message:${errData}`);
-    }
-  })
-  inflateBackTest();
-}
-```
-
-## inflateBack
-
-```TypeScript
-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>
-```
-
-实现原始解压缩，采用回调接口来处理输入和输出，使用Promise异步返回。成功时返回结果状态。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.BundleManager.Zlib
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | 是 |
-| inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | 是 |
-| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | 是 |
-| outDesc | [RecordData](arkts-basicservices-recorddata-t.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-
-**示例**
-
-参见 [inflateBack](#inflateback)
-
 ## inflateBackEnd
 
 ```TypeScript
@@ -1653,8 +733,6 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -1678,27 +756,15 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-参考[inflateBack](#inflateback)中的示例代码。
-
 ## inflateBackInit
 
-ArkTS-Dyn:
 ```TypeScript
 inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>
 ```
 
 使用inflateBack()函数前初始化内部流状态以进行解压缩。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1709,7 +775,7 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| windowBits | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| windowBits | number | 是 |
 | [window](../../apis-arkui/arkts-components/arkts-arkui-window-t.md) | ArrayBuffer | 是 |
 
 **返回值：**
@@ -1725,27 +791,15 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-参考[inflateBack](#inflateback)中的示例代码。
-
 ## inflateCodesUsed
 
-ArkTS-Dyn:
 ```TypeScript
 inflateCodesUsed(strm: ZStream): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateCodesUsed(strm: ZStream): Promise<long>
 ```
 
 当前解压缩流中使用的霍夫曼编码树的数量。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1761,41 +815,13 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateCodesUsed({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 8 }).then(data => {
-    console.info('inflateCodesUsed success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## inflateCopy
 
@@ -1806,8 +832,6 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 复制解压流。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1832,35 +856,6 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  let destZip = zlib.createZipSync();
-  await destZip.inflateCopy(zip).then((data) => {
-    console.info('inflateCopy success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateEnd
 
 ```TypeScript
@@ -1870,8 +865,6 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1896,39 +889,6 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflate({ availableIn: 8, availableOut: 8 }, 0).then((data) => {
-    console.info('inflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('inflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateGetDictionary
 
 ```TypeScript
@@ -1938,8 +898,6 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 获取当前解压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1965,34 +923,6 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
-  ).then(data => {
-    console.info('inflateInit2 success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateGetDictionary({ nextOut: arrayBufferOut }, arrayBufferOut).then((data) => {
-    console.info('inflateGetDictionary success:')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateGetHeader
 
 ```TypeScript
@@ -2002,8 +932,6 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 用于在解压缩数据前设置gzip文件头部信息。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2029,34 +957,6 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
-  ).then(data => {
-    console.info('inflateInit2 success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateGetHeader({ availableIn: 1, availableOut: 1 }, { isText: true, os: 1, time: 1, xflags: 1, extra: arrayBufferIn, extraLen: 12, name: arrayBufferIn, comment: arrayBufferOut, hcrc: true, done: true }).then(data => {
-    console.info('inflateGetHeader success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateInit
 
 ```TypeScript
@@ -2067,8 +967,6 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2091,48 +989,16 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let str = 'hello world!';
-let arrayBufferIn = new ArrayBuffer(str.length);
-let byteArray = new Uint8Array(arrayBufferIn);
-
-for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i);
-}
-
-let arrayBufferOut = new ArrayBuffer(100);
-let zip = zlib.createZipSync();
-
-zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-).then(data => {
-  console.info('inflateInit success');
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```
-
 ## inflateInit2
 
-ArkTS-Dyn:
 ```TypeScript
 inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
 初始化解压缩流并设置指定的 windowBits 参数。使用Promise异步回调。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2142,7 +1008,7 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| windowBits | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| windowBits | number | 是 |
 
 **返回值：**
 
@@ -2157,48 +1023,16 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let str = 'hello world!';
-let arrayBufferIn = new ArrayBuffer(str.length);
-let byteArray = new Uint8Array(arrayBufferIn);
-
-for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i);
-}
-
-let arrayBufferOut = new ArrayBuffer(100);
-let zip = zlib.createZipSync();
-
-zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }, 28
-).then(data => {
-  console.info('inflateInit2 success');
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```
-
 ## inflateMark
 
-ArkTS-Dyn:
 ```TypeScript
 inflateMark(strm: ZStream): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateMark(strm: ZStream): Promise<int>
 ```
 
 用于标记输入数据中的位置以供随机访问。使用Promise异步回调。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2213,7 +1047,7 @@ inflateMark(strm: ZStream): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -2221,51 +1055,15 @@ inflateMark(strm: ZStream): Promise<int>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateMark({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }).then(data => {
-    console.info('inflateMark success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflatePrime
 
-ArkTS-Dyn:
 ```TypeScript
 inflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
 在指定解压缩流中设置初始比特数和比特值，用于在解压流开始时预填充比特缓冲区，以正确处理流起始位置的数据。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2276,8 +1074,8 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | 是 |
+| value | number | 是 |
 
 **返回值：**
 
@@ -2291,34 +1089,6 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflatePrime({ nextOut: arrayBufferOut }, 5, 2).then(data => {
-    console.info('inflatePrime success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## inflateReset
 
@@ -2330,8 +1100,6 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2355,52 +1123,16 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateReset({ availableIn: 1, availableOut: 8 }).then(data => {
-    console.info('inflateReset success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateReset2
 
-ArkTS-Dyn:
 ```TypeScript
 inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
 重置指定解压缩流的状态并更新窗口大小配置，以重新开始新的解压操作。不会释放或重新分配内部缓冲区。使用Promise异步回调。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2410,7 +1142,7 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| windowBits | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| windowBits | number | 是 |
 
 **返回值：**
 
@@ -2424,34 +1156,6 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateReset2({ availableOut: 8 }, 15).then(data => {
-    console.info('inflateReset2 success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
 
 ## inflateResetKeep
 
@@ -2463,8 +1167,6 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2488,34 +1190,6 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateResetKeep({ availableIn: 1 }).then(data => {
-    console.info('inflateResetKeep success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateSetDictionary
 
 ```TypeScript
@@ -2525,8 +1199,6 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 使用给定的字典数据初始化当前解压缩流的字典内容。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2553,71 +1225,6 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 | [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello, hello!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  let dictionary = 'hello';
-  let dictionarybuf = new ArrayBuffer(dictionary.length);
-  let dictionarybufdata = new Uint8Array(dictionarybuf);
-  for (let i = 0, j = dictionary.length; i < j; i++) {
-    dictionarybufdata[i] = str.charCodeAt(i);
-  }
-  await zip.deflateInit({}, zlib.CompressLevel.COMPRESS_LEVEL_BEST_COMPRESSION).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflateSetDictionary({}, dictionarybuf).then((data) => {
-    console.info('deflateSetDictionary success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflate({ nextIn: arrayBufferIn, availableIn: 14, nextOut: arrayBufferOut, availableOut: 100 }, zlib.CompressFlushMode.FINISH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.deflateEnd({}).then(data => {
-    console.info('deflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  try {
-    await zip.inflateInit({ nextIn: arrayBufferOut, availableIn: 100 }).then(data => {
-      console.info('inflateInit success')
-    })
-  } catch (errData) {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  }
-  await zip.inflate({ nextOut: arrayBufferIn, availableOut: 28 }, zlib.CompressFlushMode.NO_FLUSH).then((data) => {
-    console.info('inflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.inflateSetDictionary({}, dictionarybuf).then((data) => {
-    console.info('inflateSetDictionary success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('inflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`)
-  })
-}
-```
-
 ## inflateSync
 
 ```TypeScript
@@ -2627,8 +1234,6 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 跳过无效的压缩数据，直到找到一个可能的完整刷新点为止。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2655,65 +1260,6 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 | [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello, hello!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.deflateInit({}, zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION).then((data) => {
-    console.info('deflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflate({ nextIn: arrayBufferIn, availableIn: 3, nextOut: arrayBufferOut, availableOut: 100 }, zlib.CompressFlushMode.FULL_FLUSH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflate({ availableIn: 11 }, zlib.CompressFlushMode.FINISH).then((data) => {
-    console.info('deflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.deflateEnd({}).then(data => {
-    console.info('deflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  try {
-    await zip.inflateInit({ nextIn: arrayBufferOut, availableIn: 2 }).then(data => {
-      console.info('inflateInit2 success')
-    })
-  } catch (errData) {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  }
-  await zip.inflate({ nextOut: arrayBufferIn, availableOut: 28 }, zlib.CompressFlushMode.NO_FLUSH).then((data) => {
-    console.info('inflate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateSync({ availableIn: 26 }).then(data => {
-    console.info('inflateSync success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateEnd({ nextOut: arrayBufferOut }).then((data) => {
-    console.info('inflateEnd success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateSyncPoint
 
 ```TypeScript
@@ -2724,8 +1270,6 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2749,52 +1293,16 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateSyncPoint({ availableIn: 1 }).then(data => {
-    console.info('inflateSyncPoint success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## inflateValidate
 
-ArkTS-Dyn:
 ```TypeScript
 inflateValidate(strm: ZStream, check: number): Promise<ReturnStatus>
-```
-
-ArkTS-Sta:
-```TypeScript
-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 ```
 
 验证压缩流结构内部的校验和。使用Promise异步回调。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -2804,7 +1312,7 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| [check](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-jsleakwatcher-check-f.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [check](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-jsleakwatcher-check-f.md) | number | 是 |
 
 **返回值：**
 
@@ -2819,51 +1327,15 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut, availableOut: 1 }
-  ).then(data => {
-    console.info('inflateInit success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.inflateValidate({ availableIn: 1 }, 1).then(data => {
-    console.info('inflateValidate success')
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## uncompress
 
-ArkTS-Dyn:
 ```TypeScript
 uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<ZipOutputInfo>
-```
-
-ArkTS-Sta:
-```TypeScript
-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
 将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2875,7 +1347,7 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 | --- | --- | --- |
 | dest | ArrayBuffer | 是 |
 | source | ArrayBuffer | 是 |
-| sourceLen | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| sourceLen | number | 否 |
 
 **返回值：**
 
@@ -2891,50 +1363,15 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 | [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.compress(arrayBufferOut, arrayBufferIn, 12).then((data) => {
-    console.info('compress success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.uncompress(arrayBufferIn, arrayBufferOut, 20).then((data) => {
-    console.info('uncompress success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## uncompress2
 
-ArkTS-Dyn:
 ```TypeScript
 uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<DecompressionOutputInfo>
-```
-
-ArkTS-Sta:
-```TypeScript
-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>
 ```
 
 将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2946,7 +1383,7 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 | --- | --- | --- |
 | dest | ArrayBuffer | 是 |
 | source | ArrayBuffer | 是 |
-| sourceLen | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| sourceLen | number | 否 |
 
 **返回值：**
 
@@ -2962,50 +1399,15 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 | [17800005](../../apis-ability-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-async function demo() {
-  let str = 'hello world!';
-  let arrayBufferIn = new ArrayBuffer(str.length);
-  let byteArray = new Uint8Array(arrayBufferIn);
-  for (let i = 0, j = str.length; i < j; i++) {
-    byteArray[i] = str.charCodeAt(i)
-  }
-  let arrayBufferOut = new ArrayBuffer(100);
-  let zip = zlib.createZipSync();
-  await zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
-    console.info('compress2 success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-  await zip.uncompress2(arrayBufferIn, arrayBufferOut, 20).then((data) => {
-    console.info('uncompress2 success');
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-}
-```
-
 ## zlibCompileFlags
 
-ArkTS-Dyn:
 ```TypeScript
 zlibCompileFlags(): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-zlibCompileFlags(): Promise<int>
 ```
 
 返回指示编译时选项的标志。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3015,19 +1417,7 @@ zlibCompileFlags(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
-
-**示例**
-
-```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
-
-let zip = zlib.createZipSync();
-
-zip.zlibCompileFlags().then((data) => {
-  console.info('zlibCompileFlags success')
-})
-```
+| Promise & lt;number & gt; |
 
 ## zlibVersion
 
@@ -3039,8 +1429,6 @@ zlibVersion(): Promise<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -3050,15 +1438,3 @@ zlibVersion(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
-
-let zip = zlib.createZipSync();
-
-zip.zlibVersion().then((data) => {
-  console.info('zlibVersion success')
-})
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## setControlledAppLists
@@ -15,8 +15,6 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 Sets the list of applications controlled by enterprise DLP. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 

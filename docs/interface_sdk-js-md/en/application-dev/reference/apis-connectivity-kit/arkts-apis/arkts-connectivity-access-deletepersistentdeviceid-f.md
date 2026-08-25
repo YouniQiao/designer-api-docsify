@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deletePersistentDeviceId
@@ -15,8 +15,6 @@ function deletePersistentDeviceId(deviceId: string): Promise<void>
 Delete a persistent random device address.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
@@ -45,16 +43,3 @@ Delete a persistent random device address.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceId = '11:22:33:44:55:66' // The address can be obtained through BLE scanning.
-try {
-    access.deletePersistentDeviceId(deviceId);
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

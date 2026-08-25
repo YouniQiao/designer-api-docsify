@@ -25,7 +25,6 @@
 
 | 名称 |
 | --- |
-| [BadgeEnabledChangedCallback(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)](arkts-notification-badgeenabledchangedcallback-t-sys.md) |
 | [EnabledSilentReminderChangedCallback(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) |
 | [NotificationSwitchChangedCallback(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)](arkts-notification-notificationswitchchangedcallback-t-sys.md) |
 | [SystemUpdateCallback(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)](arkts-notification-systemupdatecallback-t-sys.md) |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('readerMode')
@@ -15,8 +15,6 @@ function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallb
 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过 tag.on 设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -53,8 +51,6 @@ function off(type: 'readerModeWithInterval', elementName: ElementName, callback?
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -77,64 +73,3 @@ function off(type: 'readerModeWithInterval', elementName: ElementName, callback?
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100203](../errorcode-nfc.md#3100203-接口调用顺序错误) |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want, bundleManager } from '@kit.AbilityKit';
-
-let discTech : number[] = [tag.NFC_A, tag.NFC_B]; // 用前台ability时所需要的技术代替
-let elementName : bundleManager.ElementName;
-let interval : number = 200;
-
-function readerModeCb(tagInfo: tag.TagInfo) {
-    if (tagInfo == null) {
-      console.error('readerModeWithInterval tagInfo is invalid');
-      return;
-    }
-    console.info("readerModeWithInterval: tag found tagInfo = ", JSON.stringify(tagInfo));
-  // taginfo的其他操作
-}
-
-export default class MainAbility extends UIAbility {
-    OnCreate(want : Want, launchParam : AbilityConstant.LaunchParam) {
-        console.info("OnCreate");
-        elementName = {
-            bundleName: want.bundleName as string,
-            abilityName: want.abilityName as string,
-            moduleName: want.moduleName as string
-        }
-    }
-
-    onForeground() {
-        console.info("on start");
-        try {
-            tag.on('readerModeWithInterval', elementName, discTech, readerModeCb, interval);
-        } catch (e) {
-            console.error("tag.on error: " + (e as BusinessError).message);
-        }
-    }
-
-    onBackground() {
-        console.info("onBackground");
-        try {
-            tag.off('readerModeWithInterval', elementName, readerModeCb);
-        } catch (e) {
-            console.error("tag.off error: " + (e as BusinessError).message);
-        }
-    }
-
-    onWindowStageDestroy() {
-        console.info("onWindowStageDestroy");
-        try {
-            tag.off('readerModeWithInterval', elementName, readerModeCb);
-        } catch (e) {
-            console.error("tag.off error: " + (e as BusinessError).message);
-        }
-    }
-
-  // ability生命周期内的其他功能
-}
-```

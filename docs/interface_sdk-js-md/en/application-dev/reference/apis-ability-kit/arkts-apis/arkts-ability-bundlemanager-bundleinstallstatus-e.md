@@ -4,8 +4,6 @@ Enumerates the application installation statuses.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## BUNDLE_NOT_EXIST
@@ -17,8 +15,6 @@ BUNDLE_NOT_EXIST = 1
 The application is not installed.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,8 +28,6 @@ The application is being installed.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## BUNDLE_INSTALLED
@@ -45,7 +39,5 @@ BUNDLE_INSTALLED = 3
 The application has been installed.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -4,8 +4,6 @@ Defines a response that returns the screen brightness.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
@@ -13,7 +11,7 @@ Defines a response that returns the screen brightness.
 ## Modules to Import
 
 ```TypeScript
-import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## value
@@ -27,8 +25,6 @@ Screen brightness. The value ranges from **1** to **255**.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 

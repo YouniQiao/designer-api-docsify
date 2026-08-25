@@ -4,14 +4,12 @@ Provides the information about page switching of the **Navigation** component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## context
@@ -22,11 +20,9 @@ context: UIAbilityContext | UIContext
 
 Context information corresponding to **Navigation** component that triggers page switching.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ operation: NavigationOperation
 
 Page switching operation type.
 
-**Type:** [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
+**Type:** [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +74,9 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

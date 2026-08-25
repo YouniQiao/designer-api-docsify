@@ -4,14 +4,12 @@ Initialization parameters for the **ArcAlphabetIndexer** component.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## arrayValue
@@ -25,8 +23,6 @@ Array of alphabet index strings. It cannot be set to empty.
 **Type:** string[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -43,8 +39,6 @@ Index of the initial selected item. If the value is out of range, the default va
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## shutdown
@@ -15,8 +15,6 @@ function shutdown(reason: string): void
 Shuts down the system.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REBOOT
 
@@ -38,13 +36,3 @@ Shuts down the system.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.shutdown('shutdown_test');
-} catch(err) {
-    console.error('shutdown failed, err: ' + err);
-}
-```

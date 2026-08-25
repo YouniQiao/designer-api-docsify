@@ -9,8 +9,6 @@ The module provides APIs for executing intent calls. The system executes intent 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -20,7 +18,7 @@ The module provides APIs for executing intent calls. The system executes intent 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -36,7 +34,6 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md) |
 | [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md) |
 | [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md) |
-| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) |
 | [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) |
 <!--DelEnd-->
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getMonthTrafficStats
 
 ```TypeScript
-function getMonthTrafficStats(simId: int): Promise<long>
+function getMonthTrafficStats(simId: number): Promise<number>
 ```
 
 Get this month traffic data of the cellular network.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -30,13 +28,13 @@ Get this month traffic data of the cellular network.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| simId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| simId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

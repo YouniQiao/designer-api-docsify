@@ -4,8 +4,6 @@ Encapsulates the sync root information.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Encapsulates the sync root information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from '@kit.CoreFileKit';
+import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name of the sync root.
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -46,8 +42,6 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 ## displayNameResId
 
 ```TypeScript
-displayNameResId?: int
+displayNameResId?: number
 ```
 
 Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -82,8 +74,6 @@ URI of the sync root.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ State of the sync root.
 **Type:** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

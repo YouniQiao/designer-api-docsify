@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## sendSystemAVKeyEvent
@@ -15,8 +15,6 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 Send system media key event.The system automatically selects the recipient.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -41,38 +39,6 @@ Send system media key event.The system automatically selects the recipient.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 
-**Examples**
-
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event, (err: BusinessError) => {
-  if (err) {
-    console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('SendSystemAVKeyEvent : SUCCESS ');
-  }
-});
-```
-
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event).then(() => {
-  console.info('SendSystemAVKeyEvent Successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## sendSystemAVKeyEvent
 
@@ -83,8 +49,6 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 Send system media key event.The system automatically selects the recipient.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -113,7 +77,3 @@ Send system media key event.The system automatically selects the recipient.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
-
-**Examples**
-
-See [sendSystemAVKeyEvent](#sendsystemavkeyevent)

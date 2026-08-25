@@ -4,8 +4,6 @@ Enumerates the device status events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## ENTER
@@ -17,8 +15,6 @@ ENTER = 1
 Enter event.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -32,8 +28,6 @@ Exit event.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## ENTER_EXIT
@@ -45,7 +39,5 @@ ENTER_EXIT = 3
 Enter and exit events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary

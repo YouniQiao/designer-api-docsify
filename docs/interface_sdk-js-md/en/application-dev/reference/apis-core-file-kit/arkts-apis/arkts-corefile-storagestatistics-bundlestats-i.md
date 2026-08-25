@@ -4,60 +4,52 @@ Get the bundle statistics.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## appSize
 
 ```TypeScript
-appSize: long
+appSize: number
 ```
 
-The size of application installation data. <br>Unit: Byte.
+The size of application installation data. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## cacheSize
 
 ```TypeScript
-cacheSize: long
+cacheSize: number
 ```
 
-The size of application cache data. <br>Unit: Byte.
+The size of application cache data. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## dataSize
 
 ```TypeScript
-dataSize: long
+dataSize: number
 ```
 
-The size of application local data, distributed data and database data. <br>Unit: Byte.
+The size of application local data, distributed data and database data. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics

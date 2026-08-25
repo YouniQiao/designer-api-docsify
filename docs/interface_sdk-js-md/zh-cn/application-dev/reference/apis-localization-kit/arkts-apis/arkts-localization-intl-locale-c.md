@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,8 +26,6 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -40,102 +36,6 @@ constructor()
 
 **系统能力：** SystemCapability.Global.I18n
 
-**示例**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 默认构造函数使用系统当前区域ID创建
-let locale = new intl.Locale();
-// 返回系统当前区域ID
-let localeID = locale.toString();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 创建zh-CN区域对象
-let locale = new intl.Locale('zh-CN');
-let localeID = locale.toString(); // localeID = 'zh-CN'
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统当前区域ID创建DateTimeFormat对象
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用zh-CN区域ID创建DateTimeFormat对象，日期风格为full，时间风格为medium
-let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyle: 'full', timeStyle: 'medium' });
-
-// 使用区域ID列表创建DateTimeFormat对象，因为ban为非法区域ID，因此使用zh区域ID创建DateTimeFormat对象
-formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统当前区域ID创建NumberFormat对象
-let formatter: intl.NumberFormat = new intl.NumberFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用en-GB区域ID创建NumberFormat对象，style设置为decimal，notation设置为scientific
-let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建Collator对象
-let collator = new intl.Collator();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用zh-CN区域ID创建Collator对象，localeMatcher设置为lookup，usage设置为sort
-let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建PluralRules对象
-let pluralRules = new intl.PluralRules();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用zh-CN区域ID创建PluralRules对象，localeMatcher设置为lookup，type设置为cardinal
-let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建RelativeTimeFormat对象
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
-```
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用zh-CN区域ID创建RelativeTimeFormat对象，localeMatcher设置为lookup，numeric设置为always，style设置为long
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
-  localeMatcher: 'lookup',
-  numeric: 'always',
-  style: 'long'
-});
-```
-
 ## constructor
 
 ```TypeScript
@@ -145,8 +45,6 @@ constructor(locale: string, options?: LocaleOptions)
 创建区域对象。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -163,11 +61,7 @@ constructor(locale: string, options?: LocaleOptions)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | locale | string | 是 |
-| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | 否 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 |
 
 ## maximize
 
@@ -178,8 +72,6 @@ maximize(): Locale
 最大化区域信息，补齐区域对象中缺少的脚本、国家地区信息。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -197,24 +89,6 @@ maximize(): Locale
 | --- |
 | [Locale](arkts-localization-intl-locale-c.md) |
 
-**示例**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 创建zh区域对象
-let locale = new intl.Locale('zh');
-// 补齐区域对象的脚本和地区
-let maximizedLocale = locale.maximize();
-let localeID = maximizedLocale.toString(); // localeID = 'zh-Hans-CN'
-
-// 创建en-US区域对象
-locale = new intl.Locale('en-US');
-// 补齐区域对象的脚本
-maximizedLocale = locale.maximize();
-localeID = maximizedLocale.toString(); // localeID = 'en-Latn-US'
-```
-
 ## minimize
 
 ```TypeScript
@@ -224,8 +98,6 @@ minimize(): Locale
 最小化区域信息，移除区域对象中的脚本、国家地区信息。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -243,24 +115,6 @@ minimize(): Locale
 | --- |
 | [Locale](arkts-localization-intl-locale-c.md) |
 
-**示例**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 创建zh-Hans-CN区域对象
-let locale = new intl.Locale('zh-Hans-CN');
-// 移除区域对象的脚本和地区
-let minimizedLocale = locale.minimize();
-let localeID = minimizedLocale.toString(); // localeID = 'zh'
-
-// 创建en-US区域对象
-locale = new intl.Locale('en-US');
-// 移除区域对象的地区
-minimizedLocale = locale.minimize();
-localeID = minimizedLocale.toString(); // localeID = 'en'
-```
-
 ## toString
 
 ```TypeScript
@@ -270,8 +124,6 @@ toString(): string
 获取区域对象的字符串。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -289,16 +141,6 @@ toString(): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 创建en-GB区域对象
-let locale = new intl.Locale('en-GB');
-let localeID = locale.toString(); // localeID = 'en-GB'
-```
-
 ## baseName
 
 ```TypeScript
@@ -310,8 +152,6 @@ baseName: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -335,8 +175,6 @@ calendar: string
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
@@ -358,8 +196,6 @@ caseFirst: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -383,8 +219,6 @@ collation: string
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
@@ -406,8 +240,6 @@ hourCycle: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -431,8 +263,6 @@ language: string
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
@@ -454,8 +284,6 @@ numberingSystem: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 
@@ -479,8 +307,6 @@ true表示对数字字符进行特殊的排序规则处理（把数字字符作�
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
@@ -503,8 +329,6 @@ region: string
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
@@ -526,8 +350,6 @@ script: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 20
 

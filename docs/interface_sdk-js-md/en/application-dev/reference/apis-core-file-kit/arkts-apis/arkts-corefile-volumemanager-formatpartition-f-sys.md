@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## formatPartition
 
 ```TypeScript
-function formatPartition(diskId: string, partitionNum: int, params: FormatParams): Promise<void>
+function formatPartition(diskId: string, partitionNum: number, params: FormatParams): Promise<void>
 ```
 
 Formats a partition on a disk. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -31,7 +29,7 @@ Formats a partition on a disk. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | diskId | string | Yes |
-| partitionNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| partitionNum | number | Yes |
 | params | [FormatParams](arkts-corefile-volumemanager-formatparams-i-sys.md) | Yes |
 
 **Return value:**

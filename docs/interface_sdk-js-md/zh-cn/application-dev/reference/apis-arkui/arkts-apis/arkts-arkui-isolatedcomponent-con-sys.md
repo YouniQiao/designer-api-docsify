@@ -15,8 +15,6 @@ IsolatedComponent用于支持在本页面内嵌入显示独立Abc（方舟字节
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -32,8 +30,6 @@ declare const IsolatedComponentInstance: IsolatedComponentAttribute
 定义IsolatedComponent组件实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,11 +4,9 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 13
 
-**替代接口：** NavPathStack
+**替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ name: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 13
 
@@ -52,8 +48,6 @@ param?: unknown
 **类型：** unknown
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 13
 

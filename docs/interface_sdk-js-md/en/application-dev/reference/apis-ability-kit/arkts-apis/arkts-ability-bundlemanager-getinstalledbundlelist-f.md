@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
 
 ```TypeScript
-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
+function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 ```
 
 Obtains all the bundle information in the system based on the given bundle flags. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
@@ -28,7 +26,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| bundleFlags | number | Yes |
 
 **Return value:**
 

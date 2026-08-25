@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## acquireFormState
@@ -15,8 +15,6 @@ function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormState
 Obtains the widget state. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,62 +41,6 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want, (error: BusinessError, data: formInfo.FormStateInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formHost acquireFormState, data: ${data.formState}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want).then((data: formInfo.FormStateInfo) => {
-    console.info(`formHost acquireFormState, data: ${data.formState}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## acquireFormState
 
@@ -109,8 +51,6 @@ function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>
 Obtains the widget state. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -141,7 +81,3 @@ Obtains the widget state. This API uses a promise to return the result.
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [acquireFormState](#acquireformstate)

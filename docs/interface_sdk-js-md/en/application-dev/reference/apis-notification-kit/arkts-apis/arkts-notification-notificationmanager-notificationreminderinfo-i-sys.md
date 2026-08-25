@@ -4,8 +4,6 @@ Describes the information about the application reminder.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the information about the application reminder.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## bundle
@@ -28,8 +26,6 @@ Bundle information of the application.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -37,16 +33,20 @@ Bundle information of the application.
 ## reminderFlags
 
 ```TypeScript
-reminderFlags: long
+reminderFlags: number
 ```
 
-Notification reminder mode flags.<br>- bit0: sound prompt. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit3: screen on. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
+Notification reminder mode flags.  
+- bit0: sound prompt. The value **0** indicates disabled, and **1** indicates enabled.   
+- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled.   
+- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled.   
+- bit3: screen on. The value **0** indicates disabled, and **1** indicates enabled.   
+- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled.   
+- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -63,8 +63,6 @@ Whether the silent reminder is enabled. The value **true** indicates that the si
 **Type:** boolean
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

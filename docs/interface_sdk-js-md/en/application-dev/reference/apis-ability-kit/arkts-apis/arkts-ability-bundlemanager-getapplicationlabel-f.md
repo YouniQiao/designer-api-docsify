@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationLabel
 
 ```TypeScript
-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
+function getApplicationLabel(bundleName: string, appIndex: number): Promise<string>
 ```
 
 Obtains the name of an application with the specified package name and clone index. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -29,7 +27,7 @@ Obtains the name of an application with the specified package name and clone ind
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| appIndex | number | Yes |
 
 **Return value:**
 

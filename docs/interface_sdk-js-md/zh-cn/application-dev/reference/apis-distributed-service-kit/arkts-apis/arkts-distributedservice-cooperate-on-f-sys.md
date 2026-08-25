@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## on('cooperate')
@@ -15,8 +15,6 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 注册监听键鼠穿越状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -40,24 +38,6 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
-class Data {
-  networkId: string = "networkId";
-  msg: cooperate.CooperateMsg = 0;
-}
-
-try {
-  cooperate.on('cooperate', (data: Data) => {
-    console.info(`Keyboard mouse crossing event: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## on('cooperateMessage')
 
@@ -68,8 +48,6 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 注册监听键鼠穿越状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -92,21 +70,6 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-function callback(msg: cooperate.CooperateMessage) {
-  console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
-  return false;
-}
-
-try {
-  cooperate.on('cooperateMessage', callback);
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## on('cooperateMouse')
 
@@ -117,8 +80,6 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 注册监听指定设备鼠标光标位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -141,19 +102,3 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-function callback(data: cooperate.MouseLocation) {
-  console.info('displayX:' + data.displayX + 'displayY:' + data.displayY + 'displayWidth:' +
-  data.displayWidth + 'displayHeight:' + data.displayHeight);
-}
-
-try {
-  let networkId: string = 'Default';
-  cooperate.on('cooperateMouse', networkId, callback);
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```

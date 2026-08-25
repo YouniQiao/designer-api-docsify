@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## pick
@@ -15,8 +15,6 @@ function pick(): Promise<PickInfo>
 Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture](arkts-arkui-screenshot-capture-f.md) API.) This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,22 +32,3 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = screenshot.pick();
-  promise.then((pickInfo: screenshot.PickInfo) => {
-    console.info('pick Pixel bytes number: ' + pickInfo.pixelMap.getPixelBytesNumber());
-    console.info('pick Rect: ' + pickInfo.pickRect);
-    pickInfo.pixelMap.release(); // Release the memory in time after the PixelMap is no longer needed.
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to pick. Code: ' + Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to pick Code: ' + Code: ${exception.code}, message: ${exception.message}`);
-};
-```

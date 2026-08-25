@@ -4,8 +4,6 @@ The **NotificationExtensionSubscriptionInfo** module describes the information a
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## addr
@@ -20,8 +18,6 @@ Unique identifier of the device. When **type** is set to **SubscribeType.BLUETOO
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## type
@@ -35,7 +31,5 @@ Subscription type, specifying the subscription method for notification extension
 **Type:** notificationExtensionSubscription.SubscribeType
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

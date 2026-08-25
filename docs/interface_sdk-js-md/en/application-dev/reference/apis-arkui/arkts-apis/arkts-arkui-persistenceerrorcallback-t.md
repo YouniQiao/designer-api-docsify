@@ -1,17 +1,17 @@
 # PersistenceErrorCallback
 
 ```TypeScript
-export declare type PersistenceErrorCallback = (key: string, reason: string, message: string, 
-    oldValue?: string) => void
+export declare type PersistenceErrorCallback = (key: string, reason: 'quota' | 'serialization' | 'unknown', 
+    message: string, oldValue?: string) => void
 ```
 
-Function that returns the reason type when an error occurs.
+Defines a callback used to return the cause of the persistence failure.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +20,6 @@ Function that returns the reason type when an error occurs.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | key | string | Yes |
-| reason | string | Yes |
+| reason | 'quota' \| 'serialization' \| 'unknown' | Yes |
 | message | string | Yes |
 | oldValue | string | No |

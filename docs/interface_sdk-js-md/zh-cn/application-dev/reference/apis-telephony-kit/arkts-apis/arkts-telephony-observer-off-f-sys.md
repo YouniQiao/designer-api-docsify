@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## off('cellInfoChange')
@@ -18,8 +18,6 @@ function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -42,17 +40,3 @@ function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let callback: (data: Array<radio.CellInformation>) => void = (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-}
-observer.on('cellInfoChange', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-observer.off('cellInfoChange', callback);
-observer.off('cellInfoChange');
-```

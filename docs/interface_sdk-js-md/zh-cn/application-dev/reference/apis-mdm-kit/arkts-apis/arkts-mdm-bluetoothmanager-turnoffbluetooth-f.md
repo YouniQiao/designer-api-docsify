@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## turnOffBluetooth
@@ -15,8 +15,6 @@ function turnOffBluetooth(admin: Want): void
 关闭蓝牙。蓝牙关闭后用户可以手动打开。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -38,24 +36,3 @@ function turnOffBluetooth(admin: Want): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 关闭蓝牙
-  bluetoothManager.turnOffBluetooth(wantTemp);
-  console.info('Succeeded in turning off bluetooth.');
-} catch (err) {
-  console.error(`Failed to turn off bluetooth. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Defines the DND time.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)
@@ -31,8 +29,6 @@ DND start time.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [begin](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#begin)
@@ -53,8 +49,6 @@ DND end time.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [end](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#end)
@@ -74,8 +68,6 @@ DND time type.
 **Type:** DoNotDisturbType
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

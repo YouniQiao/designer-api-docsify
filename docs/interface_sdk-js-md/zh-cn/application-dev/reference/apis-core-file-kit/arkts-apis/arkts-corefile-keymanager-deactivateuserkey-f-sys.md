@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { keyManager } from '@kit.CoreFileKit';
+import { keyManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey
 
 ```TypeScript
-function deactivateUserKey(userId: long):void
+function deactivateUserKey(userId: number):void
 ```
 
 用户锁屏时，同步卸载指定用户对应密钥。**（该接口目前仅开放给锁屏应用）**
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER_CRYPT
 
@@ -28,7 +26,7 @@ function deactivateUserKey(userId: long):void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| userId | number | 是 |
 
 **错误码：**
 
@@ -40,35 +38,3 @@ function deactivateUserKey(userId: long):void
 | 13600001 |
 | 13600008 |
 | 13600009 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-try {
-  keyManager.deactivateUserKey(userId);
-  console.info('deactivateUserKey success');
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`deactivateUserKey failed with error, code is: ${err.code}, message is: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: long = 100;
-try {
-  keyManager.deactivateUserKey(userId);
-  console.info('deactivateUserKey success');
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`deactivateUserKey failed with error, code is: ${err.code}, message is: ${err.message}`);
-}
-```

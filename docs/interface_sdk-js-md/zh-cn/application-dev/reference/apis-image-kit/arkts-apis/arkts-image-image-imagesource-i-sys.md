@@ -4,14 +4,12 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -29,8 +27,6 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 > [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).DISPLAY_BT2020_SRGB。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -51,76 +47,6 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 | [7700103](../errorcode-image.md#7700103-图片太大) |
 | [7700301](../errorcode-image.md#7700301-解码失败) |
 
-**示例**
-
-```TypeScript
-async function CreateWideGamutSdrPixelMap(context: Context) {
-  // 此处'sdr.jpg'仅作示例，请开发者自行替换。
-  let filePath: string = context.filesDir + "/sdr.jpg";
-  let sdrImageSource = image.createImageSource(filePath);
-  let pixelmap = sdrImageSource.createWideGamutSdrPixelMap();
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating sdr pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-
-  // 此处'singleChannelGainmapFilePath.jpg'仅作示例，请开发者自行替换。
-  let singleChannelGainmapFilePath: string = context.filesDir + "/singleChannelGainmapFilePath.jpg";
-  let singleChannelGainmapImageSource = image.createImageSource(singleChannelGainmapFilePath);
-  let singleChannelGainmapPixelmap = singleChannelGainmapImageSource.createWideGamutSdrPixelMap();
-  if (singleChannelGainmapPixelmap != undefined) {
-    console.info('Succeeded in creating sdr pixelMap object by using singleChannelGainmapImageSource.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-  // 此处'threeChannelGainmapFilePath.jpg'仅作示例，请开发者自行替换。
-  let threeChannelGainmapFilePath: string = context.filesDir + "/threeChannelGainmapFilePath.jpg";
-  let threeChannelGainmapImageSource = image.createImageSource(threeChannelGainmapFilePath);
-  let threeChannelGainmapPixelmap = threeChannelGainmapImageSource.createWideGamutSdrPixelMap();
-  if (threeChannelGainmapPixelmap != undefined) {
-    console.info('Succeeded in creating sdr pixelMap using DISPLAY_BT2020_SRGB.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
-## createWideGamutSdrPixelMap
-
-```TypeScript
-createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>
-```
-
-Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSource, decodes to a SDR PixelMap using its native color space. For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap. For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;PixelMap \ | undefined & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-
-**示例**
-
-参见 [createWideGamutSdrPixelMap](#createwidegamutsdrpixelmap)
-
 ## isJpegProgressive
 
 ```TypeScript
@@ -130,8 +56,6 @@ isJpegProgressive(): Promise<boolean>
 判断Jpeg图片是否是渐进式图片。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,21 +76,6 @@ isJpegProgressive(): Promise<boolean>
 | [7700101](../errorcode-image.md#7700101-图片源存在问题) |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function IsJpegProgressive(imageSource : image.ImageSource) {
-  imageSource.isJpegProgressive()
-    .then((isProgressive: boolean) => {
-      console.info("isJpegProgressive: " + isProgressive);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the jpeg image isprogressive error.code is ${error.code}, message is ${error.message}`);
-    })
-}
-```
-
 ## modifyImageAllProperties
 
 ```TypeScript
@@ -181,8 +90,6 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,18 +117,3 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 | [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
-
-**示例**
-
-```TypeScript
-async function ModifyImageAllProperties(imageSource: image.ImageSource) {
-  try {
-    let record: Record<string, string | null> = {
-      "HwMnotePhysicalAperture": "13",
-    }
-    await imageSource.modifyImageAllProperties(record);
-  } catch (err) {
-    console.error('[modifyImageAllProperties]', `modify image property failed.err: ${err.code}, errorMessage: ${err.message}`);
-  }
-}
-```

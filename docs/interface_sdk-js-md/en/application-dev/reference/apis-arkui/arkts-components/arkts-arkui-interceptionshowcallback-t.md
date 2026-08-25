@@ -8,8 +8,6 @@ Represents the interception callback invoked before and after page redirection.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -20,7 +18,7 @@ Represents the interception callback invoked before and after page redirection.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| from | NavDestinationContext \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
-| to | NavDestinationContext \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
+| from | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
+| to | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes |
 | operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes |
 | isAnimated | boolean | Yes |

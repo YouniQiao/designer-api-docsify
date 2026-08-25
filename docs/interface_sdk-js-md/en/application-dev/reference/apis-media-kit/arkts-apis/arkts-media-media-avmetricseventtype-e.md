@@ -4,8 +4,6 @@ Enumerates the metric events supported by the media service.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AV_METRICS_EVENT_STALLING
@@ -18,8 +16,6 @@ Metric event indicating playback stalling.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AV_METRICS_EVENT_LIP_ASYNC
@@ -31,8 +27,6 @@ AV_METRICS_EVENT_LIP_ASYNC  = 2
 It is reported when the video sending and rendering time deviation is greater than expected, for example, video frame alignment or display in advance.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +42,6 @@ Load rate change event. This event is triggered when the difference between the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -63,8 +55,6 @@ AV_METRICS_EVENT_LOADING_ERROR = 4
 Data loading failure event, which carries the error information returned during data loading, such as connection timeout, access error, and server rejection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +70,6 @@ Reported when the played media content changes, for example, advertisement inser
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -96,8 +84,6 @@ Content discontinuity event. This event is triggered when audio and video parame
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -111,8 +97,6 @@ AV_METRICS_EVENT_AUDIO_ABNORMAL = 7
 Audio device status change event, including underload or out-of-focus.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

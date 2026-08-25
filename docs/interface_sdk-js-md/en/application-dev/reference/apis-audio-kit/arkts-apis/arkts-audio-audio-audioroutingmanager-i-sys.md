@@ -7,14 +7,12 @@ This interface implements audio routing management.Before calling any API in Aud
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## excludeOutputDevices
@@ -26,8 +24,6 @@ excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promi
 Exclude output devices. After calling this function successfully, audio will not be played on the specified devices. Note that only the external ouput device can be excluded by this function. Local output devices is not accepted.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -57,38 +53,6 @@ Exclude output devices. After calling this function successfully, audio will not
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
-let excludedDevices: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 3,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function excludeOutputDevices(){
-  audioRoutingManager.excludeOutputDevices(usage, excludedDevices, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Exclude Output Devices result callback: SUCCESS'); }
-  });
-}
-```
-
 ## getActiveOutputDeviceDescriptors
 
 ```TypeScript
@@ -98,8 +62,6 @@ getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 Gets the active output device descriptors for the current audio device. The activation policy is related to the audio device policy of the system.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,8 +91,6 @@ Get excluded devices by filter.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -154,19 +114,6 @@ Get excluded devices by filter.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
-
-async function getExcludedDevices(){
-  let desc: audio.AudioDeviceDescriptors = audioRoutingManager.getExcludedDevices(usage);
-  console.info(`device descriptor: ${desc}`);
-}
-```
-
 ## getPreferredInputDeviceByFilter
 
 ```TypeScript
@@ -176,8 +123,6 @@ getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescrip
 Get the preferred input device for the target audio capturer filter.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -202,28 +147,6 @@ Get the preferred input device for the target audio capturer filter.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioCapturerFilter: audio.AudioCapturerFilter = {
-    uid : 20010041,
-    capturerInfo : {
-        source: audio.SourceType.SOURCE_TYPE_MIC,
-        capturerFlags: 0
-    }
-};
-
-async function getPreferredInputDeviceByFilter(){
-    let audioManager = audio.getAudioManager();  // Create an AudioManager instance.
-    let audioRoutingManager = audioManager.getRoutingManager();  // Call an API of AudioManager to create an AudioRoutingManager instance.
-    let desc: audio.AudioDeviceDescriptors = audioRoutingManager.getPreferredInputDeviceByFilter(inputAudioCapturerFilter);
-    console.info(`device descriptor: ${desc}`);
-}
-```
-
 ## getPreferredOutputDeviceByFilter
 
 ```TypeScript
@@ -233,8 +156,6 @@ getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescri
 Get the preferred output devices by the target audio renderer filter.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -259,29 +180,6 @@ Get the preferred output devices by the target audio renderer filter.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-async function selectOutputDeviceByFilter(){
-    let audioManager = audio.getAudioManager();  // Create an AudioManager instance.
-    let audioRoutingManager = audioManager.getRoutingManager();  // Call an API of AudioManager to create an AudioRoutingManager instance.
-    let desc : audio.AudioDeviceDescriptors = audioRoutingManager.getPreferredOutputDeviceByFilter(outputAudioRendererFilter);
-    console.info(`device descriptor: ${desc}`);
-}
-```
-
 ## off('preferredOutputDeviceChangeByFilter')
 
 ```TypeScript
@@ -291,8 +189,6 @@ off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDevice
 UnSubscribes to prefer output device change events.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -312,30 +208,6 @@ UnSubscribes to prefer output device change events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioRoutingManager.off('preferredOutputDeviceChangeByFilter');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let preferredOutputDeviceChangeByFilterCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using on or off function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-};
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, preferredOutputDeviceChangeByFilterCallback);
-
-audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDeviceChangeByFilterCallback);
-```
-
 ## offPreferredInputDeviceChangeByFilter
 
 ```TypeScript
@@ -346,38 +218,7 @@ Unsubscribes to preferred input device change events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-
-## offPreferredOutputDeviceChangeByFilter
-
-```TypeScript
-offPreferredOutputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-UnSubscribes to preferred output device change events.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -406,8 +247,6 @@ Subscribes to prefer output device change events. When preferred device for targ
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -428,22 +267,6 @@ Subscribes to prefer output device change events. When preferred device for targ
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-**Examples**
-
-```TypeScript
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using on function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-});
-```
-
 ## onPreferredInputDeviceChangeByFilter
 
 ```TypeScript
@@ -453,8 +276,6 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 Subscribes to preferred input device change events. When the preferred device for target audio capturer filter changes, registered clients will receive a callback.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -477,37 +298,6 @@ Subscribes to preferred input device change events. When the preferred device fo
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-## onPreferredOutputDeviceChangeByFilter
-
-```TypeScript
-onPreferredOutputDeviceChangeByFilter(filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
-```
-
-Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-
 ## restoreOutputDeviceByFilter
 
 ```TypeScript
@@ -517,8 +307,6 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 Restores the output device for the specified audio renderer filter to the default strategy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -555,8 +343,6 @@ Select the input device. This method uses an asynchronous callback to return the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -568,66 +354,6 @@ Select the input device. This method uses an asynchronous callback to return the
 | inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.INPUT_DEVICE,
-  deviceType : audio.DeviceType.MIC,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectInputDevice(){
-  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Select input devices result callback: SUCCESS');
-    }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.INPUT_DEVICE,
-  deviceType : audio.DeviceType.MIC,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function getRoutingManager(){
-  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor).then(() => {
-    console.info('Select input devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
-
 ## selectInputDevice
 
 ```TypeScript
@@ -637,8 +363,6 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>
 Select the input device. This method uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -656,10 +380,6 @@ Select the input device. This method uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [selectInputDevice](#selectinputdevice)
-
 ## selectInputDeviceByFilter
 
 ```TypeScript
@@ -669,8 +389,6 @@ selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioD
 Select the input device with desired AudioCapturer. This method uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -696,46 +414,6 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioCapturerFilter: audio.AudioCapturerFilter = {
-    uid : 20010041,
-    capturerInfo : {
-        source: audio.SourceType.SOURCE_TYPE_MIC,
-        capturerFlags: 0
-    }
-};
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-    deviceRole : audio.DeviceRole.INPUT_DEVICE,
-    deviceType : audio.DeviceType.MIC,
-    id : 1,
-    name : "",
-    address : "",
-    sampleRates : [44100],
-    channelCounts : [2],
-    channelMasks : [0],
-    networkId : audio.LOCAL_NETWORK_ID,
-    interruptGroupId : 1,
-    volumeGroupId : 1,
-    displayName : "",
-}];
-
-async function selectInputDeviceByFilter(){
-    let audioManager = audio.getAudioManager();  // Create an AudioManager instance.
-    let audioRoutingManager = audioManager.getRoutingManager();  // Call an API of AudioManager to create an AudioRoutingManager instance.
-    audioRoutingManager.selectInputDeviceByFilter(inputAudioCapturerFilter, inputAudioDeviceDescriptor).then(() => {
-        console.info('Select input devices by filter result promise: SUCCESS');
-    }).catch((err: BusinessError) => {
-        console.error(`Result ERROR: ${err}`);
-    })
-}
-```
-
 ## selectOutputDevice
 
 ```TypeScript
@@ -745,8 +423,6 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCa
 Select the output device. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -758,65 +434,6 @@ Select the output device. This method uses an asynchronous callback to return th
 | --- | --- | --- |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDevice(){
-  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Select output devices result callback: SUCCESS'); }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDevice(){
-  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor).then(() => {
-    console.info('Select output devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
 
 ## selectOutputDevice
 
@@ -828,8 +445,6 @@ Select the output device. This method uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -846,10 +461,6 @@ Select the output device. This method uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [selectOutputDevice](#selectoutputdevice)
-
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -859,8 +470,6 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 Select the output device with desired AudioRenderer. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -874,117 +483,6 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDeviceByFilter(){
-  audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, outputAudioDeviceDescriptor, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Select output devices by filter result callback: SUCCESS'); }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDeviceByFilter(){
-  audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, outputAudioDeviceDescriptor).then(() => {
-    console.info('Select output devices by filter result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, outputAudioDeviceDescriptor, audio.AudioDevcieSelectStrategy.SELECT_STRATEGY_INDEPENDENT).then(() => {
-  console.info('Succeeded in selecting output device by filter.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select output device by filter. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -994,8 +492,6 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 Select the output device with desired AudioRenderer. This method uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1014,10 +510,6 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
-
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -1027,8 +519,6 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 Select the output device with desired AudioRenderer. This method uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1056,10 +546,6 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
 
-**Examples**
-
-See [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
-
 ## unexcludeOutputDevices
 
 ```TypeScript
@@ -1069,8 +555,6 @@ unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Pro
 Unexclude output devices. This function will unexclude target output devices belong to specific usage.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -1100,53 +584,6 @@ Unexclude output devices. This function will unexclude target output devices bel
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
-let unexcludedDevices: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 3,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function unexcludeOutputDevices(){
-  audioRoutingManager.unexcludeOutputDevices(usage, unexcludedDevices, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Unexclude Output Devices result callback: SUCCESS'); }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
-
-async function unexcludeOutputDevices(){
-  audioRoutingManager.unexcludeOutputDevices(usage).then(() => {
-    console.info('Unexclude Output Devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
-
 ## unexcludeOutputDevices
 
 ```TypeScript
@@ -1156,8 +593,6 @@ unexcludeOutputDevices(usage: DeviceUsage): Promise<void>
 Unexclude output devices. This function will unexclude all output devices belong to specific usage.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
@@ -1185,7 +620,3 @@ Unexclude output devices. This function will unexclude all output devices belong
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-
-**Examples**
-
-See [unexcludeOutputDevices](#unexcludeoutputdevices)

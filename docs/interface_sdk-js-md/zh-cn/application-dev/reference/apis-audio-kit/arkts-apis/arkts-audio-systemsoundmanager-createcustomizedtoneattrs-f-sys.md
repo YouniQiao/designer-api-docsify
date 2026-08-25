@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'kits/@kit.AudioKit';
 ```
 
 ## createCustomizedToneAttrs
@@ -15,8 +15,6 @@ function createCustomizedToneAttrs(): ToneAttrs
 创建自定义铃声属性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -33,9 +31,3 @@ function createCustomizedToneAttrs(): ToneAttrs
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-let toneAttrs: systemSoundManager.ToneAttrs = systemSoundManager.createCustomizedToneAttrs();
-```

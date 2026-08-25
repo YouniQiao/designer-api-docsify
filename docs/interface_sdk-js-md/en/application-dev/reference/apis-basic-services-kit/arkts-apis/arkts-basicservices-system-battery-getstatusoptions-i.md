@@ -4,8 +4,6 @@ Object that contains the API calling result.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
@@ -13,7 +11,7 @@ Object that contains the API calling result.
 ## Modules to Import
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
+import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -25,8 +23,6 @@ complete?: () => void
 Called when an API call is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -41,8 +37,6 @@ fail?: (data: string, code: number) => void
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -64,8 +58,6 @@ success?: (data: BatteryResponse) => void
 Called when an API call is successful. **data** is a return value of the [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) type.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 

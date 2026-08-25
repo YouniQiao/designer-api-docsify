@@ -4,23 +4,19 @@ The module defines the bundle information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 Index of an application clone. It takes effect only for application clones.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,8 +31,6 @@ Application information. The information can be obtained by passing in **GET_BUN
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,8 +48,6 @@ Build version number of the application package, which identifies different buil
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -65,16 +57,14 @@ Build version number of the application package, which identifies different buil
 ## firstInstallTime
 
 ```TypeScript
-readonly firstInstallTime?: long
+readonly firstInstallTime?: number
 ```
 
 Timestamp for the initial installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds. For preinstalled applications, the initial installation timestamp is 1533657660000.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -92,8 +82,6 @@ Module configuration information. The information can be obtained by passing in 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -101,17 +89,15 @@ Module configuration information. The information can be obtained by passing in 
 ## installTime
 
 ```TypeScript
-readonly installTime: long
+readonly installTime: number
 ```
 
 Timestamp for the installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds.  
 **NOTE：**If the current time is not obtained when the device is powered on for the first time from the factory, the Unix epoch (1970-01-01 08:00:00 UTC+8) is used as the start time of the current system. For example, if the time is not obtained after startup and the installation succeeds after a 32-second wait, the application package installation timestamp is 32000.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -120,16 +106,14 @@ Timestamp for the installation of the application package. It measures the milli
 ## minCompatibleVersionCode
 
 ```TypeScript
-readonly minCompatibleVersionCode: int
+readonly minCompatibleVersionCode: number
 ```
 
 Minimum compatible version of the application package in the distributed scenario. It corresponds to the **minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,8 +131,6 @@ Name of the application package. It corresponds to the **bundleName** field in t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -164,8 +146,6 @@ Permission grant state. The information can be obtained by passing in **GET_BUND
 **Type:** Array&lt;bundleManager.PermissionGrantState&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -183,8 +163,6 @@ Detailed information of the permissions to request from the system. The informat
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -200,8 +178,6 @@ Router table of the application. The table is obtained by deduplicating and comb
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -219,8 +195,6 @@ Signature information of the bundle. The information can be obtained by passing 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -228,16 +202,14 @@ Signature information of the bundle. The information can be obtained by passing 
 ## targetVersion
 
 ```TypeScript
-readonly targetVersion: int
+readonly targetVersion: number
 ```
 
 Target version of the application. It corresponds to the **targetAPIVersion** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -246,16 +218,14 @@ Target version of the application. It corresponds to the **targetAPIVersion** fi
 ## updateTime
 
 ```TypeScript
-readonly updateTime: long
+readonly updateTime: number
 ```
 
 Timestamp for the last update of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -273,8 +243,6 @@ Vendor of the application package. It corresponds to the **vendor** field in the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -282,16 +250,14 @@ Vendor of the application package. It corresponds to the **vendor** field in the
 ## versionCode
 
 ```TypeScript
-readonly versionCode: long
+readonly versionCode: number
 ```
 
 Version code of the application package. It corresponds to the **versionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -308,8 +274,6 @@ Version description of the application package. It corresponds to the **versionN
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -10,8 +10,6 @@ Maximum length of a key, which is 1024 bytes.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -25,8 +23,6 @@ const MAX_VALUE_LENGTH: number
 Maximum length of a value, which is 16 MB.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

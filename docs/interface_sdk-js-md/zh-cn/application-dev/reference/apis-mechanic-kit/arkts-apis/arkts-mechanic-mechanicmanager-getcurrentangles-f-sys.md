@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getCurrentAngles
 
 ```TypeScript
-function getCurrentAngles(mechId: int): EulerAngles
+function getCurrentAngles(mechId: number): EulerAngles
 ```
 
 获取机械设备的当前角度
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -26,7 +24,7 @@ function getCurrentAngles(mechId: int): EulerAngles
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mechId | number | 是 |
 
 **返回值：**
 
@@ -41,11 +39,3 @@ function getCurrentAngles(mechId: int): EulerAngles
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
-
-**示例**
-
-```TypeScript
-console.info('Query current location');
-let currentAngles: mechanicManager.EulerAngles = mechanicManager.getCurrentAngles(0);
-console.info(`'Query current location, location:' ${currentAngles}`);
-```

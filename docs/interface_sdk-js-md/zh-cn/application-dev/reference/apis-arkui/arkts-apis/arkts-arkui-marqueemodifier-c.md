@@ -2,11 +2,9 @@
 
 Defines Marquee Modifier
 
-**继承/实现关系：** MarqueeModifier extends MarqueeAttribute implements AttributeModifier<MarqueeAttribute>
+**继承/实现关系：** MarqueeModifier extends [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md#marqueeattribute) implements AttributeModifier<MarqueeAttribute>
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +18,6 @@ Defines the normal update attribute function.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -32,4 +28,4 @@ Defines the normal update attribute function.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| instance | [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) | 是 |
+| instance | [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) | 是 |

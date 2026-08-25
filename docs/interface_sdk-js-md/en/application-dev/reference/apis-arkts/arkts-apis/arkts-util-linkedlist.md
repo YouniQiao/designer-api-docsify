@@ -25,8 +25,8 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
+import { LinkedList } from 'kits/@kit.ArkTS';
+import { LinkedListForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -36,9 +36,3 @@ import { LinkedListForEachCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LinkedListForEachCb](arkts-arkts-linkedlistforeachcb-t.md) |

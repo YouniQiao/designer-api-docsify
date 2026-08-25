@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getBadgeDisplayStatusByBundles
@@ -15,8 +15,6 @@ function getBadgeDisplayStatusByBundles(bundles: Array<BundleOption>) : Promise<
 批量获取应用角标显示状态。使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,51 +44,3 @@ function getBadgeDisplayStatusByBundles(bundles: Array<BundleOption>) : Promise<
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: Array<notificationManager.BundleOption> = [
-    {
-        bundle: 'bundleName',
-    },
-    {
-        bundle: 'bundleName1',
-    }
-];
-notificationManager.getBadgeDisplayStatusByBundles(bundles).then((data: Map<notificationManager.BundleOption, boolean>) => {
-    data.forEach((value, key) => {
-        console.info(`Bundle is ${key.bundle}, uid is ${key.uid}, badge status is ${value}.`);
-    });
-}).catch((err: BusinessError) => {
-    console.error(`GetBadgeDisplayStatusByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: Array<notificationManager.BundleOption> = [
-    {
-        bundle: 'bundleName',
-    },
-    {
-        bundle: 'bundleName1',
-    }
-];
-
-notificationManager.getBadgeDisplayStatusByBundles(bundles).then((data: Map<notificationManager.BundleOption, boolean>) => {
-    data.forEach((value, key) => {
-        console.info(`Bundle is ${key.bundle}, uid is ${key.uid}, badge status is ${value}.`);
-    });
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`GetBadgeDisplayStatusByBundles failed, code is ${error.code}, message is ${error.message}`);
-});
-```

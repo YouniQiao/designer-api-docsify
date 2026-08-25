@@ -4,14 +4,12 @@ Provides optional attributes for the selection area.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## onSelect
@@ -23,8 +21,6 @@ onSelect?: OnSelectCallback
 Callback when the select is selected.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -38,11 +34,9 @@ arrowPosition?: ArrowPosition
 
 Set the layout direction for text and arrow in select.
 
-**Type:** ArrowPosition
+**Type:** [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -56,11 +50,9 @@ divider?: Optional<DividerOptions> | null
 
 Sets the divider of select.
 
-**Type:** Optional&lt;DividerOptions&gt; \| null
+**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -78,8 +70,6 @@ Sets the text properties of the select button itself.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -92,11 +82,9 @@ fontColor?: ResourceColor
 
 Sets the text color of the select button itself.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -114,8 +102,6 @@ Set the alignment between select and menu.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -132,8 +118,6 @@ Set menu background blur Style.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -146,11 +130,9 @@ menuBackgroundColor?: ResourceColor
 
 Set the menu's background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -164,11 +146,9 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 Register a ContentModifier for each menu item.
 
-**Type:** ContentModifier&lt;MenuItemConfiguration&gt;
+**Type:** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-menuitemconfiguration-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -182,11 +162,9 @@ optionBgColor?: ResourceColor
 
 Sets the background color of the select item.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -204,8 +182,6 @@ Sets the text style for select items.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -218,11 +194,9 @@ optionFontColor?: ResourceColor
 
 Sets the text color for select items.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -236,11 +210,9 @@ optionHeight?: Dimension
 
 Set the height of each option.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -254,11 +226,9 @@ options?: Array<SelectOption>
 
 SubOption array of the select.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -272,11 +242,9 @@ optionWidth?: Dimension | OptionWidthMode
 
 Set the width of each option and set whether the option width fit the trigger.
 
-**Type:** Dimension \| OptionWidthMode
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -294,8 +262,6 @@ The default selected index.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -308,11 +274,9 @@ selectedOptionBgColor?: ResourceColor
 
 Sets the background color of the selected items in the select.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -330,8 +294,6 @@ Sets the text style of the selected items in the select.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -344,11 +306,9 @@ selectedOptionFontColor?: ResourceColor
 
 Sets the text color of the selected item in the select.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -362,11 +322,9 @@ selectValue?: ResourceStr
 
 The default text value.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -380,11 +338,9 @@ space?: Length
 
 Set the space for text and icon in select.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

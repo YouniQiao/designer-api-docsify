@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -15,8 +15,6 @@ function getLastLocation(): Location
 获取上一次位置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -39,15 +37,3 @@ function getLastLocation(): Location
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let location = geoLocationManager.getLastLocation();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

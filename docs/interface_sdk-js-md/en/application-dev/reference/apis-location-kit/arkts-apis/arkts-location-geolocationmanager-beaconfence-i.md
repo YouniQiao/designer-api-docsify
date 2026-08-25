@@ -4,14 +4,12 @@ Beacon fence details.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## beaconFenceInfoType
@@ -25,8 +23,6 @@ Beacon fence information type.
 **Type:** [BeaconFenceInfoType](arkts-location-geolocationmanager-beaconfenceinfotype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -44,8 +40,6 @@ Identifier of the beacon fence.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -61,8 +55,6 @@ Beacon equipment manufacture data.
 **Type:** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

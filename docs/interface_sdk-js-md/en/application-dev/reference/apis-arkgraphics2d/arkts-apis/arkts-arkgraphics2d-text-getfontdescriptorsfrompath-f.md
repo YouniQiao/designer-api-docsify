@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getFontDescriptorsFromPath
@@ -24,8 +24,6 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -41,38 +39,3 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md)&gt;&gt; |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontDescriptorsFromPathTest {
-  build() {
-    Column({ space: 10 }) {
-      Button("get fontDescriptors")
-        .onClick(async () => {
-          let promise = text.getFontDescriptorsFromPath("file:///system/fonts/NotoSansCJK-Regular.ttc")
-          promise.then((fontFullDescriptors) => {
-            for (let index = 0; index < fontFullDescriptors.length; index++) {
-              console.info("Path:" + fontFullDescriptors[index].path +
-                          "\npostScriptName:" + fontFullDescriptors[index].postScriptName +
-                          "\nfullName:" + fontFullDescriptors[index].fullName +
-                          "\nfamilyName:" + fontFullDescriptors[index].fontFamily +
-                          "\nfontSubName:" + fontFullDescriptors[index].fontSubfamily +
-                          "\nweight:" + fontFullDescriptors[index].weight +
-                          "\nwidth:" + fontFullDescriptors[index].width +
-                          "\nitalic:" + fontFullDescriptors[index].italic +
-                          "\nmonoSpace:" + fontFullDescriptors[index].monoSpace +
-                          "\nsymbolic:" + fontFullDescriptors[index].symbolic)
-            }
-          })
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```

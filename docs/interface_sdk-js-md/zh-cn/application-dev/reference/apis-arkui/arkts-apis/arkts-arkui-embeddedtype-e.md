@@ -4,8 +4,6 @@ Enum of EmbeddedType@enum { number }
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## EMBEDDED_UI_EXTENSION
@@ -17,8 +15,6 @@ EMBEDDED_UI_EXTENSION = 0
 The EmbeddedComponent show the UI in EmbeddedUIExtensionAbility.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

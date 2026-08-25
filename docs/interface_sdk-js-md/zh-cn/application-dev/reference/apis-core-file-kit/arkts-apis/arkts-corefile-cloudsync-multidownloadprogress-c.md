@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFailedFiles
@@ -23,8 +21,6 @@ getFailedFiles(): Array<FailedFileInfo>
 获取批量缓存失败的文件列表。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,70 +36,6 @@ getFailedFiles(): Array<FailedFileInfo>
 | --- |
 | 22400005 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let taskId = -1;
-let failedList: Array<cloudSync.FailedFileInfo> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.FAILED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    failedList = data.getFailedFiles();
-  }
-};
-
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((downloadId: number) => {
-  taskId = downloadId;
-  console.info("start batch download successfully");
-}).catch((err: BusinessError) => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let taskId: number = -1;
-let failedList: Array<cloudSync.FailedFileInfo> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.FAILED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    failedList = data.getFailedFiles();
-  }
-};
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
-  taskId = downloadId;
-  console.info("start batch download successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## getSuccessfulFiles
 
 ```TypeScript
@@ -113,8 +45,6 @@ getSuccessfulFiles(): Array<string>
 获取批量缓存成功的文件列表。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -130,79 +60,17 @@ getSuccessfulFiles(): Array<string>
 | --- |
 | 22400005 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let finishedList: Array<string> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.COMPLETED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    finishedList = data.getSuccessfulFiles();
-  }
-};
-
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((downloadId: number) => {
-  console.info(`start batch download successfully, taskId: ${downloadId}`);
-}).catch((err: BusinessError) => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let finishedList: Array<string> = [];
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.COMPLETED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-    finishedList = data.getSuccessfulFiles();
-  }
-};
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-let uriList: Array<string> = [];
-fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
-  console.info(`start batch download successfully, taskId: ${downloadId}`);
-}).catch((err: BusinessError<void>): void => {
-  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
 ## downloadedSize
 
 ```TypeScript
-downloadedSize: long
+downloadedSize: number
 ```
 
 已缓存的文件大小，取值范围为 [0, INT64_MAX)，单位：Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -218,23 +86,19 @@ errType: DownloadErrorType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## failedCount
 
 ```TypeScript
-failedCount: int
+failedCount: number
 ```
 
 缓存失败的文件数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -250,70 +114,60 @@ state: State
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## successfulCount
 
 ```TypeScript
-successfulCount: int
+successfulCount: number
 ```
 
 缓存成功的文件数量，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## taskId
 
 ```TypeScript
-taskId: long
+taskId: number
 ```
 
 批量缓存任务的ID，取值范围为0到INT64_MAX。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## totalCount
 
 ```TypeScript
-totalCount: int
+totalCount: number
 ```
 
 文件总数，取值范围为0至400，单位：个。如果进度异常，返回值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## totalSize
 
 ```TypeScript
-totalSize: long
+totalSize: number
 ```
 
 待缓存的文件总大小，取值范围为 [0, INT64_MAX)，单位为 Byte。如果进度异常，返回值为 INT64_MAX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

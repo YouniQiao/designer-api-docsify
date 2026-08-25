@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## moveFile
@@ -20,8 +20,6 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -63,101 +61,6 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0).then(() => {
-  console.info(`Succeeded in moving file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0).then(() => {
-  console.info(`Succeeded in moving file.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, 0, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcPath = pathDir + "/source.txt";
-let destPath = pathDir + "/dest.txt";
-fileIo.moveFile(srcPath, destPath, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to move file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in moving file.`);
-  }
-});
-```
-
 
 ## moveFile
 
@@ -171,8 +74,6 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -208,10 +109,6 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [moveFile](#movefile)
-
 
 ## moveFile
 
@@ -225,8 +122,6 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -262,7 +157,3 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [moveFile](#movefile)

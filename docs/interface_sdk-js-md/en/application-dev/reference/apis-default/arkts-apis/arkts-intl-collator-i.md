@@ -1,7 +1,5 @@
 # Collator
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 compare(x: string, y: string): number
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@ compare(x: string, y: string): number
 ```TypeScript
 resolvedOptions(): ResolvedCollatorOptions
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

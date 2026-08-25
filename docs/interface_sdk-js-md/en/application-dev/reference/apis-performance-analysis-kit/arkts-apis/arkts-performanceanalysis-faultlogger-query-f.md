@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## query
@@ -15,8 +15,6 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -39,66 +37,6 @@ Obtains the fault information about the current application. This API uses an as
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
 
-**Examples**
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
-    if (error) {
-        console.error(`error code:${error.code}, error msg:${error.message}`);
-    } else {
-        console.info("value length is " + value.length);
-        let len: number = value.length;
-        for (let i = 0; i < len; i++) {
-            console.info(`log: ${i}`);
-            console.info(`Log pid: ${value[i].pid}`);
-            console.info(`Log uid: ${value[i].uid}`);
-            console.info(`Log type: ${value[i].type}`);
-            console.info(`Log timestamp: ${value[i].timestamp}`);
-            console.info(`Log reason: ${value[i].reason}`);
-            console.info(`Log module: ${value[i].module}`);
-            console.info(`Log summary: ${value[i].summary}`);
-            console.info(`Log text: ${value[i].fullLog}`);
-        }
-    }
-}
-try {
-    FaultLogger.query(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
-} catch (err) {
-    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function getLog() {
-  try {
-    let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.query(FaultLogger.FaultType.JS_CRASH);
-    if (value) {
-      console.info(`value length: ${value.length}`);
-      let len: number = value.length;
-      for (let i = 0; i < len; i++) {
-        console.info(`log: ${i}`);
-        console.info(`Log pid: ${value[i].pid}`);
-        console.info(`Log uid: ${value[i].uid}`);
-        console.info(`Log type: ${value[i].type}`);
-        console.info(`Log timestamp: ${value[i].timestamp}`);
-        console.info(`Log reason: ${value[i].reason}`);
-        console.info(`Log module: ${value[i].module}`);
-        console.info(`Log summary: ${value[i].summary}`);
-        console.info(`Log text: ${value[i].fullLog}`);
-      }
-    }
-  } catch (err) {
-    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
-  }
-}
-```
-
 
 ## query
 
@@ -109,8 +47,6 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -137,7 +73,3 @@ Obtains the fault information about the current application. This API uses a pro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
-
-**Examples**
-
-See [query](#query)

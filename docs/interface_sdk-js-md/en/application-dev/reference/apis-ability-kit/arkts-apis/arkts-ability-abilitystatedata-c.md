@@ -4,8 +4,6 @@ The AbilityStateData module defines a struct for ability state information. Once
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## abilityName
@@ -20,39 +18,33 @@ Ability name.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## abilityType
 
 ```TypeScript
-abilityType: int
+abilityType: number
 ```
 
 [Ability type](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-types), which can be [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appCloneIndex
 
 ```TypeScript
-appCloneIndex?: int
+appCloneIndex?: number
 ```
 
 Index of an [application clone](../../../quick-start/app-clone.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,8 +60,6 @@ Bundle name.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## callerBundleName
@@ -83,8 +73,6 @@ Bundle name of the application that triggers the creation of the ability.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,8 +90,6 @@ Whether the ability belongs to an atomic service.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -118,55 +104,50 @@ Module name to which the ability belongs.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
 
 ```TypeScript
-pid: int
+pid: number
 ```
 
 Process ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## state
 
 ```TypeScript
-state: int
+state: number
 ```
 
 Ability state.  
-- [Stage model](../../../application-models/ability-terminology.md#stage-model): For the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md), see [UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see [ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see [UIExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability-states). - [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
+- [Stage model](../../../application-models/ability-terminology.md#stage-model): For the  
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md), see [UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see [ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see [UIExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability-states).  
+- [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

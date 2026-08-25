@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -16,8 +16,6 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,36 +25,6 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取当前Ability对应的窗口
-featureAbility.getWindow((error: BusinessError, data: window.Window) => {
-  if (error && error.code !== 0) {
-    console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getWindow success, data: ${typeof(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取当前Ability对应的窗口
-featureAbility.getWindow().then((data: window.Window) => {
-  console.info(`getWindow success, data: ${typeof(data)}`);
-}).catch((error: BusinessError)=>{
-  console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
-});
-```
 
 
 ## getWindow
@@ -69,8 +37,6 @@ function getWindow(): Promise<window.Window>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -80,7 +46,3 @@ function getWindow(): Promise<window.Window>
 | 类型 |
 | --- |
 | Promise & lt;window.Window & gt; |
-
-**示例**
-
-参见 [getWindow](#getwindow)

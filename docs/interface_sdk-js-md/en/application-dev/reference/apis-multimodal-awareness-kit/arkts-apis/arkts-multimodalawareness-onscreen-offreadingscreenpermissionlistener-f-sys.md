@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offReadingScreenPermissionListener
@@ -15,8 +15,6 @@ function offReadingScreenPermissionListener(callback?: Callback<ReadingScreenPer
 Disables the screen content access permission monitoring.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
@@ -40,15 +38,3 @@ Disables the screen content access permission monitoring.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [34000001](../errorcode-onScreen.md#34000001-service-exception) |
-
-**Examples**
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-try {
-  onScreen.offReadingScreenPermissionListener();
-  console.info(`offReadingScreenPermissionListener succeeded.`);
-} catch (err) {
-  console.error('offReadingScreenPermissionListener failed, errCode = ' + err.code);
-}
-```

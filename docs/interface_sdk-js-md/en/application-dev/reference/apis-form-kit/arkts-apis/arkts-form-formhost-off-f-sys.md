@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## off("formUninstall")
@@ -19,8 +19,6 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 > is automatically uninstalled.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -51,8 +49,6 @@ Unsubscribes from the interactive widget animation request event. This API uses 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -70,21 +66,6 @@ Unsubscribes from the interactive widget animation request event. This API uses 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('formOverflow', (request: formInfo.OverflowRequest) => {
-    console.info(`formHost off formOverflow, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('changeSceneAnimationState')
 
@@ -96,8 +77,6 @@ function off(type: 'changeSceneAnimationState',
 Unsubscribes from the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state, the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -116,21 +95,6 @@ Unsubscribes from the event of switching the interactive widget state. An intera
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('changeSceneAnimationState', (request: formInfo.ChangeSceneAnimationStateRequest): void => {
-    console.info(`formHost off changeSceneAnimationState, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('getFormRect')
 
@@ -141,8 +105,6 @@ function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): 
 Unsubscribes from the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -161,19 +123,6 @@ Unsubscribes from the event of requesting widget position and dimension. This AP
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('getFormRect');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('getLiveFormStatus')
 
@@ -185,8 +134,6 @@ function off(type: 'getLiveFormStatus',
 Cancels Listening to the event of get live form status.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 

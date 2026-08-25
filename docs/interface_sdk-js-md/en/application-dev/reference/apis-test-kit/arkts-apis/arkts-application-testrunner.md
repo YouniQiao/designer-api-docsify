@@ -11,7 +11,7 @@ The **TestRunner** module provides a test framework. You can use the APIs of thi
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from '@kit.TestKit';
+import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## Summary
@@ -26,6 +26,4 @@ import { TestRunner } from '@kit.TestKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [OnPrepareFn](arkts-test-onpreparefn-t.md) |
-| [OnRunFn](arkts-test-onrunfn-t.md) |
 | [OnStopFn](arkts-test-onstopfn-t.md) |

@@ -7,8 +7,6 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,8 +24,6 @@ constructor(appStorage: AppStorage, storage: Storage)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -36,12 +32,5 @@ constructor(appStorage: AppStorage, storage: Storage)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | 是 |
+| [appStorage](arkts-arkui-commontsetsapi-p-sys.md) | [AppStorage](arkts-arkui-appstorage-c.md) | 是 |
 | storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-```

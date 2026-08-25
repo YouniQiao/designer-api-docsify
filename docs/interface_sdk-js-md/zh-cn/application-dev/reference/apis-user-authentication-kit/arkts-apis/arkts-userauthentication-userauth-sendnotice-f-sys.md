@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## sendNotice
@@ -15,8 +15,6 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 发送来自身份认证组件的通知。在使用统一身份认证控件进行用户身份认证时，该接口用于接收来自统一身份认证组件的通知，并将通知发送给用户认证框架。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
@@ -39,37 +37,3 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface  EventData {
-  widgetContextId: number;
-  event: string;
-  version: string;
-  payload: Payload;
-}
-interface Payload {
-  type: string[];
-}
-try {
-  const eventData: EventData = {
-    widgetContextId: 123456,
-    event: 'EVENT_AUTH_TYPE_READY',
-    version: '1',
-    payload: {
-      type: ['pin']
-    } as Payload,
-  };
-  const jsonEventData = JSON.stringify(eventData);
-  let noticeType = userAuth.NoticeType.WIDGET_NOTICE;
-  userAuth.sendNotice(noticeType, jsonEventData);
-  console.info('sendNotice successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to send notice. Code: ${err.code}, message: ${err.message}`);
-}
-```

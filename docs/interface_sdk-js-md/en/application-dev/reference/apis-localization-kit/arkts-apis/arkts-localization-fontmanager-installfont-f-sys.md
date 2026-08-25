@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## installFont
 
 ```TypeScript
-function installFont(path: string): Promise<int>
+function installFont(path: string): Promise<number>
 ```
 
 Installs a font file from a specified path into the system font library. This API uses a promise to return the result. After successful installation, applications can use the font by its font name.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -34,7 +32,7 @@ Installs a font file from a specified path into the system font library. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -48,19 +46,3 @@ Installs a font file from a specified path into the system font library. This AP
 | [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) |
 | [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) |
 | [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) |
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-async installFont() {
-  try {
-    let res = await fontManager.installFont('fontPath');
-    console.info('installFont suc. res is ' + res);
-  } catch (error) {
-    console.error('installFont err.' + error.code);
-  }
-  return;
-}
-```

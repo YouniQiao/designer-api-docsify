@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isSuperAdmin
@@ -15,8 +15,6 @@ function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): voi
 Checks whether the super device administrator application of the first user (u100) is enabled based on **bundleName**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,39 +36,6 @@ Checks whether the super device administrator application of the first user (u10
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.isSuperAdmin(bundleName, (err, result) => {
-  if (err) {
-    console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.isSuperAdmin(bundleName).then((result) => {
-  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isSuperAdmin
 
@@ -81,8 +46,6 @@ function isSuperAdmin(bundleName: String): Promise<boolean>
 Checks whether the super device administrator application of the first user (u100) is enabled based on **bundleName**. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,7 +71,3 @@ Checks whether the super device administrator application of the first user (u10
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [isSuperAdmin](#issuperadmin)

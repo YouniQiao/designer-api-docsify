@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -15,8 +15,6 @@ function createServer(name: string): Server
 在服务端设备上，应用创建服务。通过start()开启后，该设备可作为服务端被其他设备连接。使用完毕后，需调用close()销毁Server对象释放资源。若需重新使用，需重新创建Server对象。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -44,23 +42,3 @@ function createServer(name: string): Server
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
 | [32390203](../errorcode-link-enhance.md#32390203-服务名重复注册) |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```

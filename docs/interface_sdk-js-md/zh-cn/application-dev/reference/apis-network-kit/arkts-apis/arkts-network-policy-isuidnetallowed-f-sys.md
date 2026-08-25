@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## isUidNetAllowed
@@ -16,8 +16,6 @@ function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallbac
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
@@ -42,52 +40,6 @@ function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallbac
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, true)
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, 'wlan0')
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
 
 
 ## isUidNetAllowed
@@ -100,8 +52,6 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
@@ -132,10 +82,6 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-参见 [isUidNetAllowed](#isuidnetallowed)
-
 
 ## isUidNetAllowed
 
@@ -146,8 +92,6 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 获取对应 uid 能否访问指定的 iface 的网络，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -174,10 +118,6 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-参见 [isUidNetAllowed](#isuidnetallowed)
-
 
 ## isUidNetAllowed
 
@@ -188,8 +128,6 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 获取对应 uid 能否访问指定的 iface 的网络，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -220,7 +158,3 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [isUidNetAllowed](#isuidnetallowed)

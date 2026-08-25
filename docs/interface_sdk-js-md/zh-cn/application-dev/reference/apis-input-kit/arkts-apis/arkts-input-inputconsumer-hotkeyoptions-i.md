@@ -4,29 +4,25 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## finalKey
 
 ```TypeScript
-finalKey: int
+finalKey: number
 ```
 
-被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。<br>例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
+被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -42,22 +38,18 @@ isRepeat?: boolean
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## preKeys
 
 ```TypeScript
-preKeys: Array<int>
+preKeys: Array<number>
 ```
 
-修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。<br>例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
+修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer

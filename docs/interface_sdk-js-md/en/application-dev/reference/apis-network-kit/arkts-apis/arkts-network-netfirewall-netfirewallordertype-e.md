@@ -4,8 +4,6 @@ Enumerates the sorting order of firewall rules, which can be ascending or descen
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_ASC
@@ -18,8 +16,6 @@ Sorting in ascending order.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_DESC
@@ -31,7 +27,5 @@ ORDER_DESC = 100
 Sorting in descending order.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

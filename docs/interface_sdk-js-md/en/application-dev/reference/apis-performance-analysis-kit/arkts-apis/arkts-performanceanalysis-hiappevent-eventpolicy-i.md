@@ -4,14 +4,12 @@ Defines the system event configuration policy, which is set by calling [configEv
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## addressSanitizerPolicy
@@ -25,8 +23,6 @@ ADDRESS_SANITIZER event configuration policy.
 **Type:** [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -44,8 +40,6 @@ APP_CRASH event configuration policy.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -61,8 +55,6 @@ APP_FREEZE event configuration policy.
 **Type:** [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -80,8 +72,6 @@ Configuration policy for CPU_USAGE_HIGH event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -98,8 +88,6 @@ Configuration policy for MAIN_THREAD_JANK event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -115,8 +103,6 @@ RESOURCE_OVERLIMIT event configuration policy.
 **Type:** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

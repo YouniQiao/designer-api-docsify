@@ -5,23 +5,19 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## maxWindowHeight
 
 ```TypeScript
-readonly maxWindowHeight: long
+readonly maxWindowHeight: number
 ```
 
 表示自由窗口状态下窗口的最大高度，高度单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -30,16 +26,14 @@ readonly maxWindowHeight: long
 ## maxWindowRatio
 
 ```TypeScript
-readonly maxWindowRatio: double
+readonly maxWindowRatio: number
 ```
 
 表示自由窗口状态下窗口的最大宽高比；取值范围0-1，例如：0.12。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,16 +42,14 @@ readonly maxWindowRatio: double
 ## maxWindowWidth
 
 ```TypeScript
-readonly maxWindowWidth: long
+readonly maxWindowWidth: number
 ```
 
 表示自由窗口状态下窗口的最大宽度，宽度单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,16 +58,14 @@ readonly maxWindowWidth: long
 ## minWindowHeight
 
 ```TypeScript
-readonly minWindowHeight: long
+readonly minWindowHeight: number
 ```
 
 表示自由窗口状态下窗口的最小高度，高度单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,16 +74,14 @@ readonly minWindowHeight: long
 ## minWindowRatio
 
 ```TypeScript
-readonly minWindowRatio: double
+readonly minWindowRatio: number
 ```
 
 表示自由窗口状态下窗口的最小宽高比；取值范围0-1，例如：0.5。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -102,16 +90,14 @@ readonly minWindowRatio: double
 ## minWindowWidth
 
 ```TypeScript
-readonly minWindowWidth: long
+readonly minWindowWidth: number
 ```
 
 表示自由窗口状态下窗口的最小宽度，宽度单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

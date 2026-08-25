@@ -4,14 +4,12 @@ Represents the configuration of the CMS signer.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## addAttr
@@ -27,8 +25,6 @@ Whether to add the signature attribute. The default value is **true**. **true**:
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -48,8 +44,6 @@ Whether to add a certificate. The default value is **true**. **true**: yes; **fa
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
@@ -68,8 +62,6 @@ Whether to add the SMIME capability to the CMS object. The default value is **tr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
@@ -86,8 +78,6 @@ Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
@@ -98,7 +88,7 @@ Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256
 rsaSignaturePadding?: CmsRsaSignaturePadding
 ```
 
-Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. <br>When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or **SHA512**.
+Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or **SHA512**.
 
 > **NOTE：**&gt;
 > This parameter is valid only when the private key type of the signature is RSA.
@@ -108,8 +98,6 @@ Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. <br>W
 **Default:** CmsRsaSignaturePadding.PKCS1_PADDING
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

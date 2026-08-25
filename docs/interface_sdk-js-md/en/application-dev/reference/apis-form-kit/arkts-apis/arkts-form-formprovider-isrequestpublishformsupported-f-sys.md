@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## isRequestPublishFormSupported
@@ -15,8 +15,6 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 Checks whether a widget can be added to the widget host. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -37,80 +35,6 @@ Checks whether a widget can be added to the widget host. This API uses an asynch
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.isRequestPublishFormSupported((error: BusinessError, isSupported: boolean) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-    } else {
-      if (isSupported) {
-        let want: Want = {
-          abilityName: 'FormAbility',
-          parameters: {
-            'ohos.extra.param.key.form_dimension': 2,
-            'ohos.extra.param.key.form_name': 'widget',
-            'ohos.extra.param.key.module_name': 'entry'
-          }
-        };
-        try {
-          formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
-            if (error) {
-              console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-              return;
-            }
-            console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-          });
-        } catch (error) {
-          console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-        }
-      }
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.isRequestPublishFormSupported().then((isSupported: boolean) => {
-    if (isSupported) {
-      let want: Want = {
-        abilityName: 'FormAbility',
-        parameters: {
-          'ohos.extra.param.key.form_dimension': 2,
-          'ohos.extra.param.key.form_name': 'widget',
-          'ohos.extra.param.key.module_name': 'entry'
-        }
-      };
-      try {
-        formProvider.requestPublishForm(want).then((data: string) => {
-          console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-        }).catch((error: BusinessError) => {
-          console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-        });
-      } catch (error) {
-        console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-      }
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
 
 ## isRequestPublishFormSupported
 
@@ -121,8 +45,6 @@ function isRequestPublishFormSupported(): Promise<boolean>
 Checks whether a widget can be added to the widget host. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -141,7 +63,3 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [isRequestPublishFormSupported](#isrequestpublishformsupported)

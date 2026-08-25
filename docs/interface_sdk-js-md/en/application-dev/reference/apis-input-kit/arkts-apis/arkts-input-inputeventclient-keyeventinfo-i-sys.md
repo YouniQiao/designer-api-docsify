@@ -4,8 +4,6 @@ Defines the key event information injected by the user.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the key event information injected by the user.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## KeyEvent
@@ -27,8 +25,6 @@ Key injection description.
 **Type:** KeyEvent
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 

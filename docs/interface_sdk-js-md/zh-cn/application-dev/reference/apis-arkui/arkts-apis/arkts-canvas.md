@@ -54,5 +54,5 @@
 
 | 名称 |
 | --- |
-| [Canvas](arkts-arkui-canvas-con.md#canvas) |
+| [Canvas](arkts-arkui-canvas-con.md) |
 | [CanvasInstance](arkts-arkui-canvas-con.md#canvasinstance) |

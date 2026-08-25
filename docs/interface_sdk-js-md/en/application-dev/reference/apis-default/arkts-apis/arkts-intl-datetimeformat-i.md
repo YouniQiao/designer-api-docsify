@@ -1,7 +1,5 @@
 # DateTimeFormat
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 format(date?: Date | number): string
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@ format(date?: Date | number): string
 ```TypeScript
 resolvedOptions(): ResolvedDateTimeFormatOptions
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

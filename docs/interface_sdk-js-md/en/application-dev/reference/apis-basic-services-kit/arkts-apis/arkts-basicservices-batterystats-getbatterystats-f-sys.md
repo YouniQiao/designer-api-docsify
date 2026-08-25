@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from '@kit.BasicServicesKit';
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getBatteryStats
@@ -15,8 +15,6 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 Obtains the power consumption information list. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
@@ -35,28 +33,6 @@ Obtains the power consumption information list. This API uses a promise to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) |
 
-**Examples**
-
-```TypeScript
-batteryStats.getBatteryStats()
-.then((data: batteryStats.BatteryStatsInfo[]) => {
-    console.info('battery statistics info: ' + data);
-})
-.catch((err: Error) => {
-    console.error('get battery statistics failed, err: ' + err);
-});
-```
-
-```TypeScript
-batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
-    if (typeof err === 'undefined') {
-        console.info('battery statistics info: ' + data);
-    } else {
-        console.error('get battery statistics failed, err: ' + err);
-    }
-});
-```
-
 
 ## getBatteryStats
 
@@ -67,8 +43,6 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 Obtains the power consumption information list. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
@@ -87,7 +61,3 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) |
-
-**Examples**
-
-See [getBatteryStats](#getbatterystats)

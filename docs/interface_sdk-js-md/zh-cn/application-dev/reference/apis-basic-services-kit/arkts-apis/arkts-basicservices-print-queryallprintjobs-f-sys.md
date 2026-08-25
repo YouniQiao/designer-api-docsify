@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryAllPrintJobs
@@ -15,8 +15,6 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 查询所有打印任务，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 11
 
@@ -41,32 +39,6 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllPrintJobs((err: BusinessError) => {
-    if (err) {
-        console.error('queryAllPrintJobs failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('queryAllPrintJobs success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllPrintJobs().then(() => {
-    console.info('queryAllPrintJobs success');
-}).catch((error: BusinessError) => {
-    console.error('queryAllPrintJobs failed, error : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryAllPrintJobs
 
@@ -77,8 +49,6 @@ function queryAllPrintJobs(): Promise<void>
 查询所有打印任务，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 11
 
@@ -102,7 +72,3 @@ function queryAllPrintJobs(): Promise<void>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [queryAllPrintJobs](#queryallprintjobs)

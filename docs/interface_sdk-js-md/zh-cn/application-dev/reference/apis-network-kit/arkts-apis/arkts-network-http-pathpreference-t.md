@@ -13,8 +13,6 @@ HTTP请求指定特定网络的类型枚举。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 | 类型 |

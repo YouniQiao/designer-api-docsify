@@ -4,8 +4,6 @@ The sendableContextManager module provides APIs for converting between Context a
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ The sendableContextManager module provides APIs for converting between Context a
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

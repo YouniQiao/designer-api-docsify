@@ -8,8 +8,6 @@ Defines a callback for pan gesture events.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -20,6 +18,6 @@ Defines a callback for pan gesture events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gesture-gestureevent-i.md) | Yes |
-| current | [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md) | Yes |
+| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | No |

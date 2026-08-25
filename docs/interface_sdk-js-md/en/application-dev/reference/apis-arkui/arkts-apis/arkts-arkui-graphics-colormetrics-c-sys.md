@@ -4,21 +4,17 @@ Used to mix colors.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## createHDRColor
 
 ```TypeScript
-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 Create ColorMetrics class using HDR color with default exposure. Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear). When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness. This matches iOS UIColor behavior where RGB values &gt; 1.0 enable HDR rendering.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,15 +41,13 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 ## createHDRColorWithLinearExposure
 
 ```TypeScript
-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: ColorSpace,
+    red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 Create ColorMetrics class using HDR color with linear exposure. Create an HDR color value with specified linear exposure. The exposure value controls the brightness of the color in a linear color space. When using linear exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,15 +75,13 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 ## createHDRColorWithLogExposure
 
 ```TypeScript
-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
+    red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 Create ColorMetrics class using HDR color with linear exposure. Create an HDR color value with specified logarithmic exposure (stops). The exposure value controls the brightness in a logarithmic (perceptual) color space. When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,14 +109,12 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 ## getBlueValue
 
 ```TypeScript
-getBlueValue(): double
+getBlueValue(): number
 ```
 
 Get blue value. Returns blue channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +138,6 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -165,14 +153,12 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 ## getGreenValue
 
 ```TypeScript
-getGreenValue(): double
+getGreenValue(): number
 ```
 
 Get green value. Returns green channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,14 +175,12 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 ## getRedValue
 
 ```TypeScript
-getRedValue(): double
+getRedValue(): number
 ```
 
 Get red value. Returns red channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +203,6 @@ isHDR(): boolean
 Check if ColorMetrics represents an HDR color. Returns true if color was created using createHDRColorWithXx or has RGB values &gt; 1.0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

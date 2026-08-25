@@ -4,14 +4,12 @@ Represents a class for defining a uniform data type. It provides properties and 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## belongsTo
@@ -23,8 +21,6 @@ belongsTo(type: string): boolean
 Checks whether this data type belongs to the specified uniform data type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,24 +44,6 @@ Checks whether this data type belongs to the specified uniform data type.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## equals
 
 ```TypeScript
@@ -75,8 +53,6 @@ equals(typeDescriptor: TypeDescriptor): boolean
 Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](#typedescriptor) objects.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,24 +76,6 @@ Checks whether this data type is the same as the specified uniform data type. Th
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeA : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let typeB : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
-    if(!typeA.equals(typeB)) {
-      console.info('typeA is not equal to typeB');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## isHigherLevelType
 
 ```TypeScript
@@ -127,8 +85,6 @@ isHigherLevelType(type: string): boolean
 Checks whether this data type is a higher-level type of the specified uniform data type. For example, **SOURCE_CODE** is a higher-level type of **TYPE_SCRIPT**, and **TEXT** is a higher-level type of **SOURCE_CODE** and **TYPE_SCRIPT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,24 +107,6 @@ Checks whether this data type is a higher-level type of the specified uniform da
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-    let ret = typeObj.isHigherLevelType('general.type-script');
-    if(ret) {
-        console.info('type general.source-code is higher level type of type general.type-script');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
 
 ## isLowerLevelType
 
@@ -180,8 +118,6 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -203,24 +139,6 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.type-script is lower level type of type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
 
 ## belongingToTypes
 
@@ -233,8 +151,6 @@ Uniform data type IDs that the uniform data type belongs to.
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,8 +168,6 @@ A textual description for the uniform data type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -269,8 +183,6 @@ File name extensions for the uniform data type.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,8 +200,6 @@ Default icon file path for the uniform data type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -305,8 +215,6 @@ MIMETypes of the uniform data type.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,8 +232,6 @@ Reference URL for the uniform data type, which describes the detail information 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -341,8 +247,6 @@ Type ID of the uniform data type, which corresponds to the enum string in the {@
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## executeDelayed
@@ -15,8 +15,6 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 Executes a task after a given delay. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. The task cannot be a task in a task group, serial queue, or asynchronous queue, or a periodic task. This API can be called only once for a continuous task, but multiple times for a non-continuous task. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,45 +44,6 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
-**Examples**
-
-```TypeScript
-// import BusinessError
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function printArgs(args: number): void {
-    console.info("printArgs: " + args);
-}
-
-let t: number = Date.now();
-console.info("taskpool start time is: " + t);
-let task: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
-  console.info("taskpool execute success");
-}).catch((e: BusinessError) => {
-  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);
-})
-```
-
-```TypeScript
-// import BusinessError
-import { BusinessError } from '@kit.BasicServicesKit'
-
-@Concurrent
-function printArgs(args: number): string {
-    console.info("printArgs: " + args);
-    return "success";
-}
-
-let task: taskpool.Task = new taskpool.GenericsTask<[number], string>(printArgs, 100); // 100: test number
-taskpool.executeDelayed<[number], string>(1000, task).then((res: string) => { // 1000: delayTime is 1000ms
-  console.info("taskpool execute success");
-}).catch((e: BusinessError) => {
-  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);
-})
-```
-
 
 ## executeDelayed
 
@@ -95,8 +54,6 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 Executes the generic task with a delay without verifying the parameter type and return value type of the task. This API uses a promise to return the result. The verification of the **executeDelayed** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -123,7 +80,3 @@ Executes the generic task with a delay without verifying the parameter type and 
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-
-**Examples**
-
-See [executeDelayed](#executedelayed)

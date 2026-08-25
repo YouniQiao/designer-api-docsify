@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## actionButton
@@ -26,23 +24,19 @@ actionButton?: [ActionButton?, ActionButton?, ActionButton?]
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## autoDeletedTime
 
 ```TypeScript
-autoDeletedTime?: long
+autoDeletedTime?: number
 ```
 
 自动清除的时间。数据格式：时间戳，单位：ms，具体请参考 [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -58,23 +52,19 @@ content?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## contentResourceId
 
 ```TypeScript
-contentResourceId?: int
+contentResourceId?: number
 ```
 
 指明提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -90,8 +80,6 @@ customRingUri?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## expiredContent
@@ -106,23 +94,19 @@ expiredContent?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## expiredContentResourceId
 
 ```TypeScript
-expiredContentResourceId?: int
+expiredContentResourceId?: number
 ```
 
 指明提醒过期后内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -137,8 +121,6 @@ fixedTimeZone?: TimeZoneType
 **类型：** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,8 +138,6 @@ groupId?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## maxScreenWantAgent
@@ -172,23 +152,19 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## notificationId
 
 ```TypeScript
-notificationId?: int
+notificationId?: number
 ```
 
 指明提醒使用的通知的id号，需开发者传入，相同id号的提醒会覆盖，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -203,8 +179,6 @@ notificationRequestProxy?: NotificationRequestProxy
 **类型：** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,8 +196,6 @@ reminderType: ReminderType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## ringChannel
@@ -238,23 +210,19 @@ ringChannel?: RingChannel
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## ringDuration
 
 ```TypeScript
-ringDuration?: long
+ringDuration?: number
 ```
 
 指明响铃时长。单位：s，默认1s，范围：[0, 1800]。值为0时：跟随系统设置中的通知铃声。值大于0时：如果设置了[ReminderRequest.customRingUri](#reminderrequest)，则在指定的通道 [ReminderRequest.ringChannel](#reminderrequest)上响铃。否则使用代理提醒默认的自定义提示音。响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -270,8 +238,6 @@ slotType?: notification.SlotType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## snoozeContent
@@ -286,23 +252,19 @@ snoozeContent?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## snoozeContentResourceId
 
 ```TypeScript
-snoozeContentResourceId?: int
+snoozeContentResourceId?: number
 ```
 
 指明延时提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -318,23 +280,19 @@ snoozeSlotType?: notification.SlotType
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## snoozeTimes
 
 ```TypeScript
-snoozeTimes?: int
+snoozeTimes?: number
 ```
 
 指明延时提醒次数，默认0次（不适用于倒计时提醒类型）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -345,29 +303,26 @@ tapDismissed?: boolean
 ```
 
 通知是否自动清除，默认值为true，具体请参考 [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)  
-- true：点击通知消息或通知按钮后，自动删除当前通知。 - false：点击通知消息或通知按钮后，保留当前通知。
+- true：点击通知消息或通知按钮后，自动删除当前通知。  
+- false：点击通知消息或通知按钮后，保留当前通知。
 
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## timeInterval
 
 ```TypeScript
-timeInterval?: long
+timeInterval?: number
 ```
 
 执行延时提醒间隔。单位：s，最少30s（不适用于倒计时提醒类型）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -383,23 +338,19 @@ title?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## titleResourceId
 
 ```TypeScript
-titleResourceId?: int
+titleResourceId?: number
 ```
 
 指明提醒标题的资源ID，通过`\$r(资源名称).id`方法获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -414,7 +365,5 @@ wantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
